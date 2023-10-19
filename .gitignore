@@ -6,6 +6,7 @@ datafiles/**
 extensions/fmod_gms/fmod-gamemaker.dll
 *.png
 !options/main/template_icon.png
+!github/**
 
 # The manually fixed tilesets
 !sprites/tile_beachprops1/**
