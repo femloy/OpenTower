@@ -1,92 +1,396 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_golfdemon_walk",
-  "bbox_bottom": 112,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 4,
   "bbox_right": 111,
   "bbox_top": 27,
+  "bbox_bottom": 112,
+  "origin": 9,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"886ebbf2-8843-4b71-8197-ef1f2b2a4298",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"595704b9-c5d6-4394-aa1b-7d3ff118bc17",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d571a7e-e072-452a-af59-f007c70a2380",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"087c149b-03bd-4898-87a2-413b2cd34f44",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"87cc7fec-3fd6-4fde-a61a-7eb6d746ca1b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c79f943-2c35-44d8-ae0f-024f01db212f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29efb0f1-7edc-4a8f-8c24-b9ae28d7be77",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb0c1e7e-f4d4-47de-80fe-0ace300dbdc9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c402d0e-e9e1-4e68-aa0f-8456b140e520",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f3e4caa1-99ab-4762-b8f0-424da0311ab4",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 115,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"db1328f1-ebd0-47df-a0b4-5f1b9362566e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 9,
-  "parent": {
-    "name": "Golf Demon",
-    "path": "folders/Sprites/Baddie/Golf Demon.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_golfdemon_walk",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 10.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"886ebbf2-8843-4b71-8197-ef1f2b2a4298","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"b639ed7b-5ba6-486d-96a1-d08b40a86fe0","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"595704b9-c5d6-4394-aa1b-7d3ff118bc17","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"174c34c8-eacc-4a55-99e1-049bdd05b2f0","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3d571a7e-e072-452a-af59-f007c70a2380","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"ea424c04-f58e-4030-bcd3-3dfadb2a073a","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"087c149b-03bd-4898-87a2-413b2cd34f44","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"1e9a041c-3fea-462d-be72-088654e1d7aa","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"87cc7fec-3fd6-4fde-a61a-7eb6d746ca1b","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"54f80626-5a02-4c84-9813-dc458ae7e150","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5c79f943-2c35-44d8-ae0f-024f01db212f","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"32cb6f0d-37a0-414c-89fa-eb6abaf878e0","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"29efb0f1-7edc-4a8f-8c24-b9ae28d7be77","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"c7abb01c-9668-4dbb-abfe-d65458071e59","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fb0c1e7e-f4d4-47de-80fe-0ace300dbdc9","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"cfdda52a-191e-450b-b178-99f54482279e","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7c402d0e-e9e1-4e68-aa0f-8456b140e520","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"194d0f9a-9502-417b-8390-f48e5ebb6a55","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f3e4caa1-99ab-4762-b8f0-424da0311ab4","path":"sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy",},},},"Disabled":false,"id":"ee6b9c76-0620-4e84-ae4f-cf1bff5fbbf4","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 72,
-    "yorigin": 66,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 144,
+  "height": 115,
   "textureGroupId": {
     "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup",
+    "path": "texturegroups/baddiegroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 144,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "df9af7b7-a180-4b1e-b0fd-333c70b730d9",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f5879885-825b-481d-b2a1-cc264fa39cbe",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3a0ec9da-da10-492b-bc8e-397f9a1d87ea",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "aa2cd158-9983-48ee-a564-0b67bc7ed505",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "70b0edc0-f302-4ab7-aca5-3fcad6c47586",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2d1423a5-54bd-40bb-9c19-39ff2ff2c581",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "767216c4-54ad-4ba1-bbf3-7d0776d2e77f",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a27a70f6-7d8d-4b88-b236-d03c5a483dcc",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "669394a9-3b46-4cd9-94d1-f53dd35deef5",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c4971d04-cb5f-44ec-ac7e-f19b7aa79db9",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_golfdemon_walk",
+      "path": "sprites/spr_golfdemon_walk/spr_golfdemon_walk.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 10.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 72,
+    "yorigin": 66,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_golfdemon_walk",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Golf Demon",
+    "path": "folders/Sprites/Baddie/Golf Demon.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_golfdemon_walk",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

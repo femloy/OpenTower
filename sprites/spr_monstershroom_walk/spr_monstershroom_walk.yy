@@ -1,128 +1,900 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_monstershroom_walk",
-  "bbox_bottom": 208,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 23,
   "bbox_right": 128,
   "bbox_top": 48,
+  "bbox_bottom": 208,
+  "origin": 9,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7b4546b-41a4-400d-a150-588e5e8125dd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ed6ed8b-fa23-41d2-9ea1-e116e9ce8c29",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a351b466-0b0d-4b96-a6f6-c9d4c9b6dc02",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e267b8ab-ec89-40eb-bd7a-9d417bd01d03",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e092ff6e-dfb1-4fd7-b3f1-5244297992b6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f254102e-c4fe-41f5-9db3-fd5085543bfb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eab92a56-a728-47ff-b379-03bb96eb4cff",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4a07368a-a691-464c-8345-ceddad5014f9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d816895e-d19f-4506-af2c-649f29141fb0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e99692da-d64c-4b17-9844-e19d14e65a44",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"610780c9-d72b-417c-9e03-c612189abd81",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"74caf7fa-0c67-4c56-8711-514cb0b1f05b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46abbce0-d096-4092-87c1-af9713f4424b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e101641d-ddc0-46b3-8b8e-fc6b2e761a51",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2776917-c601-4adb-96e5-6546d9765a83",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4dbdeaeb-7064-4252-ade4-ca50828e8065",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a8c4fb5f-4103-4ca1-939a-df602feaff82",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41f0232e-83a4-411f-a8b2-868df5f10ad8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4a3e4ad-5d58-4197-afea-612cd8cec2c3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef181d03-282f-4b76-880d-f3064b8be005",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7c90005c-c4b2-4b54-8d76-0198a72caf0d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"58ca49d4-975b-4d1e-836d-1cce23ad3f35",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"721b4e3f-4d27-45b2-8a20-5bcd122e7cd3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6307c117-e551-40fe-b8bc-b904f677040e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f57b7139-d746-42fb-9d0d-dedc07207bd6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e116dbd9-69dd-4e9c-b30b-35cdc52f954a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8de13560-7f38-4da9-9279-1b3539d05f27",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8caf8e51-627b-4043-9faa-3aa253408c09",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 222,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f5c69d0f-abde-45c4-8711-d5b3d5f50a62","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 9,
-  "parent": {
-    "name": "Shroom",
-    "path": "folders/Sprites/Level Structure/Monsters/Shroom.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_monstershroom_walk",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 28.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b7b4546b-41a4-400d-a150-588e5e8125dd","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"0e273750-0ca1-4705-9b6b-63d25b1f1950","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4ed6ed8b-fa23-41d2-9ea1-e116e9ce8c29","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"caeb3780-b9af-456d-8e57-12bc49d05ac0","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a351b466-0b0d-4b96-a6f6-c9d4c9b6dc02","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"708b63db-e17d-4d5d-9306-d41dfebd5bcb","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e267b8ab-ec89-40eb-bd7a-9d417bd01d03","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"4897b174-a9d4-4315-a4ef-9e3fbc4818f9","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e092ff6e-dfb1-4fd7-b3f1-5244297992b6","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"3e4955a5-f74f-43f7-8de0-631228d320aa","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f254102e-c4fe-41f5-9db3-fd5085543bfb","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"9e00a078-1521-4413-93e3-075ff9f383f4","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eab92a56-a728-47ff-b379-03bb96eb4cff","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"6f74ee91-3aa3-4894-b2c5-b2718aa4805e","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4a07368a-a691-464c-8345-ceddad5014f9","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"4395d96c-b238-4fe5-abbd-ba1ee9bfe113","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d816895e-d19f-4506-af2c-649f29141fb0","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"2c1bd3cf-4cbc-409d-9c70-68071f9073a8","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e99692da-d64c-4b17-9844-e19d14e65a44","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"fca7e4db-a340-4b88-83af-d7243b2bc651","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"610780c9-d72b-417c-9e03-c612189abd81","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"e6e4f5d7-315e-4364-a7af-ea358b70d466","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"74caf7fa-0c67-4c56-8711-514cb0b1f05b","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"9e56e561-d27b-4099-9aaf-4ae9c80a120a","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"46abbce0-d096-4092-87c1-af9713f4424b","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"6b8ff07e-60d0-472c-af17-ed512921fc89","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e101641d-ddc0-46b3-8b8e-fc6b2e761a51","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"70a0140d-2490-4d2a-b5ef-5fdfc528f7f9","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2776917-c601-4adb-96e5-6546d9765a83","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"0b32b2d7-d99f-42cd-b564-783ac1da373b","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4dbdeaeb-7064-4252-ade4-ca50828e8065","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"46938a15-8336-444c-b70e-ff5699bed941","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a8c4fb5f-4103-4ca1-939a-df602feaff82","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"8cdc9179-0282-4599-b54f-3c51b334ec4f","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"41f0232e-83a4-411f-a8b2-868df5f10ad8","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"9397a374-9161-4334-ac69-3e06d255ff9c","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b4a3e4ad-5d58-4197-afea-612cd8cec2c3","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"3404c2ff-d252-4f9e-a747-39754c99c98c","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ef181d03-282f-4b76-880d-f3064b8be005","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"34a7019e-0e0b-474a-9391-44197e32c557","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7c90005c-c4b2-4b54-8d76-0198a72caf0d","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"5f1887cb-208d-48c5-981c-75107af5cc46","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"58ca49d4-975b-4d1e-836d-1cce23ad3f35","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"341ab040-c8ed-4bd7-b06a-aae9677654b5","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"721b4e3f-4d27-45b2-8a20-5bcd122e7cd3","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"ff10cb4d-cee5-45d0-8391-bb606ee483e8","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6307c117-e551-40fe-b8bc-b904f677040e","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"0a3dfff3-f2c1-474e-8815-e5d8b37c71d1","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f57b7139-d746-42fb-9d0d-dedc07207bd6","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"4ef74e89-4050-4a0a-ad38-46b0ca4c542b","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e116dbd9-69dd-4e9c-b30b-35cdc52f954a","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"811114b2-3b3d-4dda-be88-d77c44b12204","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8de13560-7f38-4da9-9279-1b3539d05f27","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"b743303a-a67e-4bbc-8782-3c41f2b48454","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8caf8e51-627b-4043-9faa-3aa253408c09","path":"sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",},},},"Disabled":false,"id":"3a0ccc7d-92b5-4ed1-8168-e196d387cf4a","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 97,
-    "yorigin": 162,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 194,
+  "height": 222,
   "textureGroupId": {
     "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup",
+    "path": "texturegroups/baddiegroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 194,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "efc34644-a26a-433f-bf73-a0f01aa56c87",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "89e3c9a1-ff59-4d13-bc12-a9f06fd5cb5d",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cb27c0a0-0987-4b28-8252-e0edd0809bd5",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b39b8c43-0214-4ad6-880b-1d301d6c7834",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b2cfbe41-179d-4381-bf4d-8886e4dc6452",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6886f18e-13e8-4438-9814-a4f1081c8240",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ac54c603-6da1-4567-9ff7-c22ec4bd2ef0",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4c42afcf-f11a-4182-b1e6-34a740e6ea93",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5d8857b3-acb4-4925-bc57-5641cec9e12d",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b78b928f-43c6-4352-a2db-ec47602c35a3",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8ff7f2a0-c90a-4e73-a810-8b9b09a10720",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9b7efaf2-6e5b-43aa-a6b9-3bd52cfa1fc4",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "19a852a1-baf7-41ed-9d49-6135a86fb187",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8ac28a0f-0739-4d1a-9e3f-e7306dfc2aae",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "590e731d-2fa5-4f74-9ea8-a55dd11a4d2a",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0608c614-16a3-43ce-89d9-f23d54980e4c",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "438f3867-0405-495b-8e88-ef4f7fc82ea0",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "110202e7-cc26-4ebc-8a29-da822d8139f6",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f06d9419-f84d-4925-9e17-d38dcabc9e8a",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "66578fcc-f1dc-466e-abbf-bface664545f",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2c43c9c1-624a-46f9-a6e5-afaa869481ca",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e0974306-f2a2-4bcb-8d8f-cbf5ee5d9c5f",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0f91f0b6-6dd6-4047-aad8-1b8073e446c1",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3cc8d5c9-759b-4dda-bafd-269017969cbe",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b1cc3a8d-c76a-4a97-8c38-94c770912436",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c82689a9-b3dd-4d81-b416-060373b8ff60",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "93b6bb97-68dc-4c87-a66e-dc44296452df",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4caf4061-2b45-4974-83b6-f691c0e5e65c",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_monstershroom_walk",
+      "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 28.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 97,
+    "yorigin": 162,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_monstershroom_walk",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Shroom",
+    "path": "folders/Sprites/Level Structure/Monsters/Shroom.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_monstershroom_walk",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

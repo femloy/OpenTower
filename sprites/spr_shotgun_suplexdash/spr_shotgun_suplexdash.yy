@@ -1,98 +1,480 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_shotgun_suplexdash",
-  "bbox_bottom": 96,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 96,
   "bbox_right": 188,
   "bbox_top": 17,
+  "bbox_bottom": 96,
+  "origin": 4,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17fa3d5d-c9c9-4369-87b5-4d3b2d32eaa0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bbd03ca2-7e48-4d40-ace3-ecb11273bd4e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d62eef10-0546-47cb-8f8f-ae26ab73d621",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4f648b0-053f-4418-8688-1c2e41979e83",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fdb09398-acb4-4a93-ac82-6c85b153cc35",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61bb8740-8049-4f51-82e4-9c4f4634e2d2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f905664-29ec-4567-a6dd-9194dd466c0a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"53e292ee-6443-4ef1-95d1-b7903b05a9d9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14307c0e-da02-48ed-9387-0a5a767f0593",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e96a0b3-784b-4257-bd94-ea03a7efde0f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9676973f-d686-43b9-83a2-dc1bd9e5271d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"01bb065b-6782-46ad-b0b9-4a2fe3502987",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dfdbe10b-9fd5-40c5-a018-18e67ff93779",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 100,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ea9a05e6-f35f-4e62-9370-20196fd59195","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 4,
-  "parent": {
-    "name": "Shotgun",
-    "path": "folders/Sprites/Player/Peppino/Shotgun.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_shotgun_suplexdash",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 13.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"17fa3d5d-c9c9-4369-87b5-4d3b2d32eaa0","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"bf8570e7-9a04-4309-935a-097baf9e11bf","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bbd03ca2-7e48-4d40-ace3-ecb11273bd4e","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"4b543703-21fc-4591-8679-11dc5cbd6d2d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d62eef10-0546-47cb-8f8f-ae26ab73d621","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"c7bc413f-c920-4204-a9d0-3a2498cfdae4","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4f648b0-053f-4418-8688-1c2e41979e83","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"73182e7d-e7a2-4f71-bec4-b567f84ef935","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fdb09398-acb4-4a93-ac82-6c85b153cc35","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"7d305ee6-defa-41ec-b3de-8fdc5f8b051e","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"61bb8740-8049-4f51-82e4-9c4f4634e2d2","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"7a4f3462-fbde-420e-9dd0-1f5544c5655c","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3f905664-29ec-4567-a6dd-9194dd466c0a","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"2236db23-9c90-4e20-a5dc-f50aa49fd27e","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"53e292ee-6443-4ef1-95d1-b7903b05a9d9","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"8984c9bf-924c-491b-a7cf-bcb16a3b2221","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"14307c0e-da02-48ed-9387-0a5a767f0593","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"f1c8566e-9011-4f76-9783-86ffbff4308d","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0e96a0b3-784b-4257-bd94-ea03a7efde0f","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"6093f049-546a-4db0-a878-4d3f0bf4e36e","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9676973f-d686-43b9-83a2-dc1bd9e5271d","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"6a67b6f7-aa9a-4a7d-886c-bb6f7f73032b","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"01bb065b-6782-46ad-b0b9-4a2fe3502987","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"4fbfbdfc-4aaa-46a9-9ab0-e40bcaae45c9","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dfdbe10b-9fd5-40c5-a018-18e67ff93779","path":"sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy",},},},"Disabled":false,"id":"9061341f-c7f8-454f-b0fc-e068e8354371","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 150,
-    "yorigin": 50,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 300,
+  "height": 100,
   "textureGroupId": {
     "name": "playergroup",
-    "path": "texturegroups/playergroup",
+    "path": "texturegroups/playergroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 300,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "08597a8e-1508-4baf-b1b8-8d00e9ede970",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ddf5e73f-bec8-45bd-a494-aecd6d8b6875",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7a73fc35-55c5-4433-ac01-c8b90c5f2538",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8a8a99fc-9863-4c3e-83b0-ba543e79f64f",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2bd55ab5-05d6-4b48-a92a-d6cbe760e94c",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a2777329-1496-4666-a769-41c6e349f269",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9ac1a0b9-91b3-465a-accf-6142c591a184",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "291343e1-70ae-43be-8574-34469aeba3f8",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c8505492-8e50-430e-b2ce-ffd1dd6686d6",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1daf7cd6-a1e9-4412-89f9-126b0faa6227",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "978bd796-d6c4-4a89-9483-8a14282c566c",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "efb14e29-8b7d-4fff-8ae6-1f56833ffe19",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "969cad52-828e-4bf9-9ca6-7e6435a0642f",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_shotgun_suplexdash",
+      "path": "sprites/spr_shotgun_suplexdash/spr_shotgun_suplexdash.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 13.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 150,
+    "yorigin": 50,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_shotgun_suplexdash",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Shotgun",
+    "path": "folders/Sprites/Player/Peppino/Shotgun.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_shotgun_suplexdash",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

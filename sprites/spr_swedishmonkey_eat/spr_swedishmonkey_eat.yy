@@ -1,130 +1,928 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_swedishmonkey_eat",
-  "bbox_bottom": 95,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 0,
   "bbox_right": 99,
   "bbox_top": 12,
+  "bbox_bottom": 95,
+  "origin": 4,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6c0a638c-a4e7-45ea-b394-8b515668f16d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e6654527-93c3-4a68-846a-354548b6bca5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d9ae1981-5d4a-49b5-be82-321384e19102",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"32951f8f-daf0-4922-89bf-8845e0f58e35",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"997ea401-0525-48c1-99a8-b856bc300aee",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb9305b2-33d3-421e-82b0-f0c5ecfa1547",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f038cf7-c5b7-420b-89ef-9234de7df37c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fde19839-8a62-418c-9f5b-3760429e9489",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"415b1bd4-e4c0-4800-8f84-0e69253eb0fd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b160c7ae-d076-4916-870f-1cdb53d84269",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0e5d8ab-7f51-4704-ae4a-1352d6347d9a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4f8ebc9-f093-4053-85b7-fdfe48dbfc99",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fdfe6b2c-425b-4a7a-91c3-69353f870b51",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"81f94c88-5cfe-4890-870f-7a196bd70b72",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71f2a16f-712a-424b-909b-29511a4010b9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9345a3c8-1004-4b25-bf1f-ffafb53d40e6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7769f8d3-541c-4832-9d23-c8ab7b387ad3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97f797c0-3384-4336-aef1-5efb066427b3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63d0d909-bcdd-4dc3-b3ca-803ea382e825",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"769973db-b706-4124-970f-16e483b49958",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"09f4637a-19a5-4ce4-97a8-09b06d4c4bb7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f04a8af-ecfc-4d78-a415-cfb09f3c7fad",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb315dba-0f1f-406b-8cdd-e0bc5f562069",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d16f0d3a-0458-4a28-b6db-2704cb8ca4c6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46e7cda3-c3ed-4d74-a1dc-641ad633d43d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2f5a8247-8938-4136-9f3d-f695df448964",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d180fabd-936c-48a7-b8e1-cc5ac8711fef",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b34517a-8739-478f-84cb-068b1864cc81",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e2ea141d-676a-4ab1-87b3-15b24cc17957",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 100,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"e069f1c9-5a32-4cbd-a664-f551ed704bc3","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 4,
-  "parent": {
-    "name": "Swedish Monkey",
-    "path": "folders/Sprites/Baddie/Swedish Monkey.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_swedishmonkey_eat",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 29.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6c0a638c-a4e7-45ea-b394-8b515668f16d","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"376b3980-612f-44b3-b3a1-220a07c8a491","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e6654527-93c3-4a68-846a-354548b6bca5","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"9234c83c-ca52-4944-99ff-6de348615c9f","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d9ae1981-5d4a-49b5-be82-321384e19102","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"5c5b910a-785f-436e-8e89-6d5bb275bcf0","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"32951f8f-daf0-4922-89bf-8845e0f58e35","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"2d827be9-9e25-462a-a219-8ca4a9133e77","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"997ea401-0525-48c1-99a8-b856bc300aee","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"a52d28fa-7e1a-4593-a853-1ce87b2ad6be","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cb9305b2-33d3-421e-82b0-f0c5ecfa1547","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"f70c1c5e-3d72-46ba-8e58-6716a5da9e76","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5f038cf7-c5b7-420b-89ef-9234de7df37c","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"ee9a7b69-e321-4695-a445-f4dc4763abd6","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fde19839-8a62-418c-9f5b-3760429e9489","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"2e2ce4f1-6670-4de3-ab30-1abbf8b5732a","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"415b1bd4-e4c0-4800-8f84-0e69253eb0fd","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"8491c8c2-442f-43ce-ad33-82e3f07a58ab","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b160c7ae-d076-4916-870f-1cdb53d84269","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"6c57be30-d4f7-4451-a8bd-c168f53a9524","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b0e5d8ab-7f51-4704-ae4a-1352d6347d9a","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"f21c7630-75e3-4881-a988-42429a3cfe38","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e4f8ebc9-f093-4053-85b7-fdfe48dbfc99","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"9ee247d3-65d5-4306-bdb4-075561107617","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fdfe6b2c-425b-4a7a-91c3-69353f870b51","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"9a59dcee-f6ca-4ba0-aaaf-c3d0b9b8b87f","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"81f94c88-5cfe-4890-870f-7a196bd70b72","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"8c7dccaa-d6b5-43a2-8699-5599ab950a8d","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"71f2a16f-712a-424b-909b-29511a4010b9","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"c2d5485e-c07a-4fbd-a73a-ae865ffcfc0a","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9345a3c8-1004-4b25-bf1f-ffafb53d40e6","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"99c60040-1cb6-49e6-8797-74a8f7b15f8b","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7769f8d3-541c-4832-9d23-c8ab7b387ad3","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"e182200a-8fa1-41bf-b762-756b381dcdeb","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"97f797c0-3384-4336-aef1-5efb066427b3","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"1ff7f5e7-ff30-4a69-948d-4582ccad1579","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"63d0d909-bcdd-4dc3-b3ca-803ea382e825","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"b3ee0955-8984-48e0-a410-8c3a0a16ddb7","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"769973db-b706-4124-970f-16e483b49958","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"95cfc94c-1622-4032-b3b7-57299c99a214","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"09f4637a-19a5-4ce4-97a8-09b06d4c4bb7","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"c437eea9-4941-4536-8ea2-a34f9ef6b38d","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0f04a8af-ecfc-4d78-a415-cfb09f3c7fad","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"82340010-935b-415a-bdec-26d761e557ca","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cb315dba-0f1f-406b-8cdd-e0bc5f562069","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"ad905a24-d1c0-40b4-858d-b8458fc632cf","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d16f0d3a-0458-4a28-b6db-2704cb8ca4c6","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"d6af8b21-4e61-4970-8d41-6c78a69dfd67","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"46e7cda3-c3ed-4d74-a1dc-641ad633d43d","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"6d5f5c4b-beeb-4a9c-a607-98a171a0337d","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2f5a8247-8938-4136-9f3d-f695df448964","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"d5a07f22-c6fb-4e1a-8716-3efaf646b663","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d180fabd-936c-48a7-b8e1-cc5ac8711fef","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"d4e265d6-c9cf-48f9-a0a0-683cde9d355a","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5b34517a-8739-478f-84cb-068b1864cc81","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"670ae519-4026-4721-9119-4bec576b100a","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e2ea141d-676a-4ab1-87b3-15b24cc17957","path":"sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy",},},},"Disabled":false,"id":"83a0aee2-e2fb-45da-8dc7-2c5a7f096835","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 50,
-    "yorigin": 50,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 100,
+  "height": 100,
   "textureGroupId": {
     "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup",
+    "path": "texturegroups/baddiegroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 100,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "a4774695-0fcd-4122-b45e-486011e56130",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3617a159-5d0d-4a43-b9f7-882211af7887",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e62891f9-0c05-44ad-8061-55f359e15091",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d326b6d3-9d2b-402a-8987-2dba651c1f50",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b906747d-ad72-40a9-ab1d-7fad4cdd8db2",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ca6f5e5c-a08a-4743-918d-5fdf744beb30",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d562f447-90b6-4fbb-8847-8d468867fbdf",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a8a59887-75bc-4afa-bd69-cecd825747d3",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "25afecc6-3b97-4d41-96af-d25e1029ab19",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b5ea1708-ea3e-452c-a461-617244677f44",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "136d0cce-44be-43c4-bd6c-7851b6cec7bb",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bd927eab-5246-4ee1-a137-125165717b00",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a2c9003e-813a-420f-bf4c-58986f41b885",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1c676b8f-5291-4e5b-bdaa-a136467d7c26",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b2804aac-cb92-4847-aa9f-0018e2d9e13e",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "86e30230-5db1-4ed3-8acc-f6862ab85512",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d6d7e6e1-3384-4fe0-97e6-930d116b5c21",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6b56a860-8101-4a52-9c62-561a545f3d29",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d83f73db-050c-44c9-a26f-54c083ebce57",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "36814fbd-3dbb-4d6f-a773-cb04477013da",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0a4fe771-e129-4c56-94a4-f8e27823a300",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "38ac33de-0bde-490c-8215-ee92f461c774",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3040b984-3382-4d17-bfa3-bb9496c30435",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d1459e05-4d36-42b1-8327-8323617c81a3",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "460d642a-0d3b-44b4-817f-70272806bd12",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "24155051-9297-4c4c-9944-4f0fc2d11028",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e4a153df-c3f6-457c-8a19-ff21baabcee9",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "24daa6ac-1fc1-4ac4-9894-1da9aeecf24d",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "487dfdb9-ecfe-42f1-9e99-b94680b95e4f",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_swedishmonkey_eat",
+      "path": "sprites/spr_swedishmonkey_eat/spr_swedishmonkey_eat.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 29.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 50,
+    "yorigin": 50,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_swedishmonkey_eat",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Swedish Monkey",
+    "path": "folders/Sprites/Baddie/Swedish Monkey.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_swedishmonkey_eat",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

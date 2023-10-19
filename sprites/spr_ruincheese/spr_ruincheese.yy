@@ -1,97 +1,168 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_ruincheese",
-  "bbox_bottom": 2719,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 0,
   "bbox_right": 319,
   "bbox_top": 0,
+  "bbox_bottom": 2719,
+  "origin": 0,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eb3f4a72-04bd-4e45-9844-a56a6494cdcf",},
-  ],
+  "type": 0,
+  "swfPrecision": 2.525,
+  "width": 320,
+  "height": 2720,
+  "textureGroupId": {
+    "name": "ruingroup",
+    "path": "texturegroups/ruingroup"
+  },
+  "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
-  "height": 2720,
-  "HTile": false,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "f64c7ba2-4c52-45e9-80cf-a508dc336c5e",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_ruincheese/spr_ruincheese.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_ruincheese",
+      "path": "sprites/spr_ruincheese/spr_ruincheese.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 30.0,
+    "playbackSpeedType": 0,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 1.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_ruincheese",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"146f2c0a-9e39-449f-b5b2-381d6411a050","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
   ],
   "nineSlice": {
-    "resourceType": "GMNineSliceData",
     "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+    "left": 0,
+    "top": 0,
+    "right": 0,
     "bottom": 0,
-    "enabled": false,
     "guideColour": [
       4294902015,
       4294902015,
       4294902015,
-      4294902015,
+      4294902015
     ],
     "highlightColour": 1728023040,
     "highlightStyle": 0,
-    "left": 0,
-    "right": 0,
+    "enabled": false,
     "tileMode": [
       0,
       0,
       0,
       0,
-      0,
-    ],
-    "top": 0,
+      0
+    ]
   },
-  "origin": 0,
   "parent": {
     "name": "Ruin",
-    "path": "folders/Sprites/Tilesets/Ruin.yy",
+    "path": "folders/Sprites/Tilesets/Ruin.yy"
   },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_ruincheese",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 1.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 30.0,
-    "playbackSpeedType": 0,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eb3f4a72-04bd-4e45-9844-a56a6494cdcf","path":"sprites/spr_ruincheese/spr_ruincheese.yy",},},},"Disabled":false,"id":"61fa9adf-ffa7-4d7c-a4af-7088ad2e7b70","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
-  },
-  "swatchColours": null,
-  "swfPrecision": 2.525,
-  "textureGroupId": {
-    "name": "ruingroup",
-    "path": "texturegroups/ruingroup",
-  },
-  "type": 0,
-  "VTile": false,
-  "width": 320,
+  "resourceVersion": "1.0",
+  "name": "spr_ruincheese",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

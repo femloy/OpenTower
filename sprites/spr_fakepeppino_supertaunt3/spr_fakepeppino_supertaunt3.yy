@@ -1,106 +1,592 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_fakepeppino_supertaunt3",
-  "bbox_bottom": 147,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 6,
   "bbox_right": 148,
   "bbox_top": 13,
+  "bbox_bottom": 147,
+  "origin": 9,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e679748b-9539-4b55-9e4a-cf51b13138de",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"59ecb19a-0cb4-4311-aab2-9514c8cfc977",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be133a18-0244-4b2c-bdfa-313bfeae8b73",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9f636577-7ca5-40ac-9a46-96a67a14af47",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"48af64c0-e928-40b1-ac1d-402cae79c7f1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4bd29bf-6d9a-47d9-8666-f660054f91fa",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"efec2a46-724e-4480-9bf5-99cc27350e58",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"201a3b6d-11fa-480b-a6f5-00903290a903",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ab8f37f5-df1d-4f19-a964-31c90fa6ccbb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a778f257-dfc3-4a09-94dd-bcaee2ac64cd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8e498b56-c492-458b-b7b5-af853dc1907d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e28a3064-0120-43cf-a07f-ca93e196d189",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a179a91-757f-4891-a94b-c9b6c5da0907",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6584c28c-ed35-4682-a05b-0cbca81d4856",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b51711de-6371-4d9d-89b5-2ddb7aa62fd2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"234f8ab5-665c-4634-b7c1-c5ebd1edac3c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"540ebf78-73ad-4197-9abd-55aa8924c489",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 161,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"f6cc1082-f81e-4d9f-a461-cec26ae01a75","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 9,
-  "parent": {
-    "name": "Fake Peppino",
-    "path": "folders/Sprites/Boss/Fake Peppino.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_fakepeppino_supertaunt3",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 17.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e679748b-9539-4b55-9e4a-cf51b13138de","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"e3b25ba6-bb5f-40e7-9f89-b2599d2a35f1","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"59ecb19a-0cb4-4311-aab2-9514c8cfc977","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"a3e1b620-b8ff-4672-9b68-0cb4e8235424","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"be133a18-0244-4b2c-bdfa-313bfeae8b73","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"3f62f142-aeec-41c7-88ab-a3a0bf3cc0c3","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9f636577-7ca5-40ac-9a46-96a67a14af47","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"a239b8e0-c2b2-4605-9d1b-4dc1c8160905","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"48af64c0-e928-40b1-ac1d-402cae79c7f1","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"48419724-b307-4f5f-b5d5-d995036fe43c","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4bd29bf-6d9a-47d9-8666-f660054f91fa","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"3eee329d-0d1e-42af-9b9a-fa8e12c301ac","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"efec2a46-724e-4480-9bf5-99cc27350e58","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"f1d7af44-d32c-4e7f-b070-764b65b6a9e0","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"201a3b6d-11fa-480b-a6f5-00903290a903","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"db056310-457e-4b35-9a2e-e811913632fd","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ab8f37f5-df1d-4f19-a964-31c90fa6ccbb","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"ade9c09b-7539-4a15-a6e1-168d42a5c184","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a778f257-dfc3-4a09-94dd-bcaee2ac64cd","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"fef6f8dc-cc00-477b-aebd-69b816f2f141","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8e498b56-c492-458b-b7b5-af853dc1907d","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"26327a6a-9578-4fcb-95f4-0c474bfc134d","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e28a3064-0120-43cf-a07f-ca93e196d189","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"7cae83d7-9cd8-41d4-942f-52f05da14b68","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1a179a91-757f-4891-a94b-c9b6c5da0907","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"60ef558d-1afb-4b35-98a7-8ac40b55878b","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6584c28c-ed35-4682-a05b-0cbca81d4856","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"e9d327d6-79b5-499a-9ea0-2ee2f902b2f0","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b51711de-6371-4d9d-89b5-2ddb7aa62fd2","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"311b0794-3c39-4595-ad2f-633d4cbe4d5a","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"234f8ab5-665c-4634-b7c1-c5ebd1edac3c","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"72edb4cf-842a-45b7-bf85-9f9c6a31defa","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"540ebf78-73ad-4197-9abd-55aa8924c489","path":"sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy",},},},"Disabled":false,"id":"e93960c8-ff0a-4216-98ee-00c6a38fb220","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 75,
-    "yorigin": 86,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 150,
+  "height": 161,
   "textureGroupId": {
     "name": "bossgroup",
-    "path": "texturegroups/bossgroup",
+    "path": "texturegroups/bossgroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 150,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "e98d7722-bddf-4784-b54a-d24aab47584e",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "aaf1fe10-15a3-4753-acf2-6d93802f8154",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9a418aa2-ed2f-4f10-8264-13f321f48ba5",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c821be24-e9d4-4613-b77f-84f1845693b5",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "77a9168e-264b-438b-8f6c-9d5aca068cc7",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8e8ae18d-d61a-491e-8821-9e4197606f1b",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "10815506-e008-4198-80ed-5de1fca0d217",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4976a487-78e5-4e15-a414-9ae24c46be3c",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b87c0f63-3fd6-497a-997d-d74ad36a4e4e",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "85e2099d-6afc-4e4e-8668-77876fc54a1b",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e6c1c7af-c044-4b33-8b27-211d82b3db9a",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "110bfd19-8dd7-4d78-b8bc-a2239b055811",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "66cde5f0-2c7a-4866-92e2-7e5dcf4e5916",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9bfd88f3-2fa3-4cc0-be0d-fdf2b7749d39",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e39aaec6-9d85-437f-a6c1-f8dd91100370",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e2e5180e-16c9-4834-941c-2a60bf4675f2",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "710134f4-6883-4757-b6e2-a2beba657d69",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_fakepeppino_supertaunt3",
+      "path": "sprites/spr_fakepeppino_supertaunt3/spr_fakepeppino_supertaunt3.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 17.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 75,
+    "yorigin": 86,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_fakepeppino_supertaunt3",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Fake Peppino",
+    "path": "folders/Sprites/Boss/Fake Peppino.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_fakepeppino_supertaunt3",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

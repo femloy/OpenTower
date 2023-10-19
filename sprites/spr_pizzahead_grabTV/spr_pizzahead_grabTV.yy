@@ -1,194 +1,1824 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_pizzahead_grabTV",
-  "bbox_bottom": 354,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 50,
   "bbox_right": 177,
   "bbox_top": 16,
+  "bbox_bottom": 354,
+  "origin": 9,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f0deed9f-19c4-43ee-b0fb-c4f781bc27c6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"460f2f7d-7b1e-4d57-b71f-104263297394",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9bc4baa-efba-4ae0-8b24-5dfc46a99c05",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8c145004-68ea-487d-b69d-e701fccf67a7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"21314ed3-89af-4360-b308-1ec05c5646a7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1add346f-6905-49ee-8ca5-789c17844b99",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c13771e-c569-4260-baa5-b410f8196fdf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"80a4f26e-63e8-43d5-998f-63f09f0e1616",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"29c58f17-db35-4b85-9614-2eedd429633f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6f477f3b-a1e5-4081-9824-ca1159ce992a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ec30100f-505f-407f-a958-141833f94a8a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f022040-d04a-456a-9913-31eb00a8d1db",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d280573b-0ada-43de-ba6f-f3b024d695b1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1652c397-939b-4f9a-9c9b-47b26c534938",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04c98e30-f43e-4dba-9463-79dbb3a02c95",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bce00a73-5578-4dcd-b0cd-9c025c070b5a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3780cec7-ed34-4588-8cdf-e93fdabb9548",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2d90e7b-bbfa-43c9-a40a-fb89330e1602",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"54105976-1bde-4ee7-8f25-bdb1974c9e60",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c1eec0cf-cfd4-4f9b-b8d0-62dfbd2331e3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55e8e207-82d3-4fe6-ac7a-fa43086e1770",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"57d05c51-93e7-4405-b1df-548c5c8f3bec",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56b2c76d-fd74-4599-9025-6e5fe18ebee6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"923839fb-4499-4c81-8c37-450601e018e0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63fe92c6-abcd-42ee-833e-360073ad2789",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ad9a192f-f688-4415-abc1-757ebfcd48b4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6d9b88ed-5124-472c-8a90-8bb77663142c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a64fe863-51a8-43fd-8062-3f52e7f1e957",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0590731d-14bd-4b73-b2a6-3b35f09d7c89",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"65f50ab3-2f31-41dc-8cf4-02196c525e28",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"451ffdb4-b252-41e4-97bb-0f444002682e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f458e3d-7cd0-4cc4-926b-40483b68204f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a161a390-5e83-44f2-b7cf-aa6016bccae5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"44a2dd12-2931-401e-8a3f-6e3e1c9a0bbe",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dff48d7a-0483-4b0e-9a02-90c5a62e66cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11b34d09-929b-42bc-a78e-9c02eac3fc9f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"92fffe16-b8b5-4037-8e73-de9d5f27908f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b693bfb1-8ed0-45ae-82cf-a8daf0d312eb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"488f3ad0-9739-4fa6-ba18-6d072cb7c4d3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9aaed10d-f971-4756-9157-9be10213f2f3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f9c809d-a96f-4024-a093-9f17c8b46149",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc447f8c-b0ad-46ce-8f7a-37e4c2f7d6b5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84cfa3b4-4579-4270-8b1d-43494d05addc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2dcdd276-99be-4e1d-83f4-e67ca061b9bb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84cbe478-13f2-4382-910b-a1f70483e1a0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b2577a3-31f2-4ae3-b4ea-038b438620c0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4915c879-b2f8-4b1d-b977-cf6b51975421",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4aa2ecc-cf48-4c31-abd9-ae2f62e9648c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bc2bb23a-1af1-44cf-bb55-3e8e197d14a7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7316b83e-776a-46d1-bdbd-3e4a24349edf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"21c3116a-68a6-460f-a163-d8956efcda40",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30306fb9-863d-4d17-b9c4-9b478c3ab1d0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"99435d93-da3f-4dd2-8538-2a07c24829b8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94e2c615-fb62-41be-baef-f73a65b6db60",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"037844b4-ba8a-4df3-abfc-f03fec9c95e9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e4ac7661-6b29-4448-965b-45d96dc13e2d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"90bcc92c-681e-43f5-bcc8-68a011245915",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f75dac0a-457d-4b9c-8b20-243c31ff3107",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bd9559f3-9cff-40f4-8b5a-8625415971a7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bf69eb21-584c-470a-b6a9-ec49b313e213",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"671b6538-4f73-4dc8-848d-25522cdfeb3a",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 355,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"18ed60af-2879-4ec5-a5d6-84642e7edf84","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 9,
-  "parent": {
-    "name": "Phase 2",
-    "path": "folders/Sprites/Boss/Pizzaface/Phase 2.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_pizzahead_grabTV",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 61.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f0deed9f-19c4-43ee-b0fb-c4f781bc27c6","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"6ec16fb8-b615-490e-ad63-e6aeda9a36b8","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"460f2f7d-7b1e-4d57-b71f-104263297394","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"24f64a09-92cd-4f5f-8462-b336e8977d0d","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9bc4baa-efba-4ae0-8b24-5dfc46a99c05","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"4480b014-9203-485b-9720-07da6eaa6af8","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8c145004-68ea-487d-b69d-e701fccf67a7","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"9c3d26dc-44fb-419b-9cd2-d7a63e2b0d80","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"21314ed3-89af-4360-b308-1ec05c5646a7","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"c8f735d3-2546-421b-b3b7-e1d1a05d0dc9","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1add346f-6905-49ee-8ca5-789c17844b99","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"b9345786-ab64-4ceb-91f5-f0a9515ace5d","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1c13771e-c569-4260-baa5-b410f8196fdf","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"dd168d34-c886-4ab0-ab25-36eecc3fd29a","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"80a4f26e-63e8-43d5-998f-63f09f0e1616","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"c5c2a10b-8bea-4e6b-87bb-e990b330fa51","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"29c58f17-db35-4b85-9614-2eedd429633f","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"9aa95860-d203-4417-94cc-d972a37d0cce","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6f477f3b-a1e5-4081-9824-ca1159ce992a","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"180315d5-cf13-4855-a945-7fc15354ef23","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ec30100f-505f-407f-a958-141833f94a8a","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"95a0a51e-cd76-4cba-94b7-922977f2e9a9","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0f022040-d04a-456a-9913-31eb00a8d1db","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"b50ba56e-e38e-4041-9a55-ed7fe6be2e26","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d280573b-0ada-43de-ba6f-f3b024d695b1","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"ba87a711-be44-4122-b589-ab9bd7e13dec","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1652c397-939b-4f9a-9c9b-47b26c534938","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"c5456b87-986b-4825-b2ce-8bb836dddcc6","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"04c98e30-f43e-4dba-9463-79dbb3a02c95","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"9fc198d7-d145-4a28-ae43-c393e4691fe1","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bce00a73-5578-4dcd-b0cd-9c025c070b5a","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"47fa9db2-27f7-47e2-bfd1-2276313167ef","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3780cec7-ed34-4588-8cdf-e93fdabb9548","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"0858ab6b-20b9-418a-8d4a-447be8bcb9c7","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2d90e7b-bbfa-43c9-a40a-fb89330e1602","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"d38da403-f61e-42da-8c60-6d3d3b189c12","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"54105976-1bde-4ee7-8f25-bdb1974c9e60","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"939d5109-5dd6-4c6a-8e52-dc1e2f4570ac","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c1eec0cf-cfd4-4f9b-b8d0-62dfbd2331e3","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"2c5d489c-40cb-4de0-94ce-8e7a04e7ce78","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"55e8e207-82d3-4fe6-ac7a-fa43086e1770","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"7685105b-2029-45b4-8070-a609aaf432e7","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"57d05c51-93e7-4405-b1df-548c5c8f3bec","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"c86e0289-4114-4e3c-bb6d-54036f263b7e","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"56b2c76d-fd74-4599-9025-6e5fe18ebee6","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"e508c8d6-8a45-45db-933f-7afd990108d3","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"923839fb-4499-4c81-8c37-450601e018e0","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"f19700a1-ef4f-46f0-9963-bc3b3d7361fd","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"63fe92c6-abcd-42ee-833e-360073ad2789","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"4635bcc2-caf9-4b3d-aba3-db6b07ff2172","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ad9a192f-f688-4415-abc1-757ebfcd48b4","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"5e1397b4-6162-4f21-9fc2-e18c333ae2dc","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6d9b88ed-5124-472c-8a90-8bb77663142c","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"5c36d08b-1b19-47da-a54b-524de7408e11","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a64fe863-51a8-43fd-8062-3f52e7f1e957","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"fc476a5b-542d-43ca-9fe9-19688d506b73","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0590731d-14bd-4b73-b2a6-3b35f09d7c89","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"705acbc8-c419-4f7e-a80f-db6bf228eaeb","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"65f50ab3-2f31-41dc-8cf4-02196c525e28","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"e4ae629b-6a33-4e24-b53f-50b4a68040c8","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"451ffdb4-b252-41e4-97bb-0f444002682e","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"17ff78a6-a41b-4484-9291-7328f6518e1c","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3f458e3d-7cd0-4cc4-926b-40483b68204f","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"914c8bc8-98ad-4125-9389-3d553c4e1aa9","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a161a390-5e83-44f2-b7cf-aa6016bccae5","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"4e419220-4817-4f34-93a6-5a94ae39ba87","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"44a2dd12-2931-401e-8a3f-6e3e1c9a0bbe","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"5059bcb4-a863-4e46-87e8-60048622b27b","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dff48d7a-0483-4b0e-9a02-90c5a62e66cf","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"13b56734-6ab6-42f7-b5e1-de443b23bb0c","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"11b34d09-929b-42bc-a78e-9c02eac3fc9f","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"4d99708a-5143-43f9-ae31-cffcf26200b2","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"92fffe16-b8b5-4037-8e73-de9d5f27908f","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"359bcc11-b4c7-4197-ac9a-5817d98d5ccf","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b693bfb1-8ed0-45ae-82cf-a8daf0d312eb","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"fc26edd3-5ab7-439b-b58b-5f8eabba8be8","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"488f3ad0-9739-4fa6-ba18-6d072cb7c4d3","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"dc19fca3-5e6a-4a3a-b8b0-7c1ad79f6f77","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9aaed10d-f971-4756-9157-9be10213f2f3","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"9f9b71a9-687f-490b-b3be-6b505cdfb1cb","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0f9c809d-a96f-4024-a093-9f17c8b46149","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"dd2c2e61-b01a-4b3d-9334-b0a418b47909","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc447f8c-b0ad-46ce-8f7a-37e4c2f7d6b5","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"fbbf48e1-d371-45c1-8f37-3914cd41e05c","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"84cfa3b4-4579-4270-8b1d-43494d05addc","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"e0e7000a-d7d6-4572-9d48-61cdf5781cd4","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2dcdd276-99be-4e1d-83f4-e67ca061b9bb","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"3f94a5c2-ed41-4d7e-ad6f-04637fdf1a1d","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"84cbe478-13f2-4382-910b-a1f70483e1a0","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"012b3968-ad15-4e96-aa41-e96a4102ebb7","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2b2577a3-31f2-4ae3-b4ea-038b438620c0","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"d4bd1290-fb1a-450f-b7d6-fa2d71380c2c","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4915c879-b2f8-4b1d-b977-cf6b51975421","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"4d030926-5bb6-4bff-b34f-27d4be02b90b","IsCreationKey":false,"Key":46.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f4aa2ecc-cf48-4c31-abd9-ae2f62e9648c","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"a000e58d-114f-4dbd-a013-2de0e9908438","IsCreationKey":false,"Key":47.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bc2bb23a-1af1-44cf-bb55-3e8e197d14a7","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"995f238f-09cb-4c5e-b665-b8dbd5a226ae","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7316b83e-776a-46d1-bdbd-3e4a24349edf","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"ce2e1367-126f-4d4c-b925-5a5105394001","IsCreationKey":false,"Key":49.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"21c3116a-68a6-460f-a163-d8956efcda40","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"d71d29fe-a14c-411f-a345-41f632114d58","IsCreationKey":false,"Key":50.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"30306fb9-863d-4d17-b9c4-9b478c3ab1d0","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"1c3f3355-b5ed-4fe3-9dd3-20927b15c9f9","IsCreationKey":false,"Key":51.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"99435d93-da3f-4dd2-8538-2a07c24829b8","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"1378baec-30b3-4343-866c-1b82581f78d9","IsCreationKey":false,"Key":52.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"94e2c615-fb62-41be-baef-f73a65b6db60","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"56317d63-181e-4d9f-8083-fa19ee573ec4","IsCreationKey":false,"Key":53.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"037844b4-ba8a-4df3-abfc-f03fec9c95e9","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"48afa7ef-67a3-4e14-bc2e-2fb579316aac","IsCreationKey":false,"Key":54.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e4ac7661-6b29-4448-965b-45d96dc13e2d","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"d30eed71-e5bb-4455-a822-f7f9c452aaf5","IsCreationKey":false,"Key":55.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"90bcc92c-681e-43f5-bcc8-68a011245915","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"22f641d2-b05e-4977-8927-123cc23e3e1c","IsCreationKey":false,"Key":56.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f75dac0a-457d-4b9c-8b20-243c31ff3107","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"067de610-cc68-4adc-a9a4-7d3aa1d1b0d9","IsCreationKey":false,"Key":57.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bd9559f3-9cff-40f4-8b5a-8625415971a7","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"7113308a-cac2-474f-9b19-95da87762164","IsCreationKey":false,"Key":58.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bf69eb21-584c-470a-b6a9-ec49b313e213","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"36f89d8d-83ce-4dc8-966f-097cf660bf0d","IsCreationKey":false,"Key":59.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"671b6538-4f73-4dc8-848d-25522cdfeb3a","path":"sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy",},},},"Disabled":false,"id":"45621327-281c-4ed9-b5ef-d451dc5e5751","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 111,
-    "yorigin": 167,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 180,
+  "height": 355,
   "textureGroupId": {
     "name": "bossgroup",
-    "path": "texturegroups/bossgroup",
+    "path": "texturegroups/bossgroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 180,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "37",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "38",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "39",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "40",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "41",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "42",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "43",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "44",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "45",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "46",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "47",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "48",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "49",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "50",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "51",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "52",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "53",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "54",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "55",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "56",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "57",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "58",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "59",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "60",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "6b08ddc0-f873-453d-9b92-cbb32768935d",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c24ddced-43b5-4cbc-83e5-e406da99597b",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1d65640f-8fb7-4b22-8fbd-bc6ab27a8da6",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f5598b30-9358-4235-abc8-43261b9eaede",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2295590a-65aa-4363-a09e-2f8ec0d7e53c",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5e026613-50fe-45eb-aaa5-9e4984de1144",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d074d07d-1a45-4268-85af-577f8025d175",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0f153724-10d6-4fbc-988b-30d04109cb38",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4b6b2c6c-cb35-4c9f-a310-23fafd7b7fc0",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6329c8ba-9f4f-4d6d-abf3-46ca800c2d2c",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5be0cfa6-e409-4293-9be8-9a530234b879",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c39c4879-7016-4e5e-a496-4e353f025e45",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cd685f01-c614-4302-bc34-fb5d57ab5857",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b69a6a86-bf9c-4eec-885a-74bfcf0f9886",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ec36fedc-03a1-47b2-8cde-1034d2055710",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bbebbfbd-a823-4f91-a877-bf41f9a7ca96",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "460376c3-b72e-4a6c-9652-74e312dcdc77",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1b2280c3-4a3a-4704-b93f-df5337d8616d",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "76026eb3-fdd2-43a7-b520-6d4d8fbba888",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0d4c2c80-4664-40d1-96fc-ec76f0a5d0b6",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "eb143648-1222-4785-9456-d5ab37990fca",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f8b3d7f4-ceca-42eb-b743-a066b76454e3",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "17b14a4b-434a-4e02-9f5b-cdac7adb2187",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f0a97b8c-1e96-4592-950c-92269ec94eee",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "31c77390-719f-4c69-9764-d8192e730994",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "662d7d92-01be-4bac-8df8-32f8a1d9644c",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0ad78b2e-9a20-43b8-aa8e-4b611f9cda57",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f213cb1d-7863-4ad8-bfdf-c5783477a562",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d870b7f9-75d7-4915-afca-fe502f3549bc",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "52dd4836-8b21-4a5b-98c3-4e921bed1814",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bc6d0265-fc64-44fa-a16d-be2d8d14d6ca",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2f5fd87c-129b-43d7-9dfc-6790f5648d72",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5fa120b6-1413-47d3-aedd-80ff2e3f6ce2",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1f9d98ac-03d4-46fc-93bb-78de0ae9a2b1",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2fef76e4-1013-499c-906a-49643e602bb1",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "625062c5-42f3-4aea-ad01-96915e4207cc",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f9f052b1-8f4e-4585-9285-94cb3fa22326",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c78a8dec-68b8-492c-8150-a45351663d43",
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "37",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a0f31f2d-ccc1-4b4b-b0e7-50b564736b91",
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "38",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0aa71937-342a-4bec-89c6-3b7069791f2d",
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "39",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "aa179c60-0b20-4420-842a-07be4d8c7ba0",
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "40",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "aae9392a-bdf3-4fd7-a9e7-8e7cc4e166ac",
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "41",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e5b39caf-499b-4600-8769-cc5e120d3acb",
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "42",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5060e94e-8d92-4e33-baa0-efa0e221357b",
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "43",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "20dd3140-d98e-47b2-bf00-bd2e22c5f487",
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "44",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "61b1863c-c1a4-4943-a950-31ae9dbca0f9",
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "45",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bcb1b1e9-149a-47a0-8b1e-0f7e05cf61e3",
+              "Key": 46.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "46",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "38ae395c-da85-42a2-83a3-8fbf9ff64db1",
+              "Key": 47.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "47",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a132e7ec-3a26-45ed-a425-170f7c391d31",
+              "Key": 48.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "48",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8213c9f2-03a0-418d-bce8-47b51d01de84",
+              "Key": 49.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "49",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "35205e13-6460-4a70-a1e1-def20a13e48d",
+              "Key": 50.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "50",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6c170d0b-578b-4368-be9b-67b57c2c55df",
+              "Key": 51.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "51",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c13ab32c-a6b8-4138-8f8b-1837bc809c1a",
+              "Key": 52.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "52",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f458cf59-171b-4f53-94b2-3c0c21c1e25f",
+              "Key": 53.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "53",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d280689b-eff4-41ee-953c-b03c30c56675",
+              "Key": 54.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "54",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "662d84e6-3855-4553-838a-41dc0543019c",
+              "Key": 55.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "55",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6961b8e7-6cef-46ba-9820-57f4fa6b4ddf",
+              "Key": 56.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "56",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5a1e88dd-f3be-4e48-8859-73f7aa000beb",
+              "Key": 57.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "57",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7e8f1f5f-0fde-4d30-ac26-96b48d3450e7",
+              "Key": 58.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "58",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b6343929-3dbf-46b9-8aa9-2c1d833b9cf7",
+              "Key": 59.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "59",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ceb912e6-c6b2-49ee-8eea-ae5ce22f48c6",
+              "Key": 60.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "60",
+                    "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_pizzahead_grabTV",
+      "path": "sprites/spr_pizzahead_grabTV/spr_pizzahead_grabTV.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 61.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 111,
+    "yorigin": 167,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_pizzahead_grabTV",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Phase 2",
+    "path": "folders/Sprites/Boss/Pizzaface/Phase 2.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_pizzahead_grabTV",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

@@ -1,288 +1,3140 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_creditsfont",
-  "bbox_bottom": 31,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 2,
   "bbox_right": 28,
   "bbox_top": 0,
+  "bbox_bottom": 31,
+  "origin": 0,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1495638d-e571-4ef0-88ba-2b696aaf41e7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"06680cb9-585e-42d2-be94-a9acc06382ab",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8eef36fc-0b39-4877-b90e-309bd3ab6000",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6e38c07a-3049-408d-aca9-a2f550c17e1f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df37f364-fa1c-4185-be4c-e853884d20dc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d0b4541-f7a0-4f08-b308-076e9329517c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb001501-44c7-4114-b9dc-a34ce76268ae",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"80a4ac80-3cd6-4272-9550-ca5113f4cbf3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b4aa6606-5202-489d-be45-cdbfec1c537d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4a6b136f-9823-4371-bf8c-e060e11800dd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c9167405-88b7-462b-b772-fca18cefe83e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b7635b7-8fd3-4ce6-804a-d854a2fe41b3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"385c41e2-c50c-4ffe-ab2a-7560c4419618",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"401793c7-396e-4659-aec9-af844186739b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bebe4550-4790-4397-a105-3abb742b50f7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9015486-2095-45ad-b816-697922e99b5f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"df2b415a-4976-47a5-95a3-ec1b6880cd12",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"11feef4c-f097-4d75-8182-93025701a968",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9c15d3c9-7726-4450-9044-a51fc63fedf6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e9266e12-a36a-4a78-bcd3-979bd40f3e0a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6bdd09e5-48fe-492d-ae38-b612ade8b1b2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb9b985d-815e-4300-8e6e-ef00d4686e95",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd01e94d-1e88-4e75-9de9-675af993716b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0708d1df-e945-4906-ae25-0ed1e3aef8e8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"84de651e-5c4c-4c0e-8d9e-8ac61c6ea483",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"42e4175c-6d09-4c04-b880-b21aa8199993",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"818013b4-0ef6-40f8-9f40-ae57769f728b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13beece9-201b-4b2a-afe2-57f40292ec4c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1337194a-d5eb-4451-adb4-8e50209f6a6f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"072db364-b4aa-43d9-adbc-4d9d039003a2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"385dbc2b-9179-49ca-b855-a0e09c615500",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"05a84171-7db4-4709-8c21-b6106cfb3bdb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0fd40a20-6506-485f-87a8-7369be7fef1d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1469db6d-407e-4e88-8597-2a23e4c31cc3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ea25858-30d8-4962-846b-c5d5155c032c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"798b5f29-d378-4f27-846a-c9cdade51167",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"daec25a0-59ba-43fe-9b1c-7293b9990dd2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b020da0-4c52-48b4-bc56-9f807a4d2e16",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"01722fc9-ff29-4777-ba3d-eee93ac8dcfc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3bd55ba7-23d7-499c-990a-6a60da69e578",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4e275bcd-ed9e-47a1-8241-89dae7a91823",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6dd4cec6-1c38-4003-82c5-c20941ec9697",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ed172337-b607-4481-a968-7f6d6a25ccd7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c26a29ab-d135-46e4-a072-936278f8b861",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"641083cc-fa2a-4f9e-84ca-858d8fca103b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1896b634-72f8-4344-8a93-c365160b522f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f03d69a2-e844-4965-87ef-ecf1cee87cd0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"014f2e53-17fb-4da1-b07a-dc9c22397275",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9bf468e-e633-41b8-9bf6-8c83850a852b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1465818c-9652-43ed-b683-83d618356636",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5fab1886-7f34-40a0-a122-d630c2cefd9c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f249d480-48d7-4067-8d9c-4999b3915ab3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"73242cb9-aa22-4706-84bd-d8bd8d9f38a0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"438dbce2-8cb0-45be-9bf7-dff02d020279",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7769b5c1-1140-4e40-9888-83b7a5d5a588",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"45941cda-83b5-42db-a846-e1257aefaa59",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aeb567b5-f766-4c8f-8622-2daad271e743",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ee32ac10-dfe2-4ae3-839b-363578fed531",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0ed3c0e6-5b9f-4094-9515-2e266c5f2811",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c65cc4bb-f418-43d6-b42d-a6547d3558f4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b216e2f5-2281-40a5-9952-082a01549d94",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1b81a576-8120-4d1b-b5c3-484ddec6b472",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0573e497-37e6-42c8-bc91-816143c4ddee",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0d268b9f-382d-4c8f-bea4-f139e75aae9a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"977ef4c5-9bb1-4c8d-b40a-15b6a752cd8b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"742fd68c-4502-4fc7-b0e0-0eb3c8cee6a8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1ae4f189-e056-4776-9b71-9b07fdde8166",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71f1808f-a9b2-424c-ac3e-e7b2ec5d0a79",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd71020e-a1de-400f-b2d8-41e539f03257",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"866b6e71-0962-4ab1-a0c7-4e89f835779a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f76318fa-5159-4731-8635-71229d148bbd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4195a93-7fdd-409f-b7a8-2d081a30a5bf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bb8e6dd0-9f24-4b07-90b5-46497b4ffcc1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5784a246-90fe-4a48-89fc-baa891569aad",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e55d017-de77-4b78-ba79-f0b72c5a9017",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f0e4b7a-f6e3-4a1e-874b-f40384eccc48",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a10003c3-bc4c-499c-8346-03c93bc29510",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"977be9fa-acca-4732-8de3-5990c1941e2b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"085e59ba-b05e-4fba-8369-3d027cb47de0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"05d23607-8739-4316-b216-3d5f079133b8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88354f1d-c942-478a-a7c0-729d64e12ae3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b60a8794-1067-4a52-b22d-8a7538405626",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cbcc6435-6e2c-40a9-a8b7-00c5ac83f2e0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5d47a9f2-9f00-4e67-9bbf-193b99591777",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a06497b8-f327-474d-8bd7-b065541c506d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aaf37eaa-f3ff-458b-89ff-7c26a44a54b6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4868b96b-841c-4ae4-9448-18eb33c88422",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d86f811-fce3-4f80-9323-8fbc5421e071",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"424c55c3-0de5-4b0e-9017-5a4875a20983",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"09ca666b-7d0b-462a-9d54-a03c3141ab7b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fc834531-489e-4b7d-b662-a90a554a0b37",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e9932a7a-5069-4177-b552-dcd0d826b4b2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5ace5154-73e6-4f21-b464-1661c15c1b85",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bcc8297a-834a-42ad-b2b5-bca0037bc1ef",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f37401de-e57e-4bd7-aa7e-6781df7243f7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9e4667c-0f1d-4954-a81f-ee9c4d9129c2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b8209b60-5cbf-4d31-8b88-4b270677cc6e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"27e4efd3-0423-4b84-b50d-cf250100c29d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9675e896-6620-4dc7-b166-e82f0a1160f1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"16b2d54f-92a2-49c1-a332-4217ba63f67b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"017363d2-2318-4c56-afee-317444bdf816",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d259a01-729b-4a88-866b-0a4e25ed67db",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d2055aaa-7355-42f5-8621-1f96209bc11a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c761dcb-4dcc-4964-930a-44b55aa5f3a7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a5271c6d-c7e7-4b98-9232-76fa773ba2e7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d846f5ef-ad6f-448e-bc51-9b32ce4b9980",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd0df69c-336b-4489-a8b5-67d62bc11ecb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"70b29803-6be6-4822-95c6-5fbce0f51f89",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 32,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"3d5e48f5-d0a1-4910-b726-dd6785c1c541","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 0,
-  "parent": {
-    "name": "HUD",
-    "path": "folders/Sprites/HUD.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_creditsfont",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 108.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 10.0,
-    "playbackSpeedType": 0,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1495638d-e571-4ef0-88ba-2b696aaf41e7","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"2aa70e84-6ff6-4d4a-bb1f-2ea3742d2cdc","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"06680cb9-585e-42d2-be94-a9acc06382ab","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"3cd709ad-ae58-4885-b5bf-9fb4d953b863","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8eef36fc-0b39-4877-b90e-309bd3ab6000","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"979de7ae-38f2-4680-be91-87c1d1e203f7","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6e38c07a-3049-408d-aca9-a2f550c17e1f","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"94f0a0f1-d3b6-4b27-8da1-974d5c447025","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"df37f364-fa1c-4185-be4c-e853884d20dc","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"62e6cead-d8f2-4acb-96b1-473deb6038f6","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d0b4541-f7a0-4f08-b308-076e9329517c","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"84f31a73-aee8-4431-a6d5-7945e112c2ef","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cb001501-44c7-4114-b9dc-a34ce76268ae","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"3101190f-78f9-4ed9-92ea-237fe89b9d1c","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"80a4ac80-3cd6-4272-9550-ca5113f4cbf3","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e7ea21b5-998b-48e8-a2c6-592c2d876e38","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b4aa6606-5202-489d-be45-cdbfec1c537d","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"805754bb-b612-4e44-9e0b-e65469cb7a3a","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4a6b136f-9823-4371-bf8c-e060e11800dd","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"0950c21e-26ef-4ab7-b04d-4b2f3bc4e727","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c9167405-88b7-462b-b772-fca18cefe83e","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8a2dd75b-7825-453a-92a0-4d3168d1d1b9","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2b7635b7-8fd3-4ce6-804a-d854a2fe41b3","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a1f4e9aa-fad7-4f42-a038-9eb5d064b8bd","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"385c41e2-c50c-4ffe-ab2a-7560c4419618","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"38ec670f-9165-4cfa-8284-ae2f728403f5","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"401793c7-396e-4659-aec9-af844186739b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"d76f2db7-6770-4aff-888c-57140d22e4e3","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bebe4550-4790-4397-a105-3abb742b50f7","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a8b93fc9-a451-43c2-844b-4a4ed12a8532","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9015486-2095-45ad-b816-697922e99b5f","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e391a177-8926-41e7-84ba-7e1a1e82afe0","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"df2b415a-4976-47a5-95a3-ec1b6880cd12","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"5c2676a9-f4c2-45bb-b912-d6ceb0a0d433","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"11feef4c-f097-4d75-8182-93025701a968","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"7cf5dfd7-7c75-4a51-b330-d6bf0e5af515","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9c15d3c9-7726-4450-9044-a51fc63fedf6","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"c6e1a54f-b266-4e05-995f-ee765a5d8756","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e9266e12-a36a-4a78-bcd3-979bd40f3e0a","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"1ab44117-76cd-4bae-843a-568f1729a91b","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6bdd09e5-48fe-492d-ae38-b612ade8b1b2","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"45bb77a3-e275-4fe9-8221-341bd4dd3e87","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cb9b985d-815e-4300-8e6e-ef00d4686e95","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"9d44ffff-c390-4a59-b475-fdba5b5f89f2","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd01e94d-1e88-4e75-9de9-675af993716b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"dc67fde4-ba7d-4f70-ac97-942d0166036f","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0708d1df-e945-4906-ae25-0ed1e3aef8e8","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"baef46a9-3c1d-4677-8d4b-3943af5f32d0","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"84de651e-5c4c-4c0e-8d9e-8ac61c6ea483","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"f54239ee-d199-4cf7-a829-14dc7bb07d97","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"42e4175c-6d09-4c04-b880-b21aa8199993","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"acbb898c-d2f1-4285-a8f3-278dcb1e33f7","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"818013b4-0ef6-40f8-9f40-ae57769f728b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"d1182c19-cb91-4245-801a-094bfd2d2d39","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"13beece9-201b-4b2a-afe2-57f40292ec4c","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"6338d2cf-610e-4de0-9b02-f822a0ee9a6e","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1337194a-d5eb-4451-adb4-8e50209f6a6f","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a8574997-b735-469e-8f18-db8cfb4b56c9","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"072db364-b4aa-43d9-adbc-4d9d039003a2","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"2189f7fe-a9e2-4767-8781-2d52ee7f2476","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"385dbc2b-9179-49ca-b855-a0e09c615500","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"6ba00abe-13ba-4c49-8962-572529e736d9","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"05a84171-7db4-4709-8c21-b6106cfb3bdb","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"b884462a-5e65-422c-8bf3-5c06e7268b2e","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0fd40a20-6506-485f-87a8-7369be7fef1d","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"98fd8605-2778-4496-8297-9475fea33500","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1469db6d-407e-4e88-8597-2a23e4c31cc3","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e01d9c3f-c89e-4879-999d-d12b2381267f","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4ea25858-30d8-4962-846b-c5d5155c032c","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"5731e8b2-a5a4-4de8-957e-07e5dbfd0518","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"798b5f29-d378-4f27-846a-c9cdade51167","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8c4a40ee-1293-4ee2-86d2-f8c6b6e7dfd0","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"daec25a0-59ba-43fe-9b1c-7293b9990dd2","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"811438a2-5e3e-4fbe-b0c2-2b7941811ba4","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2b020da0-4c52-48b4-bc56-9f807a4d2e16","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"3d57e15b-900f-42ec-b614-6d97a4d37e7e","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"01722fc9-ff29-4777-ba3d-eee93ac8dcfc","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"fb63339d-a4a4-4e18-a8c0-4dff103de511","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3bd55ba7-23d7-499c-990a-6a60da69e578","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a19963a3-34a5-4051-a784-5bb2c3088156","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4e275bcd-ed9e-47a1-8241-89dae7a91823","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"f48939af-288d-4388-b1f6-d45eced9cecf","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6dd4cec6-1c38-4003-82c5-c20941ec9697","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"1d56c692-56b3-43d3-93b8-74111716b7ca","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ed172337-b607-4481-a968-7f6d6a25ccd7","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"ba3d7f05-ace9-411f-9575-8dc2d650eae4","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c26a29ab-d135-46e4-a072-936278f8b861","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"1e60b30d-f672-42fc-a110-d34b4a42fde0","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"641083cc-fa2a-4f9e-84ca-858d8fca103b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"79e1549c-30ee-41dd-b250-5fb898222808","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1896b634-72f8-4344-8a93-c365160b522f","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"c7fe6e49-da68-455b-b613-6273c9570a9c","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f03d69a2-e844-4965-87ef-ecf1cee87cd0","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"0804b8f0-a9a6-48ed-ab6b-4ace5a94a059","IsCreationKey":false,"Key":46.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"014f2e53-17fb-4da1-b07a-dc9c22397275","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"50568262-89c1-4105-b483-956fd9c9c5bb","IsCreationKey":false,"Key":47.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9bf468e-e633-41b8-9bf6-8c83850a852b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"f13bca10-97eb-42b4-a8f6-4bc3b54e20f4","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1465818c-9652-43ed-b683-83d618356636","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8563871e-9562-4503-86a7-a5a501d9a37a","IsCreationKey":false,"Key":49.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5fab1886-7f34-40a0-a122-d630c2cefd9c","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"60577669-05c5-4988-aef6-0032e70f0bb8","IsCreationKey":false,"Key":50.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f249d480-48d7-4067-8d9c-4999b3915ab3","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8a6afae7-0eaf-4eaa-8b9c-7a085a2b373e","IsCreationKey":false,"Key":51.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"73242cb9-aa22-4706-84bd-d8bd8d9f38a0","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e693d6e2-6623-40c6-9e59-0a18843a5480","IsCreationKey":false,"Key":52.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"438dbce2-8cb0-45be-9bf7-dff02d020279","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"85a822af-1a46-4719-9421-ccbf887fe96c","IsCreationKey":false,"Key":53.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7769b5c1-1140-4e40-9888-83b7a5d5a588","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e6eada05-4838-46d8-9c7f-5fb832efb131","IsCreationKey":false,"Key":54.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"45941cda-83b5-42db-a846-e1257aefaa59","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e9d9406a-0e74-4fb1-93a6-27ab89ac2cd4","IsCreationKey":false,"Key":55.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aeb567b5-f766-4c8f-8622-2daad271e743","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a6dd45d7-077c-41ba-83b6-d4d8799a31a0","IsCreationKey":false,"Key":56.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ee32ac10-dfe2-4ae3-839b-363578fed531","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"b3097f0d-4a8c-4a2b-a8fe-297a4892ceaa","IsCreationKey":false,"Key":57.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0ed3c0e6-5b9f-4094-9515-2e266c5f2811","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a97b212e-3c6e-4720-b110-471a6d74e49b","IsCreationKey":false,"Key":58.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c65cc4bb-f418-43d6-b42d-a6547d3558f4","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"832e496d-9f40-4afb-9253-44e718580831","IsCreationKey":false,"Key":59.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b216e2f5-2281-40a5-9952-082a01549d94","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"43d645cb-3711-4c71-a8e5-e1e272bbee9c","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1b81a576-8120-4d1b-b5c3-484ddec6b472","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"1adfbc7c-c32e-497b-8634-6cb18c518e22","IsCreationKey":false,"Key":61.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0573e497-37e6-42c8-bc91-816143c4ddee","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"f79e0d7c-e29a-48b1-938c-657602edadd1","IsCreationKey":false,"Key":62.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0d268b9f-382d-4c8f-bea4-f139e75aae9a","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8ed75f95-e0e0-4c66-bd9a-88b25543785e","IsCreationKey":false,"Key":63.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"977ef4c5-9bb1-4c8d-b40a-15b6a752cd8b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"6f840bda-607c-4cc2-85eb-44e635243d7d","IsCreationKey":false,"Key":64.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"742fd68c-4502-4fc7-b0e0-0eb3c8cee6a8","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"9c25eddb-0b8f-42bc-977a-ece620c0ee12","IsCreationKey":false,"Key":65.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1ae4f189-e056-4776-9b71-9b07fdde8166","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"972bc559-1951-4b3a-89f2-04329ed003a9","IsCreationKey":false,"Key":66.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"71f1808f-a9b2-424c-ac3e-e7b2ec5d0a79","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"1c02081d-5e8c-4ba1-8661-0e8ed3a74af0","IsCreationKey":false,"Key":67.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd71020e-a1de-400f-b2d8-41e539f03257","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a672d345-0d4c-4cab-80b6-3000c6eeb7cd","IsCreationKey":false,"Key":68.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"866b6e71-0962-4ab1-a0c7-4e89f835779a","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"4e8b23b1-ffb0-4738-b427-8c9a6ea111df","IsCreationKey":false,"Key":69.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f76318fa-5159-4731-8635-71229d148bbd","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e50a0f2d-24d0-4429-94fc-f403aff44abe","IsCreationKey":false,"Key":70.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4195a93-7fdd-409f-b7a8-2d081a30a5bf","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"dc5815ee-66f0-492c-a90b-848f92aba21f","IsCreationKey":false,"Key":71.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bb8e6dd0-9f24-4b07-90b5-46497b4ffcc1","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"3f4977f3-5145-45ab-8d8b-8679a254c700","IsCreationKey":false,"Key":72.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5784a246-90fe-4a48-89fc-baa891569aad","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"05c12084-c885-4ff3-8c4b-ccf4de2b50a9","IsCreationKey":false,"Key":73.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1e55d017-de77-4b78-ba79-f0b72c5a9017","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"bcc98588-0489-4ef2-88a9-695787327773","IsCreationKey":false,"Key":74.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5f0e4b7a-f6e3-4a1e-874b-f40384eccc48","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"65df1d10-7a51-4098-9301-90b6112c1ac2","IsCreationKey":false,"Key":75.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a10003c3-bc4c-499c-8346-03c93bc29510","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"0d79ad17-bd2a-41eb-b22a-066d2dc76c74","IsCreationKey":false,"Key":76.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"977be9fa-acca-4732-8de3-5990c1941e2b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"63705548-6fcb-4c18-96c9-b5ab59576fcb","IsCreationKey":false,"Key":77.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"085e59ba-b05e-4fba-8369-3d027cb47de0","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"fe84d6a5-df48-45e1-aa18-3de842948ee6","IsCreationKey":false,"Key":78.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"05d23607-8739-4316-b216-3d5f079133b8","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"e17ff570-58bc-460c-ab6c-af70fb77fe53","IsCreationKey":false,"Key":79.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"88354f1d-c942-478a-a7c0-729d64e12ae3","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"fb5f452d-5ae8-459f-bf50-5c645f519c0c","IsCreationKey":false,"Key":80.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b60a8794-1067-4a52-b22d-8a7538405626","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"3dad0d26-1d25-456d-b496-784007103104","IsCreationKey":false,"Key":81.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cbcc6435-6e2c-40a9-a8b7-00c5ac83f2e0","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8fe6cb16-bd53-4182-a613-ed93e08234dc","IsCreationKey":false,"Key":82.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5d47a9f2-9f00-4e67-9bbf-193b99591777","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"bd0cd0c3-b7e6-4bf3-900b-91d9ba574641","IsCreationKey":false,"Key":83.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a06497b8-f327-474d-8bd7-b065541c506d","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"bf64b1e7-ec34-4d2f-9fa1-c7c7f9c7a002","IsCreationKey":false,"Key":84.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aaf37eaa-f3ff-458b-89ff-7c26a44a54b6","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"d551c813-a016-4276-a637-3d8df19e02ec","IsCreationKey":false,"Key":85.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4868b96b-841c-4ae4-9448-18eb33c88422","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"b7609896-add4-4aa1-8519-7bf16591a217","IsCreationKey":false,"Key":86.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4d86f811-fce3-4f80-9323-8fbc5421e071","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"ffb215cd-7e92-4f6b-aba5-4480a0801b26","IsCreationKey":false,"Key":87.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"424c55c3-0de5-4b0e-9017-5a4875a20983","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"b5df439d-c3f6-485f-a6ee-e135347a1954","IsCreationKey":false,"Key":88.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"09ca666b-7d0b-462a-9d54-a03c3141ab7b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"024c1090-a9cb-4343-b30a-b2661d692f59","IsCreationKey":false,"Key":89.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fc834531-489e-4b7d-b662-a90a554a0b37","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"49afb0b9-ee0a-4c00-9c43-d523a59aadc4","IsCreationKey":false,"Key":90.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e9932a7a-5069-4177-b552-dcd0d826b4b2","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"5cea6e59-03fe-4ada-8ce4-573da415e8e9","IsCreationKey":false,"Key":91.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5ace5154-73e6-4f21-b464-1661c15c1b85","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"d9783ed2-ee13-46e2-b4c8-be8a37fa2548","IsCreationKey":false,"Key":92.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bcc8297a-834a-42ad-b2b5-bca0037bc1ef","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"0b65f91c-c1f8-4491-af79-332b0cb2b246","IsCreationKey":false,"Key":93.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f37401de-e57e-4bd7-aa7e-6781df7243f7","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"77e0df0d-14a7-4e4d-ad09-0a7429098495","IsCreationKey":false,"Key":94.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9e4667c-0f1d-4954-a81f-ee9c4d9129c2","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"590f8a8f-2115-45f9-be49-da52aafe8388","IsCreationKey":false,"Key":95.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b8209b60-5cbf-4d31-8b88-4b270677cc6e","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"6f6a2e54-3b17-4deb-8498-8ebb62230e3b","IsCreationKey":false,"Key":96.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"27e4efd3-0423-4b84-b50d-cf250100c29d","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"06feb93f-c103-451c-973e-8fbdaf008810","IsCreationKey":false,"Key":97.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9675e896-6620-4dc7-b166-e82f0a1160f1","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"4ea2d361-4e69-4a4a-96d8-f00be898ca91","IsCreationKey":false,"Key":98.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"16b2d54f-92a2-49c1-a332-4217ba63f67b","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"a74a20d7-8fdb-465e-8bec-89d9c26eb7aa","IsCreationKey":false,"Key":99.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"017363d2-2318-4c56-afee-317444bdf816","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"b9c80903-a7bf-42d9-8a01-1db5e3588372","IsCreationKey":false,"Key":100.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4d259a01-729b-4a88-866b-0a4e25ed67db","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"f2f2540c-e172-43e3-9a97-8100b93fab74","IsCreationKey":false,"Key":101.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d2055aaa-7355-42f5-8621-1f96209bc11a","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"8d514148-3404-4454-9e94-f7e46592ca32","IsCreationKey":false,"Key":102.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1c761dcb-4dcc-4964-930a-44b55aa5f3a7","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"030c3d78-2dcb-4a93-bd3e-77dbff1cf1bf","IsCreationKey":false,"Key":103.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a5271c6d-c7e7-4b98-9232-76fa773ba2e7","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"20f5d197-95bf-4ab2-a513-8f5f076a040d","IsCreationKey":false,"Key":104.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d846f5ef-ad6f-448e-bc51-9b32ce4b9980","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"3ef85a65-ac74-47d4-9de6-beb34f1ab9cf","IsCreationKey":false,"Key":105.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd0df69c-336b-4489-a8b5-67d62bc11ecb","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"0ae179a4-09c6-4378-8345-1cd91a0901a3","IsCreationKey":false,"Key":106.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"70b29803-6be6-4822-95c6-5fbce0f51f89","path":"sprites/spr_creditsfont/spr_creditsfont.yy",},},},"Disabled":false,"id":"2d26c706-a9d7-43ca-bcfb-941a4e11c451","IsCreationKey":false,"Key":107.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 32,
+  "height": 32,
   "textureGroupId": {
     "name": "hudgroup",
-    "path": "texturegroups/hudgroup",
+    "path": "texturegroups/hudgroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 32,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "37",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "38",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "39",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "40",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "41",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "42",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "43",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "44",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "45",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "46",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "47",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "48",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "49",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "50",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "51",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "52",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "53",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "54",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "55",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "56",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "57",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "58",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "59",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "60",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "61",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "62",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "63",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "64",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "65",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "66",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "67",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "68",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "69",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "70",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "71",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "72",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "73",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "74",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "75",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "76",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "77",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "78",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "79",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "80",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "81",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "82",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "83",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "84",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "85",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "86",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "87",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "88",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "89",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "90",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "91",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "92",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "93",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "94",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "95",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "96",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "97",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "98",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "99",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "100",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "101",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "102",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "103",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "104",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "105",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "106",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "107",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "ea08038b-03e7-45e6-90d9-27ec2282ad97",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f4b816be-37e5-4a4b-9b55-e0437474e21b",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "972f171a-9000-4dc5-9ed7-2b669a98ba89",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9fd41718-1565-4386-8217-475a6cd69e0b",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "284d0863-8e94-471a-9ca1-e5123f6ca2ae",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5944f26d-5ba2-41e0-bda6-c8a3f53bb778",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "35bf8de3-ad54-42b6-b3fb-e2bfb4a43abb",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6a1b58a2-ab8e-41fd-8852-e177cb2acf2f",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5e4923fe-1ea8-4aed-961a-70feac3e271e",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2c9a15bd-efea-4f0b-875e-463452f36382",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0debd269-521d-44fe-b226-08f71775bcf8",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5a59ef16-0563-406c-b661-b8d861ac6d62",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "998720f4-7dfc-4395-841f-efc42f5e4059",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "89417208-9b1c-456c-a32a-c128c0528731",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d6e523b0-6afb-46c5-8952-38ee13b9b8c6",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "42f34b9a-692d-44b7-8f82-aae8727050fa",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ec3b61bb-d8f3-46bb-ad13-d9acdac72bd4",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "36f41789-7367-4d56-a48b-69803a5ad59a",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0a6cd6b4-e733-44ae-9ab5-b0441160f8a8",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c3c47bb3-94e4-4901-93e7-7b43ad6ce26f",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6edbce62-e571-4f9e-9caf-6065f3118dcc",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4d82092c-5955-4368-b3fb-dedf4f342a88",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2bab30d9-616e-4501-8dc6-c20f774a114c",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b8c71f68-0fac-42db-b43b-429dcad9cb92",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ddcf728b-acee-41e3-8423-046addfcd5ac",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e49e3aca-7c9b-4777-96c0-3ad59239e5d7",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b6a5c4a7-9e3b-4b20-93a9-3e1d16f594bc",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2b467a33-42ed-4144-8717-e812f8b34012",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9b450e86-5d8d-42e5-b8b6-3f3ef6264991",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6abb452b-c5e0-4b90-b055-16f8b6ea6003",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "959bbea0-c99c-4212-9212-332aa6fbc5c0",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "009f51c8-06cd-493b-863e-443d893d2791",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "23331a49-bcc0-47b6-b03b-fd721963b9da",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9bf97478-6cce-43bb-9e6d-2fd771f47a7e",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7e524bf3-1f17-4281-96a9-bf348c1d038e",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1afcb66e-b03f-4dfe-86af-8fc5c8293a98",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d0075068-2b26-4ab3-8a0a-814c93870247",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a07da23f-e28b-45ec-b00a-64b096d15a73",
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "37",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cd9b29c1-6b6b-47dc-9f5b-47743577fadb",
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "38",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "318d7d6d-a294-4023-8676-d9a22c4d2450",
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "39",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5d43dc72-dbf9-4e49-9963-9a98b7533eda",
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "40",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "af53bf3e-ad94-4023-b004-b70f5bcefa08",
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "41",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2aad10e6-4b02-4a3d-997c-af222e27ea03",
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "42",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "49cdb405-de90-48c9-b298-8880d4fa99eb",
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "43",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0444a41d-f38b-4f21-8887-5bc766bb901e",
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "44",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d944bb3e-ff34-4ecb-8ead-6dc0e72bfe50",
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "45",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e48fd65a-9d14-404e-863f-46c99117e8f6",
+              "Key": 46.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "46",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1346e7f5-1c8f-4d5b-81c7-29c3d0d768d6",
+              "Key": 47.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "47",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bf89981b-7bf1-4151-ae9e-f44d440953db",
+              "Key": 48.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "48",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e53399b4-dc40-4d44-aac6-2c8648404dbd",
+              "Key": 49.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "49",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e1f689d4-74b0-4268-9c2f-b6248948819c",
+              "Key": 50.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "50",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2b45d1a8-7e6b-427a-860c-d0c9e17df5ef",
+              "Key": 51.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "51",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b406b6cc-45a1-454e-86b5-135196cf77b5",
+              "Key": 52.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "52",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b557f8d3-466b-4c0d-b114-154bdb186bdd",
+              "Key": 53.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "53",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "08f39c37-3e8b-4af7-9976-79a90eb32446",
+              "Key": 54.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "54",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "97316234-c977-4c02-b37f-bc06d810fe00",
+              "Key": 55.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "55",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9b652e51-dd76-4e82-b572-23d38324b36b",
+              "Key": 56.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "56",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "56614f8b-5a8c-42a4-9f73-de81833d8ae5",
+              "Key": 57.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "57",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "dce4fb6c-c654-4aff-a7b0-f7f951c43c0f",
+              "Key": 58.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "58",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e750015d-d217-40b5-a9d2-6c80362bf7b8",
+              "Key": 59.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "59",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c8812247-4171-4356-a999-7a53a770d878",
+              "Key": 60.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "60",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "098b49ca-b309-403a-99f5-a6edef14b1cc",
+              "Key": 61.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "61",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b0f45b64-3e69-437b-b7df-3a594360f8b9",
+              "Key": 62.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "62",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5fb92f39-577f-4f84-97f7-07b97ea2f181",
+              "Key": 63.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "63",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "50f55070-eb9e-4da9-a313-e42cd8dc8c4c",
+              "Key": 64.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "64",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "af347d12-8b63-4e96-8435-9ce72648549d",
+              "Key": 65.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "65",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0e21cfb7-a6eb-4727-bbf6-69960a66b5ac",
+              "Key": 66.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "66",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3f263621-c7c0-483c-bcca-cfe319b3e233",
+              "Key": 67.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "67",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "48cc9520-e0ba-4b5c-b0e8-83a20d24c86e",
+              "Key": 68.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "68",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8bd7e607-e43b-4049-b11a-45053974cf40",
+              "Key": 69.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "69",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b9fbfb3c-5674-4fac-88f5-bddd03f6bf42",
+              "Key": 70.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "70",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "65238442-3e28-44af-af6c-8005752175a7",
+              "Key": 71.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "71",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "13b6adab-9e9c-4088-b133-e56d562d3181",
+              "Key": 72.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "72",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "acf294b0-9066-4490-9832-c06ad83e837b",
+              "Key": 73.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "73",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e3771857-8d38-450c-acb2-46907a357915",
+              "Key": 74.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "74",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "54ddbb10-8a85-4a1c-aa16-59fca37b5ce6",
+              "Key": 75.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "75",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "53679f25-53f3-4180-aad7-75ce99e153b7",
+              "Key": 76.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "76",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ade72317-7410-4a1f-acab-e7f21f58882a",
+              "Key": 77.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "77",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b3b41d77-3042-40f3-98e8-e7d6f8291484",
+              "Key": 78.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "78",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "aca66f0f-5198-4c85-bb6a-f5b44d62e1cc",
+              "Key": 79.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "79",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "479bf2dd-3cd7-4e49-bff6-6d64739ee178",
+              "Key": 80.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "80",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "515cea7b-e345-4185-801f-9c14aee9f270",
+              "Key": 81.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "81",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1107b1f2-bd5a-4ad2-aef0-05ed2a1b3190",
+              "Key": 82.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "82",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "73a1dc70-a963-4097-af97-d9a639abfd9c",
+              "Key": 83.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "83",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2c165c77-f1ad-4c79-b87f-02afe7b68539",
+              "Key": 84.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "84",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "21efc9f1-2cf8-4e7a-85b9-8d78f56279a3",
+              "Key": 85.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "85",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "00a6d844-5e0d-49a0-b10b-d8be44b65010",
+              "Key": 86.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "86",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7ac7a702-6dd1-498d-a1b3-4784d60ebe0d",
+              "Key": 87.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "87",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2d17064f-ea56-4a10-bd78-c007af63b54e",
+              "Key": 88.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "88",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "08c3269b-a343-4f93-965f-62397d1ddf28",
+              "Key": 89.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "89",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "52e59493-67dd-4241-aad1-93f70f1ff298",
+              "Key": 90.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "90",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f29f471c-887b-429a-98f9-4176d76b0324",
+              "Key": 91.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "91",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e6e4547e-6001-496c-a2aa-545703879f30",
+              "Key": 92.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "92",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "579f9b82-35bd-40b2-b484-03612543176e",
+              "Key": 93.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "93",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "206f6a58-0c89-4ecc-b5a4-f2bb881136d8",
+              "Key": 94.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "94",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "60606ff9-a392-4b06-8152-dbada47cc3d0",
+              "Key": 95.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "95",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d2c11d8d-532a-421f-98da-f0794b354c26",
+              "Key": 96.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "96",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e4efa017-a9b3-4d38-9242-d0daf299769a",
+              "Key": 97.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "97",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b5d5c89c-be42-45f5-8972-0905c94863d7",
+              "Key": 98.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "98",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5ebd7fd6-882f-47ae-a2f9-46950457ac72",
+              "Key": 99.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "99",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6bf7b90b-6616-4f94-9fbd-a6b4ea00c9ba",
+              "Key": 100.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "100",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7c2e6b05-0fbc-4e0a-beb1-4cedfc2937d8",
+              "Key": 101.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "101",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bfd7ba0e-3d79-4c83-852b-f67e454d6a28",
+              "Key": 102.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "102",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a41f9cef-24fa-4a00-a5a0-1249b5dfee3d",
+              "Key": 103.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "103",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ca407e3b-e063-4996-81ff-ccdc5093cb30",
+              "Key": 104.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "104",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "090a209f-7439-46ee-8a02-f7ee3258bf9f",
+              "Key": 105.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "105",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a0c4e6e3-4757-4ed6-a0ca-86a26b7a721d",
+              "Key": 106.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "106",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "02ac32cc-3c15-4271-a8fb-b213cc6e56e1",
+              "Key": 107.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "107",
+                    "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_creditsfont",
+      "path": "sprites/spr_creditsfont/spr_creditsfont.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 10.0,
+    "playbackSpeedType": 0,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 108.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_creditsfont",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "HUD",
+    "path": "folders/Sprites/HUD.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_creditsfont",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

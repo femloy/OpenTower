@@ -1,188 +1,1740 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_captainbombdead",
-  "bbox_bottom": 445,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 0,
   "bbox_right": 670,
   "bbox_top": 0,
+  "bbox_bottom": 445,
+  "origin": 4,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d8509fa0-5208-4025-8cdd-37473e844f6a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1459c999-e63a-426c-a8d5-159a2a0fd9bf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8250e443-e036-429a-a92d-1c4970b4ecba",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2d1182be-f5f7-4303-840f-1f2112ef9645",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"900ed2f7-9494-49fc-9cd7-6a6497be81ee",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ce4c5f1b-ecfa-4d07-a212-fe96bd1a1c56",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"51dcc730-a6c8-436f-9fcd-49e0a47a7154",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"20a346f9-9568-4e97-818f-41363cbecae1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d2463b87-2c89-494b-9b3d-cba1e30b0880",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"41551a72-5e12-4efe-99dd-b8d41d14fedd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0eabab30-7ec3-4773-8dc5-455137e86b47",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd750730-ccb5-45d0-8f48-1c99638e988d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b614f619-d9c9-4013-9019-fc54da360e35",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c24893e2-28b2-43e0-804c-b8ed83633f76",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a73e92d9-0851-4373-bf5c-d7c16f060e4a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67549c64-91fb-4490-ae9a-16c249aa5bd3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f629af1-0e91-4e89-bd93-dd70b468e2cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd1cbfaf-4a70-44fb-abca-c109aa168230",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"416bb1a1-944d-4f19-a9e7-28816af91473",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8e99b40-5a63-4b7d-a43a-cbebc9164efc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"364b2a17-dd69-4729-b47d-dc91767dfd4c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0535deef-fa3b-477b-be7f-4b1f1d86a1d0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"697282d3-ba99-4a56-aa23-3773551ae445",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a84050be-f560-42be-b9d4-b927a0de0738",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0dbee529-ae57-4cc0-b98b-bd4f39aef337",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be1f9325-bae5-4830-ad11-f35c8cba5aca",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"88b97d85-c03e-45ce-8b5c-35747065c97c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2fae30de-da8c-41ce-b451-439d7dc21a55",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0f361ad7-78f2-42cc-83f8-7a72c727eec9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"93005e14-9b9a-4e88-a04c-e799576a022b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5096ec9e-0c2d-4396-b4e4-dd045e7ca9bb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"43af516d-7a08-4b10-a5cc-ee9d7bca9592",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40259b5c-4da0-448a-9755-40efa72a4de8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f271009d-b98f-4af1-9f50-6b6c5997d947",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"759646a6-f87a-4f64-83a8-b076ccd0ca90",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ea748c96-3c0e-4c60-8cb1-4937c36ff36e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f07ce769-a8ae-4120-a495-6f3b2251f523",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e5895633-a0c6-4210-b79c-3d88082bc468",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5da751e-b236-4c72-abb7-f9995dd7768d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c77b4758-d61f-49c3-9eaf-229b85833121",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d8dece57-08a0-4593-a953-8f11df9f4d25",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78c1380b-7a8d-481f-a1fc-5f6271f55166",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4ad26913-b4ad-42ee-b84c-1da268d5c173",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"631f9a69-ef1d-4682-8824-e97dd700988b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3ef676d5-a339-4eed-9b93-86834e909983",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9dcd15f7-b60d-45b9-ad47-798e2bb988f4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"56b040a8-a161-458e-a385-21b9938b2bbf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f7ddadce-c08f-43c4-b7f3-6a1c1c7604d1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4778942b-0ba0-40c4-a094-6fd5df1343c3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cb41e2e1-21c8-4fe8-821c-39b04779ec61",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5fd1d48-5c6b-4c7f-8605-d65913fd0593",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f6f2007d-5790-4059-88cc-9e9d0efdb246",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b0d4e66d-9671-47a9-94ad-349fd5c37295",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"585d39fb-c54c-41e0-9439-0ba94664d4ed",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b85434a3-369f-48f1-8d0a-b79e370d97cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"13aa0cc9-1e8b-4b12-b6e9-d1a03bfe4f75",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fcb7dcec-8e5c-4820-91ce-b7b7be2f42a9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b1507944-004b-4f82-b26c-3a49d8936112",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 446,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"67c1c99a-2844-4bc0-944a-7e3e42c8bafa","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 4,
-  "parent": {
-    "name": "HUD",
-    "path": "folders/Sprites/HUD.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_captainbombdead",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 58.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d8509fa0-5208-4025-8cdd-37473e844f6a","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"792c6e00-17f5-4ddc-8d2a-a03627f230ea","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1459c999-e63a-426c-a8d5-159a2a0fd9bf","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"b4460f72-4ad9-46e2-86da-c8cc40a55d82","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8250e443-e036-429a-a92d-1c4970b4ecba","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"6b4ba7b2-23fe-4b71-90f6-0bd5f01ba127","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2d1182be-f5f7-4303-840f-1f2112ef9645","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"1603157e-d0da-4a39-8d36-b79dcbfdd249","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"900ed2f7-9494-49fc-9cd7-6a6497be81ee","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"e1d4b2a7-290d-436b-9b2e-60f8e6b841dd","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ce4c5f1b-ecfa-4d07-a212-fe96bd1a1c56","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"8c942b17-742f-4991-b157-8f8bc28277d5","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"51dcc730-a6c8-436f-9fcd-49e0a47a7154","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"81f9cbc6-f917-4dcc-9976-05877f5a3198","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"20a346f9-9568-4e97-818f-41363cbecae1","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"eb0ca5c8-7405-482e-a1f1-08feda3bdeab","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d2463b87-2c89-494b-9b3d-cba1e30b0880","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"e59238b9-8c8f-412f-8af1-5b5bc3dc357a","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"41551a72-5e12-4efe-99dd-b8d41d14fedd","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"4c5a9a3a-a434-4c46-83c9-e9ec30af17ae","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0eabab30-7ec3-4773-8dc5-455137e86b47","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"33335eec-6f35-4cd4-a351-06f697be3e84","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd750730-ccb5-45d0-8f48-1c99638e988d","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"bd44a1ed-c22c-4f81-b4de-60b5aeddb153","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b614f619-d9c9-4013-9019-fc54da360e35","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"8d5f5753-c23f-4209-9e25-71f3cc7c343c","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c24893e2-28b2-43e0-804c-b8ed83633f76","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"345987ba-a7e3-47ac-b4aa-8d8f9c5d579a","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a73e92d9-0851-4373-bf5c-d7c16f060e4a","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"c54d0808-6389-415f-8a4f-6f5c724f916c","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"67549c64-91fb-4490-ae9a-16c249aa5bd3","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"acf27594-ae17-453b-8b8f-b2f7e61b63c2","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5f629af1-0e91-4e89-bd93-dd70b468e2cf","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"efce546f-4c89-4e10-90ba-8d139fd3da31","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd1cbfaf-4a70-44fb-abca-c109aa168230","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"5fd9ba11-c948-43bc-a4cb-2a3f98926080","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"416bb1a1-944d-4f19-a9e7-28816af91473","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"991d55c2-76fc-41f4-9aa6-990974d8b80c","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f8e99b40-5a63-4b7d-a43a-cbebc9164efc","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"230cf4e4-037d-4573-85bd-03176cc60e27","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"364b2a17-dd69-4729-b47d-dc91767dfd4c","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"db3fff0a-d92a-410f-9619-ecd0227ac63c","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0535deef-fa3b-477b-be7f-4b1f1d86a1d0","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"23d233b0-df58-4422-8dca-381a46f3a809","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"697282d3-ba99-4a56-aa23-3773551ae445","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"523aa284-e4bb-470a-a816-db789882bf1d","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a84050be-f560-42be-b9d4-b927a0de0738","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"19550b48-dead-41d0-a238-6d800746c7e0","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0dbee529-ae57-4cc0-b98b-bd4f39aef337","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"5f543697-9f96-43d6-a850-b9102e402587","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"be1f9325-bae5-4830-ad11-f35c8cba5aca","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"9f62e459-8726-41fe-9947-79a2fb0c82e9","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"88b97d85-c03e-45ce-8b5c-35747065c97c","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"a4e4230b-efdb-4eaf-a51c-250496dbd239","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2fae30de-da8c-41ce-b451-439d7dc21a55","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"ff5475bc-c04e-49ec-92c5-40f3b88e98d7","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0f361ad7-78f2-42cc-83f8-7a72c727eec9","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"901f5e6a-bf85-4285-872f-c2081d6384b2","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"93005e14-9b9a-4e88-a04c-e799576a022b","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"2e43e68c-552d-4088-97e0-ce704b70de15","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5096ec9e-0c2d-4396-b4e4-dd045e7ca9bb","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"6f31af0b-e585-412a-92d0-b748bf4f3c88","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"43af516d-7a08-4b10-a5cc-ee9d7bca9592","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"473c4a00-9c04-4af2-869d-9356d621cfd2","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"40259b5c-4da0-448a-9755-40efa72a4de8","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"6c103887-05ec-47a4-a60a-23e49411c1c4","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f271009d-b98f-4af1-9f50-6b6c5997d947","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"21976bd1-bf42-4285-bb44-15afb4abe3dc","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"759646a6-f87a-4f64-83a8-b076ccd0ca90","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"9f2ed270-bf4c-4399-a0dd-20df1b999c53","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ea748c96-3c0e-4c60-8cb1-4937c36ff36e","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"2bccb99d-e0d1-4741-a0f7-f962c7d65360","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f07ce769-a8ae-4120-a495-6f3b2251f523","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"e07ba4e6-2375-472c-816f-a7479f521ba1","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e5895633-a0c6-4210-b79c-3d88082bc468","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"641baab7-ef22-4dc4-8ecc-530486760dfc","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5da751e-b236-4c72-abb7-f9995dd7768d","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"b9b4e702-ebb6-4697-8b82-836f7ae00610","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c77b4758-d61f-49c3-9eaf-229b85833121","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"29f20876-81de-4a58-9ad9-f0423b1bb635","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d8dece57-08a0-4593-a953-8f11df9f4d25","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"ed41a94e-40ae-402e-a05d-25191dfb8f12","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"78c1380b-7a8d-481f-a1fc-5f6271f55166","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"81418240-659e-45d3-b86b-821f57ef2d70","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4ad26913-b4ad-42ee-b84c-1da268d5c173","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"484a9584-af86-4ec5-a010-373aec76187a","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"631f9a69-ef1d-4682-8824-e97dd700988b","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"e156dd38-54ba-44f5-8435-fa58f49f4b84","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3ef676d5-a339-4eed-9b93-86834e909983","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"d7e715be-7044-42e0-b4be-a1ca668c01ee","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9dcd15f7-b60d-45b9-ad47-798e2bb988f4","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"1568f74f-c8f2-49b0-84e2-6cb358de77f1","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"56b040a8-a161-458e-a385-21b9938b2bbf","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"b6b2ac74-e283-4ed2-8eb4-3a52606d16ba","IsCreationKey":false,"Key":46.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f7ddadce-c08f-43c4-b7f3-6a1c1c7604d1","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"cd43dc54-39c8-4eac-98ef-1947abc74d94","IsCreationKey":false,"Key":47.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4778942b-0ba0-40c4-a094-6fd5df1343c3","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"65718f6b-9787-4e0e-a33e-0c62b40fee54","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cb41e2e1-21c8-4fe8-821c-39b04779ec61","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"f3bcb685-4012-4042-984c-cf2e569dbbc9","IsCreationKey":false,"Key":49.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5fd1d48-5c6b-4c7f-8605-d65913fd0593","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"5ac117ef-9e63-4208-a364-6dbde3168de0","IsCreationKey":false,"Key":50.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f6f2007d-5790-4059-88cc-9e9d0efdb246","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"9e514f9b-0462-4ec1-87c0-b2bd9655250c","IsCreationKey":false,"Key":51.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b0d4e66d-9671-47a9-94ad-349fd5c37295","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"d2f21823-a23a-45e0-818d-606ce15e4934","IsCreationKey":false,"Key":52.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"585d39fb-c54c-41e0-9439-0ba94664d4ed","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"3154668b-ab2e-4377-ba76-0f5d72c5fa1a","IsCreationKey":false,"Key":53.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b85434a3-369f-48f1-8d0a-b79e370d97cf","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"bccba94b-0e96-4709-b847-63e83e8db0b3","IsCreationKey":false,"Key":54.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"13aa0cc9-1e8b-4b12-b6e9-d1a03bfe4f75","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"c7bbd454-08f3-42c8-95da-c11660af0160","IsCreationKey":false,"Key":55.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fcb7dcec-8e5c-4820-91ce-b7b7be2f42a9","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"561f9313-5db0-4582-b7fa-ec90a375492b","IsCreationKey":false,"Key":56.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b1507944-004b-4f82-b26c-3a49d8936112","path":"sprites/spr_captainbombdead/spr_captainbombdead.yy",},},},"Disabled":false,"id":"06897212-14f1-48f6-bd31-29c331fd7d4c","IsCreationKey":false,"Key":57.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 335,
-    "yorigin": 223,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 671,
+  "height": 446,
   "textureGroupId": {
     "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup",
+    "path": "texturegroups/baddiegroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 671,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "37",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "38",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "39",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "40",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "41",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "42",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "43",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "44",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "45",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "46",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "47",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "48",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "49",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "50",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "51",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "52",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "53",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "54",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "55",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "56",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "57",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "2c294d82-e224-498b-b488-9d12342dde4c",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e989aa85-1a3c-481a-9b68-b1e04a8cc737",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "73311166-d074-478c-9fa4-17a81e632a28",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9cf07656-c325-4256-8a85-bec8a5010c6f",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5e512edd-282d-4d8b-b1ab-e06441af04fb",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "689e921c-3333-4c89-bf62-84a7a88c3d59",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3804becb-e34a-4779-b940-6ccd01d74d8f",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5feae4fa-5624-4781-9b2c-5c2140ea058e",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f9d44468-d59e-417e-bdb0-e8101618b802",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "92669918-f71a-4ee0-bbfc-90c270f03d56",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "75b50e46-b147-4a6f-bd41-a70b1a3883a7",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "79d6b347-3571-4128-a48b-2e273e5031b4",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2f55f30a-dd6e-40b9-9cf5-76d289719311",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ecc1964e-d345-4602-b4fd-c66f3a1852e3",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "210bd5e9-2ca1-492f-884a-68216916c012",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "46f1c595-147b-4657-bb1c-c3095c849e91",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ee24bd4c-3828-4a06-933f-ceb4ee67c746",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2071410c-1a0d-4a9f-bb6c-1bd5c4c35112",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a70c3606-838e-466b-b715-ce40630d93f0",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d7610cfe-a972-4dba-a45b-e0d4cabd1648",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "52cbfbd9-c999-4b8d-bde9-606c259dca5d",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3b4dff9a-466e-4f1d-b61e-d1517d52ccb7",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1b16de76-62f6-408d-a6d5-bd88ccc39e8c",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e55c9384-ecfb-4fdd-a3e3-50b13c03812b",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3c1f787d-36ce-4222-8c42-32ae0325ac45",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5592edc4-4ac4-4d1b-9816-006ed0569cd3",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ae1522af-b75b-4ab0-83d8-9417e6e83118",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a406fd07-45ef-4c5e-a733-51a1cdad6183",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b15e5a41-4074-47d4-8128-69e4f95179cc",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3c95ad9e-226d-4104-a867-ba26e57d5fdb",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "435c2512-eab5-40c9-ba7f-5e0e1e502fcb",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d4acd587-974c-4c81-bc9e-a14dacdc3486",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "db1ed7a7-e162-4274-9eca-15c08c37441f",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "edaff76b-7ebf-4a57-a690-3f2ca5cf8887",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "81687f29-3cf9-430f-a42b-8cac11e7f64d",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "73eeaf14-ebe5-43e5-9f36-5e4ab7085fff",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bdbb52b8-b476-473a-b1ac-cf2478dc8098",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e543afc8-a6e0-4297-821f-91d185c02e12",
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "37",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "15d78516-78f6-4833-8a4f-a08ec2a53cbe",
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "38",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "642dd311-6fde-4070-a563-fc958f41e4df",
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "39",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ffe50ade-2e8a-464c-ade0-5232597f0673",
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "40",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "02adf607-5c0b-491c-bc76-3e36baa4e569",
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "41",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "89bc3db4-8255-4bc0-a609-45d9e33d04dd",
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "42",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a102994d-89ae-4f2b-bff3-3ac78066d023",
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "43",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3ca1e7ed-5a81-4f8f-86aa-d16b8a6ae461",
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "44",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b6dc89dd-5b99-4e58-bbec-8bebb941df89",
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "45",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c4df2433-1ba3-4941-9433-972caac4ee42",
+              "Key": 46.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "46",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "49e8a963-f54f-4eb7-9824-43b60f8a1b1c",
+              "Key": 47.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "47",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8b208da1-8dd5-4897-b876-dd601f7d512d",
+              "Key": 48.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "48",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7e6d566f-5bb3-478d-8d00-d7e471af7ff2",
+              "Key": 49.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "49",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5f6dc57e-8e95-4a86-b612-12e10f60b870",
+              "Key": 50.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "50",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "78f09385-46ad-4489-9d81-2dec53c1515a",
+              "Key": 51.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "51",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "fc7e469c-91fa-4066-9802-7ac3edb38bbe",
+              "Key": 52.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "52",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a1c89c10-9d9b-4a26-9a50-9f1639f7e197",
+              "Key": 53.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "53",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a8410d85-47a9-4214-978b-0df92992267e",
+              "Key": 54.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "54",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e251fbee-8f66-4032-a024-21d13546fffb",
+              "Key": 55.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "55",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0cbac287-67ef-4dcd-ae70-4516bd0e781c",
+              "Key": 56.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "56",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f66ef536-6163-46df-98a6-73ee38e550b8",
+              "Key": 57.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "57",
+                    "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_captainbombdead",
+      "path": "sprites/spr_captainbombdead/spr_captainbombdead.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 58.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 335,
+    "yorigin": 223,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_captainbombdead",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "HUD",
+    "path": "folders/Sprites/HUD.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_captainbombdead",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

@@ -1,146 +1,1152 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_bossfight_pizzaheadHP",
-  "bbox_bottom": 63,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 8,
   "bbox_right": 60,
   "bbox_top": 1,
+  "bbox_bottom": 63,
+  "origin": 4,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d933147-a194-402a-9b01-ec96781f519d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"238f80ee-9917-4d9e-aa26-6a22de37ff41",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c52d11b8-37b7-4762-b758-27e368aecdc3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"38d43097-70fa-4cc2-8375-8c330300dffe",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"336c0f22-bebf-4d8b-a5f7-ef8da72ef659",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"561d8a17-4385-4a79-8f74-d7336e02fa38",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"116ecf2d-426d-4a17-b823-37fee0996768",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cf5803c2-03e1-41d8-a475-2ea57dee17b6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f95cc500-66bf-42f0-a2fa-99d585b7aab1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eeff4809-8ef6-46be-be1d-26695c183785",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"78bfb61d-3945-4209-a732-6ef1e15c6048",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7d30d5b-7902-49dc-893c-5864080f022b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eeb56c24-0486-499f-b125-4a601d9873e6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f606279a-7130-4b9b-b13d-b14e4fc07b41",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9f4469b5-2a11-4770-b075-a054b3767877",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f7d7950e-6b31-48a6-8c4f-b8e299138931",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d6399f20-a366-429a-acdb-aa4703f1deaf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"623f80e0-90cc-4e30-b72e-78332f2e6fec",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4c4345f-8875-4095-bd5a-c6468af0fd0d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f62d7a7-177c-494b-b196-ee228bb447f6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"390c5e65-8189-4f82-9a98-eefb1551687a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f267d025-1a22-4732-9bd0-9c5035206278",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"69d9d56b-9a1b-4c36-ab8c-8454125302cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"690dd98d-1a7e-4711-b406-585d5d6e7856",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00516313-ff55-462d-8498-00d5bd218263",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fdd41b90-4809-41d1-b946-1a74c5dd1809",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f5dd755a-9f42-4269-a67f-021ce235a0de",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"55b9b8b9-7c4a-436b-b16f-3f6db13e5745",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d233d47-605f-4517-b1d8-92b81df61c79",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b640e45f-8647-4056-9394-681845eba199",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e2d1b36c-6c04-45b5-968a-675ab5b36005",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a9c4d71c-2b94-41d6-b800-770718d5280d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d5af2c7-63eb-4915-8607-5cf9bcbf2469",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"137c68c3-5280-4669-98d4-bca8bd37ec3f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c3cd413c-a741-42c1-ba78-854f1f797fd2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"932aec26-b70f-43ba-944c-45844a6e20de",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4bf555bf-aec9-40c0-8b6a-4997a90d87c8",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 64,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"5f257402-197b-43ee-943a-ddf5ef61cd1e","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 4,
-  "parent": {
-    "name": "Health icons",
-    "path": "folders/Sprites/HUD/Boss/Health icons.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_bossfight_pizzaheadHP",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 37.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4d933147-a194-402a-9b01-ec96781f519d","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"32759f36-02d4-4f90-95a8-442aad27fa53","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"238f80ee-9917-4d9e-aa26-6a22de37ff41","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"fc5859b6-559e-4128-99b6-b7c7c072f828","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c52d11b8-37b7-4762-b758-27e368aecdc3","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"992075e5-8897-41c5-b6da-a097639860b7","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"38d43097-70fa-4cc2-8375-8c330300dffe","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"9f00222f-91b6-4caf-9958-1297ce59d112","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"336c0f22-bebf-4d8b-a5f7-ef8da72ef659","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"f1ca3012-ce57-4b24-a172-e676fce6cfa2","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"561d8a17-4385-4a79-8f74-d7336e02fa38","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"9983ac21-e977-47a7-8798-d2b6ecca8bea","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"116ecf2d-426d-4a17-b823-37fee0996768","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"2f89790e-e370-4969-8cfa-92f618f51707","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cf5803c2-03e1-41d8-a475-2ea57dee17b6","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"92946904-dfc2-4001-8c7e-cd8198ea4012","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f95cc500-66bf-42f0-a2fa-99d585b7aab1","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"b8139a72-c9f2-4fdb-8b41-9607b8073d97","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eeff4809-8ef6-46be-be1d-26695c183785","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"27fe00a5-01ee-4a77-9ff9-4834d023da23","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"78bfb61d-3945-4209-a732-6ef1e15c6048","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"f01f60c9-a71b-4c00-bc22-7cf514eace47","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b7d30d5b-7902-49dc-893c-5864080f022b","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"dca3f6aa-2120-4e43-bb18-9ad495ec5bdd","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eeb56c24-0486-499f-b125-4a601d9873e6","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"9bed6f38-142e-40db-8024-7d1756e76aa5","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f606279a-7130-4b9b-b13d-b14e4fc07b41","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"0a39db47-cea3-40e1-bd99-743f86579392","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9f4469b5-2a11-4770-b075-a054b3767877","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"aa33c668-19e7-4150-9964-2600950d3805","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f7d7950e-6b31-48a6-8c4f-b8e299138931","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"b014f93e-315e-4ffe-b2fa-87b2b0c56317","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d6399f20-a366-429a-acdb-aa4703f1deaf","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"d0fb74da-eab9-4859-8179-a5d4817016bf","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"623f80e0-90cc-4e30-b72e-78332f2e6fec","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"cc06a700-50c2-4951-bde0-1656970df517","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f4c4345f-8875-4095-bd5a-c6468af0fd0d","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"7232b47f-726d-4d3e-a096-bd97f62705fa","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4f62d7a7-177c-494b-b196-ee228bb447f6","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"288003fa-de93-4606-842b-f02f7b253de8","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"390c5e65-8189-4f82-9a98-eefb1551687a","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"8a692e06-040e-401d-9322-eeb2ca8960cf","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f267d025-1a22-4732-9bd0-9c5035206278","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"eb83e726-6338-4934-9e91-af2a8818c2ab","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"69d9d56b-9a1b-4c36-ab8c-8454125302cf","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"b5798b4e-faed-4c2f-a00a-3045fe13b1eb","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"690dd98d-1a7e-4711-b406-585d5d6e7856","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"fbee8116-1e6a-44c0-b6c8-714f18e38ae5","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"00516313-ff55-462d-8498-00d5bd218263","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"e5c08267-99b4-4262-9bdb-6e039ab35c07","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fdd41b90-4809-41d1-b946-1a74c5dd1809","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"8662b655-826b-4fae-bc3a-7bee32ad971f","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f5dd755a-9f42-4269-a67f-021ce235a0de","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"f1431119-b7e1-460a-8fae-e72cede10198","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"55b9b8b9-7c4a-436b-b16f-3f6db13e5745","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"0ad484c2-ac20-48f2-9723-7874005bd9cc","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d233d47-605f-4517-b1d8-92b81df61c79","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"5177e417-843f-4bcd-a36b-fd0cf0242c10","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b640e45f-8647-4056-9394-681845eba199","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"640300f8-fbfd-4f5f-b190-0454af1f1d1d","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e2d1b36c-6c04-45b5-968a-675ab5b36005","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"582fbba7-9b12-47b1-b1ac-84bf44f7ecdc","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a9c4d71c-2b94-41d6-b800-770718d5280d","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"3f81e35f-5a5e-48a0-ba9e-3f0dc4f8c2b1","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7d5af2c7-63eb-4915-8607-5cf9bcbf2469","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"c221d6d7-976f-40df-908b-dc042d0dacc2","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"137c68c3-5280-4669-98d4-bca8bd37ec3f","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"77bcab66-be66-4651-af33-67eb80eb6141","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c3cd413c-a741-42c1-ba78-854f1f797fd2","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"86b922cc-2b5d-4c69-9dd0-e3d47a17ad6d","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"932aec26-b70f-43ba-944c-45844a6e20de","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"23f7823b-9981-4a66-a916-b5a85f6849b5","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4bf555bf-aec9-40c0-8b6a-4997a90d87c8","path":"sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy",},},},"Disabled":false,"id":"310c8fa1-65d2-4a60-ab0c-8bf9a6013cde","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 32,
-    "yorigin": 32,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 64,
+  "height": 64,
   "textureGroupId": {
     "name": "bossgroup",
-    "path": "texturegroups/bossgroup",
+    "path": "texturegroups/bossgroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 64,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "11267d01-801e-4709-aea4-f057c9e76f9a",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2ce2e931-acae-4fa5-bd2d-932df83237c3",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "374ee437-4d33-444d-abe3-4abd82e7de00",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "acf6bc04-f545-4e3e-9565-9928c2ced79e",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d424d5a2-3a56-41ea-a9f1-0d0d5234b53a",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7b854248-4e4f-413c-9504-3e5220a228a2",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7f638727-a7d2-4999-a880-77874550672d",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0eb30f3f-f462-447d-882c-eb3477b2b750",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9de66a2a-2928-493f-9752-98e79f6cd11b",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d3b3d54d-a48a-4881-ae73-bed28a077f6c",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7e9b91cf-4620-42b8-af3d-1c351dd3ed72",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8b26596c-2e94-49ae-ac68-f56080ff8d67",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cd32a57b-d72a-42ae-9915-51231682c1fe",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "436c03b7-cc44-4939-86f5-23e21d461184",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "31298183-165c-4997-ac6e-eda629db0ccd",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f4a1c7b3-8cb3-4749-b460-7815622ff99b",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1a5288fb-3b14-4f87-b68f-1ba0ec99cccb",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "91d32f34-d73d-449e-b71d-84420ae25dab",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ea9b04f4-2a9c-40c1-9b64-791bbc961874",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f690e661-8920-4d2d-9f1c-a330148fb692",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5e53c385-a40a-446d-b4eb-bcbb512befda",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a7fb79a8-e235-42ad-ac96-64b3fbe79fd9",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1d194221-4ba2-40c0-997c-9f2778bf3490",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7a2b8f0e-e955-479a-ba62-cdfcd0fab396",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "fac70fe1-7414-47c2-ae1a-6511059bd30e",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f4faf642-1c31-468c-aadb-0912c03aca84",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b1e5843d-3baa-459a-af81-c68b0281f079",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "10a93d45-e5cc-4bc3-9db5-b1784fed1114",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "01d1fe5f-9d8a-41d1-b8e9-67d72b1e1a6a",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f3a55fd3-148a-4c1a-9618-908f72ecbe99",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c10f88c4-cb1b-4c9f-a212-c3ab454d49e3",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e43a57f4-1b88-451d-ba7c-edead73bbac6",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7e6fc3a6-4d48-4652-a79b-1e7355af1acc",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "70e1416e-74f2-46a0-a7bc-ada7f4b2b63b",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c3d5a37c-37c3-41cd-9dd4-5ccdf4d48dc1",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5829b91f-e0d2-498f-8053-d757f94db55e",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7c013d18-07db-4e57-8ecd-aa35b5784ffd",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_bossfight_pizzaheadHP",
+      "path": "sprites/spr_bossfight_pizzaheadHP/spr_bossfight_pizzaheadHP.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 37.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 32,
+    "yorigin": 32,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_bossfight_pizzaheadHP",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Health icons",
+    "path": "folders/Sprites/HUD/Boss/Health icons.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_bossfight_pizzaheadHP",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

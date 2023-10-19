@@ -1,164 +1,1404 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "bg_kidsparty1",
-  "bbox_bottom": 660,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 0,
   "bbox_right": 1026,
   "bbox_top": 0,
+  "bbox_bottom": 660,
+  "origin": 0,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ff1bbccc-f6bf-436c-9f83-8612c00e638f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5fdc1c16-86d3-45ff-93fd-ad90df723008",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1e3dc199-1f85-4f54-80ac-e2b0c0a72bb5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9adbf4ae-5782-46e2-b9fc-f48fb22437d5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ba1c4233-81a0-4c22-997d-123554761ee9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8aa7a913-4c83-413b-94a8-ec540b303f7d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db308737-f385-4ec2-b254-2902b615bb22",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1d4bae8e-ffb3-43b7-80e3-7f36b5835f13",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6552bf5b-6f23-4c67-bb8c-daa9e52e7383",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"47d66d56-c5aa-4837-9d42-682f8a78b73b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02a0748f-e2f2-48b7-82af-a79f8dddac2e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9f0ecdc-73b8-4b13-9f54-d1c2930c5757",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b31f3754-73f2-4c93-b9ca-4b88a729ab67",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b92f705-eadd-4465-9269-8a46b894885f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1facb283-45e6-430b-8ff2-16df5beca6f3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a237723-405b-4987-b6f5-2bc57db6448a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"732f80a5-1c0a-4f9e-aaa1-80a4466eeb07",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"26e3f97d-58c7-4389-b50c-c1646788c53d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f4be1794-f5d5-4462-a109-80198163c7a8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0bc367a5-4016-45c6-8011-6477f5034d2b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4be66f87-0c5d-4859-90c2-a6c963e18dd4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"266ed403-b89b-407a-858d-f93236fac3a5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"46fdd95d-ddbb-4841-a73f-02f19b876448",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"320255f6-1ac9-4b17-b936-f1bf75f4014f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b7930f10-2937-4c8d-9b38-83c14a06279c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da03eed0-734e-4eb2-a228-ccff73db361f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f2e919cf-0191-45c2-99fc-8d05d8eb3d36",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d5c5b68d-7e8b-4f35-b993-407ec138a989",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"733683aa-12d6-407f-8744-9d9cde04d2da",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dc908fd6-235d-4f94-b856-b8f718473f9a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f21e7774-784f-4fae-8e4e-ab6def77a058",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c03a02d6-d521-44ac-9113-6f751deebe9b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c8575fd1-2402-4560-a8a3-3f57f17b37dd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"31fc937d-7a12-4ac9-921f-826ab0495a37",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"311e8c87-5635-4880-9b58-e04378a4dfc4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"67bcf1ff-4c11-4b06-b2f7-0ff8cdaa9a18",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"923dab15-2090-4ffb-bd83-2ce338cdc3a6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4c682786-12ae-45c1-86df-2957d586959f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f86dd34-0034-48fa-b635-bd397453a056",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cef1a98a-b002-4f6b-ad53-91d1f713f6c2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61acc881-1c69-4708-bfbd-1dd141234656",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b9f3cffe-44f1-4572-819a-7fd34b47cbf8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"126934e4-f3c8-49d8-923a-c07431cadb87",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aff12aa8-7739-4408-8fa6-d2f8be091563",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ad2c285-5892-44ab-989d-190cf384046d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"da595a4b-174c-494c-a10a-fe86522ed9c7",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 661,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"b5c7f18f-88de-4a1b-b44f-e0a8b5d3e0a1","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 0,
-  "parent": {
-    "name": "Kid's Party",
-    "path": "folders/Sprites/Backgrounds/Kid's Party.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "bg_kidsparty1",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 46.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 0.35,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ff1bbccc-f6bf-436c-9f83-8612c00e638f","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"b5a1c5e8-6483-4219-a032-52e8c6338e2e","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5fdc1c16-86d3-45ff-93fd-ad90df723008","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"96a7f78e-5775-4a90-92fc-77c489b1b321","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1e3dc199-1f85-4f54-80ac-e2b0c0a72bb5","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"9738ac1a-2036-48c5-9012-78663bedeb6b","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9adbf4ae-5782-46e2-b9fc-f48fb22437d5","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"201d562d-801e-43f6-840e-1fad586694be","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ba1c4233-81a0-4c22-997d-123554761ee9","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"c1c1974d-0ed3-46d7-820e-beabe77325b5","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8aa7a913-4c83-413b-94a8-ec540b303f7d","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"ef7db4d7-7983-4bfc-bc82-20ad662dc6ce","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"db308737-f385-4ec2-b254-2902b615bb22","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"60479877-d382-4d9e-a4fb-abfe9e8096d9","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1d4bae8e-ffb3-43b7-80e3-7f36b5835f13","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"0414f9c7-5b15-4c00-9047-bb21db309e51","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6552bf5b-6f23-4c67-bb8c-daa9e52e7383","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"f4e8ab2d-f4b4-447a-9221-25ae435b8fff","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"47d66d56-c5aa-4837-9d42-682f8a78b73b","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"58ad0e3a-7b5f-484c-8f0e-842803e984ab","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"02a0748f-e2f2-48b7-82af-a79f8dddac2e","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"2b1dff3e-db03-4d96-80c8-e78cbe004ac0","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9f0ecdc-73b8-4b13-9f54-d1c2930c5757","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"85730ed6-b629-4f0e-aa48-21520af194e3","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b31f3754-73f2-4c93-b9ca-4b88a729ab67","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"011b209c-d1bf-421f-b493-8da9e45dd410","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6b92f705-eadd-4465-9269-8a46b894885f","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"522440e4-57b5-4092-a5b0-4e7188d63954","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1facb283-45e6-430b-8ff2-16df5beca6f3","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"9e324d3b-fbf1-4fde-96c4-64ec8939c1b5","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0a237723-405b-4987-b6f5-2bc57db6448a","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"1187189c-8281-4133-b4e6-4eb32f4df3fa","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"732f80a5-1c0a-4f9e-aaa1-80a4466eeb07","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"3680a6f0-7bb7-42fb-b5e7-2f123fb7a6e0","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"26e3f97d-58c7-4389-b50c-c1646788c53d","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"d9875731-91c3-4115-afa1-a0570cc3ff03","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f4be1794-f5d5-4462-a109-80198163c7a8","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"f9d3c13d-c93c-4f0f-a625-1b85e1405a6e","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0bc367a5-4016-45c6-8011-6477f5034d2b","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"b47e19f3-60cd-4901-be9d-56e28fd63ae0","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4be66f87-0c5d-4859-90c2-a6c963e18dd4","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"4709daca-f07c-4d4f-81d2-d6c6e2fb20ea","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"266ed403-b89b-407a-858d-f93236fac3a5","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"e7abe6b5-8b3f-4ea4-be49-59cb5606d6e1","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"46fdd95d-ddbb-4841-a73f-02f19b876448","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"5a377c60-f27a-48c4-9ee2-c8ff435c3bed","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"320255f6-1ac9-4b17-b936-f1bf75f4014f","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"5c2aad89-a0f9-4b0f-b22d-0782d0faf770","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b7930f10-2937-4c8d-9b38-83c14a06279c","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"00706175-a39a-4570-a957-486069d7a5f8","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"da03eed0-734e-4eb2-a228-ccff73db361f","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"d5a3dd33-ccd8-4f65-b675-6cfa2822807c","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f2e919cf-0191-45c2-99fc-8d05d8eb3d36","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"3281e3d6-30c8-4df5-ac0a-7052acff877f","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d5c5b68d-7e8b-4f35-b993-407ec138a989","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"355b3072-5215-4137-b3f6-3e46d3e9bc98","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"733683aa-12d6-407f-8744-9d9cde04d2da","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"5341484e-f605-425a-a7c7-875ab130201c","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dc908fd6-235d-4f94-b856-b8f718473f9a","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"127dd010-2aaf-4b3c-a39d-8b83eee74d1d","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f21e7774-784f-4fae-8e4e-ab6def77a058","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"45a9ce2d-e1ce-4be4-aba3-6acf5a4a7428","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c03a02d6-d521-44ac-9113-6f751deebe9b","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"df23a801-5eea-4522-bfc0-b21f9ac43e5a","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c8575fd1-2402-4560-a8a3-3f57f17b37dd","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"a7f45dfa-8808-4297-9bc8-e55e2aca5c70","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"31fc937d-7a12-4ac9-921f-826ab0495a37","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"d8ee2655-71d1-4ce1-abfa-9711798a390e","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"311e8c87-5635-4880-9b58-e04378a4dfc4","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"90d40f3d-4cc4-4940-9d21-406de00ac3b4","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"67bcf1ff-4c11-4b06-b2f7-0ff8cdaa9a18","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"371d788a-85e6-41db-a3bb-49b4cd64eff0","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"923dab15-2090-4ffb-bd83-2ce338cdc3a6","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"e116c1f7-3b01-4e67-8b4d-56817fcb852b","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4c682786-12ae-45c1-86df-2957d586959f","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"9cf48fc1-3eba-4337-8e94-c3d4d818a1bd","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4f86dd34-0034-48fa-b635-bd397453a056","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"7554754f-6484-434e-8cc6-439d07f3c080","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cef1a98a-b002-4f6b-ad53-91d1f713f6c2","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"f4f822ae-7e2a-47a6-8576-b64f6c58600e","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"61acc881-1c69-4708-bfbd-1dd141234656","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"af295cab-4235-4344-ad96-77f38b56f2a3","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b9f3cffe-44f1-4572-819a-7fd34b47cbf8","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"fe73e69e-d843-495f-b8bd-25f2a0d1f7dd","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"126934e4-f3c8-49d8-923a-c07431cadb87","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"88699262-7107-4ef1-baf0-165772517db1","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aff12aa8-7739-4408-8fa6-d2f8be091563","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"eca81bec-35c1-40b6-953c-8f39114cf7d1","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6ad2c285-5892-44ab-989d-190cf384046d","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"4894771a-48e3-4605-b1ca-abcb328ae36a","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"da595a4b-174c-494c-a10a-fe86522ed9c7","path":"sprites/bg_kidsparty1/bg_kidsparty1.yy",},},},"Disabled":false,"id":"ec5116b1-d8b3-49c8-a23f-008cf0b58607","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 1027,
+  "height": 661,
   "textureGroupId": {
     "name": "kidspartygroup",
-    "path": "texturegroups/kidspartygroup",
+    "path": "texturegroups/kidspartygroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 1027,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "37",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "38",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "39",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "40",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "41",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "42",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "43",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "44",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "45",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "341ce3ef-4ea3-45ee-a727-125c6fbd104d",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8aecfa60-3b31-479d-b410-fc4fc8875182",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cdf0d4cd-80d9-4c53-94cd-f636d619bfb9",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f18d0d9b-b63a-40ac-8b7b-73850c913d3b",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ac320a2f-c0a1-460f-b39d-ebf6cc7f7f18",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8afd5eb5-f4f3-44b8-b0f7-6f73babc8836",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6348aa6f-6b96-46f6-b9bb-8219a032d21d",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4fd16b2b-b16f-4fbb-aac3-ebb132be6503",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1c02aa58-1425-4dad-99b0-669fc182c56e",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "821d3a54-91a4-46d3-9685-bdd1ee178bfd",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "03fa988a-7774-40c7-85f4-69404ab381a0",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "07d7fee4-c05e-4423-8bbb-5cb39bd9d09d",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7c79f8b3-80a1-4e2d-b0a7-181b6842face",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4a8499b9-c542-4e91-8548-a3e06010f88b",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7e9529a7-b63d-4eb0-a898-3cca00773654",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "dacfbb63-d6bd-4596-87e8-50563324fb00",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ba99c64f-e493-4c3c-9bfa-95bd3fe39b17",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "336e797b-b7d6-4a50-970e-14a708c9042d",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5e77f5f6-66da-4628-9093-bb81a5d25b76",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b14479b8-3595-472d-bc84-5845b028fc74",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "53ae8fa9-ecf4-4a53-9890-94528699f2cf",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "daf14f74-82c3-4a91-8645-4d9d061b2891",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "663856c8-dc37-41d2-8684-3259482472b5",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b6bfbf0b-a591-4070-83f7-2fb1353f346c",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "637210ed-aa9f-4b9e-ba72-376caec5fea8",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "bdacf9cb-0a33-416f-8e15-2648e3f0d9af",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7412c0c4-235b-4e66-8812-715f7fb00d05",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "dc58c96d-9643-4d65-9651-2e87d8587037",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4b384ce4-008d-44cc-9050-6ef0c0dffcaf",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "236d49c8-bdf2-42e8-adea-7a4a3a2e4fa7",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7c93bbeb-b3e5-4e08-ba64-5f82be30f786",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8d03d0ee-d379-4ee1-b495-ef7f36ccb06c",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8346ecf4-de9d-49f3-8e83-0873c7ba5d1e",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "639a8bbe-6dbe-4b77-8fa7-cd78d0c7770f",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8969377a-e5df-43c9-8f1d-1ffa84d8f3be",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7856d5cb-fb28-4682-97ef-597d4928214a",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ae73ad06-f040-4c66-b1c6-72a04c58f0cb",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7347ed46-62c4-4007-8dc0-5c7ac1f584de",
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "37",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cb8fc46a-e82d-45af-a53f-b58ee763982a",
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "38",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "659a5e1d-9f65-4cad-bf77-8b92107b637a",
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "39",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "acba57bd-26d5-4d7b-b364-f44bcb36f84f",
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "40",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "80cacbe5-f3b3-475a-b899-2a99cfc07a18",
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "41",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "565ba770-08f9-4b96-9011-38fef6e9a8d2",
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "42",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7aca63ee-6acd-4ab1-b9f8-aa3275b9cbeb",
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "43",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e73b41c6-008c-4514-8b3e-8b74eba6df79",
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "44",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "16473357-4784-43c5-901c-d451eb109131",
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "45",
+                    "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "bg_kidsparty1",
+      "path": "sprites/bg_kidsparty1/bg_kidsparty1.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 0.35,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 46.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "bg_kidsparty1",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Kid's Party",
+    "path": "folders/Sprites/Backgrounds/Kid's Party.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "bg_kidsparty1",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

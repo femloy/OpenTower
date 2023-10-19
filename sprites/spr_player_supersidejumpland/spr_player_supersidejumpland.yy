@@ -1,109 +1,336 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_player_supersidejumpland",
-  "bbox_bottom": 92,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 40,
   "bbox_right": 120,
   "bbox_top": 10,
+  "bbox_bottom": 92,
+  "origin": 4,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0c88b936-1429-437e-8c95-4e3273e9e9b5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3b7b71b1-c6aa-40fa-b6a6-20531d568207",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9dbb851d-5fd9-4181-83f5-d15749943e5e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b5bc160d-b3d8-466a-92a6-c792653eca29",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b93c0a62-e83b-4fb4-bc25-00686219235b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"bbb26c41-cfb4-453d-8d78-042a6a872437",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e2e2fbf9-bb8a-475e-a4c5-34cef2ddb4ee",},
-  ],
+  "type": 0,
+  "swfPrecision": 2.525,
+  "width": 200,
+  "height": 100,
+  "textureGroupId": {
+    "name": "playergroup",
+    "path": "texturegroups/playergroup"
+  },
+  "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
-  "height": 100,
-  "HTile": false,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "14d8c65e-293f-4e01-9473-0f0e972aa9bd",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "052a4b68-982c-4e50-b878-3f90f4ea1f09",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1f794d0e-a399-4956-a108-6cb342650262",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4d789336-d135-49f9-a180-132527f3f6fb",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "561f9b86-2c92-4f6e-a68e-0e76c0feaaa1",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3c7b3125-c345-433c-b2f7-77be1ff67436",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "fd154252-4cab-4719-81e0-b1c868eaa924",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_player_supersidejumpland",
+      "path": "sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 7.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 100,
+    "yorigin": 50,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_player_supersidejumpland",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7fecd58d-784c-43e4-87dd-57c867d33592","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
   ],
   "nineSlice": {
-    "resourceType": "GMNineSliceData",
     "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+    "left": 0,
+    "top": 0,
+    "right": 0,
     "bottom": 0,
-    "enabled": false,
     "guideColour": [
       4294902015,
       4294902015,
       4294902015,
-      4294902015,
+      4294902015
     ],
     "highlightColour": 1728023040,
     "highlightStyle": 0,
-    "left": 0,
-    "right": 0,
+    "enabled": false,
     "tileMode": [
       0,
       0,
       0,
       0,
-      0,
-    ],
-    "top": 0,
+      0
+    ]
   },
-  "origin": 4,
   "parent": {
     "name": "Peppino",
-    "path": "folders/Sprites/Player/Peppino.yy",
+    "path": "folders/Sprites/Player/Peppino.yy"
   },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_player_supersidejumpland",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 7.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0c88b936-1429-437e-8c95-4e3273e9e9b5","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"32ae56a8-62e3-40a1-8db4-ea131e4cd322","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3b7b71b1-c6aa-40fa-b6a6-20531d568207","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"2292ff00-3f63-47b1-9a50-880adc2ee550","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9dbb851d-5fd9-4181-83f5-d15749943e5e","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"f0369fe4-38c5-4965-9eb6-ff241baf39ac","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b5bc160d-b3d8-466a-92a6-c792653eca29","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"424b60c4-9883-4d07-82c5-bbee04557e3e","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b93c0a62-e83b-4fb4-bc25-00686219235b","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"3471b1bd-0c4c-4ebf-9872-a6c51fe90085","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"bbb26c41-cfb4-453d-8d78-042a6a872437","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"c89d9103-c25a-446a-aedd-c40e2968d78e","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e2e2fbf9-bb8a-475e-a4c5-34cef2ddb4ee","path":"sprites/spr_player_supersidejumpland/spr_player_supersidejumpland.yy",},},},"Disabled":false,"id":"56587a57-d22f-4753-97a1-cdb6c821ac68","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 100,
-    "yorigin": 50,
-  },
-  "swatchColours": null,
-  "swfPrecision": 2.525,
-  "textureGroupId": {
-    "name": "playergroup",
-    "path": "texturegroups/playergroup",
-  },
-  "type": 0,
-  "VTile": false,
-  "width": 200,
+  "resourceVersion": "1.0",
+  "name": "spr_player_supersidejumpland",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

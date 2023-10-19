@@ -1,103 +1,252 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_bossfight_blackoutline",
-  "bbox_bottom": 78,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 0,
   "bbox_right": 199,
   "bbox_top": 16,
+  "bbox_bottom": 78,
+  "origin": 3,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eb9bf01d-8b64-4128-8182-203afeaecb7f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2dc6611-b19c-4006-b62e-f632a4c8e4a5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"997881a2-db67-42da-ad68-5da8178dd0be",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6b98806f-962d-43b1-8e6f-9f1d863aa901",},
-  ],
+  "type": 0,
+  "swfPrecision": 2.525,
+  "width": 200,
+  "height": 101,
+  "textureGroupId": {
+    "name": "bossgroup",
+    "path": "texturegroups/bossgroup"
+  },
+  "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
-  "height": 101,
-  "HTile": false,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "f144104e-8224-4702-957e-3a0c3561cebd",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "810ed98b-983c-452d-b93f-0daaa92c9afe",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "830a058e-93c4-4e42-88be-cf57bbc88243",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8eb3ee88-a62e-4c5a-9ad8-7e5af6fd3635",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_bossfight_blackoutline",
+      "path": "sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 10.0,
+    "playbackSpeedType": 0,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 4.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 50,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_bossfight_blackoutline",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"ad225d98-1697-4c14-a285-9143218f5d4f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
   ],
   "nineSlice": {
-    "resourceType": "GMNineSliceData",
     "resourceVersion": "1.0",
+    "loadedVersion": null,
+    "resourceType": "GMNineSliceData",
+    "left": 0,
+    "top": 0,
+    "right": 0,
     "bottom": 0,
-    "enabled": true,
     "guideColour": [
       4294902015,
       4294902015,
       4294902015,
-      4294902015,
+      4294902015
     ],
     "highlightColour": 1728023040,
     "highlightStyle": 0,
-    "left": 0,
-    "right": 0,
+    "enabled": true,
     "tileMode": [
       0,
       0,
       0,
       0,
-      1,
-    ],
-    "top": 0,
+      1
+    ]
   },
-  "origin": 3,
   "parent": {
     "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
+    "path": "folders/Sprites/Unused.yy"
   },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_bossfight_blackoutline",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 4.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 10.0,
-    "playbackSpeedType": 0,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eb9bf01d-8b64-4128-8182-203afeaecb7f","path":"sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy",},},},"Disabled":false,"id":"d11822e9-479e-4e4e-be46-337d78fb8889","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2dc6611-b19c-4006-b62e-f632a4c8e4a5","path":"sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy",},},},"Disabled":false,"id":"2a131492-57e0-471d-bd80-9bd75b893ab8","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"997881a2-db67-42da-ad68-5da8178dd0be","path":"sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy",},},},"Disabled":false,"id":"f60ded28-734e-498e-ae47-0e2dcb3a8192","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6b98806f-962d-43b1-8e6f-9f1d863aa901","path":"sprites/spr_bossfight_blackoutline/spr_bossfight_blackoutline.yy",},},},"Disabled":false,"id":"d7e12e73-04f9-4851-a5d5-5aba281df83e","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 50,
-  },
-  "swatchColours": null,
-  "swfPrecision": 2.525,
-  "textureGroupId": {
-    "name": "bossgroup",
-    "path": "texturegroups/bossgroup",
-  },
-  "type": 0,
-  "VTile": false,
-  "width": 200,
+  "resourceVersion": "1.0",
+  "name": "spr_bossfight_blackoutline",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

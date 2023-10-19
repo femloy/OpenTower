@@ -1,110 +1,648 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_pizzagoblin_throwbomb",
-  "bbox_bottom": 107,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 43,
   "bbox_right": 136,
   "bbox_top": 7,
+  "bbox_bottom": 107,
+  "origin": 9,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"48bcbf62-ff76-4d40-81c2-3d6a557ba43a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7d70a6d4-ee69-47c7-b7d1-58cff7f6c61a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"32914327-7b93-41e9-a9cf-167f4a82d5db",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5b9c999f-e5a1-4064-a6c7-721b052813e6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d7bc9803-0aa9-4321-96ab-b58e59ff54d9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e268cfaa-e38d-43dd-84bb-003006a0a4ba",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e96aaeb-773b-4af6-80f4-2c068c051cf8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0b307692-2ec8-40ba-821f-c3ed665cd078",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8338d3dd-e6a6-4f3d-bb21-d1c243d7d6ae",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f20e6c63-8626-4c3f-973d-b6f16c01dc5c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"04f0f6ae-db4f-4153-b55c-01fc53ea7bfc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"950e57f4-9864-437d-836d-6c5f0cb6539a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2e5efb4f-c77a-40a5-b27c-6b521a63c693",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"75e077c9-5dc0-40db-8e06-2dcb313dc02a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3b160a2-71e8-45af-8281-c5518df9bfb7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac6a0e2c-a7f3-490b-bfc3-26970769bed6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"410b24eb-9cd4-4e70-93ce-9193dc6f94ad",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"295c6229-f12b-4a37-acb4-2b7e1dbc4e99",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"645e429e-f7f3-450b-aee2-bba72f8976d4",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 112,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"2f39f892-0ae1-4a18-bbe1-6a5873b1d842","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 9,
-  "parent": {
-    "name": "Pizzagoblin",
-    "path": "folders/Sprites/Baddie/Pizzagoblin.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_pizzagoblin_throwbomb",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 19.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"48bcbf62-ff76-4d40-81c2-3d6a557ba43a","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"3a2b7598-691b-439e-8429-b19139bae3c6","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7d70a6d4-ee69-47c7-b7d1-58cff7f6c61a","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"a3944d0c-dee5-431a-94ff-f90d672c2172","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"32914327-7b93-41e9-a9cf-167f4a82d5db","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"f480399a-59bf-4aa9-b4b8-aa113dd474a4","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5b9c999f-e5a1-4064-a6c7-721b052813e6","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"89b6488b-08e4-4f0f-93e5-4a526d1ba7af","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d7bc9803-0aa9-4321-96ab-b58e59ff54d9","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"93a00255-89a3-4e89-82ed-632facdf17ae","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e268cfaa-e38d-43dd-84bb-003006a0a4ba","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"8f68dac4-aec6-4068-b45d-7c7ac72a4126","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2e96aaeb-773b-4af6-80f4-2c068c051cf8","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"b1d7f07b-2dfb-4c01-891f-88f90961c648","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0b307692-2ec8-40ba-821f-c3ed665cd078","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"b0a7267f-919b-4f30-8f64-38b8ac932862","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8338d3dd-e6a6-4f3d-bb21-d1c243d7d6ae","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"f32c98b1-b33b-4dfd-96ff-041eab9b1b2e","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f20e6c63-8626-4c3f-973d-b6f16c01dc5c","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"2bcaade8-efac-4bf2-ace1-22ed0462b8a0","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"04f0f6ae-db4f-4153-b55c-01fc53ea7bfc","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"858cca82-0ec1-44cc-a22c-5e8e5493f86d","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"950e57f4-9864-437d-836d-6c5f0cb6539a","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"9d11cd78-e6c8-409f-84ae-6b1a6f901dd0","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2e5efb4f-c77a-40a5-b27c-6b521a63c693","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"311e787d-0d03-464c-8857-af939b33fe1b","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"75e077c9-5dc0-40db-8e06-2dcb313dc02a","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"8fa92885-8fa2-4a3d-a480-e8db7b055c88","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d3b160a2-71e8-45af-8281-c5518df9bfb7","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"2c01477d-0653-432e-9c91-e4fd0a5cb298","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ac6a0e2c-a7f3-490b-bfc3-26970769bed6","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"daf16f1b-0843-42f3-bb81-d43186624fca","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"410b24eb-9cd4-4e70-93ce-9193dc6f94ad","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"ed246057-2e1a-45ab-8b6a-29a3d5e41008","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"295c6229-f12b-4a37-acb4-2b7e1dbc4e99","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"0d10a256-3faa-4b87-a154-b0cc0ec45dfb","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"645e429e-f7f3-450b-aee2-bba72f8976d4","path":"sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy",},},},"Disabled":false,"id":"17d663dc-c5a7-4271-b365-d698a8e50bfc","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 80,
-    "yorigin": 62,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 160,
+  "height": 112,
   "textureGroupId": {
     "name": "baddiegroup",
-    "path": "texturegroups/baddiegroup",
+    "path": "texturegroups/baddiegroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 160,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "ffa3a4f6-39bf-462e-8db4-7a9f69dccace",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c05326b9-99a6-4056-9c84-7e6f4b022b6a",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1ba7be58-dbc5-4079-a42e-08acd5040589",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7cc25065-a72f-410e-845a-efb987fa37f7",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "54478659-347c-468a-9686-19a4968b01f1",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9b8afbc9-2846-434c-b6fa-d763fa8a5963",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ece6e726-5a10-4abb-96a4-3932d9ab6459",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "87c379c0-09ab-4b25-92b5-d26f8784e2a8",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e79831d5-8d52-4fc2-8416-ba339a3439d6",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "448e85c8-566b-4d13-b4c4-ffe8f26307d7",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cb586d40-1dd5-4d39-8fa3-d4c69ec036b8",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "70b7062d-8f51-4a0c-b91c-4305c0e7f0da",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "815ca884-e286-41a1-9ef0-a1ced28b3c7a",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "96ad5179-827f-4087-a560-1431959a25f4",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "56888603-c92a-4487-93a9-dc8647e82da0",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7b7ab354-573f-486f-8dcb-404c2dd00a37",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "86d4672e-aae6-407a-8dde-092107fbe828",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8a2ae977-a82b-4661-acbb-81f62843a17c",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b88f3f2f-782d-4b04-96d5-e9bbe3ef918f",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_pizzagoblin_throwbomb",
+      "path": "sprites/spr_pizzagoblin_throwbomb/spr_pizzagoblin_throwbomb.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 19.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 80,
+    "yorigin": 62,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_pizzagoblin_throwbomb",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Pizzagoblin",
+    "path": "folders/Sprites/Baddie/Pizzagoblin.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_pizzagoblin_throwbomb",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

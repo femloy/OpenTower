@@ -1,262 +1,2776 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "spr_climbstairscutscene",
-  "bbox_bottom": 501,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 211,
   "bbox_right": 480,
   "bbox_top": 0,
+  "bbox_bottom": 501,
+  "origin": 0,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c6336c2-d7f1-4128-972c-c5ae96cab2b2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c57a1161-8781-4129-a07f-5fd87e67c13a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39b6e863-2ff9-4ca7-8f1a-2f930c80e8bc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d7f41652-7a83-43e6-a966-e34a04bc4e0b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d4b1bc64-10af-42fe-af76-b8e75e2b5e8f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"35ff09d2-1577-42f9-b27b-c5a658c78853",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c0b7fbf0-35fa-4a59-a19b-847ce8b24b4e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"61a63038-a20f-4f20-be0a-71aeae7b1ccc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6ed80ae8-f9b4-49b9-a60e-388115833a8e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c3e22ce9-fa46-4257-94d6-6af4c7d8918b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1775a7ce-a545-474d-a5b8-95840725b411",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fe1a5266-e42b-4622-922a-951ccce2bc2e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e8966274-4e5b-411a-8f4b-8e226bc68506",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b567d48a-7ff2-4ab6-8384-89a1b6b69ee3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"01eae6c0-e54b-4b01-b468-9a4115a4887c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"91e37437-4840-4907-b91b-8a98e819275b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8b75bc9e-0e6d-4855-81e7-10c8fbddfb70",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e7cf6b88-031d-4d00-8e4b-bada8c273535",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d02ef408-03f2-4afb-a69f-0dd0d1036c3e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a17ccc71-9a7a-4034-b5cb-26834233c90c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fb953431-9529-48f0-bd9d-f35a64af7697",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4d69a9f7-024b-49a4-a4f9-b3c1c11b5f3c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"38d62812-c1fc-44b1-be8e-e62e1077f4f4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"970c4abe-377c-4277-89a9-e247fe589c6c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9848c4e6-d22b-442a-b68f-1f3fa5c6cfc1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"545d79b8-8d1d-483b-8d67-1f16e0ac2d95",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dd0e7894-3e33-41be-ae92-e5e31eec8fe7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"94583949-ff22-41ca-a4c8-4160b652c5ac",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"62b891ed-fcfc-4e3c-857d-02f5bbb6bd6a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"133bd81b-1c66-403e-9e37-0e76b0a1dcfb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f52f0cb9-9fc0-45c8-8961-8d99eb1e63e4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"19359be8-26cb-4c1b-b073-ac527be3d7da",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fbd1e986-4e4b-4109-9e82-66578f83de62",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f8063547-2378-4d13-b3fb-381af5230510",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"86cb62fe-8d9b-46fb-9ca1-f7c0c6889747",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db486274-0a88-47f9-bbf5-9d913e28388c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"32f591f9-d8d9-4581-8774-8606c15f2335",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a54e8dc-91f3-466f-8e7d-6584eae9a2dd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ecd183c7-3496-4f80-a459-17d4c3e78c56",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"82374e6d-3c1a-40f1-a08a-8c11694f3652",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"159b6847-ff7a-492a-9f5f-1d0ab9f7422a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1612bc58-e97d-4728-92fc-13f97abda7cd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b243a6fc-d8e6-4e67-ad1e-63858edb8933",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d13f4608-cf17-4c04-9e04-675a3c1184f7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"456cc2ca-1128-4676-900d-0500dd00c3d7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a52a5a7c-9560-441c-9c5b-65a62e98c0b5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"6c05638e-dad6-4631-b7cb-037e76326349",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"30ead5da-9a80-489a-ab2f-a67c6823a46f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"eff33f91-e40f-4e07-ad75-408dfc8c111f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"aacbf64d-1265-4325-8c61-156b591c55b3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9870b76-7410-4ca5-b7a6-faa6c046c54b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d5be032-6021-433a-a798-64dba49df0f0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"abcdd458-4a58-4132-a1ec-b12c1b471534",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3b83fac5-0a21-4b2a-b916-b072771b48e0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7adcc669-ef44-42bf-b1ac-e0b834c93090",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"89043033-1c63-4015-80c2-51c2841bcdbd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4de41267-4c4b-4412-b791-156528026899",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b92a8cd7-fd5d-440b-9288-c71857b3a819",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a2324790-9c75-4478-9b75-d9db38b44baa",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5cc8426d-0994-4d85-9cf3-660fe6c913d3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b74499fd-9f0b-4f52-8375-585e065667f9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a4d2b78f-2088-4ffd-9fb1-c8d495999a20",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ece7d138-d889-481b-a869-6ea4df34f9cd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"af52314b-b6a6-4bf8-b4e8-802bff9c791b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a32e8b2c-0cb2-4853-a793-365f1321c611",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"502309f7-4596-4496-861c-b3bce5cc95f3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b3e9f6d0-9a5a-4440-8c5f-3c9f1cbb190c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"774ae764-5a7a-499e-9250-657050b085ec",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"05366e1f-0635-4c21-9d69-776a195b5590",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"85aa21f5-b25c-4043-8e0c-a8e018519f0a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5f7fa99a-a9ec-4a0d-bf66-8fef71f23af4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0e45c46b-0808-4ae3-a640-7379a16fcceb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"40d48a3e-02c4-48c9-baf7-423f45e2c4d7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"894ec0f3-dd8b-4946-a189-fac686a3ed85",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17e3f6b1-70cb-48b1-91a3-6fd211a54a34",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"97d66af3-7569-40ea-aa4c-6da54b3dad0b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"d3ffb57c-a44a-42f5-b087-e7bd6896f2ca",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9ee0dd3c-d4df-4c15-832a-21c3b187ae51",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"726b1f51-7276-40fb-87ed-7d401a427d3f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"b6b766ec-2198-471b-8776-16d1cd4877c8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3a6aefd3-7127-487c-a3fe-bd16fbc33ad4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"398717a0-1a90-4d8d-9677-8a8199ec6f6d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14b803e9-f89f-45e4-97b8-999124095ef9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4f485e08-ecfe-4145-ac1b-036290a463cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c8a29760-347e-4c38-81f1-0f2e070078c9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"47068163-2162-4c18-b7b6-0e6943160519",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"00a81154-2395-4da0-bfd2-e5aca30ddd5e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"07bd48b6-a2d9-481b-941e-286967c25383",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"39c54c2e-a5dc-4765-9a1b-b081ca71a2d4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"179d2659-9bf6-4b11-9749-b1e94f766d01",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"dea00394-9002-4b80-93d9-b9e674d17979",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4c822e38-7037-40e5-87a5-e5a25cd048c4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"160e71b6-73df-4905-b718-88c95a42b633",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8519afe2-3a6c-4714-be7c-597d52f42e71",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cdb20627-f80d-4495-8617-739fe966c0c7",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 540,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"16db43a6-6d33-4886-a0a2-a2010675c12f","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 0,
-  "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "spr_climbstairscutscene",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 95.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 1.0,
-    "playbackSpeedType": 1,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5c6336c2-d7f1-4128-972c-c5ae96cab2b2","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"41bb8fbc-22b2-4051-bdd4-ccfe8cc7d98b","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c57a1161-8781-4129-a07f-5fd87e67c13a","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"d21befc2-8753-48f8-a68f-667f74e328da","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"39b6e863-2ff9-4ca7-8f1a-2f930c80e8bc","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"9e599b83-24c3-4242-bcf5-dcbb1db62cd9","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d7f41652-7a83-43e6-a966-e34a04bc4e0b","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"4aea2b3d-87d0-4292-8849-82c90ee34d67","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d4b1bc64-10af-42fe-af76-b8e75e2b5e8f","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"936d45cb-8b30-411c-a49d-714474747c24","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"35ff09d2-1577-42f9-b27b-c5a658c78853","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"8e2af410-b03b-427c-9f3c-367eeb12f5d0","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c0b7fbf0-35fa-4a59-a19b-847ce8b24b4e","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"27944880-6aa2-4851-b9cc-5d0f86f2f259","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"61a63038-a20f-4f20-be0a-71aeae7b1ccc","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"39aec690-83cf-4382-a381-461fd93f4534","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6ed80ae8-f9b4-49b9-a60e-388115833a8e","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"6874be33-b1c8-4d60-b996-4a488ab6fb14","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c3e22ce9-fa46-4257-94d6-6af4c7d8918b","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"ea68cb35-6d0f-4200-8fca-16c7c676e8ba","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1775a7ce-a545-474d-a5b8-95840725b411","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"4d238c10-e95c-462c-bcee-ba82f5b8d8cc","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fe1a5266-e42b-4622-922a-951ccce2bc2e","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"0b7895f7-88a3-4d3b-9753-3fc2009952da","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e8966274-4e5b-411a-8f4b-8e226bc68506","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"23c61b49-299e-4d02-9583-92649cd33edc","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b567d48a-7ff2-4ab6-8384-89a1b6b69ee3","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"971247c1-1fad-4fe6-913e-1be0b8d14762","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"01eae6c0-e54b-4b01-b468-9a4115a4887c","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"3babe12a-e189-48dd-9e60-cc1f9b827bf3","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"91e37437-4840-4907-b91b-8a98e819275b","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"784a5aa6-5a70-4f9d-8d68-f66cc2a53b82","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8b75bc9e-0e6d-4855-81e7-10c8fbddfb70","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"b1b877dd-0d37-415a-a15c-91e1ff6ca04e","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e7cf6b88-031d-4d00-8e4b-bada8c273535","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"119a0d25-ff77-4054-a050-42d866af8c2b","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d02ef408-03f2-4afb-a69f-0dd0d1036c3e","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"586fae78-29c4-4007-973c-96e19696837a","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a17ccc71-9a7a-4034-b5cb-26834233c90c","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"bb1876ba-7caf-4fec-b920-b4e8e24e7c13","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fb953431-9529-48f0-bd9d-f35a64af7697","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"3ac4bc16-117c-4d28-b27e-2d0ef1364f47","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4d69a9f7-024b-49a4-a4f9-b3c1c11b5f3c","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"791680ba-b700-4076-ab15-7002183636c6","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"38d62812-c1fc-44b1-be8e-e62e1077f4f4","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"6ecde9c0-a956-4006-af13-50aed7ca9717","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"970c4abe-377c-4277-89a9-e247fe589c6c","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"17eb1248-7ffc-4a88-b5a3-d2b63b052316","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9848c4e6-d22b-442a-b68f-1f3fa5c6cfc1","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"156593c6-c2df-42b4-9bf8-6b88f9e60330","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"545d79b8-8d1d-483b-8d67-1f16e0ac2d95","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"873881d0-d5df-4190-a253-6cb02fb738b9","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dd0e7894-3e33-41be-ae92-e5e31eec8fe7","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"88433650-8747-4b46-b9fb-9e07ba9deced","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"94583949-ff22-41ca-a4c8-4160b652c5ac","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"090f9da5-e9e2-4baa-a4c0-cdbf5f7967d0","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"62b891ed-fcfc-4e3c-857d-02f5bbb6bd6a","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"2f773e6c-e0de-485f-a35b-13a5c878b4b9","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"133bd81b-1c66-403e-9e37-0e76b0a1dcfb","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"61ef6ab0-01c6-4db8-be28-ab54cdf53cfb","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f52f0cb9-9fc0-45c8-8961-8d99eb1e63e4","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"4a775f13-efd4-4715-bc08-eba2c1668b5a","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"19359be8-26cb-4c1b-b073-ac527be3d7da","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"f0df2fbf-7a0c-435e-a6a0-7ff5d95cd4a0","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fbd1e986-4e4b-4109-9e82-66578f83de62","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"194d0fc4-deba-405c-ab35-849f66d8a7ec","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f8063547-2378-4d13-b3fb-381af5230510","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"26c9a87d-b2fa-4be2-8c8e-a45cd9a6fe52","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"86cb62fe-8d9b-46fb-9ca1-f7c0c6889747","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"58a93c48-7955-4b4e-a87d-649c2896dfbc","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"db486274-0a88-47f9-bbf5-9d913e28388c","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"705140c0-6926-4181-9665-bdec0e888757","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"32f591f9-d8d9-4581-8774-8606c15f2335","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"767d9171-a4d0-47af-a54e-36a4c9843ae3","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3a54e8dc-91f3-466f-8e7d-6584eae9a2dd","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"87f0e09a-1243-47fc-95ed-8f2871c630b0","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ecd183c7-3496-4f80-a459-17d4c3e78c56","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"645e3edd-284d-467e-a169-389924982abd","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"82374e6d-3c1a-40f1-a08a-8c11694f3652","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"061499f4-fdad-47d5-9333-baeb61617aa4","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"159b6847-ff7a-492a-9f5f-1d0ab9f7422a","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"cdf8d3fa-d3dd-4e62-bb9c-4c8e86c0cb0c","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1612bc58-e97d-4728-92fc-13f97abda7cd","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"23c4d5e5-4d99-4c38-89df-5f50701eff6d","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b243a6fc-d8e6-4e67-ad1e-63858edb8933","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"a509b7f8-4203-4112-bbeb-252dddfc74a8","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d13f4608-cf17-4c04-9e04-675a3c1184f7","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"0a6d7463-a601-4012-913b-25e1677dbe02","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"456cc2ca-1128-4676-900d-0500dd00c3d7","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"595aa632-2a23-4141-a9cd-f56625c022fa","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a52a5a7c-9560-441c-9c5b-65a62e98c0b5","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"c9e4eebe-6c4a-45f6-a8a3-df93ea2d95ac","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"6c05638e-dad6-4631-b7cb-037e76326349","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"c912584e-fd91-49a6-a696-6d1884376f67","IsCreationKey":false,"Key":46.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"30ead5da-9a80-489a-ab2f-a67c6823a46f","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"fb47e54b-1676-4857-8fc3-2e9b255665dc","IsCreationKey":false,"Key":47.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"eff33f91-e40f-4e07-ad75-408dfc8c111f","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"8c39b356-a354-43c7-92b7-cc13e62a86c1","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"aacbf64d-1265-4325-8c61-156b591c55b3","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"252e5e0b-b499-489a-94f4-ab84bf25c15e","IsCreationKey":false,"Key":49.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f9870b76-7410-4ca5-b7a6-faa6c046c54b","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"4e862f8b-1f5d-48b0-a163-51e19d72695a","IsCreationKey":false,"Key":50.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8d5be032-6021-433a-a798-64dba49df0f0","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"2b581f60-38df-4e92-952f-39cc7a995a82","IsCreationKey":false,"Key":51.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"abcdd458-4a58-4132-a1ec-b12c1b471534","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"b82c246b-3d2c-473e-937e-7d51568faab4","IsCreationKey":false,"Key":52.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3b83fac5-0a21-4b2a-b916-b072771b48e0","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"c4ca49e4-b21f-48ac-ada1-1c78a2a9a923","IsCreationKey":false,"Key":53.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7adcc669-ef44-42bf-b1ac-e0b834c93090","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"aa293ccd-c9b6-4a17-937b-f2da23d833ec","IsCreationKey":false,"Key":54.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"89043033-1c63-4015-80c2-51c2841bcdbd","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"a0f38fdb-ddd6-4066-9b2b-87b4b8758621","IsCreationKey":false,"Key":55.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4de41267-4c4b-4412-b791-156528026899","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"1d256698-a529-47dd-a902-a266f2e100bd","IsCreationKey":false,"Key":56.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b92a8cd7-fd5d-440b-9288-c71857b3a819","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"0fb21ef2-09d0-41f3-8ab4-858de2ca82b7","IsCreationKey":false,"Key":57.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a2324790-9c75-4478-9b75-d9db38b44baa","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"178b269d-0aa2-4178-b214-e01a1924cd26","IsCreationKey":false,"Key":58.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5cc8426d-0994-4d85-9cf3-660fe6c913d3","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"430f5e40-aff5-47d8-a882-ce8dc1461075","IsCreationKey":false,"Key":59.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b74499fd-9f0b-4f52-8375-585e065667f9","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"9e3f0a48-967d-4fdb-a0f8-ad3e390644a0","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a4d2b78f-2088-4ffd-9fb1-c8d495999a20","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"7f1f7096-a850-4e66-88e9-009ccccccb01","IsCreationKey":false,"Key":61.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ece7d138-d889-481b-a869-6ea4df34f9cd","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"269591c6-c0df-4c4f-a8bf-af159ccc27f0","IsCreationKey":false,"Key":62.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"af52314b-b6a6-4bf8-b4e8-802bff9c791b","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"8d086da5-3187-46b2-aad9-a070813a2eb4","IsCreationKey":false,"Key":63.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a32e8b2c-0cb2-4853-a793-365f1321c611","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"28ee34b2-4148-4a22-a7e3-7acc4be10ea6","IsCreationKey":false,"Key":64.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"502309f7-4596-4496-861c-b3bce5cc95f3","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"5e611170-bfa0-4840-a93b-43b2cdb67aa8","IsCreationKey":false,"Key":65.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b3e9f6d0-9a5a-4440-8c5f-3c9f1cbb190c","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"bae24477-f319-43f7-bfe5-8b14352cfd6d","IsCreationKey":false,"Key":66.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"774ae764-5a7a-499e-9250-657050b085ec","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"f260e58f-86cf-472a-b900-33731abed676","IsCreationKey":false,"Key":67.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"05366e1f-0635-4c21-9d69-776a195b5590","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"657795cf-4303-4805-90f2-f0655b0004e2","IsCreationKey":false,"Key":68.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"85aa21f5-b25c-4043-8e0c-a8e018519f0a","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"4790db29-7e25-4ee0-bee3-6e44bcea525f","IsCreationKey":false,"Key":69.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5f7fa99a-a9ec-4a0d-bf66-8fef71f23af4","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"8b5bdfad-77ef-49cb-91d1-89ba2ec6b18a","IsCreationKey":false,"Key":70.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0e45c46b-0808-4ae3-a640-7379a16fcceb","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"487cb36f-f947-4145-83b7-e50fce560447","IsCreationKey":false,"Key":71.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"40d48a3e-02c4-48c9-baf7-423f45e2c4d7","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"39e5b4d9-ba2d-4972-ad3d-02f3bbf14b5c","IsCreationKey":false,"Key":72.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"894ec0f3-dd8b-4946-a189-fac686a3ed85","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"052d6123-a914-4a60-b764-fed2d8d2b97f","IsCreationKey":false,"Key":73.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"17e3f6b1-70cb-48b1-91a3-6fd211a54a34","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"90769770-1a65-4131-9476-615abe426a4b","IsCreationKey":false,"Key":74.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"97d66af3-7569-40ea-aa4c-6da54b3dad0b","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"664570d7-1dc4-4db7-87d3-211dbb5895ce","IsCreationKey":false,"Key":75.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"d3ffb57c-a44a-42f5-b087-e7bd6896f2ca","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"d7f18bd4-a927-4a35-a921-33a59080cec9","IsCreationKey":false,"Key":76.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9ee0dd3c-d4df-4c15-832a-21c3b187ae51","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"677fdc7a-d79c-4c9d-9ce2-7b0fd7aa4fc3","IsCreationKey":false,"Key":77.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"726b1f51-7276-40fb-87ed-7d401a427d3f","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"adeaf4d7-bfe4-4512-9f2c-df566703c0ad","IsCreationKey":false,"Key":78.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"b6b766ec-2198-471b-8776-16d1cd4877c8","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"3bf2d4a8-792a-4673-8179-9d4c903e409a","IsCreationKey":false,"Key":79.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3a6aefd3-7127-487c-a3fe-bd16fbc33ad4","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"390cf7ad-1fda-4960-9ead-b4ae4fa0a25b","IsCreationKey":false,"Key":80.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"398717a0-1a90-4d8d-9677-8a8199ec6f6d","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"5eac3f67-cf97-47cd-8862-14c90a052a83","IsCreationKey":false,"Key":81.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"14b803e9-f89f-45e4-97b8-999124095ef9","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"6e6830aa-6729-4755-a5b3-6ae5a7645bbe","IsCreationKey":false,"Key":82.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4f485e08-ecfe-4145-ac1b-036290a463cf","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"0d713b18-7136-49e2-8ee8-989d411ea0b5","IsCreationKey":false,"Key":83.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c8a29760-347e-4c38-81f1-0f2e070078c9","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"226ca53d-3865-43b3-9981-dd831bf7f52a","IsCreationKey":false,"Key":84.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"47068163-2162-4c18-b7b6-0e6943160519","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"6fc84326-816f-40ef-bd12-4ec699ce1bd2","IsCreationKey":false,"Key":85.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"00a81154-2395-4da0-bfd2-e5aca30ddd5e","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"8a34021d-00b5-4c70-adf2-6d6f67bf7719","IsCreationKey":false,"Key":86.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"07bd48b6-a2d9-481b-941e-286967c25383","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"6b53eb05-a86d-4430-aa3f-3d6cd9766f43","IsCreationKey":false,"Key":87.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"39c54c2e-a5dc-4765-9a1b-b081ca71a2d4","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"63ef786c-8918-40c9-a751-1c095b1242f1","IsCreationKey":false,"Key":88.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"179d2659-9bf6-4b11-9749-b1e94f766d01","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"ab6563b7-a866-48bc-8f0f-3fae2414dcaa","IsCreationKey":false,"Key":89.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"dea00394-9002-4b80-93d9-b9e674d17979","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"8ef86150-7534-4394-89fb-5e16ef264972","IsCreationKey":false,"Key":90.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4c822e38-7037-40e5-87a5-e5a25cd048c4","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"5055fbe8-5a4f-4f5f-bc0a-202927ba39ab","IsCreationKey":false,"Key":91.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"160e71b6-73df-4905-b718-88c95a42b633","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"ab5e8a58-1db5-43d5-a6e3-ed480c0b0aa9","IsCreationKey":false,"Key":92.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8519afe2-3a6c-4714-be7c-597d52f42e71","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"7fb457fc-55ee-4f78-acce-416466636c13","IsCreationKey":false,"Key":93.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cdb20627-f80d-4495-8617-739fe966c0c7","path":"sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy",},},},"Disabled":false,"id":"ec583ce8-66ef-40a8-acde-b87bfbc04efd","IsCreationKey":false,"Key":94.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 960,
+  "height": 540,
   "textureGroupId": {
     "name": "Default",
-    "path": "texturegroups/Default",
+    "path": "texturegroups/Default"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 960,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "37",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "38",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "39",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "40",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "41",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "42",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "43",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "44",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "45",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "46",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "47",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "48",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "49",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "50",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "51",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "52",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "53",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "54",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "55",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "56",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "57",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "58",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "59",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "60",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "61",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "62",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "63",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "64",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "65",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "66",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "67",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "68",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "69",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "70",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "71",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "72",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "73",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "74",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "75",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "76",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "77",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "78",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "79",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "80",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "81",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "82",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "83",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "84",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "85",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "86",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "87",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "88",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "89",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "90",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "91",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "92",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "93",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "94",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "85c4eef4-70ab-4e20-a940-4757167d2a9a",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d423e953-711f-4053-96d4-ee7c4f4a2537",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cefd37f3-27ac-4584-98c3-19bde38acc2b",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "45995244-3528-47fc-87cc-b156c0c11325",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f8c8a630-22aa-4757-a97a-dc40b900abb4",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "489f0192-515e-4787-afba-7b4609355051",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6a253ea2-58f9-4639-af3d-c1e858baee43",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cb77dc68-924f-41c4-8c14-6365cdc23af6",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "18ceb48d-2997-43c9-bd9d-93e8a7b665bb",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "80e04116-49f6-4e74-887e-5dd7e30faefb",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "45e20114-44c4-44ca-b316-07bcd516d87c",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3eb3ddac-99c0-4c6d-9b22-df0119fef89d",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a826787f-ecba-44b0-9f56-48cf791521fe",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "718ec561-e5d6-4da7-8183-50786a45bcf7",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "42ca0c63-dc66-4d39-a859-426e17087a67",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8b89b0e7-ec5b-47eb-927a-cd9e49dc91fa",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "daa45b0e-f435-4a22-83b5-e2d7e6780dcb",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "972c3bad-7f18-4b05-9e13-31d130e39978",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1b6512b2-7dfe-4ce4-a112-1e5a6ad5f15c",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0529f142-62af-4000-8289-e3b05aa9fe86",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3b58675c-3b8b-40a4-b2b1-607f713abb56",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "62ceb8db-0b3c-4934-abd7-c15cb96ae333",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a47f3b7c-4f88-4723-b4b7-e4d597901f4b",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b42de4b0-4b99-4444-8f30-b4b87018db33",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "db0d26cb-45f1-4c5a-803e-d1b075511fd7",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1a1849c6-110d-40c5-85dd-dc740efed25d",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "90df22fd-4528-46c1-92a5-913c2e994281",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0d2f2d5b-cd43-4b48-b79b-4929f35cde83",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c3799405-06af-49ec-ba67-15dd17412889",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "37fa60f0-7141-4181-920d-e711458e6897",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2fbf498a-33ce-48ec-b234-ba702f8b5a6b",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6c745104-9bb1-4865-a9ab-c189ba0fa257",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1274fa7a-40fd-4ea2-b8ac-812d8fc9d6af",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "34c6c8a1-475b-47ad-9c24-f14c289959c6",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "26b5b9a4-50f6-4a83-849f-177aff164e92",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9b860290-684c-4d24-a7f3-a228b3edba51",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "20105a3e-9598-4aae-8a2b-de4949d59a24",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e248d6a3-2ba8-4150-8b20-d4fa61a76ea1",
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "37",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a30ce35d-1767-4396-8b2c-1c7bc010d3ac",
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "38",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "92e96afd-1d31-4eb4-bd2d-522d57ed4bb9",
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "39",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "432197c3-acea-492f-b48e-b74d245231e5",
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "40",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e403c22f-95a1-415f-ad20-a0669018c5c3",
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "41",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4273bc8a-6836-4ecf-99d6-45342cf1ed5e",
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "42",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6779e359-2cd6-4c4e-bcd5-b23b8a5fd6e4",
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "43",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c9da11b1-97f3-47b5-8d33-447ffa1665ec",
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "44",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5607d1be-1e66-45be-a277-ce1e30f61d47",
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "45",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0c5cadc8-02db-4bda-b222-2c4bf5a2f179",
+              "Key": 46.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "46",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2c944736-8fbd-4062-8bbd-ce9e9adffbd1",
+              "Key": 47.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "47",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b76201f7-b8f2-4e24-a98c-ac93903c1181",
+              "Key": 48.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "48",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4f184a66-7587-424c-b910-94eb0fe33818",
+              "Key": 49.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "49",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c8e28fb9-23bd-4b9f-b423-2ca8be4abc8f",
+              "Key": 50.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "50",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "21c31ed2-c30a-4ece-8731-46ad7c4773d1",
+              "Key": 51.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "51",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0fd6f6e8-3284-4ff1-97e9-a68cbd8e2fa1",
+              "Key": 52.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "52",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d09bb32c-cf89-4531-b52f-adb80fe3e7bf",
+              "Key": 53.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "53",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2cdc2648-3b9b-44ae-bd23-08f0ac33555e",
+              "Key": 54.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "54",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "623ad906-6cff-4be7-8ec5-cf2aa11adb8e",
+              "Key": 55.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "55",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b42bcde5-3a54-4618-be59-7ebc82eceb6a",
+              "Key": 56.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "56",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "328bf58a-3b75-42a4-bdec-20e6554b4d55",
+              "Key": 57.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "57",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e0def307-da1c-483f-9bdf-8882c2d93cf9",
+              "Key": 58.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "58",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "27c27223-01ee-4173-becb-9da83c479c81",
+              "Key": 59.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "59",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2c23efe7-6b72-4ae5-8f8e-21a897e4da35",
+              "Key": 60.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "60",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d3b9d632-ece7-4aa2-b6ae-462defc207f2",
+              "Key": 61.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "61",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3c6c8494-cdf4-42ea-95f6-1547e009d051",
+              "Key": 62.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "62",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2c03ce6e-eca0-4007-9859-d72de886d5f1",
+              "Key": 63.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "63",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "62a8fa40-d68c-4df1-8723-84953e5adea1",
+              "Key": 64.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "64",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "dc342283-c919-4d68-bc75-54a73a658ab6",
+              "Key": 65.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "65",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1f0b42c4-2d57-4ca8-b1ff-43af3dfe6707",
+              "Key": 66.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "66",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f84d7e7a-9b1c-40b3-a769-b72dd7ffb99c",
+              "Key": 67.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "67",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ea8db5d5-b271-4bae-a529-430005ae98a2",
+              "Key": 68.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "68",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "495921f1-240b-4ad7-8282-50a705b835b4",
+              "Key": 69.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "69",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "02f6a911-04b5-4e6a-868f-10ac3ef54d31",
+              "Key": 70.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "70",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0a3fbd37-cd67-43a6-8315-c1cdf8cd9887",
+              "Key": 71.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "71",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7d88d4d9-6b47-4086-a5f9-2556e81c49fa",
+              "Key": 72.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "72",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b8105e96-2661-4ecd-8482-c78534a0d95b",
+              "Key": 73.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "73",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1ab88990-6104-416f-8c7e-42ad44572207",
+              "Key": 74.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "74",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "79eb59a8-06d8-404b-bbeb-58772efbdd79",
+              "Key": 75.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "75",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "413c913d-57c5-4df9-8209-90e32d97edb5",
+              "Key": 76.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "76",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ed316bfb-d1b1-4265-94c2-9b0907958cc6",
+              "Key": 77.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "77",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "199cd106-4d97-4da6-a232-3e8fa6b41616",
+              "Key": 78.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "78",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "97a6a32f-b75b-44f6-a13d-88a0caef60a0",
+              "Key": 79.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "79",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "173ab8ec-f463-43d6-9d92-c0f5b6b781d9",
+              "Key": 80.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "80",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9a224006-5fd9-4a75-8596-d3af910323fa",
+              "Key": 81.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "81",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0421f6b7-f3f4-42e1-9875-b05e726a7545",
+              "Key": 82.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "82",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ef1c97b1-ad33-474c-bb59-0745bdc540b9",
+              "Key": 83.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "83",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d3ea3264-cd50-4857-8620-619f6a89caa0",
+              "Key": 84.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "84",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5d829a85-8b5c-44ae-8113-277603c3fb44",
+              "Key": 85.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "85",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ba5cf032-9982-4437-8248-a19d991aa0ff",
+              "Key": 86.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "86",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7a1f9878-cb3d-496b-9ced-9b117e1753f1",
+              "Key": 87.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "87",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f0fd84e2-7421-4b88-b751-e50c536798b2",
+              "Key": 88.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "88",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5306c4e9-726d-4f5d-93f8-fdfcd5b65d01",
+              "Key": 89.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "89",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c59d3271-2439-4c74-ad49-dccf57699453",
+              "Key": 90.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "90",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ed88837c-a624-42b7-93ac-0550a8ad4f72",
+              "Key": 91.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "91",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "37af6094-5e93-4924-b3f7-ba6f20b73411",
+              "Key": 92.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "92",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9834f92d-b812-4d5f-b19f-383f03e48b37",
+              "Key": 93.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "93",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "78614878-7bfd-45c5-9a3b-6257a592d85e",
+              "Key": 94.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "94",
+                    "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "spr_climbstairscutscene",
+      "path": "sprites/spr_climbstairscutscene/spr_climbstairscutscene.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 1.0,
+    "playbackSpeedType": 1,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 95.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "spr_climbstairscutscene",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Unused",
+    "path": "folders/Sprites/Unused.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "spr_climbstairscutscene",
+  "tags": [],
+  "resourceType": "GMSprite"
 }

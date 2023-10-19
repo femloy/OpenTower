@@ -1,232 +1,2356 @@
 {
-  "resourceType": "GMSprite",
-  "resourceVersion": "1.0",
-  "name": "bg_freezerfridge",
-  "bbox_bottom": 799,
+  "HTile": false,
+  "VTile": false,
+  "For3D": false,
+  "DynamicTexturePage": false,
+  "preMultiplyAlpha": false,
+  "edgeFiltering": false,
+  "collisionTolerance": 0,
   "bbox_left": 0,
   "bbox_right": 999,
   "bbox_top": 0,
+  "bbox_bottom": 799,
+  "origin": 0,
   "bboxMode": 0,
   "collisionKind": 1,
-  "collisionTolerance": 0,
-  "DynamicTexturePage": false,
-  "edgeFiltering": false,
-  "For3D": false,
-  "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"52a945fa-b1da-4dd7-bc96-f867d438db5d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8891ff2f-b3cc-4fc3-ae14-4abb8d6630b5",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5baf1101-9edf-425c-aa0f-ce06ef98cb74",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"60201559-3375-4181-bdbe-781f866d2b38",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ca1cdfd8-395f-4fbd-a029-a4c617f6d26d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c225ac61-58f7-4476-aac4-d3fa0b9177a8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4c4dc7de-22b5-4b1f-a76c-f15f9e8b86b9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"be9de00e-ae65-4176-8000-3753a182d9cf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2fd05e83-1a2b-4311-bee6-55923c352e1d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd862a28-b779-48ec-a016-6954bc5bcf42",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"65baa935-25a4-42e0-8608-0334ae4cdca6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fc484aa6-fd08-4f18-bc82-acd3aea1e1c9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"21fd16be-da1e-4b7a-be1a-f2cdb92ae45f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ecfc4916-b9cd-4e68-8c5f-1deeb2ac21c2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c56a4bb-09ff-44ed-bfbb-94b535728f3a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a16ae3e2-6c69-45ef-971b-5aeef9ecb68f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cccf36b7-b9c3-4f9f-a543-7cd75b555566",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"82001e09-2cca-4287-80d1-cfd7a14bafbb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1a8689fc-89a8-48f3-b4f0-4e726043fb74",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"14795616-bdea-4558-ae49-207859fea469",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a46a240d-704e-4f3e-bd2e-77cb611762d4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7a558095-b381-4430-a3b1-5ab6c4eaf656",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0832c9f9-c011-4aa5-b86f-5ecf011f5c74",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1104a517-88b7-47fc-9647-571cc3a71cb4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ddcf43da-f303-4151-9847-54ea52de768f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7106e84d-b806-42c9-b029-f72ddd13e038",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fe7ac8d4-8fd4-4b41-9c3b-a0f8069b4a52",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2b8d543c-3303-4246-89d4-6a420cebe255",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"74221da5-b9b3-4fb4-805c-a3dc33a57d0c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ac5a53bc-5828-47cf-96be-d319f924ddb2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1bec148b-0e46-4e96-ac1e-2a1312ad338a",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8d3a5ffe-22c3-4cca-9dd2-c0a62e4517bb",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"872dc303-bd36-402a-8a73-bffd21bb649e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9492158d-0d69-4f71-a962-0eddcac49b70",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"248b3a62-f997-4dd8-aefd-3b3d6cdd42d2",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1c7d5b5a-8c2b-48bd-9598-a3e658d7fe0e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9114dc2b-ac7b-45c4-8826-3443a7e88298",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"065b00f6-9a3f-43a4-a617-cf7809068f1c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"02565c90-b5fd-4ace-b3c6-f29c4cdb4426",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e60c4b65-f89a-4c8c-8173-3abee5ea9941",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"ef9893d2-1b58-4752-b174-3d231dfbc1fc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"8bf9e438-6c8a-4d2c-ad2b-de2786d22d29",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"63caab4c-98af-49f3-97e6-b403dc3393bc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"896c72a5-1c7f-4249-a5ec-164827d79e8d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"06e5c6b8-1397-4168-ac52-add5b07e9db3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"49f32638-e137-4245-813a-4c2a533d20b4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"4df6fef6-4403-4785-84b1-ea1f5539c012",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"76b0eea2-67ed-4ca0-9da4-b6efbf146234",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0a4a1bc5-019c-4042-a458-caf2f388ce84",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"cd1db624-ff47-4bcc-a922-0ded77ef81fd",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"388bf5e7-d3a7-43db-9022-0f9ed223e6f3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"584351a5-e530-448d-9240-8bcfe5de87f6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0c435f9f-dc08-4a7e-b045-c55ef97587d0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"802b9f19-a886-4a8d-b31a-d901e27d5800",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"c09ba8a9-7b78-4b8f-b36b-387a1f42e0f6",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0ea20b0e-4342-4a6e-9458-3798a09295a4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7db456d6-22d2-4393-9354-edd60feb77f3",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"621d71cf-53b8-4518-98e0-cfa135aa8d5c",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"16860ba8-95b6-4d57-9df3-bbb8c580bfd8",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fbe4ba1b-a361-4beb-bf0c-b77c8cf7f28e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a6ddfd0d-dcd4-4699-8dc3-eae85a5d4fd0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db1b4524-d01e-4e4c-9238-ec32a4f828d7",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3d24f0f4-658c-488e-87a3-159c038df0a9",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"17efa4d9-e45b-4c15-8fbb-11d3eacfece1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9118f1ed-7fe7-4a35-9f35-cd1c561d167e",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"3f24b558-1c71-4115-abed-1742ba273f5d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"18787efe-97ad-44be-b965-77dd94c1921b",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"acec9d71-fc5e-484b-9d03-16ac724d297f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"9d20118f-7111-4269-8699-a99355e96ac4",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"07747014-cb3d-4dd1-897e-31f5b4adbdaf",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"e7622a68-7977-44dc-9513-dc2bdec68c0f",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"7038c5a2-e10f-4132-8903-c4ae2597b610",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"a36ae749-0eb0-458e-8807-d8f1ee6d6c90",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"5c15dae3-d1cc-4ea3-bf62-0710f4d14400",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"f9c095bd-8358-4d88-ad06-ba65b56e75dc",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"71ecf086-553a-45c9-bb24-c9847c477d76",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"906ed735-0157-4360-8149-75e2cf8cb04d",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1091ae6b-0ccb-4d3a-9ea7-c6f80519d233",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"db07a56a-b9e3-4863-924f-094f8645af73",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"fc0b725c-2714-4bf1-969c-ecfc76c13f02",},
-  ],
-  "gridX": 0,
-  "gridY": 0,
-  "height": 800,
-  "HTile": false,
-  "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"7cc0cdb0-d0b5-4514-b123-cb8fe1b726ce","blendMode":0,"displayName":"default","isLocked":false,"opacity":100.0,"visible":true,},
-  ],
-  "nineSlice": null,
-  "origin": 0,
-  "parent": {
-    "name": "Freezer",
-    "path": "folders/Sprites/Backgrounds/Freezer.yy",
-  },
-  "preMultiplyAlpha": false,
-  "sequence": {
-    "resourceType": "GMSequence",
-    "resourceVersion": "1.4",
-    "name": "bg_freezerfridge",
-    "autoRecord": true,
-    "backdropHeight": 768,
-    "backdropImageOpacity": 0.5,
-    "backdropImagePath": "",
-    "backdropWidth": 1366,
-    "backdropXOffset": 0.0,
-    "backdropYOffset": 0.0,
-    "events": {"resourceType":"KeyframeStore<MessageEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "eventStubScript": null,
-    "eventToFunction": {},
-    "length": 80.0,
-    "lockOrigin": false,
-    "moments": {"resourceType":"KeyframeStore<MomentsEventKeyframe>","resourceVersion":"1.0","Keyframes":[],},
-    "playback": 1,
-    "playbackSpeed": 20.0,
-    "playbackSpeedType": 0,
-    "showBackdrop": true,
-    "showBackdropImage": false,
-    "timeUnits": 1,
-    "tracks": [
-      {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","builtinName":0,"events":[],"inheritsTrackColour":true,"interpolation":1,"isCreationTrack":false,"keyframes":{"resourceType":"KeyframeStore<SpriteFrameKeyframe>","resourceVersion":"1.0","Keyframes":[
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"52a945fa-b1da-4dd7-bc96-f867d438db5d","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"3f298b5f-beaf-40b0-bb47-0e17064d3a81","IsCreationKey":false,"Key":0.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8891ff2f-b3cc-4fc3-ae14-4abb8d6630b5","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"42e2823b-ffa4-4ea2-a4bd-90bd661a42eb","IsCreationKey":false,"Key":1.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5baf1101-9edf-425c-aa0f-ce06ef98cb74","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"045153ae-12a8-438d-b215-35861753d62b","IsCreationKey":false,"Key":2.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"60201559-3375-4181-bdbe-781f866d2b38","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"7c561525-2e9c-42dc-aede-21bed1db7a79","IsCreationKey":false,"Key":3.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ca1cdfd8-395f-4fbd-a029-a4c617f6d26d","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"c90e8524-ef5c-4bdf-88ea-0891782010c2","IsCreationKey":false,"Key":4.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c225ac61-58f7-4476-aac4-d3fa0b9177a8","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"78556537-e50d-40a4-a4f9-7c6f3c8c623b","IsCreationKey":false,"Key":5.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4c4dc7de-22b5-4b1f-a76c-f15f9e8b86b9","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"8e6b8e8d-6159-4523-b440-ca49d5e18ed1","IsCreationKey":false,"Key":6.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"be9de00e-ae65-4176-8000-3753a182d9cf","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"0e7cea6a-2774-4eea-abce-b98f7cc57b19","IsCreationKey":false,"Key":7.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2fd05e83-1a2b-4311-bee6-55923c352e1d","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"b28de443-4c23-4ef4-aa17-8fa8204a4b73","IsCreationKey":false,"Key":8.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd862a28-b779-48ec-a016-6954bc5bcf42","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"75710902-c5f7-433f-ab8c-cd8f5fd56533","IsCreationKey":false,"Key":9.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"65baa935-25a4-42e0-8608-0334ae4cdca6","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"ae5d3a46-3bcf-4297-a421-e475248a8c1e","IsCreationKey":false,"Key":10.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fc484aa6-fd08-4f18-bc82-acd3aea1e1c9","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"3bfb5ba9-eb76-434f-a0db-4b02bd60b56f","IsCreationKey":false,"Key":11.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"21fd16be-da1e-4b7a-be1a-f2cdb92ae45f","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"5734e286-3f21-4d4c-8ba6-f64b5a797f3c","IsCreationKey":false,"Key":12.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ecfc4916-b9cd-4e68-8c5f-1deeb2ac21c2","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"e9736cd8-21b1-4577-8128-49b4314ef2b6","IsCreationKey":false,"Key":13.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1c56a4bb-09ff-44ed-bfbb-94b535728f3a","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"0c627243-ac16-4c94-8983-c8e8b37cf9ac","IsCreationKey":false,"Key":14.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a16ae3e2-6c69-45ef-971b-5aeef9ecb68f","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"fc1f3177-c043-4a26-b1d7-633eeceb5e7c","IsCreationKey":false,"Key":15.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cccf36b7-b9c3-4f9f-a543-7cd75b555566","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"2429a7b4-12e6-4290-a819-1d1ca675e3d3","IsCreationKey":false,"Key":16.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"82001e09-2cca-4287-80d1-cfd7a14bafbb","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"3f88b5ee-4921-45b6-9d98-f18d24a96668","IsCreationKey":false,"Key":17.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1a8689fc-89a8-48f3-b4f0-4e726043fb74","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"b730f0a1-b4b1-4c27-beb8-08d6d1b1ec19","IsCreationKey":false,"Key":18.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"14795616-bdea-4558-ae49-207859fea469","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"b92610cc-4c8e-45de-9e94-34b34d308df0","IsCreationKey":false,"Key":19.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a46a240d-704e-4f3e-bd2e-77cb611762d4","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"96843939-4a3e-4f45-ac21-c6f53f7e9b58","IsCreationKey":false,"Key":20.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7a558095-b381-4430-a3b1-5ab6c4eaf656","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"6713e8f0-2acd-4558-9015-656b3fb6c092","IsCreationKey":false,"Key":21.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0832c9f9-c011-4aa5-b86f-5ecf011f5c74","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"0ae745a4-79f2-47bd-9d48-bdf15eef311a","IsCreationKey":false,"Key":22.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1104a517-88b7-47fc-9647-571cc3a71cb4","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"8cdbf025-8408-4621-8132-b534db3c87ae","IsCreationKey":false,"Key":23.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ddcf43da-f303-4151-9847-54ea52de768f","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"98c400b7-9681-4a3c-b20e-783936363f01","IsCreationKey":false,"Key":24.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7106e84d-b806-42c9-b029-f72ddd13e038","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"1e66d6fe-1fb1-4255-8f3c-df6da126d902","IsCreationKey":false,"Key":25.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fe7ac8d4-8fd4-4b41-9c3b-a0f8069b4a52","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"f05d358c-2df6-470d-a505-62136d6c3a62","IsCreationKey":false,"Key":26.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"2b8d543c-3303-4246-89d4-6a420cebe255","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"49ea766b-cdde-4c35-8d39-3eb4a5f747ed","IsCreationKey":false,"Key":27.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"74221da5-b9b3-4fb4-805c-a3dc33a57d0c","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"64b21df9-a341-4bb3-ac44-7fc02b5b8898","IsCreationKey":false,"Key":28.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ac5a53bc-5828-47cf-96be-d319f924ddb2","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"23176817-706b-4e32-80d0-ea4d2bdd418d","IsCreationKey":false,"Key":29.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1bec148b-0e46-4e96-ac1e-2a1312ad338a","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"04f5a5b1-ae3d-4f52-b923-079b170f0a6c","IsCreationKey":false,"Key":30.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8d3a5ffe-22c3-4cca-9dd2-c0a62e4517bb","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"9f2fe64a-c464-40e8-a1b0-c5bd491ad2a5","IsCreationKey":false,"Key":31.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"872dc303-bd36-402a-8a73-bffd21bb649e","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"ffd78ffc-9d95-448c-80f1-96c83ba4150a","IsCreationKey":false,"Key":32.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9492158d-0d69-4f71-a962-0eddcac49b70","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"d0daa507-b611-494c-9d46-e0faa5035de9","IsCreationKey":false,"Key":33.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"248b3a62-f997-4dd8-aefd-3b3d6cdd42d2","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"c77c89b9-610b-4edb-98c4-0647bb347590","IsCreationKey":false,"Key":34.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1c7d5b5a-8c2b-48bd-9598-a3e658d7fe0e","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"2e514b08-dcd6-4349-a753-c1b0d48e7e1c","IsCreationKey":false,"Key":35.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9114dc2b-ac7b-45c4-8826-3443a7e88298","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"71f55994-40dd-4f59-9544-000a1381c552","IsCreationKey":false,"Key":36.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"065b00f6-9a3f-43a4-a617-cf7809068f1c","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"24d9761e-8ed6-4850-841e-632c829addc0","IsCreationKey":false,"Key":37.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"02565c90-b5fd-4ace-b3c6-f29c4cdb4426","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"5e7a6f8a-bc49-41a9-b14f-e0a1d2f499fe","IsCreationKey":false,"Key":38.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e60c4b65-f89a-4c8c-8173-3abee5ea9941","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"7756b410-906e-439b-981f-f15b9409e9e9","IsCreationKey":false,"Key":39.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"ef9893d2-1b58-4752-b174-3d231dfbc1fc","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"553c4507-6020-4be1-8270-766cdbb4c592","IsCreationKey":false,"Key":40.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"8bf9e438-6c8a-4d2c-ad2b-de2786d22d29","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"6f361e06-daa7-4fb2-91cf-b6e525e15d35","IsCreationKey":false,"Key":41.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"63caab4c-98af-49f3-97e6-b403dc3393bc","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"683089f8-db97-4b3c-9d78-f12100d9c676","IsCreationKey":false,"Key":42.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"896c72a5-1c7f-4249-a5ec-164827d79e8d","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"b072f297-682a-4d4a-ab4f-b669423f2199","IsCreationKey":false,"Key":43.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"06e5c6b8-1397-4168-ac52-add5b07e9db3","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"4c1e1b04-b809-42fd-9370-dbb81985e45d","IsCreationKey":false,"Key":44.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"49f32638-e137-4245-813a-4c2a533d20b4","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"26119631-0aec-4323-8b13-b938c778a31c","IsCreationKey":false,"Key":45.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"4df6fef6-4403-4785-84b1-ea1f5539c012","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"21dd7e62-c5f3-4ed3-b8ec-7eab02d8e6a0","IsCreationKey":false,"Key":46.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"76b0eea2-67ed-4ca0-9da4-b6efbf146234","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"626010af-80d1-4180-b406-7efcbfd8bc33","IsCreationKey":false,"Key":47.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0a4a1bc5-019c-4042-a458-caf2f388ce84","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"02ada3c8-af80-4aef-952a-ff60e53a8b7e","IsCreationKey":false,"Key":48.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"cd1db624-ff47-4bcc-a922-0ded77ef81fd","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"a6c7bb2d-020c-44a0-b36f-07c6cbed50f7","IsCreationKey":false,"Key":49.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"388bf5e7-d3a7-43db-9022-0f9ed223e6f3","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"cca5e7c3-c8a6-499e-989b-10f063497500","IsCreationKey":false,"Key":50.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"584351a5-e530-448d-9240-8bcfe5de87f6","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"683c5384-11f7-4bb5-a0d7-0aedc34a4655","IsCreationKey":false,"Key":51.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0c435f9f-dc08-4a7e-b045-c55ef97587d0","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"f101f118-dcdb-4ff2-bc08-31c4a00ae2cb","IsCreationKey":false,"Key":52.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"802b9f19-a886-4a8d-b31a-d901e27d5800","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"9b194ac2-a6e8-47b3-a7e9-a74811829f40","IsCreationKey":false,"Key":53.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"c09ba8a9-7b78-4b8f-b36b-387a1f42e0f6","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"9472ddab-51a6-4ad2-ab61-f5ed395e2596","IsCreationKey":false,"Key":54.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"0ea20b0e-4342-4a6e-9458-3798a09295a4","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"a2c62d70-cc5e-47b4-8ecc-76f336da184f","IsCreationKey":false,"Key":55.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7db456d6-22d2-4393-9354-edd60feb77f3","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"ef442102-01f6-44f2-bb71-bd383ea5262e","IsCreationKey":false,"Key":56.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"621d71cf-53b8-4518-98e0-cfa135aa8d5c","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"ec2d95cc-2767-407c-932c-895fe824034b","IsCreationKey":false,"Key":57.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"16860ba8-95b6-4d57-9df3-bbb8c580bfd8","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"58921712-8046-433a-bcf8-39f1258ab75f","IsCreationKey":false,"Key":58.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fbe4ba1b-a361-4beb-bf0c-b77c8cf7f28e","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"8a78ea81-e266-4c5c-993e-32490ad8bb86","IsCreationKey":false,"Key":59.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a6ddfd0d-dcd4-4699-8dc3-eae85a5d4fd0","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"80e07ffc-5e61-4e76-8ad7-3c786bc82168","IsCreationKey":false,"Key":60.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"db1b4524-d01e-4e4c-9238-ec32a4f828d7","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"776ede7a-6084-42eb-ad96-c1587bbfe4d2","IsCreationKey":false,"Key":61.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3d24f0f4-658c-488e-87a3-159c038df0a9","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"27a77684-d04f-4ade-8693-fe95bf9c48a4","IsCreationKey":false,"Key":62.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"17efa4d9-e45b-4c15-8fbb-11d3eacfece1","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"335e7503-bb53-4c8b-aba9-3210149db665","IsCreationKey":false,"Key":63.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9118f1ed-7fe7-4a35-9f35-cd1c561d167e","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"7065f5c7-aa7a-476d-801b-88b9ba7d9758","IsCreationKey":false,"Key":64.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"3f24b558-1c71-4115-abed-1742ba273f5d","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"383c3060-1d7a-4be3-b78f-e196af4ebc71","IsCreationKey":false,"Key":65.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"18787efe-97ad-44be-b965-77dd94c1921b","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"8788bf72-0679-47d3-b5ba-20c46110e688","IsCreationKey":false,"Key":66.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"acec9d71-fc5e-484b-9d03-16ac724d297f","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"d1b820c0-584f-4068-a4ec-6039cd86745f","IsCreationKey":false,"Key":67.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"9d20118f-7111-4269-8699-a99355e96ac4","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"420ad3c6-c366-4b71-9337-87b66f287216","IsCreationKey":false,"Key":68.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"07747014-cb3d-4dd1-897e-31f5b4adbdaf","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"8864fd58-c7d0-4637-a1d8-6ce7a566bf24","IsCreationKey":false,"Key":69.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"e7622a68-7977-44dc-9513-dc2bdec68c0f","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"a9ddb5c8-af41-45e4-9688-43b6b42e1875","IsCreationKey":false,"Key":70.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"7038c5a2-e10f-4132-8903-c4ae2597b610","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"e53490bd-1646-425b-a316-134041d355db","IsCreationKey":false,"Key":71.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"a36ae749-0eb0-458e-8807-d8f1ee6d6c90","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"f14edd64-8ab8-4700-86da-759b124d58bd","IsCreationKey":false,"Key":72.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"5c15dae3-d1cc-4ea3-bf62-0710f4d14400","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"ced78226-4633-4c19-b7f4-d102437d05eb","IsCreationKey":false,"Key":73.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"f9c095bd-8358-4d88-ad06-ba65b56e75dc","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"a104370c-03ff-47cf-b3de-7fcfe53ad70e","IsCreationKey":false,"Key":74.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"71ecf086-553a-45c9-bb24-c9847c477d76","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"684fdff6-72b5-478a-a8d5-eac6fbe774b0","IsCreationKey":false,"Key":75.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"906ed735-0157-4360-8149-75e2cf8cb04d","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"78645b20-8bfc-40f0-82db-3bcf4cce3c94","IsCreationKey":false,"Key":76.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"1091ae6b-0ccb-4d3a-9ea7-c6f80519d233","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"2ae59df0-8774-4266-a2fd-5daa5e3d770b","IsCreationKey":false,"Key":77.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"db07a56a-b9e3-4863-924f-094f8645af73","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"264c76a7-6d05-4621-96e0-e7162d05a707","IsCreationKey":false,"Key":78.0,"Length":1.0,"Stretch":false,},
-            {"resourceType":"Keyframe<SpriteFrameKeyframe>","resourceVersion":"1.0","Channels":{"0":{"resourceType":"SpriteFrameKeyframe","resourceVersion":"1.0","Id":{"name":"fc0b725c-2714-4bf1-969c-ecfc76c13f02","path":"sprites/bg_freezerfridge/bg_freezerfridge.yy",},},},"Disabled":false,"id":"791a5143-4a93-47af-a3c1-0da3e007d306","IsCreationKey":false,"Key":79.0,"Length":1.0,"Stretch":false,},
-          ],},"modifiers":[],"spriteId":null,"trackColour":0,"tracks":[],"traits":0,},
-    ],
-    "visibleRange": null,
-    "volume": 1.0,
-    "xorigin": 0,
-    "yorigin": 0,
-  },
-  "swatchColours": null,
+  "type": 0,
   "swfPrecision": 2.525,
+  "width": 1000,
+  "height": 800,
   "textureGroupId": {
     "name": "freezergroup",
-    "path": "texturegroups/freezergroup",
+    "path": "texturegroups/freezergroup"
   },
-  "type": 0,
-  "VTile": false,
-  "width": 1000,
+  "swatchColours": null,
+  "gridX": 0,
+  "gridY": 0,
+  "frames": [
+    {
+      "resourceVersion": "1.1",
+      "name": "0",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "1",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "2",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "3",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "4",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "5",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "6",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "7",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "8",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "9",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "10",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "11",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "12",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "13",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "14",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "15",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "16",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "17",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "18",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "19",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "20",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "21",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "22",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "23",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "24",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "25",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "26",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "27",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "28",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "29",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "30",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "31",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "32",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "33",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "34",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "35",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "36",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "37",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "38",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "39",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "40",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "41",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "42",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "43",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "44",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "45",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "46",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "47",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "48",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "49",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "50",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "51",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "52",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "53",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "54",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "55",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "56",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "57",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "58",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "59",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "60",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "61",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "62",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "63",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "64",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "65",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "66",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "67",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "68",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "69",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "70",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "71",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "72",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "73",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "74",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "75",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "76",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "77",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "78",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    },
+    {
+      "resourceVersion": "1.1",
+      "name": "79",
+      "tags": [],
+      "resourceType": "GMSpriteFrame"
+    }
+  ],
+  "sequence": {
+    "tracks": [
+      {
+        "spriteId": null,
+        "keyframes": {
+          "resourceType": "KeyframeStore<SpriteFrameKeyframe>",
+          "Keyframes": [
+            {
+              "id": "06dc4a24-50e5-4597-a9e2-aa28583dced1",
+              "Key": 0.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "0",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "368235ee-8dba-4b7f-b546-4e799b6eecaa",
+              "Key": 1.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "1",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d8ae2837-e3dd-4c8d-bd23-dd98537ddcd5",
+              "Key": 2.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "2",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "e9ff7ed8-8de5-4882-a9f1-31f7b1956016",
+              "Key": 3.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "3",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "87566e34-eb85-466c-aa9f-a19d283dec9b",
+              "Key": 4.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "4",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "779a6211-8da2-4673-a46f-a6a9d6ae3e3e",
+              "Key": 5.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "5",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8263fb98-b37c-4c52-9bfc-5bc1e95c5e88",
+              "Key": 6.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "6",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8f8c6165-173c-4c2d-8bf5-14da23201699",
+              "Key": 7.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "7",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "651698b6-bc95-4854-9d33-dde1398896a9",
+              "Key": 8.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "8",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "dc7c6afe-9c3d-4ccf-b64a-ac0daaf72d0c",
+              "Key": 9.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "9",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "865f2676-aa30-4af9-bb16-b2aa443b23e3",
+              "Key": 10.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "10",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9f5714f7-0c53-47c6-95f7-d96963d76cf7",
+              "Key": 11.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "11",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b161644e-ecbf-43e3-9076-175fa800777b",
+              "Key": 12.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "12",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b75fb91b-ce56-4aa7-882c-e77f2d711875",
+              "Key": 13.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "13",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "8d8a997f-8804-4386-9e32-63a5bfb49e67",
+              "Key": 14.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "14",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2a188d70-86ad-43ec-a381-520b793651b4",
+              "Key": 15.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "15",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "c3610a01-67d3-4d87-9d4e-df2be47baecb",
+              "Key": 16.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "16",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "f6be1333-3d39-45f2-8fe0-6e87aa2b91bc",
+              "Key": 17.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "17",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3a3111a4-59d8-45f9-975f-a0c256399c14",
+              "Key": 18.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "18",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1db34f90-22c2-48b7-aa21-8e23c0139391",
+              "Key": 19.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "19",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d5edd267-990f-490e-a587-11adc0e9959a",
+              "Key": 20.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "20",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d8e42380-0748-49d0-a133-0b422686abad",
+              "Key": 21.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "21",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "64b938dd-e423-423a-b747-e08d935591d8",
+              "Key": 22.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "22",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a78015d0-8797-42d3-8056-b42c5dbbe32b",
+              "Key": 23.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "23",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "10425dd2-8492-45bf-83fc-caa81412c050",
+              "Key": 24.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "24",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3d0b80a3-10dc-42b8-9fbc-cb97d79f8859",
+              "Key": 25.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "25",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2f5af669-cd1d-4285-820a-082e0cc16417",
+              "Key": 26.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "26",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "503e57ff-100e-4c86-bf60-738c4b7ec9da",
+              "Key": 27.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "27",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "551705b5-2d0d-4b9f-9185-a41d6583c0eb",
+              "Key": 28.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "28",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4e69ab65-ff80-4a64-ae52-10a01ba6d799",
+              "Key": 29.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "29",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ea2097c0-d03c-49aa-b246-396b3e9c7e8e",
+              "Key": 30.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "30",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "cc41149c-7d50-44ea-a8a2-39bc3eb9e423",
+              "Key": 31.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "31",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ef707f8a-b7c5-4e93-81ca-ccf0cf8d06f7",
+              "Key": 32.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "32",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "55a2dbf2-0b2f-4bf8-abfa-70c58e860258",
+              "Key": 33.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "33",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ac10a8e3-d6ac-48a4-b1a2-11b1b57db2a2",
+              "Key": 34.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "34",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "57a9a38e-7621-4c96-84cc-b3beb57bc894",
+              "Key": 35.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "35",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7a577bbf-4384-4050-814c-0de3effb0398",
+              "Key": 36.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "36",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2dfa486f-4eb3-46cd-96b0-5fe368665b1f",
+              "Key": 37.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "37",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "12b8719a-ce98-4038-a107-d8a5729543cf",
+              "Key": 38.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "38",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "5e507b7d-c242-4797-822f-fd850dc78d18",
+              "Key": 39.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "39",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "18b82234-5c6f-4ae6-9279-bfcb33ba50d6",
+              "Key": 40.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "40",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "4941ee05-6cb6-4401-a0b3-eecb1aaf63d2",
+              "Key": 41.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "41",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a9259164-908a-4fc0-98df-0e88db4e6ee6",
+              "Key": 42.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "42",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "086397fd-d9c8-4e4e-b33a-3d67d4bd62ab",
+              "Key": 43.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "43",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "004b94a5-e5c1-4200-acaf-28f6bb6d85f2",
+              "Key": 44.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "44",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "9100457e-314c-4536-9cdb-7054c3d48d0e",
+              "Key": 45.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "45",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ced2fcbc-bba8-4483-bd45-df2c9d1b3463",
+              "Key": 46.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "46",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "7afdcb50-5c06-4eff-81f2-4405e1cab512",
+              "Key": 47.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "47",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b9e4e390-f2ef-4568-98d7-aa555ffa6d39",
+              "Key": 48.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "48",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a0dbf0d0-8516-4bf2-b668-5210de85ea92",
+              "Key": 49.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "49",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "02c67064-3237-4f87-9f26-04d948c63049",
+              "Key": 50.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "50",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ee1db041-782a-4b67-9344-2e4ce1be07d4",
+              "Key": 51.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "51",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "836920b9-05e8-450d-9c64-6ff5445d3e72",
+              "Key": 52.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "52",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "354783c9-ee60-45a9-bdcf-3454dce074a1",
+              "Key": 53.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "53",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6fe1f06c-48cd-4556-800b-0aa11669bc0e",
+              "Key": 54.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "54",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "26d84640-b911-497f-88bd-ae76a65d1438",
+              "Key": 55.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "55",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "d13dc1fc-66d2-4060-b54a-7b9afb483141",
+              "Key": 56.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "56",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "023ddb21-2cac-46af-83a8-0ab18b6991de",
+              "Key": 57.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "57",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "94cab0d8-bd72-425c-9bc2-e221234e0370",
+              "Key": 58.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "58",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "b2847a80-cd95-4242-a2c4-9e93e66b7ae4",
+              "Key": 59.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "59",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "30a329f4-7040-4b76-8027-a20cbce54e85",
+              "Key": 60.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "60",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6b784dcd-de31-412c-87fd-acc875f70ca9",
+              "Key": 61.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "61",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "2fb06d9e-3ca4-4882-9066-54bbbdf4f160",
+              "Key": 62.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "62",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "305f1459-94a0-4d6c-a159-39435107de8c",
+              "Key": 63.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "63",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "46394cce-62cf-43cf-8a91-390c0710b797",
+              "Key": 64.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "64",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a7146923-4bf4-49cb-9fa2-14033a0742a4",
+              "Key": 65.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "65",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "1a448391-fddd-4f3b-b376-eadf2ea4a225",
+              "Key": 66.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "66",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "16122c17-7a81-4a3f-a73e-c134d3095e44",
+              "Key": 67.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "67",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "35e91cc2-fdd1-4c1b-9b03-db7373cbc5d8",
+              "Key": 68.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "68",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "44e6554e-0b53-467e-94f2-16284c7c02e9",
+              "Key": 69.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "69",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "3206e854-25c7-4382-8f78-1044bc2e39d0",
+              "Key": 70.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "70",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "87a3548f-11bd-43cb-9ac1-96f35362252d",
+              "Key": 71.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "71",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "ba616faa-c370-4799-9fab-14375ff328a6",
+              "Key": 72.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "72",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a8f16f98-4d5f-46b6-8df8-8f6ab15ddb7a",
+              "Key": 73.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "73",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "82e5e82d-ab42-4c30-9b78-57e730231544",
+              "Key": 74.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "74",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "0a2d4347-803b-4822-854d-32bd488ac131",
+              "Key": 75.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "75",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "a8d9f93a-fcfa-4e25-9c98-7acde15f7fbf",
+              "Key": 76.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "76",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "6ec4f2e6-c216-4892-a4ab-df7d39ea77b5",
+              "Key": 77.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "77",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "568628a9-c0bc-4488-b3de-8377e09d8984",
+              "Key": 78.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "78",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            },
+            {
+              "id": "eb88b6b4-f610-4e79-b315-363647fb1cd3",
+              "Key": 79.0,
+              "Length": 1.0,
+              "Stretch": false,
+              "Disabled": false,
+              "IsCreationKey": false,
+              "Channels": {
+                "0": {
+                  "Id": {
+                    "name": "79",
+                    "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+                  },
+                  "resourceVersion": "1.0",
+                  "name": "",
+                  "tags": [],
+                  "resourceType": "SpriteFrameKeyframe"
+                }
+              },
+              "resourceType": "Keyframe<SpriteFrameKeyframe>",
+              "resourceVersion": "1.0"
+            }
+          ],
+          "resourceVersion": "1.0"
+        },
+        "name": "frames",
+        "trackColour": 0,
+        "inheritsTrackColour": true,
+        "builtinName": 0,
+        "traits": 0,
+        "interpolation": 1,
+        "tracks": [],
+        "events": [],
+        "isCreationTrack": false,
+        "modifiers": [],
+        "resourceVersion": "1.0",
+        "tags": [],
+        "resourceType": "GMSpriteFramesTrack"
+      }
+    ],
+    "visibleRange": null,
+    "spriteId": {
+      "name": "bg_freezerfridge",
+      "path": "sprites/bg_freezerfridge/bg_freezerfridge.yy"
+    },
+    "timeUnits": 1,
+    "playback": 0,
+    "playbackSpeed": 20.0,
+    "playbackSpeedType": 0,
+    "autoRecord": true,
+    "volume": 1.0,
+    "length": 80.0,
+    "events": {
+      "resourceType": "KeyframeStore<MessageEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "moments": {
+      "resourceType": "KeyframeStore<MomentsEventKeyframe>",
+      "Keyframes": [],
+      "resourceVersion": "1.0"
+    },
+    "lockOrigin": false,
+    "showBackdrop": true,
+    "showBackdropImage": false,
+    "backdropImagePath": "",
+    "backdropImageOpacity": 0.5,
+    "backdropWidth": 1366,
+    "backdropHeight": 768,
+    "backdropXOffset": 0.0,
+    "backdropYOffset": 0.0,
+    "xorigin": 0,
+    "yorigin": 0,
+    "eventToFunction": {},
+    "eventStubScript": null,
+    "resourceVersion": "1.4",
+    "name": "bg_freezerfridge",
+    "tags": [],
+    "resourceType": "GMSequence"
+  },
+  "layers": [
+    {
+      "visible": true,
+      "isLocked": false,
+      "blendMode": 0,
+      "opacity": 100.0,
+      "displayName": "default",
+      "resourceVersion": "1.0",
+      "name": "default",
+      "tags": [],
+      "resourceType": "GMImageLayer"
+    }
+  ],
+  "nineSlice": null,
+  "parent": {
+    "name": "Freezer",
+    "path": "folders/Sprites/Backgrounds/Freezer.yy"
+  },
+  "resourceVersion": "1.0",
+  "name": "bg_freezerfridge",
+  "tags": [],
+  "resourceType": "GMSprite"
 }
