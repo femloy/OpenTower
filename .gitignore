@@ -2,11 +2,7 @@ folders.csx
 
 # Prolong my lifespan
 options/extensions/Steamworks.json
-datafiles/credits.txt
-datafiles/fmod.dll
-datafiles/fmodstudio.dll
-datafiles/sound/Desktop/*.bank
-datafiles/lang/english.txt
+datafiles/**
 extensions/fmod_gms/fmod-gamemaker.dll
 *.png
 
