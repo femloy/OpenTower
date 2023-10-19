@@ -1,6 +1,6 @@
 # Pizza Tower
 - A full decompilation of Pizza Tower V1.0.311.
-- The Steamworks extension has been removed, with its code commented out.
+- I am not affiliated with Tour De Pizza in any way.
 
 # Requirements
 - [Pizza Tower](https://store.steampowered.com/app/2231450/Pizza_Tower/) on Steam
