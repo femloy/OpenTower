@@ -1,0 +1,12 @@
+path = ds_stack_create();
+LAG_STEPS = 15;
+target_x = x;
+target_y = y;
+chase_angle = 0;
+state = states.idle;
+fallback_buffer = 0;
+playerid = -4;
+inv_timer = 0;
+hp = 8;
+alarm[0] = 2;
+depth = -10;

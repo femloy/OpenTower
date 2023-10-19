@@ -1,0 +1,12 @@
+image_speed = 0.35;
+floatdir = 1;
+hsp = 0;
+vsp = 0;
+hsp_carry = 0;
+vsp_carry = 0;
+platformid = -4;
+grav = 0;
+shot = true;
+depth = 0;
+alarm[0] = 160;
+alarm[1] = 1;

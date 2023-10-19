@@ -1,0 +1,43 @@
+{
+  "resourceType": "GMObject",
+  "resourceVersion": "1.0",
+  "name": "obj_robotmonster",
+  "eventList": [
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":0,"isDnD":false,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","collisionObjectId":null,"eventNum":0,"eventType":3,"isDnD":false,},
+  ],
+  "managed": true,
+  "overriddenProperties": [],
+  "parent": {
+    "name": "Monsters",
+    "path": "folders/Objects/Level Specific/World 5/Monsters.yy",
+  },
+  "parentObjectId": {
+    "name": "obj_monster",
+    "path": "objects/obj_monster/obj_monster.yy",
+  },
+  "persistent": false,
+  "physicsAngularDamping": 0.1,
+  "physicsDensity": 0.5,
+  "physicsFriction": 0.2,
+  "physicsGroup": 1,
+  "physicsKinematic": false,
+  "physicsLinearDamping": 0.1,
+  "physicsObject": false,
+  "physicsRestitution": 0.1,
+  "physicsSensor": false,
+  "physicsShape": 1,
+  "physicsShapePoints": [],
+  "physicsStartAwake": true,
+  "properties": [],
+  "solid": false,
+  "spriteId": {
+    "name": "spr_monstershroom_walk",
+    "path": "sprites/spr_monstershroom_walk/spr_monstershroom_walk.yy",
+  },
+  "spriteMaskId": {
+    "name": "spr_monstershroom_idle",
+    "path": "sprites/spr_monstershroom_idle/spr_monstershroom_idle.yy",
+  },
+  "visible": true,
+}

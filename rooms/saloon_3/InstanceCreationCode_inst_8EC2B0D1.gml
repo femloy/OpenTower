@@ -1,0 +1,1 @@
+targetRoom = saloon_treasure;

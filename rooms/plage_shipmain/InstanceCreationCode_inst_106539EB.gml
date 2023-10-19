@@ -1,0 +1,1 @@
+targetRoom = plage_shiptop;

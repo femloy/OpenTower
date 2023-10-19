@@ -1,0 +1,1 @@
+targetRoom = desert_13;

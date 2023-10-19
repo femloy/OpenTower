@@ -1,0 +1,1 @@
+targetRoom = forest_6;

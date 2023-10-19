@@ -1,0 +1,1 @@
+targetRoom = city_treasure;

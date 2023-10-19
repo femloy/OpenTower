@@ -1,0 +1,1 @@
+baddieid = 0;

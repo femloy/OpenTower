@@ -1,0 +1,10 @@
+selected = false;
+trigger = 0;
+depth = -31;
+image_speed = 0.35;
+state = states.idle;
+idlespr = spr_menutv1_idle;
+transspr = spr_menutv1_trans;
+confirmspr = spr_menutv1_confirm;
+selectedspr = spr_menutv1_selected;
+staticsnd = fmod_event_create_instance("event:/sfx/ui/tvstatic");

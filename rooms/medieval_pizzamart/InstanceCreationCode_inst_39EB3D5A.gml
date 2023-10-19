@@ -1,0 +1,1 @@
+targetRoom = medieval_8;

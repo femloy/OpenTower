@@ -1,0 +1,1 @@
+content = obj_pizzakinpineapple;

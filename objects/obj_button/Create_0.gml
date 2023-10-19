@@ -1,0 +1,10 @@
+image_speed = 0;
+image_index = 0;
+spr_icon = -4;
+selected = false;
+hovered = false;
+buttonid = 0;
+parent = -4;
+info = -4;
+OnSelect = -4;
+OnDeselect = -4;

@@ -1,0 +1,1 @@
+targetRoom = beach_5;

@@ -1,0 +1,1 @@
+maxmovespeed = 7;

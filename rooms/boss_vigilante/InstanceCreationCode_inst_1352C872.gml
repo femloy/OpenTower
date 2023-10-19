@@ -1,0 +1,1 @@
+save = "w2stick";

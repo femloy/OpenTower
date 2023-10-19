@@ -1,0 +1,1 @@
+targetRoom = ufo_3;

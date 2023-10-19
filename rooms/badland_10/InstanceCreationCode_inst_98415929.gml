@@ -1,0 +1,1 @@
+targetRoom = badland_treasure;

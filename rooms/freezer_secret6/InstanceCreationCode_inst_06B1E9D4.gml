@@ -1,0 +1,1 @@
+targetRoom = freezer_18;

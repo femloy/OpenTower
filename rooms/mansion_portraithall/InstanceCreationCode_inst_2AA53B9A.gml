@@ -1,0 +1,1 @@
+targetRoom = mansion_darkroom;

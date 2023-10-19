@@ -1,0 +1,1 @@
+warbg_init();

@@ -1,0 +1,14 @@
+hsp = 0;
+vsp = 0;
+vsp_carry = 0;
+hsp_carry = 0;
+grav = 0.5;
+platformid = -4;
+flash = false;
+flashbuffer = 0;
+bullethit = 3;
+grounded = false;
+bounce = 0;
+image_speed = 0;
+image_index = choose(0, 1);
+depth = 0;

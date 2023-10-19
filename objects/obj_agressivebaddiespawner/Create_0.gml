@@ -1,0 +1,9 @@
+image_speed = 0;
+content = 0;
+refresh = 20;
+depth = 1;
+baddieid[0] = -1;
+baddieid[1] = -1;
+baddieid[2] = -1;
+baddieid[3] = -1;
+baddieid[4] = -1;

@@ -1,0 +1,10 @@
+vspeed = -0.5;
+image_alpha = 1.5;
+image_speed = 0.25;
+alarm[0] = 50;
+alarm[1] = 5;
+number = "1";
+flash = true;
+x = 165;
+y = 40;
+depth = -200;

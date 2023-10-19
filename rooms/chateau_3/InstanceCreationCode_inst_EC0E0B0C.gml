@@ -1,0 +1,1 @@
+targetRoom = chateau_4;

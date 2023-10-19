@@ -1,0 +1,12 @@
+draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 0, false);
+draw_set_font(lang_get_font("bigfont"));
+draw_set_halign(fa_left);
+draw_set_color(c_white);
+var _os = audio_select;
+draw_text_colour((SCREEN_WIDTH / 2) - 150, 100, "BACK", c_white, c_white, c_white, c_white, (_os == -1) ? 1 : 0.5);
+draw_text_colour((SCREEN_WIDTH / 2) - 150, 175, "MASTER", c_white, c_white, c_white, c_white, (_os == 0) ? 1 : 0.5);
+draw_text_colour((SCREEN_WIDTH / 2) + 100, 175, string(audiosaved_master), c_white, c_white, c_white, c_white, (_os == 0) ? 1 : 0.5);
+draw_text_colour((SCREEN_WIDTH / 2) - 150, 250, "MUSIC", c_white, c_white, c_white, c_white, (_os == 1) ? 1 : 0.5);
+draw_text_colour((SCREEN_WIDTH / 2) + 100, 250, string(audiosaved_music), c_white, c_white, c_white, c_white, (_os == 1) ? 1 : 0.5);
+draw_text_colour((SCREEN_WIDTH / 2) - 150, 325, "SFX", c_white, c_white, c_white, c_white, (_os == 2) ? 1 : 0.5);
+draw_text_colour((SCREEN_WIDTH / 2) + 100, 325, string(audiosaved_sfx), c_white, c_white, c_white, c_white, (_os == 2) ? 1 : 0.5);

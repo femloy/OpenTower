@@ -1,0 +1,12 @@
+image_speed = 0.35;
+disx = 200;
+disy = 50;
+time_x = 12;
+time_y = 6;
+offset_x = 15;
+offset_y = 5;
+depth = 51;
+last_current_time = current_time;
+timer = current_time;
+timecount = -4;
+alarm[0] = 1;

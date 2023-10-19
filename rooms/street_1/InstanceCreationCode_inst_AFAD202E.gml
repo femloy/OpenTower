@@ -1,0 +1,1 @@
+targetRoom = street_john;

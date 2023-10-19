@@ -1,0 +1,1 @@
+bg = bg_desert;

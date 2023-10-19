@@ -1,0 +1,13 @@
+event_inherited();
+pizzahead = false;
+spd = 6;
+vsp = 0;
+grav = 0.5;
+hasgrabbed = false;
+image_speed = 0.35;
+bounce = 3;
+land = false;
+move = true;
+depth = -10;
+mask_index = sprite_index;
+alarm[1] = 10;
