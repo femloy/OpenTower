@@ -1,4 +1,4 @@
-function _string_split(input, split) // changed name because new gms2 versions conflict with it
+function string_split(input, split) // changed name because new gms2 versions conflict with it
 {
 	input += " ";
 	var _current_str = "";

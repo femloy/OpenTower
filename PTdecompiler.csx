@@ -39,6 +39,17 @@ string rootPath = $"{dataPath}Export_Data\\";
 TextureWorker worker = new TextureWorker();
 Dictionary<string, string> tpageAlign = new Dictionary<string, string>();
 
+// these are exported wrong, so the decomp includes them
+var ignore = new List<string>()
+{
+	"spr_desertdeco",
+	"tile_cavern",
+	"tile_dungeon",
+	"tile_dungeon3",
+	"spr_ruincheese",
+	"spr_ruinend",
+};
+
 #region Sorted sprite folders
 
 public class spriteProps
@@ -4787,6 +4798,9 @@ async Task DumpSprites()
 	var count = 0;
 	foreach(var i in Data.Sprites)
 	{
+		if (ignore.Contains(i.Name.Content))
+			continue;
+		
 		SetUMTConsoleText($"({count++} / {Data.Sprites.Count}) {i.Name.Content}");
 		await Task.Delay(1);
 		DumpSprite(i);

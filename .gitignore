@@ -5,6 +5,7 @@ options/extensions/Steamworks.json
 datafiles/**
 extensions/fmod_gms/fmod-gamemaker.dll
 *.png
+!options/main/template_icon.png
 
 # The manually fixed tilesets
 !sprites/tile_beachprops1/**
@@ -36,3 +37,12 @@ extensions/fmod_gms/fmod-gamemaker.dll
 !sprites/spr_towerfloor5tiles/**
 !sprites/spr_tutorialtiles/**
 !sprites/spr_waroutsidetiles/**
+!sprites/spr_streettiles/**
+
+# Weird exceptions
+!sprites/spr_desertdeco/**
+!sprites/tile_cavern/**
+!sprites/tile_dungeon/**
+!sprites/tile_dungeon3/**
+!sprites/spr_ruincheese/**
+!sprites/spr_ruinend/**

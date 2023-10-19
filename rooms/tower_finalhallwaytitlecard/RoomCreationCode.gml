@@ -9,8 +9,7 @@ with (obj_player)
 	targetDoor = "C";
 }
 
-// with (instance_create(x, y, obj_titlecard))
-with (instance_create(0, 0, obj_titlecard)) // x and y had to be replaced with 0, it crashed otherwise
+with (instance_create(x, y, obj_titlecard))
 {
 	titlecard_sprite = spr_titlecards;
 	titlecard_index = 15;

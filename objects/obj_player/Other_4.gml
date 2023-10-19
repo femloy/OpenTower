@@ -27,7 +27,7 @@ if (!is_bossroom())
 	hitstunned = 0;
 if (global.levelreset)
 {
-	//scr_playerreset();
+	scr_playerreset();
 	global.levelreset = false;
 	instance_destroy(obj_comboend);
 	instance_destroy(obj_combotitle);

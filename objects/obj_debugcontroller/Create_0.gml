@@ -329,7 +329,7 @@ if (DEBUG)
 	}
 	function DoCommand(text)
 	{
-		var commands = _string_split(text, " ");
+		var commands = string_split(text, " ");
 		if (array_length(commands) > 1)
 		{
 			var c = FindCommand(commands[1]);
