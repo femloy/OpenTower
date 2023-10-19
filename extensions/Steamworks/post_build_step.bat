@@ -22,12 +22,6 @@ if not %STEAM_SDK_PATH:~-1% == \ (
    set SDK_PATH=%STEAM_SDK_PATH%
 )
 
-:: Check if debug mode is also 'Enabled' else is 'Auto' (use YYTargetFile hacks)
-set "DEBUG_MODE="
-if "%YYEXTOPT_Steamworks_Debug%" == "Enabled" set DEBUG_MODE=1
-if "%YYtargetFile%" == " " set DEBUG_MODE=1
-if "%YYtargetFile%" == "" set DEBUG_MODE=1
-
 :: Ensure the directory exists
 if not exist "%SDK_PATH%" goto error_incorrect_STEAMWORKS_path
 
@@ -68,11 +62,12 @@ exit /b 0
 
    )
    
-   if defined DEBUG_MODE (
-      echo "Running a Windows Steamworks game project inside the Windows IDE, enabling Debug..."
-	   :: do not put a space between > please, this breaks things!
-	   echo [SteamworksUtils]>>options.ini
-	   echo RunningFromIDE=True>>options.ini
+   if "%YYtargetFile%" == "" (
+     
+     echo "Running a Windows Steamworks game project inside the Windows IDE, enabling Debug..."
+	 :: do not put a space between > please, this breaks things!
+	 echo [SteamworksUtils]>>options.ini
+	 echo RunningFromIDE=True>>options.ini
    )
    
    if ERRORLEVEL 1 call :exitError
@@ -81,19 +76,18 @@ goto :eof
 :: ----------------------------------------------------------------------------------------------------
 :macOS_copy_dependencies
    echo "Copying macOS (64 bit) dependencies"
-
    if "%YYTARGET_runtime%" == "VM" (
 
       :: This is used for VM
       powershell Expand-Archive '%YYprojectName%.zip' _temp\
       copy /y "%SDK_PATH%redistributable_bin\osx\libsteam_api.dylib" "_temp\assets\libsteam_api.dylib"
 	  
-	   if defined DEBUG_MODE (
-		   echo "Running a macOS VM Steamworks game project inside the Windows IDE, enabling Debug..."
-		   :: do not put a space between > please, this breaks things!
-		   echo [SteamworksUtils]>>"_temp\assets\options.ini"
-		   echo RunningFromIDE=True>>"_temp\assets\options.ini"
-	   )
+	  if "%YYtargetFile%" == "" (
+		  echo "Running a macOS VM Steamworks game project inside the Windows IDE, enabling Debug..."
+		  :: do not put a space between > please, this breaks things!
+		  echo [SteamworksUtils]>>"_temp\assets\options.ini"
+		  echo RunningFromIDE=True>>"_temp\assets\options.ini"
+	  )
 	  
       powershell Compress-Archive -Force _temp\* '%YYprojectName%.zip'
       rmdir /s /q _temp
@@ -103,12 +97,12 @@ goto :eof
       :: This is used from YYC compilation
       copy "%SDK_PATH%redistributable_bin\osx\libsteam_api.dylib" "%YYprojectName%\%YYprojectName%\Supporting Files\libsteam_api.dylib"
 	  
-	   if defined DEBUG_MODE (
-		   echo "Running a macOS YYC Steamworks game project inside the Windows IDE, enabling Debug..."
-		   :: do not put a space between > please, this breaks things!
-		   echo [SteamworksUtils]>>"%YYprojectName%\%YYprojectName%\Supporting Files\options.ini"
-		   echo RunningFromIDE=True>>"%YYprojectName%\%YYprojectName%\Supporting Files\options.ini"
-	   )
+	  if "%YYtargetFile%" == "" (
+		  echo "Running a macOS YYC Steamworks game project inside the Windows IDE, enabling Debug..."
+		  :: do not put a space between > please, this breaks things!
+		  echo [SteamworksUtils]>>"%YYprojectName%\%YYprojectName%\Supporting Files\options.ini"
+		  echo RunningFromIDE=True>>"%YYprojectName%\%YYprojectName%\Supporting Files\options.ini"
+	  )
    )
    if ERRORLEVEL 1 call :exitError
 goto :eof
@@ -118,9 +112,9 @@ goto :eof
    echo "Copying Linux (64 bit) dependencies"
    powershell Expand-Archive '%YYprojectName%.zip' _temp\
 
-   if defined DEBUG_MODE (
+   if "%YYtargetFile%" == "" (
       echo "Running a Linux Steamworks game project inside the Windows IDE, enabling Debug..."
-	   :: do not put a space between > please, this breaks things!
+	  :: do not put a space between > please, this breaks things!
       echo [SteamworksUtils]>>"_temp\assets\options.ini"
       echo RunningFromIDE=True>>"_temp\assets\options.ini"
    )
