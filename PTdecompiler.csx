@@ -21,8 +21,6 @@ using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
 
-string dataPath = $"{Path.GetDirectoryName(FilePath)}\\";
-
 EnsureDataLoaded();
 if (Data.GeneralInfo.DisplayName.Content.ToLower() != "pizza tower")
 {
@@ -35,6 +33,7 @@ if (!Data.IsVersionAtLeast(2022, 9))
     return;
 }
 
+string dataPath = $"{Path.GetDirectoryName(FilePath)}\\";
 string rootPath = $"{dataPath}Export_Data\\";
 TextureWorker worker = new TextureWorker();
 Dictionary<string, string> tpageAlign = new Dictionary<string, string>();

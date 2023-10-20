@@ -5,7 +5,7 @@ function scr_characterspr()
 		spr_idle = spr_player_idle;
 		spr_move = spr_player_move;
 		spr_crawl = spr_player_crawl;
-		spr_idle = spr_player_idle; // yeah set it again why don't you
+		spr_idle = spr_player_idle;
 		spr_hurt = spr_player_hurt;
 		spr_jump = spr_player_jump;
 		spr_jump2 = spr_player_jump2;
@@ -14,7 +14,7 @@ function scr_characterspr()
 		spr_crouch = spr_player_crouch;
 		spr_crouchjump = spr_player_crouchjump;
 		spr_crouchfall = spr_player_crouchfall;
-		spr_couchstart = spr_player_couchstart; // they never fixed the typo
+		spr_couchstart = spr_player_couchstart;
 		spr_bump = spr_player_bump;
 		spr_land = spr_player_land;
 		spr_land2 = spr_player_land2;
@@ -44,10 +44,10 @@ function scr_characterspr()
 		spr_stomp = spr_player_stomp;
 		spr_stompprep = spr_player_stompprep;
 		spr_crouchslide = spr_player_crouchslide;
-		spr_crouch = spr_player_crouch; // already set before
-		spr_bump = spr_player_bump; // already set before AGAIN FUCK YOU
-		spr_victory = spr_player_victory; // dude
-		spr_hurt = spr_player_hurt; // jesus fukcing christ ptg
+		spr_crouch = spr_player_crouch;
+		spr_bump = spr_player_bump;
+		spr_victory = spr_player_victory;
+		spr_hurt = spr_player_hurt;
 		spr_climbwall = spr_player_climbwall;
 		spr_grab = spr_player_grab;
 		spr_mach2jump = spr_player_mach2jump;
