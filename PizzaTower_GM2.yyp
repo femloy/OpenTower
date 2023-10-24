@@ -6782,6 +6782,8 @@
     {"name":"Main","path":"options/main/options_main.yy",},
     {"name":"Windows","path":"options/windows/options_windows.yy",},
     {"name":"operagx","path":"options/operagx/options_operagx.yy",},
+    {"name":"HTML5","path":"options/html5/options_html5.yy",},
+    {"name":"tvOS","path":"options/tvos/options_tvos.yy",},
   ],
   "defaultScriptType": 1,
   "isEcma": false,
@@ -8074,6 +8076,6 @@
     {"resourceType":"GMIncludedFile","resourceVersion":"1.0","name":"sfx.bank","CopyToMask":-1,"filePath":"datafiles/sound/Desktop",},
   ],
   "MetaData": {
-    "IDEVersion": "2022.9.1.51",
+    "IDEVersion": "2022.0.2.51",
   },
 }

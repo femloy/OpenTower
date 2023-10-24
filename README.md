@@ -4,7 +4,7 @@
 
 # Requirements
 - [Pizza Tower](https://store.steampowered.com/app/2231450/Pizza_Tower/) on Steam
-- [GameMaker `2022.9.1.66`](https://gms.yoyogames.com/GameMaker-Installer-2022.9.1.51.exe) (Future versions need a lot of fixing...)
+- [GameMaker LTS 2022](https://gms.yoyogames.com/ReleaseNotes-LTS.html) (Future versions need a lot of fixing...)
 - [Steamworks SDK](https://partner.steamgames.com/downloads/steamworks_sdk.zip)
 
 This repository doesn't include any of the FMOD banks or sprites. An [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/releases) script is included to extract everything needed from the `data.win`, and port the required files to the decomp folder.
