@@ -3,6 +3,15 @@ function scr_player_mach3()
 	switch (character)
 	{
 		case "P":
+			var slopeaccel = 0.1;
+			var slopedeccel = 0.2;
+			var mach4movespeed = 20;
+			var mach3movespeed = 16;
+			var accel = 0.025;
+			var mach4accel = 0.1;
+			var jumpspeed = -11;
+			var machrollspeed = 10;
+			
 			if (windingAnim < 2000)
 				windingAnim++;
 			if (place_meeting(x, y + 1, obj_railparent))
@@ -15,16 +24,16 @@ function scr_player_mach3()
 			if (grounded)
 			{
 				if ((scr_slope() && hsp != 0) && movespeed > 10 && movespeed < 18)
-					scr_player_addslopemomentum(0.1, 0.2);
+					scr_player_addslopemomentum(slopeaccel, slopedeccel);
 			}
 			if (move == xscale && grounded)
 			{
-				if (movespeed < 20)
+				if (movespeed < mach4movespeed)
 				{
 					if (mach4mode == 0)
-						movespeed += 0.025;
+						movespeed += accel;
 					else
-						movespeed += 0.1;
+						movespeed += mach4accel;
 				}
 			}
 			mach2 = 100;
@@ -78,7 +87,7 @@ function scr_player_mach3()
 					sprite_index = spr_mach3jump;
 				}
 				if (character == "P")
-					vsp = -11;
+					vsp = jumpspeed;
 				else
 					vsp = -13;
 			}
@@ -92,13 +101,13 @@ function scr_player_mach3()
 					sprite_index = spr_mach4;
 				if (sprite_index == spr_mach2jump && grounded && vsp > 0)
 					sprite_index = spr_mach4;
-				if (movespeed > 16 && sprite_index != spr_crazyrun && sprite_index != spr_player_Sjumpcancelstart && sprite_index != spr_taunt)
+				if (movespeed > mach3movespeed && sprite_index != spr_crazyrun && sprite_index != spr_player_Sjumpcancelstart && sprite_index != spr_taunt)
 				{
 					mach4mode = true;
 					flash = true;
 					sprite_index = spr_crazyrun;
 				}
-				else if (movespeed <= 16 && sprite_index == spr_crazyrun)
+				else if (movespeed <= mach3movespeed && sprite_index == spr_crazyrun)
 					sprite_index = spr_mach4;
 			}
 			if (sprite_index == spr_crazyrun && !instance_exists(crazyruneffectid))
@@ -130,18 +139,18 @@ function scr_player_mach3()
 				state = states.machslide;
 				image_index = 0;
 			}
-			if (key_down && fightball == 0 && sprite_index != spr_dashpadmach)
+			if (key_down && fightball == 0 && (sprite_index != spr_dashpadmach || dropboost))
 			{
 				particle_set_scale(particle.jumpdust, xscale, 1);
 				create_particle(x, y, particle.jumpdust, 0);
 				flash = false;
 				state = states.tumble;
 				image_index = 0;
-				vsp = 10;
+				vsp = machrollspeed;
 				if (!grounded)
-					sprite_index = spr_player_mach2jump;
+					sprite_index = spr_mach2jump;
 				else
-					sprite_index = spr_player_machroll;
+					sprite_index = spr_machroll;
 				if (character == "V")
 					sprite_index = spr_playerV_divekickstart;
 			}
@@ -725,7 +734,7 @@ function scr_player_mach3()
 		image_speed = 0.4;
 	else
 		image_speed = 0.4;
-	if (scr_check_superjump() && fightball == 0 && state == states.mach3 && character == "P" && grounded && vsp > 0 && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
+	if (scr_check_superjump() && fightball == 0 && state == states.mach3 && grounded && vsp > 0 && sprite_index != spr_dashpadmach && !place_meeting(x, y, obj_dashpad))
 	{
 		sprite_index = spr_superjumpprep;
 		state = states.Sjumpprep;

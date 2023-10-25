@@ -178,6 +178,10 @@ switch (room)
 	case boss_fakepep:
 		global.srank = 4;
 		break;
+	
+	case secret_entrance:
+		global.srank = 38000;
+		break;
 }
 global.arank = floor(global.srank / 2);
 global.brank = floor(global.arank / 2);

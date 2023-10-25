@@ -28,6 +28,8 @@ function scr_characterspr()
 		spr_crouchslip = spr_player_crouchslip;
 		spr_pistolshot = spr_player_pistolshot;
 		spr_pistolwalk = spr_player_pistolwalk;
+		spr_machslideboostfall = spr_player_machslideboostfall;
+		spr_mach3boostfall = spr_player_machslideboost3fall;
 		spr_mach1 = spr_player_mach1;
 		spr_mach = spr_player_mach;
 		spr_secondjump1 = spr_player_secondjump1;
@@ -76,6 +78,7 @@ function scr_characterspr()
 		spr_idle4 = spr_player_handgesture2;
 		spr_idle5 = spr_player_handgesture3;
 		spr_idle6 = spr_player_handgesture4;
+		spr_wallsplat = spr_player_wallsplat;
 		spr_piledriver = spr_player_piledriver;
 		spr_piledriverland = spr_player_piledriverland;
 		spr_charge = spr_player_charge;
@@ -232,6 +235,8 @@ function scr_characterspr()
 		spr_mortthrow = spr_player_mortthrow;
 		spr_palette = spr_peppalette;
 		paletteselect = 1;
+		spr_backslide = spr_player_backslide;
+		spr_backslideland = spr_player_backslideland;
 	}
 	if (character == "N" || (character == "P" && !ispeppino))
 	{

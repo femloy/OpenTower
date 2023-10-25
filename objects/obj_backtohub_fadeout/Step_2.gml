@@ -27,7 +27,7 @@ else
 			obj_player1.x = obj_player1.backtohubstartx;
 			obj_player1.y = obj_player1.backtohubstarty - (SCREEN_HEIGHT * 2);
 			obj_player1.state = states.backtohub;
-			obj_player1.sprite_index = spr_player_slipbanan1;
+			obj_player1.sprite_index = obj_player1.spr_slipbanan1;
 			obj_player1.image_index = 10;
 		}
 	}

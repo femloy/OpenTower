@@ -11,9 +11,9 @@ switch (state)
 		break;
 	
 	case 1:
-		var p = instance_nearest(x, y, obj_player);
 		visible = false;
 		image_index = 0;
+		var p = obj_player1.id;
 		if (distance_to_pos(x, y, p.x, p.y, 500, 100))
 		{
 			state = 2;

@@ -6,6 +6,7 @@ if (room == tower_entrancehall)
 	alarm[0] = 2;
 if (room != rm_editor)
 	depth = 50;
+random_secret = false;
 roomname = room_get_name(room);
 global.progress = string_letters(roomname);
 drop = false;

@@ -1,5 +1,13 @@
 function state_player_jump()
 {
+	var maxmovespeed = 8;
+	var maxmovespeed2 = 6;
+	var turnmovespeed = 2;
+	var accel = 0.5;
+	var deccel = 0.1;
+	var jumpspeed = -11;
+	var machspeed = 6;
+	
 	landAnim = true;
 	if (!momemtum)
 		hsp = move * movespeed;
@@ -16,11 +24,11 @@ function state_player_jump()
 	if (dir != xscale)
 	{
 		dir = xscale;
-		movespeed = 2;
+		movespeed = turnmovespeed;
 		facehurt = false;
 	}
 	if (move != xscale)
-		movespeed = 2;
+		movespeed = turnmovespeed;
 	move = key_left + key_right;
 	if (movespeed == 0)
 		momemtum = false;
@@ -32,17 +40,17 @@ function state_player_jump()
 	if (move != 0)
 	{
 		xscale = move;
-		if (movespeed < 8)
-			movespeed += 0.5;
-		else if (floor(movespeed) == 8)
-			movespeed = 6;
+		if (movespeed < maxmovespeed)
+			movespeed += accel;
+		else if (floor(movespeed) == maxmovespeed)
+			movespeed = maxmovespeed2;
 		if (scr_solid(x + xscale, y) && move == xscale)
 			movespeed = 0;
 	}
-	else
-		movespeed = 0;
-	if (movespeed > 8)
-		movespeed -= 0.1;
+	//else					// TODO
+	//	movespeed = 0;
+	if (movespeed > maxmovespeed)
+		movespeed -= deccel;
 	if (ladderbuffer > 0)
 		ladderbuffer--;
 	if (!jumpstop)
@@ -112,7 +120,7 @@ function state_player_jump()
 		input_buffer_jump = 0;
 		scr_fmod_soundeffect(jumpsnd, x, y);
 		stompAnim = false;
-		vsp = -11;
+		vsp = jumpspeed;
 		state = states.jump;
 		jumpAnim = true;
 		jumpstop = false;
@@ -380,8 +388,8 @@ function state_player_jump()
 				sprite_index = spr_mach1;
 				image_index = 0;
 				state = states.mach2;
-				if (movespeed < 6)
-					movespeed = 6;
+				if (movespeed < machspeed)
+					movespeed = machspeed;
 			}
 			break;
 		case "V":

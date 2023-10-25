@@ -1,5 +1,7 @@
 if (DEBUG)
 {
+	if (keyboard_check_pressed(vk_f8))
+		DoCommand("loadtest");
 	if (keyboard_check_pressed(vk_f5))
 	{
 		active = !active;
@@ -8,7 +10,7 @@ if (DEBUG)
 	if (active)
 	{
 		var _search = false;
-		if (keyboard_check(vk_anykey))
+		if (keyboard_check(vk_anykey) && !keyboard_check(vk_f5))
 		{
 			input_text += keyboard_string;
 			for (var i = 0; i < string_length(keyboard_string); i++)
@@ -45,7 +47,7 @@ if (DEBUG)
 				var b = ds_list_find_value(command_list, i);
 				var s = b.command_id;
 				var d = string_split(input_text, " ");
-				var t = d[1];
+				var t = d[0];
 				if (string_copy(s, 1, string_length(t)) == t)
 				{
 					var txt = concat(b.command_id, " ", b.format, " - ", b.description);

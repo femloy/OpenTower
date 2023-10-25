@@ -7,6 +7,8 @@ if (!fadein)
 		start = true;
 		music = false;
 		alarm[0] = 180;
+		if (title_music == "event:/music/secretworldtitle")
+			alarm[0] = 240;
 	}
 }
 else

@@ -11,7 +11,7 @@ function scr_player_tumble()
 	mask_index = spr_crouchmask;
 	if (sprite_index == spr_tumblestart)
 		movespeed = 6;
-	if (!grounded && (sprite_index == spr_crouchslip || sprite_index == spr_player_machroll || sprite_index == spr_mach2jump || sprite_index == spr_player_backslide || sprite_index == spr_player_backslideland))
+	if (!grounded && (sprite_index == spr_crouchslip || sprite_index == spr_machroll || sprite_index == spr_mach2jump || sprite_index == spr_backslide || sprite_index == spr_backslideland))
 	{
 		vsp = 10;
 		sprite_index = spr_dive;
@@ -28,7 +28,7 @@ function scr_player_tumble()
 	}
 	if (grounded && sprite_index == spr_dive)
 	{
-		sprite_index = spr_player_machroll;
+		sprite_index = spr_machroll;
 		image_index = 0;
 	}
 	if (sprite_index == spr_dive && key_jump)
@@ -46,12 +46,12 @@ function scr_player_tumble()
 	if (sprite_index == spr_mach2jump && grounded)
 	{
 		image_index = 0;
-		sprite_index = spr_player_machroll;
+		sprite_index = spr_machroll;
 	}
-	if (sprite_index == spr_player_mach2jump && grounded)
+	if (sprite_index == spr_mach2jump && grounded)
 	{
 		image_index = 0;
-		sprite_index = spr_player_machroll;
+		sprite_index = spr_machroll;
 	}
 	if (sprite_index == spr_crouchslip && !grounded)
 		sprite_index = spr_player_jumpdive2;
@@ -59,15 +59,15 @@ function scr_player_tumble()
 		sprite_index = spr_player_Sjumpcancelslide;
 	if (sprite_index == spr_player_jumpdive2 && grounded)
 		sprite_index = spr_crouchslip;
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_machroll && movespeed > 12)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_machroll && movespeed > 12)
 	{
-		sprite_index = spr_player_backslideland;
+		sprite_index = spr_backslideland;
 		image_index = 0;
 	}
-	if (sprite_index == spr_player_machroll && !grounded)
-		sprite_index = spr_player_mach2jump;
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_backslideland)
-		sprite_index = spr_player_backslide;
+	if (sprite_index == spr_machroll && !grounded)
+		sprite_index = spr_mach2jump;
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_backslideland)
+		sprite_index = spr_backslide;
 	if (sprite_index == spr_player_Sjumpcancel && grounded)
 		sprite_index = spr_player_Sjumpcancelland;
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_Sjumpcancelland)
@@ -104,7 +104,7 @@ function scr_player_tumble()
 			fmod_event_one_shot_3d("event:/sfx/pep/splat", x, y);
 			state = states.bump;
 			image_index = 0;
-			sprite_index = spr_player_wallsplat;
+			sprite_index = spr_wallsplat;
 		}
 	}
 	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
@@ -155,7 +155,7 @@ function scr_player_tumble()
 				state = states.normal;
 		}
 	}
-	if (sprite_index == spr_crouchslip || sprite_index == spr_breakdancesuper || sprite_index == spr_machroll || sprite_index == spr_tumble || sprite_index == spr_tumblestart || sprite_index == spr_player_machroll || sprite_index == spr_player_mach2jump)
+	if (sprite_index == spr_crouchslip || sprite_index == spr_breakdancesuper || sprite_index == spr_machroll || sprite_index == spr_tumble || sprite_index == spr_tumblestart || sprite_index == spr_machroll || sprite_index == spr_mach2jump)
 		image_speed = abs(movespeed) / 15;
 	else if (floor(image_index) == (image_number - 1) && sprite_index == spr_mach2jump)
 		image_speed = 0;

@@ -9,7 +9,7 @@ enum menus
 	game,
 	controls,
 	controller,
-	unused_2, // 9, related to controls.
+	keyboard,
 	deadzone,
 	unused_3, // 11, related to controls.
 }
@@ -239,6 +239,14 @@ add_option_toggle(game_menu, 1, "option_vibration", function(val)
 	global.option_vibration = val;
 }).value = global.option_vibration;
 
+add_option_toggle(game_menu, 1, "option_screenshake", function(val)
+{
+	ini_open_from_string(obj_savesystem.ini_str_options);
+	ini_write_real("Option", "screenshake", val);
+	obj_savesystem.ini_str_options = ini_close();
+	global.option_screenshake = val;
+}).value = global.option_screenshake;
+
 var lang = [];
 var key = ds_map_find_first(global.lang_map);
 for (i = 0; i < ds_map_size(global.lang_map); i++)
@@ -284,6 +292,14 @@ add_option_multiple(game_menu, 4, "option_timer_type", [create_option_value("opt
 	global.option_timer_type = val;
 }).value = global.option_timer_type;
 
+add_option_toggle(game_menu, 5, "option_timer_speedrun", function(val)
+{
+	ini_open_from_string(obj_savesystem.ini_str_options);
+	ini_write_real("Option", "speedrun_timer", val);
+	obj_savesystem.ini_str_options = ini_close();
+	global.option_speedrun_timer = val;
+}).value = global.option_speedrun_timer;
+
 array_push(menus, game_menu);
 
 #endregion
@@ -295,8 +311,7 @@ add_option_press(controls_menu, 0, "option_back", function() {
 });
 add_option_press(controls_menu, 1, "option_keyboard", function()
 {
-	obj_option.key_jump = false;
-	instance_create_unique(0, 0, obj_keyconfig);
+	menu_goto(menus.keyboard);
 });
 add_option_press(controls_menu, 2, "option_controller", function() {
 	menu_goto(menus.controller);
@@ -304,9 +319,8 @@ add_option_press(controls_menu, 2, "option_controller", function() {
 add_option_press(controls_menu, 3, "option_reset_config", function()
 {
 	ini_open_from_string(obj_savesystem.ini_str_options)
-	ini_section_delete("ControlsKeys")
-	ini_section_delete("ControllerButton")
-	ini_section_delete("ControllerConfig")
+	ini_section_delete("Input");
+	ini_section_delete("InputConfig");
 	scr_initinput(false)
 	obj_savesystem.ini_str_options = ini_close()
 	with (obj_option)
@@ -314,19 +328,19 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 		for (i = 0; i < array_length(menus); i++)
 		{
 			b = menus[i]
-			if (b.menu_id == menus.controller || b.menu_id == menus.deadzone)
+			if (b.menu_id == menus.controller || b.menu_id == menus.deadzone || b.menu_id == menus.keyboard)
 			{
 				for (var j = 0; j < array_length(b.options); j++)
 				{
 					var q = b.options[j]
 					if (q.name == "option_deadzone")
-						q.value = global.gamepad_deadzone * 100;
+						q.value = global.input_controller_deadzone * 100;
 					else if (q.name == "option_deadzone_h")
-						q.value = global.gamepad_deadzone_horizontal * 100;
+						q.value = global.input_controller_deadzone_horizontal * 100;
 					else if (q.name == "option_deadzone_v")
-						q.value = global.gamepad_deadzone_vertical * 100;
+						q.value = global.input_controller_deadzone_vertical * 100;
 					else if (q.name == "option_deadzone_press")
-						q.value = global.gamepad_deadzone_press * 100;
+						q.value = global.input_controller_deadzone_press * 100;
 					else if (q.name == "option_deadzone_superjump")
 						q.value = global.gamepad_deadzone_superjump * 100;
 					else if (q.name == "option_deadzone_crouch")
@@ -335,6 +349,10 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 						q.value = global.gamepad_superjump;
 					else if (q.name == "option_controller_groundpound")
 						q.value = global.gamepad_groundpound;
+					else if (q.name == "option_keyboard_superjump")
+						q.value = global.keyboard_superjump;
+					else if (q.name == "option_keyboard_groundpound")
+						q.value = global.keyboard_groundpound;
 				}
 			}
 		}
@@ -348,26 +366,54 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 array_push(menus, controls_menu);
 
 #endregion
+#region keyboard menu
+
+var keyboard_menu = create_menu_fixed(menus.keyboard, anchor.left, 150, 40, menus.controls);
+add_option_press(keyboard_menu, 0, "option_back", function()
+{
+	menu_goto(menus.controls);
+});
+
+add_option_press(keyboard_menu, 1, "option_controller_binds", function()
+{
+	obj_option.key_jump = false;
+	instance_create_unique(0, 0, obj_keyconfig);
+});
+
+add_option_toggle(keyboard_menu, 2, "option_keyboard_superjump", function(val)
+{
+	global.keyboard_superjump = val;
+	set_controller_config();
+}).value = global.keyboard_superjump;
+
+add_option_toggle(keyboard_menu, 3, "option_keyboard_groundpound", function(val)
+{
+	global.keyboard_groundpound = val;
+	set_controller_config();
+}).value = global.keyboard_groundpound;
+
+array_push(menus, keyboard_menu);
+
+#endregion
 #region controller menu
 
-var controller_menu = create_menu_fixed(menus.controller, anchor.left, 150, 40, menus.controls)
+var controller_menu = create_menu_fixed(menus.controller, anchor.left, 150, 40, menus.controls);
+
 add_option_press(controller_menu, 0, "option_back", function() {
 	menu_goto(menus.controls);
 });
+
 add_option_press(controller_menu, 1, "option_controller_binds", function(val)
 {
 	obj_option.key_jump = false;
 	with (instance_create_unique(0, 0, obj_keyconfig))
-	{
-		controller = 1;
-		array_pop(input);
-		array_push(input, ["key_superjump"]);
-		array_push(input, ["key_groundpound"]);
-	}
+		controller = true;
 });
+
 add_option_press(controller_menu, 2, "option_deadzone_title", function(val) {
 	menu_goto(menus.deadzone);
 });
+
 add_option_toggle(controller_menu, 3, "option_controller_superjump", function(val)
 {
 	global.gamepad_superjump = val;
@@ -385,52 +431,60 @@ array_push(menus, controller_menu);
 #endregion
 #region deadzones menu
 
-var deadzones_menu = create_menu_fixed(menus.deadzone, anchor.left, 150, 40, menus.controller);
+var back = menus.controller;
+var deadzones_menu = create_menu_fixed(menus.deadzone, anchor.left, 150, 40, back);
+
 add_option_press(deadzones_menu, 0, "option_back", function() {
 	menu_goto(menus.controller)
 });
 add_option_slide(deadzones_menu, 1, "option_deadzone", function(val)
 {
 	if (val > 90)
-		val = 90
-	global.gamepad_deadzone = (val / 100)
-	set_controller_config()
-}).value = (global.gamepad_deadzone * 100);
+		val = 90;
+	global.input_controller_deadzone = val / 100;
+	trace(val / 100);
+	set_controller_config();
+}).value = (global.input_controller_deadzone * 100);
 
 add_option_slide(deadzones_menu, 2, "option_deadzone_h", function(val)
 {
-	if (val > 90)
-		val = 90
-	global.gamepad_deadzone_horizontal = (val / 100)
-	set_controller_config()
-}).value = (global.gamepad_deadzone_horizontal * 100);
+	if val > 90
+		val = 90;
+	global.input_controller_deadzone_horizontal = val / 100;
+	trace(val / 100);
+	set_controller_config();
+}).value = (global.input_controller_deadzone_horizontal * 100);
 
 add_option_slide(deadzones_menu, 3, "option_deadzone_v", function(val)
 {
 	if (val > 90)
-		val = 90
-	global.gamepad_deadzone_vertical = (val / 100)
-	set_controller_config()
-}).value = (global.gamepad_deadzone_vertical * 100);
+		val = 90;
+	global.input_controller_deadzone_vertical = val / 100;
+	trace(val / 100);
+	set_controller_config();
+}).value = (global.input_controller_deadzone_vertical * 100);
 
 add_option_slide(deadzones_menu, 4, "option_deadzone_press", function(val)
 {
 	if (val > 90)
-		val = 90
-	global.gamepad_deadzone_press = (val / 100)
-	set_controller_config()
-}).value = (global.gamepad_deadzone_press * 100);
+		val = 90;
+	global.input_controller_deadzone_press = val / 100;
+	trace(val / 100);
+	set_controller_config();
+}).value = (global.input_controller_deadzone_press * 100);
 
 add_option_slide(deadzones_menu, 5, "option_deadzone_superjump", function(val)
 {
-	global.gamepad_deadzone_superjump = (val / 100)
-	set_controller_config()
+	global.gamepad_deadzone_superjump = val / 100;
+	set_controller_config();
+	trace(val / 100);
 }).value = (global.gamepad_deadzone_superjump * 100);
 
 add_option_slide(deadzones_menu, 5, "option_deadzone_crouch", function(val)
 {
-    global.gamepad_deadzone_crouch = (val / 100);
+    global.gamepad_deadzone_crouch = val / 100;
     set_controller_config();
+	trace(val / 100);
 }).value = (global.gamepad_deadzone_crouch * 100);
 
 array_push(menus, deadzones_menu);

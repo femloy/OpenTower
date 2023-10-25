@@ -1,3 +1,4 @@
+#macro debug (GM_build_type == "run")
 enum debug_text_type
 {
 	normal,
@@ -7,7 +8,7 @@ enum debug_text_type
 }
 
 depth = -500;
-DEBUG = (GM_build_type == "run");
+DEBUG = debug;
 if (parameter_count() > 2)
 	DEBUG = true;
 if (!DEBUG)
@@ -26,6 +27,18 @@ if (DEBUG)
 {
 	active = false;
 	showoverlay = false;
+	SWITCH_CHAR = new DebugCommand("switch_char", "Switches character", "", function()
+	{
+		with (obj_player)
+		{
+			character = "N";
+			scr_characterspr();
+		}
+	});
+	FILL_GATESWITCH = new DebugCommand("gateswitchmax", "", "", function()
+	{
+		global.gateswitch = global.gateswitchmax;
+	});
 	SHOW_DEBUG_OVERLAY = new DebugCommand("show_debug_overlay", "Toggles debug overlay", "", function()
 	{
 		show_debug_overlay(!showoverlay);
@@ -115,7 +128,19 @@ if (DEBUG)
 		with (obj_debugcontroller)
 		{
 			DoCommand("showcollisions 1");
+			DoCommand("player_room rm_testing A");
+			DoCommand("switch_char");
+			alarm[0] = 20;
+		}
+	});
+	OTHERTEST = new DebugCommand("othertest", "", "", function()
+	{
+		with (obj_debugcontroller)
+		{
+			DoCommand("showcollisions 1");
 			DoCommand("player_room rm_testing4 A");
+			DoCommand("switch_char");
+			alarm[0] = 20;
 		}
 	});
 	SETCOMBO = new DebugCommand("set_combo", "Set the combo", "<combo> <combotime:optional>", function(combo, combotime)
@@ -307,8 +332,8 @@ if (DEBUG)
 	ds_map_set(state_map, "states.ratmount", states.ratmount);
 	
 	command_list = ds_list_create();
-	ds_list_add(command_list, DESTROYICE, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK);
-	ds_list_add(command_list, SETCOMBO, GIVEKEY, LOADTEST, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY);
+	ds_list_add(command_list, DESTROYICE, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SWITCH_CHAR);
+	ds_list_add(command_list, OTHERTEST, FILL_GATESWITCH, SETCOMBO, GIVEKEY, LOADTEST, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, GOTOEDITOR);
 	
 	input_text = "";
 	text_list = ds_list_create();
@@ -330,13 +355,14 @@ if (DEBUG)
 	function DoCommand(text)
 	{
 		var commands = string_split(text, " ");
-		if (array_length(commands) > 1)
+		trace(commands);
+		if (array_length(commands) > 0)
 		{
-			var c = FindCommand(commands[1]);
+			var c = FindCommand(commands[0]);
 			if (c != undefined)
 			{
 				TextList_Add(1, text);
-				array_delete(commands, 0, 2);
+				array_delete(commands, 0, 1);
 				c.Invoke(commands);
 				return true;
 			}

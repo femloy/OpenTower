@@ -26,7 +26,10 @@ function scr_lang_get_credits()
 	var fo = file_text_open_read("credits.txt");
 	var arr = array_create(0);
 	while !file_text_eof(fo)
-		array_push(arr, file_text_readln(fo));
+	{
+		array_push(arr, file_text_read_string(fo));
+		file_text_readln(fo);
+	}
 	file_text_close(fo);
 	return arr;
 }

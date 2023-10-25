@@ -25,13 +25,8 @@ bg_y -= 1;
 
 if (instance_exists(obj_keyconfig) || instance_exists(obj_screenconfirm))
 	exit;
-scr_getinput();
 
-var _dvc = obj_inputAssigner.player_input_device[0];
-if (key_jump && _dvc >= 0 && gamepad_button_check_pressed(_dvc, global.key_jumpC) && global.key_jumpC == gp_face2)
-    key_jump = false;
-key_jump = (key_jump || (global.key_start != vk_return && keyboard_check_pressed(vk_return)) || (global.key_start != vk_space && keyboard_check_pressed(vk_space)) || gamepad_button_check_pressed(obj_inputAssigner.player_input_device[0], gp_face1));
-key_back = (keyboard_check_pressed(vk_escape) || keyboard_check_pressed(vk_return) || gamepad_button_check_pressed(obj_inputAssigner.player_input_device[0], gp_face2));
+scr_menu_getinput();
 if (backbuffer > 0)
 {
 	backbuffer--;
@@ -149,6 +144,8 @@ if ((key_back || key_slap2 || keyboard_check_pressed(vk_escape)) && !instance_ex
 	{
 		if (instance_exists(obj_mainmenuselect))
 			obj_mainmenuselect.selected = false;
+		if (instance_exists(obj_mainmenu))
+			obj_mainmenu.optionbuffer = 2;
 		instance_destroy();
 	}
 	else

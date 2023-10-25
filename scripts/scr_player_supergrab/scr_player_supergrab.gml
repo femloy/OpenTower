@@ -136,8 +136,8 @@ function scr_player_supergrab()
 					}
 					else
 					{
-						baddiegrabbedID.state = states.finale;
-						state = states.finale;
+						baddiegrabbedID.state = states.ending;
+						state = states.ending;
 						instance_create(room_width / 2, room_height / 2, obj_pizzahead_finalecutscene);
 						instance_create(0, 0, obj_pizzahead_whitefade);
 						camzoom = 1;

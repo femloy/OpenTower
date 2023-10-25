@@ -1,3 +1,8 @@
+if (room == tower_soundtestlevel && (obj_player1.state == states.backtohub || obj_player1.state == states.comingoutdoor || obj_player1.targetDoor == "A"))
+{
+	instance_destroy();
+	exit;
+}
 image_speed = 0.35;
 switch (sprite_index)
 {

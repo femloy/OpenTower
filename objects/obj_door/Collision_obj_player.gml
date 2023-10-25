@@ -19,12 +19,19 @@ if (!place_meeting(x, y, obj_doorblocked))
 	{
 		if (key_up && !instance_exists(obj_jumpscare) && grounded && (((state == states.ratmount || state == states.ratmountbounce) && brick) || state == states.normal || state == states.mach1 || state == states.mach2 || state == states.pogo || state == states.mach3 || state == states.Sjumpprep) && y == (other.y + 50) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
 		{
-			if (room == tower_5)
+			if (room == tower_5 || other.object_index == obj_pumpkindoor)
 			{
+				if (other.object_index == obj_pumpkindoor)
+				{
+					notification_push(notifs.trickytreat, [room]);
+					global.levelreset = true;
+				}
 				obj_player1.backtohubroom = room;
 				obj_player1.backtohubstartx = obj_player1.x;
 				obj_player1.backtohubstarty = obj_player1.y;
 			}
+			if (room == trickytreat_1)
+				notification_push(notifs.trickytreat_leave, [room]);
 			obj_player1.lastroom = room;
 			obj_player2.lastroom = room;
 			fmod_event_one_shot("event:/sfx/misc/door");

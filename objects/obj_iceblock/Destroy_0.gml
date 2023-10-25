@@ -24,10 +24,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 			instance_create(xx, yy, obj_parryeffect);
 	}
 	var val = heat_calculate(10);
-	if (other.object_index == obj_player1)
-		global.collect += val;
-	else
-		global.collectN += val;
+	global.collect += val;
 	with (instance_create(x + 16, y, obj_smallnumber))
 		number = string(val);
 	global.heattime += 10;

@@ -75,54 +75,59 @@ switch (state)
 	
 	case states.normal:
 	case states.victory:
-		shader_set(global.Pal_Shader);
-		scr_bosscontroller_draw_health(spr_bossfight_playerhp, player_rowmax, player_columnmax, player_hp, player_maxhp, player_hp_x, player_hp_y, player_xpad, player_ypad, player_index, image_alpha, spr_peppalette, obj_player1.paletteselect, global.palettetexture);
-		var bpal = boss_palette;
-		var bpalsel = -4;
-		var btex = -4;
-		if (boss_hpsprite == spr_bossfight_fakepephp)
-		{
-			bpal = spr_peppalette;
-			bpalsel = obj_player1.paletteselect;
-			btex = global.palettetexture;
-		}
-		scr_bosscontroller_draw_health(boss_hpsprite, boss_rowmax, boss_columnmax, boss_prevhp, boss_maxhp, boss_hp_x, boss_hp_y, boss_xpad, boss_ypad, boss_index, image_alpha, bpal, bpalsel, btex);
-		for (var i = 0; i < ds_list_size(particlelist); i++)
-		{
-			var b = ds_list_find_value(particlelist, i);
-			with (b)
+		if (!global.option_hud)
+            break;
+        else
+        {
+			shader_set(global.Pal_Shader);
+			scr_bosscontroller_draw_health(spr_bossfight_playerhp, player_rowmax, player_columnmax, player_hp, player_maxhp, player_hp_x, player_hp_y, player_xpad, player_ypad, player_index, image_alpha, spr_peppalette, obj_player1.paletteselect, global.palettetexture);
+			var bpal = boss_palette;
+			var bpalsel = -4;
+			var btex = -4;
+			if (boss_hpsprite == spr_bossfight_fakepephp)
 			{
-				if (type == 0)
-				{
-					x += hsp;
-					y += vsp;
-					if (vsp < 20)
-						vsp += 0.5;
-					if (y > (SCREEN_HEIGHT + sprite_get_height(sprite_index)))
-						ds_list_delete(other.particlelist, i--);
-					else
-					{
-						if (palettetexture != -4)
-							pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, palettetexture);
-						pal_swap_set(spr_palette, paletteselect, false);
-						draw_sprite(sprite_index, image_index, x, y);
-						continue;
-					}
-				}
-				else if (type == 1)
-                {
-                    if (image_index > sprite_get_number(sprite_index) - 1)
-                        ds_list_delete(other.particlelist, i--);
-                    else
-                    {
-                        image_index += image_speed;
-                        pal_swap_set(spr_palette, paletteselect, 0);
-                        draw_sprite(sprite_index, image_index, x, y);
-                    }
-                }
+				bpal = spr_peppalette;
+				bpalsel = obj_player1.paletteselect;
+				btex = global.palettetexture;
 			}
+			scr_bosscontroller_draw_health(boss_hpsprite, boss_rowmax, boss_columnmax, boss_prevhp, boss_maxhp, boss_hp_x, boss_hp_y, boss_xpad, boss_ypad, boss_index, image_alpha, bpal, bpalsel, btex);
+			for (var i = 0; i < ds_list_size(particlelist); i++)
+			{
+				var b = ds_list_find_value(particlelist, i);
+				with (b)
+				{
+					if (type == 0)
+					{
+						x += hsp;
+						y += vsp;
+						if (vsp < 20)
+							vsp += 0.5;
+						if (y > (SCREEN_HEIGHT + sprite_get_height(sprite_index)))
+							ds_list_delete(other.particlelist, i--);
+						else
+						{
+							if (palettetexture != -4)
+								pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, palettetexture);
+							pal_swap_set(spr_palette, paletteselect, false);
+							draw_sprite(sprite_index, image_index, x, y);
+							continue;
+						}
+					}
+					else if (type == 1)
+	                {
+	                    if (image_index > sprite_get_number(sprite_index) - 1)
+	                        ds_list_delete(other.particlelist, i--);
+	                    else
+	                    {
+	                        image_index += image_speed;
+	                        pal_swap_set(spr_palette, paletteselect, 0);
+	                        draw_sprite(sprite_index, image_index, x, y);
+	                    }
+	                }
+				}
+			}
+			pattern_reset();
+			reset_shader_fix();
+			break;
 		}
-		pattern_reset();
-		reset_shader_fix();
-		break;
 }

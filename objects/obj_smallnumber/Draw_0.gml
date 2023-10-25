@@ -1,4 +1,6 @@
-if (!global.option_hud || (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud))
+if (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud)
+	exit;
+if (!global.option_hud)
 	exit;
 draw_set_font(global.smallnumber_fnt);
 draw_set_halign(fa_center);

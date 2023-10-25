@@ -3,7 +3,7 @@ if (do_rank)
 	with (instance_create(room_width / 2, room_height / 2, obj_rank))
 	{
 		toppinvisible = other.toppinvisible;
-		if (!toppinvisible && global.leveltosave != "exit")
+		if (!toppinvisible && global.leveltosave != "exit" && global.leveltosave != "secretworld")
 		{
 			array_delete(text, 0, 1);
 			array_pop(text);

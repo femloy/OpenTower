@@ -25,6 +25,11 @@ function scr_player_keyget()
 		global.keyget = false;
 		state = states.normal;
 		image_index = 0;
-		instance_create(x, y, obj_keyfollow);
+		with instance_create(x, y, obj_keyfollow)
+		{
+			if (other.goblinkey)
+				sprite_index = spr_goblinkey;
+		}
+		goblinkey = false;
 	}
 }

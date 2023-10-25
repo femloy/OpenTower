@@ -1,19 +1,29 @@
-if (!variable_global_exists("editorfont"))
-	global.editorfont = font_add_sprite_ext(spr_smallerfont, "ABCDEFGHIJKLMNOPQRSTUVWXYZ!.:?1234567890", true, -2);
-depth = -100;
-object_list[0] = ds_list_create();
-object_list[1] = ds_list_create();
-object_list[2] = ds_list_create();
-info = "";
-object = -4;
-state = 0; // not an enum
-commandlist = ds_list_create();
-undo = 1;
-selectedobjects = ds_list_create();
-layerdepth = 0;
+editor_states = ds_map_create();
+
+editor_state = editor_states.e0;
+ds_map_set(editor_states, editor_states.instance_edit, function()
+{
+	toggle_menu_layer(0);
+});
+ds_map_set(editor_states, editor_states.e2, function()
+{
+	toggle_menu_layer(1);
+});
+
+alarm[0] = 1;
+depth = 1;
 rooms = ds_list_create();
-selectedroom = 0;
-ds_list_add(rooms, new EditorRoom());
-scr_editor_camera_init();
-scr_editor_init_objects();
-scr_editor_init_buttons();
+current_room = -4;
+editor_input_init();
+commands_init();
+editor_camera_init();
+instance_edit_init();
+save_level_init();
+backgrounds_list = ds_list_create();
+for (var i = 0; i < array_length(global.editor_data.backgrounds); i++)
+	ds_list_add(backgrounds_list, asset_get_index(global.editor_data.backgrounds[i]));
+for (i = 0; i < 8; i++)
+{
+	with (instance_create_depth(0, 0, depth - 1, obj_roomresize))
+		dock = i;
+}

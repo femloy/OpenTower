@@ -99,6 +99,7 @@ function scr_pause_deactivate_objects(pause_sounds = true)
 	instance_activate_object(obj_screensizer);
 	instance_activate_object(obj_music);
 	instance_activate_object(obj_fmod);
+	instance_activate_object(obj_globaltimer);
 }
 function pause_spawn_priests()
 {
@@ -113,6 +114,9 @@ function pause_spawn_priests()
 		image_alpha: 0,
 		sprite_index: choose(spr_angelpriest, spr_angelpriest2, spr_angelpriest3)
 	};
+	if (is_holiday(holiday.halloween))
+		p.sprite_index = choose(spr_pepbat_move, spr_ghostshroom, spr_ghoul_idle);
+	
 	var q = irandom(100);
 	if (q >= 50)
 		p.x = irandom_range(SCREEN_WIDTH * 0.78, SCREEN_WIDTH * 0.65);

@@ -131,7 +131,7 @@ function scr_playersounds()
 			}
 			tumbleintro = false;
 		}
-		if (sprite_index == spr_player_machroll || sprite_index == spr_player_backslide || sprite_index == spr_player_backslideland)
+		if (sprite_index == spr_machroll || sprite_index == spr_backslide || sprite_index == spr_backslideland)
 		{
 			if (!fmod_event_instance_is_playing(machrollsnd))
 				fmod_event_instance_play(machrollsnd);
@@ -200,7 +200,7 @@ function scr_playersounds()
 			}
 			hamkuffID = -4;
 		}
-		if ((state == states.ratmount || state == states.ratmountjump) && ratmount_movespeed >= 12 && (sprite_index == spr_player_ratmountattack || sprite_index == spr_player_ratmountmach3 || sprite_index == spr_player_ratmountdashjump || sprite_index == spr_lonegustavo_dash || sprite_index == spr_lonegustavo_mach3 || sprite_index == spr_lonegustavo_dashjump))
+		if ((state == states.ratmount || state == states.ratmountjump) && (sprite_index == spr_player_ratmountattack || sprite_index == spr_player_ratmountmach3 || sprite_index == spr_player_ratmountdashjump || sprite_index == spr_lonegustavo_dash || sprite_index == spr_lonegustavo_mach3 || sprite_index == spr_lonegustavo_dashjump))
 		{
 			if (!fmod_event_instance_is_playing(ratmountmachsnd))
 				fmod_event_instance_play(ratmountmachsnd);

@@ -1,6 +1,6 @@
 function scr_soundtest_secret()
 {
-	targetRoom = tower_soundtest;
+	targetRoom = tower_soundtestlevel;
 	soundtest = true;
 	var found = false;
 	ini_open_from_string(obj_savesystem.ini_str);

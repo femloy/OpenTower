@@ -34,7 +34,8 @@ if (object_index == obj_cheeseslime && snotty)
 	{
 		ds_list_add(global.baddieroom, id);
 		instance_destroy();
-		instance_create(x, y, obj_snotty);
+		if (!global.panic)
+			instance_create(x, y, obj_snotty);
 	}
 	ini_close();
 }

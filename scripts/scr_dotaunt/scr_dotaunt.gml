@@ -6,7 +6,7 @@ function scr_dotaunt()
 		pistolanim = -4;
 		flash = false;
 		notification_push(notifs.taunt, [room]);
-		if ((!key_up || !supercharged) && global.tauntcount < 10 && place_meeting(x, y, obj_exitgate) && (global.panic == true || instance_exists(obj_wartimer)) && global.combotime > 0)
+		if ((!key_up || !supercharged) && global.tauntcount < 10 && place_meeting(x, y, obj_exitgate) && (global.panic == true || instance_exists(obj_wartimer) || (instance_exists(obj_randomsecret) && obj_randomsecret.start)) && global.combotime > 0)
 		{
 			global.tauntcount++;
 			global.collect += 25;

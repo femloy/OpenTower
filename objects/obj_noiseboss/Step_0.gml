@@ -66,7 +66,7 @@ switch (state)
 	case states.punch:
 		scr_vigilante_punch();
 		break;
-	case states.finale:
+	case states.ending:
 		scr_noise_finale();
 		break;
 	case states.KO:

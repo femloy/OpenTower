@@ -8,3 +8,4 @@ vsp_carry = 0;
 platformid = -4;
 grounded = false;
 grav = 0.5;
+rail = instance_exists(obj_railparent);

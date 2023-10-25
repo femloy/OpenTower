@@ -6,18 +6,21 @@ with (obj_secretportal)
 {
 	if (secret)
 	{
-		if (room != tower_soundtest && !instance_exists(obj_ghostcollectibles))
+		if (room != tower_soundtestlevel && !instance_exists(obj_ghostcollectibles))
 		{
-			global.secretfound++;
-			var val = global.secretfound;
-			if (val >= 3)
-				val = 3;
-			if (val == 1)
-				var txt = lang_get_value("secret_text1");
-			else
-				txt = lang_get_value("secret_text2");
-			txt = embed_value_string(txt, [val]);
-			create_transformation_tip(txt);
+			if (!instance_exists(obj_randomsecret))
+			{
+				global.secretfound++;
+				var val = global.secretfound;
+				if (val >= 3)
+					val = 3;
+				if (val == 1)
+					var txt = lang_get_value("secret_text1");
+				else
+					txt = lang_get_value("secret_text2");
+				txt = embed_value_string(txt, [val]);
+				create_transformation_tip(txt);
+			}
 			instance_create(0, 0, obj_ghostcollectibles);
 			trace(instance_number(obj_ghostcollectibles));
 		}

@@ -1,7 +1,5 @@
-function pal_swap_set()
+function pal_swap_set(_pal_sprite, _pal_index)
 {
-	var _pal_sprite = argument[0];
-	var _pal_index = argument[1];
 	var _surface = false;
 	if (!_surface)
 	{

@@ -1,3 +1,5 @@
+if (!hit)
+	exit;
 if (instance_exists(ID) && ID.object_index == obj_badrat && other.state == states.tumble)
 	exit;
 var s = other.state;

@@ -1,8 +1,11 @@
 draw_set_color(c_black);
-draw_rectangle(0, -50, -50, room_height + 50, false);
-draw_rectangle(room_width, -50, room_width + 50, room_height + 50, false);
-draw_rectangle(0, 0, room_width, -50, false);
-draw_rectangle(0, room_height, room_width, room_height + 50, false);
+if (room != editor_room)
+{
+	draw_rectangle(0, -50, -50, room_height + 50, false);
+	draw_rectangle(room_width, -50, room_width + 50, room_height + 50, false);
+	draw_rectangle(0, 0, room_width, -50, false);
+	draw_rectangle(0, room_height, room_width, room_height + 50, false);
+}
 draw_set_color(c_white);
 draw_set_color(c_white);
 if (use_dark)
@@ -112,19 +115,19 @@ with (obj_pizzagoblinbomb)
 		draw_sprite(spr_grabicon, -1, x - 10, y - 30);
 	draw_self();
 }
-with (obj_player2)
-{
-	if (visible && state != states.titlescreen && bbox_in_camera(view_camera[0], 32))
-		draw_player();
-}
 with (obj_player1)
 {
-	if (visible && state != states.titlescreen && bbox_in_camera(view_camera[0], 32))
+	if (!other.hungrypillarflash && visible && state != states.titlescreen && bbox_in_camera(view_camera[0], 32))
 		draw_player();
+}
+for (i = 0; i < array_length(particles); i++)
+{
+	with (particles[i])
+		draw_sprite(sprite_index, image_index, x, y);
 }
 with (obj_sausageman_dead)
 {
-	if (!gui && visible && bbox_in_camera(view_camera[0], 32))
+	if (!gui && visible)
 	{
 		b = get_dark(image_blend, other.use_dark);
 		if (oldpalettetexture != -4)

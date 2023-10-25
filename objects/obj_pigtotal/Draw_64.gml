@@ -1,4 +1,6 @@
-if (is_bossroom() || instance_exists(obj_achievementviewer))
+if (is_bossroom() || instance_exists(obj_achievementviewer) || room == tower_soundtestlevel)
+	exit;
+if (!global.option_hud)
 	exit;
 draw_set_font(global.moneyfont);
 draw_set_halign(fa_center);

@@ -41,6 +41,11 @@ if (floor(image_index) == (image_number - 1))
 					{
 						lastTargetDoor = targetDoor;
 						targetDoor = "S";
+						if (other.soundtest)
+						{
+							lastroom_soundtest = room;
+							lastroom_secretportalID = other.id;
+						}
 						if (!other.secret)
 						{
 							lastroom = room;
@@ -48,9 +53,27 @@ if (floor(image_index) == (image_number - 1))
 							secretportalID = other.id;
 						}
 						else
+						{
 							targetRoom = lastroom;
+							if (room == tower_soundtest || room == tower_soundtestlevel)
+							{
+								targetRoom = lastroom_soundtest;
+								secretportalID = lastroom_secretportalID;
+							}
+						}
+						if (instance_exists(obj_randomsecret) && !obj_randomsecret.selected)
+						{
+							obj_randomsecret.selected = true;
+							var len = array_length(obj_randomsecret.levels);
+							if (len > 0)
+							{
+								var num = irandom(len - 1);
+								targetRoom = obj_randomsecret.levels[num];
+								array_delete(obj_randomsecret.levels, num, 1);
+							}
+						}
 					}
-					if (!secret && !soundtest)
+					if (!secret && !soundtest && !instance_exists(obj_randomsecret))
 						ds_list_add(global.saveroom, id);
 					instance_create(x, y, obj_fadeout);
 				}

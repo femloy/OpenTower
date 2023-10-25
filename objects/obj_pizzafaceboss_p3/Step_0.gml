@@ -32,7 +32,7 @@ switch (state)
 	case states.swinging:
 		scr_pizzaface_p3_swinging();
 		break;
-	case states.finale:
+	case states.ending:
 		scr_pizzaface_p3_finale();
 		break;
 	case states.pizzaheadjump:
@@ -53,7 +53,7 @@ switch (state)
 }
 if (state != states.pizzaheadjump)
 {
-	if ((state == states.fall && vsp < 0) || state == states.finale)
+	if ((state == states.fall && vsp < 0) || state == states.ending)
 	{
 		use_collision = false;
 		if (state == states.fall)

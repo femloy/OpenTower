@@ -1,4 +1,4 @@
-if (global.panic || instance_exists(obj_wartimer))
+if ((global.panic || instance_exists(obj_wartimer)) && sprite_index != spr_pizzaportal_outline)
 {
 	image_alpha = 1;
 	if (sprite_index == spr_pizzaportal)

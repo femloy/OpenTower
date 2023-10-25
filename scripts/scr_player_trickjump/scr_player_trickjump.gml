@@ -18,7 +18,7 @@ function scr_player_trickjump()
 		state = states.bump;
 		image_index = 0;
 		fmod_event_one_shot_3d("event:/sfx/pep/splat", x, y);
-		sprite_index = spr_player_wallsplat;
+		sprite_index = spr_wallsplat;
 	}
 	if (ramp_buffer > 0)
 		ramp_buffer--;

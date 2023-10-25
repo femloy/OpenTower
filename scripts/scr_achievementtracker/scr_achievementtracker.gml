@@ -58,7 +58,11 @@ enum notifs
 	taunt,
 	johnresurrection, // with all treasures
 	knighttaken,
-	mrmooney_donated
+	mrmooney_donated,
+	pumpkin_collect,	// 59
+	trickytreat,		// 60
+	trickytreat_fail,	// 61
+	trickytreat_leave	// 62
 }
 
 // functions

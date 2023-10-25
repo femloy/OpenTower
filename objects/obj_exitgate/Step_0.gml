@@ -1,4 +1,4 @@
-if global.panic == true || (instance_exists(obj_wartimer) && room != war_1)
+if global.panic == true || random_secret || (instance_exists(obj_wartimer) && room != war_1)
 {
 	image_index = 1;
 	if (!uparrow)

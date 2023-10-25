@@ -26,6 +26,8 @@ if (room == Mainmenu && window_get_cursor() == -1)
 	cr = cr_default;
 if (instance_exists(obj_inputAssigner) && obj_inputAssigner.player_input_device[0] >= 0)
 	cr = cr_none;
+if (room == editor_room)
+    cr = cr_none;
 if (cr != cr_beam)
 {
     window_set_cursor(cr);

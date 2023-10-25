@@ -289,7 +289,7 @@ enum states
 	noiseballooncrash,
 	swinging,
 	stomp,
-	finale, // reused by obj_mainmenu
+	ending,
 	backtohub,
 	johnghost,
 	spaceshuttle,
@@ -299,7 +299,11 @@ enum states
 	secretenter,
 	teleport,
 	KO,
-	camera_followtarget
+	camera_followtarget,
+	UNKNOWN_1, // 300
+	UNKNOWN_2, // 301
+	UNKNOWN_3, // 302
+	UNKNOWN_4, // 303, used by obj_stickhat
 }
 
 global.coop = false;

@@ -31,7 +31,7 @@ function scr_check_superjump()
 {
 	var sj = global.gamepad_superjump;
 	if obj_inputAssigner.player_input_device[0] < 0
-		sj = true;
+		sj = global.keyboard_superjump;
 	return ((sj && key_up) || key_superjump);
 }
 
@@ -39,7 +39,7 @@ function scr_check_groundpound()
 {
 	var gp = global.gamepad_groundpound;
 	if obj_inputAssigner.player_input_device[0] < 0
-		gp = true;
+		gp = global.keyboard_groundpound;
 	return ((gp && key_down2) || key_groundpound);
 }
 
@@ -47,22 +47,74 @@ function scr_check_groundpound2()
 {
 	var gp = global.gamepad_groundpound;
 	if obj_inputAssigner.player_input_device[0] < 0
-		gp = true;
+		gp = global.keyboard_groundpound;
 	return ((gp && key_down) || key_groundpound2);
+}
+
+function scr_switch_get_menu_input()
+{
+	var _dvc = obj_inputAssigner.player_input_device[0];
+	key_jump = gamepad_button_check_pressed(_dvc, gp_face2);
+	key_jump2 = gamepad_button_check(_dvc, gp_face2);
+	key_back = gamepad_button_check_pressed(_dvc, gp_face1);
+}
+
+function scr_menu_getinput()
+{
+	if (!instance_exists(obj_player))
+		tdp_input_update(obj_inputAssigner.player_input_device[0]);
+	
+	key_up = tdp_input_get("menu_up").held || tdp_input_get("menu_upC").held;
+	key_up2 = tdp_input_get("menu_up").pressed || tdp_input_get("menu_upC").pressed;
+	key_down = tdp_input_get("menu_down").held || tdp_input_get("menu_downC").held;
+	key_down2 = tdp_input_get("menu_down").pressed || tdp_input_get("menu_downC").pressed;
+	key_left = -(tdp_input_get("menu_left").held || tdp_input_get("menu_leftC").held);
+	key_left2 = -(tdp_input_get("menu_left").pressed || tdp_input_get("menu_leftC").pressed);
+	key_right = tdp_input_get("menu_right").held || tdp_input_get("menu_rightC").held;
+	key_right2 = tdp_input_get("menu_right").pressed || tdp_input_get("menu_rightC").pressed;
+	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
+	key_back = tdp_input_get("menu_back").pressed || tdp_input_get("menu_backC").pressed;
+	key_jump = tdp_input_get("menu_select").pressed || tdp_input_get("menu_selectC").pressed;
+	key_jump2 = tdp_input_get("menu_select").held || tdp_input_get("menu_selectC").held;
+	key_delete = tdp_input_get("menu_delete").held || tdp_input_get("menu_deleteC").held;
+	key_delete2 = tdp_input_get("menu_delete").pressed || tdp_input_get("menu_deleteC").pressed;
+	key_quit = tdp_input_get("menu_quit").held || tdp_input_get("menu_quitC").held;
+	key_quit2 = tdp_input_get("menu_quit").pressed || tdp_input_get("menu_quitC").pressed;
 }
 
 function scr_getinput()
 {
+	var _dvc = obj_inputAssigner.player_input_device[0];
+	tdp_input_update(_dvc);
+	
 	if instance_exists(obj_debugcontroller) && obj_debugcontroller.active
 		exit;
+	if instance_exists(obj_consoledebug) && obj_consoledebug.state > 0
+		exit;
+	if instance_exists(obj_softlockcrash)
+		exit;
 	
-	var _dvc = obj_inputAssigner.player_input_device[0];
-	gamepad_set_axis_deadzone(_dvc, global.gamepad_deadzone);
+	var verticaldeadzone = global.input_controller_deadzone_vertical;
+	var horizontaldeadzone = global.input_controller_deadzone_horizontal;
+	var vertpress_dz = global.input_controller_deadzone_press;
+	var horizpress_dz = global.input_controller_deadzone_press;
 	
-	var verticaldeadzone = global.gamepad_deadzone_vertical;
-	var horizontaldeadzone = global.gamepad_deadzone_horizontal;
-	var vertpress_dz = global.gamepad_deadzone_press;
-	var horizpress_dz = global.gamepad_deadzone_press;
+	key_up = tdp_input_get("player_up").held || tdp_input_get("player_upC").held;
+	key_up2 = tdp_input_get("player_up").pressed || tdp_input_get("player_upC").pressed;
+	key_right = tdp_input_get("player_right").held || tdp_input_get("player_rightC").held;
+	key_right2 = tdp_input_get("player_right").pressed || tdp_input_get("player_rightC").pressed;
+	key_left = -(tdp_input_get("player_left").held || tdp_input_get("player_leftC").held);
+	key_left2 = -(tdp_input_get("player_left").pressed || tdp_input_get("player_leftC").pressed);
+	key_down = tdp_input_get("player_down").held || tdp_input_get("player_downC").held;
+	key_down2 = tdp_input_get("player_down").pressed || tdp_input_get("player_downC").pressed;
+	key_jump = tdp_input_get("player_jump").pressed || tdp_input_get("player_jumpC").pressed;
+	key_jump2 = tdp_input_get("player_jump").held || tdp_input_get("player_jumpC").held;
+	key_slap = tdp_input_get("player_slap").held || tdp_input_get("player_slapC").held;
+	key_slap2 = tdp_input_get("player_slap").pressed || tdp_input_get("player_slapC").pressed;
+	key_taunt = tdp_input_get("player_taunt").held || tdp_input_get("player_tauntC").held;
+	key_taunt2 = tdp_input_get("player_taunt").pressed || tdp_input_get("player_tauntC").pressed;
+	key_attack = tdp_input_get("player_attack").held || tdp_input_get("player_attackC").held;
+	key_attack2 = tdp_input_get("player_attack").pressed || tdp_input_get("player_attackC").pressed;
 	
 	key_up = (keyboard_check(global.key_up) || gamepad_button_check(_dvc, global.key_upC) || gamepad_axis_value(_dvc, gp_axislv) < -verticaldeadzone);
 	key_up2 = (keyboard_check_pressed(global.key_up) || gamepad_button_check_pressed(_dvc, global.key_upC) || (gamepad_axis_value(_dvc, gp_axislv) < -vertpress_dz && stickpressed_vertical == false));
@@ -82,13 +134,16 @@ function scr_getinput()
 	key_attack2 = (keyboard_check_pressed(global.key_attack) || gamepad_button_check_pressed(_dvc, global.key_attackC));
 	key_shoot = false;
 	key_shoot2 = false;
-	key_start = (keyboard_check_pressed(global.key_start) || gamepad_button_check_pressed(_dvc, global.key_startC));
-	key_escape = (keyboard_check_pressed(vk_escape) || gamepad_button_check(_dvc, gp_select));
-	key_chainsaw = (keyboard_check(global.key_chainsaw) || gamepad_button_check(_dvc, global.key_chainsawC));
-	key_chainsaw2 = (keyboard_check_pressed(global.key_chainsaw) || gamepad_button_check_pressed(_dvc, global.key_chainsawC));
-	key_superjump = (global.key_superjumpC != -4 ? gamepad_button_check(_dvc, global.key_superjumpC) : false);
-	key_groundpound = (global.key_groundpoundC != -4 ? gamepad_button_check_pressed(_dvc, global.key_groundpoundC) : false);
-	key_groundpound2 = (global.key_groundpoundC != -4 ? gamepad_button_check(_dvc, global.key_groundpoundC) : false);
+	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
+	key_chainsaw = false;
+	key_chainsaw2 = false;
+	key_superjump = tdp_input_get("player_superjumpC").held || tdp_input_get("player_superjump").held;
+	key_groundpound = tdp_input_get("player_groundpoundC").pressed || tdp_input_get("player_groundpound").pressed;
+	key_groundpound2 = tdp_input_get("player_groundpoundC").held || tdp_input_get("player_groundpound").held;
+	key_left_axis = scr_get_move_axis("player_leftC");
+	key_right_axis = scr_get_move_axis("player_rightC");
+	key_up_axis = scr_get_move_axis("player_upC");
+	key_down_axis = scr_get_move_axis("player_downC");
 	
 	// single presses with the analog stick
 	if gamepad_axis_value(_dvc, gp_axislh) >= horizpress_dz || gamepad_axis_value(_dvc, gp_axislh) <= -horizpress_dz
@@ -106,27 +161,72 @@ function scr_getinput()
     {
         if state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch
         {
-            var haxis = gamepad_axis_value(_dvc, gp_axislh);
-            var vaxis = gamepad_axis_value(_dvc, gp_axislv);
-            if haxis != 0 || vaxis != 0
-            {
-                var _deadzone = floor(global.gamepad_deadzone_superjump * 120);
-                if state == states.crouch || state == states.ratmountcrouch
-                {
-                    vaxis *= -1;
-                    _deadzone = floor(global.gamepad_deadzone_crouch * 120);
-                }
-				
-                var _dir = point_direction(0, 0, haxis, vaxis);
-                trace(_dir, ":", _deadzone);
-                if (_dir <= 120 + _deadzone && _dir >= 60 - _deadzone) || _dir >= 420 - _deadzone
-                {
-                    if state == states.Sjumpprep
-                        key_up = true;
-                    else if (state == states.crouch && uncrouch <= 0) || state == states.ratmountcrouch
-                        key_down = true;
-                }
-            }
+            if state == states.Sjumpprep
+			{
+				var in = tdp_input_get("player_upC");
+				var dz = global.gamepad_deadzone_superjump;
+			}
+			else
+			{
+				in = tdp_input_get("player_downC");
+				dz = global.gamepad_deadzone_crouch;
+			}
+			
+			for (var i = 0; i < array_length(in.actions); i++)
+			{
+				var b = in.actions[i];
+				with (b)
+				{
+					if (type == tdp_type.joystick)
+					{
+						switch (value)
+						{
+							case gp_axislv:
+								var inverted_axis = gamepad_axis_value(_dvc, gp_axislh);
+								break;
+							case gp_axisrv:
+								inverted_axis = gamepad_axis_value(_dvc, gp_axisrh);
+								break;
+							case gp_axislh:
+								inverted_axis = gamepad_axis_value(_dvc, gp_axislv);
+								break;
+							case gp_axisrh:
+								inverted_axis = gamepad_axis_value(_dvc, gp_axisrv);
+								break;
+						}
+						if (other.state == states.Sjumpprep)
+						{
+							if (axis_value <= (-0.8 + dz) && (axis_value != 0 || inverted_axis != 0))
+								other.key_up = true;
+						}
+						else if (axis_value >= (0.8 - dz) && (axis_value != 0 || inverted_axis != 0))
+							other.key_down = true;
+					}
+				}
+			}
         }
     }
+}
+
+function scr_get_move_axis(input_str)
+{
+	var in = tdp_input_get(input_str);
+	for (var i = 0; i < array_length(in.actions); i++)
+	{
+		var b = in.actions[i];
+		with (b)
+		{
+			if (type == tdp_type.joystick)
+			{
+				var av = axis_value;
+				if (joystick_direction == -1 && av > 0)
+					av = 0;
+				else if (joystick_direction == 1 && av < 0)
+					av = 0;
+				if (av != 0)
+					return av;
+			}
+		}
+	}
+	return false;
 }

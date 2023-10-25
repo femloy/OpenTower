@@ -53,6 +53,32 @@ function try_solid(xoffset, yoffset, object, iterations)
 	y = old_y;
 	return n;
 }
+function ledge_bump_vertical()
+{
+	var old_x = x;
+	var old_y = y;
+	y += (argument1 * 4);
+	var dirs = [-1, 1];
+	for (var i = 0; i < array_length(dirs); i++)
+	{
+		var ledge_dir = dirs[i];
+		var tx = try_solid(ledge_dir, 0, obj_solid, argument0);
+		y = old_y;
+		if (tx != -1)
+		{
+			x -= (tx * ledge_dir);
+			y += argument1;
+			if (scr_solid(x, y))
+			{
+				x = old_x;
+				y = old_y;
+				return true;
+			}
+			return false;
+		}
+	}
+	return true;
+}
 function ledge_bump(iterations)
 {
 	var old_x = x;
@@ -149,11 +175,8 @@ function point_in_camera_ext(x, y, cam, extra_width, extra_height)
 	var cam_h = camera_get_view_height(cam);
 	return point_in_rectangle(x, y, cam_x - extra_width, cam_y - extra_height, cam_x + cam_w + extra_width, cam_y + cam_h + extra_height);
 }
-function bbox_in_camera(camera, threshold)
+function bbox_in_camera(camera, threshold = 0)
 {
-	if is_undefined(threshold)
-		threshold = 0;
-	
 	var cam_x = camera_get_view_x(camera);
 	var cam_y = camera_get_view_y(camera);
 	var cam_w = camera_get_view_width(camera);

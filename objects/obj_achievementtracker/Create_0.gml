@@ -80,6 +80,9 @@ ds_map_set(global.steam_achievements, "pranks3", "ACH_PRANK_3");
 ds_map_set(global.steam_achievements, "pranks4", "ACH_PRANK_4");
 ds_map_set(global.steam_achievements, "pranks5", "ACH_PRANK_5");
 
+ds_map_set(global.steam_achievements, "halloween1", "ACH_HALLOWEEN_1");
+ds_map_set(global.steam_achievements, "halloween2", "ACH_HALLOWEEN_2");
+
 #endregion
 
 achievements_update = [];
@@ -398,6 +401,73 @@ add_achievement_notify("pal_john", -4, function(data)
 	if (type == notifs.johnresurrection && global.file_minutes < 135)
 		palette_unlock(name, "john", 12, spr_peppattern9);
 }, false, "Palettes", "john");
+
+// Halloween
+var pats = [
+	["candy", 5, spr_peppattern10],
+	["bloodstained", 10, spr_peppattern11],
+	["bat", 15, spr_peppattern12],
+	["pumpkin", 20, spr_peppattern13],
+	["fur", 25, spr_peppattern14],
+	["flesh", 30, spr_peppattern15]
+];
+for (var i = 0; i < array_length(pats); i++)
+{
+	var pat = pats[i];
+	var p = add_achievement_notify(concat("pal_", pat[0]), -4, function(data)
+	{
+		var type = data[0];
+		var arr = data[1];
+		if (type == 59 && arr[0] >= pattern[1])
+			palette_unlock(name, pattern[0], 12, pattern[2]);
+	}, false, "Palettes", pat[0]);
+	if (!is_undefined(p) && !p.unlocked)
+		p.pattern = pat;
+}
+add_achievement_notify("halloween1", -4, function(data)
+{
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.pumpkin_collect && arr[0] >= 30)
+		achievement_unlock(name, "Pumpkin Munchkin", spr_achievement_halloween, 0);
+});
+add_achievement_notify("halloween2", function()
+{
+	achievement_add_variable("hw2count", 0, false, true);
+	achievement_add_variable("hw2start", false, false, true);
+}, function(data)
+{
+	var type = data[0];
+	var arr = data[1];
+	switch (type)
+	{
+		case notifs.trickytreat:
+			if (arr[0] == trickytreat_1)
+			{
+				if (achievement_get_variable("hw2count").value >= 10)
+				{
+					achievement_unlock(name, "Tricksy", spr_achievement_halloween, 1);
+					with (obj_achievementviewer)
+						event_perform(ev_other, ev_room_start);
+				}
+				else
+					trace("Couldn't get the achievement!, max count: ", achievement_get_variable("hw2count").value);
+				achievement_get_variable("hw2count").value = 0;
+			}
+			break;
+		case notifs.trickytreat_fail:
+			achievement_get_variable("hw2count").value = 0;
+			break;
+		case notifs.pumpkin_collect:
+			var r = string_letters(room_get_name(room));
+			if (r == "trickytreat" || r == "trickytreatb")
+			{
+				trace("Found pumpkin at: ", room_get_name(room));
+				achievement_get_variable("hw2count").value += 1;
+			}
+			break;
+	}
+});
 
 #endregion
 

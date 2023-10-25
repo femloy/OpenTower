@@ -1,6 +1,6 @@
 function scr_player_bump()
 {
-	if (sprite_index != spr_player_wallsplat)
+	if (sprite_index != spr_wallsplat)
 	{
 		movespeed = 0;
 		mach2 = 0;

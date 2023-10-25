@@ -1,9 +1,11 @@
 function scr_is_p_rank()
 {
-	if (global.leveltosave != "exit")
+	if (global.leveltosave != "exit" && global.leveltosave != "secretworld")
 		return global.lap && global.secretfound >= 3 && global.treasure && !global.combodropped && global.prank_enemykilled;
-	else
+	else if (global.leveltosave == "exit")
 		return !global.combodropped;
+	else
+		return !global.combodropped && global.prank_enemykilled;
 }
 function scr_do_rank(showtoppins = true, boss = false)
 {
@@ -93,6 +95,8 @@ function scr_do_rank(showtoppins = true, boss = false)
 				targetRoom = tower_entrancehall;
 				targetDoor = "HUB";
 			}
+			else if (global.leveltosave == "secretworld")
+				toppinvisible = false;
 			else if (room == tower_entrancehall)
 			{
 				with (obj_followcharacter)

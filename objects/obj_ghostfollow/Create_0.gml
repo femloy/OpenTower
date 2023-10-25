@@ -11,4 +11,6 @@ spr_palette = palette_pepgoblin;
 state = states.normal;
 fadein = false;
 usepalette = false;
+locked = false;
+mask_index = spr_ghostjohn;
 snd = fmod_event_create_instance("event:/sfx/enemies/johnghost");

@@ -29,13 +29,17 @@ function set_audio_config(save = true)
 function set_controller_config()
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
-	ini_write_real("ControllerConfig", "deadzone", global.gamepad_deadzone);
-	ini_write_real("ControllerConfig", "deadzone_vert", global.gamepad_deadzone_vertical);
-	ini_write_real("ControllerConfig", "deadzone_horiz", global.gamepad_deadzone_horizontal);
-	ini_write_real("ControllerConfig", "deadzonepress", global.gamepad_deadzone_press);
-	ini_write_real("ControllerConfig", "deadzonesuperjump", global.gamepad_deadzone_superjump);
-	ini_write_real("ControllerConfig", "deadzonecrouch", global.gamepad_deadzone_crouch);
-	ini_write_real("ControllerConfig", "superjump", global.gamepad_superjump);
-	ini_write_real("ControllerConfig", "groundpound", global.gamepad_groundpound);
+	
+	ini_write_real("InputConfig", "deadzone", global.input_controller_deadzone);
+	ini_write_real("InputConfig", "deadzone_vert", global.input_controller_deadzone_vertical);
+	ini_write_real("InputConfig", "deadzone_horiz", global.input_controller_deadzone_horizontal);
+	ini_write_real("InputConfig", "deadzonepress", global.input_controller_deadzone_press);
+	ini_write_real("InputConfig", "deadzonesuperjump", global.gamepad_deadzone_superjump);
+	ini_write_real("InputConfig", "deadzonecrouch", global.gamepad_deadzone_crouch);
+	ini_write_real("InputConfig", "superjump", global.gamepad_superjump);
+	ini_write_real("InputConfig", "groundpound", global.gamepad_groundpound);
+	ini_write_real("InputConfig", "kb_superjump", global.keyboard_superjump);
+	ini_write_real("InputConfig", "kb_groundpound", global.keyboard_groundpound);
+	
 	obj_savesystem.ini_str_options = ini_close();
 }

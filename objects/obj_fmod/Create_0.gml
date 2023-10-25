@@ -1,16 +1,17 @@
 /// @description load banks / define sounds.
-fmod_init(32);
+var maxChannels = 256;
+trace("Initializing FMOD: ", fmod_init(maxChannels));
 fmod_set_num_listeners(1);
 
-var banks = ["sound/Desktop/Master.strings.bank", "sound/Desktop/Master.bank", "sound/Desktop/music.bank", "sound/Desktop/sfx.bank"];
-trace("Loading banks!");
+var plat = "Desktop";
+var banks = [concat("sound/", plat, "/Master.bank"), concat("sound/", plat, "/music.bank"), concat("sound/", plat, "/sfx.bank"), concat("sound/", plat, "/Master.strings.bank")];
+trace("Loading banks! Platform -> ", plat);
 for (var i = 0; i < array_length(banks); i++)
 {
 	var b = working_directory + banks[i];
+	trace("Loading bank at: ", b);
 	if (!fmod_bank_load(b, false))
 		trace("Could not load bank: ", b);
-	else if (!fmod_bank_load_sample_data(b))
-		trace("Could not load sample data: ", b);
 }
 global.sound_map = ds_map_create();
 global.steam_api = false;

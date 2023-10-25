@@ -161,7 +161,8 @@ function scr_player_ratmount()
 		{
 			create_particle(x, y + 43, particle.cloudeffect, 0);
 			steppybuffer = 18;
-			fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
+			if (sprite_index != spr_player_ratmountattack)
+				fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
 		}
 	}
 	if (input_buffer_jump > 0 && can_jump && gusdashpadbuffer == 0 && state != states.ratmountskid)

@@ -1,10 +1,18 @@
-image_speed = 0;
-image_index = 0;
-spr_icon = -4;
-selected = false;
+state = (0 << 0);
 hovered = false;
-buttonid = 0;
+selected = false;
 parent = -4;
-info = -4;
-OnSelect = -4;
-OnDeselect = -4;
+stick_to_panel = true;
+name = "";
+text = "";
+icon_index = 0;
+icon = -4;
+
+on_left_click = function()
+{
+	trace("left click");
+};
+on_right_click = function()
+{
+	trace("right click");
+};

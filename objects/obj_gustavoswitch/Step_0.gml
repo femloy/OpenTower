@@ -4,20 +4,11 @@ if (sprite_index == spr_gustavoswitch2 && floor(image_index) == (image_number - 
 {
 	with (obj_player1)
 	{
-		visible = true;
-		create_particle(x, y, particle.genericpoofeffect);
-		ratmount_movespeed = 8;
-		gustavodash = 0;
-		isgustavo = true;
-		state = states.ratmount;
-		jumpAnim = false;
-		sprite_index = spr_player_ratmountidle;
-		brick = true;
+		scr_switchgustavo();
 		x = obj_gustavoswitch.x;
 		y = obj_gustavoswitch.y;
 		global.switchbuffer = 100;
-		fmod_event_instance_release(snd_voiceok);
-		snd_voiceok = fmod_event_create_instance("event:/sfx/voice/gusok");
+		create_particle(x, y, particle.genericpoofeffect);
 		if (room == street_jail)
 		{
 			with (obj_music)

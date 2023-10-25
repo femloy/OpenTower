@@ -2,10 +2,10 @@
   "resourceType": "GMScript",
   "resourceVersion": "1.0",
   "name": "wrap",
-  "isCompatibility": false,
   "isDnD": false,
+  "isCompatibility": false,
   "parent": {
-    "name": "Shortcuts",
-    "path": "folders/Scripts/General/Shortcuts.yy",
+    "name": "Utilities",
+    "path": "folders/Scripts/General/Utilities.yy",
   },
 }

@@ -13,7 +13,7 @@ if (state == 0)
 			}
 			showicon = true;
 			icon_alpha = 3;
-			buffer_async_group_begin("saves");
+			buffer_async_group_begin(get_buffer_group_name());
 			savebuff = buffer_create(1, 1, 1);
 			ini_open_from_string(ini_str);
 			ini_write_real("Game", "percent", get_percentage());

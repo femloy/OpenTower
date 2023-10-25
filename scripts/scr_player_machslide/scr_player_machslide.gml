@@ -16,9 +16,9 @@ function scr_player_machslide()
 		if (!grounded)
 		{
 			if (sprite_index == spr_machslideboost)
-				sprite_index = spr_player_machslideboostfall;
+				sprite_index = spr_machslideboostfall;
 			else if (sprite_index == spr_mach3boost)
-				sprite_index = spr_player_machslideboost3fall;
+				sprite_index = spr_mach3boostfall;
 		}
 		else
 			image_index = image_number - 1;
@@ -37,11 +37,11 @@ function scr_player_machslide()
 	if (place_meeting(x + xscale, y, obj_solid) && (sprite_index == spr_machslide || sprite_index == spr_machslidestart))
 	{
 		fmod_event_one_shot_3d("event:/sfx/pep/splat", x, y);
-		sprite_index = spr_player_wallsplat;
+		sprite_index = spr_wallsplat;
 		state = states.bump;
 		image_index = 0;
 	}
-	if (((floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost) || sprite_index == spr_player_machslideboostfall) && grounded)
+	if (((floor(image_index) == (image_number - 1) && sprite_index == spr_machslideboost) || sprite_index == spr_machslideboostfall) && grounded)
 	{
 		hsp = 0;
 		image_index = 0;
@@ -49,7 +49,7 @@ function scr_player_machslide()
 		movespeed = 8;
 		state = states.mach2;
 	}
-	if (((floor(image_index) == (image_number - 1) && sprite_index == spr_mach3boost) || sprite_index == spr_player_machslideboost3fall) && grounded)
+	if (((floor(image_index) == (image_number - 1) && sprite_index == spr_mach3boost) || sprite_index == spr_mach3boostfall) && grounded)
 	{
 		if (!launch)
 		{

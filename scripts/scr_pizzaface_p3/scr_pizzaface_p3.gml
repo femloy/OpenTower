@@ -457,8 +457,8 @@ function scr_pizzaface_p3_supergrab()
 						}
 						else
 						{
-							other.state = states.finale;
-							state = states.finale;
+							other.state = states.ending;
+							state = states.ending;
 							other.finale_x = x + ((other.x - x) / 2);
 						}
 					}

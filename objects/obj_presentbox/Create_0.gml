@@ -2,7 +2,6 @@ getout = 400;
 outtime = 200;
 getoutspd = 200;
 outtimespd = 200;
-randomize();
 character = 0;
 upspr = spr_noisepresentup;
 spr = spr_noisepresent;

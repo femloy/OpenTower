@@ -10,7 +10,7 @@ function scr_panicbg_init()
 	        layers[layernum++] = layername
 	}
 	if (!layernum)
-	    return;
+	    exit;
 	var bottom_id = layer_get_id(layers[0])
 	var top_id = layer_get_id(layers[layernum - 1])
 	layer_script_begin(bottom_id, scr_panicbg_start)

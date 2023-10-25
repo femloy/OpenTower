@@ -20,7 +20,7 @@ else if (((state == states.walk || (state == states.stun && !savedthrown)) && fl
 		instance_destroy(obj_noiseyspawner2);
 		fightballcount = 0;
 		substate = states.fightball;
-		state = states.finale;
+		state = states.ending;
 		sprite_index = spr_playerN_fightball;
 		image_index = 0;
 		image_speed = 0.35;

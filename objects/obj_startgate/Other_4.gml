@@ -102,7 +102,7 @@ for (var i = 0; i < array_length(_toppinspr); i++)
 		}
 	}
 }
-if (object_index == obj_startgate && level != "exit" && level != "tutorial")
+if (object_index == obj_startgate && level != "exit" && level != "tutorial" && level != "secretworld")
 {
 	for (i = 1; i <= 3; i++)
 	{

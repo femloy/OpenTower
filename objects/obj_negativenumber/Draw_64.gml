@@ -1,3 +1,6 @@
+if (!global.option_hud)
+	exit;
+
 draw_set_font(global.moneyfont);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);

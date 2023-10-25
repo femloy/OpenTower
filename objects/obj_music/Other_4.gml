@@ -39,39 +39,42 @@ if (!global.panic)
 	if (music != -4 && music.on_room_start != -4)
 		music.on_room_start(room, music.event, music.event_secret);
 }
-if (secret)
+if (!instance_exists(obj_randomsecret))
 {
-	if (music != -4 && music.event_secret != -4)
+	if (secret)
 	{
-		fmod_event_instance_play(music.event_secret);
-		fmod_event_instance_set_paused(music.event_secret, false);
-		pos = fmod_event_instance_get_timeline_pos(music.event);
-		savedmusicpos = pos;
-		pos = music_get_pos_wrap(pos, fmod_event_get_length(music.event_secret_name));
-		fmod_event_instance_set_timeline_pos(music.event_secret, pos);
-		fmod_event_instance_set_paused(music.event, true);
+		if (music != -4 && music.event_secret != -4)
+		{
+			fmod_event_instance_play(music.event_secret);
+			fmod_event_instance_set_paused(music.event_secret, false);
+			pos = fmod_event_instance_get_timeline_pos(music.event);
+			savedmusicpos = pos;
+			pos = music_get_pos_wrap(pos, fmod_event_get_length(music.event_secret_name));
+			fmod_event_instance_set_timeline_pos(music.event_secret, pos);
+			fmod_event_instance_set_paused(music.event, true);
+		}
+		if (global.panic)
+		{
+			trace("Pausing panic music: room_start");
+			savedpanicpos = fmod_event_instance_get_timeline_pos(panicmusicID);
+			fmod_event_instance_set_paused(panicmusicID, true);
+		}
 	}
-	if (global.panic)
+	else if (secretend)
 	{
-		trace("Pausing panic music: room_start");
-		savedpanicpos = fmod_event_instance_get_timeline_pos(panicmusicID);
-		fmod_event_instance_set_paused(panicmusicID, true);
-	}
-}
-else if (secretend)
-{
-	secretend = false;
-	if (music != -4)
-	{
-		fmod_event_instance_stop(music.event_secret, true);
-		fmod_event_instance_set_paused(music.event, false);
-		fmod_event_instance_set_timeline_pos(music.event, savedmusicpos);
-	}
-	if (global.panic)
-	{
-		fmod_event_instance_set_timeline_pos(panicmusicID, savedpanicpos);
-		fmod_event_instance_set_paused(panicmusicID, false);
-		trace("Resuming panic music: room_start");
+		secretend = false;
+		if (music != -4)
+		{
+			fmod_event_instance_stop(music.event_secret, true);
+			fmod_event_instance_set_paused(music.event, false);
+			fmod_event_instance_set_timeline_pos(music.event, savedmusicpos);
+		}
+		if (global.panic)
+		{
+			fmod_event_instance_set_timeline_pos(panicmusicID, savedpanicpos);
+			fmod_event_instance_set_paused(panicmusicID, false);
+			trace("Resuming panic music: room_start");
+		}
 	}
 }
 if (room == rank_room || room == boss_pizzaface || room == boss_noise || room == boss_vigilante || room == boss_fakepep || room == boss_pepperman)

@@ -1,3 +1,5 @@
+if (!global.option_hud)
+	exit;
 if (alpha > 0)
 {
 	var text = concat(palettetitle, "\n", palettedesc);

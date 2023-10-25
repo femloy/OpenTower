@@ -1046,13 +1046,13 @@ function scr_noise_finale()
 			if (obj_noisettefinale.x <= x)
 			{
 				create_debris(x, y, spr_minigunfall);
-				substate = states.finale;
+				substate = states.ending;
 				sprite_index = spr_playerN_bump;
 				with (obj_player1)
 					sprite_index = spr_idle;
 			}
 			break;
-		case states.finale:
+		case states.ending:
 			x = obj_noisettefinale.x + 20;
 			if (x < (room_width / 5) && sprite_index != spr_playerN_bossintro)
 			{

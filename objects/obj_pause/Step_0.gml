@@ -1,3 +1,5 @@
+if (instance_exists(obj_softlockcrash))
+	exit;
 if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != Mainmenu && room != Finalintro && room != hub_loadingscreen && room != Endingroom && room != Creditsroom && room != Johnresurrectionroom && room != Longintro && room != Realtitlescreen && room != rank_room)
 {
 	var _cutscenehandler = false;
@@ -37,6 +39,25 @@ if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != M
 		fadein = true;
 		pause = true;
 		fade = 0;
+		
+		var oldpause = pausemusicID;
+		pausemusicID = pausemusic_original;
+		if (is_holiday(holiday.halloween))
+			pausemusicID = pausemusic_halloween;
+		if (oldpause != pausemusicID)
+			fmod_event_instance_stop(oldpause, true);
+		
+		pause_menu = ["pause_resume", "pause_options"];
+		if (global.leveltorestart != -4)
+		{
+			array_push(pause_menu, "pause_restart");
+			if (global.leveltorestart != tower_tutorial1 && global.leveltorestart != tower_finalhallway && global.leveltorestart != secret_entrance)
+				array_push(pause_menu, "pause_achievements");
+			array_push(pause_menu, "pause_exit");
+		}
+		else
+			array_push(pause_menu, "pause_exit_title");
+		
 		with (obj_music)
 		{
 			if (music != -4)
@@ -183,6 +204,7 @@ with (obj_player1)
 	other.paletteselect = paletteselect;
 	other.spr_palette = spr_palette;
 }
+
 border1_xstart = 0;
 border1_ystart = SCREEN_HEIGHT;
 border1_xend = -96;
@@ -191,6 +213,15 @@ border2_xstart = SCREEN_WIDTH;
 border2_ystart = SCREEN_HEIGHT;
 border2_xend = SCREEN_WIDTH + 96;
 border2_yend = SCREEN_HEIGHT + 100;
+
+if (is_holiday(holiday.halloween))
+{
+	border1_xend = -128;
+	border1_yend = obj_screensizer.actual_height + 150;
+	border2_xend = obj_screensizer.actual_width + 128;
+	border2_yend = obj_screensizer.actual_height + 150;
+}
+
 vine_ystart = 0;
 vine_yend = -117;
 if (!start)
@@ -230,132 +261,39 @@ if (!instance_exists(obj_loadingscreen))
 }
 cursor_index += 0.35;
 pause_update_priests();
+
 var prevpause = pause;
-if (pause && !instance_exists(obj_option) && alarm[3] == -1)
+if (pause && !instance_exists(obj_option) && !instance_exists(obj_achievement_pause) && alarm[3] == -1)
 {
-	scr_getinput();
+	scr_menu_getinput();
 	var _dvc = obj_inputAssigner.player_input_device[0];
-    if (key_jump && _dvc >= 0 && gamepad_button_check_pressed(_dvc, global.key_jumpC) && global.key_jumpC == gp_face2)
-        key_jump = false;
-    key_jump = (key_jump || (global.key_start != vk_return && keyboard_check_pressed(vk_return)) || (global.key_start != vk_space && keyboard_check_pressed(vk_space)) || gamepad_button_check_pressed(obj_inputAssigner.player_input_device[0], gp_face1));
-	key_back = (keyboard_check_pressed(vk_escape) || keyboard_check_pressed(vk_return) || gamepad_button_check_pressed(obj_inputAssigner.player_input_device[0], gp_face2) || gamepad_button_check_pressed(obj_inputAssigner.player_input_device[0], gp_start));
+	key_back = key_back || key_start;
 	if (backbuffer > 0)
 	{
 		backbuffer--;
 		key_back = false;
 	}
 	moveselect = -key_up2 + key_down2;
+	var prevselect = selected;
 	selected += moveselect;
-	if (moveselect != 0 && selected >= 0 && selected <= 3)
+	if (selected >= array_length(pause_menu))
+		selected = 0;
+	else if (selected < 0)
+		selected = array_length(pause_menu) - 1;
+	if (prevselect != selected)
 	{
 		fmod_event_one_shot("event:/sfx/ui/angelmove");
 		update_cursor = true;
 	}
-	selected = clamp(selected, 0, array_length(pause_menu) - 1);
 	if (key_back)
 	{
 		selected = 0;
 		key_jump = true;
 	}
 	if (key_jump)
-	{
-		switch (selected)
-		{
-			case 0:
-				scr_pause_activate_objects();
-				pause_unpause_music();
-				instance_destroy(obj_option);
-                instance_destroy(obj_keyconfig);
-				break;
-			
-			case 2:
-				if (room == Endingroom || room == tower_soundtest || room == Creditsroom || room == Johnresurrectionroom)
-					break;
-				else
-				{
-					if !global.snickchallenge
-					{
-						var rm = global.leveltorestart;
-						if rm != noone && rm != -1
-						{
-							alarm[5] = 1;
-							roomtorestart = rm;
-							pause_unpause_music();
-							stop_music();
-							scr_pause_activate_objects();
-							scr_pause_stop_sounds();
-							instance_destroy(obj_option);
-							instance_destroy(obj_keyconfig);
-							pause = false;
-						}
-						else
-							fmod_event_one_shot("event:/sfx/ui/select");
-					}
-					break;
-				}
-			
-			case 1:
-				fmod_event_one_shot("event:/sfx/ui/select");
-				with (instance_create(x, y, obj_option))
-					depth = other.depth - 1;
-				break;
-			
-			case 3:
-				if (room == Endingroom || room == Creditsroom || room == Johnresurrectionroom)
-					break;
-				else
-				{
-					pause_unpause_music();
-					stop_music();
-					scr_pause_stop_sounds();
-					instance_destroy(obj_option);
-					instance_destroy(obj_keyconfig);
-					fmod_event_instance_stop(global.snd_bossbeaten, 1);
-					fmod_event_instance_stop(pausemusicID, 1);
-					obj_music.music = noone;
-					var sl = ds_list_create();
-					var il = ds_list_create();
-					var arr = noone;
-					ds_list_copy(sl, sound_list);
-					ds_list_copy(il, instance_list);
-					if (room == hub_room1 || room == Finalintro || room == characterselect || room == cowboytask || room == Titlescreen || room == Mainmenu || room == Scootertransition || room == rm_levelselect || (string_copy(room_get_name(room), 1, 5) == "tower" && (!global.panic)))
-					{
-						if global.startgate
-						{
-							hub = 1;
-							arr = ["hubgroup"];
-							global.startgate = false;
-						}
-						else
-						{
-							hub = 0;
-							arr = ["menugroup"];
-						}
-					}
-					else
-					{
-						global.startgate = false;
-						hub = 1;
-						arr = ["hubgroup"];
-					}
-					alarm[3] = 1;
-					ds_list_add(il, id);
-					with textures_offload(arr)
-					{
-						ds_list_clear(sound_list);
-						ds_list_clear(instance_list);
-						ds_list_copy(sound_list, sl);
-						ds_list_copy(instance_list, il);
-					}
-					instance_deactivate_object(id);
-					ds_list_destroy(sl);
-					ds_list_destroy(il);
-					break;
-				}
-		}
-	}
+		array_get(ds_map_find_value(pause_menu_map, array_get(pause_menu, selected)), 1)();
 }
 if (pause)
-	scr_pauseicons_update(selected);
+	scr_pauseicons_update(array_get(ds_map_find_value(pause_menu_map, array_get(pause_menu, selected)), 0));
 else
 	scr_pauseicons_update(-1);

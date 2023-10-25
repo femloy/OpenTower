@@ -801,7 +801,7 @@ function gameframe_caption_get_overlap() {
 
 function gameframe_caption_draw_border_default(__x, __y, __width, __height) {
 	// gameframe_caption_draw_border_default(_x:int, _y:int, _width:int, _height:int)
-	draw_sprite_stretched_ext(gameframe_spr_border, (window_has_focus() ? 1 : 0), __x, __y, __width, __height, gameframe_blend, 1);
+	draw_sprite_stretched_ext(gameframe_spr_border, (window_has_focus() ? 1 : 0), __x, __y, __width, __height, gameframe_blend, gameframe_alpha);
 }
 
 function gameframe_caption_draw_caption_rect_default(__x, __y, __width, __height, __buttons_x) {

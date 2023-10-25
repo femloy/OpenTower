@@ -18,7 +18,7 @@ for (var i = 0; i < array_length(global.credits_arr); i++)
 	else
 	{
 		if ((i % 2) == 0)
-			array_push(arr2, "ñ");
+			array_push(arr2, " ");
 		array_push(arr1, b);
 		array_push(arr2, b);
 	}

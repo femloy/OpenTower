@@ -59,3 +59,23 @@ function scr_checkanygamepad(device)
 		return gp_axisrv;
 	return noone;
 }
+function scr_check_joysticks(device)
+{
+	if (gamepad_axis_value(device, gp_axislh) > 0.5)
+        return [gp_axislh, 1];
+    if (gamepad_axis_value(device, gp_axislh) < -0.5)
+        return [gp_axislh, -1];
+    if (gamepad_axis_value(device, gp_axislv) > 0.5)
+        return [gp_axislh, 1];
+    if (gamepad_axis_value(device, gp_axislv) < -0.5)
+        return [gp_axislv, -1];
+    if (gamepad_axis_value(device, gp_axisrh) > 0.5)
+        return [gp_axisrh, 1];
+    if (gamepad_axis_value(device, gp_axisrh) < -0.5)
+        return [gp_axisrh, -1];
+    if (gamepad_axis_value(device, gp_axisrv) > 0.5)
+        return [gp_axisrh, 1];
+    if (gamepad_axis_value(device, gp_axisrv) < -0.5)
+        return [gp_axisrv, -1];
+    return noone;
+}

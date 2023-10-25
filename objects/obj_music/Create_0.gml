@@ -40,6 +40,17 @@ add_music(tower_finalhallway, "event:/music/finalescape", -4, 0)
 add_music(tower_finalhallwaytitlecard, "event:/music/pillarmusic", -4, 0)
 add_music(tower_pizzafacehall, "event:/music/w5/finalhallway", -4, 0)
 add_music(tower_outside, "event:/sfx/misc/windloop", -4, 0)
+
+add_music(tower_soundtestlevel, "event:/sfx/misc/pillarmusic", -4, 0)
+add_music(trickytreat_1, "event:/music/halloween2023", -4, 0, function(room, parameter)
+{
+    if (room == trickytreat_1)
+        fmod_event_instance_set_parameter(parameter, "state", 0, 1)
+    else
+        fmod_event_instance_set_parameter(parameter, "state", 1, 1)
+})
+add_music(secret_entrance, "event:/music/secretworld", -4, 0)
+
 add_music(tower_1up, "event:/music/pillarmusic", -4, 0)
 add_music(tower_2up, "event:/music/pillarmusic", -4, 0)
 add_music(tower_3up, "event:/music/pillarmusic", -4, 0)
@@ -62,7 +73,7 @@ add_music(entrance_1, "event:/music/w1/entrance", "event:/music/w1/entrancesecre
 {
 	var s = 0
 	fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(medieval_1, "event:/music/w1/medieval", "event:/music/w1/medievalsecret", 0, function(room, event, event_secret) //anon_gml_Object_obj_music_Create_0_3410_gml_Object_obj_music_Create_0
@@ -85,7 +96,7 @@ add_music(medieval_1, "event:/music/w1/medieval", "event:/music/w1/medievalsecre
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", 0, function(room, event) //anon_gml_Object_obj_music_Create_0_3822_gml_Object_obj_music_Create_0
@@ -104,7 +115,7 @@ add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", 0, funct
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(dungeon_1, "event:/music/w1/dungeon", "event:/music/w1/dungeonsecret", 0)
@@ -126,7 +137,7 @@ add_music(badland_1, "event:/music/w2/desert", "event:/music/w2/desertsecret", 0
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", 0, function(room, event) //anon_gml_Object_obj_music_Create_0_4823_gml_Object_obj_music_Create_0
@@ -145,7 +156,7 @@ add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", 0, funct
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(graveyard_1, "event:/music/w2/graveyard", "event:/music/w2/graveyardsecret", 0)
@@ -171,7 +182,7 @@ add_music(forest_1, "event:/music/w3/forest", "event:/music/w3/forestsecret", 0,
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(minigolf_1, "event:/music/w3/golf", "event:/music/w3/golfsecret", 0)
@@ -192,7 +203,7 @@ add_music(freezer_1, "event:/music/w4/freezer", "event:/music/w4/freezersecret",
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industrialsecret", 0, function(room, event, event_secret)
@@ -211,7 +222,7 @@ add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industria
 
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, 1)
-	return;
+	exit;
 }
 )
 add_music(sewer_1, "event:/music/w4/sewer", "event:/music/w4/sewersecret", 0)
@@ -225,7 +236,7 @@ add_music(street_1, "event:/music/w4/street", "event:/music/w4/streetsecret", 0,
 		fmod_set_parameter("musicmuffle", 1, 0)
 	else
 		fmod_set_parameter("musicmuffle", 0, 0)
-	return;
+	exit;
 }
 )
 add_music(chateau_1, "event:/music/w5/chateau", "event:/music/w1/medievalsecret", 0)

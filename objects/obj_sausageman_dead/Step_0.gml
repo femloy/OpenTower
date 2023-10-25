@@ -5,19 +5,24 @@ if (buffer > 0)
 if (d > 150)
 	d -= 20;
 make_colour_hsv(255, 255, d);
-if (place_meeting(x + floor(hsp), y, obj_null))
-{
-	x = floor(x);
-	while (!place_meeting(x + sign(hsp), y, obj_null))
-		x += sign(hsp);
-	hsp = 0;
-}
 x += hsp;
-if (place_meeting(x, y + floor(vsp), obj_null))
-{
-	y = floor(y);
-	while (!place_meeting(x, y + sign(vsp), obj_null))
-		y += sign(vsp);
-	vsp = 0;
-}
 y += floor(vsp);
+if (buffer <= 0)
+{
+	var p = obj_player1.id;
+	if (p.instakillmove && place_meeting(x, y, p))
+	{
+		vsp = random_range(-10, -18);
+		hsp = sign(x - p.x) * random_range(10, 18);
+		grav = 0.4;
+		angle = 0;
+		spinspeed = choose(0, 0, 0, 10, 20);
+		alarm[0] = 5;
+		cigar = false;
+		stomped = false;
+		instance_create(x, y, obj_bangeffect);
+		buffer = 10;
+		if (x != p.x)
+			image_xscale = -sign(x - p.x);
+	}
+}

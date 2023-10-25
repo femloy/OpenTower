@@ -88,7 +88,16 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 			global.fill = 4056;
 			break;
 	}
-	instance_create_unique(0, 0, obj_hungrypillarflash);
+	
+	with (instance_create(x, y, obj_sausageman_dead))
+	{
+		var debris = id;
+		sprite_index = spr_hungrypillar_dead;
+		if (room == tower_finalhallway)
+			sprite_index = spr_protojohn;
+	}
+	with instance_create_unique(0, 0, obj_hungrypillarflash)
+		debrisid = debris;
 	
 	with (obj_tv)
 		chunkmax = global.fill;
@@ -123,12 +132,6 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 		shake_mag_acc = 3 / room_speed;
 	}
 	instance_destroy();
-	with (instance_create(x, y, obj_sausageman_dead))
-	{
-		sprite_index = spr_hungrypillar_dead;
-		if (room == tower_finalhallway)
-			sprite_index = spr_protojohn;
-	}
 	fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
 	instance_create(x, y + 600, obj_itspizzatime);
 	global.panic = true;

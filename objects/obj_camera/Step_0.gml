@@ -217,7 +217,7 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 				dis = max(1, dis);
 				camera_zoom(dis, 0.035);
 			}
-			if (shake_mag != 0)
+			if (shake_mag != 0 && global.option_screenshake)
 			{
 				cam_x += irandom_range(-shake_mag, shake_mag);
 				cam_y += irandom_range(-shake_mag, shake_mag);
@@ -228,7 +228,9 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 				cam_x += ((cam_width - room_width) / 2);
 			if (cam_height > room_height)
 				cam_y += ((cam_height - room_height) / 2);
-			camera_set_view_pos(view_camera[0], cam_x, cam_y + irandom_range(-shake_mag, shake_mag));
+			if (global.option_screenshake)
+				cam_y += irandom_range(-shake_mag, shake_mag);
+			camera_set_view_pos(view_camera[0], cam_x, cam_y);
 			break;
 		
 		case states.camera_followtarget:
@@ -245,7 +247,7 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 			cam_y = cy - (cam_height / 2);
 			cam_x = clamp(cam_x, 0, room_width - cam_width);
 			cam_y = clamp(cam_y, 0, room_height - cam_height);
-			if (shake_mag != 0)
+			if (shake_mag != 0 && global.option_screenshake)
 			{
 				cam_x += irandom_range(-shake_mag, shake_mag);
 				cam_y += irandom_range(-shake_mag, shake_mag);
@@ -254,7 +256,9 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 				cam_x += ((cam_width - room_width) / 2);
 			if (cam_height > room_height)
 				cam_y += ((cam_height - room_height) / 2);
-			camera_set_view_pos(view_camera[0], cam_x, cam_y + irandom_range(-shake_mag, shake_mag));
+			if (global.option_screenshake)
+				cam_y += irandom_range(-shake_mag, shake_mag);
+			camera_set_view_pos(view_camera[0], cam_x, cam_y);
 			break;
 	}
 }

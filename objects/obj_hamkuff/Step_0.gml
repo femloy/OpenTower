@@ -1,5 +1,5 @@
 if (room == rm_editor)
-	return;
+	exit;
 switch state
 {
 	case states.idle:

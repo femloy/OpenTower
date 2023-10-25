@@ -1,4 +1,4 @@
-if (global.panic == false)
+if (!global.panic && !instance_exists(obj_randomsecret) && object_index != obj_halloweenfollow)
 {
 	destroy_sounds([snd]);
 	instance_destroy();
@@ -10,5 +10,7 @@ else
 		objectID = other.id;
 		sprite_index = spr_icon_ghostjohn;
 		image_speed = 0.18;
+		if (other.object_index == obj_halloweenfollow)
+			sprite_index = spr_ghostpumpkinicon;
 	}
 }

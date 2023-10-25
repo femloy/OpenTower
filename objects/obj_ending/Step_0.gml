@@ -1,3 +1,4 @@
+scr_menu_getinput();
 if (state == 3)
 	showtext = true;
 else
@@ -113,7 +114,7 @@ switch (state)
 			if (music != -4 && !fmod_event_instance_is_playing(music.event))
 				_continue = true;
 		}
-		if (keyboard_check_pressed(global.key_slap) || gamepad_button_check_pressed(obj_inputAssigner.player_input_device[0], global.key_slapC))
+		if (key_jump)
 			_continue = true;
 		if (_continue)
 			state++;

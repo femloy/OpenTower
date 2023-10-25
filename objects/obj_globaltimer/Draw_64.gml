@@ -2,6 +2,8 @@ if (!global.option_timer || room == Realtitlescreen || room == Longintro || room
 	exit;
 if (!global.option_hud || (instance_exists(obj_debugcontroller) && !obj_debugcontroller.showhud))
 	exit;
+if (instance_exists(obj_pause) && obj_pause.pause && !global.option_speedrun_timer)
+	exit;
 draw_set_color(c_white);
 var seconds = 0;
 var minutes = 0;

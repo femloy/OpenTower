@@ -6,19 +6,19 @@ function scr_get_tutorial_key(char)
 	switch (char)
 	{
 		case vk_left:
-			spr = spr_tutorialgamepad;
+			spr = global.spr_gamepadbuttons;
 			ix = 16;
 			break;
 		case vk_right:
-			spr = spr_tutorialgamepad;
+			spr = global.spr_gamepadbuttons;
 			ix = 17;
 			break;
 		case vk_up:
-			spr = spr_tutorialgamepad;
+			spr = global.spr_gamepadbuttons;
 			ix = 4;
 			break;
 		case vk_down:
-			spr = spr_tutorialgamepad;
+			spr = global.spr_gamepadbuttons;
 			ix = 5;
 			break;
 		case vk_shift:

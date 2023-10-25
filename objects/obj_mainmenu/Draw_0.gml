@@ -1,7 +1,10 @@
 var cx = camera_get_view_x(view_camera[0]);
 var cy = camera_get_view_y(view_camera[0]);
 draw_sprite_ext(sprite1122, 0, cx, cy, SCREEN_WIDTH / 64, SCREEN_HEIGHT / 64, 0, c_white, 1);
-draw_sprite(spr_mainmenu_bg, 0, obj_screensizer.normal_size_fix_x, 0);
+var index = 0;
+if (is_holiday(holiday.halloween))
+	index = 1;
+draw_sprite(spr_mainmenu_bg, index, obj_screensizer.normal_size_fix_x, 0);
 with (obj_menutv2)
 	draw_self();
 shader_set(global.Pal_Shader);
@@ -34,7 +37,10 @@ draw_set_font(lang_get_font("bigfont"));
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(c_white);
-draw_sprite(spr_controlseggplant, (obj_inputAssigner.player_input_device[0] < 0 ? 0 : 1), SCREEN_WIDTH * 0.853125, 84);
+var options_x = obj_screensizer.actual_width * 0.853125;
+var options_y = 84;
+draw_sprite(spr_controlseggplant, 0, options_x, options_y);
+scr_draw_text_arr(options_x - 88, options_y - 37, start_key, c_white);
 var status_x = 183;
 var status_y = 312;
 var percentstate_x = 199;

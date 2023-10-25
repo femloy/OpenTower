@@ -8,3 +8,4 @@ hsp_carry = 0;
 vsp_carry = 0;
 buffer = 0;
 depth = 0;
+rail = instance_exists(obj_railparent);

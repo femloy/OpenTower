@@ -1,5 +1,11 @@
 function state_player_normal()
 {
+	var maxmovespeed = 8;
+	var maxmovespeed2 = 6;
+	var accel = 0.5;
+	var deccel = 0.1;
+	var jumpspeed = -11;
+	
 	mach2 = 0;
 	move = key_left + key_right;
 	skateboarding = false;
@@ -67,14 +73,15 @@ function state_player_normal()
 	hsp = (move * movespeed) + (railmovespeed * raildir);
 	if (move != 0)
 	{
-		xscale = move;
-		if (movespeed < 8)
-			movespeed += 0.5;
-		else if (floor(movespeed) == 8)
-			movespeed = 6;
-		if (movespeed < 3 && move != 0)
+		if (move != 0) // redundant...
+			xscale = move;
+		if (movespeed < maxmovespeed)
+			movespeed += accel;
+		else if (floor(movespeed) == maxmovespeed)
+			movespeed = maxmovespeed2;
+		if (movespeed < (floor(maxmovespeed2) / 2) && move != 0)
 			image_speed = 0.35;
-		else if (movespeed > 3 && movespeed < 6)
+		else if (movespeed > (floor(maxmovespeed2) / 2) && movespeed < maxmovespeed2)
 			image_speed = 0.45;
 		else
 			image_speed = 0.6;
@@ -195,8 +202,8 @@ function state_player_normal()
 			}
 		}
 	}
-	if (movespeed > 8)
-		movespeed -= 0.1;
+	if (movespeed > maxmovespeed)
+		movespeed -= deccel;
 	if (landAnim)
 	{
 		if (sprite_index == spr_player_mortland)
@@ -291,7 +298,7 @@ function state_player_normal()
 			}
 			particle_set_scale(particle.highjumpcloud2, xscale, 1);
 			create_particle(x, y, particle.highjumpcloud2, 0);
-			vsp = -11;
+			vsp = jumpspeed;
 			state = states.jump;
 			jumpAnim = true;
 			jumpstop = false;

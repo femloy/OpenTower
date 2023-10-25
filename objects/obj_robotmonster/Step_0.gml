@@ -142,7 +142,6 @@ if (object_index == obj_robotmonster || object_index == obj_hillbillymonster)
 {
 	if (state == states.robotchase || state == states.robotseeking || state == states.robotinvestigate)
 	{
-		instance_destroy(instance_place(x + hsp, y, obj_wirewall));
 		instance_destroy(instance_place(x + hsp, y, obj_destructibles));
 		instance_destroy(instance_place(x + hsp, y, obj_spike));
 	}

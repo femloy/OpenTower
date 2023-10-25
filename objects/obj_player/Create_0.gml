@@ -3,6 +3,7 @@ if (instance_number(object_index) > 1)
 	instance_destroy();
 	exit;
 }
+global.current_level = -4;
 global.throwarc = 1;
 global.hidetiles = false;
 global.leveltosave = -4;
@@ -28,6 +29,9 @@ global.playerhit = 0;
 global.door_sprite = spr_door;
 global.door_index = 0;
 global.pistol = false;
+lastroom_soundtest = room;
+lastroom_secretportalID = -4;
+dropboost = false;
 uncrouch = 0;
 parryID = -4;
 bodyslam_notif = false;
@@ -176,6 +180,8 @@ parry_count = 0;
 parry_max = 8;
 is_firing = false;
 input_buffer_jump = 0;
+input_buffer_down = 0;
+input_buffer_mach = 0;
 input_buffer_jump_negative = 0;
 input_buffer_shoot = 0;
 input_buffer_secondjump = 8;

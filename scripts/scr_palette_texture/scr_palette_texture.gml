@@ -34,7 +34,13 @@ function scr_get_texture_palette(texture)
 		["bones", spr_peppattern6],
 		["pp", spr_peppattern7],
 		["war", spr_peppattern8],
-		["john", spr_peppattern9]
+		["john", spr_peppattern9],
+		["candy", spr_peppattern10],
+		["bloodstained", spr_peppattern11],
+		["bat", spr_peppattern12],
+		["pumpkin", spr_peppattern13],
+		["fur", spr_peppattern14],
+		["flesh", spr_peppattern15]
 	];
 	if (texture != "none")
 	{

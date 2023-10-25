@@ -41,6 +41,7 @@ switch (state)
 		if (y >= ystart)
 		{
 			y = ystart;
+			instance_destroy(instance_place(x, y, obj_ramp));
 			create_particle(x, y, particle.landcloud);
 			state = states.normal;
 			if (sprite_index == spr_gustavo_exitshuttle)

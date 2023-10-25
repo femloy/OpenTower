@@ -11,8 +11,19 @@ enum textkey
 	jump,
 	shoot,
 	taunt,
-	groundpound, // gamepad only
-	superjump // gamepad only
+	groundpound,	// gamepad
+	superjump,		// gamepad
+	
+	menu_up,		// 13
+	menu_left,		// 14
+	menu_right,		// 15
+	menu_down,		// 16
+	menu_select,	// 17
+	menu_back,		// 18
+	menu_delete,	// 19
+	menu_quit,		// 20
+	menu_start,		// 21
+	reset_binds		// 22
 }
 enum texteffect
 {
@@ -133,6 +144,38 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 						break;
 					case "[s]":
 						b = textkey.superjump;
+						break;
+					
+					// MENU
+					case "[u]":
+						b = textkey.menu_up;
+						break;
+					case "[d]":
+						b = textkey.menu_down;
+						break;
+					case "[l]":
+						b = textkey.menu_left;
+						break;
+					case "[r]":
+						b = textkey.menu_right;
+						break;
+					case "[c]":
+						b = textkey.menu_select;
+						break;
+					case "[b]":
+						b = textkey.menu_back;
+						break;
+					case "[q]":
+						b = textkey.menu_quit;
+						break;
+					case "[x]":
+						b = textkey.menu_delete;
+						break;
+					case "[p]":
+						b = textkey.menu_start;
+						break;
+					case "[y]":
+						b = textkey.reset_binds;
 						break;
 				}
 				array_push(arr, [char_x, char_y, t, b]);
@@ -258,128 +301,90 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 		switch t
 		{
 			case texttype.icon:
-				var spr = -4;
-				var ix = 0;
-				var txt = -4;
-				
-				if obj_inputAssigner.player_input_device[0] >= 0
+				var icon = noone;
+				switch val
 				{
-					spr = spr_tutorialgamepad;
-					switch val
-					{
-						case textkey.down:
-							ix = scr_get_gamepadicon(global.key_downC);
-							break;
-						case textkey.up:
-							ix = scr_get_gamepadicon(global.key_upC);
-							break;
-						case textkey.mach:
-							ix = scr_get_gamepadicon(global.key_attackC);
-							break;
-						case textkey.jump:
-							ix = scr_get_gamepadicon(global.key_jumpC);
-							break;
-						case textkey.grab:
-							ix = scr_get_gamepadicon(global.key_slapC);
-							break;
-						case textkey.forwards:
-							if (instance_exists(obj_player1) && obj_player1.xscale > 0)
-								ix = scr_get_gamepadicon(global.key_rightC);
-							else
-								ix = scr_get_gamepadicon(global.key_leftC);
-							break;
-						case textkey.backwards:
-							if (instance_exists(obj_player1) && obj_player1.xscale > 0)
-								ix = scr_get_gamepadicon(global.key_leftC);
-							else
-								ix = scr_get_gamepadicon(global.key_rightC);
-							break;
-						case textkey.left:
-							ix = scr_get_gamepadicon(global.key_leftC);
-							break;
-						case textkey.right:
-							ix = scr_get_gamepadicon(global.key_rightC);
-							break;
-						case textkey.shoot:
-							ix = scr_get_gamepadicon(global.key_shootC);
-							break;
-						case textkey.taunt:
-							ix = scr_get_gamepadicon(global.key_tauntC);
-							break;
-						case textkey.groundpound:
-							if global.gamepad_groundpound
-								ix = scr_get_gamepadicon(global.key_downC);
-							else
-								ix = scr_get_gamepadicon(global.key_groundpoundC);
-							break;
-						case textkey.superjump:
-							if global.gamepad_superjump
-								ix = scr_get_gamepadicon(global.key_upC);
-							else
-								ix = scr_get_gamepadicon(global.key_superjumpC);
-							break;
-					}
-				}
-				else
-				{
-					spr = spr_tutorialkey;
-					ix = 0;
+					case textkey.down:
+						icon = tdp_get_tutorial_icon("player_down");
+						break;
+					case textkey.up:
+						icon = tdp_get_tutorial_icon("player_up");
+						break;
+					case textkey.left:
+						ix = tdp_get_tutorial_icon("player_left");
+						break;
+					case textkey.right:
+						ix = tdp_get_tutorial_icon("player_right");
+						break;
+					case textkey.mach:
+						ix = tdp_get_tutorial_icon("player_attack");
+						break;
+					case textkey.jump:
+						ix = tdp_get_tutorial_icon("player_jump");
+						break;
+					case textkey.grab:
+						ix = tdp_get_tutorial_icon("player_slap");
+						break;
+					case textkey.taunt:
+						icon = tdp_get_tutorial_icon("player_taunt");
+						break;
 					
-					var arr = noone;
-					switch val
-					{
-						case textkey.down:
-							arr = scr_get_tutorial_key(global.key_down);
-							break;
-						case textkey.up:
-							arr = scr_get_tutorial_key(global.key_up);
-							break;
-						case textkey.mach:
-							arr = scr_get_tutorial_key(global.key_attack);
-							break;
-						case textkey.jump:
-							arr = scr_get_tutorial_key(global.key_jump);
-							break;
-						case textkey.grab:
-							arr = scr_get_tutorial_key(global.key_slap);
-							break;
-						case textkey.forwards:
-							if (instance_exists(obj_player1) && obj_player1.xscale > 0)
-								arr = scr_get_tutorial_key(global.key_right);
-							else
-								arr = scr_get_tutorial_key(global.key_left);
-							break;
-						case textkey.backwards:
-							if (instance_exists(obj_player1) && obj_player1.xscale > 0)
-								arr = scr_get_tutorial_key(global.key_left);
-							else
-								arr = scr_get_tutorial_key(global.key_right);
-							break;
-						case textkey.left:
-							arr = scr_get_tutorial_key(global.key_left);
-							break;
-						case textkey.right:
-							arr = scr_get_tutorial_key(global.key_right);
-							break;
-						case textkey.shoot:
-							arr = scr_get_tutorial_key(global.key_shoot);
-							break;
-						case textkey.taunt:
-							arr = scr_get_tutorial_key(global.key_taunt);
-							break;
-						case textkey.groundpound:
-                            arr = scr_get_tutorial_key(global.key_down);
-                            break;
-                        case textkey.superjump:
-                            arr = scr_get_tutorial_key(global.key_up);
-                            break;
-					}
-					if arr != noone
-					{
-						spr = arr[0];
-						ix = arr[1];
-						txt = arr[2];
-					}
+					case textkey.groundpound:
+						if (!global.gamepad_groundpound && obj_inputAssigner.player_input_device[0] >= 0)
+                            icon = tdp_get_tutorial_icon("player_groundpound");
+                        else
+                            icon = tdp_get_tutorial_icon("player_down");
+						break;
+					case textkey.superjump:
+						if (!global.gamepad_superjump && obj_inputAssigner.player_input_device[0] >= 0)
+                            icon = tdp_get_tutorial_icon("player_superjump");
+                        else
+                            icon = tdp_get_tutorial_icon("player_up");
+						break;
+					
+					case textkey.forwards:
+						if (instance_exists(obj_player1) && obj_player1.xscale < 0)
+							icon = tdp_get_tutorial_icon("player_left");
+						else
+							icon = tdp_get_tutorial_icon("player_right");
+						break;
+					case textkey.backwards:
+						if (instance_exists(obj_player1) && obj_player1.xscale > 0)
+							icon = tdp_get_tutorial_icon("player_left");
+						else
+							icon = tdp_get_tutorial_icon("player_right");
+						break;
+					
+					case textkey.menu_left:
+                        icon = tdp_get_tutorial_icon("menu_left")
+                        break
+                    case textkey.menu_right:
+                        icon = tdp_get_tutorial_icon("menu_right")
+                        break
+                    case textkey.menu_up:
+                        icon = tdp_get_tutorial_icon("menu_up")
+                        break
+                    case textkey.menu_down:
+                        icon = tdp_get_tutorial_icon("menu_down")
+                        break
+                    case textkey.menu_select:
+                        icon = tdp_get_tutorial_icon("menu_select")
+                        break
+                    case textkey.menu_quit:
+                        icon = tdp_get_tutorial_icon("menu_quit")
+                        break
+                    case textkey.menu_delete:
+                        icon = tdp_get_tutorial_icon("menu_delete")
+                        break
+                    case textkey.menu_back:
+                        icon = tdp_get_tutorial_icon("menu_back")
+                        break
+                    case textkey.menu_start:
+                        icon = tdp_get_tutorial_icon("menu_start")
+                        break
+                    case textkey.reset_binds:
+                        icon = tdp_get_tutorial_icon("menu_reset_binds")
+                        break
 				}
 				
 				if effect != texteffect.normal
@@ -402,17 +407,16 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 					}
 				}
 				
-				if spr != -4
+				if (icon != -4)
 				{
-					if ix != -4
-						draw_sprite(spr, ix, cx, cy);
-					if txt != -4
+					draw_sprite(icon.sprite_index, icon.image_index, cx, cy);
+					if (icon.str != "")
 					{
 						var f = draw_get_font();
 						draw_set_halign(fa_center);
 						draw_set_valign(fa_middle);
 						draw_set_font(global.tutorialfont);
-						draw_text_color(cx + 16, cy + 14, txt, c_black, c_black, c_black, c_black, alpha);
+						draw_text_color(cx + 16, cy + 14, icon.str, c_black, c_black, c_black, c_black, alpha);
 						draw_set_font(f);
 						draw_set_halign(fa_left);
 						draw_set_valign(fa_top);

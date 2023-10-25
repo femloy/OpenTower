@@ -1,5 +1,6 @@
 bg_x += 1;
 bg_y -= 1;
+scr_menu_getinput();
 switch (state)
 {
 	case 0:
@@ -85,7 +86,7 @@ switch (state)
 	case 5:
 		fade = Approach(fade, 0, 0.1);
 		brownfade = Approach(brownfade, 1, 0.06);
-		if (obj_player1.key_jump)
+		if (key_jump || key_start)
 			state++;
 		break;
 	case 6:
