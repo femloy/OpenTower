@@ -1,2 +1,2 @@
-len = 10
-angle_spd = 6
+len = 10;
+angle_spd = 6;

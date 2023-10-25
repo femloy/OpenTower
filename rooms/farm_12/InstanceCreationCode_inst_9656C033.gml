@@ -1,1 +1,1 @@
-particlespr = spr_farmdebris2;
+targetRoom = farm_12b;

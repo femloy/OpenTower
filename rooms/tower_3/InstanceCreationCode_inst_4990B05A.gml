@@ -1,2 +1,2 @@
-level = "plage";
-treasureindex = 8;
+level = "space";
+treasureindex = 10;

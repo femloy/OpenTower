@@ -1,1 +1,1 @@
-sprite_index = spr_gustavochase;
+targetRoom = tower_ruinsecret;

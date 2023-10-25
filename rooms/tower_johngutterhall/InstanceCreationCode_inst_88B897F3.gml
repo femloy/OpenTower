@@ -1,0 +1,1 @@
+pumpkinroom = "entrance_7";

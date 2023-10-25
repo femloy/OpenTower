@@ -1,2 +1,2 @@
-pal_swap_init_system(9)
-global.roommessage = "PIZZA TOWER AT HALLOWEEN"
+pal_swap_init_system(shd_pal_swapper);
+global.roommessage = "PIZZA TOWER AT HALLOWEEN";

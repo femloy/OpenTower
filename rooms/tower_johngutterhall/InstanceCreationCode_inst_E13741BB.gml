@@ -1,1 +1,1 @@
-targetRoom = tower_1;
+level = "entrance";

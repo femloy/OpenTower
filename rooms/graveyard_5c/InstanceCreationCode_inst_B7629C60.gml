@@ -1,2 +1,2 @@
-len = 10;
-angle_spd = 10;
+particlespr = spr_graveyarddebris3;
+targettiles = "Tiles_1";

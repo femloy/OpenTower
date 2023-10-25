@@ -1,1 +1,1 @@
-targetRoom = trickytreat_7
+targetRoom = trickytreat_7;

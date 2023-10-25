@@ -1,7 +1,7 @@
 pal_swap_init_system(shd_pal_swapper);
 global.roommessage = lang_get_value("room_tower2");
-if (global.panic == false)
-	global.gameframe_caption_text = "Howdy, Pizza Tower stranger";
+if (global.panic == 0)
+	global.gameframe_caption_text = lang_get_value("caption_tower2");
 if (global.panic)
 {
 	with (obj_door)

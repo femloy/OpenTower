@@ -1,1 +1,1 @@
-particlespr = spr_farmdebris2;
+particlespr = spr_farmdebris1;

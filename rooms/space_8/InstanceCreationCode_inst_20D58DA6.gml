@@ -1,1 +1,1 @@
-particlespr = spr_planetdebris;
+start = true;

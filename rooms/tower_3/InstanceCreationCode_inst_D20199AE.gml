@@ -1,9 +1,9 @@
-targetRoom = space_1;
-level = "space";
-sprite_index = spr_gate_space;
-bgsprite = spr_gate_spaceBG
-title_index = 0;
+targetRoom = minigolf_1;
+level = "minigolf";
+sprite_index = spr_gate_golf;
+bgsprite = spr_gate_golfBG;
+title_index = 1;
 title_sprite = spr_titlecards_title2;
-titlecard_index = 10;
-title_music = "event:/music/w3/spacetitle";
-group_arr = ["spacegroup"];
+titlecard_index = 11;
+title_music = "event:/music/w3/golftitle";
+group_arr = ["minigolfgroup"];

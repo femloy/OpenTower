@@ -1,9 +1,3 @@
-targetRoom = sewer_1;
-level = "sewer";
-sprite_index = spr_gate_sewer;
-bgsprite = spr_gate_sewerBG;
-title_index = 3;
-title_sprite = spr_titlecards_title2;
-titlecard_index = 13;
-title_music = "event:/music/w4/sewertitle";
-group_arr = ["sewergroup"];
+targetRoom = tower_4up;
+targetRoom2 = tower_5;
+save = "w4stick";

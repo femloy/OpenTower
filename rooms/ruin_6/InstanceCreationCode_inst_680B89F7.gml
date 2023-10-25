@@ -1,1 +1,1 @@
-targetRoom = ruin_7
+escape = true;

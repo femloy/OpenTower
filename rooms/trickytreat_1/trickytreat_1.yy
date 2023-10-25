@@ -68,7 +68,7 @@
     {"resourceType":"GMRBackgroundLayer","resourceVersion":"1.0","name":"Backgrounds_scroll","spriteId":{"name":"bg_pumpkin1","path":"sprites/bg_pumpkin1/bg_pumpkin1.yy",},"colour":4294967295,"x":1650,"y":0,"htiled":true,"vtiled":true,"hspeed":0.5,"vspeed":0.5,"stretch":false,"animationFPS":30.0,"animationSpeedType":0,"userdefinedAnimFPS":false,"visible":true,"depth":799,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
   ],
   "inheritLayers": false,
-  "creationCodeFile": "rooms/trickytreat_1/RoomCreationCode.gml",
+  "creationCodeFile": "${project_dir}/rooms/trickytreat_1/RoomCreationCode.gml",
   "inheritCode": false,
   "instanceCreationOrder": [
     {"name":"inst_244BA59E","path":"rooms/trickytreat_1/trickytreat_1.yy",},
@@ -110,7 +110,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Tricky Treat",
-    "path": "folders/Rooms/Levels/Tricky Treat.yy",
+    "name": "Trickytreat",
+    "path": "folders/Rooms/Levels/Trickytreat.yy",
   },
 }

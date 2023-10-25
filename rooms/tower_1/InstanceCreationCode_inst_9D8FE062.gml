@@ -1,1 +1,1 @@
-text = lang_get_value("garbage3");
+text = lang_get_value("hubtips2");

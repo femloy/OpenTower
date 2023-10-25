@@ -1,1 +1,0 @@
-targetRoom = ruin_5

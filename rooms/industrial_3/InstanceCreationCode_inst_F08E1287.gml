@@ -1,3 +1,3 @@
 objectlist = [obj_dashpad];
-delaymax = 100;
+delaymax = 130;
 dir = 1;

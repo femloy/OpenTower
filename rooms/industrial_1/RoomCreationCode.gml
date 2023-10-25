@@ -1,6 +1,7 @@
 pal_swap_init_system(shd_pal_swapper);
 global.roommessage = "WELCOME TO PIZZA TOWER";
-global.gameframe_caption_text = "Mass-produced Pizza Tower";
+global.gameframe_caption_text = lang_get_value("caption_industrial");
+
 if (!obj_secretmanager.init)
 {
 	obj_secretmanager.init = true;

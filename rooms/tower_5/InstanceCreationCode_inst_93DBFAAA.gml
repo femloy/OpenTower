@@ -1,1 +1,1 @@
-text = lang_get_value("garbage14");
+scr_soundtest_secret();

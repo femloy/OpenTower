@@ -1,1 +1,1 @@
-scr_soundtest_secret();
+escape = true;

@@ -1,1 +1,2 @@
-particlespr = spr_industrialdebris
+content = obj_pizzagoblinbomb;
+countdown = 100;

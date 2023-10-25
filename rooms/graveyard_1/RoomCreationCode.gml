@@ -1,6 +1,7 @@
 pal_swap_init_system(shd_pal_swapper);
 global.roommessage = "PIZZA TOWER WITH THE DEAD";
-global.gameframe_caption_text = "Smells like death in the Pizza Tower";
+global.gameframe_caption_text = lang_get_value("caption_graveyard");
+
 if (!obj_secretmanager.init)
 {
 	obj_secretmanager.init = true;

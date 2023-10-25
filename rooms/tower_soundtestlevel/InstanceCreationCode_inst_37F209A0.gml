@@ -1,2 +1,2 @@
-secret = 1
-targetRoom = obj_player1.lastroom_soundtest
+secret = true;
+targetRoom = obj_player1.lastroom_soundtest;

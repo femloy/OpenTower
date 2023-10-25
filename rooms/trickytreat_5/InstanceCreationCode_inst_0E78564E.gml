@@ -1,2 +1,2 @@
-targetRoom = trickytreat_6
-targetDoor = "B"
+targetRoom = trickytreat_6;
+targetDoor = "B";

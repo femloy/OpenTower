@@ -1,1 +1,0 @@
-targetRoom = rm_editor;

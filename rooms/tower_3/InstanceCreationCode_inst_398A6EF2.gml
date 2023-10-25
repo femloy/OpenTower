@@ -1,2 +1,1 @@
-targetRoom = tower_cheftask3;
-sprite_index = spr_cheftaskdoor;
+text = lang_get_value("hubtips5");

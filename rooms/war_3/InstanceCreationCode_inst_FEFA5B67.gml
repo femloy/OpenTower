@@ -1,1 +1,1 @@
-targetRoom = war_6;
+particlespr = spr_wardebris;

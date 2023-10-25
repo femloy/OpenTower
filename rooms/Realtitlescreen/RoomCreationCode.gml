@@ -309,7 +309,7 @@ enum states
 global.coop = false;
 global.currentsavefile = 1;
 var achievement_arr = ["sranks1", "sranks2", "sranks3", "sranks4", "sranks5"];
-var data_arr = ["saves/saveData1.ini", "saves/saveData2.ini", "saves/saveData3.ini"];
+var data_arr = [get_save_folder() + "/saveData1.ini", get_save_folder() + "/saveData2.ini", get_save_folder() + "/saveData3.ini"];
 global.stickreq[0] = 100;
 global.stickreq[1] = 150;
 global.stickreq[2] = 200;
