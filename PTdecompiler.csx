@@ -4731,7 +4731,6 @@ void DumpSprite(UndertaleSprite sprite)
 			Directory.CreateDirectory(layersPath);
 			
 			// extract images
-			/*
 			if (frame.Texture != null)
 			{
 				Bitmap img;
@@ -4752,7 +4751,6 @@ void DumpSprite(UndertaleSprite sprite)
 				TextureWorker.SaveImageToFile(rootPath + spritePath + compositeGuid + ".png", img, false);
 				TextureWorker.SaveImageToFile(layersPath + layerGuid + ".png", img);
 			}
-			*/
 			
 			// add to frames
 			var spriteFrame = new GMSprite.GMSpriteFrame();
