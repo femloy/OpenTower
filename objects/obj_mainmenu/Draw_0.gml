@@ -37,7 +37,7 @@ draw_set_font(lang_get_font("bigfont"));
 draw_set_halign(fa_center);
 draw_set_valign(fa_middle);
 draw_set_color(c_white);
-var options_x = obj_screensizer.actual_width * 0.853125;
+var options_x = SCREEN_WIDTH * 0.853125;
 var options_y = 84;
 draw_sprite(spr_controlseggplant, 0, options_x, options_y);
 scr_draw_text_arr(options_x - 88, options_y - 37, start_key, c_white);

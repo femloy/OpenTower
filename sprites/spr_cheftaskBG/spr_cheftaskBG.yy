@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Sprites/NEW (temp).yy",
+    "name": "Options",
+    "path": "folders/Sprites/HUD/Options.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Gates",
-    "path": "folders/Sprites/NEW (temp)/Gates.yy",
+    "name": "Level Titlecards",
+    "path": "folders/Sprites/HUD/Level Titlecards.yy",
   },
 }

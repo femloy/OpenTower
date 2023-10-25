@@ -78,7 +78,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Sprites/NEW (temp).yy",
+    "name": "Level Structure",
+    "path": "folders/Sprites/Level Structure.yy",
   },
 }

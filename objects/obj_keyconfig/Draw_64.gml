@@ -4,12 +4,12 @@ draw_set_halign(0);
 draw_set_valign(0);
 draw_set_color(c_white);
 var c = (key_select == -1) ? c_white : c_gray;
-draw_text_colour((obj_screensizer.actual_width / 2) - 250, 50, lang_get_value("option_back"), c, c, c, c, 1);
+draw_text_colour((SCREEN_WIDTH / 2) - 250, 50, lang_get_value("option_back"), c, c, c, c, 1);
 var ks = key_select;
 if (ks < 0)
 	ks = 0;
 select_visual = lerp(select_visual, ks, 0.1);
-var xx = (obj_screensizer.actual_width / 2) - 60;
+var xx = (SCREEN_WIDTH / 2) - 60;
 for (var i = 0; i < array_length(input); i++)
 {
 	draw_set_font(lang_get_font("bigfont"));
@@ -24,7 +24,7 @@ for (var i = 0; i < array_length(input); i++)
 	else
 		draw_text_color(xx, yy, lang_get_value(b[1]), c, c, c, c, 1);
 	var icon_array = tdp_get_icons(in);
-	var x2 = obj_screensizer.actual_width - 64;
+	var x2 = SCREEN_WIDTH - 64;
 	draw_set_halign(1);
 	draw_set_valign(1);
 	draw_set_font(lang_get_font("tutorialfont"));
@@ -40,14 +40,14 @@ for (var i = 0; i < array_length(input); i++)
 draw_set_font(lang_get_font("creditsfont"));
 draw_set_halign(0);
 draw_set_valign(0);
-scr_draw_text_arr(32, obj_screensizer.actual_height - 175, tip);
+scr_draw_text_arr(32, SCREEN_HEIGHT - 175, tip);
 if (selecting)
 {
 	draw_set_font(lang_get_font("bigfont"));
 	draw_set_halign(1);
 	draw_set_valign(1);
 	draw_set_alpha(0.5);
-	draw_rectangle_color(0, 0, obj_screensizer.actual_width, obj_screensizer.actual_height, 0, 0, 0, 0, false);
+	draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 0, false);
 	draw_set_alpha(1);
-	draw_text_color(obj_screensizer.actual_width / 2, obj_screensizer.actual_height / 2, lang_get_value("option_press_any"), c_white, c_white, c_white, c_white, 1);
+	draw_text_color(SCREEN_WIDTH / 2, SCREEN_HEIGHT / 2, lang_get_value("option_press_any"), c_white, c_white, c_white, c_white, 1);
 }

@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Goblin",
-    "path": "folders/Sprites/NEW (temp)/Stick Game?/Goblin.yy",
+    "path": "folders/Sprites/Unused/Stick Game?/Goblin.yy",
   },
 }

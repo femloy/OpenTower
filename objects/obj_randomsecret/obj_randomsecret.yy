@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Objects/NEW (temp).yy",
+    "name": "Level Specific",
+    "path": "folders/Objects/Level Specific.yy",
   },
 }

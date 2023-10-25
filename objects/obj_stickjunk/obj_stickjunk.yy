@@ -33,6 +33,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Stick Game?",
-    "path": "folders/Objects/NEW (temp)/Stick Game?.yy",
+    "path": "folders/Objects/Unused/Stick Game?.yy",
   },
 }

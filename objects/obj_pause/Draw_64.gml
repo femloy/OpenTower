@@ -51,10 +51,10 @@ if (fade > 0)
 				draw_sprite(iconspr, cursor_index, cx + cursor_x, yy + cursor_y);
 				c = c_white;
 			}
-			draw_text_color(obj_screensizer.actual_width / 2, yy, t, c, c, c, c, fade);
+			draw_text_color(SCREEN_WIDTH / 2, yy, t, c, c, c, c, fade);
 			var ic = array_get(ds_map_find_value(pause_menu_map, b), 0);
 			if (ic != undefined)
-				scr_pauseicon_draw(ic, (obj_screensizer.actual_width / 2) + (string_width(t) / 2) + 50, yy);
+				scr_pauseicon_draw(ic, (SCREEN_WIDTH / 2) + (string_width(t) / 2) + 50, yy);
 			yy += (h + pad);
 		}
 	}

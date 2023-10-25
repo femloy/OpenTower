@@ -42,4 +42,3 @@ function editor_input_update() //editor_input_update
         raxis_horizontal = gamepad_axis_value(input_method, gp_axisrh)
     }
 }
-

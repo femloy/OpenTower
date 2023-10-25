@@ -311,19 +311,19 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 						icon = tdp_get_tutorial_icon("player_up");
 						break;
 					case textkey.left:
-						ix = tdp_get_tutorial_icon("player_left");
+						icon = tdp_get_tutorial_icon("player_left");
 						break;
 					case textkey.right:
-						ix = tdp_get_tutorial_icon("player_right");
+						icon = tdp_get_tutorial_icon("player_right");
 						break;
 					case textkey.mach:
-						ix = tdp_get_tutorial_icon("player_attack");
+						icon = tdp_get_tutorial_icon("player_attack");
 						break;
 					case textkey.jump:
-						ix = tdp_get_tutorial_icon("player_jump");
+						icon = tdp_get_tutorial_icon("player_jump");
 						break;
 					case textkey.grab:
-						ix = tdp_get_tutorial_icon("player_slap");
+						icon = tdp_get_tutorial_icon("player_slap");
 						break;
 					case textkey.taunt:
 						icon = tdp_get_tutorial_icon("player_taunt");

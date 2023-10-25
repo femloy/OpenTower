@@ -10,7 +10,7 @@ switch state
         switch dock
         {
             case comp_dock.right:
-                x = lerp(x, obj_screensizer.ideal_width, accel)
+                x = lerp(x, CAMERA_WIDTH, accel)
                 break
             case comp_dock.left:
                 x = lerp(x, (-sprite_width), accel)
@@ -19,7 +19,7 @@ switch state
                 y = lerp(y, (-sprite_height), accel)
                 break
             case comp_dock.bottom:
-                y = lerp(y, obj_screensizer.ideal_height, accel)
+                y = lerp(y, CAMERA_HEIGHT, accel)
                 break
         }
         break;

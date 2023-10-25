@@ -77,7 +77,7 @@ function instance_edit_update() //instance_edit_update
                 x = (xx + other.instance_xoffset)
                 y = (yy + other.instance_yoffset)
                 var ch = other.current_room.height
-                if (ch == obj_screensizer.ideal_height)
+                if (ch == CAMERA_HEIGHT)
                     ch += 4
                 ch += other.current_room.y
                 x = clamp(x, other.current_room.x, (other.current_room.x + other.current_room.width))

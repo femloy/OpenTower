@@ -115,6 +115,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Stick Game?",
-    "path": "folders/Sprites/NEW (temp)/Stick Game?.yy",
+    "path": "folders/Sprites/Unused/Stick Game?.yy",
   },
 }

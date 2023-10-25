@@ -38,7 +38,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Game Settings",
-    "path": "folders/Objects/Game Settings.yy",
+    "name": "Controllers",
+    "path": "folders/Objects/Controllers.yy",
   },
 }

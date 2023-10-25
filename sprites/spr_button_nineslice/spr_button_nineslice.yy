@@ -97,6 +97,6 @@
   },
   "parent": {
     "name": "Level Editor",
-    "path": "folders/Sprites/NEW (temp)/Level Editor.yy",
+    "path": "folders/Sprites/Unused/Level Editor.yy",
   },
 }

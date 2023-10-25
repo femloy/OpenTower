@@ -1,4 +1,4 @@
-function save_level_init() //save_level_init
+function save_level_init()
 {
     properties_map = ds_map_create()
     for (var i = 0; i < array_length(global.editor_data.objects); i++)
@@ -15,9 +15,8 @@ function save_level_init() //save_level_init
     file_async_list = ds_list_create()
 }
 
-function save_level_clean() //save_level_clean
+function save_level_clean()
 {
     ds_list_destroy(file_async_list)
     ds_map_destroy(properties_map)
 }
-

@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Sprites/NEW (temp).yy",
+    "name": "Main Menu",
+    "path": "folders/Sprites/HUD/Main Menu.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Old",
-    "path": "folders/Sprites/HUD/Level Titlecards/Old.yy",
+    "name": "Levels",
+    "path": "folders/Sprites/Level Structure/Tower/Chef Tasks/Levels.yy",
   },
 }

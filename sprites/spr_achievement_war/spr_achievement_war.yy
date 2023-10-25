@@ -78,7 +78,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Chef Task Icons",
-    "path": "folders/Sprites/Level Structure/Tower/Chef Task Icons.yy",
+    "name": "Tasks",
+    "path": "folders/Sprites/Level Structure/Tower/Chef Tasks/Tasks.yy",
   },
 }

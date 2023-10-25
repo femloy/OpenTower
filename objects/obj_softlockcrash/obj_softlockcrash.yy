@@ -33,7 +33,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Objects/NEW (temp).yy",
+    "name": "General",
+    "path": "folders/Objects/General.yy",
   },
 }

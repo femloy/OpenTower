@@ -40,7 +40,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Objects/NEW (temp).yy",
+    "name": "World 3",
+    "path": "folders/Objects/Level Specific/World 3.yy",
   },
 }

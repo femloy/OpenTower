@@ -82,7 +82,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Input",
-    "path": "folders/Sprites/NEW (temp)/Input.yy",
+    "name": "Options",
+    "path": "folders/Sprites/HUD/Options.yy",
   },
 }

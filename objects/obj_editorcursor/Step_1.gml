@@ -11,8 +11,8 @@ else
     var s = 6
     x += (obj_editor.laxis_horizontal * s)
     y += (obj_editor.laxis_vertical * s)
-    x = clamp(x, 0, obj_screensizer.ideal_width)
-    y = clamp(y, 0, obj_screensizer.ideal_height)
+    x = clamp(x, 0, CAMERA_WIDTH)
+    y = clamp(y, 0, CAMERA_HEIGHT)
 }
 hovered_object = -4
 var num = instance_place_list(x, y, obj_button, global.instancelist, 0)

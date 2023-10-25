@@ -59,7 +59,7 @@ else if dragged
     y = pos[1]
     x = clamp(x, global.current_level.current_room.x, (global.current_level.current_room.x + global.current_level.current_room.width))
     var ch = global.current_level.current_room.height
-    if (ch == obj_screensizer.ideal_height)
+    if (ch == CAMERA_HEIGHT)
         ch += 4
     y = clamp(y, global.current_level.current_room.y, (global.current_level.current_room.y + ch))
     with (inst)

@@ -14,4 +14,3 @@ function editor_input_init() //editor_input_init
     raxis_horizontal = 0
     input_method = -1
 }
-

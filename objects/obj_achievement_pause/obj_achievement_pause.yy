@@ -30,7 +30,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "NEW (temp)",
-    "path": "folders/Objects/NEW (temp).yy",
+    "name": "Controllers",
+    "path": "folders/Objects/Controllers.yy",
   },
 }

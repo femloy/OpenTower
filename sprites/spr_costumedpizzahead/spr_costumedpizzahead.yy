@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Halloween Event",
-    "path": "folders/Sprites/NEW (temp)/Halloween Event.yy",
+    "path": "folders/Sprites/Halloween Event.yy",
   },
 }

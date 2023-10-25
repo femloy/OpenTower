@@ -13,8 +13,8 @@ if start
     draw_set_valign(fa_bottom)
     draw_set_color(c_white)
     draw_set_font(global.bigfont)
-    var xx = (obj_screensizer.actual_width / 2)
-    var yy = (obj_screensizer.actual_height - 16)
+    var xx = (SCREEN_WIDTH / 2)
+    var yy = (SCREEN_HEIGHT - 16)
     if (minutes <= 0 && seconds <= 10)
     {
         draw_set_color(c_red)

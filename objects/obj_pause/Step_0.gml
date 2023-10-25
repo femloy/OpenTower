@@ -217,9 +217,9 @@ border2_yend = SCREEN_HEIGHT + 100;
 if (is_holiday(holiday.halloween))
 {
 	border1_xend = -128;
-	border1_yend = obj_screensizer.actual_height + 150;
-	border2_xend = obj_screensizer.actual_width + 128;
-	border2_yend = obj_screensizer.actual_height + 150;
+	border1_yend = SCREEN_HEIGHT + 150;
+	border2_xend = SCREEN_WIDTH + 128;
+	border2_yend = SCREEN_HEIGHT + 150;
 }
 
 vine_ystart = 0;

@@ -37,6 +37,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Editor",
-    "path": "folders/Objects/NEW (temp)/Editor.yy",
+    "path": "folders/Objects/Unused/Editor.yy",
   },
 }

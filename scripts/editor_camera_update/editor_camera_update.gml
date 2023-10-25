@@ -1,4 +1,4 @@
-function editor_camera_update() //editor_camera_update
+function editor_camera_update()
 {
     with (obj_button)
     {
@@ -22,8 +22,8 @@ function editor_camera_update() //editor_camera_update
     {
         if (zoom < 8)
         {
-            cx -= ((obj_screensizer.ideal_width / 2) / 2)
-            cy -= ((obj_screensizer.ideal_height / 2) / 2)
+            cx -= ((CAMERA_WIDTH / 2) / 2)
+            cy -= ((CAMERA_HEIGHT / 2) / 2)
             zoom += 0.5
         }
     }
@@ -31,8 +31,8 @@ function editor_camera_update() //editor_camera_update
     {
         if (zoom > 0.5)
         {
-            cx += ((obj_screensizer.ideal_width / 2) / 2)
-            cy += ((obj_screensizer.ideal_height / 2) / 2)
+            cx += ((CAMERA_WIDTH / 2) / 2)
+            cy += ((CAMERA_HEIGHT / 2) / 2)
             zoom -= 0.5
         }
     }
@@ -41,6 +41,5 @@ function editor_camera_update() //editor_camera_update
     if (zoom > 8)
         zoom = 8
     camera_set_view_pos(view_camera[0], cx, cy)
-    camera_set_view_size(view_camera[0], (obj_screensizer.ideal_width * zoom), (obj_screensizer.ideal_height * zoom))
+    camera_set_view_size(view_camera[0], (CAMERA_WIDTH * zoom), (CAMERA_HEIGHT * zoom))
 }
-

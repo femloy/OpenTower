@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Computer",
-    "path": "folders/Sprites/Level Structure/Tower/Computer.yy",
+    "name": "Granny Sign",
+    "path": "folders/Sprites/Level Structure/Tower/Granny Sign.yy",
   },
 }

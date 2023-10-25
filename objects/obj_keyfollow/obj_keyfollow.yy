@@ -33,6 +33,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Followers",
-    "path": "folders/Objects/Parents and Gameplay/Followers.yy",
+    "path": "folders/Objects/General/Followers.yy",
   },
 }

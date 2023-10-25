@@ -1,14 +1,11 @@
-function EditorObject(argument0, argument1, argument2, argument3, argument4) constructor //EditorObject
+function EditorObject(_id, _name, _sprite, _object, _snap_tile_val = 32) constructor
 {
-    if (argument4 == undefined)
-        argument4 = 32
-    sprite_index = argument2
-    object_index = argument3
-    mask_index = argument2
-    name = argument1
-    ID = argument0
-    xoffset = 0
-    yoffset = 0
-    snap_tile_val = argument4
+    sprite_index = _sprite;
+    object_index = _object;
+    mask_index = _sprite;
+    name = _name;
+    ID = _id;
+    xoffset = 0;
+    yoffset = 0;
+    snap_tile_val = _snap_tile_val;
 }
-

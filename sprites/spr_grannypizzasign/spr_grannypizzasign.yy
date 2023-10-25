@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Tower",
-    "path": "folders/Sprites/Level Structure/Tower.yy",
+    "name": "Granny Sign",
+    "path": "folders/Sprites/Level Structure/Tower/Granny Sign.yy",
   },
 }

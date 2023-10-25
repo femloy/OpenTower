@@ -99,6 +99,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Exit Followers",
-    "path": "folders/Sprites/NEW (temp)/Exit Followers.yy",
+    "path": "folders/Sprites/Level Structure/Exit Followers.yy",
   },
 }
