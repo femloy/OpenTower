@@ -5,7 +5,8 @@ refreshAssetlist.csx
 options/extensions/Steamworks.json
 datafiles/**
 extensions/fmod_gms/fmod-gamemaker.dll
-*.png
+sprites/*/*.png
+sprites/*/*/*/*.png
 !options/main/template_icon.png
 !github/**
 
