@@ -115,23 +115,6 @@ function scr_getinput()
 	key_taunt2 = tdp_input_get("player_taunt").pressed || tdp_input_get("player_tauntC").pressed;
 	key_attack = tdp_input_get("player_attack").held || tdp_input_get("player_attackC").held;
 	key_attack2 = tdp_input_get("player_attack").pressed || tdp_input_get("player_attackC").pressed;
-	
-	key_up = (keyboard_check(global.key_up) || gamepad_button_check(_dvc, global.key_upC) || gamepad_axis_value(_dvc, gp_axislv) < -verticaldeadzone);
-	key_up2 = (keyboard_check_pressed(global.key_up) || gamepad_button_check_pressed(_dvc, global.key_upC) || (gamepad_axis_value(_dvc, gp_axislv) < -vertpress_dz && stickpressed_vertical == false));
-	key_right = (keyboard_check(global.key_right) || gamepad_button_check(_dvc, global.key_rightC) || gamepad_axis_value(_dvc, gp_axislh) > horizontaldeadzone);
-	key_right2 = (keyboard_check_pressed(global.key_right) || gamepad_button_check_pressed(_dvc, global.key_rightC) || (gamepad_axis_value(_dvc, gp_axislh) > horizpress_dz && stickpressed_horizontal == false));
-	key_left = (-((keyboard_check(global.key_left) || gamepad_button_check(_dvc, global.key_leftC) || gamepad_axis_value(_dvc, gp_axislh) < -horizontaldeadzone)));
-	key_left2 = (-((keyboard_check_pressed(global.key_left) || gamepad_button_check_pressed(_dvc, global.key_leftC) || (gamepad_axis_value(_dvc, gp_axislh) < -horizpress_dz && stickpressed_horizontal == false))));
-	key_down = (keyboard_check(global.key_down) || gamepad_button_check(_dvc, global.key_downC) || gamepad_axis_value(_dvc, gp_axislv) > verticaldeadzone);
-	key_down2 = (keyboard_check_pressed(global.key_down) || gamepad_button_check_pressed(_dvc, global.key_downC) || (gamepad_axis_value(_dvc, gp_axislv) > vertpress_dz && stickpressed_vertical == false));
-	key_jump = (keyboard_check_pressed(global.key_jump) || gamepad_button_check_pressed(_dvc, global.key_jumpC));
-	key_jump2 = (keyboard_check(global.key_jump) || gamepad_button_check(_dvc, global.key_jumpC));
-	key_slap = (keyboard_check(global.key_slap) || gamepad_button_check(_dvc, global.key_slapC));
-	key_slap2 = (keyboard_check_pressed(global.key_slap) || gamepad_button_check_pressed(_dvc, global.key_slapC));
-	key_taunt = (keyboard_check(global.key_taunt) || gamepad_button_check(_dvc, global.key_tauntC));
-	key_taunt2 = (keyboard_check_pressed(global.key_taunt) || gamepad_button_check_pressed(_dvc, global.key_tauntC));
-	key_attack = (keyboard_check(global.key_attack) || gamepad_button_check(_dvc, global.key_attackC));
-	key_attack2 = (keyboard_check_pressed(global.key_attack) || gamepad_button_check_pressed(_dvc, global.key_attackC));
 	key_shoot = false;
 	key_shoot2 = false;
 	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
