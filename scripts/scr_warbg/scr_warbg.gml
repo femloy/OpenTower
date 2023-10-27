@@ -1,6 +1,6 @@
 function warbg_start()
 {
-	if (event_type == ev_draw && event_number == ev_draw_normal)
+	if (event_type == ev_draw && event_number == 0)
 	{
 		var time = shader_get_uniform(shd_war, "time");
 		var size = shader_get_uniform(shd_war, "size");
@@ -13,12 +13,12 @@ function warbg_start()
 }
 function warbg_end()
 {
-	if (event_type == ev_draw && event_number == ev_draw_normal)
+	if (event_type == ev_draw && event_number == 0)
 		shader_reset();
 }
 function pizzahead_bg_start()
 {
-	if (event_type == ev_draw && event_number == ev_draw_normal)
+	if (event_type == ev_draw && event_number == 0)
 	{
 		var time = shader_get_uniform(shd_rainbow, "u_time");
 		var _speed = shader_get_uniform(shd_rainbow, "u_speed");
@@ -29,7 +29,7 @@ function pizzahead_bg_start()
 }
 function pizzahead_bg_end()
 {
-	if (event_type == ev_draw && event_number == ev_draw_normal)
+	if (event_type == ev_draw && event_number == 0)
 		shader_reset();
 }
 function pizzahead_bg_init()
