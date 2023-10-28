@@ -39,6 +39,13 @@ function lang_get_value(entry)
 	var n = ds_map_find_value(ds_map_find_value(global.lang_map, global.lang), entry);
 	if is_undefined(n)
 		n = ds_map_find_value(ds_map_find_value(global.lang_map, "en"), entry);
+	if is_undefined(n)
+	{
+		n = "";
+		instance_create_unique(0, 0, obj_langerror);
+		with (obj_langerror)
+			text = concat("Error: Could not find lang value \"", entry, "\"\nPlease restore your english.txt file");
+	}
 	return n;
 }
 
@@ -186,7 +193,7 @@ function lang_exec(token_list) // HAHAHA
 function lang_get_custom_font(fontname, language)
 {
 	var _dir = concat(fontname, "_dir");
-	if ds_map_find_value(language, _dir) != noone
+	if !is_undefined(ds_map_find_value(language, _dir))
 	{
 		var font_map = ds_map_find_value(language, concat(fontname, "_map"));
 		var font_size = string_length(font_map);
@@ -194,8 +201,7 @@ function lang_get_custom_font(fontname, language)
 		font_sep = real(font_sep);
 		var font_xorig = 0;
 		var font_yorig = 0;
-		var spr = sprite_add(concat("lang/", ds_map_find_value(language, _dir)), font_size, true, false, font_xorig, font_yorig);
-		
+		var spr = sprite_add(concat("lang/", ds_map_find_value(language, _dir)), font_size, false, false, font_xorig, font_yorig);
 		return font_add_sprite_ext(spr, font_map, 0, font_sep);
 	}
 	else

@@ -31,5 +31,7 @@ gpu_set_blendmode(bm_normal);
 if (shd)
 	shader_reset();
 gpu_set_texfilter(false);
+if (lang_init)
+	gameframe_caption_font = lang_get_font("captionfont");
 if window_has_focus()
 	gameframe_draw();

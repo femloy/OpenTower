@@ -15,6 +15,7 @@ global.gameframe_caption_font = fnt_caption;
 global.gameframe_caption_icon = spr_ico;
 global.gameframe_caption_icon_margin = 6;
 global.gameframe_border_width = 2;
+lang_init = false;
 captionalpha = 1;
 dirty = true;
 startbuffer = 10;

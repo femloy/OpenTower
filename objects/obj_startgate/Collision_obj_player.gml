@@ -5,6 +5,7 @@ with (other)
 	{
 		audio_stop_all();
 		stop_music();
+		global.collect = 0;
 		global.startgate = true;
 		global.leveltosave = other.level;
 		global.leveltorestart = other.targetRoom;

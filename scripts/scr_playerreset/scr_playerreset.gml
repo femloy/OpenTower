@@ -65,6 +65,7 @@ function scr_playerreset()
 	camera_set_view_size(view_camera[0], SCREEN_WIDTH, SCREEN_HEIGHT);
 	
 	instance_destroy(obj_frontcanongoblin);
+	instance_destroy(obj_pumpkineffect);
 	instance_destroy(obj_pumpkincounter);
 	instance_destroy(obj_transfotip);
 	instance_destroy(obj_flushcount);

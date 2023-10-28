@@ -47,8 +47,8 @@ function state_player_jump()
 		if (scr_solid(x + xscale, y) && move == xscale)
 			movespeed = 0;
 	}
-	//else					// TODO
-	//	movespeed = 0;
+	else
+		movespeed = 0;
 	if (movespeed > maxmovespeed)
 		movespeed -= deccel;
 	if (ladderbuffer > 0)

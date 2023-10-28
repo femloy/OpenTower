@@ -615,11 +615,11 @@ else if (sprite_index != spr_noise_phasetrans1P)
 	noisebossscream = false;
 if (global.pistol && state != states.animation && state != states.actor && state != states.hurt && state != states.bump && !instance_exists(obj_vigilante_duelintro))
 {
-	if (key_slap || pistolchargeshooting)
+	if ((key_slap && !key_slap2) || pistolchargeshooting)
 		pistolcharge += 0.5;
 	else
 	{
-		pistolcharge = 0;
+		pistolcharge = 0.5;
 		pistolchargeshot = 1;
 	}
 	if (pistolcharge > 0)

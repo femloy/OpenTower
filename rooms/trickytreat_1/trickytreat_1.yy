@@ -33,6 +33,7 @@
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_E1578B66","properties":[],"isDnd":false,"objectId":{"name":"obj_doorE","path":"objects/obj_doorE/obj_doorE.yy",},"inheritCode":false,"hasCreationCode":false,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":544.0,"y":608.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_760BF9DE","properties":[],"isDnd":false,"objectId":{"name":"obj_achievementviewer","path":"objects/obj_achievementviewer/obj_achievementviewer.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":704.0,"y":480.0,},
         {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_FBCE6746","properties":[],"isDnd":false,"objectId":{"name":"obj_achievementviewer","path":"objects/obj_achievementviewer/obj_achievementviewer.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":800.0,"y":480.0,},
+        {"resourceType":"GMRInstance","resourceVersion":"1.0","name":"inst_8F71E5CE","properties":[],"isDnd":false,"objectId":{"name":"obj_tutorialbook","path":"objects/obj_tutorialbook/obj_tutorialbook.yy",},"inheritCode":false,"hasCreationCode":true,"colour":4294967295,"rotation":0.0,"scaleX":1.0,"scaleY":1.0,"imageIndex":0,"imageSpeed":1.0,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":573.0,"y":490.0,},
       ],"visible":true,"depth":-1,"userdefinedDepth":false,"inheritLayerDepth":false,"inheritLayerSettings":false,"inheritVisibility":true,"inheritSubLayers":true,"gridX":32,"gridY":32,"layers":[],"hierarchyFrozen":false,"effectEnabled":true,"effectType":null,"properties":[],},
     {"resourceType":"GMRAssetLayer","resourceVersion":"1.0","name":"Assets_1","assets":[
         {"resourceType":"GMRSpriteGraphic","resourceVersion":"1.0","name":"graphic_9248F9","spriteId":{"name":"spr_pumpkinarrow1","path":"sprites/spr_pumpkinarrow1/spr_pumpkinarrow1.yy",},"headPosition":0.0,"rotation":-90.0,"scaleX":1.0,"scaleY":1.0,"animationSpeed":1.0,"colour":4294967295,"inheritedItemId":null,"frozen":false,"ignore":false,"inheritItemSettings":false,"x":944.0,"y":442.0,},
@@ -87,6 +88,7 @@
     {"name":"inst_E1578B66","path":"rooms/trickytreat_1/trickytreat_1.yy",},
     {"name":"inst_760BF9DE","path":"rooms/trickytreat_1/trickytreat_1.yy",},
     {"name":"inst_FBCE6746","path":"rooms/trickytreat_1/trickytreat_1.yy",},
+    {"name":"inst_8F71E5CE","path":"rooms/trickytreat_1/trickytreat_1.yy",},
   ],
   "inheritCreationOrder": false,
   "sequenceId": null,

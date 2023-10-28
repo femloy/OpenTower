@@ -2,9 +2,14 @@ ds_list_add(global.saveroom, id)
 with (obj_pumpkincounter)
     counter--
 fmod_event_one_shot("event:/sfx/misc/collecttoppin")
-scr_fmod_soundeffect(global.snd_breakblock, x, y)
-repeat (7)
-    create_debris((bbox_left + ((bbox_right - bbox_left) / 2)), (bbox_top + ((bbox_bottom - bbox_top) / 2)), spr_pumpkinchunks)
+if (!trickytreat)
+{
+	scr_fmod_soundeffect(global.snd_breakblock, x, y)
+	repeat (7)
+	    create_debris(bbox_left + ((bbox_right - bbox_left) / 2), bbox_top + ((bbox_bottom - bbox_top) / 2), spr_pumpkinchunks)
+}
+else
+	instance_create(bbox_left, bbox_top, obj_pumpkineffect);
 if active
 {
     ini_open_from_string(obj_savesystem.ini_str)

@@ -64,7 +64,7 @@ switch (state)
 					with (playerid)
                     {
                         targetRoom = backtohubroom;
-                        targetDoor = "HUB";
+                        targetDoor = "D";
                         ghostdash = 0;
                         ghostpepper = 0;
                     }
@@ -72,9 +72,9 @@ switch (state)
                     global.level_seconds = 0;
                     locked = true;
                     fadein = false;
-                    if (!instance_exists(obj_backtohub_fadeout))
+                    if (!instance_exists(obj_fadeout))
                         notification_push(notifs.trickytreat_fail, [room]);
-                    instance_create_unique(0, 0, obj_backtohub_fadeout);
+                    instance_create_unique(0, 0, obj_fadeout);
 				}
 			}
 		}

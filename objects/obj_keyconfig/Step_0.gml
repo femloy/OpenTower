@@ -98,7 +98,7 @@ if (!selecting)
 			selecting = true;
 			startbuffer = 1;
 		}
-		else if (key_delete)
+		else if (key_delete2)
 		{
 			if (!controller)
 				tdp_input_get(input[key_select][0]).actions = array_create(0);

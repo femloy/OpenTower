@@ -4895,7 +4895,7 @@ async Task DumpSprites()
 			continue;
 		
 		SetUMTConsoleText($"({count++} / {Data.Sprites.Count}) {i.Name.Content}");
-		//await Task.Delay(1);
+		await Task.Delay(1);
 		DumpSprite(i);
 		
 		// I tried a progress bar but it just didn't increment at all for some stupid ass reason
