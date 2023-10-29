@@ -173,7 +173,7 @@ switch state
 				}
 
 			}
-			else if key_slap2
+			else if key_quit
 			{
 				state = states.ending
 				exitselect = 1
@@ -191,7 +191,7 @@ switch state
 				}
 
 			}
-			else if (key_taunt2 && global.game_started[currentselect])
+			else if (key_delete && global.game_started[currentselect])
 			{
 				deletebuffer = 0
 				state = states.bombdelete
@@ -209,7 +209,6 @@ switch state
 						sprite_index = spr_titlepep_right
 						break
 				}
-
 			}
 			break
 		}
