@@ -33,7 +33,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 			global.fill = 2040;
 			break;
 		case ruin_11:
-			global.fill = 2040;
+			global.fill = 2160;
 			break;
 		case dungeon_10:
 			global.fill = 2460;
