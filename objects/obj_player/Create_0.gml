@@ -555,7 +555,7 @@ if (!variable_global_exists("saveroom"))
 	ds_map_set(global.font_map, "smallfont_en", global.smallfont);
 	ds_map_set(global.font_map, "tutorialfont_en", global.tutorialfont);
 	ds_map_set(global.font_map, "creditsfont_en", global.creditsfont);
-	ds_map_set(global.font_map, "captionfont_en", 0);
+	ds_map_set(global.font_map, "captionfont_en", fnt_caption);
 	var key = ds_map_find_first(global.lang_map);
 	for (var i = 0; i < ds_map_size(global.lang_map); i++)
 	{
