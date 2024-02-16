@@ -292,7 +292,7 @@ if (currentselect != -1)
 	john = global.game_john[currentselect]
 	judgement = global.game_judgement[currentselect]
 }
-perstatus_icon = floor((percentage / 14.285714285714286))
+perstatus_icon = floor(percentage / (100 / 7))
 if (state != states.titlescreen && state != states.transition)
 {
 	var a = (floor((abs((percvisual - percentage)) / 10)) + 1)
