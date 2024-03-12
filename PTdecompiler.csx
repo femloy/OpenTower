@@ -32,6 +32,11 @@ if (!Data.IsVersionAtLeast(2022, 9))
     ScriptError("Error 1 - Run this on Pizza Tower's unmodded data.win!");
     return;
 }
+if (Data.Sprites.ByName("spr_noiseunlocked_bg") == null)
+{
+	ScriptError("Error 2 - Run this on Pizza Tower 1.1.0 (The Noise Update)!");
+    return;
+}
 
 string dataPath = $"{Path.GetDirectoryName(FilePath)}\\";
 string rootPath = $"{dataPath}Export_Data\\";
@@ -4958,6 +4963,7 @@ if (Data.TextureGroupInfo != null)
 var includedFiles = new List<string>()
 {
 	"credits.txt",
+	"noisecredits.txt",
 	"fmod.dll",
 	"fmodstudio.dll",
 	"sound/Desktop/Master.bank",

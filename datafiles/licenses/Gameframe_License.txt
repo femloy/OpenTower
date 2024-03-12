@@ -1,0 +1,32 @@
+Copyright (c) 2019- YellowAfterlife
+
+## Definitions
+
+- **Commercial** means use primarily intended for or directed towards commercial advantage or monetary compensation. For purposes of this license, pay-what-you-want models with no minimum amount (where the user can leave a donation, but is not required to do so, and receives no benefits for doing so) are not considered commercial use.
+- **Generated Files** mean source code files necessary to compile a GameMaker project using an asset that do not have to be distributed in final builds - in this case, `autogen.gml` files that contain auto-generated source code for communicating with native code.
+- **Executable Files** mean binary files with machine code - in this case `DLL`/`DyLib`/`SO` files.
+- **Official Distribution Channels** for this asset are:  
+  - https://yellowafterlife.itch.io/gamemaker-gameframe
+  - https://marketplace.yoyogames.com/assets/11287/gameframe
+- **Source Code** means the contents of this repository, which includes handwritten code and does not include Generated Files or Executable Files.
+- **Asset** means a package containing Generated Files and Executable Files, either acquired through one of the Official Distribution Channels or compiled from the Source Code.
+
+## Asset license
+
+- You can use the asset for Commercial or non-Commercial purposes if you have purchased a license through one of the Official Distribution Channels.
+- You can use the asset for non-Commercial purposes (and without purchasing a license) if you have compiled it from the Source Code.
+- You can distribute Executable Files as part of compiled versions of your GameMaker applications.
+- You cannot distribute Generated Files.  
+  (if you distribute the source code of your project, exclude the asset and refer the user to either purchase a license or compile it themselves, depending on their intentions)
+- Being a GameMaker asset, your use of the Asset is also subject to GameMaker EULA  
+  https://marketplace.yoyogames.com/eula
+
+## Source Code license
+
+- You can compile the Asset from the Source Code and use it with accordance to Asset license.
+- You can modify the Source Code to fit your use cases so long as the result remains compliant with Asset license.
+- Derivative works may not change the license for the Source Code, and any redistribution of all or parts of the Source Code must be under this license.
+
+## Limited Warranty
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.

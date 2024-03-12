@@ -3,12 +3,13 @@ refreshAssetlist.csx
 
 # Prolong my lifespan
 options/extensions/Steamworks.json
-datafiles/**
+datafiles/*
 extensions/fmod_gms/fmod-gamemaker.dll
 sprites/*/*.png
 sprites/*/*/*/*.png
 !options/main/template_icon.png
-!github/**
+!github/*
+!datafiles/licenses
 
 # The manually fixed tilesets
 !sprites/tile_beachprops1/**
