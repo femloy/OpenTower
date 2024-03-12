@@ -103,6 +103,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Goblin",
-    "path": "folders/Sprites/Unused/Stick Game?/Goblin.yy",
+    "path": "folders/Sprites/Events/John Cash (unreleased)/Goblin.yy",
   },
 }

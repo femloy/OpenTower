@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Halloween Event",
-    "path": "folders/Sprites/Halloween Event.yy",
+    "name": "Placeholders",
+    "path": "folders/Sprites/Unused/Placeholders.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Boss",
-    "path": "folders/Sprites/Backgrounds/Boss.yy",
+    "name": "Noise",
+    "path": "folders/Sprites/Background/Boss/Noise.yy",
   },
 }

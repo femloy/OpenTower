@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Ghoul",
-    "path": "folders/Sprites/Baddie/Ghoul.yy",
+    "path": "folders/Sprites/Enemies/Ghoul.yy",
   },
 }

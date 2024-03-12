@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Level Structure",
-    "path": "folders/Sprites/Level Structure.yy",
+    "name": "Gustavo Switch",
+    "path": "folders/Sprites/Level Structure/Gustavo Switch.yy",
   },
 }

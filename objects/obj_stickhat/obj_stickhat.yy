@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Stick Game?",
-    "path": "folders/Objects/Unused/Stick Game?.yy",
+    "name": "John Cash (unreleased)",
+    "path": "folders/Objects/Events/John Cash (unreleased).yy",
   },
 }

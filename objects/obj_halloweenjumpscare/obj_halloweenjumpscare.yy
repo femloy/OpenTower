@@ -33,7 +33,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Halloween Event",
-    "path": "folders/Objects/Halloween Event.yy",
+    "name": "Halloween 2023",
+    "path": "folders/Objects/Events/Halloween 2023.yy",
   },
 }

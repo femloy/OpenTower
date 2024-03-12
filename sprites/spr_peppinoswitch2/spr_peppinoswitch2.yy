@@ -94,7 +94,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Peppino",
-    "path": "folders/Sprites/Player/Peppino.yy",
+    "name": "Gustavo Switch",
+    "path": "folders/Sprites/Level Structure/Gustavo Switch.yy",
   },
 }

@@ -30,6 +30,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Tricky Treat",
-    "path": "folders/Objects/Halloween Event/Tricky Treat.yy",
+    "path": "folders/Objects/Events/Halloween 2023/Tricky Treat.yy",
   },
 }

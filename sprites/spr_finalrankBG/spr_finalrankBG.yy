@@ -82,7 +82,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Backgrounds",
-    "path": "folders/Sprites/Backgrounds.yy",
+    "name": "Ending Ranks",
+    "path": "folders/Sprites/Cutscenes/Ending/Ending Ranks.yy",
   },
 }

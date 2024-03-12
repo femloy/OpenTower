@@ -76,7 +76,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Halloween Event",
-    "path": "folders/Sprites/Halloween Event.yy",
+    "name": "Halloween 2023",
+    "path": "folders/Sprites/Events/Halloween 2023.yy",
   },
 }

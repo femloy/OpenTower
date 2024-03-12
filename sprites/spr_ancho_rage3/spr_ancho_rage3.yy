@@ -77,6 +77,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Ancho",
-    "path": "folders/Sprites/Baddie/Ancho.yy",
+    "path": "folders/Sprites/Enemies/Ancho.yy",
   },
 }

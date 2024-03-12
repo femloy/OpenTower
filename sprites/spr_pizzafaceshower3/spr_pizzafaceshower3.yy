@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Pizzaface Shower",
-    "path": "folders/Sprites/Cutscene/Pizzaface Shower.yy",
+    "name": "Shower",
+    "path": "folders/Sprites/Bosses/Pizzaface/Shower.yy",
   },
 }

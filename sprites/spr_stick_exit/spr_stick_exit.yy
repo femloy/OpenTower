@@ -78,7 +78,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Decoration",
-    "path": "folders/Sprites/Level Structure/Decoration.yy",
+    "name": "Escape Helpers",
+    "path": "folders/Sprites/Level Structure/Escape Helpers.yy",
   },
 }

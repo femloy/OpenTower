@@ -75,6 +75,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Pepgoblin",
-    "path": "folders/Sprites/Baddie/Pepgoblin.yy",
+    "path": "folders/Sprites/Enemies/Pepgoblin.yy",
   },
 }

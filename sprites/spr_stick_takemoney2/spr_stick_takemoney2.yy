@@ -91,6 +91,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Mr. Stick",
-    "path": "folders/Sprites/Level Structure/Tower/NPCs/Mr. Stick.yy",
+    "path": "folders/Sprites/Level Structure/Tower/Mr. Stick.yy",
   },
 }

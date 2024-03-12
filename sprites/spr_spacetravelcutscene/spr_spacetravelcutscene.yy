@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Cutscene",
-    "path": "folders/Sprites/Cutscene.yy",
+    "name": "Cutscenes",
+    "path": "folders/Sprites/Cutscenes.yy",
   },
 }

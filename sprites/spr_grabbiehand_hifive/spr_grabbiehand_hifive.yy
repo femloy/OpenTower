@@ -111,6 +111,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Grabbiehand",
-    "path": "folders/Sprites/Baddie/Grabbiehand.yy",
+    "path": "folders/Sprites/Enemies/Grabbiehand.yy",
   },
 }

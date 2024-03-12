@@ -90,7 +90,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Level Structure",
-    "path": "folders/Sprites/Level Structure.yy",
+    "name": "Escape Helpers",
+    "path": "folders/Sprites/Level Structure/Escape Helpers.yy",
   },
 }

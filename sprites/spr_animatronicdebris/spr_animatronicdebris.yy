@@ -21,16 +21,16 @@
   "width": 64,
   "height": 64,
   "textureGroupId": {
-    "name": "smallgroup",
-    "path": "texturegroups/smallgroup",
+    "name": "Default",
+    "path": "texturegroups/Default",
   },
   "swatchColours": null,
   "gridX": 0,
   "gridY": 0,
   "frames": [
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"0",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"1",},
-    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"545769e0-fa7a-4495-857b-fdc2fedb4296",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"972e0096-7716-47df-bdb9-b96d45ab6810",},
+    {"resourceType":"GMSpriteFrame","resourceVersion":"1.1","name":"2560bbb3-72d4-4dcf-a436-da7728e5be47",},
   ],
   "sequence": {
     "resourceType": "GMSequence",
@@ -47,9 +47,9 @@
     "moments": {"Keyframes":[],"resourceVersion":"1.0","resourceType":"KeyframeStore<MomentsEventKeyframe>",},
     "tracks": [
       {"resourceType":"GMSpriteFramesTrack","resourceVersion":"1.0","name":"frames","spriteId":null,"keyframes":{"Keyframes":[
-            {"id":"6bc6f1cc-14db-4aa4-a379-b4823092f938","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"0","path":"sprites/spr_animatronicdebris/spr_animatronicdebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"49314b0b-965c-4f88-9ac0-2f5e1c5b0b8e","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"1","path":"sprites/spr_animatronicdebris/spr_animatronicdebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
-            {"id":"7541a2a7-0a8e-4da8-b25c-b4396ac62218","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2","path":"sprites/spr_animatronicdebris/spr_animatronicdebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"833613bc-4d0f-45e6-b9b8-7af0267ed1d2","Key":0.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"545769e0-fa7a-4495-857b-fdc2fedb4296","path":"sprites/spr_animatronicdebris/spr_animatronicdebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"4451d94f-1e6c-416e-8356-ad4413f6b562","Key":1.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"972e0096-7716-47df-bdb9-b96d45ab6810","path":"sprites/spr_animatronicdebris/spr_animatronicdebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
+            {"id":"3f74d21b-ca1f-47cb-9cac-389b44ac517b","Key":2.0,"Length":1.0,"Stretch":false,"Disabled":false,"IsCreationKey":false,"Channels":{"0":{"Id":{"name":"2560bbb3-72d4-4dcf-a436-da7728e5be47","path":"sprites/spr_animatronicdebris/spr_animatronicdebris.yy",},"resourceVersion":"1.0","resourceType":"SpriteFrameKeyframe",},},"resourceVersion":"1.0","resourceType":"Keyframe<SpriteFrameKeyframe>",},
           ],"resourceVersion":"1.0","resourceType":"KeyframeStore<SpriteFrameKeyframe>",},"trackColour":0,"inheritsTrackColour":true,"builtinName":0,"traits":0,"interpolation":1,"tracks":[],"events":[],"isCreationTrack":false,"modifiers":[],},
     ],
     "visibleRange": null,
@@ -68,11 +68,11 @@
     "eventStubScript": null,
   },
   "layers": [
-    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"default","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
+    {"resourceType":"GMImageLayer","resourceVersion":"1.0","name":"995aedde-56a6-4d9e-9626-43140ee9b263","visible":true,"isLocked":false,"blendMode":0,"opacity":100.0,"displayName":"default",},
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Effects and Particles",
-    "path": "folders/Sprites/Effects and Particles.yy",
+    "name": "Peppino",
+    "path": "folders/Sprites/Player/Peppino.yy",
   },
 }

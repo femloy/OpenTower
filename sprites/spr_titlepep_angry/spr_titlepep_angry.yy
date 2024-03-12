@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Peppino",
-    "path": "folders/Sprites/HUD/Main Menu/Peppino.yy",
+    "path": "folders/Sprites/Main Menu/Peppino.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Level Titlecards",
-    "path": "folders/Sprites/HUD/Level Titlecards.yy",
+    "name": "Titlecards",
+    "path": "folders/Sprites/HUD/Titlecards.yy",
   },
 }

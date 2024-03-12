@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Editor",
-    "path": "folders/Sprites/Unused/Editor.yy",
+    "name": "Old",
+    "path": "folders/Sprites/Unused/Level Editor/Old.yy",
   },
 }

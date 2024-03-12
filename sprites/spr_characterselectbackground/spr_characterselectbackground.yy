@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Backgrounds/Unused.yy",
+    "name": "Character select",
+    "path": "folders/Sprites/Player/Character select.yy",
   },
 }

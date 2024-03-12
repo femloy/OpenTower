@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Pizzaface",
-    "path": "folders/Sprites/Backgrounds/Boss/Pizzaface.yy",
+    "path": "folders/Sprites/Background/Boss/Pizzaface.yy",
   },
 }

@@ -91,6 +91,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Tricky Treat",
-    "path": "folders/Sprites/Halloween Event/Tricky Treat.yy",
+    "path": "folders/Sprites/Events/Halloween 2023/Tricky Treat.yy",
   },
 }

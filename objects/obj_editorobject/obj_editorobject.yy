@@ -29,7 +29,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Editor",
-    "path": "folders/Objects/Unused/Editor.yy",
+    "name": "Level Editor",
+    "path": "folders/Objects/Unused/Level Editor.yy",
   },
 }

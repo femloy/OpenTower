@@ -85,6 +85,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Phase 1",
-    "path": "folders/Sprites/Boss/Pizzaface/Phase 1.yy",
+    "path": "folders/Sprites/Bosses/Pizzaface/Phase 1.yy",
   },
 }

@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Projectiles",
-    "path": "folders/Sprites/Boss/Pepperman/Projectiles.yy",
+    "name": "Pepperman",
+    "path": "folders/Sprites/Bosses/Pepperman.yy",
   },
 }

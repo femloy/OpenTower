@@ -79,6 +79,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Forest Gustavo",
-    "path": "folders/Sprites/Cutscene/Forest Gustavo.yy",
+    "path": "folders/Sprites/Unused/Forest Gustavo.yy",
   },
 }

@@ -300,6 +300,8 @@ enum states
 	teleport,
 	KO,
 	camera_followtarget,
+	
+	// states for stick's level from the leaks. state code was removed.
 	UNKNOWN_1, // 300
 	UNKNOWN_2, // 301
 	UNKNOWN_3, // 302

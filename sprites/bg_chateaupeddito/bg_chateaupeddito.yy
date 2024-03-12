@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Chateau",
-    "path": "folders/Sprites/Backgrounds/Chateau.yy",
+    "path": "folders/Sprites/Background/Chateau.yy",
   },
 }

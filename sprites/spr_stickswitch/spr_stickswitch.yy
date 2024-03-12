@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Stick Game?",
-    "path": "folders/Sprites/Unused/Stick Game?.yy",
+    "name": "Placeholders",
+    "path": "folders/Sprites/Events/John Cash (unreleased)/Placeholders.yy",
   },
 }

@@ -75,6 +75,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Box Crusher",
-    "path": "folders/Sprites/Baddie/Box Crusher.yy",
+    "path": "folders/Sprites/Enemies/Box Crusher.yy",
   },
 }

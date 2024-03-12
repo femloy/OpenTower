@@ -75,6 +75,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Kentuky Bomber",
-    "path": "folders/Sprites/Baddie/Kentuky Bomber.yy",
+    "path": "folders/Sprites/Enemies/Kentuky Bomber.yy",
   },
 }

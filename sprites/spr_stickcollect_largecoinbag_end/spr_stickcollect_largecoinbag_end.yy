@@ -88,7 +88,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Stick Game?",
-    "path": "folders/Sprites/Unused/Stick Game?.yy",
+    "name": "John Cash (unreleased)",
+    "path": "folders/Sprites/Events/John Cash (unreleased).yy",
   },
 }

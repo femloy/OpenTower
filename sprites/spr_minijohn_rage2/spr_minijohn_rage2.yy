@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Mini John",
-    "path": "folders/Sprites/Baddie/Mini John.yy",
+    "path": "folders/Sprites/Enemies/Mini John.yy",
   },
 }

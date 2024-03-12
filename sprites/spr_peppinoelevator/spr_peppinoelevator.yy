@@ -72,7 +72,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Peppino",
-    "path": "folders/Sprites/Player/Peppino.yy",
+    "name": "Elevator",
+    "path": "folders/Sprites/Level Structure/Tower/Elevator.yy",
   },
 }
