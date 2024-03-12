@@ -1,7 +1,5 @@
 function scr_player_jetpackjump()
 {
-	alarm[5] = 2;
-	alarm[7] = 60;
 	landAnim = false;
 	if (firemouth_afterimage > 0)
 		firemouth_afterimage--;
@@ -11,7 +9,7 @@ function scr_player_jetpackjump()
 		with (create_firemouth_afterimage(x, y, sprite_index, image_index - 1, xscale))
 			playerid = other.id;
 	}
-	if (sprite_index == spr_player_jetpackstart2)
+	if (sprite_index == spr_jetpackstart2)
 	{
 		if (!jumpstop)
 		{
@@ -27,10 +25,20 @@ function scr_player_jetpackjump()
 			}
 		}
 	}
+	if (global.noisejetpack && !ispeppino && noisepizzapepper)
+	{
+		if (noisepeppermissile > 0)
+			noisepeppermissile--;
+		else if (instance_exists(obj_baddie) && distance_to_object(obj_baddie) < 400)
+		{
+			noisepeppermissile = 5;
+			instance_create(x, y, obj_pizzapeppermissile);
+		}
+	}
 	if (grounded && vsp > 0 && !place_meeting(x, y + vsp, obj_destructibles) && !place_meeting(x, y + vsp, obj_iceblock_breakable))
 	{
 		state = states.normal;
-		if (sprite_index != spr_player_jetpackstart2)
+		if (sprite_index != spr_jetpackstart2)
 		{
 			with (instance_create(x, y, obj_rocketdead))
 				sprite_index = spr_jetpackdebris;
@@ -95,7 +103,7 @@ function scr_player_jetpackjump()
 	if (sprite_index != spin || !jetpackdash)
 	{
 		dir = xscale;
-		if (key_jump2 && sprite_index == spr_player_jetpackstart2)
+		if (key_jump2 && sprite_index == spr_jetpackstart2)
 		{
 			GamepadSetVibration(0, 0.3, 0.3, 0.65);
 			if (!key_down)
@@ -139,7 +147,7 @@ function scr_player_jetpackjump()
 	}
 	if (input_buffer_slap > 0 && sprite_index != spr_suplexbump)
 	{
-		if (sprite_index != spr_player_jetpackstart2)
+		if (sprite_index != spr_jetpackstart2)
 		{
 			with (instance_create(x, y, obj_rocketdead))
 				sprite_index = spr_jetpackdebris;

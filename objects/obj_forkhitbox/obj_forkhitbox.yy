@@ -38,6 +38,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Hitbox",
-    "path": "folders/Objects/Baddie/Hitbox.yy",
+    "path": "folders/Objects/Enemies/Hitbox.yy",
   },
 }

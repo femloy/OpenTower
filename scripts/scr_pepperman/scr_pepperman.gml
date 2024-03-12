@@ -92,13 +92,20 @@ function scr_pepperman_arenaintro()
 			x = roomstartx;
 			xscale = -other.image_xscale;
 			if (other.sprite_index == spr_pepperman_intro1)
-				sprite_index = spr_player_gnomecutscene1;
+			{
+				if (ispeppino)
+					sprite_index = spr_player_gnomecutscene1;
+				else
+					sprite_index = spr_playerN_bosscutscene1;
+			}
 			if (floor(image_index) == (image_number - 1))
 			{
-				if (sprite_index == spr_player_gnomecutscene2)
+				if (sprite_index == spr_player_gnomecutscene2 || sprite_index == spr_playerN_bosscutscene2 || sprite_index == spr_playerN_bosscutscene3)
 					image_index = image_number - 1;
 				else if (sprite_index == spr_player_gnomecutscene3)
 					sprite_index = spr_player_gnomecutscene4;
+				else if (sprite_index == spr_noise_vulnerable1)
+					sprite_index = spr_noise_vulnerable1loop;
 			}
 		}
 		if (introbuffer > 0)
@@ -114,8 +121,11 @@ function scr_pepperman_arenaintro()
 			introbuffer = 70;
 			with (obj_player)
 			{
-				sprite_index = spr_player_gnomecutscene2;
 				image_index = 0;
+				if (ispeppino)
+					sprite_index = spr_player_gnomecutscene2;
+				else
+					sprite_index = spr_playerN_bosscutscene2;
 			}
 		}
 		else if (sprite_index == spr_pepperman_intro2)
@@ -123,11 +133,19 @@ function scr_pepperman_arenaintro()
 			sprite_index = spr_pepperman_intro3;
 			image_index = 0;
 			fmod_event_one_shot_3d("event:/sfx/voice/peppermanlaugh", x, y);
-			with (obj_player)
+			with (obj_player1)
 			{
-				fmod_event_one_shot("event:/sfx/pep/screamboss");
-				sprite_index = spr_player_gnomecutscene3;
-				image_index = 0;
+				if (ispeppino)
+				{
+					fmod_event_one_shot("event:/sfx/pep/screamboss");
+					sprite_index = spr_player_gnomecutscene3;
+					image_index = 0;
+				}
+				else
+				{
+					sprite_index = spr_playerN_bosscutscene3;
+					image_index = 0;
+				}
 			}
 		}
 		else if (floor(image_index) == (image_number - 1))
@@ -144,11 +162,14 @@ function scr_pepperman_arenaintro()
 				case spr_pepperman_intro3end:
 					state = states.walk;
 					spotlightID.expand = true;
-					with (obj_player)
+					with (obj_player1)
 					{
-						sprite_index = spr_player_screamtransition;
-						image_index = 0;
-						image_speed = 0.35;
+						if (ispeppino)
+						{
+							sprite_index = spr_player_screamtransition;
+							image_index = 0;
+							image_speed = 0.35;
+						}
 						landAnim = false;
 						tauntstoredstate = states.normal;
 						state = states.animation;

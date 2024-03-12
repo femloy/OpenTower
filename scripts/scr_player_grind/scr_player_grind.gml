@@ -22,9 +22,25 @@ function scr_player_grind()
 	}
 	if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x, y + 18, obj_grindrailslope) && !place_meeting(x, y + 1, obj_slope))
 	{
-		state = states.bump;
-		hsp = -xscale * 5;
-		vsp = 1;
+		if (ispeppino)
+		{
+			state = states.bump;
+			hsp = -xscale * 5;
+			vsp = 1;
+		}
+		else
+			xscale *= -1;
+	}
+	if (!ispeppino && key_down)
+	{
+		ignore_grind = true;
+		state = states.mach2;
+		sprite_index = spr_playerN_grindcancel;
+		image_index = 0;
+		vsp = 10;
+		if (movespeed < 6)
+			movespeed = 6;
+		exit;
 	}
 	if (input_buffer_jump > 0)
 	{

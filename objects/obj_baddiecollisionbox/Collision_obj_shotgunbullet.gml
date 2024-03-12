@@ -18,7 +18,7 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
 			instance_destroy();
 			instance_destroy(baddieID);
 		}
-		if (other.object_index == obj_playernoisearrow)
+		if (other.object_index == obj_playernoisearrow || other.minigun)
 			instance_destroy(other);
 	}
 	else

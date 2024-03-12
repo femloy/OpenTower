@@ -60,7 +60,7 @@ function scr_player_handstandjump()
 		image_index = 0;
 		vsp = -11;
 		state = states.mach2;
-		sprite_index = spr_player_longjump;
+		sprite_index = spr_longjump;
 	}
 	if (sprite_index == attackdash && !grounded)
 	{
@@ -93,7 +93,7 @@ function scr_player_handstandjump()
 		state = states.mach2;
 		grav = 0.5;
 	}
-	if (key_down && grounded && global.attackstyle != 2)
+	if (scr_mach_check_dive() && grounded && global.attackstyle != 2)
 	{
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
@@ -109,9 +109,15 @@ function scr_player_handstandjump()
 	mask_index = spr_player_mask;
 	if ((!grounded && (place_meeting(x + hsp, y, obj_solid) || scr_solid_slope(x + hsp, y)) && !place_meeting(x + hsp, y, obj_destructibles)) || (grounded && (place_meeting(x + sign(hsp), y - 16, obj_solid) || scr_solid_slope(x + sign(hsp), y - 16)) && !place_meeting(x + hsp, y, obj_destructibles) && !place_meeting(x + hsp, y, obj_metalblock) && scr_slope()))
 	{
-		wallspeed = 6;
-		grabclimbbuffer = 10;
-		state = states.climbwall;
+		var _climb = true;
+		if (!ispeppino)
+			_climb = ledge_bump(32, abs(hsp) + 1);
+		if (_climb)
+		{
+			wallspeed = 6;
+			grabclimbbuffer = 10;
+			state = states.climbwall;
+		}
 	}
 	if (grounded && scr_solid(x + xscale, y) && !place_meeting(x + sign(hsp), y, obj_destructibles) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)))
 	{

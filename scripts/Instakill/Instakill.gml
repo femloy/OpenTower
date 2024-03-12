@@ -27,6 +27,11 @@ function Instakill()
 			sprite_index = spr_mach3hit;
 		image_index = 0;
 	}
+	if (!ispeppino && state == states.boxxedpepspin)
+    {
+        sprite_index = spr_playerN_boxxedhit;
+        image_index = 0;
+    }
 	if (state == states.chainsawbump && sprite_index != spr_player_chainsawhit)
 	{
 		image_index = 0;
@@ -65,6 +70,7 @@ function Instakill()
 		if (key_jump2)
 			vsp = -10;
 		boxxedpepjump = 10;
+		noisejetpack = 80;
 	}
 	if (character == "M" && state == states.freefall)
 	{
@@ -78,8 +84,10 @@ function Instakill()
 		tauntstoredsprite = sprite_index;
 		tauntstoredstate = state;
 		tauntstoredvsp = vsp;
+		if (state == states.ghost)
+            tauntstoredhsp = hsp;
 	}
-	if (state == states.handstandjump && !key_slap)
+	if (state == states.handstandjump && !key_slap && ispeppino)
 	{
 		image_index = random_range(0, image_number - 1);
 		if (grounded)
@@ -127,5 +135,16 @@ function Instakill()
 	if (abs(other.baddieID.hithsp) < 10)
 		other.baddieID.hithsp = xscale * 10;
 	other.baddieID.hitvsp = -5;
+	if ((state == states.machcancel || (state == states.ratmountbounce && !ispeppino)) && move != 0)
+    {
+        other.baddieID.hithsp = movespeed + (sign(movespeed) * 2);
+        if (abs(other.baddieID.hithsp) < 10)
+        {
+            if (move != 0)
+                other.baddieID.hithsp = (move * 10);
+            else
+                other.baddieID.hithsp = (xscale * 10);
+        }
+    }
 	state = states.chainsaw;
 }

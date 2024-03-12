@@ -1,5 +1,18 @@
 function scr_player_ratmount()
 {
+	if (global.swapmode && key_attack && key_fightball && ratmount_movespeed >= 12 && !instance_exists(obj_swapmodegrab) && !instance_exists(obj_swapdeatheffect) && !instance_exists(obj_noiseanimatroniceffect) && obj_swapmodefollow.animatronic <= 0)
+	{
+		sprite_index = spr_fightball;
+		jump_p2 = false;
+		instance_create_unique(x, y, obj_swapgusfightball);
+		state = states.mach3;
+		movespeed = abs(hsp);
+		if (movespeed < 12)
+			movespeed = 12;
+		if (hsp != 0)
+			xscale = sign(hsp);
+		exit;
+	}
 	move = key_left + key_right;
 	doublejump = false;
 	if (ratgrabbedID != -4 && !instance_exists(ratgrabbedID))

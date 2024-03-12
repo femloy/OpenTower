@@ -5,6 +5,11 @@ persistent = false;
 if (boss_func != -4)
 	boss_func();
 boss_prevhp = boss_hp;
+if (bossspr == spr_vsnoise && (!obj_player1.ispeppino || global.swapmode))
+{
+	bossspr = spr_vsdoise;
+	vstitle = spr_vstitle_doise;
+}
 playerx = -sprite_get_width(playerspr);
 bossx = SCREEN_WIDTH + sprite_get_width(bossspr);
 instance_destroy(obj_pigtotal);

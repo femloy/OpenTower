@@ -6,8 +6,13 @@ function scr_player_barrelslide()
 	if (image_speed > 0.85)
 		image_speed = 0.85;
 	hsp = movespeed;
-	if (abs(movespeed) < 14)
-		movespeed = Approach(movespeed, xscale * 14, 0.1);
+	if (ispeppino)
+	{
+		if (abs(movespeed) < 14)
+			movespeed = Approach(movespeed, xscale * 14, 0.1);
+	}
+	else if (abs(movespeed) < 16)
+		movespeed = Approach(movespeed, xscale * 16, 0.15);
 	if ((dashcloudtimer == 0 && abs(hsp) > 8) && grounded)
 	{
 		with (instance_create(x, y, obj_dashcloud2))
@@ -18,8 +23,8 @@ function scr_player_barrelslide()
 		dashcloudtimer--;
 	if (floor(image_index) == (image_number - 1))
 	{
-		if (sprite_index == spr_player_barrelslipnslide)
-			sprite_index = spr_player_barrelroll;
+		if (sprite_index == spr_barrelslipnslide)
+			sprite_index = spr_barrelroll;
 	}
 	if (!jumpstop && !key_jump2 && vsp < 0)
 	{
@@ -44,7 +49,7 @@ function scr_player_barrelslide()
 			else
 			{
 				state = states.barreljump;
-				sprite_index = spr_player_barrelfall;
+				sprite_index = spr_barrelfall;
 			}
 		}
 	}
@@ -64,9 +69,11 @@ function scr_player_barrelslide()
 				vsp = -abs(movespeed);
 			state = states.barrelclimbwall;
 			movespeed = 0;
+			if (!ispeppino)
+				wallspeed = abs(vsp);
 			fmod_event_one_shot_3d("event:/sfx/barrel/slope", x, y);
-			if (sprite_index != spr_player_barrelroll)
-				sprite_index = spr_player_barrelroll;
+			if (sprite_index != spr_barrelroll)
+				sprite_index = spr_barrelroll;
 		}
 		else
 		{

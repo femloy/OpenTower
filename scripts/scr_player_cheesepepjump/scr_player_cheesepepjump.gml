@@ -3,7 +3,7 @@ function scr_player_cheesepepjump()
 	image_speed = 0.35;
 	if (floor(image_index) == (image_number - 1))
 	{
-		if (sprite_index == spr_cheesepepjumpstart || sprite_index == spr_cheesepep_walljump)
+		if (sprite_index == spr_cheesepepjumpstart || sprite_index == spr_cheesepep_walljump || sprite_index == spr_playerN_cheesedwalljump)
 			sprite_index = spr_cheesepepjump;
 		else if (sprite_index == spr_cheesepepjump && vsp > 0)
 			sprite_index = spr_cheesepepfall;

@@ -28,6 +28,6 @@
   "overriddenProperties": [],
   "parent": {
     "name": "Controllers",
-    "path": "folders/Objects/Controllers.yy",
+    "path": "folders/Objects/General/Controllers.yy",
   },
 }

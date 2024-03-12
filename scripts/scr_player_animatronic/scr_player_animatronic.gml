@@ -1,5 +1,18 @@
 function scr_player_animatronic()
 {
+	if (!ispeppino)
+	{
+		xscale = 1;
+		sprite_index = spr_playerN_animatronic;
+		if (!grounded)
+			sprite_index = spr_doise_deadair;
+		image_speed = 0.35;
+		if (animatronic_buffer > 0)
+			animatronic_buffer--;
+		else if (grounded)
+			instance_create_unique(x, y, obj_noiseanimatroniceffect);
+		exit;
+	}
 	sprite_index = spr_pepanimatronic;
 	image_speed = 0.35;
 	move = key_left + key_right;

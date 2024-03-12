@@ -317,7 +317,12 @@ function scr_enemy_grabbed()
 			{
 				depth = -7;
 				x = _obj_player.x;
-				y = _obj_player.y - 40;
+				y = _obj_player.y - 54;
+				if (_obj_player.sprite_index == spr_playerN_piledriverland)
+				{
+					x = _obj_player.x;
+					y = _obj_player.y + 4;
+				}
 			}
 		}
 		if (_obj_player.sprite_index == _obj_player.spr_piledriverland && floor(_obj_player.image_index) == (_obj_player.image_number - 1))
@@ -472,6 +477,9 @@ function check_grabbed_solid(player)
 {
 	if (instakilled)
 		exit;
+	if (instance_exists(player) && player.sprite_index == spr_playerN_piledriver)
+		exit;
+	
 	if (!place_meeting(x, y, obj_destructibles) && (scr_solid(x, y) || collision_line(x, y, player.x, player.y, obj_solid, false, true) != -4))
 	{
 		var _dist = abs(x - obj_player.x);

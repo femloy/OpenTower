@@ -49,6 +49,8 @@ function scr_player_Sjumpprep()
 				state = states.Sjump;
 				vsp = -17;
 				image_index = 0;
+				if (!ispeppino)
+					scr_fmod_soundeffect(snd_noiseSjumprelease, x, y);
 			}
 			image_speed = 0.35;
 			break;
@@ -78,11 +80,16 @@ function scr_player_Sjumpprep()
 				}
 				else if (sprite_index == spr_superjumpprep)
 				{
+					var sjumpsnd = superjumpsnd;
+					if (!ispeppino)
+						sjumpsnd = snd_noiseSjump;
 					fmod_event_instance_set_parameter(superjumpsnd, "state", 2, true);
 					instance_create(x, y, obj_explosioneffect);
 					sprite_index = spr_superjump;
 					state = states.Sjump;
 					vsp = -15;
+					if (!ispeppino)
+						scr_fmod_soundeffect(snd_noiseSjumprelease, x, y);
 				}
 			}
 			if (sprite_index == spr_playerN_jetpackstart)

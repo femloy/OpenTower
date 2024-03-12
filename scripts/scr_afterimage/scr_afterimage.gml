@@ -131,6 +131,27 @@ function create_blue_afterimage(_x, _y, _sprite, _image_index, _xscale)
 	}
 	return b;
 }
+function create_noise_afterimage()
+{
+	var b = create_afterimage(argument0, argument1, argument2, argument3);
+	with (b)
+	{
+		fadeout = false;
+		fadeoutstate = -4;
+		identifier = afterimage.noise;
+		alarm[0] = -1;
+		alarm[1] = -1;
+		alarm[2] = -1;
+		image_xscale = argument4;
+		image_blend = c_white;
+		alpha = 0.9;
+		basealpha = 1;
+		playerid = -4;
+		vertical = false;
+		maxmovespeed = 10;
+	}
+	return b;
+}
 function create_red_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
 	var b = create_blue_afterimage(_x, _y, _sprite, _image_index, _xscale);

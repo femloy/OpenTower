@@ -10,11 +10,23 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && (!elite || elitehit <= 0)
 			spr_palette = other.spr_palette;
 			paletteselect = other.paletteselect;
 			usepalette = other.usepalette;
+			if (other.object_index == obj_swapplayergrabbable)
+			{
+				oldpalettetexture = other.patterntexture;
+				if (other.spr_dead == spr_player_ratmountgameover && !other.gusrat)
+					create_debris(x, y, spr_ratblock_dead);
+			}
 			if (!usepalette)
 				paletteselect = 0;
 			image_alpha = other.image_alpha;
 			if (other.object_index == obj_ghostknight)
 				image_alpha = 0.3;
+			if (other.object_index == obj_noiseboss && other.pizzahead && !obj_player1.ispeppino)
+			{
+				sprite_index = spr_doise_deadair;
+				hsp = 0;
+				vsp = 0;
+			}
 		}
 	}
 	else if (object_index == obj_peppinoclone)

@@ -64,9 +64,18 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 {
 	var arr = [];
 	var len = string_length(text);
-	var newline = string_height("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	var info = font_get_info(draw_get_font());
+	var newline = string_height(lang_get_value("default_letter"));
 	var char_x = 0;
 	var char_y = 0;
+	
+	var offset_x = 0;
+	var offset_y = 0;
+	if (info.spriteIndex != -1)
+	{
+		offset_x = sprite_get_xoffset(info.spriteIndex);
+		offset_y = sprite_get_yoffset(info.spriteIndex);
+	}
 	
 	for (var saved_pos = 1; pos <= len; pos += 1)
 	{
@@ -93,7 +102,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 						te = texteffect.updown;
 						break;
 				}
-				array_push(arr, [char_x, char_y, texttype.array, te, n[0]]); // 2 << 0
+				array_push(arr, [char_x - offset_x, char_y - offset_y, texttype.array, te, n[0]]); // 2 << 0
 				pos = n[1];
 				char_x = n[2];
 				char_y = n[3];
@@ -178,7 +187,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 						b = textkey.reset_binds;
 						break;
 				}
-				array_push(arr, [char_x, char_y, t, b]);
+				array_push(arr, [char_x - offset_x, char_y - offset_y, t, b]);
 				char_x += 32;
 				pos += 2;
 				break;
@@ -214,7 +223,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 function scr_text_arr_size(array)
 {
 	var w = 0;
-	var newline = string_height("ABCDEFGHIJKLMNOPQRSTUVWXYZ");
+	var newline = string_height(lang_get_value("default_letter"));
 	var h = newline;
 	for (var i = 0; i < array_length(array); i++)
 	{
@@ -416,7 +425,9 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 						draw_set_halign(fa_center);
 						draw_set_valign(fa_middle);
 						draw_set_font(global.tutorialfont);
-						draw_text_color(cx + 16, cy + 14, icon.str, c_black, c_black, c_black, c_black, alpha);
+						var ox = sprite_get_xoffset(spr_tutorialfont) / 2;
+						var oy = sprite_get_yoffset(spr_tutorialfont) / 2;
+						draw_text_color(cx + 16 - ox, cy + 14 - oy, icon.str, c_black, c_black, c_black, c_black, alpha);
 						draw_set_font(f);
 						draw_set_halign(fa_left);
 						draw_set_valign(fa_top);
@@ -431,7 +442,12 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 			
 			case texttype.normal:
 				if effect == texteffect.normal
-					draw_text_color(cx, cy, val, color, color, color, color, alpha);
+				{
+					if (!global.tdp_text_try_outline)
+						draw_text_color(cx, cy, val, color, color, color, color, alpha);
+					else
+						tdp_draw_text_color(cx, cy, val, color, color, color, color, alpha);
+				}
 				else
 				{
 					var x2 = 0;
@@ -443,7 +459,10 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 								var q = string_char_at(val, j);
 								var s1 = irandom_range(-1, 1);
 								var s2 = irandom_range(-1, 1);
-								draw_text_color(cx + x2 + s1, cy + s2, q, color, color, color, color, alpha);
+								if (!global.tdp_text_try_outline)
+									draw_text_color(cx + x2 + s1, cy + s2, q, color, color, color, color, alpha);
+								else
+									tdp_draw_text_color(cx + x2 + s1, cy + s2, q, color, color, color, color, alpha);
 								x2 += string_width(q);
 							}
 							break;
@@ -459,7 +478,10 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 								d = ((j % 2) == 0) ? -1 : 1;
 								_dir = floor(Wave(-1, 1, 0.1, 0));
 								s += (_dir * d * o);
-								draw_text_color(cx + x2, cy + s, q, color, color, color, color, alpha);
+								if (!global.tdp_text_try_outline)
+									draw_text_color(cx + x2, cy + s, q, color, color, color, color, alpha);
+								else
+									tdp_draw_text_color(cx + x2, cy + s, q, color, color, color, color, alpha);
 								x2 += string_width(q);
 							}
 							break;

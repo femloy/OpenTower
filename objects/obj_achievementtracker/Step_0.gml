@@ -38,3 +38,7 @@ if (!ds_queue_empty(unlock_queue) && !instance_exists(obj_cheftask))
 	repeat (10)
 		instance_create(SCREEN_WIDTH - 100, SCREEN_HEIGHT - 50, obj_confettieffect);
 }
+if (instance_exists(obj_player1))
+	ispeppino = obj_player1.ispeppino;
+if (global.swapmode)
+	ispeppino = false;

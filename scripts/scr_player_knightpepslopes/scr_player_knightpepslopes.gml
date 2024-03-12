@@ -16,7 +16,7 @@ function scr_player_knightpepslopes()
 	}
 	if (grounded && vsp > 0)
 		jumpstop = false;
-	if (!scr_slope() && grounded)
+	if (!scr_slope() && grounded && sprite_index != spr_playerN_knightgroundbump)
 		sprite_index = spr_knightpepcharge;
 	if (vsp > 0)
 	{
@@ -26,7 +26,7 @@ function scr_player_knightpepslopes()
 			with (instance_place(x, y + 1, obj_slope))
 			{
 				if (sign(image_xscale) == other.xscale)
-					other.sprite_index = spr_knightpep_upslope;
+					other.sprite_index = other.spr_knightpepupslope;
 			}
 		}
 	}
@@ -36,7 +36,7 @@ function scr_player_knightpepslopes()
 		{
 			scr_fmod_soundeffect(jumpsnd, x, y);
 			vsp = -11;
-			sprite_index = spr_knightpep_fly;
+			sprite_index = spr_knightpepfly;
 			image_index = 0;
 			input_buffer_jump = 0;
 			if (!can_jump)
@@ -51,7 +51,7 @@ function scr_player_knightpepslopes()
 				}
 				vsp = -11;
 				doublejump = true;
-				sprite_index = spr_knightpep_doublejump;
+				sprite_index = spr_knightpepdoublejump;
 			}
 			if (!doublejump)
 			{
@@ -60,19 +60,34 @@ function scr_player_knightpepslopes()
 			}
 		}
 	}
-	if (sprite_index != spr_knightpep_fly && sprite_index != spr_knightpep_doublejump && sprite_index != spr_knightpep_jump && !grounded)
-		sprite_index = spr_knightpep_fly;
-	if ((sprite_index == spr_knightpep_doublejump || sprite_index == spr_knightpep_fly) && floor(image_index) == (image_number - 1))
+	if (sprite_index != spr_knightpepfly && sprite_index != spr_playerN_knightdoublejumpfall && sprite_index != spr_knightpepdoublejump && sprite_index != spr_knightpepjump && !grounded)
+		sprite_index = spr_knightpepfly;
+	if ((sprite_index == spr_knightpepdoublejump || sprite_index == spr_knightpepfly) && floor(image_index) == (image_number - 1))
 		image_index = image_number - 1;
+	if (sprite_index == spr_playerN_knightgroundbump && floor(image_index) == image_number - 1)
+		sprite_index = spr_knightpepcharge;
 	if (scr_solid(x + sign(hsp), y) && (!scr_slope() || place_meeting(x + sign(hsp), y - 2, obj_solid)) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles))
 	{
-		instance_create(x + (xscale * 40), y, obj_bumpeffect);
-		movespeed = 0;
-		vsp = -6;
-		sprite_index = spr_knightpep_bump;
-		image_index = floor(image_number - 1);
-		state = states.knightpepbump;
-		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+		if (ispeppino)
+		{
+			instance_create(x + (xscale * 40), y, obj_bumpeffect);
+			movespeed = 0;
+			vsp = -6;
+			sprite_index = spr_knightpep_bump;
+			image_index = floor(image_number - 1);
+			state = states.knightpepbump;
+			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+		}
+		else
+		{
+			instance_create(x + (xscale * 35), y + 15, obj_bumpeffect);
+			repeat (6)
+				create_debris(x + (xscale * 35), y + 15, spr_spark);
+			xscale *= -1;
+			sprite_index = spr_playerN_knightgroundbump;
+			image_index = 0;
+			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+		}
 		notification_push(notifs.knightpep_bump, []);
 	}
 	if (scr_slope())
@@ -86,7 +101,7 @@ function scr_player_knightpepslopes()
 			}
 		}
 	}
-	if (!grounded && scr_check_groundpound() && sprite_index != spr_knightpep_downtrust)
+	if (!grounded && scr_check_groundpound() && sprite_index != spr_knightpepdowntrust)
 	{
 		fmod_event_one_shot_3d("event:/sfx/knight/down", x, y);
 		if (vsp >= 12)
@@ -94,10 +109,11 @@ function scr_player_knightpepslopes()
 			with (instance_create(x, y - 16, obj_parryeffect))
 				sprite_index = spr_knightpep_downcloud;
 		}
-		sprite_index = spr_knightpep_downtrust;
+		sprite_index = spr_knightpepdowntrust;
 		vsp = -5;
 		hsp = 0;
 		movespeed = 0;
 		state = states.knightpep;
+		knightdowncloud = true;
 	}
 }

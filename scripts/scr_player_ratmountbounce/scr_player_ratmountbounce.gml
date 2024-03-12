@@ -1,5 +1,11 @@
 function scr_player_ratmountbounce()
 {
+	if (!ispeppino)
+	{
+		isgustavo = false;
+		scr_player_noisecrusher();
+		exit;
+	}
 	if (sprite_index == spr_player_ratmountwalljump && vsp > 0)
 	{
 		vsp += 0.5;

@@ -1,6 +1,7 @@
 var tx = playerid.x
 var ty = (playerid.y - 60)
 var acc = 0.2
+
 switch state
 {
     case 0:
@@ -36,7 +37,7 @@ switch state
     case 3:
         x += 4
         y -= 8
-        if (!(bbox_in_camera(view_camera[0], 10)))
+        if (!bbox_in_camera(view_camera[0], 10))
             instance_destroy()
         break
 }

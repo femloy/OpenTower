@@ -2,7 +2,7 @@ function scr_player_rideweenie()
 {
 	hsp = movespeed;
 	move = key_right + key_left;
-	if (sprite_index != spr_player_weenieturn)
+	if (sprite_index != spr_weenieturn)
 		sprite_index = spr_rideweenie;
 	if (move != 0)
 	{
@@ -14,7 +14,7 @@ function scr_player_rideweenie()
 			if (abs(movespeed) <= 0)
 			{
 				xscale = move;
-				sprite_index = spr_player_weenieturn;
+				sprite_index = spr_weenieturn;
 				image_index = 0;
 			}
 		}
@@ -27,7 +27,7 @@ function scr_player_rideweenie()
 	}
 	else
 		movespeed = Approach(movespeed, 0, 0.7);
-	if (sprite_index == spr_player_weenieturn && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_weenieturn && floor(image_index) == (image_number - 1))
 		sprite_index = spr_rideweenie;
 	if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_ratblock) && !place_meeting(x + hsp, y, obj_destructibles))
 	{

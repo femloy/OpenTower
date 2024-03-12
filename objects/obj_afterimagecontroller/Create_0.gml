@@ -8,6 +8,7 @@ enum afterimage
 	blur,
 	enemy,
 	fakepep,
+	noise,
 	
 	enum_length
 }

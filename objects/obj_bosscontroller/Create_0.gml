@@ -60,5 +60,14 @@ flash = false;
 flashed = false;
 bossintrostate = states.normal;
 vstitle = spr_vstitle_noise;
+vstitleplayer = spr_vstitle_player;
 playerspr = spr_vspeppino;
+playersprshadow = spr_vspeppinoshadow;
 bossspr = spr_vsnoise;
+if (!obj_player1.ispeppino)
+{
+	playerspr = spr_vsnoiseplayer;
+	playersprshadow = spr_vsnoiseplayershadow;
+	vstitleplayer = spr_vstitle_playerN;
+	player_hpsprite = spr_bossfight_noiseHP;
+}

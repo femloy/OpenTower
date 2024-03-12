@@ -12,24 +12,16 @@ function screen_apply_size()
 {
 	with obj_screensizer
 	{
-		if steam_utils_is_steam_running_on_steam_deck()
-			screen_apply_fullscreen(true);
-		else
-		{
-			if global.option_resolution == 0 && global.option_scale_mode == 1
-				global.option_resolution = 1;
-			if gameframe_get_fullscreen() == false
-				gameframe_restore();
+		if global.option_resolution == 0 && global.option_scale_mode == 1
+			global.option_resolution = 1;
+		if gameframe_get_fullscreen() == false
+			gameframe_restore();
 		
-			var w = get_resolution_width(global.option_resolution, aspect_ratio);
-            var h = get_resolution_height(global.option_resolution, aspect_ratio);
-            trace("Setting Window Size: ", w, ", ", h);
-            window_set_size(w, h);
-			
-			if steam_utils_is_steam_running_on_steam_deck() // redundant - but go off, paid dev.
-				screen_apply_fullscreen(true);
-			alarm[0] = 2;
-		}
+		var w = get_resolution_width(global.option_resolution, aspect_ratio);
+        var h = get_resolution_height(global.option_resolution, aspect_ratio);
+        trace("Setting Window Size: ", w, ", ", h);
+        window_set_size(w, h);
+		alarm[0] = 2;
 	}
 }
 function screen_apply_vsync()
@@ -163,8 +155,12 @@ function get_options()
 	global.option_vsync = ini_read_real("Option", "vsync", false);
 	global.option_screenshake = ini_read_real("Option", "screenshake", true);
 	global.lang = global.option_lang;
-	if is_undefined(ds_map_find_value(global.lang_map, global.lang))
-		global.lang = "en";
+	if (true && steam_utils_is_steam_running_on_steam_deck())
+	{
+		// ^ true is some kind of macro. i do not know what it is.
+		global.option_fullscreen = 1;
+		global.option_resolution = 1;
+	}
 	ini_close();
 	screen_apply_fullscreen(global.option_fullscreen);
 	obj_screensizer.start_sound = false;

@@ -60,9 +60,32 @@ function scr_player_bombgrab()
 			fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
 			create_particle(x, y, particle.landcloud);
 		}
+		if (!ispeppino)
+		{
+			if (place_meeting(x + hsp, y, obj_ratblock) || place_meeting(x, y + vsp, obj_ratblock))
+			{
+				with (bombgrabID)
+				{
+					hurtplayer = false;
+					x = other.x + hsp;
+					y = other.y + vsp;
+					instance_destroy();
+				}
+				pizzapepper = 0;
+				sprite_index = spr_rockethitwall;
+				fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
+				fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
+				image_speed = 0.35;
+				flash = false;
+				state = states.bump;
+				hsp = -3.5 * xscale;
+				vsp = -6;
+				image_index = 0;
+			}
+		}
 		if (sprite_index == spr_haulingjump && floor(image_index) == (image_number - 1))
 			sprite_index = spr_haulingfall;
-		if (input_buffer_slap > 0)
+		if (input_buffer_slap > 0 && ispeppino)
 		{
 			input_buffer_slap = 0;
 			image_index = 0;

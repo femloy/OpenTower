@@ -1,29 +1,39 @@
 function scr_get_languages()
 {
 	global.lang_map = ds_map_create();
+	global.lang_sprite_map = ds_map_create();
+	global.lang_texture_map = ds_map_create();
+	global.lang_to_load = ds_queue_create();
 	global.lang = "en";
 	var arr = [];
 	for (var file = file_find_first("lang/*.txt", 0); file != ""; file = file_find_next())
-		array_push(arr, file);
+	{
+		if (file != "english.txt")
+			array_push(arr, file);
+	}
 	file_find_close();
 	for (var i = 0; i < array_length(arr); i++)
-	{
-		var fo = file_text_open_read("lang/" + arr[i]);
-		var str = "";
-		while !file_text_eof(fo)
-		{
-			str += file_text_readln(fo);
-			str += "\n";
-		}
-		file_text_close(fo);
-		lang_parse(str);
-	}
+		ds_queue_enqueue(global.lang_to_load, arr[i]);
 	global.credits_arr = scr_lang_get_credits();
+	global.noisecredits_arr = scr_lang_get_noise_credits();
+	global.lang_textures_to_load = ds_list_create();
+	lang_parse_file("english.txt");
 }
 
-function scr_lang_get_credits()
+function lang_parse_file(filename)
 {
-	var fo = file_text_open_read("credits.txt");
+	var fo = file_text_open_read("lang/" + filename);
+	for (var str = ""; !file_text_eof(fo); str += "\n")
+		str += file_text_readln(fo);
+	file_text_close(fo);
+	var key = lang_parse(str);
+	if (lang_get_value_raw(key, "custom_graphics"))
+		lang_sprites_parse(key);
+}
+
+function scr_lang_get_file_arr(filename)
+{
+	var fo = file_text_open_read(filename);
 	var arr = array_create(0);
 	while !file_text_eof(fo)
 	{
@@ -34,9 +44,35 @@ function scr_lang_get_credits()
 	return arr;
 }
 
-function lang_get_value(entry)
+function scr_lang_get_credits()
 {
-	var n = ds_map_find_value(ds_map_find_value(global.lang_map, global.lang), entry);
+	return scr_lang_get_file_arr("credits.txt");
+}
+
+function scr_lang_get_noise_credits()
+{
+	var arr = scr_lang_get_file_arr("noisecredits.txt");
+	var credits = array_create(0);
+	var i = 0;
+	while (i < array_length(arr))
+	{
+		var _name = arr[i++];
+		var _heads = array_create(0);
+		for (var _head = arr[i++]; _head != ""; _head = arr[i++])
+		{
+			array_push(_heads, real(_head) - 1);
+			if (i >= array_length(arr))
+				break;
+		}
+		i--;
+		continue;
+	}
+	return credits;
+}
+
+function lang_get_value_raw(lang, entry)
+{
+	var n = ds_map_find_value(ds_map_find_value(global.lang_map, lang), entry);
 	if is_undefined(n)
 		n = ds_map_find_value(ds_map_find_value(global.lang_map, "en"), entry);
 	if is_undefined(n)
@@ -47,6 +83,11 @@ function lang_get_value(entry)
 			text = concat("Error: Could not find lang value \"", entry, "\"\nPlease restore your english.txt file");
 	}
 	return n;
+}
+
+function lang_get_value(entry)
+{
+	return lang_get_value_raw(global.lang, entry);
 }
 
 function lang_get_value_newline(entry)
@@ -62,6 +103,7 @@ function lang_parse(langstring) // langstring being the entire file in a single 
 	var lang = ds_map_find_value(map, "lang");
 	ds_map_set(global.lang_map, lang, map);
 	ds_list_destroy(list);
+	return lang;
 }
 
 enum lexer
@@ -193,7 +235,17 @@ function lang_exec(token_list) // HAHAHA
 function lang_get_custom_font(fontname, language)
 {
 	var _dir = concat(fontname, "_dir");
-	if !is_undefined(ds_map_find_value(language, _dir))
+	var _ttf = ds_map_find_value(language, "use_ttf");
+	if !is_undefined(_ttf) && _ttf
+	{
+		if !is_undefined(ds_map_find_value(language, _dir))
+		{
+			var font_size = ds_map_find_value(language, concat(fontname, "_size"));
+			font_size = real(font_size);
+			return font_add(concat("lang/", ds_map_find_value(language, _dir)), font_size, false, false, 32, 127);
+		}
+	}
+	else if !is_undefined(ds_map_find_value(language, _dir))
 	{
 		var font_map = ds_map_find_value(language, concat(fontname, "_map"));
 		var font_size = string_length(font_map);
@@ -204,8 +256,7 @@ function lang_get_custom_font(fontname, language)
 		var spr = sprite_add(concat("lang/", ds_map_find_value(language, _dir)), font_size, false, false, font_xorig, font_yorig);
 		return font_add_sprite_ext(spr, font_map, 0, font_sep);
 	}
-	else
-		return lang_get_font(fontname);
+	return lang_get_font(fontname);
 }
 
 function lang_get_font(fontname)

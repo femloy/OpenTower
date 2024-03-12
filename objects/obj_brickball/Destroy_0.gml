@@ -1,7 +1,18 @@
-with (instance_create(x, y, obj_brickcomeback))
+if (obj_player1.ispeppino)
 {
-	vsp = -5;
-	hsp = -sign(other.hsp) * 4;
+	with (instance_create(x, y, obj_brickcomeback))
+	{
+		vsp = -5;
+		hsp = -sign(other.hsp) * 4;
+	}
+}
+else
+{
+	with (create_debris(x, y, spr_lonebrick_comeback, true))
+	{
+		hsp = -other.image_xscale * 4;
+		image_speed = 0.4;
+	}
 }
 with (obj_camera)
 {

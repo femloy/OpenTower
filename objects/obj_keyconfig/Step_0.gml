@@ -122,7 +122,7 @@ else if (!controller)
 			startbuffer = 5;
 			addbuffer = 5;
 			var in = tdp_input_get(input[key_select][0]);
-			if (!in.has_value(tdp_type.keyboard, keyboard_key))
+			if (!in.has_value(tdp_input.keyboard, keyboard_key))
 				array_push(in.actions, new tdp_input_action(0, keyboard_key));
 			selecting = false;
 		}
@@ -140,11 +140,11 @@ else
 		in = tdp_input_get(concat(input[key_select][0], "C"));
 		if (!is_array(val))
 		{
-			if (!in.has_value(tdp_type.gamepad, val))
-				array_push(in.actions, new tdp_input_action(tdp_type.gamepad, val));
+			if (!in.has_value(tdp_input.gamepad, val))
+				array_push(in.actions, new tdp_input_action(tdp_input.gamepad, val));
 		}
-		else if (!in.has_value(tdp_type.joystick, val[0], val[1]))
-			array_push(in.actions, new tdp_input_action(tdp_type.joystick, val[0], val[1]));
+		else if (!in.has_value(tdp_input.joystick, val[0], val[1]))
+			array_push(in.actions, new tdp_input_action(tdp_input.joystick, val[0], val[1]));
 		selecting = false;
 	}
 }

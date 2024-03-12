@@ -62,7 +62,7 @@ function scr_player_fireass()
 	}
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_scaredjump1)
 		sprite_index = spr_scaredjump2;
-	if (sprite_index == spr_fireassground)
+	if (sprite_index == spr_fireassground || sprite_index == spr_bombpepend)
 	{
 		hsp = xscale * movespeed;
 		if (movespeed > 0)

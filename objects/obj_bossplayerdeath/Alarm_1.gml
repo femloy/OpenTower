@@ -1,6 +1,8 @@
 with (obj_player1)
 {
 	global.player_damage = 0;
+	global.swap_damage[0] = 0;
+	global.swap_damage[1] = 0;
 	global.peppino_damage = 0;
 	global.bossplayerhurt = false;
 	global.pistol = false;
@@ -18,7 +20,7 @@ with (obj_player1)
 	x = backtohubstartx;
 	y = backtohubstarty - (SCREEN_HEIGHT * 2);
 	state = states.backtohub;
-	sprite_index = spr_player_slipbanan1;
+	sprite_index = spr_slipbanan1;
 	image_index = 10;
 }
 global.level_minutes = 0;

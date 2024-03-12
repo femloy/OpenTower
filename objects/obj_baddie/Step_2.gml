@@ -48,10 +48,12 @@ if (object_index != obj_vigilanteboss && object_index != obj_pizzafaceboss_p3 &&
 {
 	if (object_index != obj_bazookabaddie || !instance_exists(bazookaID))
 	{
+		var _taunted = false;
 		with (instance_nearest(x, y, obj_player))
 		{
 			if (state == states.backbreaker)
 			{
+				_taunted = true;
 				other.stunned = 0;
 				if (other.state != states.pizzagoblinthrow && !other.provoked && other.bombreset > 0)
 				{
@@ -63,16 +65,35 @@ if (object_index != obj_vigilanteboss && object_index != obj_pizzafaceboss_p3 &&
 			else if (other.state != states.pizzagoblinthrow)
 				other.provoked = false;
 		}
+		if (!_taunted)
+		{
+			with (obj_swapmodefollow)
+			{
+				if (taunttimer > 0)
+				{
+					other.stunned = 0;
+					if (other.state != states.pizzagoblinthrow && !other.provoked && other.bombreset > 0)
+					{
+						other.bombreset = 0;
+						other.provoked = true;
+					}
+					other.scaredbuffer = 0;
+				}
+			}
+		}
 	}
 }
 if (state != states.pizzaheadjump && object_index != obj_pepperman && object_index != obj_noiseboss && object_index != obj_pizzafaceboss && object_index != obj_pf_fakepep && object_index != obj_fakepepboss && object_index != obj_vigilanteboss && object_index != obj_pizzafaceboss_p2 && object_index != obj_pizzafaceboss_p3 && object_index != obj_noisey && object_index != obj_gustavograbbable)
 {
-	if (y > (room_height + 100))
-		instance_destroy();
-	if (thrown && (x > (room_width + 100) || x < -100 || y < -100))
-		instance_destroy();
-	if (!thrown && (x > (room_width + 400) || x < -400 || y > (room_height + 400) || y < -400))
-		instance_destroy(id, false);
+	if (!instance_exists(obj_peddito))
+	{
+		if (y > (room_height + 100))
+			instance_destroy();
+		if (thrown && (x > (room_width + 100) || x < -100 || y < -100))
+			instance_destroy();
+		if (!thrown && (x > (room_width + 400) || x < -400 || y > (room_height + 400) || y < -400))
+			instance_destroy(id, false);
+	}
 }
 if (state != states.hit)
 	player_instakillmove = false;

@@ -133,12 +133,20 @@ function state_player_jump()
 			sprite_index = spr_jump;
 			if (shotgunAnim)
 				sprite_index = spr_shotgunjump;
-			if (global.pistol)
+			if (global.pistol && ispeppino)
 				sprite_index = spr_player_pistoljump1;
 			image_index = 0;
 		}
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particle.highjumpcloud2, 0);
+	}
+	if (!can_jump && character == "P" && !ispeppino && key_up && noisedoublejump && input_buffer_jump > 0 && !key_down && !key_attack)
+	{
+		freefallstart = 0;
+		railmomentum = false;
+		if (place_meeting(x, y + 1, obj_railparent))
+			railmomentum = true;
+		scr_player_do_noisecrusher();
 	}
 	if (grounded && vsp > 0)
 	{
@@ -151,7 +159,7 @@ function state_player_jump()
 				sprite_index = spr_player_mortland;
 			if (sprite_index != spr_shotgunshoot)
 				image_index = 0;
-			if (global.pistol)
+			if (global.pistol && ispeppino)
 				sprite_index = spr_player_pistolland;
 			input_buffer_secondjump = 0;
 			state = states.normal;
@@ -175,6 +183,9 @@ function state_player_jump()
 			{
 				case spr_mortdoublejumpstart:
 					sprite_index = spr_mortdoublejump;
+					break;
+				case spr_suplexland:
+					sprite_index = spr_fall;
 					break;
 				case spr_playerN_doublejump:
 					sprite_index = spr_playerN_doublejumpfall;
@@ -237,7 +248,7 @@ function state_player_jump()
 			pistolanim = -4;
 			vsp = -6;
 		}
-		else
+		else if (ispeppino)
 		{
 			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
 			sprite_index = spr_shotgunjump1;
@@ -253,6 +264,15 @@ function state_player_jump()
 					mask_index = other.mask_index;
 				}
 			}
+		}
+		else
+		{
+			notification_push(notifs.minigun_down, [room]);
+			state = states.shotgunshoot;
+			minigunshot = 3;
+			minigunbuffer = 0;
+			sprite_index = spr_playerN_minigundown;
+			image_index = 0;
 		}
 	}
 	if (sprite_index == spr_player_suplexcancel)
@@ -291,17 +311,31 @@ function state_player_jump()
 		state = states.handstandjump;
 		movespeed = 5;
 	}
-	else if (input_buffer_slap > 0 && key_up && shotgunAnim == 0 && !global.pistol)
+	else if (input_buffer_slap > 0 && key_up && shotgunAnim == 0 && (!global.pistol || !ispeppino))
 	{
 		input_buffer_slap = 0;
 		state = states.punch;
 		image_index = 0;
-		sprite_index = spr_player_breakdanceuppercut;
+		sprite_index = spr_breakdanceuppercut;
 		fmod_event_instance_play(snd_uppercut);
-		vsp = -10;
+		if (ispeppino)
+			vsp = -10;
+		else
+			vsp = -21;
 		movespeed = hsp;
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particle.highjumpcloud2, 0);
+		if (!ispeppino)
+		{
+			repeat (4)
+			{
+				with (instance_create(x + irandom_range(-40, 40), y + irandom_range(-40, 40), obj_explosioneffect))
+				{
+					sprite_index = spr_shineeffect;
+					image_speed = 0.35;
+				}
+			}
+		}
 	}
 	if (input_buffer_shoot > 0)
 	{
@@ -466,6 +500,8 @@ function state_player_jump()
 		mach2 = 0;
 	if (floor(image_index) == (image_number - 1))
 		jumpAnim = false;
+	if (sprite_index == spr_playerN_ratballoonbounce && floor(image_index) == (image_number - 1))
+		image_index = image_number - 1;
 	scr_dotaunt();
 	if (sprite_index == spr_shotgunshoot)
 	{

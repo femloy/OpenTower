@@ -1,0 +1,1 @@
+scr_hurtplayer(other)

@@ -23,6 +23,15 @@ function scr_player_comingoutdoor()
 		image_alpha = 1;
 		c = 0;
 		image_blend = make_colour_hsv(0, 0, 255);
+		if (!ispeppino && room == freezer_1)
+		{
+			state = states.animation;
+			sprite_index = spr_playerN_freezerintro;
+			image_index = 0;
+			xscale = 1;
+			fmod_event_one_shot_3d("event:/sfx/playerN/freezerintro", x, y);
+			exit;
+		}
 	}
 	if (sprite_index != spr_Timesup)
 	{

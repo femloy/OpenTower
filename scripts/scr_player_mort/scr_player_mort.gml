@@ -26,9 +26,9 @@ function scr_player_mort()
 			steppybuffer = 16;
 		}
 	}
-	if (movespeed < 3 && move != 0)
+	if (abs(movespeed) < 3 && move != 0)
 		image_speed = 0.35;
-	else if (movespeed > 3 && movespeed < 6)
+	else if (abs(movespeed) > 3 && movespeed < 6)
 		image_speed = 0.45;
 	else
 		image_speed = 0.6;
@@ -41,10 +41,10 @@ function scr_player_mort()
 	if (!landAnim)
 	{
 		if (move != 0)
-			sprite_index = spr_player_mortwalk;
+			sprite_index = spr_playermortwalk;
 		else
 		{
-			sprite_index = spr_player_mortidle;
+			sprite_index = spr_playermortidle;
 			image_speed = 0.35;
 		}
 	}
@@ -52,14 +52,14 @@ function scr_player_mort()
 	{
 		landAnim = false;
 		if (move != 0)
-			sprite_index = spr_player_mortwalk;
+			sprite_index = spr_playermortwalk;
 		else
-			sprite_index = spr_player_mortidle;
+			sprite_index = spr_playermortidle;
 	}
 	if (!grounded)
 	{
 		state = states.mortjump;
-		sprite_index = spr_player_mortjump;
+		sprite_index = spr_playermortjump;
 	}
 	else if (input_buffer_jump > 0)
 	{
@@ -67,7 +67,7 @@ function scr_player_mort()
 		state = states.mortjump;
 		doublejump = false;
 		vsp = -11;
-		sprite_index = spr_player_mortjumpstart;
+		sprite_index = spr_playermortjumpstart;
 		image_index = 0;
 		scr_fmod_soundeffect(jumpsnd, x, y);
 		create_particle(x, y, particle.highjumpcloud2, 0);
@@ -76,6 +76,23 @@ function scr_player_mort()
 }
 function mort_attack()
 {
+	if (!ispeppino)
+	{
+		if (input_buffer_slap > 0)
+		{
+			input_buffer_slap = 0;
+			state = states.mortattack;
+			sprite_index = spr_playerN_mortthrow;
+			image_index = 0;
+			if (move != 0)
+				xscale = move;
+			targethsp = hsp;
+			targetvsp = vsp;
+			mortprojectileID = instance_create(x, y, obj_mortprojectile);
+			fmod_event_one_shot_3d("event:/sfx/mort/throw", x, y);
+		}
+		exit;
+	}
 	if (input_buffer_slap > 0)
 	{
 		input_buffer_slap = 0;
@@ -148,8 +165,11 @@ function Mort_DownMovement()
 	{
 		with (playerid)
 		{
-			doublejump = false;
-			vsp = -14;
+			if (ispeppino)
+			{
+				doublejump = false;
+				vsp = -14;
+			}
 		}
 	}
 }

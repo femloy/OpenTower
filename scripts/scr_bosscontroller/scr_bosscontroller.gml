@@ -111,7 +111,10 @@ function scr_bosscontroller_intro()
 					state = other.bossintrostate;
 				}
 				with (obj_music)
-					fmod_event_instance_play(music.event);
+				{
+					if (!instance_exists(obj_noiseboss) || obj_noiseboss.sprite_index != spr_playerN_animatronic)
+						fmod_event_instance_play(music.event);
+				}
 				break;
 		}
 	}
@@ -135,7 +138,14 @@ function scr_bosscontroller_normal()
 				{
 					bpal = spr_peppalette;
 					bpalsel = obj_player1.paletteselect;
+					if (!obj_player1.ispeppino)
+						bpalsel = 1;
 					btex = global.palettetexture;
+				}
+				else if (bossspr == spr_vsdoise)
+				{
+					bpal = spr_noiseboss_palette;
+					bpalsel = 1;
 				}
 				scr_bosscontroller_particle_hp(boss_hpsprite, irandom(sprite_get_number(boss_hpsprite) - 1), pos[0], pos[1], -1, bpal, bpalsel, btex);
 			}
@@ -164,6 +174,8 @@ function scr_bosscontroller_normal()
 				global.pistol = false;
 				pistolanim = -4;
 				sprite_index = spr_player_levelcomplete;
+				if (!ispeppino)
+					sprite_index = spr_playerN_levelcomplete;
 				image_speed = 0.35;
 				image_index = 0;
 				state = states.arenaintro;

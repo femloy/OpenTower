@@ -1,7 +1,8 @@
-if (instance_exists(obj_pizzafaceboss_p3intro) || instance_exists(obj_blackoutline))
+if (instance_exists(obj_pizzafaceboss_p3intro) || instance_exists(obj_blackoutline) || instance_exists(obj_pizzahead_finalecutsceneN))
 	exit;
 if (image_alpha <= 0)
 	exit;
+
 switch (state)
 {
 	case states.arenaintro:
@@ -9,7 +10,7 @@ switch (state)
 		{
 			draw_set_alpha(1);
 			draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, c_white, c_white, c_white, c_white, false);
-			draw_sprite_ext(playerspr, -1, playerx, SCREEN_HEIGHT, 1, 1, 0, c_black, 1);
+			draw_sprite_ext(playersprshadow, -1, playerx, SCREEN_HEIGHT, 1, 1, 0, c_white, 1);
 			draw_sprite_ext(bossspr, -1, bossx, SCREEN_HEIGHT, 1, 1, 0, c_black, 1);
 			draw_set_alpha(whitefade);
 			draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, c_white, c_white, c_white, c_white, false);
@@ -53,12 +54,14 @@ switch (state)
 				by = SCREEN_HEIGHT;
 			shader_set(global.Pal_Shader);
 			pattern_set(global.Base_Pattern_Color, playerspr, 0, 1, 1, global.palettetexture);
-			pal_swap_set(spr_peppalette, obj_player1.paletteselect, false);
+			pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
 			draw_sprite_ext(playerspr, -1, px, py, 1, 1, 0, c_player, 1);
 			if (bossspr == spr_vsfakepep || bossspr == spr_vsfakepep2)
 			{
-				pattern_set(global.Base_Pattern_Color, bossspr, 0, _xs, _ys, global.palettetexture);
-				pal_swap_set(spr_peppalette, obj_player1.paletteselect, false);
+				var palinfo = get_pep_palette_info();
+				var ps = palinfo.paletteselect;
+				pattern_set(global.Base_Pattern_Color, bossspr, 0, _xs, _ys, palinfo.patterntexture);
+				pal_swap_set(spr_peppalette, ps, false);
 			}
 			else
 				pal_swap_set(spr_peppalette, 0, false);
@@ -70,6 +73,7 @@ switch (state)
 			var xx = irandom_range(-1, 1) + sx;
 			var yy = irandom_range(-1, 1) + sy;
 			draw_sprite(vstitle, -1, xx, yy);
+			draw_sprite(vstitleplayer, -1, xx, yy);
 		}
 		break;
 	

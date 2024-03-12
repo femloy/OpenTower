@@ -10,11 +10,11 @@ if hovered
     if obj_editor.key_place
     {
         image_index = 2
-        self.on_left_click()
+        on_left_click()
     }
     else if obj_editor.key_delete
     {
         image_index = 2
-        self.on_right_click()
+        on_right_click()
     }
 }

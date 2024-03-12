@@ -50,8 +50,14 @@ function following_character_calculate()
 }
 function following_add_to_front()
 {
-	if (ds_list_find_index(global.followerlist, id) != -1)
+	var i = 0;
+	while (ds_list_find_index(global.followerlist, id) != -1)
+	{
 		ds_list_delete(global.followerlist, ds_list_find_index(global.followerlist, id));
+		i++;
+		if (i > 50)
+			break;
+	}
 	ds_list_insert(global.followerlist, 0, id);
 	pos = ds_list_find_index(global.followerlist, id);
 	followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : -4;
@@ -85,4 +91,13 @@ function following_count(object)
 			n++;
 	}
 	return n;
+}
+function following_moonwalk_fix()
+{
+	if (!instance_exists(playerid))
+		exit;
+	if (playerid.object_index != obj_player1)
+		exit;
+	if (playerid.state == states.machcancel && playerid.hsp != 0)
+		image_xscale = sign(playerid.hsp) * playerid.scale_xs;
 }

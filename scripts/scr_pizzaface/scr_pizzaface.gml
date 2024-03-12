@@ -123,6 +123,8 @@ function scr_pizzaface_arenaintro()
 					with (obj_player1)
 					{
 						sprite_index = spr_pepbossintro1;
+						if (!ispeppino)
+							sprite_index = spr_noisebossintro1;
 						image_index = 0;
 					}
 				}
@@ -150,9 +152,11 @@ function scr_pizzaface_arenaintro()
 				{
 					with (obj_player1)
 					{
-						if (sprite_index != spr_pepbossintro2)
+						if (sprite_index != spr_pepbossintro2 && sprite_index != spr_noisebossintro2)
 						{
 							sprite_index = spr_pepbossintro2;
+							if (!ispeppino)
+								sprite_index = spr_noisebossintro2;
 							image_index = 0;
 						}
 					}
@@ -162,8 +166,13 @@ function scr_pizzaface_arenaintro()
 					introstate++;
 					with (obj_player1)
 					{
-						fmod_event_one_shot_3d("event:/sfx/voice/peppinoangryscream", x, y);
+						if (ispeppino)
+							fmod_event_one_shot_3d("event:/sfx/voice/peppinoangryscream", x, y);
+						else
+							fmod_event_one_shot_3d("event:/sfx/voice/woag", x, y);
 						sprite_index = spr_pepbossintro3;
+						if (!ispeppino)
+							sprite_index = spr_noisebossintro3;
 						image_index = 0;
 					}
 					sprite_index = spr_pizzaface_intro1;
@@ -215,6 +224,11 @@ function scr_pizzaface_arenaintro()
 }
 function scr_pizzaface_normal()
 {
+	if (lasthit)
+	{
+		elitehit = 0;
+		exit;
+	}
 	while (place_meeting(x, y, obj_solid))
 		x += (x > (room_width / 2)) ? -1 : 1;
 	image_speed = 0.35;
@@ -426,6 +440,14 @@ function scr_pizzaface_transitioncutscene()
 		{
 			if (sprite_index == spr_pepbossintro2)
 				image_index = image_number - 2;
+			else if (sprite_index == spr_pepbossintro1)
+				image_index = image_number - 2;
+			else if (sprite_index == spr_pepbossintro2)
+				image_index = image_number - 3;
+			else if (sprite_index == spr_noisebossintro1)
+				image_index = image_number - 3;
+			else if (sprite_index == spr_noisebossintro2)
+				image_index = image_number - 3;
 		}
 	}
 	switch (substate)
@@ -435,6 +457,25 @@ function scr_pizzaface_transitioncutscene()
 				introbuffer--;
 			else
 				substate = states.transition;
+			with (obj_player1)
+			{
+				hsp = 0;
+				vsp = 0;
+				xscale = 1;
+				movespeed = 0;
+				x = roomstartx;
+				y = 402;
+				if (sprite_index != spr_player_gnomecutscene1 && sprite_index != spr_noisebossintro1)
+				{
+					image_index = 0;
+					sprite_index = spr_player_gnomecutscene1;
+					if (!ispeppino)
+						sprite_index = spr_noisebossintro1;
+				}
+				image_speed = 0.35;
+				image_alpha = 1;
+				state = states.actor;
+			}
 			break;
 		case states.transition:
 			sprite_index = spr_pizzahead_intro1;
@@ -448,6 +489,8 @@ function scr_pizzaface_transitioncutscene()
 				with (obj_player1)
 				{
 					sprite_index = spr_pepbossintro2;
+					if (!ispeppino)
+						sprite_index = spr_noisebossintro2;
 					image_index = 0;
 				}
 				x = tx;

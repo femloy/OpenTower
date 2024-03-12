@@ -1,5 +1,21 @@
 function scr_shotgunshoot()
 {
+	if (!ispeppino)
+	{
+		input_buffer_shoot = 0;
+		if (state != states.shotgunshoot)
+		{
+			notification_push(notifs.shotgunblast_start, [room]);
+			minigunshot = 8;
+			if (grounded)
+				movespeed = 0;
+		}
+		else
+			minigunshot = 2;
+		minigunbuffer = 0;
+		state = states.shotgunshoot;
+		exit;
+	}
 	input_buffer_shoot = 0;
 	fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
 	with (instance_create(x, y, obj_pistoleffect))

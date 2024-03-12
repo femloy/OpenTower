@@ -17,7 +17,7 @@ if (!round_timer_init)
 }
 player_index += 0.35;
 boss_index += 0.35;
-player_index = wrap(player_index, 0, sprite_get_number(spr_bossfight_playerhp));
+player_index = wrap(player_index, 0, sprite_get_number(player_hpsprite));
 boss_index = wrap(boss_index, 0, sprite_get_number(boss_hpsprite));
 if (room == boss_vigilante)
 {

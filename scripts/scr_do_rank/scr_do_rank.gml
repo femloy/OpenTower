@@ -89,7 +89,12 @@ function scr_do_rank(showtoppins = true, boss = false)
 		{
 			do_rank = true;
 			toppinvisible = showtoppins;
-			if (room == tower_tutorial1)
+			with (obj_pizzaface)
+			{
+				if (bbox_in_camera(view_camera[0]))
+					notification_push(notifs.close_call, []);
+			}
+			if (room == tower_tutorial1 || room == tower_tutorial1N)
 			{
 				do_rank = false;
 				targetRoom = tower_entrancehall;

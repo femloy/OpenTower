@@ -4,7 +4,7 @@ function scr_button_pressed(gamepad)
 		return -1;
 	else if (gamepad_is_connected(gamepad))
 	{
-		if (gamepad_button_check(gamepad, gp_face1) || gamepad_button_check(gamepad, gp_start))
+		if (gamepad_button_check_pressed(gamepad, gp_face1) || gamepad_button_check_pressed(gamepad, gp_start))
 			return gamepad;
 	}
 	return -2;

@@ -74,22 +74,40 @@ function scr_string_width(str)
 }
 function scr_separate_text(str, font, width)
 {
-	draw_set_font(font);
-	while (scr_string_width(str) > (width - string_width("a")))
+	if font != noone
+		draw_set_font(font);
+	
+	var separation = lang_get_value("separation_map");
+	separation = string_split(separation, ",");
+	
+	while (scr_string_width(str) > width - string_width("a"))
 	{
 		var _pos = string_length(str);
 		var _oldpos = _pos;
-		while (string_char_at(str, _pos) != " ")
+		while (!scr_is_separation(string_char_at(str, _pos), separation))
 		{
 			_pos--;
 			if (_pos < 0)
 				_pos = _oldpos;
 		}
 		if (string_char_at(str, _pos) == " ")
+		{
 			str = string_delete(str, _pos, 1);
-		str = string_insert("\n", str, _pos);
+			str = string_insert("\n", str, _pos);
+		}
+		else
+			str = string_insert("\n", str, _pos + 1);
 	}
 	return str;
+}
+function scr_is_separation(char, separation)
+{
+	for (var i = 0; i < array_length(separation); i++)
+	{
+		if (char == separation[i])
+			return true;
+	}
+	return false;
 }
 function scr_calculate_text(str)
 {

@@ -11,7 +11,7 @@ function scr_player_tackle()
 	stopAnim = true;
 	crouchslideAnim = true;
 	crouchAnim = true;
-	if (sprite_index != spr_player_lungehit && sprite_index != spr_player_kungfu1 && sprite_index != spr_player_kungfu2 && sprite_index != spr_player_kungfu3)
+	if (sprite_index != spr_player_lungehit && sprite_index != spr_player_kungfu1 && sprite_index != spr_player_kungfu2 && sprite_index != spr_player_kungfu3 && sprite_index != spr_playerN_backkick && sprite_index != spr_playerN_tackle)
 	{
 		if (sprite_index != spr_golfswing)
 		{

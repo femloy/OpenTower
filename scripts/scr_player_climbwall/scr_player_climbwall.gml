@@ -32,6 +32,8 @@ function scr_player_climbwall()
 				if (wallspeed < 0)
 					wallspeed = 6;
 				sprite_index = spr_player_clownwallclimb;
+				if (!ispeppino)
+					sprite_index = spr_playerN_clownwallclimb;
 			}
 			if (grabclimbbuffer > 0)
 				grabclimbbuffer--;
@@ -47,7 +49,25 @@ function scr_player_climbwall()
 				trace("climbwall out");
 				instance_create(x, y, obj_jumpdust);
 				vsp = 0;
-				ledge_bump(32);
+				var old_x = x;
+				var old_y = y;
+				var i = 0;
+				while (!scr_solid(x + xscale, y))
+				{
+					i++;
+					y++;
+					if (scr_solid(x + xscale, y))
+					{
+						y--;
+						break;
+					}
+					if (i > 40)
+					{
+						x = old_x;
+						y = old_y;
+						break;
+					}
+				}
 				if (wallspeed < 6)
 					wallspeed = 6;
 				if ((wallspeed >= 6 && wallspeed < 12) || skateboarding)
@@ -61,10 +81,24 @@ function scr_player_climbwall()
 					sprite_index = spr_mach4;
 					movespeed = wallspeed;
 				}
+				hsp = xscale;
 			}
 			if (wallspeed < 0 && place_meeting(x, y + 12, obj_solid))
 				wallspeed = 0;
-			if (input_buffer_jump > 8)
+			if (!ispeppino && !skateboarding)
+			{
+				with (instance_create(x, y, obj_noiseeffect))
+					sprite_index = spr_noisewalljumpeffect;
+				sprite_index = spr_playerN_wallbounce;
+				state = states.machcancel;
+				savedmove = xscale;
+				vsp = -(17 * (1 - (noisewalljump * 0.15)));
+				noisewalljump++;
+				hsp = 0;
+				movespeed = 0;
+				image_index = 0;
+			}
+			if (input_buffer_jump > 8 && ispeppino)
 			{
 				fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
 				input_buffer_jump = 0;

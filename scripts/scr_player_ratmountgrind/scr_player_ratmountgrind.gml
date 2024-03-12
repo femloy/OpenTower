@@ -14,6 +14,13 @@ function scr_player_ratmountgrind()
 		movespeed = Approach(movespeed, 0, 0.5);
 		sprite_index = spr_lonegustavo_hang;
 	}
+	if (!ispeppino)
+	{
+		if (sprite_index == spr_lonegustavo_hangwalk)
+			sprite_index = spr_playerN_glovesmove;
+		else
+			sprite_index = spr_playerN_glovesidle;
+	}
 	image_speed = 0.35;
 	if (!place_meeting(x, y, obj_grindrailslope))
 	{
@@ -36,25 +43,60 @@ function scr_player_ratmountgrind()
 	ds_list_clear(global.instancelist);
 	if (!place_meeting(x, y, obj_grindrail) && !place_meeting(x, y, obj_grindrailslope))
 	{
-		state = states.ratmountjump;
-		sprite_index = spr_player_ratmountgroundpoundfall;
+		if (ispeppino)
+		{
+			state = states.ratmountjump;
+			sprite_index = spr_player_ratmountgroundpoundfall;
+		}
+		else
+		{
+			state = states.jump;
+			sprite_index = spr_fall;
+			jumpAnim = false;
+		}
 	}
 	if (input_buffer_jump > 0)
 	{
 		input_buffer_jump = 0;
-		state = states.ratmountjump;
-		if (key_down)
+		if (ispeppino)
 		{
-			sprite_index = spr_player_ratmountgroundpoundfall;
-			vsp = 5;
+			state = states.ratmountjump;
+			if (key_down)
+			{
+				sprite_index = spr_player_ratmountgroundpoundfall;
+				vsp = 5;
+			}
+			else
+			{
+				image_index = 0;
+				sprite_index = spr_player_ratmountgroundpound;
+				vsp = -11;
+			}
 		}
 		else
 		{
-			image_index = 0;
-			sprite_index = spr_player_ratmountgroundpound;
-			vsp = -11;
+			state = states.jump;
+			if (key_down)
+			{
+				jumpAnim = false;
+				sprite_index = spr_fall;
+				vsp = 5;
+			}
+			else
+			{
+				image_index = 0;
+				sprite_index = spr_jump;
+				jumpAnim = true;
+				vsp = -11;
+			}
 		}
 		jumpstop = false;
 		jumpAnim = true;
+	}
+	if (!ispeppino && state != states.ratmountgrind)
+	{
+		if (movespeed != 0)
+			xscale = sign(movespeed);
+		movespeed = abs(movespeed);
 	}
 }

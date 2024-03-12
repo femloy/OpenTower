@@ -24,3 +24,8 @@ function scr_random_granny()
 			instance_destroy();
 	}
 }
+function lang_get_value_granny(lang)
+{
+	lang_name = lang;
+	return lang_get_value(lang);
+}

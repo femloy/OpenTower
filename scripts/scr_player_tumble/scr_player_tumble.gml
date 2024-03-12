@@ -13,9 +13,24 @@ function scr_player_tumble()
 		movespeed = 6;
 	if (!grounded && (sprite_index == spr_crouchslip || sprite_index == spr_machroll || sprite_index == spr_mach2jump || sprite_index == spr_backslide || sprite_index == spr_backslideland))
 	{
-		vsp = 10;
-		sprite_index = spr_dive;
-		fmod_event_instance_play(snd_dive);
+		if (!ispeppino)
+		{
+			sprite_index = spr_playerN_divebomb;
+			state = states.machcancel;
+			savedmove = xscale;
+			vsp = 20;
+			movespeed = hsp;
+			input_buffer_slap = 0;
+			input_buffer_jump = 0;
+			image_index = 0;
+			exit;
+		}
+		else
+		{
+			vsp = 10;
+			sprite_index = spr_dive;
+			fmod_event_instance_play(snd_dive);
+		}
 	}
 	if (sprite_index == spr_tumble && grounded)
 	{
@@ -33,13 +48,29 @@ function scr_player_tumble()
 	}
 	if (sprite_index == spr_dive && key_jump)
 	{
-		sprite_index = spr_player_poundcancel1;
-		image_index = 0;
-		state = states.freefall;
-		dir = xscale;
-		vsp = -6;
+		if (ispeppino)
+		{
+			sprite_index = spr_player_poundcancel1;
+			image_index = 0;
+			state = states.freefall;
+			dir = xscale;
+			vsp = -6;
+		}
+		else
+		{
+			sprite_index = spr_playerN_divebomb;
+			state = states.machcancel;
+			vsp = 20;
+			hsp = 0;
+			savedmove = xscale;
+			movespeed = 0;
+			input_buffer_slap = 0;
+			input_buffer_jump = 0;
+			image_index = 0;
+			exit;
+		}
 	}
-	if (movespeed <= 2 && sprite_index != spr_tumble && sprite_index != spr_player_breakdance)
+	if (movespeed <= 2 && sprite_index != spr_tumble && sprite_index != spr_breakdance)
 		state = states.normal;
 	if (!scr_slope() && sprite_index == spr_tumblestart && floor(image_index) < 11)
 		image_index = 11;
@@ -72,7 +103,7 @@ function scr_player_tumble()
 		sprite_index = spr_player_Sjumpcancelland;
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_Sjumpcancelland)
 		sprite_index = spr_player_Sjumpcancelslide;
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_player_breakdance)
+	if (floor(image_index) == (image_number - 1) && sprite_index == spr_breakdance)
 	{
 		particle_set_scale(particle.jumpdust, xscale, 1);
 		create_particle(x, y, particle.jumpdust, 0);
@@ -121,12 +152,12 @@ function scr_player_tumble()
 			with (instance_create(x, y, obj_highjumpcloud2))
 				image_xscale = other.xscale;
 			vsp = -11;
-			image_index = 0;
+			scr_fmod_soundeffect(jumpsnd, x, y);
 		}
 	}
 	if (crouchslipbuffer > 0)
 		crouchslipbuffer--;
-	if (!key_down && key_attack && grounded && state != states.bump && (sprite_index != spr_tumble && sprite_index != spr_tumbleend) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && sprite_index != spr_player_breakdance)
+	if (!key_down && key_attack && grounded && state != states.bump && (sprite_index != spr_tumble && sprite_index != spr_tumbleend) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && sprite_index != spr_breakdance)
 	{
 		if (crouchslipbuffer == 0)
 		{
@@ -141,7 +172,7 @@ function scr_player_tumble()
 			fmod_event_instance_play(rollgetupsnd);
 		}
 	}
-	if (!key_down && !key_attack && grounded && vsp > 0 && state != states.bump && (sprite_index != spr_tumble && sprite_index != spr_tumbleend) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && sprite_index != spr_player_breakdance)
+	if (!key_down && !key_attack && grounded && vsp > 0 && state != states.bump && (sprite_index != spr_tumble && sprite_index != spr_tumbleend) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32) && sprite_index != spr_breakdance)
 	{
 		if (crouchslipbuffer == 0)
 		{
@@ -171,4 +202,6 @@ function scr_player_tumble()
 			other.dashcloudid = id;
 		}
 	}
+	if (sprite_index == spr_dive && vsp < 10)
+		vsp = 10;
 }

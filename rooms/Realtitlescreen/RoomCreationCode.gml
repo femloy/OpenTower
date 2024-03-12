@@ -306,6 +306,11 @@ enum states
 	UNKNOWN_2, // 301
 	UNKNOWN_3, // 302
 	UNKNOWN_4, // 303, used by obj_stickhat
+	UNKNOWN_5, // 304
+	
+	// noise
+	machcancelstart,
+	machcancel
 }
 
 global.coop = false;

@@ -30,7 +30,7 @@ function scr_player_ratmountpunch()
 	}
 	if ((key_down && grounded && !gustavohitwall) || scr_solid(x, y))
 		state = states.ratmountcrouch;
-	if (key_down && !grounded && !gustavohitwall)
+	if (scr_check_groundpound2() && !grounded && !gustavohitwall)
 	{
 		movespeed = hsp;
 		state = states.ratmountgroundpound;

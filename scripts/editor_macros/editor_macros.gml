@@ -15,7 +15,7 @@ enum inst_states
 }
 enum comp_state
 {
-	undocked,		// ???
+	undocked,
 	docked
 }
 enum comp_dock

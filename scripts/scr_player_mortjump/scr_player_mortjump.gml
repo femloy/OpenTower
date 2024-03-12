@@ -25,11 +25,11 @@ function scr_player_mortjump()
 		if (sprite_index == spr_player_barrelmove)
 			sprite_index = spr_player_barrelidle;
 	}
-	if (floor(image_index) == (image_number - 1))
+	if (floor(image_index) == image_number - 1)
 	{
-		if (sprite_index == spr_player_mortjumpstart)
-			sprite_index = spr_player_mortjump;
-		else if (sprite_index == spr_player_mortdoublejump || sprite_index == spr_mortdoublejumpstart)
+		if (sprite_index == spr_playermortjumpstart)
+			sprite_index = spr_playermortjump;
+		else if (sprite_index == spr_mortdoublejumpstart)
 			sprite_index = spr_mortdoublejump;
 	}
 	var dj = true;
@@ -39,7 +39,7 @@ function scr_player_mortjump()
 		input_buffer_jump = 0;
 		state = states.mortjump;
 		vsp = -11;
-		sprite_index = spr_player_mortjumpstart;
+		sprite_index = spr_playermortjumpstart;
 		image_index = 0;
 		doublejump = false;
 		jumpstop = false;
@@ -50,7 +50,7 @@ function scr_player_mortjump()
 	{
 		state = states.mort;
 		landAnim = true;
-		sprite_index = spr_player_mortland;
+		sprite_index = spr_playermortland;
 		image_index = 0;
 	}
 	else if (!doublejump && key_jump && dj)
@@ -61,7 +61,7 @@ function scr_player_mortjump()
 		input_buffer_jump = 0;
 		doublejump = true;
 		state = states.mortjump;
-		sprite_index = spr_player_mortdoublejump;
+		sprite_index = spr_mortdoublejumpstart;
 		image_index = 0;
 		vsp = -11;
 		repeat (4)

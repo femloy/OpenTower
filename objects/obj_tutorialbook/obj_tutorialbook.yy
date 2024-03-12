@@ -36,7 +36,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Hub",
-    "path": "folders/Objects/Level Specific/Hub.yy",
+    "name": "Tower",
+    "path": "folders/Objects/Level Specific/Tower.yy",
   },
 }

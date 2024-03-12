@@ -26,7 +26,7 @@ function tdp_input_key(_name, _actions_array = noone) constructor
 			var b = actions[i];
 			if (b.type == _type && b.value == _value)
 			{
-				if (_type != tdp_type.joystick || b.joystick_direction == _joystick_direction)
+				if (_type != tdp_input.joystick || b.joystick_direction == _joystick_direction)
 					return true;
 			}
 		}
@@ -50,7 +50,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 	{
 		switch (type)
 		{
-			case tdp_type.keyboard:
+			case tdp_input.keyboard:
 				if (is_array(value))
 				{
 					var last_held = held;
@@ -67,7 +67,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 				}
 				break;
 			
-			case tdp_type.gamepad:
+			case tdp_input.gamepad:
 				if (is_array(value))
 				{
 					last_held = held;
@@ -84,7 +84,14 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 				}
 				break;
 			
-			case tdp_type.joystick:
+			case tdp_input.joystick:
+				var _pindex = 0;
+				if (instance_exists(obj_inputAssigner))
+				{
+					_pindex = obj_inputAssigner.player_index;
+					if (_gamepad != obj_inputAssigner.player_input_device[_pindex])
+						_pindex = !_pindex;
+				}
 				last_held = held;
 				if (!custom_deadzone)
 				{
@@ -113,28 +120,28 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 				if (joystick_direction == 0)
 				{
 					var press_check = axis_value > pdz || axis_value < -pdz;
-					pressed = press_check && !stickpressed;
+					pressed = press_check && !stickpressed[_pindex];
 					held = axis_value > dz || axis_value < -dz;
 					released = axis_value > -dz && axis_value < dz && last_held;
 				}
 				else if (joystick_direction == 1)
 				{
 					press_check = axis_value > pdz;
-					pressed = press_check && !stickpressed;
+					pressed = press_check && !stickpressed[_pindex];
 					held = axis_value > dz;
 					released = !held && last_held;
 				}
 				else if (joystick_direction == -1)
 				{
 					press_check = axis_value < -pdz;
-					pressed = press_check && !stickpressed;
+					pressed = press_check && !stickpressed[_pindex];
 					held = axis_value < -dz;
 					released = !held && last_held;
 				}
 				if (press_check)
-					stickpressed = true;
+					stickpressed[_pindex] = true;
 				else
-					stickpressed = false;
+					stickpressed[_pindex] = false;
 				break;
 		}
 	};
@@ -143,7 +150,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 	value = _value;
 	has_axis_value = false;
 	axis_value = 0;
-	if (type == tdp_type.joystick)
+	if (type == tdp_input.joystick)
 	{
 		has_axis_value = true;
 		custom_deadzone = false;
@@ -153,7 +160,8 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 		custom_deadzone_horizontal = "input_controller_deadzone_deadzone";
 		custom_deadzone_side = "input_controller_deadzone_side";
 		axis_value = 0;
-		stickpressed = false;
+		stickpressed[0] = false;
+		stickpressed[1] = false;
 	}
 	if (is_array(value))
 	{

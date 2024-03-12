@@ -28,7 +28,7 @@ function state_player_normal()
 	var movespr = spr_move;
 	if (global.leveltosave == "freezer" && !global.noisejetpack)
 		idlespr = spr_player_freezeridle;
-	if (global.pistol)
+	if (global.pistol && ispeppino)
 	{
 		idlespr = spr_player_pistolidle;
 		movespr = spr_player_pistolwalk;
@@ -37,15 +37,24 @@ function state_player_normal()
 	{
 		idlespr = spr_pepdance;
 		movespr = spr_pepdance;
+		if (!ispeppino)
+		{
+			idlespr = spr_noise_vulnerable2;
+			movespr = spr_noise_vulnerable2;
+		}
 		idle = 0;
 	}
 	var breakdance_max = 10;
-	if (key_taunt && !shotgunAnim && !global.pistol)
+	if (key_taunt && !shotgunAnim && (!global.pistol || !ispeppino))
 		breakdance_pressed++;
 	else
 		breakdance_pressed = 0;
 	if (breakdance_pressed >= breakdance_max && !shotgunAnim)
+	{
 		breakdance_speed = Approach(breakdance_speed, 0.6, 0.005);
+		if (breakdance_pressed - 1 < breakdance_max)
+			notification_push(notifs.breakdance, []);
+	}
 	else
 		breakdance_speed = 0.25;
 	if (breakdance_speed >= 0.5)
@@ -95,12 +104,14 @@ function state_player_normal()
 			else if (mort)
 				sprite_index = spr_player_mortwalk;
 			else if (breakdance_pressed >= breakdance_max)
-				sprite_index = spr_player_breakdance;
+				sprite_index = spr_breakdance;
 			else if (global.fill <= 0 && !instance_exists(obj_ghostcollectibles))
 				sprite_index = spr_hurtwalk;
-			else if ((global.combo >= 25 && global.combo < 50) || instance_exists(obj_pizzafaceboss) || global.noisejetpack)
+			else if ((global.combo >= 25 && global.combo < 50) || instance_exists(obj_pizzafaceboss)
+			|| global.noisejetpack || (global.noisejetpack && (ispeppino || noisepizzapepper)))
 				sprite_index = spr_3hpwalk;
-			else if (global.combo >= 50 || instance_exists(obj_pizzaface_thunderdark))
+			else if (global.combo >= 50 || instance_exists(obj_pizzaface_thunderdark)
+			|| (ispeppino && instance_exists(obj_pizzaface_thunderdark)))
 				sprite_index = spr_ragemove;
 			else
 				sprite_index = movespr;
@@ -111,7 +122,7 @@ function state_player_normal()
 		{
 			if (steppybuffer > 0)
 				steppybuffer--;
-			else if (sprite_index != spr_player_breakdance && sprite_index != spr_pepdance)
+			else if (sprite_index != spr_breakdance && sprite_index != spr_pepdance && sprite_index != spr_noise_vulnerable2)
 			{
 				create_particle(x, y + 43, particle.cloudeffect, 0);
 				steppybuffer = 12;
@@ -125,7 +136,7 @@ function state_player_normal()
 	else
 	{
 		steppybuffer = 12;
-		if (sprite_index == spr_player_breakdance)
+		if (sprite_index == spr_breakdance)
 			image_speed = breakdance_speed;
 		else
 			image_speed = 0.35;
@@ -141,7 +152,7 @@ function state_player_normal()
 					facehurt = false;
 					idle = 0;
 				}
-				if (!global.pistol && !shotgunAnim && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
+				if ((!global.pistol || !ispeppino) && !shotgunAnim && sprite_index != spr_idle1 && sprite_index != spr_idle2 && sprite_index != spr_idle3 && sprite_index != spr_idle4 && sprite_index != spr_idle5 && sprite_index != spr_idle6)
 				{
 					idleanim = random_range(0, 100);
 					if (irandom(100) <= 25)
@@ -172,14 +183,15 @@ function state_player_normal()
 					else if (mort)
 						sprite_index = spr_player_mortidle;
 					else if (breakdance_pressed >= breakdance_max)
-						sprite_index = spr_player_breakdance;
+						sprite_index = spr_breakdance;
 					else if (global.fill <= 0 && !instance_exists(obj_ghostcollectibles))
 						sprite_index = spr_hurtidle;
 					else if (global.panic && !instance_exists(obj_ghostcollectibles))
 						sprite_index = spr_panic;
-					else if ((global.combo >= 25 && global.combo < 50) || instance_exists(obj_pizzafaceboss) || global.noisejetpack)
+					else if ((global.combo >= 25 && global.combo < 50) || instance_exists(obj_pizzafaceboss)
+					|| (global.noisejetpack && (ispeppino || noisepizzapepper)))
 						sprite_index = spr_3hpidle;
-					else if (global.combo >= 50 || instance_exists(obj_pizzaface_thunderdark))
+					else if (global.combo >= 50 || (ispeppino && instance_exists(obj_pizzaface_thunderdark)))
 						sprite_index = spr_rageidle;
 					else
 						sprite_index = idlespr;
@@ -190,7 +202,7 @@ function state_player_normal()
 					windingAnim--;
 					sprite_index = spr_winding;
 					if (breakdance_pressed >= breakdance_max)
-						sprite_index = spr_player_breakdance;
+						sprite_index = spr_breakdance;
 				}
 			}
 			else
@@ -198,7 +210,7 @@ function state_player_normal()
 				windingAnim = 0;
 				sprite_index = spr_facehurt;
 				if (breakdance_pressed >= breakdance_max)
-					sprite_index = spr_player_breakdance;
+					sprite_index = spr_breakdance;
 			}
 		}
 	}
@@ -292,7 +304,7 @@ function state_player_normal()
 				sprite_index = spr_jump;
 				if (shotgunAnim)
 					sprite_index = spr_shotgunjump;
-				else if (global.pistol)
+				else if (global.pistol && ispeppino)
 					sprite_index = spr_player_pistoljump1;
 				image_index = 0;
 			}
@@ -323,7 +335,7 @@ function state_player_normal()
 				sprite_index = spr_fall;
 			else
 				sprite_index = spr_shotgunfall;
-			if (global.pistol)
+			if (global.pistol && ispeppino)
 				sprite_index = spr_player_pistoljump2;
 			image_index = 0;
 			jumpAnim = false;
@@ -351,17 +363,31 @@ function state_player_normal()
 		movespeed = 8;
 		image_index = 0;
 	}
-	else if (input_buffer_slap > 0 && key_up && shotgunAnim == 0 && !global.pistol)
+	else if (input_buffer_slap > 0 && key_up && shotgunAnim == 0 && (!global.pistol || !ispeppino))
 	{
 		state = states.punch;
 		input_buffer_slap = 0;
 		image_index = 0;
-		sprite_index = spr_player_breakdanceuppercut;
+		sprite_index = spr_breakdanceuppercut;
 		fmod_event_instance_play(snd_uppercut);
-		vsp = -14;
+		if (ispeppino)
+			vsp = -14;
+		else
+			vsp = -20;
 		movespeed = hsp;
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particle.highjumpcloud2, 0);
+		if (!ispeppino)
+		{
+			repeat (4)
+			{
+				with (instance_create(x + irandom_range(-40, 40), y + irandom_range(-40, 40), obj_explosioneffect))
+				{
+					sprite_index = spr_shineeffect;
+					image_speed = 0.35;
+				}
+			}
+		}
 	}
 	switch (character)
 	{

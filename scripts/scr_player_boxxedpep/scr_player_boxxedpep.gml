@@ -8,6 +8,8 @@ function scr_player_boxxedpep()
 	doublejump = false;
 	if (abs(hsp) <= 2)
 		boxxeddash = false;
+	if (!ispeppino)
+		noisejetpack = 80;
 	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
 	{
 		vsp /= 2;
@@ -39,11 +41,19 @@ function scr_player_boxxedpep()
 	if ((can_jump && input_buffer_jump > 0 && vsp > 0) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
 		GamepadSetVibration(0, 0.4, 0.4, 0.65);
-		fmod_event_one_shot_3d("event:/sfx/boxxed/flap", x, y);
+		if (ispeppino)
+			fmod_event_one_shot_3d("event:/sfx/boxxed/flap", x, y);
 		instance_create(x, y, obj_highjumpcloud2);
 		vsp = -boxxedpepjump;
+		if (!ispeppino)
+		{
+			target_vsp = -4;
+			vsp = target_vsp;
+		}
 		state = states.boxxedpepjump;
 		sprite_index = spr_boxxedpep_flap;
+		if (!ispeppino)
+			sprite_index = spr_playerN_boxxedjetpack;
 		image_index = 0;
 		repeat (7)
 		{
@@ -107,6 +117,8 @@ function scr_player_boxxedpep()
 		input_buffer_slap = 0;
 		state = states.boxxedpepspin;
 		sprite_index = spr_boxxedpep_spin;
+		if (!ispeppino)
+			sprite_index = spr_playerN_boxxedhit;
 		boxxedspinbuffer = 25;
 		image_index = 0;
 		movespeed = xscale * 12;
@@ -127,7 +139,8 @@ function scr_player_boxxedpep()
 	if (sprite_index == spr_boxxedpepwalk && !steppy && floor(image_index) == (image_number - 1))
 	{
 		steppy = true;
-		fmod_event_one_shot_3d("event:/sfx/boxxed/step", x, y);
+		if (ispeppino)
+			fmod_event_one_shot_3d("event:/sfx/boxxed/step", x, y);
 	}
 	else if (floor(image_index) != (image_number - 1))
 		steppy = false;

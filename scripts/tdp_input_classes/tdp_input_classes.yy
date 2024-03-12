@@ -5,7 +5,7 @@
   "isDnD": false,
   "isCompatibility": false,
   "parent": {
-    "name": "Input",
-    "path": "folders/Scripts/Systems/Input.yy",
+    "name": "TDP",
+    "path": "folders/Scripts/TDP.yy",
   },
 }

@@ -295,13 +295,26 @@ function scr_fakepepboss_arenaintro()
 			image_speed = 0.35;
 			xscale = -other.image_xscale;
 			if (other.sprite_index == spr_fakepeppino_intro1)
-				sprite_index = spr_player_gnomecutscene1;
+			{
+				if (ispeppino)
+					sprite_index = spr_player_gnomecutscene1;
+				else
+					sprite_index = spr_playerN_bosscutscene1;
+			}
 			if (floor(image_index) == (image_number - 1))
 			{
 				if (sprite_index == spr_player_gnomecutscene2)
 					image_index = image_number - 1;
 				else if (sprite_index == spr_player_gnomecutscene3)
 					sprite_index = spr_player_gnomecutscene4;
+				else if (sprite_index == spr_noise_vulnerable1)
+					sprite_index = spr_noise_vulnerable1loop;
+				else if (sprite_index == spr_noise_intro1)
+					sprite_index = spr_noise_intro2;
+				else if (sprite_index == spr_noise_intro2)
+					image_index = 7;
+				else if (sprite_index == spr_playerN_bosscutscene2 || sprite_index == spr_playerN_bosscutscene3)
+					image_index = image_number - 1;
 			}
 		}
 		if (floor(image_index) == (image_number - 1))
@@ -320,8 +333,16 @@ function scr_fakepepboss_arenaintro()
 			introbuffer = 70;
 			with (obj_player)
 			{
-				sprite_index = spr_player_gnomecutscene2;
-				image_index = 0;
+				if (ispeppino)
+				{
+					sprite_index = spr_player_gnomecutscene2;
+					image_index = 0;
+				}
+				else
+				{
+					sprite_index = spr_playerN_bosscutscene2;
+					image_index = 0;
+				}
 			}
 		}
 		else if (sprite_index == spr_fakepeppino_intro2)
@@ -332,9 +353,17 @@ function scr_fakepepboss_arenaintro()
 			introbuffer = 130;
 			with (obj_player)
 			{
-				fmod_event_one_shot("event:/sfx/pep/screamboss");
-				sprite_index = spr_player_gnomecutscene3;
-				image_index = 0;
+				if (ispeppino)
+				{
+					fmod_event_one_shot("event:/sfx/pep/screamboss");
+					sprite_index = spr_player_gnomecutscene3;
+					image_index = 0;
+				}
+				else
+				{
+					sprite_index = spr_noise_intro1;
+					image_index = 0;
+				}
 			}
 		}
 		else if (sprite_index == spr_fakepeppino_intro3)
@@ -351,9 +380,18 @@ function scr_fakepepboss_arenaintro()
 				ID = other.id;
 			with (obj_player)
 			{
-				sprite_index = spr_player_screamtransition;
-				image_index = 0;
-				image_speed = 0.35;
+				if (ispeppino)
+				{
+					sprite_index = spr_player_screamtransition;
+					image_index = 0;
+					image_speed = 0.35;
+				}
+				else
+				{
+					sprite_index = spr_noise_intro3;
+					image_index = 0;
+					image_speed = 0.35;
+				}
 				landAnim = false;
 				tauntstoredstate = states.normal;
 				state = states.animation;

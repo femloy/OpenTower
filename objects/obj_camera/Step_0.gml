@@ -139,9 +139,16 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 	switch (state)
 	{
 		case states.normal:
+			if (room == boss_pizzaface && instance_exists(obj_player1) && instance_exists(obj_pizzaface_thunderdark) && obj_player1.state != states.supergrab)
+			{
+				camera_set_view_size(view_camera[0], SCREEN_WIDTH * camzoom, SCREEN_HEIGHT * camzoom);
+				camzoom = lerp(camzoom, 1, 0.08);
+				if (camzoom >= 0.998)
+					camzoom = 1;
+			}
 			var target = player;
-			var tx = target.x;
-			var ty = target.y;
+			var tx = target.x + offset_x;
+			var ty = target.y + offset_y;
 			if (target.state == states.backtohub)
 				ty = target.backtohubstarty;
 			if (target.cutscene || (target.collision_flags & colflag.secret) > 0)
@@ -153,9 +160,14 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 			}
 			else if (target.state == states.mach2 || target.state == states.mach3)
 			{
-				var _targetcharge = target.xscale * ((target.movespeed / 4) * 50);
-				var _tspeed = 0.3;
-				chargecamera = Approach(chargecamera, _targetcharge, _tspeed);
+				if (target.state == states.mach3 && target.sprite_index == target.spr_fightball && sign(chargecamera) != target.xscale)
+					chargecamera = Approach(chargecamera, 0, 10);
+				else
+				{
+					var _targetcharge = target.xscale * ((target.movespeed / 4) * 50);
+					var _tspeed = 0.3;
+					chargecamera = Approach(chargecamera, _targetcharge, _tspeed);
+				}
 			}
 			else if (target.ratmount_movespeed > 2 && target.key_attack && (target.state == states.ratmount || target.state == states.ratmountjump))
 			{
@@ -163,7 +175,7 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 				_tspeed = 0.3;
 				chargecamera = Approach(chargecamera, _targetcharge, _tspeed);
 			}
-			else if ((abs(target.hsp) >= 16 || (target.state == states.chainsaw && target.tauntstoredmovespeed >= 16)) && player.state != states.climbwall && player.state != states.Sjump)
+			else if ((abs(target.hsp) >= 16 || (target.state == states.chainsaw && target.tauntstoredmovespeed >= 16)) && player.state != states.climbwall && player.state != states.Sjump && player.state != states.ghost)
 			{
 				_targetcharge = target.xscale * ((abs(target.hsp) / 4) * 50);
 				_tspeed = 2;
@@ -261,4 +273,6 @@ if (instance_exists(player) && !lock && player.state != states.timesup && player
 			camera_set_view_pos(view_camera[0], cam_x, cam_y);
 			break;
 	}
+	offset_x = Approach(offset_x, 0, offset_speed);
+	offset_y = Approach(offset_y, 0, offset_speed);
 }

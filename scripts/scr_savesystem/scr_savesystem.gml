@@ -86,7 +86,7 @@ function gamesave_async_load()
 		{
 			loadbuff = buffer_create(1, 1, 1);
 			buffer_async_group_begin(get_buffer_group_name());
-			buffer_load_async(loadbuff, get_savefile_ini(), 0, -1);
+			buffer_load_async(loadbuff, get_savefile_ini(ispeppino), 0, -1);
 			loadid = buffer_async_group_end();
 			state = 2;
 		}

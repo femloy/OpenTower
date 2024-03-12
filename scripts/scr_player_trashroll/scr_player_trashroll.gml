@@ -7,7 +7,7 @@ function scr_player_trashroll()
 	if ((scr_slope() && hsp != 0) && movespeed < 14)
 		scr_player_addslopemomentum(0.25, 0.25);
 	movespeed = max(3, movespeed);
-	if (sprite_index != spr_player_corpsestart && sprite_index != spr_player_corpsesurf)
+	if (sprite_index != spr_playercorpsestart && sprite_index != spr_playercorpsesurf)
 	{
 		if (sprite_index != spr_player_trashjump && sprite_index != spr_player_trashjump2 && sprite_index != spr_player_trashfall)
 			sprite_index = spr_player_trashslide;
@@ -30,8 +30,8 @@ function scr_player_trashroll()
 	else
 	{
 		image_speed = 0.35;
-		if (sprite_index == spr_player_corpsestart && floor(image_index) == (image_number - 1))
-			sprite_index = spr_player_corpsesurf;
+		if (sprite_index == spr_playercorpsestart && floor(image_index) == (image_number - 1))
+			sprite_index = spr_playercorpsesurf;
 	}
 	if (!instance_exists(obj_slidecloud) && grounded)
 	{

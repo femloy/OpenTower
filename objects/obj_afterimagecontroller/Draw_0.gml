@@ -45,6 +45,17 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 				shader_set_uniform_f(other.shd_color_green, 0);
 				shader_set_uniform_f(other.shd_color_blue, 0);
 			}
+			else if (identifier == afterimage.noise)
+			{
+				a = alpha;
+				shd = true;
+				shader_set(shd_noise_afterimage);
+				var pal = 1;
+				if (obj_player1.paletteselect == 0)
+					pal = 5;
+				noise_aftimg_set_pal(obj_player1.spr_palette, obj_player1.paletteselect, pal);
+				noise_aftimg_set_pattern(global.palettetexture, 0);
+			}
 			else if (identifier == afterimage.blur)
 			{
 				a = alpha;
@@ -55,6 +66,8 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 					shader_set(global.Pal_Shader);
 					if (playerid.object_index == obj_player1)
 						pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);
+					else if (playerid.object_index == obj_swapmodegrab)
+						pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, playerid.patterntexture);
 					pal_swap_set(playerid.spr_palette, playerid.paletteselect, false);
 				}
 			}

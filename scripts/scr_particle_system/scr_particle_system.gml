@@ -40,10 +40,13 @@ function create_debris(_x, _y, _sprite, _animated = false)
 }
 function create_heatpuff(x, y)
 {
-	var q = create_debris(x, y, spr_heatpuff, true);
+	var q = instance_create(x, y, obj_debris);
+	q.sprite_index = spr_heatpuff;
+	q.image_index = irandom(sprite_get_number(spr_heatpuff) - 1);
 	q.grav = 0;
 	q.hsp = 0;
 	q.vsp = irandom_range(-4, -1);
+	q.image_speed = 0.35;
 	q.destroyonanimation = true;
 	return q;
 }

@@ -43,6 +43,20 @@ function scr_check_groundpound()
 	return ((gp && key_down2) || key_groundpound);
 }
 
+function scr_mach_check_dive()
+{
+	if (grounded && vsp > 0)
+		return key_down;
+	return scr_check_dive();
+}
+
+function scr_check_dive()
+{
+	if (!ispeppino)
+		return scr_check_groundpound2();
+	return key_down;
+}
+
 function scr_check_groundpound2()
 {
 	var gp = global.gamepad_groundpound;
@@ -62,7 +76,7 @@ function scr_switch_get_menu_input()
 function scr_menu_getinput()
 {
 	if (!instance_exists(obj_player))
-		tdp_input_update(obj_inputAssigner.player_input_device[0]);
+		tdp_input_update(obj_inputAssigner.player_input_device[obj_inputAssigner.player_index]);
 	
 	key_up = tdp_input_get("menu_up").held || tdp_input_get("menu_upC").held;
 	key_up2 = tdp_input_get("menu_up").pressed || tdp_input_get("menu_upC").pressed;
@@ -80,11 +94,74 @@ function scr_menu_getinput()
 	key_delete2 = tdp_input_get("menu_delete").pressed || tdp_input_get("menu_deleteC").pressed;
 	key_quit = tdp_input_get("menu_quit").held || tdp_input_get("menu_quitC").held;
 	key_quit2 = tdp_input_get("menu_quit").pressed || tdp_input_get("menu_quitC").pressed;
+	
+	if (global.swapmode && obj_inputAssigner.player_input_device[0] != obj_inputAssigner.player_input_device[1])
+	{
+		var _dvc = obj_inputAssigner.player_input_device[!obj_inputAssigner.player_index];
+		tdp_input_update(_dvc);
+		
+		var inputs = [
+			// input, menu_input, is_press
+			["key_up", "menu_up", false],
+			["key_up2", "menu_up", true],
+			["key_down", "menu_down", false],
+			["key_down2", "menu_down", true],
+			["key_left", "menu_left", false],
+			["key_left2", "menu_left", true],
+			["key_right", "menu_right", false],
+			["key_right2", "menu_right", true],
+			["key_start", "menu_start", true],
+			["key_back", "menu_back", true],
+			["key_jump", "menu_select", true],
+			["key_jump2", "menu_select", false],
+			["key_delete", "menu_delete", false],
+			["key_delete2", "menu_delete", true],
+			["key_quit", "menu_delete", false],
+			["key_quit2", "menu_delete", true]
+		];
+		
+		for (var i = 0; i < array_length(inputs); i++)
+		{
+			var input = inputs[i];
+			if (!variable_instance_get(id, input[0]))
+			{
+				var _bool = false;
+				if (input[2])
+					_bool = (_dvc < 0) ? tdp_input_get(input[1]).pressed : tdp_input_get(input[1] + "C").pressed;
+				else
+					_bool = (_dvc < 0) ? tdp_input_get(input[1]).held : tdp_input_get(input[1] + "C").held;
+				variable_instance_set(id, input[0], _bool);
+			}
+		}
+	}
 }
 
 function scr_getinput()
 {
-	var _dvc = obj_inputAssigner.player_input_device[0];
+	var _dvc = obj_inputAssigner.player_input_device[player_index];
+	var _dvc2 = obj_inputAssigner.player_input_device[!player_index];
+	
+	key_fightball = false;
+	key_jump_p2 = false;
+	key_jump2_p2 = false;
+	key_taunt_p2 = false;
+	key_taunt2_p2 = false;
+	key_slap_p2 = false;
+	key_up_p2 = false;
+	key_start_p2 = false;
+	
+	if (global.swapmode && _dvc != _dvc2)
+	{
+		tdp_input_update(_dvc2);
+		key_fightball = (_dvc2 >= 0) ? tdp_input_get("player_attackC").held : tdp_input_get("player_attack").held;
+		key_jump_p2 = (_dvc2 >= 0) ? tdp_input_get("player_jumpC").pressed : tdp_input_get("player_jump").pressed;
+		key_jump2_p2 = (_dvc2 >= 0) ? tdp_input_get("player_jumpC").held : tdp_input_get("player_jump").held;
+		key_taunt_p2 = (_dvc2 >= 0) ? tdp_input_get("player_tauntC").pressed : tdp_input_get("player_taunt").pressed;
+		key_taunt2_p2 = (_dvc2 >= 0) ? tdp_input_get("player_tauntC").held : tdp_input_get("player_taunt").held;
+		key_slap_p2 = (_dvc2 >= 0) ? tdp_input_get("player_slapC").pressed : tdp_input_get("player_slap").pressed;
+		key_up_p2 = (_dvc2 >= 0) ? tdp_input_get("player_upC").held : tdp_input_get("player_up").held;
+		key_start_p2 = (_dvc2 >= 0) ? tdp_input_get("menu_startC").pressed : tdp_input_get("menu_start").pressed;
+	}
 	tdp_input_update(_dvc);
 	
 	if instance_exists(obj_debugcontroller) && obj_debugcontroller.active
@@ -99,30 +176,61 @@ function scr_getinput()
 	var vertpress_dz = global.input_controller_deadzone_press;
 	var horizpress_dz = global.input_controller_deadzone_press;
 	
-	key_up = tdp_input_get("player_up").held || tdp_input_get("player_upC").held;
-	key_up2 = tdp_input_get("player_up").pressed || tdp_input_get("player_upC").pressed;
-	key_right = tdp_input_get("player_right").held || tdp_input_get("player_rightC").held;
-	key_right2 = tdp_input_get("player_right").pressed || tdp_input_get("player_rightC").pressed;
-	key_left = -(tdp_input_get("player_left").held || tdp_input_get("player_leftC").held);
-	key_left2 = -(tdp_input_get("player_left").pressed || tdp_input_get("player_leftC").pressed);
-	key_down = tdp_input_get("player_down").held || tdp_input_get("player_downC").held;
-	key_down2 = tdp_input_get("player_down").pressed || tdp_input_get("player_downC").pressed;
-	key_jump = tdp_input_get("player_jump").pressed || tdp_input_get("player_jumpC").pressed;
-	key_jump2 = tdp_input_get("player_jump").held || tdp_input_get("player_jumpC").held;
-	key_slap = tdp_input_get("player_slap").held || tdp_input_get("player_slapC").held;
-	key_slap2 = tdp_input_get("player_slap").pressed || tdp_input_get("player_slapC").pressed;
-	key_taunt = tdp_input_get("player_taunt").held || tdp_input_get("player_tauntC").held;
-	key_taunt2 = tdp_input_get("player_taunt").pressed || tdp_input_get("player_tauntC").pressed;
-	key_attack = tdp_input_get("player_attack").held || tdp_input_get("player_attackC").held;
-	key_attack2 = tdp_input_get("player_attack").pressed || tdp_input_get("player_attackC").pressed;
+	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
+	if (key_start_p2)
+		key_start = true;
+	
+	if (!global.swapmode || _dvc == -1)
+	{
+		key_up = tdp_input_get("player_up").held || tdp_input_get("player_upC").held;
+		key_up2 = tdp_input_get("player_up").pressed || tdp_input_get("player_upC").pressed;
+		key_right = tdp_input_get("player_right").held || tdp_input_get("player_rightC").held;
+		key_right2 = tdp_input_get("player_right").pressed || tdp_input_get("player_rightC").pressed;
+		key_left = -(tdp_input_get("player_left").held || tdp_input_get("player_leftC").held);
+		key_left2 = -(tdp_input_get("player_left").pressed || tdp_input_get("player_leftC").pressed);
+		key_down = tdp_input_get("player_down").held || tdp_input_get("player_downC").held;
+		key_down2 = tdp_input_get("player_down").pressed || tdp_input_get("player_downC").pressed;
+		key_jump = tdp_input_get("player_jump").pressed || tdp_input_get("player_jumpC").pressed;
+		key_jump2 = tdp_input_get("player_jump").held || tdp_input_get("player_jumpC").held;
+		key_jump3 = tdp_input_get("player_jump").released || tdp_input_get("player_jumpC").released;
+		key_slap = tdp_input_get("player_slap").held || tdp_input_get("player_slapC").held;
+		key_slap2 = tdp_input_get("player_slap").pressed || tdp_input_get("player_slapC").pressed;
+		key_taunt = tdp_input_get("player_taunt").held || tdp_input_get("player_tauntC").held;
+		key_taunt2 = tdp_input_get("player_taunt").pressed || tdp_input_get("player_tauntC").pressed;
+		key_attack = tdp_input_get("player_attack").held || tdp_input_get("player_attackC").held;
+		key_attack2 = tdp_input_get("player_attack").pressed || tdp_input_get("player_attackC").pressed;
+		key_superjump = tdp_input_get("player_superjumpC").held || tdp_input_get("player_superjump").held;
+		key_groundpound = tdp_input_get("player_groundpoundC").pressed || tdp_input_get("player_groundpound").pressed;
+		key_groundpound2 = tdp_input_get("player_groundpoundC").held || tdp_input_get("player_groundpound").held;
+	}
+	else if (_dvc >= 0)
+	{
+		key_up = tdp_input_get("player_upC").held;
+		key_up2 = tdp_input_get("player_upC").pressed;
+		key_right = tdp_input_get("player_rightC").held;
+		key_right2 = tdp_input_get("player_rightC").pressed;
+		key_left = -tdp_input_get("player_leftC").held;
+		key_left2 = -tdp_input_get("player_leftC").pressed;
+		key_down = tdp_input_get("player_downC").held;
+		key_down2 = tdp_input_get("player_downC").pressed;
+		key_jump = tdp_input_get("player_jumpC").pressed;
+		key_jump2 = tdp_input_get("player_jumpC").held;
+		key_jump3 = tdp_input_get("player_jumpC").released;
+		key_slap = tdp_input_get("player_slapC").held;
+		key_slap2 = tdp_input_get("player_slapC").pressed;
+		key_taunt = tdp_input_get("player_tauntC").held;
+		key_taunt2 = tdp_input_get("player_tauntC").pressed;
+		key_attack = tdp_input_get("player_attackC").held;
+		key_attack2 = tdp_input_get("player_attackC").pressed;
+		key_superjump = tdp_input_get("player_superjumpC").held;
+		key_groundpound = tdp_input_get("player_groundpoundC").pressed;
+		key_groundpound2 = tdp_input_get("player_groundpoundC").held;
+	}
+	
 	key_shoot = false;
 	key_shoot2 = false;
-	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
 	key_chainsaw = false;
 	key_chainsaw2 = false;
-	key_superjump = tdp_input_get("player_superjumpC").held || tdp_input_get("player_superjump").held;
-	key_groundpound = tdp_input_get("player_groundpoundC").pressed || tdp_input_get("player_groundpound").pressed;
-	key_groundpound2 = tdp_input_get("player_groundpoundC").held || tdp_input_get("player_groundpound").held;
 	key_left_axis = scr_get_move_axis("player_leftC");
 	key_right_axis = scr_get_move_axis("player_rightC");
 	key_up_axis = scr_get_move_axis("player_upC");
@@ -142,7 +250,7 @@ function scr_getinput()
 	// gamepad analog stick bullshit
 	if object_index == obj_player1
     {
-        if state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch
+        if state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch || state == states.machcancel
         {
             if state == states.Sjumpprep
 			{
@@ -160,7 +268,7 @@ function scr_getinput()
 				var b = in.actions[i];
 				with (b)
 				{
-					if (type == tdp_type.joystick)
+					if (type == tdp_input.joystick)
 					{
 						switch (value)
 						{
@@ -199,7 +307,7 @@ function scr_get_move_axis(input_str)
 		var b = in.actions[i];
 		with (b)
 		{
-			if (type == tdp_type.joystick)
+			if (type == tdp_input.joystick)
 			{
 				var av = axis_value;
 				if (joystick_direction == -1 && av > 0)

@@ -65,6 +65,19 @@ function scr_player_backbreaker()
 			supercharge = 0;
 			supercharged = false;
 		}
+		if (input_taunt_p2 > 0 || (global.swapmode && obj_inputAssigner.player_input_device[!obj_inputAssigner.player_index] == obj_inputAssigner.player_input_device[obj_inputAssigner.player_index] && key_down2))
+		{
+			if (!swap_taunt && swap_player(false))
+			{
+				input_taunt_p2 = 0;
+				if (taunttimer < 10)
+					taunttimer = 10;
+				swap_taunt = true;
+				with (instance_create(0, 0, obj_swapmodeeffect))
+					taunt = true;
+				exit;
+			}
+		}
 		taunttimer--;
 		vsp = 0;
 	}

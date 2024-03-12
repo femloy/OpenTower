@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Title Screen",
-    "path": "folders/Objects/General/Title Screen.yy",
+    "name": "Menus",
+    "path": "folders/Objects/General/Menus.yy",
   },
 }

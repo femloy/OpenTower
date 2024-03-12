@@ -1,4 +1,4 @@
-if (room == timesuproom || is_bossroom() || room == tower_tutorial1)
+if (room == timesuproom || is_bossroom() || room == tower_tutorial1 || room == tower_tutorial1N)
 {
 	instance_destroy(obj_comboend);
 	exit;

@@ -51,9 +51,8 @@ function scr_pizzagoblin_throw()
 					image_xscale = other.image_xscale;
 				break;
 			case obj_noisegoblin:
-				with (instance_create(x, y, obj_noisegoblin_arrow))
-				{
-				}
+				if (sprite_index == spr_archergoblin_shoot)
+					instance_create(x, y, obj_noisegoblin_arrow);
 				break
 			case obj_cheeserobot:
 				with (instance_create(x, y, obj_cheeseblob))

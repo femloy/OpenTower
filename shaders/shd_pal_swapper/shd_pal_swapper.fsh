@@ -9,6 +9,7 @@ uniform float palette_index;
 // pattern stuff
 uniform sampler2D pattern_texture;
 uniform int pattern_enabled;
+uniform int pattern_solid_color;
 uniform float color_array[2];
 uniform vec4 pattern_tex_data; // (x, y) = trimmed l/t offset | (z, w) = texture size
 uniform vec4 pattern_UVs;
@@ -55,6 +56,9 @@ void main()
 							texcoord.y = pattern_UVs.y + pos.y;
 						else
 							texcoord.y = pattern_UVs.w - pos.y;
+							
+						if (pattern_solid_color == 1)
+							texcoord = vec2(pattern_UVs.x, pattern_UVs.y);
 						
 						// mix the pattern and the palette colors
 						vec4 pat = texture2D(pattern_texture, texcoord);
@@ -64,6 +68,7 @@ void main()
 						break;
 					}
 				}
+				
 			}
 			break;
 		}

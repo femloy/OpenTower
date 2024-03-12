@@ -80,6 +80,141 @@ function scr_noise_update_sounds()
 }
 function scr_noise_arenaintro()
 {
+	// DOISE IS DEAD
+	if (doise && !global.resetdoise)
+	{
+		var _dead = false;
+		ini_open_from_string(obj_savesystem.ini_str);
+		_dead = ini_read_real("w3stick", "bosskey", false) || ini_read_real("Hats", "b_noise", 0) > 0;
+		ini_close();
+		if (_dead)
+		{
+			with (obj_music)
+			{
+				if (music != -4)
+					fmod_event_instance_stop(music.event, true);
+			}
+			global.extrahats = global.srank;
+			elitehit = 0;
+			prevhp = 0;
+			with (obj_bosscontroller)
+			{
+				boss_hp = 0;
+				boss_prevhp = 0;
+				if (state == 144)
+					other.introbuffer = 10000;
+			}
+			scr_boss_genericintro(spr_playerN_animatronic, 250);
+			if (state == states.walk)
+			{
+				with (instance_create(x, y, obj_doisedead))
+				{
+					image_xscale = other.image_xscale;
+					other.spotlightID.objectID = id;
+				}
+				instance_destroy(id, false);
+			}
+			exit;
+		}
+	}
+	
+	// PEPPINO meets NOISE
+	if (obj_player1.ispeppino && !doise)
+	{
+		if (!skipintro)
+		{
+			if (!intro)
+			{
+				sprite_index = spr_noise_intro1;
+				image_index = 0;
+				intro = true;
+				introbuffer = 130;
+				with (obj_player1)
+				{
+					state = states.actor;
+					hsp = 0;
+					movespeed = 0;
+					flash = false;
+					x = roomstartx;
+					image_speed = 0.35;
+					xscale = 1;
+					sprite_index = spr_player_gnomecutscene2;
+					image_index = 0;
+				}
+			}
+			else
+			{
+				if (floor(image_index) == (image_number - 1))
+				{
+					if (sprite_index == spr_noise_intro1)
+						image_index = 16;
+					else if (sprite_index == spr_noise_intro2)
+						image_index = 7;
+					else if (sprite_index == spr_noise_intro3)
+					{
+						sprite_index = spr_playerN_idle;
+						introbuffer = 1;
+					}
+				}
+				with (obj_player1)
+				{
+					if (floor(image_index) == (image_number - 1))
+					{
+						if (sprite_index == spr_player_gnomecutscene2)
+							image_index = image_number - 1;
+						else if (sprite_index == spr_player_gnomecutscene3)
+							sprite_index = spr_player_gnomecutscene4;
+						else if (sprite_index == spr_player_idlefrown)
+							sprite_index = spr_idle;
+					}
+					hsp = 0;
+					movespeed = 0;
+					flash = false;
+					x = roomstartx;
+					if (other.sprite_index == spr_noise_intro1 && sprite_index == spr_player_gnomecutscene2 && floor(other.image_index) > 16)
+					{
+						sprite_index = spr_player_gnomecutscene3;
+						image_index = 0;
+						fmod_event_one_shot("event:/sfx/pep/screamboss");
+					}
+					if (other.sprite_index == spr_noise_intro2 && sprite_index != spr_player_idlefrown && sprite_index != spr_idle)
+					{
+						sprite_index = spr_player_idlefrown;
+						image_index = 0;
+					}
+				}
+				if (introbuffer > 0)
+					introbuffer--;
+				else if (sprite_index == spr_noise_intro1)
+				{
+					sprite_index = spr_noise_intro2;
+					image_index = 0;
+					introbuffer = 80;
+				}
+				else if (sprite_index == spr_noise_intro2)
+				{
+					sprite_index = spr_noise_intro3;
+					image_index = 0;
+					introbuffer = 80;
+				}
+				else if (sprite_index == spr_noise_intro3 || sprite_index == spr_playerN_idle)
+				{
+					state = states.walk;
+					spotlightID.expand = true;
+					with (obj_player)
+					{
+						state = 0;
+						sprite_index = spr_idle;
+					}
+				}
+			}
+		}
+		else
+			scr_boss_genericintro(spr_playerN_idle);
+		exit;
+	}
+	
+	// NOISE meets DOISE
 	image_speed = 0.35;
 	if (!skipintro)
 	{
@@ -98,8 +233,8 @@ function scr_noise_arenaintro()
 				x = roomstartx;
 				image_speed = 0.35;
 				xscale = 1;
-				sprite_index = spr_player_gnomecutscene2;
-				image_index = 0;
+				sprite_index = spr_playerN_doiseintro1;
+				other.sprite_index = spr_playerN_idle;
 			}
 		}
 		else
@@ -126,25 +261,47 @@ function scr_noise_arenaintro()
 						sprite_index = spr_player_gnomecutscene4;
 					else if (sprite_index == spr_player_idlefrown)
 						sprite_index = spr_idle;
+					else if (sprite_index == spr_noise_vulnerable1)
+						sprite_index = spr_noise_vulnerable1loop;
+					else if (sprite_index == spr_playerN_doiseintro2)
+					{
+						sprite_index = spr_playerN_doiseintro3;
+						with (other)
+						{
+							introbuffer = 100;
+							sprite_index = spr_noise_vulnerable2;
+							image_index = 0;
+						}
+					}
 				}
 				hsp = 0;
 				movespeed = 0;
 				flash = false;
 				x = roomstartx;
-				if (other.sprite_index == spr_noise_intro1 && sprite_index == spr_player_gnomecutscene2 && floor(other.image_index) > 16)
-				{
-					sprite_index = spr_player_gnomecutscene3;
-					image_index = 0;
-					fmod_event_one_shot("event:/sfx/pep/screamboss");
-				}
-				if (other.sprite_index == spr_noise_intro2 && sprite_index != spr_player_idlefrown && sprite_index != spr_idle)
-				{
-					sprite_index = spr_player_idlefrown;
-					image_index = 0;
-				}
 			}
 			if (introbuffer > 0)
 				introbuffer--;
+			else if (sprite_index == spr_playerN_idle)
+			{
+				introbuffer = 500;
+				with (obj_player1)
+				{
+					sprite_index = spr_playerN_doiseintro2;
+					image_index = 0;
+				}
+			}
+			else if (sprite_index == spr_noise_vulnerable2)
+			{
+				state = states.walk;
+				spotlightID.expand = true;
+				with (obj_player)
+				{
+					if (ispeppino)
+						create_particle(x, y, 9);
+					state = 0;
+					sprite_index = spr_idle;
+				}
+			}
 			else if (sprite_index == spr_noise_intro1)
 			{
 				sprite_index = spr_noise_intro2;
@@ -172,6 +329,38 @@ function scr_noise_arenaintro()
 	else
 		scr_boss_genericintro(spr_playerN_idle);
 }
+function scr_doise_end_start()
+{
+	instance_destroy(obj_noisey);
+	instance_destroy(obj_noiseyspawner);
+	instance_destroy(obj_noiseyspawner2);
+	instance_destroy(obj_doiserock, false);
+	fightballcount = 0;
+	state = states.ending;
+	substate = states.bump;
+	x = room_width / 2;
+	y = 402;
+	sprite_index = spr_playerN_fightball;
+	image_index = 0;
+	image_speed = 0.35;
+	fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
+	var s = 8;
+	obj_player1.state = states.actor;
+	obj_player1.image_speed = 0.35;
+	obj_player1.image_index = 0;
+	obj_player1.x = x;
+	obj_player1.y = y;
+	obj_player1.xscale = 1;
+	obj_player1.sprite_index = obj_player1.spr_bump;
+	obj_player1.hsp = -obj_player1.xscale * s;
+	image_xscale = -1;
+	sprite_index = spr_playerN_bump;
+	hsp = -image_xscale * s;
+	substate = states.bump;
+	cratebuffer = 80;
+	with (instance_create(0, 0, obj_pizzahead_whitefade))
+		whitefade = 1;
+}
 function scr_noise_do_hurt(object)
 {
 	if (state != states.stun)
@@ -193,6 +382,15 @@ function scr_noise_do_hurt(object)
 }
 function scr_noise_walk()
 {
+	if (pizzahead && doise)
+	{
+		image_speed = 0.35;
+		sprite_index = spr_playerN_animatronic;
+		hsp = 0;
+		if (alarm[8] == -1)
+			alarm[8] = 300;
+		exit;
+	}
 	if (grounded)
 		hsp = Approach(hsp, 0, 0.25);
 	if (grounded && vsp > 0 && sprite_index == spr_playerN_hurt && flickertime > 2)
@@ -610,11 +808,19 @@ function scr_noise_pogo()
 	}
 	if (pogobomb == 1 && ((image_xscale > 0 && targetplayer.x > (x - 20)) || (image_xscale < 0 && targetplayer.x < (x + 20)) || vsp > 0) && attackspeed > 10)
 	{
-		with (instance_create(x, y, obj_noisebombboss))
+		if (!doise)
 		{
-			vsp = -11;
-			if (x != other.targetplayer.x)
-				image_xscale = -sign(x - other.targetplayer.x);
+			with (instance_create(x, y, obj_noisebombboss))
+			{
+				vsp = -11;
+				if (x != other.targetplayer.x)
+					image_xscale = -sign(x - other.targetplayer.x);
+			}
+		}
+		else
+		{
+			with (instance_create(x, y, obj_doiserock))
+				vsp = -11;
 		}
 		pogobomb = false;
 	}
@@ -721,17 +927,25 @@ function scr_noise_drop()
 			dropcooldown = 80;
 		else
 			dropcooldown = 120;
-		with (instance_create(x, y, obj_noisebombboss))
+		if (!doise)
 		{
-			fmod_event_one_shot_3d("event:/sfx/vigilante/throw", x, y);
-			if (object_index == obj_noisey)
+			with (instance_create(x, y, obj_noisebombboss))
 			{
-				state = states.stun;
-				stunned = 50;
-				important = true;
+				fmod_event_one_shot_3d("event:/sfx/vigilante/throw", x, y);
+				if (object_index == obj_noisey)
+				{
+					state = states.stun;
+					stunned = 50;
+					important = true;
+				}
+				if (x != other.targetplayer.x)
+					image_xscale = -sign(x - other.targetplayer.x);
 			}
-			if (x != other.targetplayer.x)
-				image_xscale = -sign(x - other.targetplayer.x);
+		}
+		else
+		{
+			with (instance_create(x, y, obj_doiserock))
+				fmod_event_one_shot_3d("event:/sfx/vigilante/throw", x, y);
 		}
 	}
 }
@@ -741,6 +955,11 @@ function scr_noise_droptrap()
 	hsp = 0;
 	if (floor(image_index) == (image_number - 1))
 	{
+		if (doise)
+		{
+			with (instance_create(x, y, obj_doiserock))
+				vsp = -11;
+		}
 		instance_create(x, y, obj_canonexplosion);
 		did_droptrap = true;
 		buttslamcooldown = 200;
@@ -949,6 +1168,10 @@ function scr_noise_finale()
 			image_index = image_number - 1;
 		if (sprite_index == spr_player_gnomecutscene3 && floor(image_index) == (image_number - 1))
 			sprite_index = spr_player_gnomecutscene4;
+		if (sprite_index == spr_playerN_stunned && floor(image_index) == (image_number - 1))
+			image_index = image_number - 3;
+		if (sprite_index == spr_player_stunneddoise && floor(image_index) == (image_number - 1))
+			image_index = image_number - 8;
 	}
 	switch (substate)
 	{
@@ -1003,63 +1226,139 @@ function scr_noise_finale()
 			hsp = Approach(hsp, 0, 0.2);
 			with (obj_player1)
 				hsp = Approach(hsp, 0, 0.2);
-			if (hsp == 0 && !instance_exists(obj_noisebosscrate))
-				instance_create(x, -100, obj_noisebosscrate);
-			if (instance_exists(obj_noisebosscrate) && obj_noisebosscrate.y >= (y - 10))
+			if (doise && cratebuffer > 0)
+				cratebuffer--;
+			if (hsp == 0 && !instance_exists(obj_noisebosscrate) && (!doise || cratebuffer <= 0))
+				instance_create(!doise ? x : obj_player1.x, -100, obj_noisebosscrate);
+			if (instance_exists(obj_noisebosscrate) && obj_noisebosscrate.y >= y - 10)
 			{
-				repeat (3)
-					create_debris(obj_noisebosscrate.x, obj_noisebosscrate.y, spr_wooddebris);
-				sprite_index = spr_playerN_minigunstart;
-				fmod_event_one_shot_3d("event:/sfx/pep/shotgunload", x, y);
-				fmod_event_one_shot_3d("event:/sfx/misc/breakblock", x, y);
-				image_index = 0;
-				substate = states.shotgun;
-				with (obj_player1)
+				if (!doise)
 				{
-					sprite_index = spr_player_gnomecutscene2;
+					minigunbuffer = 0;
+					repeat (3)
+						create_debris(obj_noisebosscrate.x, obj_noisebosscrate.y, spr_wooddebris);
+					sprite_index = spr_playerN_minigunstart;
+					fmod_event_one_shot_3d("event:/sfx/pep/shotgunload", x, y);
+					fmod_event_one_shot_3d("event:/sfx/misc/breakblock", x, y);
 					image_index = 0;
+					substate = states.shotgun;
+					with (obj_player1)
+					{
+						sprite_index = spr_player_gnomecutscene2;
+						image_index = 0;
+						if (!ispeppino)
+							sprite_index = spr_playerN_bosscutscene1;
+					}
+					instance_destroy(obj_noisebosscrate);
 				}
-				instance_destroy(obj_noisebosscrate);
+				else
+				{
+					minigunbuffer = 80;
+					sprite_index = spr_playerN_panicidle;
+					image_index = 0;
+					substate = states.shotgun;
+					fmod_event_one_shot_3d("event:/sfx/pep/groundpound", obj_player1.x, obj_player1.y);
+					fmod_event_one_shot_3d("event:/sfx/voice/noisepositive", x, y);
+					with (create_debris(obj_noisebosscrate.x, obj_noisebosscrate.y, 3738))
+					{
+						vsp = -6;
+						grav = 0.4;
+						hsp = -10;
+						image_angle = random(360);
+					}
+					instance_destroy(obj_noisebosscrate);
+					with (obj_camera)
+					{
+						shake_mag = 5;
+						shake_mag_acc = 10 / room_speed;
+					}
+					with (obj_player1)
+					{
+						image_speed = 0.35;
+						repeat (5)
+							create_debris(x, y, spr_slapstar);
+						sprite_index = spr_playerN_stunned;
+						if (ispeppino)
+							sprite_index = spr_player_stunneddoise;
+						image_index = 0;
+					}
+				}
 			}
 			break;
 		case states.shotgun:
-			if (floor(image_index) == (image_number - 1))
+			if (minigunbuffer > 0)
+				minigunbuffer--;
+			var _end = false;
+			with (obj_player1)
 			{
-				sprite_index = spr_playerN_minigunidle;
+				if ((sprite_index == spr_playerN_stunned || sprite_index == spr_player_stunneddoise) && floor(image_index) >= 25)
+				{
+					if (ispeppino)
+					{
+						sprite_index = spr_bombpepend;
+						image_index = 13;
+					}
+					else
+					{
+						sprite_index = spr_bombpepend;
+						image_index = 25;
+					}
+					_end = true;
+				}
+			}
+			if ((floor(image_index) == image_number - 1 || _end) && minigunbuffer <= 0)
+			{
+				if (!doise)
+					sprite_index = spr_playerN_minigunidle;
 				substate = states.shotgunshoot;
 				with (obj_player1)
 				{
-					sprite_index = spr_player_gnomecutscene3;
-					image_index = 0;
-					fmod_event_one_shot("event:/sfx/pep/screamboss");
+					if (ispeppino && !other.doise)
+					{
+						sprite_index = spr_player_gnomecutscene3;
+						image_index = 0;
+						fmod_event_one_shot("event:/sfx/pep/screamboss");
+					}
 				}
 				layer_set_visible(layer_get_id("Assets_2"), true);
-				instance_create(room_width + 100, y, obj_noisettefinale);
+				if (!doise)
+					instance_create(room_width + 100, y, obj_noisettefinale);
+				else
+					instance_create(-100, y, obj_peddito);
 			}
 			break;
 		case states.shotgunshoot:
 			with (obj_player1)
 			{
-				if (floor(image_index) == (image_number - 1))
-					sprite_index = spr_player_gnomecutscene4;
+				if (floor(image_index) == image_number - 1)
+				{
+					if (ispeppino && !other.doise)
+						sprite_index = spr_player_gnomecutscene4;
+				}
 			}
-			if (obj_noisettefinale.x <= x)
+			if (!doise && obj_noisettefinale.x <= x)
 			{
 				create_debris(x, y, spr_minigunfall);
 				substate = states.ending;
 				sprite_index = spr_playerN_bump;
 				with (obj_player1)
-					sprite_index = spr_idle;
+				{
+					if (ispeppino && !other.doise)
+						sprite_index = spr_idle;
+				}
 			}
 			break;
 		case states.ending:
-			x = obj_noisettefinale.x + 20;
-			if (x < (room_width / 5) && sprite_index != spr_playerN_bossintro)
+			if (!doise)
 			{
-				fmod_event_one_shot("event:/sfx/voice/noisescream");
-				sprite_index = spr_playerN_bossintro;
-				image_index = 0;
-				image_xscale = 1;
+				x = obj_noisettefinale.x + 20;
+				if (x < (room_width / 5) && sprite_index != spr_playerN_bossintro)
+				{
+					fmod_event_one_shot("event:/sfx/voice/noisescream");
+					sprite_index = spr_playerN_bossintro;
+					image_index = 0;
+					image_xscale = 1;
+				}
 			}
 			if (sprite_index == spr_playerN_bossintro && floor(image_index) >= 9)
 				image_index = 7;
@@ -1070,6 +1369,13 @@ function scr_noise_finale()
 			}
 			break;
 	}
+	with (obj_player1)
+	{
+		if (sprite_index == spr_playerN_bosscutscene2 && floor(image_index) == (image_number - 1))
+			image_index = image_number - 1;
+		else if ((sprite_index == spr_playerN_squished || sprite_index == spr_bombpepend) && floor(image_index) == (image_number - 1))
+			sprite_index = spr_idle;
+	}
 }
 function scr_noise_phase1hurt()
 {
@@ -1078,45 +1384,66 @@ function scr_noise_phase1hurt()
 	scr_boss_phase1hurt(function()
 	{
 		layer_set_visible("Backgrounds_scroll", false);
-		with (instance_create(0, 0, obj_introprop))
+		var lay1 = layer_get_id("Backgrounds_4");
+		var lay2 = layer_get_id("Backgrounds_5");
+		var bg1 = layer_background_get_id(lay1);
+		var bg2 = layer_background_get_id(lay2);
+		layer_background_sprite(bg1, 4149);
+		layer_background_sprite(bg2, 1542);
+		layer_background_speed(bg2, 0.35);
+		layer_hspeed(lay1, 0.4);
+		layer_vspeed(lay1, 0.4);
+		layer_hspeed(lay2, -0.7);
+		layer_vspeed(lay2, -0.7);
+		with (obj_doisecreature)
 		{
-			depth = layer_get_depth("Backgrounds_scroll");
-			sprite_index = bg_noisebossBG3;
-			image_speed = 1;
+			movespeed = 1;
+			sprite_index = bg_doisewalk;
 		}
-		var ix = obj_player1.xscale;
-		with (obj_player1)
+		if (!doise)
 		{
-			hsp = 0;
-			vsp = 0;
-			state = states.actor;
-			xscale = ix;
-			image_speed = 0.35;
-			sprite_index = spr_player_fightball;
-			image_index = 0;
-		}
-		with (obj_noiseboss)
-		{
-			repeat (2)
+			with (instance_create(0, 0, obj_introprop))
 			{
-				with (create_debris(x + random_range(-64, 64), y + random_range(-64, 64), spr_flashdots, true))
-				{
-					hsp = random_range(-5, 5);
-					vsp = random_range(-10, 10);
-					image_speed = 0.4;
-				}
+				depth = layer_get_depth("Backgrounds_scroll");
+				sprite_index = bg_noisebossBG3;
+				image_speed = 1;
 			}
-			x = obj_player1.x;
-			y = obj_player1.y;
-			hsp = 0;
-			vsp = 0;
-			state = states.fightball;
-			fightballcount = 0;
-			image_xscale = ix;
-			image_speed = 0.35;
-			sprite_index = spr_playerN_fightball;
-			image_index = 0;
-			substate = states.fightball;
+			var ix = obj_player1.xscale;
+			with (obj_player1)
+			{
+				hsp = 0;
+				vsp = 0;
+				state = states.actor;
+				xscale = ix;
+				image_speed = 0.35;
+				sprite_index = spr_player_fightball;
+				image_index = 0;
+			}
+			with (obj_noiseboss)
+			{
+				repeat (2)
+				{
+					with (create_debris(x + random_range(-64, 64), y + random_range(-64, 64), spr_flashdots, true))
+					{
+						hsp = random_range(-5, 5);
+						vsp = random_range(-10, 10);
+						image_speed = 0.4;
+					}
+				}
+				x = obj_player1.x;
+				y = obj_player1.y;
+				hsp = 0;
+				vsp = 0;
+				state = states.fightball;
+				fightballcount = 0;
+				image_xscale = ix;
+				image_speed = 0.35;
+				sprite_index = spr_playerN_fightball;
+				image_index = 0;
+				substate = states.fightball;
+			}
 		}
+		else
+			instance_create(0, 0, obj_noiseballooncrash);
 	});
 }

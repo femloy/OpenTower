@@ -25,6 +25,7 @@ function scr_solid_player(_x, _y)
 				default:
 					_collided = true;
 			}
+			var par = object_get_parent(b.object_index);
 		}
 		if (_collided)
 			break;
@@ -38,6 +39,7 @@ function scr_solid_player(_x, _y)
 	}
 	if (y > old_y && state != states.ladder && place_meeting(x, y, obj_platform))
 	{
+		ds_list_clear(global.instancelist);
 		num = instance_place_list(x, y, obj_platform, global.instancelist, false);
 		_collided = false;
 		for (i = 0; i < num; i++)

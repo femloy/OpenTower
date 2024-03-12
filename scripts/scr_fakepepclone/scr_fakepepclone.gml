@@ -110,7 +110,10 @@ function scr_fakepepclone_walk()
 					if (!throwing)
 					{
 						with (instance_create(x, y, obj_fakepepheaddebris))
+						{
+							clone = true;
 							image_speed = 0.35;
+						}
 						sprite_index = spr_fakepeppino_flailing;
 					}
 					else

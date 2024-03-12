@@ -79,11 +79,11 @@ function ledge_bump_vertical()
 	}
 	return true;
 }
-function ledge_bump(iterations)
+function ledge_bump(iterations, offset = 4)
 {
 	var old_x = x;
 	var old_y = y;
-	x += (xscale * 4);
+	x += (xscale * offset);
 	var ty = try_solid(0, -1, obj_solid, iterations);
 	x = old_x;
 	if (ty != -1)
@@ -96,6 +96,8 @@ function ledge_bump(iterations)
 			y = old_y;
 			return true;
 		}
+		with (obj_camera)
+			offset_y += ty;
 		return false;
 	}
 	return true;

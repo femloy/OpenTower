@@ -25,7 +25,7 @@ function scr_player_actor()
 	}
 	x = clamp(x, _room_x, _room_w);
 	y = clamp(y, _room_y, _room_h);
-	if (room == boss_vigilante && sprite_index == spr_player_pistolshotend)
+	if (room == boss_vigilante && (sprite_index == spr_player_pistolshotend || sprite_index == spr_noise_duelend))
 	{
 		if (actorbuffer > 0)
 			actorbuffer--;

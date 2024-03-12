@@ -38,7 +38,7 @@ function scr_player_knightpepattack()
 			movespeed = 8;
 		vsp = -11;
 		state = states.knightpepslopes;
-		sprite_index = spr_knightpep_doublejump;
+		sprite_index = spr_knightpepdoublejump;
 		image_index = 0;
 	}
 	if (!grounded && !doublejump)

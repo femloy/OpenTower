@@ -94,7 +94,7 @@ function tv_default_condition()
 {
 	return place_meeting(x, y, obj_player);
 }
-function tv_do_expression(sprite)
+function tv_do_expression(sprite, force_pep = false)
 {
 	with (obj_tv)
 	{
@@ -105,6 +105,7 @@ function tv_do_expression(sprite)
 			switch expressionsprite
 			{
 				case spr_tv_exprhurt:
+				case spr_tv_exprhurtN:
 				case spr_tv_hurtG:
 					expressionbuffer = 60
 					break
@@ -118,6 +119,16 @@ function tv_do_expression(sprite)
 				case spr_tv_exprhurt8:
 				case spr_tv_exprhurt9:
 				case spr_tv_exprhurt10:
+				case spr_tv_exprhurtN1:
+				case spr_tv_exprhurtN2:
+				case spr_tv_exprhurtN3:
+				case spr_tv_exprhurtN4:
+				case spr_tv_exprhurtN5:
+				case spr_tv_exprhurtN6:
+				case spr_tv_exprhurtN7:
+				case spr_tv_exprhurtN8:
+				case spr_tv_exprhurtN9:
+				case spr_tv_exprhurtN10:
 					expressionbuffer = 100
 					break
 				case spr_tv_exprcollect:
@@ -132,6 +143,12 @@ function tv_do_expression(sprite)
 						scr_fmod_soundeffect(obj_player1.snd_voiceok, obj_player1.x, obj_player1.y)
 					break;
 			}
+			if (!force_pep && instance_exists(obj_player1) && !obj_player1.ispeppino)
+			{
+				var n = asset_get_index(sprite_get_name(sprite) + "N");
+				if (n > -1)
+					expressionsprite = n;
+			}
 		}
 	}
 }
@@ -141,6 +158,8 @@ function scr_tv_get_transfo_sprite()
 	if (_state == states.backbreaker || _state == states.chainsaw)
 		_state = obj_player1.tauntstoredstate;
 	var _spr = noone;
+	if (instance_exists(obj_bucketfollower))
+		_spr = spr_tv_bucket;
 	switch (_state)
 	{
 		case states.knightpep:

@@ -89,6 +89,7 @@ achievements_update = [];
 achievements_notify = [];
 notify_queue = ds_queue_create();
 unlock_queue = ds_queue_create();
+ispeppino = true;
 
 // S and P rank achievements
 add_rank_achievements(1, "s", spr_achievement_srank, 0, ["entrance", "medieval", "ruin", "dungeon"]);
@@ -110,10 +111,12 @@ add_boss_achievements("noise", boss_noise, spr_achievement_bosses, 2);
 add_boss_achievements("fakepep", boss_fakepep, spr_achievement_bosses, 3);
 add_boss_achievements("pizzaface", boss_pizzafacehub, spr_achievement_bosses, 4);
 
-#region PALETTES
+#region PEPPINO PALETTES
 
 add_achievement_notify("pal_unfunny", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	var arr = data[1];
 	if (type == notifs.combo_end && arr[0] >= 75)
@@ -122,6 +125,8 @@ add_achievement_notify("pal_unfunny", -4, function(data)
 
 add_achievement_notify("pal_mooney", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.mrmooney_donated)
 		palette_unlock(name, "mooney", 15);
@@ -129,6 +134,8 @@ add_achievement_notify("pal_mooney", -4, function(data)
 
 add_achievement_notify("pal_sage", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.end_level)
 	{
@@ -151,6 +158,8 @@ add_achievement_notify("pal_sage", -4, function(data)
 
 add_achievement_notify("pal_money", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.end_level)
 	{
@@ -175,6 +184,8 @@ add_achievement_notify("pal_money", -4, function(data)
 
 add_achievement_notify("pal_blood", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.end_level)
 	{
@@ -188,6 +199,8 @@ add_achievement_notify("pal_blood", -4, function(data)
 
 add_achievement_notify("pal_tv", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.end_level)
 	{
@@ -216,6 +229,8 @@ add_achievement_notify("pal_tv", -4, function(data)
 
 add_achievement_notify("pal_dark", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	var arr = data[1];
 	if (type == notifs.unlocked_achievement && (arr[0] == "pepperman" || arr[0] == "vigilante" || arr[0] == "noise" || arr[0] == "fakepep" || arr[0] == "pizzaface"))
@@ -236,6 +251,8 @@ add_achievement_notify("pal_dark", -4, function(data)
 
 add_achievement_notify("pal_shitty", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.crawl_in_shit)
 		palette_unlock(name, "shitty", 9);
@@ -243,6 +260,8 @@ add_achievement_notify("pal_shitty", -4, function(data)
 
 add_achievement_notify("pal_golden", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.end_level)
 	{
@@ -274,6 +293,8 @@ add_achievement_notify("pal_garish", function()
 	achievement_add_variable("garish_count", 0, true, false);
 }, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.taunt)
 	{
@@ -283,8 +304,11 @@ add_achievement_notify("pal_garish", function()
 	}
 }, false, "Palettes", "garish");
 
+// PATTERNS
 add_achievement_notify("pal_funny", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	var arr = data[1];
 	if (type == notifs.combo_end && arr[0] >= 70 && arr[0] < 75)
@@ -293,6 +317,8 @@ add_achievement_notify("pal_funny", -4, function(data)
 
 add_achievement_notify("pal_itchy", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	var arr = data[1];
 	
@@ -302,6 +328,8 @@ add_achievement_notify("pal_itchy", -4, function(data)
 
 add_achievement_notify("pal_pizza", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.firsttime_ending)
 		palette_unlock(name, "pizza", 12, spr_peppattern3);
@@ -312,6 +340,8 @@ add_achievement_notify("pal_stripes", function()
 	achievement_add_variable("stripes_count", 0, true, false);
 }, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.rattumble_dead)
 	{
@@ -323,6 +353,8 @@ add_achievement_notify("pal_stripes", function()
 
 add_achievement_notify("pal_goldemanne", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.unlocked_achievement)
 	{
@@ -355,6 +387,8 @@ add_achievement_notify("pal_badbones", function()
 	achievement_add_variable("badbones_count", 0, true, false);
 }, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.hurt_player)
 	{
@@ -366,6 +400,8 @@ add_achievement_notify("pal_badbones", function()
 
 add_achievement_notify("pal_pp", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	if (type == notifs.firsttime_ending)
 	{
@@ -382,6 +418,8 @@ add_achievement_notify("pal_pp", -4, function(data)
 
 add_achievement_notify("pal_war", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	var arr = data[1];
 	if (type == notifs.end_level && arr[0] == "war")
@@ -396,13 +434,15 @@ add_achievement_notify("pal_war", -4, function(data)
 
 add_achievement_notify("pal_john", -4, function(data)
 {
+	if (!obj_achievementtracker.ispeppino)
+		exit;
 	var type = data[0];
 	var arr = data[1];
 	if (type == notifs.johnresurrection && global.file_minutes < 135)
 		palette_unlock(name, "john", 12, spr_peppattern9);
 }, false, "Palettes", "john");
 
-// Halloween
+// HALLOWEEN
 var pats = [
 	["candy", 5, spr_peppattern10],
 	["bloodstained", 10, spr_peppattern11],
@@ -418,12 +458,13 @@ for (var i = 0; i < array_length(pats); i++)
 	{
 		var type = data[0];
 		var arr = data[1];
-		if (type == 59 && arr[0] >= pattern[1])
+		if (type == notifs.pumpkin_collect && arr[0] >= pattern[1])
 			palette_unlock(name, pattern[0], 12, pattern[2]);
 	}, false, "Palettes", pat[0]);
 	if (!is_undefined(p) && !p.unlocked)
 		p.pattern = pat;
 }
+
 add_achievement_notify("halloween1", -4, function(data)
 {
 	var type = data[0];
@@ -431,6 +472,7 @@ add_achievement_notify("halloween1", -4, function(data)
 	if (type == notifs.pumpkin_collect && arr[0] >= 30)
 		achievement_unlock(name, "Pumpkin Munchkin", spr_achievement_halloween, 0);
 });
+
 add_achievement_notify("halloween2", function()
 {
 	achievement_add_variable("hw2count", 0, false, true);
@@ -468,6 +510,378 @@ add_achievement_notify("halloween2", function()
 			break;
 	}
 });
+
+#endregion
+#region NOISE PALETTES
+
+add_achievement_update("pal_boise", 1, function()
+{
+	achievement_add_variable("boise_prevstate", 0);
+	achievement_add_variable("boise_count", 0);
+}, function()
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	
+	var _state = achievement_get_variable("boise_prevstate");
+	var _count = achievement_get_variable("boise_count");
+	if (obj_player1.state != _state.value && obj_player1.state != states.chainsaw)
+	{
+		if (obj_player1.state == states.ratmountbounce)
+			_count.value += 0.5;
+		else if (_count.value > 0 && (obj_player1.sprite_index == spr_playerN_sidewayspin || obj_player1.sprite_index == spr_playerN_sidewayspinend))
+			_count.value += 0.5;
+		if (_count.value >= 3)
+			palette_unlock(name, "boise", 3, -4, false);
+		_state.value = obj_player1.state;
+	}
+	if (obj_player1.grounded || (obj_player1.state != states.ratmountbounce && obj_player1.state != states.chainsaw && obj_player1.sprite_index != spr_playerN_sidewayspin && obj_player1.sprite_index != spr_playerN_sidewayspinend))
+		_count.value = 0;
+}, false, "Palettes", "boise");
+
+add_achievement_notify("pal_roise", function()
+{
+	achievement_add_variable("roise_count", 0);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	var count = achievement_get_variable("roise_count");
+	if (type == notifs.UNKNOWN_64)
+		count.value = 0;
+	else if (type == notifs.baddie_kill && (obj_player1.sprite_index == spr_playerN_divebomb || obj_player1.sprite_index == spr_playerN_divebombfall || obj_player1.sprite_index == spr_playerN_divebombland))
+	{
+		count.value++;
+		if (count.value >= 4)
+			palette_unlock(name, "roise", 4, noone, false);
+	}
+}, false, "Palettes", "roise");
+
+add_achievement_notify("pal_poise", function()
+{
+	achievement_add_variable("poise_count", 0, false, true);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	var count = achievement_get_variable("poise_count");
+	if (type == notifs.gate_taunt)
+		count.value++;
+	else if (type == notifs.end_level && global.rank == "p" && count.value >= 10)
+		palette_unlock(name, "poise", 5, noone, false);
+}, false, "Palettes", "poise");
+
+add_achievement_notify("pal_reverse", -4, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.end_level && global.rank == "d" && global.leveltosave == "entrance")
+		palette_unlock(name, "reverse", 6, -4, false);
+}, false, "Palettes", "reverse");
+
+var pats = [
+	["critic", 7, boss_pepperman],
+	["outlaw", 8, boss_vigilante],
+	["antidoise", 9, boss_noise],
+	["flesheater", 10, boss_fakepep],
+	["super", 11, boss_pizzafacehub]
+];
+for (i = 0; i < array_length(pats); i++)
+{
+	pat = pats[i];
+	p = add_achievement_notify(concat("pal_", pat[0]), function()
+	{
+		achievement_add_variable("count", 0, false, true);
+	}, function(data)
+	{
+		if (obj_achievementtracker.ispeppino)
+			exit;
+		var type = data[0];
+		var arr = data[1];
+		var count = achievement_get_variable("count");
+		if (type == notifs.player_explosion)
+			count.value++;
+		else if (type == notifs.boss_dead && arr[0] == pattern[2] && count.value <= 0)
+			palette_unlock(name, pattern[0], pattern[1], -4, false);
+	}, false, "Palettes", pat[0]);
+	
+	if (!is_undefined(p) && !p.unlocked)
+		p.pattern = pat;
+}
+
+add_achievement_notify("pal_porcupine", -4, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.UNKNOWN_67 && arr[0] == "quick")
+		palette_unlock(name, "porcupine", 15, -4, false);
+}, false, "Palettes", "porcupine");
+
+add_achievement_notify("pal_feminine", -4, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	if (type == notifs.mrmooney_donated)
+		palette_unlock(name, "feminine", 16, -4, false);
+}, false, "Palettes", "feminine");
+
+add_achievement_update("pal_realdoise", 2, -4, function()
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	if (obj_player1.state == states.normal && obj_player1.sprite_index == obj_player1.spr_breakdance && room == boss_pizzaface && instance_exists(obj_noiseboss))
+		palette_unlock(name, "realdoise", 17, -4, false);
+}, false, "Palettes", "realdoise");
+
+add_achievement_notify("pal_forest", function()
+{
+	achievement_add_variable("forest_count", 0, false, true);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	var count = achievement_get_variable("forest_count");
+	if (type == notifs.baddie_kill && arr[2] == obj_noisegoblin)
+		count.value++;
+	else if (type == notifs.end_level && arr[0] == "forest" && count.value <= 0)
+		palette_unlock(name, "forest", 18, -4, false);
+}, false, "Palettes", "forest");
+
+// PATTERNS
+add_achievement_notify("pal_racer", -4, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.firsttime_ending)
+	{
+		var game = global.game[global.currentsavefile - 1];
+		var noise_secs = (global.file_minutes * 60) + global.file_seconds;
+		var pep_secs = (game.minutes * 60) + game.seconds;
+		if (game.judgement != "none" && noise_secs < pep_secs)
+			palette_unlock(name, "racer", 28, spr_noisepattern1, false);
+	}
+}, false, "Palettes", "racer");
+
+add_achievement_update("pal_comedian", 1, function()
+{
+	achievement_add_variable("comedian_count", 0, false, false);
+}, function()
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var count = achievement_get_variable("comedian_count");
+	var arr = [obj_pepperman, obj_vigilanteboss, obj_noiseboss, obj_fakepepboss, obj_pizzafaceboss, obj_pizzafaceboss_p2, obj_pizzafaceboss_p3];
+	var found = false;
+	for (var i = 0; i < array_length(arr); i++)
+	{
+		if (instance_exists(arr[i]))
+		{
+			found = true;
+			break;
+		}
+	}
+	if (!found)
+	{
+		count.value = 0;
+		exit;
+	}
+	if (obj_player1.sprite_index == obj_player1.spr_breakdance)
+	{
+		count.value++;
+		if (count.value >= 600)
+			palette_unlock(name, "comedian", 27, spr_noisepattern2, false);
+	}
+	else
+		count.value = 0;
+}, false, "Palettes", "comedian");
+
+add_achievement_notify("pal_banana", function()
+{
+	achievement_add_variable("banana_count", 0, true, false);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var count = achievement_get_variable("banana_count");
+	if (type == notifs.UNKNOWN_69)
+	{
+		count.value++;
+		if (count.value >= 10)
+			palette_unlock(name, "banana", 26, spr_noisepattern3, false);
+	}
+}, false, "Palettes", "banana");
+
+add_achievement_update("pal_noiseTV", 1, -4, function()
+{
+	if (!instance_exists(obj_tv) || obj_achievementtracker.ispeppino)
+		exit;
+	if (obj_tv.idlespr == spr_tv_exprheatN)
+		palette_unlock(name, "noiseTV", 25, spr_noisepattern4, false);
+}, false, "Palettes", "noiseTV");
+
+add_achievement_notify("pal_madman", -4, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	if (type == notifs.close_call)
+		palette_unlock(name, "madman", 24, spr_noisepattern5, false);
+}, false, "Palettes", "madman");
+
+add_achievement_notify("pal_bubbly", function()
+{
+	achievement_add_variable("bubbly_count", 0, false, true);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	var count = achievement_get_variable("bubbly_count");
+	if (type == notifs.UNKNOWN_70 && arr[0] == "space")
+	{
+		count.value++;
+		if (count.value >= 21)
+			palette_unlock(name, "bubbly", 23, spr_noisepattern6, false);
+	}
+}, false, "Palettes", "bubbly");
+
+add_achievement_notify("pal_welldone", function()
+{
+	achievement_add_variable("welldone_count", 0, false, true);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	var count = achievement_get_variable("welldone_count");
+	if (type == notifs.corpsesurf && arr[0] == "badland")
+	{
+		count.value++;
+		if (count.value >= 45)
+			palette_unlock(name, "welldone", 22, spr_noisepattern7, false);
+	}
+}, false, "Palettes", "welldone");
+
+add_achievement_notify("pal_grannykisses", function()
+{
+	achievement_add_variable("granny_hubtips1", false, true, false);
+	achievement_add_variable("granny_hubtips2", false, true, false);
+	achievement_add_variable("granny_hubtips3", false, true, false);
+	achievement_add_variable("granny_hubtips4", false, true, false);
+	achievement_add_variable("granny_hubtips5", false, true, false);
+	achievement_add_variable("granny_hubtips6", false, true, false);
+	achievement_add_variable("granny_hubtips7N", false, true, false);
+	achievement_add_variable("granny_hubtips8", false, true, false);
+	achievement_add_variable("granny_hubtips9", false, true, false);
+	achievement_add_variable("granny_garbage1N", false, true, false);
+	achievement_add_variable("granny_garbage2N", false, true, false);
+	achievement_add_variable("granny_garbage3", false, true, false);
+	achievement_add_variable("granny_garbage4", false, true, false);
+	achievement_add_variable("granny_garbage5N", false, true, false);
+	achievement_add_variable("granny_garbage6", false, true, false);
+	achievement_add_variable("granny_garbage7N", false, true, false);
+	achievement_add_variable("granny_garbage8", false, true, false);
+	achievement_add_variable("granny_garbage9", false, true, false);
+	achievement_add_variable("granny_garbage10", false, true, false);
+	achievement_add_variable("granny_garbage11", false, true, false);
+	achievement_add_variable("granny_garbage12", false, true, false);
+	achievement_add_variable("granny_garbage13", false, true, false);
+	achievement_add_variable("granny_garbage14", false, true, false);
+	achievement_add_variable("granny_garbage15", false, true, false);
+	achievement_add_variable("granny_forest1N", false, true, false);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.UNKNOWN_73)
+	{
+		var b = achievement_get_variable(concat("granny_", arr[0]));
+		if (!is_undefined(b))
+		{
+			b.value = true;
+			var vals = achievement_get_all_variables();
+			var found = false;
+			for (var i = 0; i < array_length(vals); i++)
+			{
+				if (!vals[i].value)
+				{
+					found = true;
+					break;
+				}
+			}
+			if (!found)
+				palette_unlock(name, "grannykisses", 21, spr_noisepattern8, false);
+		}
+	}
+}, false, "Palettes", "grannykisses");
+
+add_achievement_notify("pal_towerguy", function()
+{
+	achievement_add_variable("towerguy_entrance", false, true, false);
+	achievement_add_variable("towerguy_medieval", false, true, false);
+	achievement_add_variable("towerguy_ruin", false, true, false);
+	achievement_add_variable("towerguy_dungeon", false, true, false);
+	achievement_add_variable("towerguy_badland", false, true, false);
+	achievement_add_variable("towerguy_graveyard", false, true, false);
+	achievement_add_variable("towerguy_farm", false, true, false);
+	achievement_add_variable("towerguy_saloon", false, true, false);
+	achievement_add_variable("towerguy_plage", false, true, false);
+	achievement_add_variable("towerguy_forest", false, true, false);
+	achievement_add_variable("towerguy_minigolf", false, true, false);
+	achievement_add_variable("towerguy_space", false, true, false);
+	achievement_add_variable("towerguy_street", false, true, false);
+	achievement_add_variable("towerguy_sewer", false, true, false);
+	achievement_add_variable("towerguy_freezer", false, true, false);
+	achievement_add_variable("towerguy_industrial", false, true, false);
+	achievement_add_variable("towerguy_war", false, true, false);
+	achievement_add_variable("towerguy_kidsparty", false, true, false);
+	achievement_add_variable("towerguy_chateau", false, true, false);
+	achievement_add_variable("towerguy_exit", false, true, false);
+}, function(data)
+{
+	if (obj_achievementtracker.ispeppino)
+		exit;
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.seen_ptg)
+	{
+		var b = achievement_get_variable(concat("towerguy_", arr[0]));
+		if (!is_undefined(b))
+		{
+			b.value = true;
+			var vals = achievement_get_all_variables();
+			var found = false;
+			for (var i = 0; i < array_length(vals); i++)
+			{
+				if (!vals[i].value)
+				{
+					found = true;
+					break;
+				}
+			}
+			if (!found)
+				palette_unlock(name, "towerguy", 20, spr_noisepattern9, false);
+		}
+	}
+}, false, "Palettes", "towerguy");
 
 #endregion
 

@@ -31,7 +31,7 @@ function scr_player_stringfall()
 {
 	if (instance_exists(stringid))
 	{
-		sprite_index = spr_player_mrpinch;
+		sprite_index = spr_mrpinch;
 		hsp = movespeed;
 		move = key_left + key_right;
 		if (move == 0 || grounded)

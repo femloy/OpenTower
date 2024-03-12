@@ -3,13 +3,15 @@ function scr_player_trickjump()
 	hsp = movespeed * xscale;
 	if (sprite_index != spr_supertaunt1 && sprite_index != spr_supertaunt2 && sprite_index != spr_supertaunt3 && sprite_index != spr_supertaunt4)
 	{
-		image_speed = 0.35;
+		if (ispeppino)
+			image_speed = 0.35;
 		if (sprite_index == spr_player_rampjump && floor(image_index) == (image_number - 1))
 			image_index = image_number - 1;
 	}
 	else
 	{
-		image_speed = 0.5;
+		if (ispeppino)
+			image_speed = 0.5;
 		if (floor(image_index) == (image_number - 1))
 			sprite_index = spr_player_rampjump;
 	}
@@ -22,10 +24,12 @@ function scr_player_trickjump()
 	}
 	if (ramp_buffer > 0)
 		ramp_buffer--;
+	if (!ispeppino)
+		image_speed = Approach(image_speed, 0.4, 0.1);
 	if (grounded && ramp_buffer <= 0)
 	{
 		image_speed = 0.5;
-		if (sprite_index == spr_player_rampjump)
+		if (sprite_index == spr_rampjump)
 		{
 			sprite_index = spr_rollgetup;
 			if (movespeed < 12)

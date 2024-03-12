@@ -73,11 +73,24 @@ function enemy_is_swingding(baddieid)
 }
 function draw_enemy(healthbar, palette, color = c_white)
 {
+	if (object_index == obj_swapplayergrabbable)
+	{
+		shader_set(global.Pal_Shader);
+		var b = get_dark(image_blend, obj_drawcontroller.use_dark);
+		pal_swap_set(spr_palette, paletteselect, false);
+		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
+		draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, b, image_alpha);
+		pattern_reset();
+		shader_reset();
+		exit;
+	}
+	
 	var _stun = 0;
 	if ((state == states.stun && thrown == 0 && object_index != obj_peppinoclone) || state == states.pizzaheadjump || (state == states.supergrab && sprite_index == stunfallspr))
 		_stun = 25;
 	if (state == states.pizzaheadjump && object_index == obj_gustavograbbable)
 		_stun = 0;
+	
 	if (visible && object_index != obj_pizzaball && object_index != obj_fakesanta && bbox_in_camera(view_camera[0], 32))
 	{
 		var c = image_blend;

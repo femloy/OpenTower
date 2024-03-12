@@ -44,6 +44,7 @@ enum notifs
 	johnghost_collide,
 	priest_ghost,
 	superjump_timer,
+	minigun_down,
 	shotgunblast_start,
 	shotgunblast_end,
 	block_break,
@@ -59,14 +60,28 @@ enum notifs
 	johnresurrection, // with all treasures
 	knighttaken,
 	mrmooney_donated,
-	pumpkin_collect,	// 59
-	trickytreat,		// 60
-	trickytreat_fail,	// 61
-	trickytreat_leave	// 62
+	
+	pumpkin_collect,
+	trickytreat,
+	trickytreat_fail,
+	trickytreat_leave,
+	
+	UNKNOWN_63,
+	UNKNOWN_64,
+	gate_taunt,
+	player_explosion,
+	UNKNOWN_67,
+	breakdance,
+	UNKNOWN_69,
+	close_call, // do rank with pizzaface on screen
+	UNKNOWN_70,
+	antigrav,
+	seen_ptg,
+	UNKNOWN_73,
 }
 
 // functions
-function add_achievement_update(_name, _update_rate, _creation_code, _update_func)
+function add_achievement_update(_name, _update_rate, _creation_code, _update_func, _local = true, _savesection = noone, _savename = noone)
 {
 	var q = 
 	{
@@ -84,6 +99,19 @@ function add_achievement_update(_name, _update_rate, _creation_code, _update_fun
 	{
 		q.creation_code = method(q, _creation_code);
 		q.creation_code();
+	}
+	
+	if (_local == false)
+	{
+		ini_open_from_string(obj_savesystem.ini_str_options);
+		if (ini_read_real(_savesection, _savename, false) == 1)
+		{
+			trace(_savename, " already unlocked");
+			q.unlocked = true;
+			ini_close();
+			exit;
+		}
+		ini_close();
 	}
 	array_push(obj_achievementtracker.achievements_update, q);
 	return q;
@@ -140,6 +168,18 @@ function achievement_add_variable(_name, _value, _save = false, _resettable = fa
 function achievement_get_variable(_name)
 {
 	return ds_map_find_value(variables, _name);
+}
+function achievement_get_all_variables()
+{
+	var arr = [];
+	var key = ds_map_find_first(variables);
+	var size = ds_map_size(variables);
+	for (var i = 0; i < size; i++)
+	{
+		array_push(arr, ds_map_find_value(variables, key));
+		key = ds_map_find_next(variables, key);
+	}
+	return arr;
 }
 function achievement_unlock(_name, _display_name, _sprite, _index = 0)
 {
@@ -198,7 +238,7 @@ function scr_steam_unlock_achievement(_achievement)
 	else
 		trace("Steam API not initialized!");
 }
-function palette_unlock(_achievement, _palettename, _paletteselect, _texture = noone)
+function palette_unlock(_achievement, _palettename, _paletteselect, _texture = noone, peppino = true)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	var _unlocked = ini_read_real("Palettes", _palettename, false);
@@ -216,6 +256,11 @@ function palette_unlock(_achievement, _palettename, _paletteselect, _texture = n
 			{
 				achievement_spr = noone;
 				sprite_index = spr_newclothes;
+				if (!peppino)
+				{
+					sprite_index = spr_newclothesN;
+					spr_palette = spr_noisepalette;
+				}
 				paletteselect = _paletteselect;
 				texture = _texture;
 			}

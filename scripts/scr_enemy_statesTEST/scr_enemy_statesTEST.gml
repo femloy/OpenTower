@@ -52,7 +52,7 @@ function scr_enemy_pummel()
 				if (key_up)
 				{
 					state = states.punch;
-					sprite_index = spr_player_breakdanceuppercut;
+					sprite_index = spr_breakdanceuppercut;
 					image_index = 0;
 					vsp = -14;
 					movespeed = 2;

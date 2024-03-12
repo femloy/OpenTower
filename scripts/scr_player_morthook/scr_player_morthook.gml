@@ -25,5 +25,9 @@ function scr_player_morthook()
 		with (instance_create(x, y, obj_speedlinesup))
 			playerid = other.id;
 		movespeed = xscale * 12;
+		with (morthookID)
+			projectilebuffer = 20;
 	}
+	if (sprite_index == spr_playerN_mortthrow && floor(image_index) == image_number - 1)
+		image_index = image_number - 1;
 }

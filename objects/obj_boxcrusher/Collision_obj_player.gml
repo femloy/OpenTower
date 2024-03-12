@@ -10,7 +10,7 @@ if (sprite_index == spr_boxcrusher_fall)
 else if (sprite_index == spr_boxcrusher_land)
 {
 	if (other.state != states.boxxedpep)
-		create_transformation_tip(lang_get_value("boxxedtip"), "boxxed");
+		create_transformation_tip(lang_get_value(obj_player1.ispeppino ? "boxxedtip" : "boxxedtipN"), obj_player1.ispeppino ? "boxxed" : "boxxedN");
 	other.boxxed = true;
 	other.movespeed = 0;
 	other.state = states.boxxedpep;

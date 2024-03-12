@@ -2,7 +2,11 @@ function scr_collide_destructibles()
 {
 	with (obj_player)
 	{
-		if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump) || (ghostdash && sprite_index != spr_ghostidle) || state == states.slipbanan || state == states.rideweenie || state == states.trickjump || state == states.ratmountbounce || (state == states.pogo && pogochargeactive == 1))
+		if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump)
+		|| (ghostdash && sprite_index != spr_ghostidle) || state == states.machcancel
+		|| state == states.slipbanan || state == states.rideweenie || state == states.trickjump
+		|| state == states.ratmountbounce || state == states.noisecrusher
+		|| (state == states.pogo && pogochargeactive == 1))
 		{
 			var arr = [[xscale, 0], [hsp + xscale, 0], [0, vsp + 1], [0, vsp - 1], [0, 1], [0, -1]];
 			for (var i = 0; i < array_length(arr); i++)
@@ -27,7 +31,18 @@ function scr_collide_destructibles()
 				}
 			}
 		}
-		if (state == states.trashroll || state == states.UNKNOWN_2 || state == states.boxxedpepspin || ratmount_movespeed >= 12 || state == states.ratmountpunch || state == states.ratmounttumble || state == states.punch || state == states.handstandjump || state == states.ratmountattack || state == states.lungeattack || state == states.cheeseball || state == states.bombpepside || state == states.rocket || state == states.shotgundash || state == states.faceplant || state == states.slipnslide || state == states.tacklecharge || sprite_index == spr_barrelroll || sprite_index == spr_player_barrelslipnslide || state == states.chainsawbump || state == states.mach3 || state == states.knightpep || (state == states.boxxedpepjump && boxxeddash) || (state == states.boxxedpep && boxxeddash) || state == states.machroll || state == states.knightpepslopes || state == states.knightpepattack || state == states.tumble || state == states.hookshot || state == states.shoulderbash)
+		
+		if (state == states.trashroll || state == states.UNKNOWN_2 || state == states.boxxedpepspin
+		|| ratmount_movespeed >= 12 || state == states.ratmountpunch || state == states.ratmounttumble
+		|| state == states.punch || state == states.handstandjump || state == states.ratmountattack
+		|| state == states.lungeattack || state == states.cheeseball || state == states.bombpepside
+		|| state == states.rocket || state == states.shotgundash || state == states.faceplant
+		|| state == states.slipnslide || state == states.tacklecharge || sprite_index == spr_barrelroll
+		|| sprite_index == spr_barrelslipnslide || state == states.chainsawbump || state == states.mach3
+		|| state == states.machcancel || state == states.knightpep || (state == states.boxxedpepjump && boxxeddash)
+		|| (state == states.boxxedpep && boxxeddash) || state == states.machroll
+		|| state == states.knightpepslopes || state == states.knightpepattack || state == states.tumble
+		|| state == states.machcancel || state == states.hookshot || state == states.shoulderbash)
 		{
 			if (place_meeting(x + hsp, y, obj_destructibles))
 			{
@@ -43,6 +58,7 @@ function scr_collide_destructibles()
 				}
 			}
 		}
+		
 		if (state == states.hurt && thrown == 1)
 		{
 			if (place_meeting(x - hsp, y, obj_destructibles))
@@ -54,7 +70,12 @@ function scr_collide_destructibles()
 				}
 			}
 		}
-		if ((state == states.knightpep || sprite_index == spr_lonegustavo_groundpoundstart || state == states.ratmountbounce || sprite_index == spr_lonegustavo_groundpound || state == states.jetpackjump || state == states.firemouth || state == states.slipbanan || state == states.superslam || state == states.hookshot || (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
+		
+		if ((state == states.knightpep || sprite_index == spr_lonegustavo_groundpoundstart
+		|| state == states.ratmountbounce || state == states.machcancel
+		|| sprite_index == spr_lonegustavo_groundpound || state == states.jetpackjump
+		|| state == states.firemouth || state == states.slipbanan || state == states.superslam
+		|| state == states.hookshot || (state == states.bombpepup && bombup_dir == 1)) && vsp > 0)
 		{
 			var vy = 1;
 			if (state == states.ratmountbounce || sprite_index == spr_lonegustavo_groundpoundstart || sprite_index == spr_lonegustavo_groundpound)
@@ -84,6 +105,7 @@ function scr_collide_destructibles()
 				}
 			}
 		}
+		
 		if (state == states.firemouth)
 		{
 			with (instance_place(x + xscale, y, obj_tntblock))
@@ -130,11 +152,28 @@ function scr_collide_destructibles()
 		}
 		ds_list_clear(global.instancelist);
 		
-		if (vsp <= 0.5 && (state == states.jump || state == states.UNKNOWN_1 || state == states.ratmountjump || state == states.UNKNOWN_2 || state == states.ratmountjump || state == states.mach3 || state == states.mach2 || state == states.antigrav || state == states.pogo || (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall || state == states.fireass || state == states.Sjump || state == states.UNKNOWN_3 || state == states.cheeseballclimbwall || state == states.mach3 || (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))))
+		
+		if (vsp <= 0.5 && (state == states.jump || state == states.machcancel || state == states.UNKNOWN_1
+		|| state == states.ratmountjump || state == states.UNKNOWN_2 || state == states.ratmountjump
+		|| state == states.mach3 || state == states.mach2 || state == states.antigrav || state == states.pogo
+		|| (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall
+		|| state == states.fireass || state == states.Sjump || state == states.UNKNOWN_3
+		|| state == states.cheeseballclimbwall || state == states.mach3 || state == states.machcancel
+		|| (state == states.punch && (sprite_index == spr_breakdanceuppercut || sprite_index == spr_breakdanceuppercutend))))
 		{
-			vy = -1;
-			if (state == states.punch && (sprite_index == spr_player_breakdanceuppercut || sprite_index == spr_player_breakdanceuppercutend))
+			var vy = -1;
+			if (state == states.punch && (sprite_index == spr_breakdanceuppercut || sprite_index == spr_breakdanceuppercutend))
+			{
 				vy = vsp;
+				
+				var i = 0;
+				repeat (abs(vsp + 50))
+				{
+					instance_destroy(instance_place(x, y + i, obj_destructibles));
+					i--;
+				}
+			}
+			
 			if (place_meeting(x, y + vy, obj_destructibles))
 			{
 				with (instance_place(x, y + vy, obj_destructibles))

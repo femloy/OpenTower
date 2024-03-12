@@ -7,6 +7,11 @@ function scr_player_trashjump()
 		movespeed = Approach(movespeed, move * 6, 0.5);
 	else
 		movespeed = Approach(movespeed, 0, 0.25);
+	if (scr_noise_machcancel_grab())
+	{
+		image_speed = 0.35;
+		exit;
+	}
 	if (vsp > 0 && sprite_index == spr_player_trashjump)
 	{
 		sprite_index = spr_player_trashjump2;
@@ -16,20 +21,31 @@ function scr_player_trashjump()
 		sprite_index = spr_player_trashfall;
 	if (vsp < 0 && sprite_index != spr_player_trashjump)
 		sprite_index = spr_player_trashjump;
+	if (!ispeppino)
+		sprite_index = spr_playerN_trash;
 	if (grounded && vsp > 0)
 	{
-		create_transformation_tip(lang_get_value("trashrolltip"), "trashroll");
-		if (instance_place(x, y + 1, obj_slope))
+		if (ispeppino)
 		{
-			var slope = instance_place(x, y + 1, obj_slope);
-			xscale = -sign(slope.image_xscale);
-			scale_xs = 1;
+			create_transformation_tip(lang_get_value("trashrolltip"), "trashroll");
+			if (instance_place(x, y + 1, obj_slope))
+			{
+				var slope = instance_place(x, y + 1, obj_slope);
+				xscale = -sign(slope.image_xscale);
+				scale_xs = 1;
+			}
+			movespeed = abs(movespeed);
+			dir = xscale;
+			movespeed = 8;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+			state = states.trashroll;
 		}
-		movespeed = abs(movespeed);
-		dir = xscale;
-		movespeed = 8;
-		with (instance_create(x, y, obj_jumpdust))
-			image_xscale = other.xscale;
-		state = states.trashroll;
+		else
+		{
+			state = states.normal;
+			with (instance_create(x, y, obj_jumpdust))
+				image_xscale = other.xscale;
+		}
 	}
 }

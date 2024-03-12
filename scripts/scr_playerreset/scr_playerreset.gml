@@ -21,12 +21,15 @@ function scr_playerreset()
 	if (room != boss_pizzaface && room != boss_noise && room != boss_pepperman && room != boss_fakepep && room != boss_vigilante)
 		global.bossintro = false;
 	global.bossplayerhurt = false;
+	global.swap_boss_damage = 0;
 	global.playerhit = 0;
 	global.laps = 0;
 	global.secretfound = 0;
 	global.combo = 0;
 	global.highest_combo = 0;
 	global.player_damage = 0;
+	global.swap_damage[0] = 0;
+	global.swap_damage[1] = 0;
 	global.peppino_damage = 0;
 	global.gustavo_damage = 0;
 	global.comboscore = 0;
@@ -34,6 +37,9 @@ function scr_playerreset()
 	global.tauntcount = 0;
 	global.prank_enemykilled = false;
 	global.prank_cankillenemy = true;
+	global.noisejetpack = false;
+	with (obj_player)
+		noisepizzapepper = false;
 	global.level_minutes = 0;
 	global.level_seconds = 0;
 	global.pistol = false;
@@ -42,8 +48,15 @@ function scr_playerreset()
 		camzoom = 1;
 	with (obj_camera)
 	{
+		camzoom = 1;
 		lock = false;
 		state = states.normal;
+	}
+	
+	with (obj_swapmodefollow)
+	{
+		isgustavo = false;
+		get_character_spr();
 	}
 	
 	with (obj_achievementtracker)
@@ -93,6 +106,7 @@ function scr_playerreset()
 	
 	if (!global.levelreset)
 	{
+		instance_destroy(obj_surfback);
 		instance_destroy(obj_randomsecret);
 		instance_destroy(obj_deliverytimer);
 		instance_destroy(obj_wartimer);
@@ -149,7 +163,6 @@ function scr_playerreset()
 		global.hasfarmer = array_create(3, false);
 		global.checkpoint_room = -4;
 		global.checkpoint_door = "A";
-		global.noisejetpack = false;
 		global.hp = 0;
 		global.kungfu = false;
 		global.graffiticount = 0;
@@ -187,7 +200,10 @@ function scr_playerreset()
 		global.pineapplefollow = false;
 		global.keyget = false;
 		global.collect = 0;
+		global.lastcollect = 0;
 		global.collectN = 0;
+		global.collect_player[0] = 0;
+		global.collect_player[1] = 0;
 		global.hats = 0;
 		global.extrahats = 0;
 		global.ammo = 0;
@@ -242,6 +258,7 @@ function scr_playerreset()
 	}
 	with (obj_player)
 	{
+		noisepizzapepper = false;
 		goblinkey = false;
 		transformationsnd = false;
 		fmod_event_instance_release(snd_voiceok);
@@ -255,6 +272,7 @@ function scr_playerreset()
 		scale_ys = 1;
 		holycross = 0;
 		ghostdash = false;
+		ghostdashbuffer = 0;
 		ghostpepper = 0;
 		ghosteffect = 0;
 		ghostbump = 1;
@@ -410,6 +428,7 @@ function scr_playerreset()
 			skateboarding = false;
 			brick = false;
 			isgustavo = false;
+			noisecrusher = false;
 			tauntstoredisgustavo = false;
 			controllableSjump = false;
 			noisebossscream = false;
@@ -542,7 +561,7 @@ function scr_playerreset()
 	}
 	with (obj_followcharacter)
 	{
-		if (persistent)
+		if (persistent && object_index != obj_swapmodefollow)
 			instance_destroy();
 	}
 	instance_destroy(obj_shotgunback);

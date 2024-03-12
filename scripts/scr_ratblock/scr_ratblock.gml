@@ -36,6 +36,11 @@ function scr_ratblock_destroy()
 						break;
 					case states.boxxedpepspin:
 						vsp = -6;
+						if (!ispeppino)
+						{
+							sprite_index = spr_playerN_boxxedhit;
+							image_index = 0;
+						}
 						instance_destroy(other);
 						break;
 					case states.bombpep:

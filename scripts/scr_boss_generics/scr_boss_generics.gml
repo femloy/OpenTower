@@ -9,6 +9,7 @@ function scr_boss_grabbed()
 		instance_destroy(obj_vigilantecow);
 		instance_destroy(obj_cowstampede);
 		instance_destroy(obj_vigilanteshot);
+		instance_destroy(obj_playerbomb, false);
 	}
 	var playerid = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
 	with (playerid)
@@ -24,6 +25,7 @@ function scr_boss_grabbed()
 			pizzahead = other.pizzahead;
 			subhpshot_max = floor(punchcount / (other.pizzahead_maxsubhp + 1));
 			subhpshot = subhpshot_max;
+			bombbuffer = 0;
 			hiteffect = true;
 			reposition = false;
 			if (!other.pizzahead)
@@ -42,6 +44,13 @@ function scr_boss_grabbed()
 			sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_player_suplexmash5, spr_player_suplexmash6, spr_player_suplexmash7);
 			image_index = sprite_get_number(sprite_index) - 1;
 			other.camzoom = 1;
+			if (!ispeppino)
+			{
+				if (x != other.x)
+					xscale = sign(other.x - x);
+				else
+					xscale = (x < (room_width / 2)) ? 1 : -1;
+			}
 		}
 	}
 	image_xscale = -playerid.xscale;
@@ -83,9 +92,29 @@ function scr_boss_pizzaheadjump()
 				break;
 		}
 	}
+	if (object_index == obj_noiseboss && doise)
+		sprite_index = spr_doise_deadair;
 	if (grounded && vsp > 0)
 	{
 		state = states.walk;
+		switch (object_index)
+		{
+			case obj_pepperman:
+				sprite_index = spr_pepperman_idle;
+				break;
+			case obj_vigilanteboss:
+				sprite_index = spr_playerV_idle;
+				break;
+			case obj_noiseboss:
+				if (obj_player1.ispeppino)
+					sprite_index = spr_playerN_idle;
+				else
+					sprite_index = spr_playerN_animatronic;
+				break;
+			case obj_fakepepboss:
+				sprite_index = spr_fakepeppino_idle;
+				break;
+		}
 		if (object_index == obj_noisey)
 		{
 			state = states.stun;
@@ -177,15 +206,15 @@ function scr_boss_pizzaheadKO()
 			image_alpha = 1;
 	}
 }
-function scr_boss_genericintro(sprite)
+function scr_boss_genericintro(sprite, buffer = 30)
 {
 	if (sprite_index != sprite)
 	{
 		sprite_index = sprite;
-		introbuffer = 30;
+		introbuffer = buffer;
 	}
-	if (introbuffer > 30)
-		introbuffer = 30;
+	if (introbuffer > buffer)
+		introbuffer = buffer;
 	with (obj_player1)
 	{
 		state = states.actor;
@@ -213,12 +242,12 @@ function scr_boss_genericintro(sprite)
 		}
 	}
 }
-function scr_boss_do_hurt_phase2(object, inv_time = 100)
+function scr_boss_do_hurt_phase2(player, time = 100)
 {
-	with (object)
+	with (player)
 	{
 		state = states.phase1hurt;
-		invtime = inv_time + 40;
+		invtime = time + 40;
 		hurted = false;
 		image_alpha = 1;
 		alarm[5] = -1;
@@ -232,18 +261,114 @@ function scr_boss_do_hurt_phase2(object, inv_time = 100)
 	}
 	pulse = 0;
 	state = states.phase1hurt;
-	buildup = inv_time;
-	buildup_playerID = object;
+	buildup = time;
+	buildup_playerID = player;
 	camzoom = 1;
-	flashbuffer = inv_time - 40;
+	flashbuffer = time - 40;
 	fmod_event_one_shot("event:/sfx/misc/blackoutpunch");
 	instance_create_unique(0, 0, obj_blackoutline)
 	instance_create_unique(0, 0, obj_superattackeffect)
-	image_xscale = -object.xscale;
+	image_xscale = -player.xscale;
+	if (!player.ispeppino)
+	{
+		hitX = x;
+		hitY = y;
+	}
 	instance_create(0, 0, obj_bossdark);
+}
+function scr_boss_playerN_phase1hurt(func = noone)
+{
+	x = hitX + irandom_range(-1, 1);
+	y = hitY + irandom_range(-1, 1);
+	hsp = 0;
+	vsp = 0;
+	with (obj_player)
+	{
+		actorbuffer = 10000;
+		hsp = 0;
+		vsp = 0;
+		state = states.actor;
+		pistolanim = -4;
+		sprite_index = spr_playerN_bosstransition;
+		invtime = 30;
+	}
+	instance_create_unique(0, 0, obj_bossdark);
+	if (buildup > 0)
+	{
+		obj_camera.lock = true;
+		camzoom = lerp(camzoom, 0.5, 0.2);
+		camera_set_view_size(view_camera[0], SCREEN_WIDTH * camzoom, SCREEN_HEIGHT * camzoom);
+		var _x = clamp(x - (SCREEN_WIDTH * camzoom) / 2, 0, room_width - (SCREEN_WIDTH * camzoom));
+		var _y = clamp(y - (SCREEN_HEIGHT * camzoom) / 2, 0, room_height - (SCREEN_HEIGHT * camzoom));
+		camera_set_view_pos(view_camera[0], _x, _y);
+		buildup--;
+	}
+	else
+	{
+		var lag = 15;
+		hitLag = lag;
+		hitX = x;
+		hitY = y;
+		instance_create(x, y, obj_parryeffect);
+		GamepadSetVibration(0, 0.8, 0.8, 0.65);
+		fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
+		fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
+		state = states.stun;
+		instance_create(x, y, obj_slapstar);
+		instance_create(x, y, obj_slapstar);
+		instance_create(x, y, obj_slapstar);
+		instance_create(x, y, obj_baddiegibs);
+		instance_create(x, y, obj_baddiegibs);
+		instance_create(x, y, obj_baddiegibs);
+		instance_create(x, y, obj_bangeffect);
+		instance_destroy(obj_bossdark);
+		repeat (4)
+		{
+			with (create_debris(x + random_range(-64, 64), y + random_range(-64, 64), spr_flashdots, true))
+			{
+				hsp = random_range(-5, 5);
+				vsp = random_range(-10, 10);
+				image_speed = 0.4;
+			}
+		}
+		camera_set_view_size(view_camera[0], SCREEN_WIDTH, SCREEN_HEIGHT);
+		obj_screensizer.camzoom = 1;
+		create_heatattack_afterimage(x, y, sprite_index, image_index, image_xscale);
+		with (obj_camera)
+		{
+			shake_mag = 3;
+			shake_mag_acc = 5 / room_speed;
+		}
+		instance_destroy(obj_blackoutline);
+		instance_destroy(obj_superattackeffect);
+		instance_destroy(obj_bossdark);
+		instance_destroy(obj_lightsource);
+		instance_create(0, 0, obj_pizzahead_whitefade);
+		obj_camera.lock = false;
+		camzoom = 1;
+		camera_set_view_size(view_camera[0], SCREEN_WIDTH, SCREEN_HEIGHT);
+		with (obj_player)
+			state = states.normal;
+		hithsp = -image_xscale * 25;
+		hitvsp = -5;
+		hsp = hithsp;
+		vsp = hitvsp;
+		thrown = true;
+		linethrown = true;
+		image_speed = 0.35;
+		if (func != noone)
+			func();
+	}
+	obj_screensizer.camzoom = camzoom;
+	image_speed = 0.35;
 }
 function scr_boss_phase1hurt(func = noone)
 {
+	if (!obj_player1.ispeppino)
+	{
+		scr_boss_playerN_phase1hurt(func);
+		exit;
+	}
 	var player = buildup_playerID;
 	var px = player.x + (player.xscale * 60);
 	var py = player.y;
