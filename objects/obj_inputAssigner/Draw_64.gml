@@ -20,7 +20,8 @@ else
 	_txt = lang_get_value("menu_controller_disconnected");
 	_txt = string_replace_all(_txt, "\\n", "\n");
 	var _h = string_height(_txt) / 2;
-	draw_text(SCREEN_WIDTH / 2, (SCREEN_HEIGHT / 2) - _h, _txt);
+	tdp_draw_text(SCREEN_WIDTH / 2, (SCREEN_HEIGHT / 2) - _h, _txt);
 }
+tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 draw_set_halign(_halign);
 draw_set_halign(_valign);

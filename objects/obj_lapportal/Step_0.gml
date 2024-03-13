@@ -14,6 +14,8 @@ if ((global.panic || instance_exists(obj_wartimer)) && sprite_index != spr_pizza
 				state = states.actor;
 				visible = false;
 				other.sprite_index = spr_pizzaportalend;
+				if (!ispeppino)
+					other.sprite_index = spr_pizzaportalendN;
 				other.image_index = 0;
 				other.playerid = id;
 				fmod_event_one_shot_3d("event:/sfx/misc/lapenter", x, y);
@@ -28,7 +30,7 @@ if ((global.panic || instance_exists(obj_wartimer)) && sprite_index != spr_pizza
 			}
 		}
 	}
-	else if (sprite_index == spr_pizzaportalend)
+	else if (sprite_index == spr_pizzaportalend || sprite_index == spr_pizzaportalendN)
 	{
 		with (playerid)
 		{

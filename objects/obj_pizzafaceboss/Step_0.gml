@@ -16,7 +16,10 @@ switch (state)
 		scr_pizzaface_transitioncutscene();
 		break;
 	case states.phase1hurt:
+		lasthit = true;
 		scr_boss_phase1hurt();
+		sprite_index = spr_pizzaface_hurt;
+		image_speed = 0.35;
 		break;
 	case states.hit:
 		scr_enemy_hit();
@@ -80,7 +83,10 @@ if (prevhp != elitehit)
 				vsp = 0;
 				xscale = 1;
 				movespeed = 0;
+				image_index = 0;
 				sprite_index = spr_player_gnomecutscene1;
+				if (!ispeppino)
+					sprite_index = spr_noisebossintro2;
 				image_speed = 0.35;
 				state = states.actor;
 				x = roomstartx;
@@ -110,26 +116,32 @@ if (state == states.stun)
 }
 else
 	savedthrown = false;
+
 if (state == states.stun && stunned > 100 && birdcreated == 0)
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state == states.stun && savedthrown == thrown && !savedthrown && elitehit > 1)
+
+var _inv = (state == states.stun && savedthrown == thrown && !savedthrown) || (!obj_player1.ispeppino && state == states.pizzaface_ram && substate == states.land);
+if (_inv && elitehit > 1)
 	invincible = false;
 else
 	invincible = true;
-if ((!invincible || (state == states.stun && savedthrown == thrown && !savedthrown && elitehit == 1)) && !flash && alarm[5] < 0)
+
+if ((!invincible || (_inv && elitehit == 1)) && !flash && alarm[5] < 0)
 	alarm[5] = 0.15 * room_speed;
-else if (invincible && (state != states.stun || (savedthrown != thrown && savedthrown) || elitehit > 1))
+else if (invincible && (state != states.stun || (savedthrown != thrown && savedthrown) || elitehit > 1) && (state != states.pizzaface_ram || substate != states.land))
 	flash = false;
+
 if ((state == states.pizzaface_ram && substate != states.transition) && alarm[4] < 0)
 	alarm[4] = 6;
 if (state != states.stun)
 	birdcreated = false;
 if (flash == 1 && alarm[2] <= 0)
 	alarm[2] = 0.15 * room_speed;
+
 depth = 0;
 if (state != states.stun)
 	thrown = false;

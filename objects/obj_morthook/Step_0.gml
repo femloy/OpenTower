@@ -8,3 +8,5 @@ if (_found)
 	image_alpha = 1;
 else
 	image_alpha = 0.5;
+if (projectilebuffer > 0)
+	projectilebuffer--;

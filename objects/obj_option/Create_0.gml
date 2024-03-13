@@ -73,6 +73,7 @@ add_option_press(audio_menu, 0, "option_back", function()
 	fmod_event_instance_stop(global.snd_slidermaster, true);
 	fmod_event_instance_stop(global.snd_slidermusic, true);
 	fmod_event_instance_stop(global.snd_slidersfx, true);
+	set_audio_config();
 });
 
 add_option_slide(audio_menu, 1, "option_master", function(val)
@@ -122,26 +123,30 @@ add_option_press(video_menu, 0, "option_back", function()
 {
 	menu_goto(menus.options);
 });
-add_option_press(video_menu, 1, "option_window_mode", function()
-{
-	menu_goto(menus.window);
-});
 
-var res = [];
-for (var i = 0; i < array_length(global.resolutions[obj_screensizer.aspect_ratio]); i++)
+if !steam_utils_is_steam_running_on_steam_deck()
 {
-	var b = global.resolutions[obj_screensizer.aspect_ratio][i];
-	array_push(res, create_option_value(concat(b[0], "X", b[1]), i, false));
+	add_option_press(video_menu, 1, "option_window_mode", function()
+	{
+		menu_goto(menus.window);
+	});
+
+	var res = [];
+	for (var i = 0; i < array_length(global.resolutions[obj_screensizer.aspect_ratio]); i++)
+	{
+		var b = global.resolutions[obj_screensizer.aspect_ratio][i];
+		array_push(res, create_option_value(concat(b[0], "X", b[1]), i, false));
+	}
+
+	add_option_multiple(video_menu, 2, "option_resolution", res, function(val)
+	{
+		ini_open_from_string(obj_savesystem.ini_str_options);
+		ini_write_real("Option", "resolution", val);
+		obj_savesystem.ini_str_options = ini_close();
+		global.option_resolution = val;
+		screen_apply_size();
+	}).value = global.option_resolution;
 }
-
-add_option_multiple(video_menu, 2, "option_resolution", res, function(val)
-{
-	ini_open_from_string(obj_savesystem.ini_str_options);
-	ini_write_real("Option", "resolution", val);
-	obj_savesystem.ini_str_options = ini_close();
-	global.option_resolution = val;
-	screen_apply_size();
-}).value = global.option_resolution;
 
 add_option_toggle(video_menu, 3, "option_vsync", function(val)
 {
@@ -284,7 +289,7 @@ add_option_toggle(game_menu, 3, "option_timer", function(val)
 	global.option_timer = val;
 }).value = global.option_timer;
 
-add_option_multiple(game_menu, 4, "option_timer_type", [create_option_value("option_timer_level", 0), create_option_value("option_timer_save", 1)], function(val)
+add_option_multiple(game_menu, 4, "option_timer_type", [create_option_value("option_timer_level", 0), create_option_value("option_timer_save", 1), create_option_value("option_timer_levelsave", 2)], function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "timer_type", val);

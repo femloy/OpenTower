@@ -1,5 +1,6 @@
 if (vsp < 12)
 	vsp += grav;
-image_speed = 0;
+if (sprite_index != spr_heatpuff)
+	image_speed = 0;
 x += hsp;
 y += floor(vsp);

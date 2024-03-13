@@ -2,6 +2,13 @@ savedhallwaydirection = hallwaydirection;
 savedhallway = hallway;
 savedvhallwaydirection = vhallwaydirection;
 savedverticalhallway = verticalhallway;
+if (room != boss_noise)
+{
+	global.resetdoise = false;
+	resetdoisecount = 0;
+}
+if (global.swapmode)
+	instance_create_unique(x, y, obj_swapmodefollow);
 with (obj_secretportal)
 {
 	if (secret)

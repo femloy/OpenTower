@@ -17,11 +17,11 @@ if (state != states.grabbing && other.state != states.bombgrab && x == xstart &&
 			sprite_index = spr_grabhangeffect;
 			image_speed = 0.35;
 		}
-		state = states.bump;
-		if (boxxed == 0)
-			sprite_index = spr_player_catched;
+		state = states.actor;
+		if (boxxed == false)
+			sprite_index = spr_catched;
 		else
-			sprite_index = spr_boxxedpep_air;
+			sprite_index = spr_boxxedpepair;
 		other.playerid = id;
 		other.state = states.grabbing;
 		if (tauntstoredstate != states.mach2 && tauntstoredstate != states.mach3)

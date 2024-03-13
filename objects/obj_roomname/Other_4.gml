@@ -5,7 +5,7 @@ if (room != rank_room && room != timesuproom && room != Mainmenu)
 	alarm[0] = 200;
 }
 var r = string_letters(room_get_name(room));
-if (r != "towertutorial" && r != "towerup" && (string_copy(r, 1, 5) == "tower" || string_copy(r, 1, 5) == "streethouse") && !global.panic)
+if (r != "towertutorial" && r != "towertutorialN" && r != "towerup" && (string_copy(r, 1, 5) == "tower" || string_copy(r, 1, 5) == "streethouse") && !global.panic)
 	visible = true;
 else
 	visible = false;

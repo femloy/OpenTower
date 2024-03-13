@@ -1,4 +1,4 @@
 event_inherited();
-walkspr = spr_playerV_move;
-idlespr = spr_playerV_panic;
+walkspr = spr_vigi_exitmove;
+idlespr = spr_vigi_exitpanic;
 image_speed = 0.35;

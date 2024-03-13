@@ -22,7 +22,7 @@ if (!finish)
 }
 else
 {
-	var ty = -(sprite_height + 100);
+	var ty = -(height + 100);
 	y = Approach(y, ty, accel);
 	if (y <= ty)
 		instance_destroy();

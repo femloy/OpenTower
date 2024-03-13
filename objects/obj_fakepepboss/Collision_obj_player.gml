@@ -41,10 +41,17 @@ if (staggerbuffer <= 0 && flickertime <= 0 && ((other.state == states.handstandj
 	with (other)
 	{
 		fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
-		state = states.tackle;
-		movespeed = 4;
-		sprite_index = choose(spr_player_lungehit, spr_player_kungfu1, spr_player_kungfu2, spr_player_kungfu3);
 		image_index = 0;
+		movespeed = 4;
+		if (ispeppino)
+			sprite_index = choose(spr_player_lungehit, spr_player_kungfu1, spr_player_kungfu2, spr_player_kungfu3);
+		else
+		{
+			if (state == states.machcancel && hsp != 0)
+				xscale = sign(hsp);
+			sprite_index = choose(spr_playerN_backkick, spr_playerN_tackle);
+		}
+		state = states.tackle;
 	}
 }
 else if (state == states.freefall || (state == states.mach2 && attackspeed >= 18) || state == states.Sjump || (state == states.throwing && attackspeed > 4))

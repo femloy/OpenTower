@@ -5,6 +5,7 @@ achievement_index = 0;
 finish = false;
 movespeed = 5;
 paletteselect = 1;
+spr_palette = spr_peppalette;
 texture = -4;
 depth = -600;
 previousID = -4;

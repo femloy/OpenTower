@@ -12,8 +12,8 @@ function scr_do_rank(showtoppins = true, boss = false)
 	fmod_event_instance_stop(global.snd_escaperumble, true);
 	var ex = x;
 	var ey = y;
-	var cx = camera_get_view_x(view_camera[0]) + obj_screensizer.normal_size_fix_x;
-	var cy = camera_get_view_y(view_camera[0]) + obj_screensizer.normal_size_fix_y;
+	var cx = camera_get_view_x(view_camera[0]) + SCREEN_X;
+	var cy = camera_get_view_y(view_camera[0]) + SCREEN_Y;
 	rankpos_x = ex - cx;
 	rankpos_y = ey - cy;
 	if (global.timeattack == 1)

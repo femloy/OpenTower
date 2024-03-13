@@ -1,4 +1,5 @@
-draw_sprite(spr_mrmooney_house, 0, x, y);
+if (obj_player1.ispeppino)
+	draw_sprite(spr_mrmooney_house, 0, x, y);
 draw_self();
 if (showmoney)
 {

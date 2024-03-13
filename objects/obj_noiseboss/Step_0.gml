@@ -122,7 +122,13 @@ with (obj_noisey)
 			scr_noise_do_hurt(t);
 	}
 }
-boss_hurt_gustavo();
+if (!doise)
+	boss_hurt_gustavo();
+if (state == states.phase1hurt && doise)
+{
+	image_speed = 0.35;
+	image_index = obj_player1.image_index;
+}
 if (droptrap && (state == states.walk || state == states.stun))
 {
 	if (abs(x - targetplayer.x) <= 200)
@@ -141,12 +147,14 @@ if (wastedhits >= 8 && phase == 1 && !pizzahead)
 	ballooncrash = true;
 	flickertime = 0;
 	cooldown = 20;
+	if (doise)
+		ballooncrash = false;
 	avaiblemoves = [];
 	skateboardhit = 0;
 	jetpackhit = 0;
 	pogohit = 0;
 	hotairhit = 0;
-	destroyable = true;
+	destroyable = false;
 	scr_sleep(25);
 }
 if (state == states.stun)
@@ -205,7 +213,7 @@ if ((state == states.walk || (state == states.stun && !savedthrown)) && flickert
 	invincible = false;
 else
 	invincible = true;
-if (instance_exists(obj_noiseballooncrash))
+if (!doise && instance_exists(obj_noiseballooncrash))
 	invincible = true;
 if (state == states.KO)
 	invincible = true;
@@ -221,6 +229,13 @@ if ((!invincible || ((state == states.walk && flickertime <= 0) || (state == sta
 	alarm[5] = 0.15 * room_speed;
 else if (invincible && (state != states.walk || flickertime > 0) && (state != states.stun || savedthrown))
 	flash = false;
+if (doise && pizzahead)
+{
+	elitehit = 0;
+	prevhp = 0;
+	invincible = true;
+	flash = false;
+}
 if ((state == states.mach2 || state == states.machslide || state == states.jetpack || state == states.bounce || state == states.pogo) && alarm[4] < 0)
 	alarm[4] = 5;
 mask_index = spr_player_mask;

@@ -17,6 +17,7 @@ enum particle
 	ratmountballooncloud,
 	groundpoundeffect,
 	bubblepop,
+	noisegrounddash,
 	
 	enum_length // not to be used
 }
@@ -26,7 +27,7 @@ enum part_type
 	fadeout
 }
 
-if (instance_number(obj_particlesystem) > 1)
+if instance_number(obj_particlesystem) > 1
 {
 	instance_destroy();
 	exit;
@@ -64,6 +65,8 @@ part_type_speed(p, 0, 0, 0, 0)
 p = declare_particle(particle.teleporteffect, spr_teleporteffect, 0.5, 0)
 part_type_speed(p, 0, 0, 0, 0)
 p = declare_particle(particle.landcloud, spr_landcloud, 0.5, 0)
+part_type_speed(p, 0, 0, 0, 0)
+p = declare_particle(particle.noisegrounddash, spr_noisegrounddasheffect, 0.5, 0)
 part_type_speed(p, 0, 0, 0, 0)
 p = declare_particle(particle.ratmountballooncloud, spr_ratmountballooncloud, 0.7, 0)
 part_type_speed(p, 0, 0, 0, 0)

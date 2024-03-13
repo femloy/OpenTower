@@ -21,6 +21,15 @@ else if (state == 2)
 			state = states.animatronic;
 			x = roomstartx;
 			y = roomstarty;
+			if (swap_player(false, true))
+			{
+				instance_destroy(obj_noiseanimatroniceffect);
+				state = states.normal;
+				with (obj_swapmodefollow)
+					animatronic = other.animatronic_buffer;
+				if (ispeppino)
+					instance_create(x, y, obj_noiseanimatroniceffect);
+			}
 		}
 	}
 	warbg_stop();

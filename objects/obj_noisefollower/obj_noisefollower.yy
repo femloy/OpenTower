@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_noisefollower",
   "spriteId": {
-    "name": "spr_playerN_panicidle",
-    "path": "sprites/spr_playerN_panicidle/spr_playerN_panicidle.yy",
+    "name": "spr_noise_exitidle",
+    "path": "sprites/spr_noise_exitidle/spr_noise_exitidle.yy",
   },
   "solid": false,
   "visible": true,

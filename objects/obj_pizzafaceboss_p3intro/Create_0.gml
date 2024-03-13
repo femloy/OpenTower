@@ -25,6 +25,23 @@ if (room == rm_testing4)
 	with (obj_player)
 		state = states.actor;
 }
+peppinoID = -4;
+if (global.swapmode)
+{
+	with (obj_player)
+	{
+		if (ispeppino)
+			swap_player(false);
+	}
+	peppinoID = instance_create((room_width * 0.3) - 50, 402, 257);
+	peppinoID.ispeppino = true;
+	peppinoID.sprite_index = spr_player_idle;
+	peppinoID.image_speed = 0.35;
+	peppinoID.depth = 0;
+	peppinoID.hsp = 0;
+	peppinoID.vsp = 0;
+	peppinoID.collide = false;
+}
 instance_destroy(obj_superattackeffect);
 instance_destroy(obj_blackoutline);
 warbg_stop();

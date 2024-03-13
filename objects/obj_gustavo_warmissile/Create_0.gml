@@ -3,5 +3,7 @@ direction = 0;
 speed = 6;
 image_speed = 0.35;
 image_angle = direction;
+rotate_speed = 2;
+angle = 0;
 depth = -200;
 alarm[1] = 1;

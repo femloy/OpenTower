@@ -23,7 +23,7 @@ if (fade > 0)
 		draw_set_valign(fa_middle);
 		draw_set_font(lang_get_font("bigfont"));
 		
-		var h = string_height("A");
+		var h = string_height(lang_get_value("default_letter"));
 		var pad = 16;
 		var len = array_length(pause_menu);
 		var wh = (h * len) + (pad * (len - 1));
@@ -51,7 +51,7 @@ if (fade > 0)
 				draw_sprite(iconspr, cursor_index, cx + cursor_x, yy + cursor_y);
 				c = c_white;
 			}
-			draw_text_color(SCREEN_WIDTH / 2, yy, t, c, c, c, c, fade);
+			tdp_draw_text_color(SCREEN_WIDTH / 2, yy, t, c, c, c, c, fade);
 			var ic = array_get(ds_map_find_value(pause_menu_map, b), 0);
 			if (ic != undefined)
 				scr_pauseicon_draw(ic, (SCREEN_WIDTH / 2) + (string_width(t) / 2) + 50, yy);
@@ -60,6 +60,7 @@ if (fade > 0)
 	}
 }
 draw_set_alpha(1);
+tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 draw_sprite_ext(spr_pause_border, ui_index, border1_x, border1_y, -1, 1, 0, c_white, 1);
 draw_sprite_ext(spr_pause_border, ui_index, border2_x, border2_y, 1, 1, 0, c_white, 1);
 draw_sprite_ext(spr_pause_vine, ui_index, SCREEN_WIDTH / 2, vine_y, 1, 1, 0, c_white, 1);
@@ -95,7 +96,10 @@ if (transfotext != -4 && !instance_exists(obj_achievement_pause))
 	yy -= s[1];
 	xx = floor(xx);
 	yy = floor(yy);
+	global.tdp_text_try_outline = true;
 	scr_draw_text_arr(xx, yy, transfotext, c_white, fade);
+	global.tdp_text_try_outline = false;
+	tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 	draw_set_alpha(1);
 }
-pause_draw_priests();
+pause_draw_priests(); 

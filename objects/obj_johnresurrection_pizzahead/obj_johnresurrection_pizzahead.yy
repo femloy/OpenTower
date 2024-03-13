@@ -31,7 +31,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Ending",
-    "path": "folders/Objects/Cutscenes/Ending.yy",
+    "name": "John Resurrection",
+    "path": "folders/Objects/Cutscenes/John Resurrection.yy",
   },
 }

@@ -1,1 +1,1 @@
-x = (SCREEN_WIDTH + sprite_width)
+x = SCREEN_WIDTH + sprite_width;

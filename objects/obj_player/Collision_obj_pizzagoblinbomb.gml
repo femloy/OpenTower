@@ -11,6 +11,8 @@ if (state != states.boxxedpepspin)
 			sprite_index = spr_haulingstart;
 			other.defused = true;
 			bombgrabID = other.id;
+			if (!ispeppino)
+				create_transformation_tip(lang_get_value("bombtipN"), "bombtipN");
 			fmod_event_one_shot_3d("event:/sfx/noise/bombbounce", x, y);
 			with (instance_create(x + (xscale * 25), y, obj_parryeffect))
 			{

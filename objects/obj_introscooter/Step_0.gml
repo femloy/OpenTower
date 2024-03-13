@@ -38,15 +38,34 @@ switch (state)
 				sprite_index = spr_towerintro;
 				depth = -6;
 			}
-			with (instance_create(246, 405, obj_introprop))
+			if (obj_player1.ispeppino && !global.swapmode)
 			{
-				sprite_index = spr_towerintro_peppino;
-				depth = -8;
+				with (instance_create(246, 405, obj_introprop))
+				{
+					sprite_index = spr_towerintro_peppino;
+					depth = -8;
+				}
+				with (instance_create(136, 416, obj_introprop))
+				{
+					sprite_index = spr_towerintro_gustavo;
+					depth = -7;
+				}
 			}
-			with (instance_create(136, 416, obj_introprop))
+			else
 			{
-				sprite_index = spr_towerintro_gustavo;
-				depth = -7;
+				if (global.swapmode)
+				{
+					with (instance_create(130, 401, obj_introprop))
+					{
+						sprite_index = spr_towerintro_peppino;
+						depth = -7;
+					}
+				}
+				with (instance_create(246, 405, obj_introprop))
+				{
+					sprite_index = spr_towerintro_noise;
+					depth = -8;
+				}
 			}
 			with (instance_create(623, 72, obj_introprop))
 			{

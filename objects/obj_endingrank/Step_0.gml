@@ -8,7 +8,11 @@ switch (state)
 		if (introbuffer > 0)
 			introbuffer--;
 		else
+		{
 			state++;
+			if (!ispeppino)
+				fmod_event_instance_stop(snd_start, false);
+		}
 		break;
 	case 1:
 		var targetfade = 1.5;
@@ -19,6 +23,8 @@ switch (state)
 			fade = 1;
 			introbuffer = 180;
 			snd = fmod_event_create_instance("event:/sfx/ui/percentagemove");
+			if (!ispeppino)
+				fmod_event_instance_play(snd_drumroll);
 		}
 		break;
 	case 2:
@@ -29,11 +35,13 @@ switch (state)
 				a = 0.1;
 			var pc = percvisual;
 			percvisual = Approach(percvisual, percentage, a);
-			if (floor(pc) != floor(percvisual))
+			if (ispeppino && floor(pc) != floor(percvisual))
 			{
 				fmod_event_instance_set_parameter(snd, "state", percvisual / 101, true);
 				fmod_event_instance_play(snd);
 			}
+			if (percvisual == percentage && !ispeppino)
+				fmod_event_instance_set_parameter(snd_drumroll, "state", 1, true);
 		}
 		else
 		{
@@ -42,11 +50,20 @@ switch (state)
 				introbuffer--;
 			else
 			{
+				notification_push(notifs.endingrank, [rank_name]);
 				fmod_event_instance_release(snd);
 				fmod_event_instance_set_parameter(music, "state", 1, true);
 				sprite_index = rank_spr;
 				introbuffer = 400;
 				state++;
+				if (!ispeppino)
+				{
+					fmod_event_instance_play(snd_verdict);
+					if (percentage >= 95)
+						fmod_event_instance_set_parameter(snd_verdict, "state", 1, true);
+					else
+						fmod_event_instance_set_parameter(snd_verdict, "state", 0, true);
+				}
 				if (rank_spr == spr_finaljudgement2)
 				{
 					state = 5;

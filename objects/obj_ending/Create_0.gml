@@ -1,27 +1,29 @@
 state = 0; // not an enum
 snd = fmod_event_create_instance("event:/sfx/ending/towercollapse");
+
 credits = [
-	[-4, lang_get_value_newline("credits_game")],
-	[-4, string_replace_all(lang_get_value_newline("credits_music"), "%", "\"")],
-	[-4, string_replace_all(lang_get_value_newline("credits_sfx"), "%", "\"")],
-	[-4, string_replace_all(lang_get_value_newline("credits_mort"), "%", "\"")],
-	[-4, string_replace_all(lang_get_value_newline("credits_playtester1"), "%", "\"")],
-	[-4, string_replace_all(lang_get_value_newline("credits_playtester2"), "%", "\"")],
-	[-4, string_replace_all(lang_get_value_newline("credits_playtester3"), "%", "\"")],
-	[-4, string_replace_all(lang_get_value_newline("credits_playtester4"), "%", "\"")],
-	[0, -4],
-	[1, -4],
-	[2, -4],
-	[3, -4],
-	[4, -4],
-	[5, -4],
-	[6, -4],
-	[7, -4],
-	[9, -4],
-	[10, -4],
-	[11, -4],
-	[12, -4],
-	[-4, lang_get_value_newline("credits_fmod")]
+	// [ending card index, text]
+	[noone, lang_get_value_newline("credits_game")],
+	[noone, string_replace_all(lang_get_value_newline("credits_music"), "%", "\"")],
+	[noone, string_replace_all(lang_get_value_newline("credits_sfx"), "%", "\"")],
+	[noone, string_replace_all(lang_get_value_newline("credits_mort"), "%", "\"")],
+	[noone, string_replace_all(lang_get_value_newline("credits_playtester1"), "%", "\"")],
+	[noone, string_replace_all(lang_get_value_newline("credits_playtester2"), "%", "\"")],
+	[noone, string_replace_all(lang_get_value_newline("credits_playtester3"), "%", "\"")],
+	[noone, string_replace_all(lang_get_value_newline("credits_playtester4"), "%", "\"")],
+	[0, noone],
+	[1, noone],
+	[2, noone],
+	[3, noone],
+	[4, noone],
+	[5, noone],
+	[6, noone],
+	[7, noone],
+	[9, noone],
+	[10, noone],
+	[11, noone],
+	[12, noone],
+	[noone, lang_get_value_newline("credits_fmod")]
 ];
 for (var i = 0; i < array_length(credits); i++)
 {
@@ -32,6 +34,7 @@ for (var i = 0; i < array_length(credits); i++)
 		break;
 	}
 }
+
 bgalpha = 3;
 credits_pos = 0;
 draw_set_font(lang_get_font("creditsfont"));
@@ -44,82 +47,97 @@ whitefade = 0;
 image_speed = 0.35;
 puffbuffer = 0;
 introbuffer = 0;
+
+// random background baddies
 spawn_arr = [
-	spr_forknight_walk,
-	spr_slimemove,
-	spr_pepgoblin,
-	spr_ancho,
-	spr_pizzagoblin_walk,
-	spr_badrat_walk,
-	spr_banditochicken_chase,
-	spr_tank_walk,
-	spr_bigcheese_walk,
-	spr_canongoblin_walk,
-	spr_robot_walk,
-	spr_coolpinea,
-	spr_fencer_charge,
-	spr_farmer1_walk,
-	spr_farmer2_walk,
-	spr_peasanto_walk,
-	spr_ghostknight_move,
-	spr_ghoul_attack,
-	spr_golfburger_walk,
-	spr_golfdemon_walk,
-	spr_indiancheese_walk,
-	spr_kentukybomber_move,
-	spr_kentukykenny_walk,
-	spr_ufolive,
-	spr_archergoblin_walk,
-	spr_patroller_walk,
-	spr_pepbat_move,
-	spr_pickle_walk,
-	spr_pizzaball_roll,
-	spr_pizzard_walk,
-	spr_pizzice_walk,
-	spr_robot_walk,
-	spr_sausageman_walk,
-	spr_pizzaslug_walk,
-	spr_newpizzice_walk,
-	spr_soldier_walk,
-	spr_swedishmonkey_walk,
-	spr_shrimp_walk,
-	spr_treasureguy_escape
+	spr_forknight_walk, spr_slimemove, spr_pepgoblin, spr_ancho, spr_pizzagoblin_walk,
+	spr_badrat_walk, spr_banditochicken_chase, spr_tank_walk, spr_bigcheese_walk,
+	spr_canongoblin_walk, spr_robot_walk, spr_coolpinea, spr_fencer_charge, spr_farmer1_walk,
+	spr_farmer2_walk, spr_peasanto_walk, spr_ghostknight_move, spr_ghoul_attack,
+	spr_golfburger_walk, spr_golfdemon_walk, spr_indiancheese_walk, spr_kentukybomber_move,
+	spr_kentukykenny_walk, spr_ufolive, spr_archergoblin_walk, spr_patroller_walk,
+	spr_pepbat_move, spr_pickle_walk, spr_pizzaball_roll, spr_pizzard_walk, spr_pizzice_walk,
+	spr_robot_walk, spr_sausageman_walk, spr_pizzaslug_walk, spr_newpizzice_walk,
+	spr_soldier_walk, spr_swedishmonkey_walk, spr_shrimp_walk, spr_treasureguy_escape
 ];
-with (instance_create(0, 0, obj_introprop))
+
+// scene
+var _noise = !obj_player1.ispeppino;
+if (global.swapmode)
+	_noise = true;
+if (_noise)
+	spawn_arr = [spr_playerN_move];
+
+if (!_noise)
 {
-	sprite_index = spr_towerending_bg;
-	depth = -3;
+	with (instance_create(0, 0, obj_introprop))
+	{
+		sprite_index = spr_towerending_bg;
+		depth = -3;
+	}
+	with (instance_create(0, 0, obj_introprop))
+	{
+		sprite_index = spr_towerending;
+		depth = -7;
+	}
+	with (instance_create(0, 0, obj_introprop))
+	{
+		sprite_index = spr_towerending_bosses;
+		depth = -8;
+	}
+	with (instance_create(145, 345, obj_introprop))
+	{
+		sprite_index = spr_towerending_mrstick;
+		depth = -8;
+	}
+	with (instance_create(369, 409, obj_introprop))
+	{
+		sprite_index = spr_towerending_gustavo;
+		depth = -8;
+	}
+	with (instance_create(484, 386, obj_introprop))
+	{
+		sprite_index = spr_towerending_brick;
+		depth = -8;
+	}
+	with (instance_create(288, 408, obj_introprop))
+	{
+		sprite_index = spr_towerending_peppino;
+		depth = -9;
+	}
 }
-with (instance_create(0, 0, obj_introprop))
+else
 {
-	sprite_index = spr_towerending;
-	depth = -7;
+	with (instance_create(0, 0, obj_introprop))
+	{
+		sprite_index = spr_towerendingN;
+		depth = -8;
+	}
+	with (instance_create(278, 384, obj_introprop))
+	{
+		sprite_index = spr_towerending_noise;
+		depth = -9;
+	}
+	with (instance_create(490, 373, obj_introprop))
+	{
+		sprite_index = spr_towerending_noisey;
+		depth = -9;
+	}
+	if (global.swapmode)
+	{
+		with (obj_player1)
+		{
+			if (ispeppino)
+				swap_player(false);
+		}
+		with (instance_create(0, 0, obj_introprop))
+		{
+			sprite_index = spr_towerending_swapmode;
+			depth = -9;
+		}
+	}
 }
-with (instance_create(0, 0, obj_introprop))
-{
-	sprite_index = spr_towerending_bosses;
-	depth = -8;
-}
-with (instance_create(145, 345, obj_introprop))
-{
-	sprite_index = spr_towerending_mrstick;
-	depth = -8;
-}
-with (instance_create(369, 409, obj_introprop))
-{
-	sprite_index = spr_towerending_gustavo;
-	depth = -8;
-}
-with (instance_create(484, 386, obj_introprop))
-{
-	sprite_index = spr_towerending_brick;
-	depth = -8;
-}
-with (instance_create(288, 408, obj_introprop))
-{
-	sprite_index = spr_towerending_peppino;
-	depth = -9;
-}
+
 towerID = instance_create(468, 188, obj_introprop);
 with (towerID)
 {

@@ -1,1 +1,1 @@
-destroy_sounds([loopsnd, throwsnd])
+destroy_sounds([loopsnd, throwsnd]);

@@ -1,1 +1,1 @@
-x = Approach(x, SCREEN_WIDTH, 2)
+x = Approach(x, SCREEN_WIDTH, 2);

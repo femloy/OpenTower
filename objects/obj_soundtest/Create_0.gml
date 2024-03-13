@@ -2,6 +2,7 @@ music_pos = 0;
 play = false;
 global.leveltorestart = -4;
 instance_destroy(obj_pigtotal);
+
 music_arr = [
 	["event:/music/soundtest/intro", "Time For A Smackdown - MrSauceman"],
 	["event:/music/soundtest/pizzadeluxe", "Pizza Deluxe - PostElvis"],
@@ -71,7 +72,23 @@ music_arr = [
 	["event:/music/w4/sewersecret", "A Sewer Secret - ClascyJitto"],
 	["event:/music/w4/streetsecret", "A Secret In The Streets - ClascyJitto"],
 	["event:/music/w5/kidspartysecret", "A Secret You Don't Want To Find - ClascyJitto"],
-	["event:/music/w5/warsecret", "A War Secret - ClascyJitto"]
+	["event:/music/w5/warsecret", "A War Secret - ClascyJitto"],
+	["event:/music/soundtest/secretworld", "Secret Lockin' - ClascyJitto"],
+	["event:/music/soundtest/halloweenpause", "Spacey Pumpkins - MrSauceman"],
+	["event:/music/soundtest/halloweenstart", "The Bone Rattler - MrSauceman"],
+	["event:/music/soundtest/halloweenrace", "The Runner - PostElvis"]
 ];
+if (!obj_player1.ispeppino || global.swapmode)
+{
+	music_arr = [
+		["event:/music/soundtest/entrancenoise", "The Noise's Jam-Packed Radical Anthem - MrSauceman"],
+		["event:/music/soundtest/doise", "Doise At The Door - MrSauceman"],
+		["event:/music/soundtest/pizzatimenoise", "Distasteful Anchovi - ClascyJitto"],
+		["event:/music/soundtest/lap2noise", "World Wide Noise - ClascyJitto"],
+		["event:/music/soundtest/pizzaheadnoise", "Unexpectancy, Part 3 (Remix) - ClascyJitto"],
+		["event:/music/soundtest/noisefinalescape", "I Need A Noise - MrSauceman"],
+		["event:/music/soundtest/creditsnoise", "New Noise Resolutionz - ClascyJitto"]
+	];
+}
 index = 0;
 music_event = fmod_event_create_instance(music_arr[0][0]);

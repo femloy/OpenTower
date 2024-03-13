@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_peppermanfollower",
   "spriteId": {
-    "name": "spr_pepperman_scared",
-    "path": "sprites/spr_pepperman_scared/spr_pepperman_scared.yy",
+    "name": "spr_pepperman_exitscared",
+    "path": "sprites/spr_pepperman_exitscared/spr_pepperman_exitscared.yy",
   },
   "solid": false,
   "visible": true,

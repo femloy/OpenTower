@@ -4,10 +4,13 @@ if (playerid != -4)
 	{
 		if (floor(image_index) >= 9)
 		{
-			if (global.noisejetpack == 1)
+			if ((global.noisejetpack && ispeppino) || (noisepizzapepper && !ispeppino))
 			{
 				fmod_event_one_shot_3d("event:/sfx/misc/cow", x, y);
-				global.noisejetpack = false;
+				if (ispeppino)
+					global.noisejetpack = false;
+				else
+					noisepizzapepper = false;
 			}
 		}
 		if (floor(image_index) == (image_number - 1))

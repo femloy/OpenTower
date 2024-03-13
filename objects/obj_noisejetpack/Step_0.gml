@@ -52,6 +52,11 @@ switch (state)
 				sprite_index = spr_player_poweredup;
 				image_index = 0;
 				image_speed = 0.35;
+				if (!ispeppino)
+				{
+					noisepizzapepper = true;
+					sprite_index = spr_playerN_pizzapepper;
+				}
 			}
 			repeat (20)
 			{

@@ -81,6 +81,14 @@ if (state == states.walk && point_in_camera(x, y, view_camera[0]))
 		if (state == states.backbreaker && sprite_index == spr_taunt)
 			p = true;
 	}
+	if (!p)
+	{
+		with (obj_swapmodefollow)
+		{
+			if (taunttimer > 0)
+				p = true;
+		}
+	}
 	if (p)
 	{
 		patroltimer = 0;

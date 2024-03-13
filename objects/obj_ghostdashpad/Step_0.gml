@@ -1,4 +1,4 @@
-if (obj_player.ghostdash == 0 && cooldown == 0)
+if (obj_player.state != states.ghost && obj_player.state != states.chainsaw && cooldown == 0)
 	visible = true;
 if (cooldown > 0)
 	cooldown--;

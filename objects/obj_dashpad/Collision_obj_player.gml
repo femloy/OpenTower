@@ -9,13 +9,12 @@ with (other)
 				create_debris(x, y, spr_player_trashlid);
 			if (state == states.animatronic)
 			{
-				var i = 0;
-				repeat (3)
-				{
-					with (create_debris(x, y, spr_animatronicdebris))
-						image_index = i;
-					i++;
-				}
+				with (instance_create(x, y, obj_peshinodebris))
+					image_index = 0;
+				with (instance_create(x, y, obj_peshinodebris))
+					image_index = 1;
+				with (instance_create(x, y, obj_peshinodebris))
+					image_index = 2;
 			}
 			var changecoord = true;
 			if (place_meeting(x, y, obj_superspring))

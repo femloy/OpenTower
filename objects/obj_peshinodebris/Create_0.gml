@@ -1,2 +1,2 @@
-event_inherited()
-depth = -14
+event_inherited();
+depth = -14;

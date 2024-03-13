@@ -1,5 +1,7 @@
 player_input_device[0] = -2;
 player_input_device[1] = -2;
+mode = 0;
+player_index = 0;
 device_selected[0] = false;
 device_selected[1] = false;
 press_start = false;

@@ -1,7 +1,7 @@
 with (obj_soundtest)
 {
 	if (play)
-		other.sprite_index = spr_gusdance;
+		other.sprite_index = other.dancespr;
 	else
-		other.sprite_index = spr_lonegustavo_idle;
+		other.sprite_index = other.idlespr;
 }

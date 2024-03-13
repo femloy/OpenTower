@@ -27,11 +27,33 @@ if (DEBUG)
 {
 	active = false;
 	showoverlay = false;
+	TEST_P_RANK = new DebugCommand("test_p_rank", "", "", function()
+	{
+		global.collect = global.srank + 5000;
+		global.lap = true;
+		global.treasure = true;
+		global.secretfound = 3;
+		global.combodropped = false;
+		global.prank_enemykilled = true;
+		global.combotime = 60;
+		global.combo = 99;
+		global.panic = true;
+	});
+	KILL_BOSS = new DebugCommand("kill_boss", "", "", function()
+	{
+		instance_destroy(obj_baddie);
+	});
+	SET_BOSS_HP = new DebugCommand("set_boss_hp", "", "<int>", function(int)
+	{
+		with (obj_baddie)
+			elitehit = real(int);
+	});
 	SWITCH_CHAR = new DebugCommand("switch_char", "Switches character", "", function()
 	{
 		with (obj_player)
 		{
-			character = "N";
+			character = "P";
+			ispeppino = !ispeppino;
 			scr_characterspr();
 		}
 	});
@@ -127,9 +149,7 @@ if (DEBUG)
 	{
 		with (obj_debugcontroller)
 		{
-			DoCommand("showcollisions 1");
-			DoCommand("player_room rm_testing A");
-			DoCommand("switch_char");
+			DoCommand("player_room rm_testing4 A");
 			alarm[0] = 20;
 		}
 	});
@@ -332,8 +352,8 @@ if (DEBUG)
 	ds_map_set(state_map, "states.ratmount", states.ratmount);
 	
 	command_list = ds_list_create();
-	ds_list_add(command_list, DESTROYICE, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SWITCH_CHAR);
-	ds_list_add(command_list, OTHERTEST, FILL_GATESWITCH, SETCOMBO, GIVEKEY, LOADTEST, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, GOTOEDITOR);
+	ds_list_add(command_list, DESTROYICE, SHOW_HUD, SHOW_COLLISIONS, PLAYER_ROOM, CAMERA_ZOOM, HARDMODE, PLAYER_SET_STATE, PANIC, ALLTOPPINS, GIVEHEAT, ROOMCHECK, SWITCH_CHAR, SET_BOSS_HP);
+	ds_list_add(command_list, OTHERTEST, KILL_BOSS, TEST_P_RANK, FILL_GATESWITCH, SETCOMBO, GIVEKEY, LOADTEST, NOCLIP, THROWARC, HIDETILES, LOCKCAMERA, BOSSINVINCIBLE, UNLOCK_TOPPINS, UNLOCK_BOSS_KEY, SHOW_DEBUG_OVERLAY, GOTOEDITOR);
 	
 	input_text = "";
 	text_list = ds_list_create();

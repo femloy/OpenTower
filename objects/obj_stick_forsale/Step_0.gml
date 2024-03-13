@@ -9,7 +9,7 @@ if (!first)
 		with (instance_create(obj_stick_target.x, camera_get_view_y(view_camera[0]) - 100, obj_stick))
 		{
 			state = states.fall;
-			sprite_index = spr_stick_helicopter;
+			sprite_index = spr_helicopter;
 			maxscore = other.maxscore;
 			save = other.save;
 		}

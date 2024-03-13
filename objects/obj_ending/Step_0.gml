@@ -54,7 +54,7 @@ switch (state)
 		break;
 	
 	case 2:
-		if (!instance_exists(obj_endingcard))
+		if (!instance_exists(obj_endingcard) && !instance_exists(obj_noisecreditmanager))
 		{
 			if (credits_pos < array_length(credits))
 			{
@@ -149,6 +149,10 @@ switch (state)
 			with (instance_create(0, 0, obj_introprop))
 			{
 				sprite_index = spr_theendshot;
+				if (!obj_player1.ispeppino)
+					sprite_index = spr_theendshotN;
+				if (global.swapmode)
+					sprite_index = spr_theendshotSN;
 				depth = other.depth + 1;
 			}
 			buffer = 100;

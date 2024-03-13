@@ -1,7 +1,8 @@
 if (room == rm_editor)
 	exit;
-spr_palette = obj_player1.spr_palette;
-paletteselect = obj_player1.paletteselect;
+var palinfo = get_pep_palette_info();
+spr_palette = palinfo.spr_palette;
+paletteselect = palinfo.paletteselect;
 targetplayer = obj_player1.id;
 if (!pizzahead)
 	wastedhits = 6 - elitehit;

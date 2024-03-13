@@ -4,3 +4,4 @@ disy1 = 224;
 disy2 = 352;
 spawnbuffer = 80;
 spawnmax = spawnbuffer;
+rockID = -4;

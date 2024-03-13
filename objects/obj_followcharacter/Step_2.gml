@@ -14,6 +14,8 @@ else
 	space = Approach(space, 0, spaceaccel);
 if (dir != playerid.xscale)
 	dir = playerid.xscale;
+if (followid == -4 && object_index != obj_swapmodefollow && instance_exists(obj_swapmodefollow))
+	followid = obj_swapmodefollow.id;
 if (followid != -4 && !instance_exists(followid))
 	followid = -4;
 var tx = round(xoffset * space);
@@ -50,3 +52,4 @@ if (ds_queue_size(followqueue) > (LAG_STEPS * 2))
 }
 image_xscale = playerid.xscale * playerid.scale_xs;
 image_yscale = playerid.yscale * playerid.scale_ys;
+following_moonwalk_fix();

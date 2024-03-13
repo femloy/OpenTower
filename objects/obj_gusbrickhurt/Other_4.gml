@@ -4,3 +4,5 @@ if (ini_read_real("w3stick", "door", false) || ini_read_real("Highscore", "fores
 ini_close();
 if (global.panic == true)
 	instance_destroy();
+if (!obj_player1.ispeppino && !global.swapmode)
+	instance_destroy();

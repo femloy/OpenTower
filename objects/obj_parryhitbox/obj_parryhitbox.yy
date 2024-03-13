@@ -66,6 +66,7 @@
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_fakepephead","path":"objects/obj_fakepephead/obj_fakepephead.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_fakepepclone","path":"objects/obj_fakepepclone/obj_fakepepclone.yy",},},
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":10,"eventType":7,"collisionObjectId":null,},
+    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":4,"collisionObjectId":{"name":"obj_doiserock","path":"objects/obj_doiserock/obj_doiserock.yy",},},
   ],
   "properties": [],
   "overriddenProperties": [],

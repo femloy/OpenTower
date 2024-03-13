@@ -1,3 +1,9 @@
+if (sprite_index == spr_minigunprojectile)
+{
+	repeat (4)
+		create_debris(x, y, spr_minigunprojectiledebris);
+	exit;
+}
 if (pistol)
 {
 	with (instance_create(x, y, obj_sausageman_dead))

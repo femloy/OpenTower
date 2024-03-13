@@ -64,7 +64,10 @@ if (global.panic)
 	{
 		if (!global.lap)
 		{
-			if (global.fill <= 672)
+			var secs = 56;
+			if (fmod_get_parameter("isnoise") >= 1)
+				secs = 65;
+			if (global.fill <= secs * 12)
 				fmod_event_instance_set_parameter(panicmusicID, "state", 1, true);
 		}
 		else

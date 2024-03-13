@@ -16,6 +16,7 @@ movespeed = 0;
 defused = false;
 destroy = true;
 baddie = false;
+hurtplayer = true;
 grabbable = true;
 bomblit_spr = spr_bomblit;
 bouncesound = false;

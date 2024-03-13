@@ -5,13 +5,18 @@ with (other)
 	else if (!isgustavo && state != states.ghost && state != states.ghostpossess && state != states.johnghost && state != states.actor && state != states.parry && state != states.gotoplayer)
 	{
 		scr_losepoints();
-		create_transformation_tip(lang_get_value("ghosttip"), "ghost");
+		if (ispeppino)
+			create_transformation_tip(lang_get_value("ghosttip"), "ghost");
+		else
+			create_transformation_tip(lang_get_value("ghosttipN"), "ghostN");
 		fmod_event_one_shot("event:/sfx/pep/ghostintro");
 		grav /= 2;
 		state = states.ghost;
 		movespeed = hsp;
 		ghostdash = false;
+		ghostdashbuffer = 0;
 		ghostpepper = 0;
+		ghostangle = 0;
 		ghosttimer = 0;
 		sprite_index = spr_ghostidle;
 		with (instance_create(x, y, obj_sausageman_dead))

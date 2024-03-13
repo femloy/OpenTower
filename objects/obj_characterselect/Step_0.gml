@@ -1,53 +1,63 @@
-image_speed = 0.35;
-if ((obj_player1.key_right2 || -obj_player2.key_left2) && selected == 0 && ready == 0)
-	selected += 1;
-if ((-obj_player1.key_left2 || obj_player2.key_right2) && selected == 1 && ready == 0)
-	selected -= 1;
-if (obj_player1.key_jump && selected == 0 && obj_peppinoselect.sprite_index != spr_peppinoselected)
+scr_menu_getinput();
+if (!ready)
 {
-	ready = true;
-	obj_peppinoselect.sprite_index = spr_peppinoselected;
-	obj_peppinoselect.image_index = 0;
-	with (obj_player1)
+	if (!global.swapmode || obj_inputAssigner.player_input_device[obj_inputAssigner.player_index] > -2)
 	{
-		character = "P";
-		ispeppino = true;
-		scr_characterspr();
+		var move = key_left2 + key_right2;
+		selected += move;
+		if (move != 0)
+			fmod_event_one_shot_3d("event:/sfx/pep/step", room_width / 2, room_height / 2);
+		if (selected < 0)
+			selected = 1;
+		else if (selected > 1)
+			selected = 0;
 	}
-	with (obj_player2)
+	if ((key_jump || key_start) && (!global.swapmode || obj_inputAssigner.swap_ready))
 	{
-		character = "P";
-		ispeppino = false;
-		scr_characterspr();
-		if (global.coop == 1)
+		ready = true;
+		alarm[0] = 100;
+		fmod_event_instance_stop(obj_music.music.event, true);
+		if (!global.swapmode)
 		{
-			obj_noiseselect.sprite_index = spr_noiseselected;
-			obj_noiseselect.image_index = 0;
+			if (selected == 0)
+			{
+				fmod_event_one_shot("event:/sfx/ui/pepselect");
+				obj_peppinoselect.sprite_index = spr_peppinoselected;
+				obj_peppinoselect.image_index = 0;
+				with (obj_player1)
+				{
+					character = "P";
+					ispeppino = true;
+					scr_characterspr();
+				}
+			}
+			else
+			{
+				fmod_event_one_shot("event:/sfx/ui/noiseselect");
+				obj_noiseselect.sprite_index = spr_noiseselected;
+				obj_noiseselect.image_index = 0;
+				with (obj_player1)
+				{
+					character = "P";
+					ispeppino = false;
+					scr_characterspr();
+				}
+			}
 		}
-	}
-	alarm[0] = 100;
-}
-if (obj_player1.key_jump && selected == 1 && obj_noiseselect.sprite_index != spr_noiseselected)
-{
-	ready = true;
-	obj_noiseselect.sprite_index = spr_noiseselected;
-	obj_noiseselect.image_index = 0;
-	with (obj_player1)
-	{
-		character = "P";
-		ispeppino = false;
-		scr_characterspr();
-	}
-	with (obj_player2)
-	{
-		character = "P";
-		ispeppino = true;
-		scr_characterspr();
-		if (global.coop == 1)
+		else
 		{
+			fmod_event_one_shot("event:/sfx/ui/pepselect");
+			fmod_event_one_shot("event:/sfx/ui/noiseselect");
 			obj_peppinoselect.sprite_index = spr_peppinoselected;
 			obj_peppinoselect.image_index = 0;
+			obj_noiseselect.sprite_index = spr_noiseselected;
+			obj_noiseselect.image_index = 0;
+			with (obj_player1)
+			{
+				character = "P";
+				ispeppino = other.selected == 0;
+				scr_characterspr();
+			}
 		}
 	}
-	alarm[0] = 100;
 }

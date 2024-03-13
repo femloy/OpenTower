@@ -9,19 +9,42 @@ if (room == hub_loadingscreen && state != 2)
 	if (!fadeoutcreate)
 	{
 		fadeoutcreate = true;
+		var grouparr = ["hubgroup"];
 		with (obj_player)
 		{
 			ini_open_from_string(obj_savesystem.ini_str);
 			var _intro = ini_read_real("Tutorial", "finished", false);
+			player_paletteselect[0] = ini_read_real("Game", "palette", 1);
+			player_paletteselect[1] = ini_read_real("Game", "palette_player2", 1);
 			paletteselect = ini_read_real("Game", "palette", 1);
 			var _texture = ini_read_string("Game", "palettetexture", "none");
-			global.palettetexture = scr_get_texture_palette(_texture);
+			var _texture2 = ini_read_string("Game", "palettetexture_player2", "none");
+			player_patterntexture[0] = scr_get_texture_palette(_texture);
+			player_patterntexture[1] = scr_get_texture_palette(_texture2);
 			ini_close();
 			if (_intro)
 			{
 				targetRoom = tower_entrancehall;
 				targetDoor = "A";
 				state = states.victory;
+				if (other.ispeppino)
+				{
+					with (obj_player1)
+					{
+						character = "P";
+						ispeppino = true;
+						scr_characterspr();
+					}
+				}
+				else
+				{
+					with (obj_player1)
+					{
+						character = "P";
+						ispeppino = false;
+						scr_characterspr();
+					}
+				}
 			}
 			else
 			{
@@ -44,8 +67,8 @@ if (room == hub_loadingscreen && state != 2)
 		with (instance_create(0, 0, obj_loadingscreen))
 		{
 			dark = true;
-			group_arr = ["hubgroup"];
-			offload_arr = ["menugroup"];
+			group_arr = grouparr;
+			offload_arr = ["menugroup", "characterselectgroup"];
 		}
 	}
 }

@@ -4,7 +4,7 @@
   "name": "shd_supernoise",
   "type": 1,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Shaders/Unused.yy",
+    "name": "Shaders",
+    "path": "folders/Shaders.yy",
   },
 }

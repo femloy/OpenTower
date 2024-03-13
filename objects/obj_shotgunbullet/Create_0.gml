@@ -5,6 +5,7 @@ is_solid = true;
 spd = 25;
 spdh = 0;
 pistol = false;
+minigun = false;
 shotgun = false;
 brick = false;
 brickid = obj_null;

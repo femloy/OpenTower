@@ -31,6 +31,8 @@ else
 	with (instance_create(0, 0, obj_backtohub_fadeout))
 		fadealpha = 0.9;
 	scr_playerreset();
+	with (obj_player1)
+		swap_player();
 	global.levelreset = true;
 	obj_player1.targetDoor = "HUB";
 	if (instance_exists(obj_player2))

@@ -18,4 +18,11 @@ if (state == states.normal && !instance_exists(obj_option))
 		with (create_debris(punch_x, punch_y, spr_slapstar))
 			vsp = -irandom_range(8, 11);
 	}
+	punch_count++;
+	if (punch_count >= 100)
+	{
+		if (!noise_unlocked)
+			unlock_noise(true);
+		punch_count = 0;
+	}
 }

@@ -1,21 +1,40 @@
-with (obj_player)
+if (other.ispeppino && !global.swapmode)
 {
-	if (state == states.knightpep || state == states.knightpepslopes)
+	with (obj_player)
+	{
+		if (state == states.knightpep || state == states.knightpepslopes)
+		{
+			global.combotime = 60;
+			instance_destroy(other);
+		}
+	}
+	if (other.state != states.ghost)
+	{
+		sprite_index = spr_grandpa_punch;
+		image_index = 0;
+		other.hurted = false;
+		other.flash = false;
+		scr_hurtplayer(other);
+	}
+	else
 	{
 		global.combotime = 60;
-		instance_destroy(other);
+		instance_destroy();
 	}
 }
-if (other.state != states.ghost)
+else if (other.instakillmove == true || other.state == states.handstandjump || other.state == states.mach2)
 {
-	sprite_index = spr_grandpa_punch;
-	image_index = 0;
-	other.hurted = false;
-	other.flash = false;
-	scr_hurtplayer(other);
-}
-else
-{
+	var t = other.id;
+	fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
+	notification_push(notifs.baddie_kill, [room, id, object_index]);
 	global.combotime = 60;
-	instance_destroy();
+	instance_create(x, y, obj_bangeffect);
+	instance_create(x, y, obj_genericpoofeffect);
+	with (instance_create(x, y, obj_sausageman_dead))
+	{
+		image_xscale = -t.xscale;
+		sprite_index = spr_grandpa_dead;
+		hsp = t.xscale * 10;
+	}
+	instance_destroy(id, false);
 }

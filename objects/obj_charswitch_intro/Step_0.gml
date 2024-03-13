@@ -18,10 +18,23 @@ switch (state)
 			obj_camera.lock = false;
 			with (obj_player1)
 			{
-				if (other.spr == spr_backtopeppino)
+				if (other.spr == spr_backtopeppino || other.spr == spr_backtonoise)
 				{
 					x = obj_peppinoswitch.x;
 					y = obj_peppinoswitch.y;
+				}
+				else if (other.spr == spr_noise_intro)
+				{
+					if (noisecrusher)
+					{
+						x = obj_peppinoswitch.x;
+						y = obj_peppinoswitch.y;
+					}
+					else
+					{
+						x = obj_gustavoswitch.x;
+						y = obj_gustavoswitch.y;
+					}
 				}
 				else
 				{

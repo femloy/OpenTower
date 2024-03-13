@@ -7,23 +7,32 @@ if (place_meeting(x, y - 1, obj_player))
 		{
 			if (place_meeting(x, y + 1, other))
 			{
-				if (state != states.trashjump && state != states.trashroll)
+				if (state != states.trashjump && state != states.trashroll) || !ispeppino
 				{
-					if (state != states.barrel && state != states.barreljump && state != states.barrelslide && state != states.barrelclimbwall)
+					if (!instance_exists(obj_surfback) || ispeppino)
 					{
-						if (state != states.slipnslide || sprite_index != spr_currentplayer)
-							fmod_event_one_shot_3d("event:/sfx/misc/waterslidesplash", x, y);
+						if (state != states.barrel && state != states.barreljump && state != states.barrelslide && state != states.barrelclimbwall)
+						{
+							if (state != states.slipnslide || sprite_index != spr_currentplayer)
+								fmod_event_one_shot_3d("event:/sfx/misc/waterslidesplash", x, y);
+							state = states.slipnslide;
+							sprite_index = spr_currentplayer;
+						}
+						else
+						{
+							state = states.barrelslide;
+							if (sprite_index != spr_player_barrelslipnslide)
+								sprite_index = spr_player_barrelroll;
+						}
+						xscale = sign(other.image_xscale);
+						movespeed = 20;
+					}
+					else if state != states.slipnslide
+					{
+						fmod_event_one_shot_3d("event:/sfx/misc/waterslidesplash", x, y);
+						movespeed = 15;
 						state = states.slipnslide;
-						sprite_index = spr_currentplayer;
 					}
-					else
-					{
-						state = states.barrelslide;
-						if (sprite_index != spr_player_barrelslipnslide)
-							sprite_index = spr_player_barrelroll;
-					}
-					xscale = sign(other.image_xscale);
-					movespeed = 20;
 				}
 				else
 				{

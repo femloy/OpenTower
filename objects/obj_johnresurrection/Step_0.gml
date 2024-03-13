@@ -10,7 +10,7 @@ if (!fadein)
 			var tx = obj_johnresurrection_gerome.x - 100;
 			with (obj_johnresurrection_peppino)
 			{
-				sprite_index = spr_player_move;
+				sprite_index = obj_player1.spr_move;
 				image_speed = 0.5;
 				x = Approach(x, tx, PLAYER_MOVESPEED);
 				if (x == tx)
@@ -18,6 +18,8 @@ if (!fadein)
 					other.state++;
 					other.cutscenebuffer = 100;
 					sprite_index = spr_player_idle;
+					if (!ispeppino)
+						sprite_index = spr_playerN_doiseintro1;
 					image_speed = 0.35;
 				}
 			}
@@ -28,9 +30,16 @@ if (!fadein)
 				cutscenebuffer--;
 			else if (!treasure)
 			{
+				cutscenebuffer = 50;
+				state = 2;
 				with (obj_johnresurrection_peppino)
 				{
 					sprite_index = spr_player_idlefrown;
+					if (!ispeppino)
+					{
+						sprite_index = spr_playerN_doiseintro2;
+						other.cutscenebuffer = 100;
+					}
 					image_index = 0;
 				}
 				cutscenebuffer = 50;
@@ -44,7 +53,7 @@ if (!fadein)
 				{
 					hsp = -4;
 					vsp = -5;
-					sprite_index = spr_player_bump;
+					sprite_index = obj_player1.spr_bump;
 					image_speed = 0.35;
 				}
 				treasure_dir = 1;
@@ -62,7 +71,12 @@ if (!fadein)
 			with (obj_johnresurrection_peppino)
 			{
 				if (floor(image_index) == (image_number - 1))
-					image_index = image_number - 1;
+				{
+					if (ispeppino)
+						image_index = image_number - 1;
+					else if (sprite_index == spr_playerN_doiseintro2)
+						sprite_index = spr_playerN_doiseintro3;
+				}
 			}
 			if (cutscenebuffer > 0)
 				cutscenebuffer--;
@@ -75,7 +89,7 @@ if (!fadein)
 			{
 				image_xscale = -1;
 				x -= PLAYER_MOVESPEED;
-				sprite_index = spr_player_move;
+				sprite_index = obj_player1.spr_move;
 				image_speed = 0.5;
 				if (x < -200)
 					other.fadein = true;
@@ -120,18 +134,39 @@ if (!fadein)
 			else
 			{
 				whitefade = 2;
-				state++;
-				cutscenebuffer = 370;
-				pizzaheadbuffer = 180;
-				with (obj_johnresurrection_gerome)
-					sprite_index = spr_johnresurrected_gerome1;
-				with (obj_johnresurrection_pillar)
+				if (obj_player1.ispeppino)
 				{
-					blackfade = 0;
-					sprite_index = spr_johnresurrected_pillar2;
+					state++;
+					cutscenebuffer = 370;
+					pizzaheadbuffer = 180;
+					with (obj_johnresurrection_gerome)
+						sprite_index = spr_johnresurrected_gerome1;
+					with (obj_johnresurrection_pillar)
+					{
+						blackfade = 0;
+						sprite_index = spr_johnresurrected_pillar2;
+					}
+					with (obj_johnresurrection_peppino)
+						sprite_index = spr_player_idle;
 				}
-				with (obj_johnresurrection_peppino)
-					sprite_index = spr_player_idle;
+				else
+				{
+					state = 13;
+					cutscenebuffer = 200;
+					with (obj_johnresurrection_pillar)
+					{
+						blackfade = 0;
+						sprite_index = spr_johnresurrected_pillarnoise;
+					}
+					with (obj_johnresurrection_gerome)
+					{
+						sprite_index = spr_johnresurrected_gerome1;
+						image_index = 0;
+						image_xscale = -1;
+					}
+					with (obj_johnresurrection_peppino)
+						sprite_index = spr_noise_vulnerable2;
+				}
 			}
 			break;
 		

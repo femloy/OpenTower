@@ -1,1 +1,1 @@
-left it at obj_characterselect
+left it at obj_swapdeatheffect

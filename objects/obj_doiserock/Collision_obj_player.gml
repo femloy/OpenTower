@@ -1,1 +1,1 @@
-scr_hurtplayer(other)
+scr_hurtplayer(other);

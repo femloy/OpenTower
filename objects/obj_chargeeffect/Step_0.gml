@@ -7,6 +7,10 @@ if (playerid.state == states.rocket)
 	x = playerid.x + (playerid.xscale * 18);
 if (playerid.state == states.ratmount)
 	x = playerid.x + (playerid.xscale * 18);
+if (playerid.sprite_index == playerid.spr_fightball)
+	x = playerid.x + (playerid.xscale * 18);
 visible = !(room == rank_room);
 if (place_meeting(x, y, obj_secretportal) || place_meeting(x, y, obj_secretportalstart))
+	visible = false;
+if (playerid.sprite_index == playerid.spr_rocketstart)
 	visible = false;

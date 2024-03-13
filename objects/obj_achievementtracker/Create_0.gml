@@ -549,7 +549,7 @@ add_achievement_notify("pal_roise", function()
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("roise_count");
-	if (type == notifs.UNKNOWN_64)
+	if (type == notifs.cancel_noisedrill)
 		count.value = 0;
 	else if (type == notifs.baddie_kill && (obj_player1.sprite_index == spr_playerN_divebomb || obj_player1.sprite_index == spr_playerN_divebombfall || obj_player1.sprite_index == spr_playerN_divebombland))
 	{
@@ -621,7 +621,7 @@ add_achievement_notify("pal_porcupine", -4, function(data)
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.UNKNOWN_67 && arr[0] == "quick")
+	if (type == notifs.endingrank && arr[0] == "quick")
 		palette_unlock(name, "porcupine", 15, -4, false);
 }, false, "Palettes", "porcupine");
 
@@ -717,7 +717,7 @@ add_achievement_notify("pal_banana", function()
 		exit;
 	var type = data[0];
 	var count = achievement_get_variable("banana_count");
-	if (type == notifs.UNKNOWN_69)
+	if (type == notifs.slipbanan)
 	{
 		count.value++;
 		if (count.value >= 10)

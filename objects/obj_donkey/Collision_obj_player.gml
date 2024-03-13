@@ -1,6 +1,11 @@
 if (cooldown == 0)
 {
 	notification_push(notifs.cow_kick, [room]);
+	if (ds_list_find_index(global.saveroom, id) == -1)
+	{
+		notification_push(notifs.cow_kick_count, [global.leveltosave]);
+		ds_list_add(global.saveroom, id);
+	}
 	other.x = x - (image_xscale * 35);
 	other.y = y;
 	fmod_event_one_shot_3d("event:/sfx/misc/cowkick", other.x, other.y);

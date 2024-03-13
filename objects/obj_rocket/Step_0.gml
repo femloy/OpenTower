@@ -10,3 +10,5 @@ if (playerid != -4)
 }
 else
 	visible = true;
+if (visible && buffer > 0)
+	buffer--;

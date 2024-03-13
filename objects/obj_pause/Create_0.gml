@@ -78,11 +78,18 @@ var exit_function = function()
 		arr = ["hubgroup"];
 		global.stargate = false;
 		global.leveltorestart = -4;
+		gamesave_async_save();
 	}
 	else
 	{
 		hub = false;
 		arr = ["menugroup"];
+		with (obj_player1)
+		{
+			character = "P";
+			ispeppino = true;
+			scr_characterspr();
+		}
 	}
 	alarm[3] = 1;
 	ds_list_add(il, id);

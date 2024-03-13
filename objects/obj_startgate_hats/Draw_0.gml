@@ -5,13 +5,13 @@ for (var i = 0; i < array_length(hats_arr); i++)
 {
 	var x1 = x + (xx * 32);
 	var y1 = y + (yy * 32);
-	pal_swap_set(spr_peppalette, 1);
+	pal_swap_set(obj_player1.spr_palette, 1);
 	draw_sprite_ext(sprite_index, image_index, x1, y1, 1, 1, 0, c_black, image_alpha);
 	if (i < hats)
 	{
 		var y2 = y1 + hats_arr[i][1];
 		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, global.palettetexture);
-		pal_swap_set(spr_peppalette, obj_player1.paletteselect);
+		pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect);
 		draw_sprite_ext(sprite_index, image_index, x1, y2, 1, 1, 0, c_white, image_alpha);
 	}
 	xx++;

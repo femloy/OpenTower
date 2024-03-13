@@ -16,7 +16,7 @@ if (buffer <= 0 && other.state != states.ghost)
 		movespeed = 13;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
-		sprite_index = spr_player_corpsestart;
+		sprite_index = spr_playercorpsestart;
 		image_index = 0;
 		gravesurfingjumpbuffer = 50;
 		with (obj_gravecorpse)

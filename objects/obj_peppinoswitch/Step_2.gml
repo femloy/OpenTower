@@ -1,4 +1,4 @@
-if (sprite_index == spr_peppinoswitch2)
+if (sprite_index == switchend)
 {
 	with (obj_followcharacter)
 		visible = true;

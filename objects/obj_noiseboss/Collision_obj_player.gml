@@ -1,8 +1,3 @@
-
-
-
-
-
 if ((state == states.mach2 && hsp != 0) || (state == states.pizzahead_spinningkick && image_index > 3) || (state == states.freefall && !grounded) || state == states.machslide || state == states.pogo || state == states.jetpack || state == states.bounce)
 {
 	if (other.flash)
@@ -28,5 +23,7 @@ else if (((state == states.walk || (state == states.stun && !savedthrown)) && fl
 		other.image_speed = 0.35;
 		other.sprite_index = spr_player_fightball;
 		other.image_index = 0;
+		if (doise)
+			scr_doise_end_start();
 	}
 }

@@ -57,6 +57,8 @@ switch (state)
 						ghostpepper = 0;
 						other.x = other.xstart;
 						other.y = other.ystart;
+						with (obj_followcharacter)
+							event_perform(ev_other, ev_room_start);
 					}
 				}
 				else

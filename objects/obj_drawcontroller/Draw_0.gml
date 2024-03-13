@@ -17,10 +17,20 @@ if (use_dark)
 			if (visible)
 			{
 				var b = get_dark(image_blend, other.use_dark);
-				var ix = image_xscale;
-				if (object_index == obj_vigilantecow)
-					ix = xscale;
-				draw_sprite_ext(sprite_index, image_index, x, y, ix, image_yscale, image_angle, b, image_alpha);
+				if (object_index != obj_swapmodegrab && other.objdark_arr[i] != obj_swapplayergrabbable && object_index != obj_swapmodefollow && object_index != obj_swapdeatheffect)
+				{
+					var ix = image_xscale;
+					if (object_index == obj_vigilantecow)
+						ix = xscale;
+					draw_sprite_ext(sprite_index, image_index, x, y, ix, image_yscale, image_angle, b, image_alpha);
+				}
+				else
+				{
+					var blend = image_blend;
+					image_blend = b;
+					event_perform(ev_draw, 0);
+					image_blend = blend;
+				}
 			}
 		}
 	}
@@ -58,8 +68,10 @@ if (room == boss_fakepep)
     {
         if (visible && !flash)
         {
-            pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);
-            pal_swap_set(spr_peppalette, obj_player1.paletteselect, 0);
+            var palinfo = get_pep_palette_info();
+			pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, palinfo.patterntexture);
+			var ps = palinfo.paletteselect;
+            pal_swap_set(spr_peppalette, ps, 0);
             draw_self();
             pal_swap_set(spr_peppalette, 13, 0);
             draw_self();
@@ -120,6 +132,22 @@ with (obj_player1)
 	if (!other.hungrypillarflash && visible && state != states.titlescreen && bbox_in_camera(view_camera[0], 32))
 		draw_player();
 }
+pattern_set_solid(true);
+with (obj_noiseeffect)
+{
+	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);
+	pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	pattern_reset();
+}
+with (obj_noisedebris)
+{
+	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);
+	pal_swap_set(obj_player1.spr_palette, obj_player1.paletteselect, false);
+	draw_sprite_ext(sprite_index, image_index, x, y, image_xscale, image_yscale, image_angle, image_blend, image_alpha);
+	pattern_reset();
+}
+pattern_set_solid(false);
 for (i = 0; i < array_length(particles); i++)
 {
 	with (particles[i])
@@ -145,3 +173,17 @@ with (obj_player)
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, image_angle, image_blend, image_alpha);
 }
 shader_reset();
+if (room == boss_pizzaface)
+{
+	// pretty much a transparent white flash applied on top
+	shader_set(shd_supernoise);
+	with (obj_player1)
+	{
+		if (sprite_index == spr_playerN_phase3intro2 || sprite_index == spr_playerN_phase3intro2 || instance_exists(obj_pizzaface_thunderdark))
+		{
+			if (image_alpha > 0 && !ispeppino)
+				draw_sprite_ext(sprite_index, image_index, x, y, xscale, yscale, image_angle, image_blend, supernoisefade);
+		}
+	}
+	shader_reset();
+}

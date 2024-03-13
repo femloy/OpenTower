@@ -73,11 +73,11 @@ switch (state)
 			xscale = other.image_xscale;
 			if (object_index != obj_pizzagoblinbomb)
 			{
-				state = states.bump;
+				state = states.actor;
 				if (boxxed == 0)
-					sprite_index = spr_player_catched;
+					sprite_index = spr_catched;
 				else
-					sprite_index = spr_boxxedpep_air;
+					sprite_index = spr_boxxedpepair;
 				if (tauntstoredstate == states.mach2)
 					sprite_index = spr_mach;
 				else if (tauntstoredstate == states.mach3)
@@ -110,3 +110,4 @@ switch (state)
 		scr_collide();
 		break;
 }
+depth = 0;

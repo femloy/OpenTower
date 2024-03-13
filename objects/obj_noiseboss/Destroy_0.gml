@@ -47,7 +47,24 @@ if (pizzahead && elitehit <= 0 && destroyable)
 		boss_hpsprite = spr_bossfight_fakepephp;
 		boss_palette = spr_bossfight_fakepeppalette
 	}
+	if (doise)
+	{
+		with (instance_create(x, y, obj_sausageman_dead))
+		{
+			sprite_index = other.spr_dead;
+			spr_palette = other.spr_palette;
+			paletteselect = other.paletteselect;
+			usepalette = other.usepalette;
+			if (!usepalette)
+				paletteselect = 0;
+			image_alpha = other.image_alpha;
+			sprite_index = spr_doise_deadair;
+			hsp = 0;
+			vsp = 0;
+		}
+	}
 }
 if (elitehit <= 0 && destroyable)
 	instance_destroy(obj_noisey);
-event_inherited();
+if (!pizzahead || !doise)
+	event_inherited();

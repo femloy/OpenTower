@@ -3,6 +3,7 @@ if (room == tower_soundtestlevel && (obj_player1.state == states.backtohub || ob
 	instance_destroy();
 	exit;
 }
+depth = 0;
 image_speed = 0.35;
 switch (sprite_index)
 {
@@ -41,6 +42,7 @@ switch (sprite_index)
 						sprite_index = spr_bodyslamstart;
 						image_index = 0;
 						state = states.freefallprep;
+						freefallsmash = 0;
 						vsp = (character == "P") ? -5 : -7;
 					}
 					else if (isgustavo)
@@ -97,11 +99,11 @@ switch (sprite_index)
 							}
 							else if (state == states.firemouth)
 							{
-								if (sprite_index == spr_player_firemouthdash)
+								if (sprite_index == spr_firemouthdash)
 								{
 									hsp = 0;
 									movespeed = 0;
-									sprite_index = spr_player_firemouthidle;
+									sprite_index = spr_firemouthidle;
 								}
 							}
 						}

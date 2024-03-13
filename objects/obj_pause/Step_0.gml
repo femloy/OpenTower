@@ -51,7 +51,7 @@ if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != M
 		if (global.leveltorestart != -4)
 		{
 			array_push(pause_menu, "pause_restart");
-			if (global.leveltorestart != tower_tutorial1 && global.leveltorestart != tower_finalhallway && global.leveltorestart != secret_entrance)
+			if (global.leveltorestart != tower_tutorial1 && global.leveltorestart != tower_tutorial1N && global.leveltorestart != tower_finalhallway && global.leveltorestart != secret_entrance)
 				array_push(pause_menu, "pause_achievements");
 			array_push(pause_menu, "pause_exit");
 		}
@@ -133,6 +133,8 @@ if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != M
 				case states.boxxedpepjump:
 				case states.boxxedpepspin:
 					_txt = lang_get_value("boxxedtip");
+					if (!ispeppino)
+						_txt = lang_get_value("boxxedtipN");
 					break;
 				case states.mort:
 				case states.mortattack:
@@ -142,10 +144,14 @@ if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != M
 					break;
 				case states.ghost:
 					_txt = lang_get_value("ghosttip");
+					if (!ispeppino)
+						_txt = lang_get_value("ghosttipN");
 					break;
 				case states.rocket:
 				case states.rocketslide:
 					_txt = lang_get_value("rockettip");
+					if (!ispeppino)
+						_txt = lang_get_value("rockettipN");
 					break;
 				case states.barrel:
 				case states.barrelclimbwall:
@@ -154,13 +160,19 @@ if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != M
 					_txt = lang_get_value("barreltip");
 					break;
 				case states.trashroll:
-					if (sprite_index == spr_player_corpsesurf || sprite_index == spr_player_corpsestart)
+					if (sprite_index == spr_playercorpsesurf || sprite_index == spr_playercorpsestart)
 						_txt = lang_get_value("gravesurftip");
 					else
+					{
 						_txt = lang_get_value("trashrolltip");
+						if (!ispeppino)
+							_txt = lang_get_value("trashrolltipN");
+					}
 					break;
 				case states.antigrav:
 					_txt = lang_get_value("antigravtip");
+					if (!ispeppino)
+						_txt = lang_get_value("antigravtipN");
 					break;
 				case states.cheesepep:
 				case states.cheesepepstickside:
@@ -174,6 +186,10 @@ if (!pause && instance_exists(obj_player1) && obj_player1.key_start && room != M
 					break;
 				case states.rideweenie:
 					_txt = lang_get_value("weenietip");
+					break;
+				case states.bombpep:
+					if (!ispeppino)
+						_txt = lang_get_value("bombtipN");
 					break;
 			}
 			if (_txt == noone)

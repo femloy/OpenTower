@@ -20,6 +20,7 @@ if (other.cutscene == 0 && sprite_index != spr_bigmushroom_bounce && other.state
 		other.image_index = 0;
 	}
 	image_index = 0;
+	other.noisewalljump = 0;
 	other.vsp = -14;
 	other.jumpstop = true;
 	if (other.isgustavo && other.state != states.ratmountskid)

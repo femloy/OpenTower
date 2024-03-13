@@ -5,7 +5,10 @@ if (do_rank)
 		toppinvisible = other.toppinvisible;
 		if (!toppinvisible && global.leveltosave != "exit" && global.leveltosave != "secretworld")
 		{
-			array_delete(text, 0, 1);
+			if (!global.swapmode)
+				array_delete(text, 0, 1);
+			else
+				array_delete(text, 0, 3);
 			array_pop(text);
 		}
 		depth = other.depth - 1;

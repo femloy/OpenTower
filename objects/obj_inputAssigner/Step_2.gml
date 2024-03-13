@@ -14,6 +14,9 @@ with (obj_player)
 			case states.tumble:
 				GamepadSetVibration(_pindex, 0.8, 0.8, 0.8);
 				break;
+			case states.machcancel:
+				GamepadSetVibration(_pindex, 0.5, 0.5, 0.5);
+				break;
 			case states.fireass:
 				GamepadSetVibration(_pindex, 1, 1, 0.85);
 				break;
@@ -110,14 +113,13 @@ with (obj_player)
 		other.prevstate[_pindex] = state;
 	}
 }
-for (var p = 0; p < array_length(vibration); p++)
-{
-	_dvc = player_input_device[p];
-	vibration[p][0] *= vibration[p][2];
-	vibration[p][1] *= vibration[p][2];
-	if (vibration[p][0] < 0)
-		vibration[p][0] = 0;
-	if (vibration[p][1] < 0)
-		vibration[p][1] = 0;
-	gamepad_set_vibration(_dvc, vibration[p][0], vibration[p][1]);
-}
+_dvc = player_input_device[player_index];
+vibration[0][0] *= vibration[0][2];
+vibration[0][1] *= vibration[0][2];
+if (vibration[0][0] < 0)
+	vibration[0][0] = 0;
+if (vibration[0][1] < 0)
+	vibration[0][1] = 0;
+gamepad_set_vibration(_dvc, vibration[0][0], vibration[0][1]);
+if (player_input_device[!player_index] != _dvc)
+	gamepad_set_vibration(player_input_device[!player_index], 0, 0);

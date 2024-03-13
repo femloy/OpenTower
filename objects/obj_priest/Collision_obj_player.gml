@@ -12,6 +12,11 @@ with (other)
 				xscale = sign(hsp);
 			movespeed = abs(hsp);
 		}
+		with (obj_mortprojectile)
+		{
+			create_particle(x, y, particle.genericpoofeffect);
+			instance_destroy();
+		}
 		transformationsnd = false;
 		state = states.normal;
 		sprite_index = spr_idle;

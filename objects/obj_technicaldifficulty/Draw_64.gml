@@ -4,8 +4,8 @@ else
 {
 	screen_clear(make_color_rgb(216, 104, 160));
 	shader_set(global.Pal_Shader);
-	var cx = obj_screensizer.normal_size_fix_x;
-	var cy = obj_screensizer.normal_size_fix_y;
+	var cx = SCREEN_X;
+	var cy = SCREEN_Y;
 	draw_sprite(spr_technicaldifficulty_bg, 0, cx, cy);
 	pattern_set(global.Base_Pattern_Color, sprite, 0, 1, 1, global.palettetexture);
 	if (sprite != spr_technicaldifficulty4)

@@ -1,4 +1,8 @@
 image_alpha = Approach(image_alpha, 1, 0.1);
+if (!obj_player1.ispeppino)
+	sprite_index = spr_bossfight_noiseHP;
+else
+	sprite_index = spr_bossfight_playerhp;
 switch (state)
 {
 	case 0:

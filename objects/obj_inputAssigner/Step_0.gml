@@ -1,21 +1,64 @@
+if (instance_exists(obj_player1))
+	player_index = obj_player1.player_index;
 if (!deactivated)
 {
-	for (var i = 0; i < gamepad_get_device_count(); i++)
+	swap_ready = false;
+	if (mode == 0)
 	{
-		var _index = scr_anybutton_pressed(i);
-		if (_index > -2)
+		if (room == characterselect && global.swapmode)
 		{
-			device_selected[0] = true;
-			if player_input_device[0] != _index
+			mode = 1;
+			player_input_device[0] = -2;
+			player_input_device[1] = -2;
+		}
+		else
+		{
+			for (var i = 0; i < gamepad_get_device_count(); i++)
 			{
-				for (var j = 0; j < gamepad_get_device_count(); j++)
+				var _index = scr_anybutton_pressed(i);
+				if (_index > -2)
 				{
-					if gamepad_is_connected(j)
-						gamepad_set_vibration(j, 0, 0);
+					device_selected[0] = true;
+					if (player_input_device[0] != _index)
+					{
+						for (var j = 0; j < gamepad_get_device_count(); j++)
+						{
+							if (gamepad_is_connected(j))
+								gamepad_set_vibration(j, 0, 0);
+						}
+					}
+					player_input_device[0] = _index;
+					press_start = false;
 				}
 			}
-			player_input_device[0] = _index;
-			press_start = false;
+		}
+	}
+	else if (mode == 1)
+	{
+		if (!global.swapmode)
+			mode = 0;
+		swap_ready = false;
+		var _found = false;
+		for (var player = 0; player < 2; player++)
+		{
+			if (player_input_device[player] == -2)
+				_found = true;
+		}
+		if (!_found)
+			swap_ready = true;
+		for (player = 0; player < 2; player++)
+		{
+			for (i = 0; i < 8; i++)
+			{
+				_index = scr_button_pressed(i);
+				if (player_input_device[player] == -2 && _index >= -1)
+				{
+					player_input_device[player] = _index;
+					trace("Player ", player, " connected at index: ", _index);
+					player = 2;
+					break;
+				}
+			}
 		}
 	}
 	for (i = 0; i < 2; i++)
@@ -39,26 +82,14 @@ else
 	for (i = 0; i < 8; i++)
 	{
 		_index = scr_button_pressed(i);
-		if (_index != -2)
+		if (player_input_device[device_to_reconnect] == -2 && _index >= -1)
 		{
-			if (!CheckUsedIndex(_index) || (device_to_reconnect == 1 && _index == -1 && (keyboard_check_pressed(global.key_jumpN) || keyboard_check_pressed(global.key_startN))))
-			{
-				device_selected[device_to_reconnect] = true;
-				player_input_device[device_to_reconnect] = _index;
-				deactivated = false;
-				scr_pause_activate_objects(false);
-				alarm[0] = 1;
-			}
-			else if (device_to_reconnect == 1 && global.coop)
-			{
-				global.coop = false;
-				instance_destroy(obj_coopplayerfollow);
-				device_selected[device_to_reconnect] = false;
-				player_input_device[device_to_reconnect] = -2;
-				deactivated = false;
-				scr_pause_activate_objects(false);
-				alarm[0] = 1;
-			}
+			player_input_device[device_to_reconnect] = _index;
+			deactivated = false;
+			trace("Player ", device_to_reconnect, " connected at index: ", _index);
+			scr_pause_activate_objects(false);
+			alarm[0] = 1;
+			break;
 		}
 	}
 }

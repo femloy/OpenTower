@@ -12,16 +12,16 @@ if (baddie.object_index == obj_vigilanteboss && (baddie.state == states.hit || (
 if (baddie.object_index == obj_noiseboss && (baddie.state == states.walk || baddie.state == states.droptrap) && baddie.droptrap)
 {
     with (bombID)
-        deadbuffer--
+        deadbuffer--;
     exit;
 }
 if (baddie.object_index == obj_pizzafaceboss && baddie.state == states.ram && baddie.substate == states.land && baddie.elitehit == 1)
 {
     with (bombID)
     {
-        deadbuffer = 100
-        array_push(baddie_arr, [baddie.id, obj_baddie])
-        instance_destroy()
+        deadbuffer = 100;
+        array_push(baddie_arr, [baddie.id, obj_baddie]);
+        instance_destroy();
     }
     exit;
 }
@@ -29,13 +29,13 @@ if ((!baddie.invincible) || baddie.object_index == obj_vigilanteboss || baddie.o
 {
     with (bombID)
     {
-        deadbuffer = 100
-        array_push(baddie_arr, [baddie.id, obj_baddie])
-        instance_destroy()
+        deadbuffer = 100;
+        array_push(baddie_arr, [baddie.id, obj_baddie]);
+        instance_destroy();
     }
 }
 else if ((baddie.object_index != obj_pizzafaceboss || ((baddie.state != states.ram || baddie.substate != states.jump) && baddie.state != states.walk)) && (baddie.object_index != obj_pepperman || baddie.state != states.mini))
 {
     with (bombID)
-        deadbuffer--
+        deadbuffer--;
 }

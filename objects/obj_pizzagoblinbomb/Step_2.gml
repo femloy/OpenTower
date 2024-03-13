@@ -45,7 +45,13 @@ switch (state)
 		if (playerid.state != states.bombgrab && playerid.state != states.superslam)
 			state = states.normal;
 		if (state == states.grabbed && _destroyed)
+		{
+			var h = playerid.hurted;
+			var _savedstate = playerid.state;
 			scr_hurtplayer(playerid);
+			if ((playerid.hurted && !h) || (playerid.state != _savedstate && playerid.state == states.hurt))
+				notification_push(notifs.hurt_player, [id, _savedstate, obj_canonexplosion]);
+		}
 		if (playerid.state == states.superslam)
 		{
 			if (playerid.grounded)

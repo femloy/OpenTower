@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_fakepepfollower",
   "spriteId": {
-    "name": "spr_fakepeppino_idle",
-    "path": "sprites/spr_fakepeppino_idle/spr_fakepeppino_idle.yy",
+    "name": "spr_fakepeppino_exitidle",
+    "path": "sprites/spr_fakepeppino_exitidle/spr_fakepeppino_exitidle.yy",
   },
   "solid": false,
   "visible": true,
@@ -29,7 +29,6 @@
   "physicsShapePoints": [],
   "eventList": [
     {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":0,"collisionObjectId":null,},
-    {"resourceType":"GMEvent","resourceVersion":"1.0","name":"","isDnD":false,"eventNum":0,"eventType":8,"collisionObjectId":null,},
   ],
   "properties": [],
   "overriddenProperties": [],

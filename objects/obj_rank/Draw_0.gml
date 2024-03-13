@@ -1,3 +1,5 @@
+if (sprite_index == spr_rankNP || sprite_index == spr_rankNPend)
+	draw_sprite(spr_rankNPbg, 0, x, y);
 if (brownfade < 1)
 {
 	shader_set(global.Pal_Shader);
@@ -75,5 +77,13 @@ for (i = 0; i < array_length(text); i++)
 {
 	var b = text[i];
 	if (b[0])
-		draw_text_color(48, 48 + (32 * i), b[1], c_white, c_white, c_white, c_white, 1);
+		tdp_draw_text_color(48, 48 + (32 * i), b[1], c_white, c_white, c_white, c_white, 1);
+}
+tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, false);
+if (global.swapmode && scorewins_show)
+{
+	var spr = spr_scorewinsP;
+	if (scorewins == "N")
+		spr = spr_scorewinsN;
+	draw_sprite(spr, 0, scorepos_x, scorepos_y + floor(Wave(-1, 1, 0.2, 0)));
 }

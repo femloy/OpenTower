@@ -10,24 +10,24 @@ if (room != Mainmenu)
 if (instance_exists(obj_keyconfig) || instance_exists(obj_screenconfirm))
 	exit;
 
-draw_set_font(lang_get_font("bigfont"));
-draw_set_halign(fa_center);
-draw_set_valign(fa_middle);
+tdp_draw_set_font(lang_get_font("bigfont"));
+tdp_draw_set_halign(fa_center);
+tdp_draw_set_valign(fa_middle);
 draw_set_color(c_white);
 
 var _os = optionselected;
 var m = menus[menu];
 var options = m.options;
 var len = array_length(options);
-var size = (string_height("A") * len) + (len * m.ypad);
+var size = (string_height(lang_get_value("default_letter")) * len) + (len * m.ypad);
 var xx = SCREEN_WIDTH / 2;
 var yy = (SCREEN_HEIGHT / 2) - (size / 4);
 
 switch (m.anchor)
 {
 	case anchor.center:
-		draw_set_halign(fa_center);
-		draw_set_valign(fa_top);
+		tdp_draw_set_halign(fa_center);
+		tdp_draw_set_valign(fa_top);
 		var c = c_white;
 		var a = 1;
 		for (i = 0; i < len; i++)
@@ -37,22 +37,22 @@ switch (m.anchor)
 			if (i == _os)
 				c = c_white;
 			var t = lang_get_value(o.name);
-			draw_text_color(xx, yy + (m.ypad * i), t, c, c, c, c, a);
+			tdp_draw_text_color(xx, yy + (m.ypad * i), t, c, c, c, c, a);
 			if (menu == menus.options)
-				scr_pauseicon_draw(i, xx + (string_width(t) / 2) + 50, yy + (m.ypad * i));
+				scr_pauseicon_draw(i, xx + (string_width(t) / 2) + 50, yy + (m.ypad * i) + (string_height(t) / 2));
 		}
 		break;
 	
 	case anchor.left:
-		draw_set_halign(fa_left);
-		draw_set_valign(fa_top);
+		tdp_draw_set_halign(fa_left);
+		tdp_draw_set_valign(fa_top);
 		xx = m.xpad;
 		c = c_white;
 		a = 1;
 		
 		for (i = 0; i < len; i++)
 		{
-			draw_set_halign(fa_left);
+			tdp_draw_set_halign(fa_left);
 			o = options[i];
 			c = c_gray;
 			if (i == _os)
@@ -62,13 +62,13 @@ switch (m.anchor)
                 var txt = o.name;
             else
                 var txt = lang_get_value(o.name);
-            draw_text_color(xx, yy + (m.ypad * i), txt, c, c, c, c, a);
+            tdp_draw_text_color(xx, yy + (m.ypad * i), txt, c, c, c, c, a);
 			
-			draw_set_halign(fa_right);
+			tdp_draw_set_halign(fa_right);
 			switch (o.type)
 			{
 				case menutype.toggle:
-					draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), o.value ? lang_get_value("option_on") : lang_get_value("option_off"), c, c, c, c, a);
+					tdp_draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), o.value ? lang_get_value("option_on") : lang_get_value("option_off"), c, c, c, c, a);
 					break;
 				
 				case menutype.slide:
@@ -97,12 +97,13 @@ switch (m.anchor)
 					var n = select.name;
 					if (select.localization)
 						n = lang_get_value(select.name);
-					draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), n, c, c, c, c, a);
+					tdp_draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), n, c, c, c, c, a);
 					break;
 			}
 		}
 		break;
 }
+tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 if (room != Mainmenu)
 {
 	with (obj_transfotip)

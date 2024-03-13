@@ -1,13 +1,13 @@
-image_speed = 0.5
-depth = -1
-hit = 0
-has_ended = 0
-scr_fmod_soundeffect(global.snd_explosion, x, y)
-collision_list = [obj_pizzafaceboss_p2, obj_vigilanteboss, obj_vigilantecow, obj_johnecheese, obj_targetguy]
-hitlist = ds_list_create()
-hitqueue = ds_queue_create()
-collision_function = ds_map_create()
-pistol_damage = 4
+image_speed = 0.5;
+depth = -1;
+hit = 0;
+has_ended = 0;
+scr_fmod_soundeffect(global.snd_explosion, x, y);
+collision_list = [obj_pizzafaceboss_p2, obj_vigilanteboss, obj_vigilantecow, obj_johnecheese, obj_targetguy];
+hitlist = ds_list_create();
+hitqueue = ds_queue_create();
+collision_function = ds_map_create();
+pistol_damage = 4;
 
 add_hit = function(inst, obj = noone)
 {
@@ -19,22 +19,22 @@ add_hit = function(inst, obj = noone)
     if (ds_list_find_index(hitlist, inst) == -1)
     {
         if (obj == -4)
-            ds_queue_enqueue(hitqueue, [inst, inst.object_index])
+            ds_queue_enqueue(hitqueue, [inst, inst.object_index]);
         else
-            ds_queue_enqueue(hitqueue, [inst, obj])
+            ds_queue_enqueue(hitqueue, [inst, obj]);
     }
 }
 
 ds_map_set(collision_function, noone, function(obj)
 {
-    trace("Non collision, but not misssed")
+    trace("Non collision, but not misssed");
     return true;
 });
 
 ds_map_set(collision_function, obj_baddie, function(obj)
 {
     if (!instance_exists(obj))
-        return 0;
+        return false;
 	
     if (obj.object_index == obj_vigilanteboss || obj.object_index == obj_pizzafaceboss_p2)
     {
@@ -46,11 +46,11 @@ ds_map_set(collision_function, obj_baddie, function(obj)
     if (obj.object_index == obj_pizzafaceboss && obj.state == states.ram && obj.substate == states.land && obj.elitehit == 1)
     {
         with (instance_create(other.x, other.y, obj_explosioneffect))
-            sprite_index = spr_bombexplosion
+            sprite_index = spr_bombexplosion;
         with (obj)
-            scr_boss_do_hurt_phase2(obj_player1.id)
+            scr_boss_do_hurt_phase2(obj_player1.id);
         if (x != other.x)
-            image_xscale = sign((other.x - x))
+            image_xscale = sign(other.x - x);
         instance_destroy(other)
         exit;
     }
@@ -61,46 +61,46 @@ ds_map_set(collision_function, obj_baddie, function(obj)
         {
             if (staggerbuffer <= 0 && flickertime <= 0 && visible && (state == states.walk || (state == states.jump && sprite_index == spr_fakepeppino_bodyslamstart) || (state == states.freefall && sprite_index == spr_fakepeppino_bodyslamland) || (state == states.mach2 && attackspeed < 18) || state == states.Sjumpprep || (state == states.throwing && sprite_index != spr_fakepeppino_flailing)))
             {
-                var ix = (-other.image_xscale)
+                var ix = -other.image_xscale;
                 if (x != other.x)
-                    ix = sign((other.x - x))
+                    ix = sign(other.x - x);
                 if (subhp > 0)
                 {
                     if (state == states.walk)
                     {
-                        state = states.staggered
-                        image_xscale = ix
-                        hsp = ((-image_xscale) * 20)
-                        vsp = 0
-                        sprite_index = spr_fakepeppino_stagger
-                        image_index = 0
+                        state = states.staggered;
+                        image_xscale = ix;
+                        hsp = -image_xscale * 20;
+                        vsp = 0;
+                        sprite_index = spr_fakepeppino_stagger;
+                        image_index = 0;
                     }
                     else
-                        flashbuffer = 9
-                    staggerbuffer = 100
-                    flash = 1
-                    subhp--
+                        flashbuffer = 9;
+                    staggerbuffer = 100;
+                    flash = true;
+                    subhp--;
                     repeat (4)
-                        create_debris(x, y, spr_slapstar)
+                        create_debris(x, y, spr_slapstar);
                 }
                 else
                 {
                     with (obj_fakepephead)
                     {
-                        create_particle(x, y, (9 << 0))
-                        instance_destroy(id, false)
+                        create_particle(x, y, particle.genericpoofeffect);
+                        instance_destroy(id, false);
                     }
-                    state = states.stun
-                    image_xscale = ix
-                    hsp = ((-image_xscale) * 8)
-                    vsp = -6
-                    thrown = 0
-                    linethrown = 0
-                    sprite_index = spr_fakepeppino_vulnerable
-                    stunned = 200
-                    flash = 1
+                    state = states.stun;
+                    image_xscale = ix;
+                    hsp = -image_xscale * 8;
+                    vsp = -6;
+                    thrown = 0;
+                    linethrown = 0;
+                    sprite_index = spr_fakepeppino_vulnerable;
+                    stunned = 200;
+                    flash = true;
                     repeat (4)
-                        create_debris(x, y, spr_slapstar)
+                        create_debris(x, y, spr_slapstar);
                 }
                 return true;
             }
@@ -111,50 +111,50 @@ ds_map_set(collision_function, obj_baddie, function(obj)
     {
         if (room == boss_pizzaface && (obj.object_index == obj_pepperman || obj.object_index == obj_vigilanteboss || obj.object_index == obj_noiseboss || obj.object_index == obj_fakepepboss || obj.object_index == obj_pizzafaceboss_p3))
         {
-            other.baddiegrabbedID = obj
+            other.baddiegrabbedID = obj;
             with (obj)
             {
-                grabbedby = 1
-                scr_boss_grabbed()
+                grabbedby = 1;
+                scr_boss_grabbed();
             }
         }
         else
         {
-            obj.invtime = 15
-            fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y)
+            obj.invtime = 15;
+            fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
             if (!obj.important)
             {
-                global.style += (5 + global.combo)
-                global.combotime = 60
-                global.heattime = 60
+                global.style += 5 + global.combo;
+                global.combotime = 60;
+                global.heattime = 60;
             }
-            var lag = 2
-            obj.hitLag = lag
-            obj.hitX = obj.x
-            obj.hitY = obj.y
-            obj.mach3destroy = 1
-            obj.hp -= 1
-            instance_create(obj.x, obj.y, obj_parryeffect)
-            obj.alarm[3] = 3
-            obj.state = states.hit
+            var lag = 2;
+            obj.hitLag = lag;
+            obj.hitX = obj.x;
+            obj.hitY = obj.y;
+            obj.mach3destroy = true;
+            obj.hp -= 1;
+            instance_create(obj.x, obj.y, obj_parryeffect);
+            obj.alarm[3] = 3;
+            obj.state = states.hit;
             if (obj.x != other.x)
-                obj.image_xscale = sign((other.x - obj.x))
+                obj.image_xscale = sign(other.x - obj.x);
             else
-                obj.image_xscale = (-other.image_xscale)
-            instance_create(x, y, obj_slapstar)
-            instance_create(x, y, obj_slapstar)
-            instance_create(x, y, obj_slapstar)
-            instance_create(x, y, obj_baddiegibs)
-            instance_create(x, y, obj_baddiegibs)
-            instance_create(x, y, obj_baddiegibs)
+                obj.image_xscale = -other.image_xscale;
+            instance_create(x, y, obj_slapstar);
+            instance_create(x, y, obj_slapstar);
+            instance_create(x, y, obj_slapstar);
+            instance_create(x, y, obj_baddiegibs);
+            instance_create(x, y, obj_baddiegibs);
+            instance_create(x, y, obj_baddiegibs);
             with (obj_camera)
             {
-                shake_mag = 3
-                shake_mag_acc = (3 / room_speed)
+                shake_mag = 3;
+                shake_mag_acc = 3 / room_speed;
             }
-            obj.invtime = 30
-            obj.hitvsp = -4
-            obj.hithsp = ((-obj.image_xscale) * 22)
+            obj.invtime = 30;
+            obj.hitvsp = -4;
+            obj.hithsp = -obj.image_xscale * 22;
         }
         return true;
     }
@@ -164,45 +164,45 @@ ds_map_set(collision_function, obj_pepper_marbleblock, function(obj)
 {
     with (obj)
     {
-        scr_sound_multiple("event:/sfx/misc/breakblock", x, y)
+        scr_sound_multiple("event:/sfx/misc/breakblock", x, y);
         with (other)
         {
-            instance_create(x, y, obj_bangeffect)
+            instance_create(x, y, obj_bangeffect);
             if (frac(other.hp) == 0)
             {
                 repeat (4)
-                    create_debris((other.x + random_range(0, 64)), (other.y + random_range(0, 64)), spr_marbledebris)
+                    create_debris(other.x + random_range(0, 64), other.y + random_range(0, 64), spr_marbledebris);
             }
             repeat (3)
             {
-                with (instance_create((x + random_range(0, 64)), (y + random_range(0, 64)), obj_parryeffect))
+                with (instance_create(x + random_range(0, 64), y + random_range(0, 64), obj_parryeffect))
                 {
-                    sprite_index = spr_deadjohnsmoke
-                    image_speed = 0.35
+                    sprite_index = spr_deadjohnsmoke;
+                    image_speed = 0.35;
                 }
             }
         }
         with (obj_pepperman)
         {
             if (phase == 2)
-                other.hp -= 0.5
+                other.hp -= 0.5;
             else
-                other.hp -= 1
+                other.hp -= 1;
         }
         if (hitLag > 0)
         {
-            x = hitX
-            y = hitY
+            x = hitX;
+            y = hitY;
         }
-        hitX = x
-        hitY = y
-        hitLag = 10
+        hitX = x;
+        hitY = y;
+        hitLag = 10;
         return true;
     }
 });
-ds_map_set(collision_function, obj_peppermanartdude, function(obj) //gml_Script_anon_gml_Object_obj_playerbombexplosion_Create_0_5650_gml_Object_obj_playerbombexplosion_Create_0
+ds_map_set(collision_function, obj_peppermanartdude, function(obj)
 {
-    instance_destroy(obj)
+    instance_destroy(obj);
     return true;
 });
 ds_map_set(collision_function, obj_johnecheese, function(obj)

@@ -1,4 +1,5 @@
 var mh_id = other.id;
+other.projectilebuffer = 20;
 if (instance_exists(obj_parryeffect))
 {
 	with (obj_parryeffect)
@@ -16,6 +17,8 @@ with (playerid)
 		morthookID = mh_id;
 		tauntstoredmovespeed = movespeed;
 		movespeed = 12;
+		if (!ispeppino)
+			movespeed = 20;
 		jumpstop = false;
 		instance_destroy(other);
 	}

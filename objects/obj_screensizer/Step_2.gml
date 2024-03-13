@@ -1,5 +1,9 @@
 var ww = window_get_width();
 var wh = window_get_height();
+if (room != Loadiingroom && lang_get_value("use_ttf"))
+	global.tdp_text_enabled = true;
+else
+	global.tdp_text_enabled = false;
 var cr = cr_beam;
 if ((device_mouse_x_to_gui(0) != mouse_xprevious || device_mouse_y_to_gui(0) != mouse_yprevious) && gameframe_mouse_in_window())
 {

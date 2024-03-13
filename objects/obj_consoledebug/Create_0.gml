@@ -13,13 +13,13 @@ depth = -999;
 commands = array_create(0);
 state = 0;
 movebuffer = 0;
-create_command = function()
+create_command = function(_name, _func, _args)
 {
 	var b = 
 	{
-		name: argument0,
-		func: argument2,
-		args: argument1
+		name: _name,
+		func: _func,
+		args: _args
 	};
 	array_push(commands, b);
 };
@@ -74,6 +74,18 @@ create_command("DEBUG OVERLAY", [["TRUE", "FALSE"]], function(_toggle)
 		show_debug_overlay(true);
 	else
 		show_debug_overlay(false);
+});
+create_command("SWITCH CHAR", [["NOISE", "PEP"]], function(_char)
+{
+	with (obj_player1)
+	{
+		character = "P";
+		if (_char == "NOISE")
+			ispeppino = false;
+		else
+			ispeppino = true;
+		scr_characterspr();
+	}
 });
 selected = 0;
 arg_select = 0;

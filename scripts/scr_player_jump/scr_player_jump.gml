@@ -267,7 +267,7 @@ function state_player_jump()
 		}
 		else
 		{
-			notification_push(notifs.minigun_down, [room]);
+			notification_push(notifs.shotgunblast_start, [room]);
 			state = states.shotgunshoot;
 			minigunshot = 3;
 			minigunbuffer = 0;

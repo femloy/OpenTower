@@ -15,16 +15,16 @@ credits = [
 credits = global.noisecredits_arr;
 finish = false;
 
-var yy = (SCREEN_HEIGHT + 300)
+var yy = SCREEN_HEIGHT + 300;
 for (var i = 0; i < array_length(credits); i++)
 {
-    var credit = credits[i]
-    with (instance_create((SCREEN_WIDTH / 2), yy, obj_noisecredit))
+    var credit = credits[i];
+    with instance_create(SCREEN_WIDTH / 2, yy, obj_noisecredit)
     {
-        name = credit.name
+        name = credit.name;
         for (var j = 0; j < array_length(credit.heads); j++)
         {
-            var head = credit.heads[j]
+            var head = credit.heads[j];
             array_push(heads, 
             {
                 image_index: head,
@@ -33,5 +33,5 @@ for (var i = 0; i < array_length(credits); i++)
             });
         }
     }
-    yy += 400
+    yy += 400;
 }

@@ -6,6 +6,7 @@ if (patroltimer > 0)
 else
 {
 	scr_fmod_soundeffect(global.snd_alarm, x, y);
+	global.snd_alarm_baddieID = id;
 	patrolfound = false;
 	state = states.punch;
 	sprite_index = spr_patroller_alert;

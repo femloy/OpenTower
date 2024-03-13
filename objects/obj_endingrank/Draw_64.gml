@@ -1,10 +1,13 @@
-draw_sprite_tiled(spr_finalrankBG, bg_index, bg_x, bg_y);
+var bg_spr = spr_finalrankBG;
+if (!ispeppino)
+	bg_spr = spr_finalrankBG_N;
+draw_sprite_tiled(bg_spr, bg_index, bg_x, bg_y);
 draw_self();
 if (brown)
 {
 	shader_set(shd_rank);
 	draw_set_alpha(brownfade);
-	draw_sprite_tiled(spr_finalrankBG, bg_index, bg_x, bg_y);
+	draw_sprite_tiled(bg_spr, bg_index, bg_x, bg_y);
 	draw_self();
 	reset_shader_fix();
 	draw_set_alpha(1);
@@ -16,8 +19,9 @@ for (var i = 0; i < array_length(text); i++)
 {
 	var b = text[i];
 	if (b[0])
-		draw_text_color(48, 48 + (32 * i), b[1], c_white, c_white, c_white, c_white, 1);
+		tdp_draw_text_color(48, 48 + (32 * i), b[1], c_white, c_white, c_white, c_white, 1);
 }
+tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
 draw_set_alpha(fade);
 draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 0, false);
 draw_set_alpha(1);

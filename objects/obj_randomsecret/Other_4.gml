@@ -38,6 +38,10 @@ switch room
     case freezer_secret1:
         global.noisejetpack = true;
         break
+	case freezer_secret3:
+		if (!obj_player1.ispeppino)
+			global.noisejetpack = true;
+		break;
     case war_secret1:
         shotgunAnim = true;
         break
@@ -64,6 +68,17 @@ if (isgustavo != obj_player.isgustavo)
         tauntstoredsprite = sprite_index
     }
 }
+
+if (!obj_player1.ispeppino && isgustavo != obj_player.noisecrusher)
+{
+	if (isgustavo)
+		scr_switchgustavo();
+	else
+		scr_switchpeppino();
+}
+if (!obj_player1.ispeppino && global.noisejetpack)
+	create_transformation_tip(lang_get_value("jetpack2tip"));
+
 switch startstate
 {
     case noone:

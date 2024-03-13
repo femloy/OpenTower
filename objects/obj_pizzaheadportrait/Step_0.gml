@@ -1,6 +1,6 @@
 image_speed = 0.35;
-if (floor(image_index) == (image_number - 1) && sprite_index == spr_pizzahead_TVprojectilebounce)
-	sprite_index = spr_pizzahead_TVprojectile;
+if (floor(image_index) == image_number - 1 && sprite_index == bouncespr)
+	sprite_index = idlespr;
 mask_index = spr_pizzahead_TVprojectile;
 if (move)
 {
@@ -13,7 +13,7 @@ if (move)
 			{
 				fmod_event_one_shot_3d("event:/sfx/pizzahead/tvbounce", x, y);
 				vsp = -18;
-				sprite_index = spr_pizzahead_TVprojectilebounce;
+				sprite_index = bouncespr;
 				image_index = 0;
 				bounce--;
 				with (obj_camera)

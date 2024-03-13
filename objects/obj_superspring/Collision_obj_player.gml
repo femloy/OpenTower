@@ -33,7 +33,7 @@ with (other)
 		{
 			state = states.freefall;
 			vsp = 10;
-			sprite_index = spr_player_rockethitwall;
+			sprite_index = spr_rockethitwall;
 		}
 		if (other.image_yscale == -1)
 		{

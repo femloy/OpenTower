@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_vigilantefollower",
   "spriteId": {
-    "name": "spr_playerV_panic",
-    "path": "sprites/spr_playerV_panic/spr_playerV_panic.yy",
+    "name": "spr_vigi_exitpanic",
+    "path": "sprites/spr_vigi_exitpanic/spr_vigi_exitpanic.yy",
   },
   "solid": false,
   "visible": true,

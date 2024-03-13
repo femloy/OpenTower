@@ -3,8 +3,8 @@
   "resourceVersion": "1.0",
   "name": "obj_mortfollowerexit",
   "spriteId": {
-    "name": "spr_mortidle",
-    "path": "sprites/spr_mortidle/spr_mortidle.yy",
+    "name": "spr_mort_exitidle",
+    "path": "sprites/spr_mort_exitidle/spr_mort_exitidle.yy",
   },
   "solid": false,
   "visible": true,

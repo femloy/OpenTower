@@ -3,7 +3,7 @@ switch (introstate)
 	case 0:
 		hsp = 0;
 		vsp = 0;
-		if (floor(image_index) == (image_number - 1))
+		if (floor(image_index) == image_number - 1)
 		{
 			fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
 			image_index = image_number - 1;
@@ -37,12 +37,12 @@ switch (introstate)
 		{
 			with (obj_player)
 			{
-				if (sprite_index != spr_player_gnomecutscene2)
+				if (sprite_index != spr_player_gnomecutscene2 && ispeppino)
 				{
 					sprite_index = spr_player_gnomecutscene2;
 					image_index = 0;
 				}
-				else if (floor(image_index) == (image_number - 1))
+				else if (ispeppino && floor(image_index) == image_number - 1)
 					image_index = image_number - 1;
 			}
 		}
@@ -57,7 +57,7 @@ switch (introstate)
 	case 3:
 		with (obj_player)
 		{
-			if (floor(image_index) == (image_number - 1))
+			if (ispeppino && floor(image_index) == image_number - 1)
 				image_index = image_number - 1;
 		}
 		hsp = 7;
@@ -73,10 +73,10 @@ switch (introstate)
 	case 4:
 		with (obj_player)
 		{
-			if (floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == image_number - 1 && sprite_index != spr_player_gnomecutscene1)
 				image_index = image_number - 1;
 		}
-		if (floor(image_index) == (image_number - 1))
+		if (floor(image_index) == image_number - 1)
 		{
 			sprite_index = spr_pizzahead_grabitemtransition;
 			image_index = 0;
@@ -94,7 +94,22 @@ switch (introstate)
 				savedvsp = -11;
 				savedhsp = b[3];
 				if (b[0] == spr_fakepeppino_stun)
+				{
 					usepalette = true;
+					if (obj_player1.ispeppino)
+					{
+						spr_palette = obj_player1.spr_palette;
+						paletteselect = obj_player1.paletteselect;
+					}
+				}
+				else if (b[0] == spr_playerN_hurt && !obj_player1.ispeppino)
+				{
+					usepalette = true;
+					spr_palette = spr_noiseboss_palette;
+					paletteselect = 1;
+					stunspr = spr_doise_deadair;
+					angryspr = spr_playerN_animatronic;
+				}
 				other.propID = id;
 			}
 		}
@@ -103,7 +118,7 @@ switch (introstate)
 	case 5:
 		with (obj_player)
 		{
-			if (floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
 				image_index = image_number - 1;
 		}
 		if (sprite_index == spr_pizzahead_grabitemtransition)
@@ -165,7 +180,7 @@ switch (introstate)
 	case 6:
 		with (obj_player)
 		{
-			if (floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
 				image_index = image_number - 1;
 		}
 		var t = true;
@@ -186,7 +201,7 @@ switch (introstate)
 	case 7:
 		with (obj_player)
 		{
-			if (floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
 				image_index = image_number - 1;
 		}
 		if (floor(image_index) == (image_number - 1))
@@ -198,6 +213,11 @@ switch (introstate)
 			with (obj_player1)
 			{
 				sprite_index = spr_player_gnomecutscene3;
+				if (!ispeppino)
+				{
+					fmod_event_one_shot_3d("event:/sfx/playerN/supernoiseeffect", x, y);
+					sprite_index = spr_playerN_phase3intro1;
+				}
 				image_index = 0;
 				other.introstate++;
 				other.introbuffer = 50;
@@ -210,6 +230,8 @@ switch (introstate)
 		{
 			if (sprite_index == spr_player_gnomecutscene3 && floor(image_index) == (image_number - 1))
 				sprite_index = spr_player_gnomecutscene4;
+			if (sprite_index == spr_playerN_phase3intro1 && floor(image_index) == (image_number - 1))
+				image_index = image_number - 3;
 		}
 		if (floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
 			image_index = image_number - 1;
@@ -221,6 +243,8 @@ switch (introstate)
 			with (obj_player1)
 			{
 				sprite_index = spr_pizzahead_pepintro;
+				if (!ispeppino)
+					sprite_index = spr_playerN_phase3intro2;
 				image_index = 0;
 				image_speed = 0.35;
 			}
@@ -237,11 +261,16 @@ switch (introstate)
 			else
 				image_index = image_number - 3;
 		}
-		if (obj_player1.image_index >= 20 && !shot)
+		if ((obj_player1.image_index >= 20 || !obj_player1.ispeppino) && !shot)
 		{
 			fmod_event_one_shot("event:/sfx/voice/peppinoangryscream2");
 			shot = true;
 			sprite_index = spr_pizzahead_phase3_intro3;
+			if (!obj_player1.ispeppino)
+			{
+				with (obj_music)
+					fmod_event_instance_set_parameter(music.event, "state", 3, false);
+			}
 			with (obj_camera)
 			{
 				shake_mag = 15 / room_speed;
@@ -263,8 +292,18 @@ switch (introstate)
 					sprite_index = spr_pepperman_scared;
 				}
 			}
+			if (global.swapmode)
+			{
+				with (peppinoID)
+				{
+					collide = true;
+					hsp = -irandom_range(8, 10);
+					vsp = -11;
+					sprite_index = spr_player_deathend;
+				}
+			}
 		}
-		if (floor(obj_player1.image_index) == (obj_player1.image_number - 1))
+		if (floor(obj_player1.image_index) == obj_player1.image_number - 1)
 			obj_player1.image_index = obj_player1.image_number - 3;
 		if (introbuffer > 0)
 			introbuffer--;
@@ -285,6 +324,8 @@ switch (introstate)
 			introstate++;
 			with (obj_player1)
 			{
+				if (!ispeppino)
+					fmod_event_one_shot("event:/sfx/playerN/supernoisescream");
 				with (instance_create(x, y, obj_parryeffect))
 					sprite_index = spr_crazyrunothereffect;
 				with (instance_create(x, y, obj_parryeffect))
@@ -292,6 +333,11 @@ switch (introstate)
 				hsp = 14;
 				sprite_index = spr_player_lunge;
 				image_index = 7;
+				if (!ispeppino)
+				{
+					sprite_index = spr_playerN_phase3intro3;
+					image_index = 0;
+				}
 			}
 		}
 		break;
@@ -361,6 +407,8 @@ switch (introstate)
 			with (instance_create(0, 0, obj_pizzahead_whitefade))
 				whitefade = 1.5;
 			instance_destroy(peppermanid);
+			if (global.swapmode)
+				instance_destroy(peppinoID);
 			instance_destroy();
 			with (obj_bosscontroller)
 			{
@@ -370,6 +418,11 @@ switch (introstate)
 			introstate++;
 			with (instance_create(obj_player1.x, obj_player1.y, obj_pepperman))
 			{
+				if (!obj_player1.ispeppino)
+				{
+					x += obj_player1.xscale * 100;
+					y -= 10;
+				}
 				elitehit = 5;
 				instance_destroy(spotlightID);
 				state = states.grabbed;
@@ -435,3 +488,16 @@ if (sprite_index == spr_pizzahead_phase3_intro2 && floor(image_index) >= 15 && f
 else
 	fmod_event_instance_stop(snd_spin, true);
 scr_collide();
+if (global.swapmode)
+{
+	with (peppinoID)
+	{
+		if (collide)
+		{
+			x += hsp;
+			y += vsp;
+			if (vsp < 20)
+				vsp += 0.5;
+		}
+	}
+}

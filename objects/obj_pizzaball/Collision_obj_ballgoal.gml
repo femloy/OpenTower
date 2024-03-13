@@ -4,7 +4,7 @@ with (instance_create(0, 0, obj_pizzaball_rank))
 {
 	fmod_event_instance_play(global.snd_golfjingle);
 	var s = 0;
-	if (global.golfhit <= gh[0])
+	if (global.golfhit <= gh[0] || !obj_player1.ispeppino)
 	{
 		s = 3;
 		collect = 400;

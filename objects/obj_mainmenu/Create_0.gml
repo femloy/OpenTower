@@ -16,10 +16,17 @@ taunt_key = scr_compile_icon_text("[x]");
 grab_key = scr_compile_icon_text("[q]");
 start_key = scr_compile_icon_text("[p]");
 jumpscarecount = 0;
+quitbuffer = 0;
+shownoise = false;
+showswap = false;
+charselect = 0;
+showbuffer_max = 300;
 john = true;
 snotty = true;
 judgement = "confused";
 deletebuffer = 0;
+obj_player1.player_paletteselect[0] = 1;
+obj_player1.player_paletteselect[1] = 1;
 obj_player1.paletteselect = 1;
 percentage = 0;
 perstatus_icon = 0;
@@ -30,3 +37,87 @@ key_jump = false;
 index = 0;
 bombsnd = fmod_event_create_instance("event:/sfx/ui/bombfuse");
 scr_init_input();
+
+pep_game = -4;
+pep_percvisual = 0;
+pep_alpha = 1;
+noise_game = -4;
+noise_percvisual = 0;
+noise_alpha = 0;
+noise_unlocked = false;
+pep_debris = false;
+swap_unlocked = false;
+game_icon_y = 0;
+game_icon_buffer = 0;
+game_icon_index = 0;
+punch_count = 0;
+
+unlock_noise = function(show_screen)
+{
+	for (var i = 0; i < 3; i++)
+	{
+		if (global.game[i].judgement != "none" || global.gameN[i].judgement != "none")
+		{
+			show_screen = true;
+			break;
+		}
+	}
+	if (!show_screen)
+	{
+		ini_open_from_string(obj_savesystem.ini_str_options);
+		show_screen = ini_read_real("Game", "beaten", 0) > 0;
+		if (!show_screen)
+			show_screen = ini_read_real("Game", "noiseunlocked", false);
+		ini_close();
+	}
+	if (show_screen)
+	{
+		noise_unlocked = true;
+		ini_open_from_string(obj_savesystem.ini_str_options);
+		if (ini_read_real("Game", "noiseunlocked", false) == false)
+		{
+			instance_create(0, 0, obj_noiseunlocked);
+			ini_write_real("Game", "noiseunlocked", true);
+			obj_savesystem.ini_str_options = ini_close();
+			gamesave_async_save_options();
+		}
+		else
+			ini_close();
+	}
+};
+unlock_swap = function(show_screen)
+{
+	for (var i = 0; i < 3; i++)
+	{
+		if (global.gameN[i].judgement != "none")
+		{
+			show_screen = true;
+			break;
+		}
+	}
+	if (!show_screen)
+	{
+		ini_open_from_string(obj_savesystem.ini_str_options);
+		show_screen = ini_read_real("Game", "swapunlocked", false);
+		ini_close();
+	}
+	if (show_screen)
+	{
+		swap_unlocked = true;
+		ini_open_from_string(obj_savesystem.ini_str_options);
+		if (ini_read_real("Game", "swapunlocked", false) == false)
+		{
+			with (instance_create(0, 0, obj_noiseunlocked))
+				sprite_index = spr_swapmodeunlocked;
+			ini_write_real("Game", "swapunlocked", true);
+			obj_savesystem.ini_str_options = ini_close();
+			gamesave_async_save_options();
+		}
+		else
+			ini_close();
+	}
+};
+unlock_noise(false);
+ini_open_from_string(obj_savesystem.ini_str_options);
+swap_unlocked = ini_read_real("Game", "swapmode", false) == true;
+ini_close();

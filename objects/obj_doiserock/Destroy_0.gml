@@ -1,1 +1,1 @@
-instance_create(x, y, obj_canonexplosion)
+instance_create(x, y, obj_canonexplosion);

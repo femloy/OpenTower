@@ -17,11 +17,13 @@ if (place_meeting(x, y - s, obj_player))
 		{
 			vsp = -12;
 			movespeed = 14;
-			if (sprite_index != spr_player_rampjump)
+			if (sprite_index != spr_rampjump)
 			{
 				fmod_event_one_shot("event:/sfx/pep/rampjump");
-				sprite_index = spr_player_rampjump;
+				sprite_index = spr_rampjump;
 				image_index = 0;
+				if (!ispeppino)
+					image_speed = 2;
 			}
 			if (isgustavo)
 			{
