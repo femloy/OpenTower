@@ -1,5 +1,6 @@
 # Pizza Tower
-- A full decompilation of Pizza Tower v1.1.0 (Noise Update).
+- A full decompilation of Pizza Tower v1.0.5952 (pre-Noise update).
+- I'm working on upgrading this to v1.1.0.
 - I am not affiliated with Tour De Pizza in any way.
 
 # Requirements
@@ -11,7 +12,7 @@ This repository doesn't include any of the datafiles (FMOD, langs) or sprites. A
 
 # The Script
 
-1. Make sure Pizza Tower is up to date, and open its `data.win` file in UndertaleModTool. Open the "Scripts" tab at the top of the window, and select "Run other script..."
+1. Get Pizza Tower v1.0.5952, and open its `data.win` file in UndertaleModTool. Open the "Scripts" tab at the top of the window, and select "Run other script..."
 
 <img src="github/guide1.png">
 
