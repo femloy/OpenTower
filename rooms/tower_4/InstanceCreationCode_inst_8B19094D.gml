@@ -1,1 +1,0 @@
-pumpkinroom = "street_4";

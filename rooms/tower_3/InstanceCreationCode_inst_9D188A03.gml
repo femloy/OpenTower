@@ -1,1 +1,0 @@
-pumpkinroom = "minigolf_6";

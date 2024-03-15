@@ -1,1 +1,2 @@
-particlespr = spr_bonedebris
+escapestun = 0
+escape = true

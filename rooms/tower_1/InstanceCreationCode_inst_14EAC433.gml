@@ -1,1 +1,0 @@
-targetRoom = trickytreat_1;

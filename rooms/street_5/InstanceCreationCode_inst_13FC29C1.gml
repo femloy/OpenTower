@@ -1,2 +1,0 @@
-elite = true;
-escape = true;

@@ -1,1 +1,0 @@
-pumpkinroom = "freezer_6";

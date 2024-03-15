@@ -1,1 +1,0 @@
-pumpkinroom = "industrial_5";

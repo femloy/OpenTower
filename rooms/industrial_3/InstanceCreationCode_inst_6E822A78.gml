@@ -1,2 +1,0 @@
-escape = true;
-whoopass = true;

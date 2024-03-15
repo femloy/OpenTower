@@ -32,7 +32,7 @@
   "properties": [],
   "overriddenProperties": [],
   "parent": {
-    "name": "Objects",
-    "path": "folders/Objects.yy",
+    "name": "Swap Mode",
+    "path": "folders/Objects/General/Swap Mode.yy",
   },
 }

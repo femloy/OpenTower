@@ -1,1 +1,1 @@
-scr_custom_notification_destructibles()
+particlespr = spr_bonedebris

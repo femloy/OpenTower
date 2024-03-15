@@ -1,1 +1,0 @@
-targetRoom = mansion_6;

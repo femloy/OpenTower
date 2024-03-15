@@ -1,1 +1,0 @@
-pumpkinroom = "badland_7";

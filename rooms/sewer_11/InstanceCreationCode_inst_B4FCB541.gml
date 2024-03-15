@@ -1,1 +1,0 @@
-targetRoom = sewer_10;

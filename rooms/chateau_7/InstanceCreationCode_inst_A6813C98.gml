@@ -1,1 +1,1 @@
-escape = true;
+particlespr = spr_bonedebris

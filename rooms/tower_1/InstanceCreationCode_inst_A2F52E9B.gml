@@ -1,1 +1,0 @@
-pumpkinroom = "medieval_5";

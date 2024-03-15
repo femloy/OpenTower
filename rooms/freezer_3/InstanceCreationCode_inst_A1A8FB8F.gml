@@ -1,1 +1,1 @@
-particlespr = spr_packageparticle;
+targetRoom = freezer_treasure

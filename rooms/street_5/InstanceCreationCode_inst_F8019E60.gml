@@ -1,1 +1,0 @@
-targetRoom = street_4;
