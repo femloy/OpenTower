@@ -1,29 +1,29 @@
 event_inherited()
-requires_level = 1
+requires_level = true
 ID = -4
 items = ds_list_create()
 item_height = 32
 item_sprite = spr_button_nineslice
 scroll = 0
 selected_item = -4
-dirty = 1
-clicked = 0
+dirty = true
+clicked = false
 surf = -4
 
-on_item_click = function(argument0)
+on_item_click = function(item_id)
 {
-	if (argument0 < ds_list_size(items))
+	if (item_id < ds_list_size(items))
 	{
-		if (selected_item == argument0)
-			on_item_double_click(argument0);
-		selected_item = argument0;
+		if (selected_item == item_id)
+			on_item_double_click(item_id);
+		selected_item = item_id;
 	}
 	else
 		selected_item = -4;
 };
-on_item_double_click = function(argument0)
+on_item_double_click = function(item_id)
 {
-	trace("double clicked item ", argument0);
+	trace("double clicked item ", item_id);
 };
 on_item_draw = function(_x, _y, _item)
 {

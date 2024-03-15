@@ -1,1 +1,1 @@
-scr_soundtest_secret();
+pumpkinroom = "forest_7"

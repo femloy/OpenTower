@@ -119,7 +119,7 @@ function scr_playersounds()
 				else if (!fmod_event_instance_is_playing(sjumpsnd))
 					fmod_event_instance_set_parameter(sjumpsnd, "state", 0, true);
 			}
-			if (sprite_index == spr_player_Sjumpcancelstart)
+			if (sprite_index == spr_player_Sjumpcancelstart || sprite_index == spr_playerN_sidewayspin)
 				fmod_event_instance_stop(sjumpsnd, true);
 			if (fmod_event_instance_is_playing(sjumpsnd))
 				fmod_event_instance_set_3d_attributes(sjumpsnd, x, y);
@@ -444,7 +444,7 @@ function scr_playersounds()
                     fmod_event_instance_set_parameter(snd_minijetpack, "state", 1, true)
             }
             else if fmod_event_instance_is_playing(snd_minijetpack)
-                fmod_event_instance_set_parameter(snd_minijetpack, "state", 1, 1)
+                fmod_event_instance_set_parameter(snd_minijetpack, "state", 1, true)
             if ((sprite_index == spr_playerN_sidewayspin || sprite_index == spr_playerN_sidewayspinend) && (state == states.mach2 || state == states.mach3 || ((tauntstoredstate == states.mach2 || tauntstoredstate == states.mach3) && state == states.chainsaw)))
             {
                 if (!fmod_event_instance_is_playing(snd_airspin))

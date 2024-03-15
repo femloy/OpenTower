@@ -1,7 +1,5 @@
 if (!active)
-{
-	
-}
+	exit;
 
 var accel = 0.4
 switch state

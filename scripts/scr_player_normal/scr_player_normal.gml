@@ -108,10 +108,9 @@ function state_player_normal()
 			else if (global.fill <= 0 && !instance_exists(obj_ghostcollectibles))
 				sprite_index = spr_hurtwalk;
 			else if ((global.combo >= 25 && global.combo < 50) || instance_exists(obj_pizzafaceboss)
-			|| global.noisejetpack || (global.noisejetpack && (ispeppino || noisepizzapepper)))
+			|| (global.noisejetpack && (ispeppino || noisepizzapepper)))
 				sprite_index = spr_3hpwalk;
-			else if (global.combo >= 50 || instance_exists(obj_pizzaface_thunderdark)
-			|| (ispeppino && instance_exists(obj_pizzaface_thunderdark)))
+			else if (global.combo >= 50 || (ispeppino && instance_exists(obj_pizzaface_thunderdark)))
 				sprite_index = spr_ragemove;
 			else
 				sprite_index = movespr;

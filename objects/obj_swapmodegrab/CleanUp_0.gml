@@ -1,1 +1,1 @@
-destroy_sounds([grab_snd])
+destroy_sounds([grab_snd]);

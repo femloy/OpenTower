@@ -26,7 +26,7 @@ if (global.levelcomplete && !global.freezercutscene)
 			image_speed = 0.35;
 			sprite_index = spr_cheesedragon_goingup;
 			repeat (3)
-				create_debris(x, y, 3385);
+				create_debris(x, y, spr_icedebris);
 		}
 		cutscene_end_action();
 	}], [function()

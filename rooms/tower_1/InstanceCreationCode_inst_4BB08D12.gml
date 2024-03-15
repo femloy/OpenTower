@@ -1,0 +1,1 @@
+targetRoom = tower_ruinsecret

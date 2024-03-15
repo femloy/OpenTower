@@ -187,7 +187,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 						b = textkey.reset_binds;
 						break;
 				}
-				array_push(arr, [char_x - offset_x, char_y - offset_y, t, b]);
+				array_push(arr, [char_x, char_y, t, b]);
 				char_x += 32;
 				pos += 2;
 				break;
@@ -210,7 +210,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 						break;
 				}
 				n = string_copy(text, start, (pos - start) + 1);
-				array_push(arr, [char_x, char_y, texttype.normal, n]); // 0 << 0
+				array_push(arr, [char_x - offset_x, char_y - offset_y, texttype.normal, n]); // 0 << 0
 				char_x += string_width(n);
 				break;
 		}

@@ -12,8 +12,11 @@ if (other.ispeppino && !global.swapmode)
 	{
 		sprite_index = spr_grandpa_punch;
 		image_index = 0;
-		other.hurted = false;
-		other.flash = false;
+		if (!global.swapmode)
+		{
+			other.hurted = false;
+			other.flash = false;
+		}
 		scr_hurtplayer(other);
 	}
 	else

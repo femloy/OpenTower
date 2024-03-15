@@ -27,7 +27,6 @@ judgement = "confused";
 deletebuffer = 0;
 obj_player1.player_paletteselect[0] = 1;
 obj_player1.player_paletteselect[1] = 1;
-obj_player1.paletteselect = 1;
 percentage = 0;
 perstatus_icon = 0;
 extrauialpha = 0;
@@ -67,17 +66,17 @@ unlock_noise = function(show_screen)
 		ini_open_from_string(obj_savesystem.ini_str_options);
 		show_screen = ini_read_real("Game", "beaten", 0) > 0;
 		if (!show_screen)
-			show_screen = ini_read_real("Game", "noiseunlocked", false);
+			show_screen = ini_read_real("Game", "noiseunlocked", 0);
 		ini_close();
 	}
 	if (show_screen)
 	{
 		noise_unlocked = true;
 		ini_open_from_string(obj_savesystem.ini_str_options);
-		if (ini_read_real("Game", "noiseunlocked", false) == false)
+		if (ini_read_real("Game", "noiseunlocked", 0) == 0)
 		{
 			instance_create(0, 0, obj_noiseunlocked);
-			ini_write_real("Game", "noiseunlocked", true);
+			ini_write_real("Game", "noiseunlocked", 1);
 			obj_savesystem.ini_str_options = ini_close();
 			gamesave_async_save_options();
 		}
@@ -98,18 +97,18 @@ unlock_swap = function(show_screen)
 	if (!show_screen)
 	{
 		ini_open_from_string(obj_savesystem.ini_str_options);
-		show_screen = ini_read_real("Game", "swapunlocked", false);
+		show_screen = ini_read_real("Game", "swapunlocked", 0);
 		ini_close();
 	}
 	if (show_screen)
 	{
 		swap_unlocked = true;
 		ini_open_from_string(obj_savesystem.ini_str_options);
-		if (ini_read_real("Game", "swapunlocked", false) == false)
+		if (ini_read_real("Game", "swapunlocked", 0) == 0)
 		{
 			with (instance_create(0, 0, obj_noiseunlocked))
 				sprite_index = spr_swapmodeunlocked;
-			ini_write_real("Game", "swapunlocked", true);
+			ini_write_real("Game", "swapunlocked", 1);
 			obj_savesystem.ini_str_options = ini_close();
 			gamesave_async_save_options();
 		}
@@ -119,5 +118,5 @@ unlock_swap = function(show_screen)
 };
 unlock_noise(false);
 ini_open_from_string(obj_savesystem.ini_str_options);
-swap_unlocked = ini_read_real("Game", "swapmode", false) == true;
+swap_unlocked = ini_read_real("Game", "swapmode", 0) == 1;
 ini_close();

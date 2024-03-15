@@ -1,1 +1,1 @@
-self.add_hit(other.id);
+add_hit(other.id);

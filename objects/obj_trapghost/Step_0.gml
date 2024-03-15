@@ -50,7 +50,6 @@ switch (state)
 						break;
 				}
 			}
-			break;
 		}
 		else
 		{
@@ -92,7 +91,6 @@ switch (state)
 						break
 				}
 			}
-			break
 		}
 }
 visible = state != states.chase;

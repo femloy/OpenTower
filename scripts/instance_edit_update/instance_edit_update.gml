@@ -1,12 +1,12 @@
-function object_apply_values(argument0) //object_apply_values
+function object_apply_values(obj_struct)
 {
-    sprite_index = asset_get_index(argument0.sprite_index)
-    snap_tile_val = argument0.snap_tile_val
-    xoffset = argument0.xoffset
-    yoffset = argument0.yoffset
+    sprite_index = asset_get_index(obj_struct.sprite_index);
+    snap_tile_val = obj_struct.snap_tile_val;
+    xoffset = obj_struct.xoffset;
+    yoffset = obj_struct.yoffset;
 }
 
-function instance_edit_update() //instance_edit_update
+function instance_edit_update()
 {
     var pos = editor_get_world_pos()
     var xx = pos[0]
@@ -32,14 +32,14 @@ function instance_edit_update() //instance_edit_update
                         var o = selected_object
                         var inst = noone
                         with (selected_instance)
-                            selected = 0
+                            selected = false;
                         with (instance_create_depth((snap_tile(xx, o.snap_tile_val) + o.xoffset), (snap_tile(yy, o.snap_tile_val) + o.yoffset), 0, obj_editorobject))
                         {
                             object_apply_values(o)
                             object = asset_get_index(o.object_index)
                             ID = o.ID
                             inst = id
-                            selected = 1
+                            selected = true;
                             with (global.current_level.current_room)
                                 array_push(instances, other.id)
                             create_components(ID, id)
@@ -50,10 +50,10 @@ function instance_edit_update() //instance_edit_update
                     else
                     {
                         with (selected_instance)
-                            selected = 0
+                            selected = false;
                         with (instance_place(xx, yy, obj_editorobject))
                         {
-                            selected = 1
+                            selected = true;
                             if (other.selected_instance != id)
                                 create_components(ID, id)
                             other.selected_instance = id

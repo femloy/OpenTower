@@ -11,7 +11,7 @@ if (state == states.normal)
         with (obj_noiseboss)
         {
             fmod_event_one_shot("event:/sfx/voice/noisescream");
-            substate = states.finale;
+            substate = states.ending;
             sprite_index = spr_playerN_bossintro;
             image_index = 0;
         }
@@ -39,10 +39,10 @@ else
         layer_background_sprite(bg1, bg_doisebossBG2end);
         layer_background_sprite(bg2, bg_doisebossBG1end);
         layer_background_speed(bg2, 0.35);
-        layer_hspeed(lay1, false);
-        layer_vspeed(lay1, false);
-        layer_hspeed(lay2, false);
-        layer_vspeed(lay2, false);
+        layer_hspeed(lay1, 0);
+        layer_vspeed(lay1, 0);
+        layer_hspeed(lay2, 0);
+        layer_vspeed(lay2, 0);
         instance_destroy(obj_doisecreature);
         if (!obj_player1.ispeppino)
         {

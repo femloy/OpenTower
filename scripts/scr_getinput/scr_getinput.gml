@@ -102,22 +102,22 @@ function scr_menu_getinput()
 		
 		var inputs = [
 			// input, menu_input, is_press
-			["key_up", "menu_up", false],
-			["key_up2", "menu_up", true],
-			["key_down", "menu_down", false],
-			["key_down2", "menu_down", true],
-			["key_left", "menu_left", false],
-			["key_left2", "menu_left", true],
-			["key_right", "menu_right", false],
-			["key_right2", "menu_right", true],
-			["key_start", "menu_start", true],
-			["key_back", "menu_back", true],
-			["key_jump", "menu_select", true],
-			["key_jump2", "menu_select", false],
-			["key_delete", "menu_delete", false],
-			["key_delete2", "menu_delete", true],
-			["key_quit", "menu_delete", false],
-			["key_quit2", "menu_delete", true]
+			["key_up", "menu_up", 0],
+			["key_up2", "menu_up", 1],
+			["key_down", "menu_down", 0],
+			["key_down2", "menu_down", 1],
+			["key_left", "menu_left", 0],
+			["key_left2", "menu_left", 1],
+			["key_right", "menu_right", 0],
+			["key_right2", "menu_right", 1],
+			["key_start", "menu_start", 1],
+			["key_back", "menu_back", 1],
+			["key_jump", "menu_select", 1],
+			["key_jump2", "menu_select", 0],
+			["key_delete", "menu_delete", 0],
+			["key_delete2", "menu_delete", 1],
+			["key_quit", "menu_delete", 0],
+			["key_quit2", "menu_delete", 1]
 		];
 		
 		for (var i = 0; i < array_length(inputs); i++)
@@ -319,5 +319,5 @@ function scr_get_move_axis(input_str)
 			}
 		}
 	}
-	return false;
+	return 0;
 }

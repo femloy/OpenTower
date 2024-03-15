@@ -113,12 +113,13 @@ function scr_calculate_text(str)
 {
 	draw_set_font(font2);
 	var pos = 0;
-	for (var str2 = ""; pos <= string_length(str); str2 = scr_separate_text(str2))
-	{
-		pos++;
-		str2 = string_insert(string_char_at(str, pos), str2, string_length(str2) + 1);
-		str2 = scr_separate_text(str2);
-	}
+	var str2 = "";
+    while (pos <= string_length(str))
+    {
+        pos++;
+        str2 = string_insert(string_char_at(str, pos), str2, string_length(str2) + 1);
+        str2 = scr_separate_text(str2);
+    }
 	return str2;
 }
 function scr_calculate_height(str)

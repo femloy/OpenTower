@@ -44,7 +44,7 @@ switch state
                 array_push(real_args, cmd.args[i][args[i]])
             function_overload(real_args, cmd.func)
             state = 0
-            break
+			break;
         }
         else
         {
@@ -66,7 +66,6 @@ switch state
                 else
                     state = 1
             }
-            break
         }
 }
 

@@ -42,8 +42,6 @@ if (!fadein)
 					}
 					image_index = 0;
 				}
-				cutscenebuffer = 50;
-				state = 2;
 			}
 			else
 			{

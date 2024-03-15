@@ -16,8 +16,8 @@ enum particle
 	landcloud,
 	ratmountballooncloud,
 	groundpoundeffect,
-	bubblepop,
 	noisegrounddash,
+	bubblepop,
 	
 	enum_length // not to be used
 }

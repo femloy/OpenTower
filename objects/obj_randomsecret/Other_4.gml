@@ -1,15 +1,15 @@
 if (room == rank_room)
     instance_destroy()
-selected = 0
+selected = false
 minutes = 0
 seconds = 25
 if (room != secret_entrance)
     start = true;
 alarm[0] = 60
 startstate = -4
-isgustavo = 0
-shotgunAnim = 0
-global.noisejetpack = 0
+isgustavo = false
+shotgunAnim = false
+global.noisejetpack = false
 if (room != chateau_secret2)
     instance_destroy(obj_trapghost)
 switch room

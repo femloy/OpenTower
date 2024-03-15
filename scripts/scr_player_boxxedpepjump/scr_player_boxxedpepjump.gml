@@ -47,7 +47,8 @@ function scr_player_boxxedpepjump()
 		if (key_jump && boxxedpepjump > 4)
 		{
 			GamepadSetVibration(0, 0.4, 0.4, 0.65);
-			fmod_event_one_shot_3d("event:/sfx/boxxed/flap", x, y);
+			if (ispeppino)
+				fmod_event_one_shot_3d("event:/sfx/boxxed/flap", x, y);
 			jumpstop = false;
 			sprite_index = spr_boxxedpep_flap;
 			image_index = 0;

@@ -164,11 +164,11 @@ function scr_hurtplayer(player)
 		{
 			if (state == states.animatronic)
 			{
-				with (create_debris(x, y, spr_animatronicdebris))
+				with (instance_create(x, y, obj_peshinodebris))
 					image_index = 0;
-				with (create_debris(x, y, spr_animatronicdebris))
+				with (instance_create(x, y, obj_peshinodebris))
 					image_index = 1;
-				with (create_debris(x, y, spr_animatronicdebris))
+				with (instance_create(x, y, obj_peshinodebris))
 					image_index = 2;
 			}
 			if (state == states.barrel || state == states.barrelclimbwall || state == states.barreljump || state == states.barrelslide)
@@ -329,7 +329,7 @@ function scr_hurtplayer(player)
 			if (damage_n % 10 == 0)
 				tv_do_expression(hurtTV);
 			
-			if (obj_tv.expressionsprite != spr_tv_exprhurt && obj_tv.expressionsprite != spr_tv_hurtG)
+			if (obj_tv.expressionsprite != spr_tv_exprhurt && obj_tv.expressionsprite != spr_tv_hurtG && obj_tv.expressionsprite != spr_tv_exprhurtN)
 			{
 				instance_destroy(obj_transfotip);
 				var txt = lang_get_value("peppinohurt");

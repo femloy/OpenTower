@@ -1,6 +1,5 @@
 var cx = camera_get_view_x(view_camera[0]);
 var cy = camera_get_view_y(view_camera[0]);
-draw_sprite(sprite_index, image_index, x, y);
 if (sprite_index == spr_menutv1_confirmN || sprite_index == spr_menutv1_selectedN || sprite_index == spr_menutv2_confirmN || sprite_index == spr_menutv2_selectedN || sprite_index == spr_menutv3_confirmN || sprite_index == spr_menutv3_selectedN)
 {
 	shader_set(global.Pal_Shader);

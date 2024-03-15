@@ -1,6 +1,6 @@
 if (room == rm_editor)
 	exit;
-if (state == states.walk && grounded && vsp > 0 && (obj_player.state == states.freefallland || (obj_player1.state == states.ratmountbounce && obj_player1.sprite_index == spr_playerN_noisecrusherland)) && bbox_in_camera(view_camera[0], 32))
+if (state == states.walk && grounded && vsp > 0 && (obj_player1.state == states.freefallland || (obj_player1.state == states.ratmountbounce && obj_player1.sprite_index == spr_playerN_noisecrusherland)) && bbox_in_camera(view_camera[0], 32))
 	scr_pizzaball_go_to_thrown(0, -10);
 arrowindex += 0.35;
 switch (state)

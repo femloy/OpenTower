@@ -1,5 +1,5 @@
 var r = string_letters(room_get_name(room));
-if (r != "towertutorial" && string_copy(r, 1, 5) == "tower")
+if (r != "towertutorial" && r != "towertutorialN" && string_copy(r, 1, 5) == "tower")
 {
 	timer_tower = true;
 	if (global.panic)

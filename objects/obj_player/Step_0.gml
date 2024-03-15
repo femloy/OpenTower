@@ -51,10 +51,19 @@ enum colflag
 collision_flags = 0;
 if (place_meeting(x, y, obj_secretportal) || place_meeting(x, y, obj_secretportalstart))
 	collision_flags |= colflag.secret;
-if (scr_solid(x, y + 1))
+if (scr_solid_player(x, y + 1))
 	collision_flags |= colflag.grounded;
 if (place_meeting(x, y + 1, obj_slope))
 	collision_flags |= colflag.sloped;
+
+// noise's standing superjump is just here I guess
+if (character == "P" && !ispeppino && ((scr_check_superjump() && key_jump2) || key_superjump) && state != states.mach3 && can_jump && vsp > 0 && (state == states.normal || state == states.mach2))
+{
+	sprite_index = spr_superjumpprep;
+	state = states.Sjumpprep;
+	hsp = 0;
+	image_index = 0;
+}
 
 // state machine
 switch (state)
@@ -781,7 +790,7 @@ if (pistolcooldown > 0)
 	pistolcooldown--;
 if (prevstate != state && state != states.chainsaw)
 {
-	if (prevstate == states.trashroll && prevsprite != spr_player_corpsestart && prevsprite != spr_player_corpsesurf)
+	if (prevstate == states.trashroll && prevsprite != spr_playercorpsestart && prevsprite != spr_playercorpsesurf)
 		create_debris(x, y, spr_player_trashlid);
 	if (prevstate == states.slipnslide && !ispeppino && instance_exists(obj_surfback))
 	{
@@ -1087,7 +1096,7 @@ if (state == states.dead && y > (room_height * 2) && !instance_exists(obj_backto
 	instance_create(0, 0, obj_backtohub_fadeout);
 	global.leveltorestart = -4;
 	global.leveltosave = -4;
-	global.startgate = 0;
+	global.startgate = false;
 }
 if (baddiegrabbedID == obj_null && (state == states.grab || state == states.superslam || state == states.tacklecharge))
 	state = states.normal;
@@ -1431,21 +1440,32 @@ if (distance_to_object(obj_spike) < 500)
 					instance_destroy();
 				if (h != other.hurted && other.hurted)
 					fmod_event_one_shot_3d("event:/sfx/enemies/pizzardelectricity", x, y);
+				break;
 			}
-			else
+			with (other)
 			{
-				with (other)
-				{
-					state = states.bump;
-					sprite_index = spr_bump;
-					image_index = 0;
-					hsp = -6 * xscale;
-					vsp = -4;
-					fmod_event_one_shot_3d("event:/sfx/knight/lose", x, y);
-					repeat (3)
-						create_debris(x, y, spr_wooddebris);
-				}
+				state = states.bump;
+				sprite_index = spr_bump;
+				image_index = 0;
+				hsp = -6 * xscale;
+				vsp = -4;
+				fmod_event_one_shot_3d("event:/sfx/knight/lose", x, y);
+				repeat (3)
+					create_debris(x, y, spr_wooddebris);
 			}
+			break;
+		}
+	}
+}
+
+// decomp helper
+if mouse_check_button(mb_left)
+{
+	with all
+	{
+		if point_in_rectangle(mouse_x, mouse_y, bbox_left, bbox_top, bbox_right, bbox_bottom)
+		{
+			trace("I AM A ", object_get_name(object_index), " AND THAT IS ", object_index, "!");
 		}
 	}
 }

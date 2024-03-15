@@ -1,8 +1,7 @@
 event_inherited()
 if (!instance_exists(inst))
-{
-	
-}
+	exit;
+
 if (!dragged && obj_editor.instance_state == inst_states.idle)
 {
     switch dock
@@ -45,7 +44,7 @@ if (!dragged && obj_editor.instance_state == inst_states.idle)
     {
         if (key_place && obj_editorcursor.hovered_object == other.id)
         {
-            other.dragged = 1
+            other.dragged = true
             other.oldxscale = other.inst.image_xscale
             other.oldyscale = other.inst.image_yscale
             instance_state = (2 << 0)
@@ -85,7 +84,7 @@ else if dragged
     }
     if obj_editor.key_place_released
     {
-        dragged = 0
+        dragged = false
         with (inst)
             command_add(new ResizeCMD(id, image_xscale, image_yscale, other.oldxscale, other.oldyscale))
         obj_editor.instance_state = (0 << 0)

@@ -22,7 +22,13 @@ if (state == states.normal && !instance_exists(obj_option))
 	if (punch_count >= 100)
 	{
 		if (!noise_unlocked)
+		{
 			unlock_noise(true);
-		punch_count = 0;
+			punch_count = 0;
+		}
+		else
+		{
+			
+		}
 	}
 }

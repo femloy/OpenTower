@@ -57,21 +57,29 @@ function component_get_dock(str)
     switch str
     {
         case "BottomRight":
-            return comp_dock.right;
+            return comp_dock.bottomright;
+			break;
         case "Bottom":
             return comp_dock.bottom;
+			break;
         case "BottomLeft":
             return comp_dock.bottomleft;
+			break;
         case "TopRight":
             return comp_dock.topright;
+			break;
         case "Top":
             return comp_dock.top;
+			break;
         case "TopLeft":
             return comp_dock.topleft;
+			break;
         case "Right":
             return comp_dock.right;
+			break;
         case "Left":
             return comp_dock.left;
+			break;
     }
     return noone;
 }

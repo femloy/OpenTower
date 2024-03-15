@@ -1,6 +1,5 @@
 if (!global.option_hud)
-{
-}
+	exit;
 if start
 {
     var _mins = minutes

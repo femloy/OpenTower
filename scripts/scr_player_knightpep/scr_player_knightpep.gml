@@ -87,7 +87,7 @@ function scr_player_knightpep()
 	}
 	if (floor(image_index) == (image_number - 1) && sprite_index == spr_knightpepjumpstart)
 		sprite_index = spr_knightpepjump;
-	if ((floor(image_index) == (image_number - 1) && sprite_index == spr_knightpepjump) || (!grounded && sprite_index != spr_knightpepjumpstart && sprite_index != spr_knightpepjump && sprite_index != spr_knightpepthunder && sprite_index != spr_knightpepdowntrust && sprite_index != spr_knightpepdoublejump))
+	if ((floor(image_index) == (image_number - 1) && sprite_index == spr_knightpepjump) || (!grounded && sprite_index != spr_knightpepjumpstart && sprite_index != spr_knightpepjump && sprite_index != spr_knightpepthunder && sprite_index != spr_knightpepdowntrust && sprite_index != spr_knightpepdoublejump && sprite_index != spr_playerN_knightdoublejumpfall))
 		sprite_index = spr_knightpepfall;
 	if ((sprite_index == spr_knightpepdowntrust || sprite_index == spr_knightpepfall || sprite_index == spr_knightpepdoublejump || sprite_index == spr_playerN_knightdoublejumpfall) && grounded && vsp > 0 && !scr_slope())
 	{

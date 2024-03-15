@@ -1,6 +1,8 @@
 event_inherited()
 sprite_index = spr_pumpkingate
-if (!is_holiday(holiday.halloween) || quick_ini_read_real("", "halloween", "pumpkincount", 0) < 20 || global.panic)
+
+if (!is_holiday(holiday.halloween) || quick_ini_read_real("", "halloween", "pumpkincount", 0) < 20)
+|| global.panic
 {
     instance_destroy()
     if is_holiday(holiday.halloween)

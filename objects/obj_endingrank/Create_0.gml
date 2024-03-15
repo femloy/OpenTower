@@ -94,6 +94,8 @@ switch (rank_spr)
 		r = "officer";
 		break;
 }
+rank_name = r;
+
 switch (rank_spr)
 {
 	case spr_rank_yousuck:

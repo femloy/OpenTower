@@ -25,6 +25,7 @@ if (player == 0 && place_meeting(x, y, obj_player))
 				treasure_room = room;
 				ds_list_add(global.saveroom, other.id);
 				global.treasure = true;
+				global.combotime = 60;
 				hsp = 0;
 				vsp = 0;
 				if (!other.got)

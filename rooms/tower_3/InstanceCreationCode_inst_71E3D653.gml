@@ -1,0 +1,1 @@
+pumpkinroom = "minigolf_6"

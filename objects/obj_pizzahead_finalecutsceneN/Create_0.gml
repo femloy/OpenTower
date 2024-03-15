@@ -16,7 +16,7 @@ if global.swapmode
 with (obj_player1)
 {
     if ispeppino
-        swap_player(0);
+        swap_player(false);
 }
 
 pizzahead = instance_create(786, 369, obj_finaleN_prop);

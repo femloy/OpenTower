@@ -465,52 +465,6 @@ for (var i = 0; i < array_length(pats); i++)
 		p.pattern = pat;
 }
 
-add_achievement_notify("halloween1", -4, function(data)
-{
-	var type = data[0];
-	var arr = data[1];
-	if (type == notifs.pumpkin_collect && arr[0] >= 30)
-		achievement_unlock(name, "Pumpkin Munchkin", spr_achievement_halloween, 0);
-});
-
-add_achievement_notify("halloween2", function()
-{
-	achievement_add_variable("hw2count", 0, false, true);
-	achievement_add_variable("hw2start", false, false, true);
-}, function(data)
-{
-	var type = data[0];
-	var arr = data[1];
-	switch (type)
-	{
-		case notifs.trickytreat:
-			if (arr[0] == trickytreat_1)
-			{
-				if (achievement_get_variable("hw2count").value >= 10)
-				{
-					achievement_unlock(name, "Tricksy", spr_achievement_halloween, 1);
-					with (obj_achievementviewer)
-						event_perform(ev_other, ev_room_start);
-				}
-				else
-					trace("Couldn't get the achievement!, max count: ", achievement_get_variable("hw2count").value);
-				achievement_get_variable("hw2count").value = 0;
-			}
-			break;
-		case notifs.trickytreat_fail:
-			achievement_get_variable("hw2count").value = 0;
-			break;
-		case notifs.pumpkin_collect:
-			var r = string_letters(room_get_name(room));
-			if (r == "trickytreat" || r == "trickytreatb")
-			{
-				trace("Found pumpkin at: ", room_get_name(room));
-				achievement_get_variable("hw2count").value += 1;
-			}
-			break;
-	}
-});
-
 #endregion
 #region NOISE PALETTES
 
@@ -752,7 +706,7 @@ add_achievement_notify("pal_bubbly", function()
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("bubbly_count");
-	if (type == notifs.UNKNOWN_70 && arr[0] == "space")
+	if (type == notifs.antigrav && arr[0] == "space")
 	{
 		count.value++;
 		if (count.value >= 21)
@@ -770,7 +724,7 @@ add_achievement_notify("pal_welldone", function()
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("welldone_count");
-	if (type == notifs.corpsesurf && arr[0] == "badland")
+	if (type == notifs.cow_kick_count && arr[0] == "badland")
 	{
 		count.value++;
 		if (count.value >= 45)
@@ -811,7 +765,7 @@ add_achievement_notify("pal_grannykisses", function()
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.UNKNOWN_73)
+	if (type == notifs.interact_granny)
 	{
 		var b = achievement_get_variable(concat("granny_", arr[0]));
 		if (!is_undefined(b))
@@ -885,6 +839,58 @@ add_achievement_notify("pal_towerguy", function()
 
 #endregion
 
+#region TRICKY TREAT
+
+add_achievement_notify("halloween1", -4, function(data)
+{
+	var type = data[0];
+	var arr = data[1];
+	if (type == notifs.pumpkin_collect && arr[0] >= 30)
+		achievement_unlock(name, "Pumpkin Munchkin", spr_achievement_halloween, 0);
+});
+
+add_achievement_notify("halloween2", function()
+{
+	achievement_add_variable("hw2count", 0, false, true);
+	achievement_add_variable("hw2start", false, false, true);
+}, function(data)
+{
+	var type = data[0];
+	var arr = data[1];
+	switch (type)
+	{
+		case notifs.trickytreat_enter:
+			if (arr[0] == trickytreat_1)
+			{
+				if (achievement_get_variable("hw2count").value >= 10)
+				{
+					achievement_unlock(name, "Tricksy", spr_achievement_halloween, 1);
+					with (obj_achievementviewer)
+						event_perform(ev_other, ev_room_start);
+				}
+				else
+					trace("Couldn't get the achievement!, max count: ", achievement_get_variable("hw2count").value);
+				achievement_get_variable("hw2count").value = 0;
+			}
+			break;
+		
+		case notifs.trickytreat_fail:
+			achievement_get_variable("hw2count").value = 0;
+			break;
+		
+		case notifs.pumpkin_collect:
+			var r = string_letters(room_get_name(room));
+			if (r == "trickytreat" || r == "trickytreatb")
+			{
+				trace("Found pumpkin at: ", room_get_name(room));
+				achievement_get_variable("hw2count").value += 1;
+			}
+			break;
+	}
+});
+
+#endregion
+
 #region ENTRANCE
 
 add_achievement_notify("entrance1", function() {
@@ -894,7 +900,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.levelblock_break && global.leveltosave == "entrance" && arr[0] == 63)
+	if (type == notifs.levelblock_break && global.leveltosave == "entrance" && arr[0] == obj_deadjohnparent)
 	{
 		achievement_get_variable("entr1count").value += 1;
 		if (achievement_get_variable("entr1count").value >= 16)
@@ -984,9 +990,13 @@ add_achievement_notify("ruin1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
+	var val = achievement_get_variable("ruin1hurt");
 	if (type == notifs.hurt_player && global.leveltosave == "ruin" && arr[2] == obj_canonexplosion)
-		achievement_get_variable("ruin1hurt").value = true;
-	else if (type == 5 && arr[0] == "ruin" && achievement_get_variable("ruin1hurt").value == 0)
+	{
+		val.value = true;
+		trace("Locked out of Thrill Seeker!");
+	}
+	else if (type == 5 && arr[0] == "ruin" && !val.value)
 		achievement_unlock(name, "Thrill Seeker", spr_achievement_ruin, 0);
 });
 add_achievement_notify("ruin2", function(data)
@@ -1751,7 +1761,7 @@ add_achievement_notify("war2", function(data)
 			if (!val)
 			{
 				achievement_get_variable("war2_missed").value += 1;
-				trace("Shot missed!");
+				trace("Sharpshooter: Shot missed!");
 			}
 		}
 	}

@@ -4,7 +4,7 @@ if (!ds_list_empty(global.debris_list))
 	{
 		var q = ds_list_find_value(global.debris_list, i);
 		if (is_struct(q))
-			q = undefined;
+			delete q;
 	}
 }
 ds_list_clear(global.debris_list);

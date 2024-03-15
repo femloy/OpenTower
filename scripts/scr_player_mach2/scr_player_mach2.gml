@@ -7,7 +7,6 @@ function scr_player_mach2()
 	var accel = 0.1;
 	var mach4accel = 0.4;
 	var machrollvsp = 10;
-	
 	if (windingAnim < 2000)
 		windingAnim++;
 	if (place_meeting(x, y + 1, obj_railparent))
@@ -182,22 +181,25 @@ function scr_player_mach2()
 		vsp = machrollvsp;
 		image_index = 0;
 		if (!grounded)
-			sprite_index = spr_player_mach2jump;
+			sprite_index = spr_mach2jump;
 		else
-			sprite_index = spr_player_machroll;
+			sprite_index = spr_machroll;
 		if (character == "V")
 			sprite_index = spr_playerV_divekickstart;
 	}
 	if (key_attack && !place_meeting(x + xscale, y, obj_solid) && character == "S" && grounded)
 	{
 		state = states.handstandjump;
-		movespeed = 0;
+		movespeed = 0;	
 	}
 	if ((!key_attack && movespeed >= 8 && grounded && vsp > 0 && skateboarding == 0) || (character == "S" && move == 0 && grounded))
 	{
 		image_index = 0;
 		state = states.machslide;
-		fmod_event_one_shot_3d("event:/sfx/pep/break", x, y);
+		if (ispeppino)
+			fmod_event_one_shot_3d("event:/sfx/pep/break", x, y);
+		else
+			fmod_event_one_shot_3d("event:/sfx/playerN/break", x, y);
 		sprite_index = spr_machslidestart;
 	}
 	else if (!key_attack && movespeed < 8 && grounded && vsp > 0 && skateboarding == 0)

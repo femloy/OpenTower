@@ -1,7 +1,6 @@
 if (!active)
-{
-	
-}
+	exit;
+
 hovered = obj_editorcursor.hovered_object == id
 image_index = 0
 if hovered

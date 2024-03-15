@@ -16,7 +16,7 @@ if (visible == 1)
 		{
 			if (state == states.jetpackjump)
 			{
-				if (sprite_index != spr_player_jetpackstart2)
+				if (sprite_index != spr_jetpackstart2)
 				{
 					with (instance_create(x, y, obj_rocketdead))
 						sprite_index = spr_jetpackdebris;

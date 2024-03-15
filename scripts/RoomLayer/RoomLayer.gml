@@ -49,7 +49,7 @@ function room_layer_delete(argument0)
 				if (b.depth == ds_list_find_value(items, selected_item).depth)
 				{
 					array_delete(arr, i, 1);
-					b = undefined;
+					delete b;
 					break;
 				}
 			}
@@ -117,27 +117,31 @@ function room_layer_item_dirty(argument0)
 	var _arr = array_create(0);
 	with (global.current_level.current_room)
 	{
-		var i = 0;
-		while (i < array_length(argument0))
-		{
-			var b = argument0[i];
-			var _name = "";
-			switch (b.layer_type)
-			{
-				case 1:
-					_name = "Tile ";
-					if (b.depth < 0)
-						_name = "Tile FG ";
-					break;
-				case 0:
-					_name = "Background ";
-					if (b.depth < 0)
-						_name = "Foreground ";
-					break;
-			}
-			_name += string(abs(b.depth));
-			continue;
-		}
+		for (var i = 0; i < array_length(argument0); i++)
+        {
+            var b = argument0[i]
+            var _name = ""
+            switch b.layer_type
+            {
+                case (1 << 0):
+                    _name = "Tile "
+                    if (b.depth < 0)
+                        _name = "Tile FG "
+                    break
+                case (0 << 0):
+                    _name = "Background "
+                    if (b.depth < 0)
+                        _name = "Foreground "
+                    break
+            }
+
+            _name += string(abs(b.depth))
+            array_push(_arr, 
+            {
+                name: _name,
+                depth: b.depth
+            });
+        }
 	}
 	array_sort(_arr, function(argument0, argument1)
 	{
@@ -216,12 +220,12 @@ function RoomLayer() constructor
 	{
 		switch (layer_type)
 		{
-			case 0:
+			case (0 << 0):
 				draw_sprite_repeat(sprite_index, image_index, argument0.x, argument0.y, argument0.width, argument0.height);
 				break;
 		}
 	};
-	layer_type = 0;
+	layer_type = (0 << 0);
 	sprite_index = noone;
 	image_index = 0;
 	depth = 1;

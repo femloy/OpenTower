@@ -1,1 +1,2 @@
-particlespr = spr_factorydebris
+chosenstate = states.mach1
+escape = true

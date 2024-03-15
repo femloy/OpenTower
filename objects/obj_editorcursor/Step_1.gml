@@ -15,7 +15,7 @@ else
     y = clamp(y, 0, CAMERA_HEIGHT)
 }
 hovered_object = -4
-var num = instance_place_list(x, y, obj_button, global.instancelist, 0)
+var num = instance_place_list(x, y, obj_button, global.instancelist, false)
 var _depth = 10000
 var obj = noone
 for (var i = 0; i < num; i++)

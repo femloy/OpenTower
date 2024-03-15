@@ -35,7 +35,11 @@ if (!ds_list_empty(global.debris_list))
 				{
 					ds_list_delete(global.debris_list, i);
 					i--;
-					q = undefined;
+					delete q;
+				}
+				else
+				{
+					
 				}
 			}
 		}
@@ -66,7 +70,11 @@ if (!ds_list_empty(global.collect_list))
 						collect_shake += 10;
 					ds_list_delete(global.collect_list, i);
 					i--;
-					b = undefined;
+					delete b;
+				}
+				else
+				{
+					
 				}
 			}
 		}

@@ -41,7 +41,7 @@ function scr_switchgustavo(peppino = true, skip_gloves = false)
 	with (obj_swapmodefollow)
     {
         isgustavo = true;
-        self.get_character_spr();
+        get_character_spr();
     }
 }
 
@@ -81,6 +81,6 @@ function scr_switchpeppino(peppino = true)
     with (obj_swapmodefollow)
     {
         isgustavo = false;
-        self.get_character_spr();
+        get_character_spr();
     }
 }

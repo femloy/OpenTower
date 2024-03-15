@@ -9,7 +9,7 @@ switch state
             jumpscarecount++;
             if ((keyboard_check_pressed(vk_anykey) || scr_checkanygamepad(obj_inputAssigner.player_input_device[0]) != -4 || scr_checkanystick(obj_inputAssigner.player_input_device[0])) && (!instance_exists(obj_mainmenu_jumpscare)))
             {
-                state = states.transitioncutscene;
+                state = states.transition;
                 currentselect = -1;
                 visualselect = -1;
                 darkcount = 7;
@@ -116,7 +116,7 @@ switch state
                         {
                             if selected
                             {
-                                state = states.transitioncutscene;
+                                state = states.transition;
                                 sprite_index = transspr;
                                 image_index = 0;
                             }
@@ -243,7 +243,7 @@ switch state
             {
                 if (quitbuffer <= 0)
                 {
-                    state = states.finale;
+                    state = states.ending;
                     exitselect = 1;
                     switch currentselect
                     {
@@ -340,13 +340,13 @@ else
     fmod_event_instance_stop(bombsnd, false);
 if (optionbuffer > 0)
     optionbuffer--;
-if (state != states.titlescreen && state != states.transitioncutscene)
+if (state != states.titlescreen && state != states.transition)
     extrauialpha = Approach(extrauialpha, 1, 0.1);
 if (currentselect != -1)
 {
     pep_game = menu_get_game(currentselect, 1);
     noise_game = menu_get_game(currentselect, 0);
-    if (state != states.titlescreen && state != states.transitioncutscene)
+    if (state != states.titlescreen && state != states.transition)
     {
         var a = floor(abs(pep_percvisual - pep_game.percentage) / 10) + 1;
         pep_percvisual = Approach(pep_percvisual, pep_game.percentage, a);

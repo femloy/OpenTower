@@ -1,8 +1,7 @@
 event_inherited()
 if (!instance_exists(inst))
-{
-	
-}
+	exit;
+
 if (obj_editor.instance_state == inst_states.idle)
 {
     x = (inst.bbox_right + 16)

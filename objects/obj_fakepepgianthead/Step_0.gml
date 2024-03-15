@@ -30,7 +30,7 @@ switch (state)
 				if (instance_exists(obj_swapmodeeffect) || (s != obj_player1.state || !obj_player1.ispeppino))
 				{
 					state = states.fall;
-					target_x = obj_player1.x - 700;
+					target_x = xx - 700;
 					movespeed = 0;
 				}
 			}

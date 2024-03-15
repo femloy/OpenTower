@@ -18,7 +18,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
 {
 	ds_list_add(global.baddieroom, id);
 	ds_list_add(global.escaperoom, id);
-	global.combo++;
+	//global.combo++;
 	global.enemykilled++;
 }
 global.combotime = 60;

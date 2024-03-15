@@ -32,10 +32,10 @@ function scr_pistolshoot(required_state, allow_charge = false)
 			image_xscale = other.xscale;
 			image_speed = 0.4;
 		}
-		if (allow_charge && !pistolchargeshooting)
-			fmod_event_one_shot_3d("event:/sfx/pep/pistolshot", x + (xscale * 20), y);
-		else
+		if (allow_charge && pistolchargeshooting)
 			fmod_event_one_shot_3d("event:/sfx/pep/revolverBIGshot", x + (xscale * 20), y);
+		else
+			fmod_event_one_shot_3d("event:/sfx/pep/pistolshot", x + (xscale * 20), y);
 		with (instance_create(x + (xscale * 20), y, obj_pistolbullet))
 		{
 			image_xscale = other.xscale;

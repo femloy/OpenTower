@@ -7,7 +7,7 @@ function scr_player_mach3()
 	}
 	switch (character)
 	{
-		case "P":
+		case "P":										 
 			var slopeaccel = 0.1;
 			var slopedeccel = 0.2;
 			var mach4movespeed = 20;
@@ -319,6 +319,7 @@ function scr_player_mach3()
 						with (obj_player)
 						{
 							sprite_index = spr_hitwall;
+							instance_create(x + 10, y + 10, obj_bumpeffect);
 							fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 							fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
 							hsp = 0;
@@ -328,7 +329,6 @@ function scr_player_mach3()
 							vsp = -6;
 							mach2 = 0;
 							image_index = 0;
-							instance_create(x + 10, y + 10, obj_bumpeffect);
 						}
 					}
 				}

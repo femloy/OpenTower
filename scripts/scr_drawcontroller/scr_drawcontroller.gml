@@ -110,8 +110,16 @@ function draw_enemy(healthbar, palette, color = c_white)
 		{
 			shader_set(global.Pal_Shader);
 			pal_swap_set(spr_peppalette, 0);
-			if (object_index == obj_fakepepboss || object_index == obj_gustavograbbable)
-				pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale * xscale, image_yscale * yscale, global.palettetexture);
+			if (!global.swapmode)
+			{
+				if (object_index == obj_fakepepboss || object_index == obj_gustavograbbable) && obj_player1.ispeppino
+					pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale * xscale, image_yscale * yscale, global.palettetexture);
+			}
+			else if (object_index == obj_fakepepboss || object_index == obj_gustavograbbable)
+			{
+				var palinfo = get_pep_palette_info();
+				pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale * xscale, image_yscale * yscale, palinfo.patterntexture);
+			}
 			pal_swap_set(spr_palette, paletteselect, false);
 		}
 		var _ys = 1;
@@ -176,18 +184,55 @@ function draw_superslam_enemy()
 }
 function draw_player()
 {
+	if (instance_exists(obj_swapgusfightball))
+	{
+		var _use_dark = other.use_dark;
+		with (obj_swapgusfightball)
+		{
+			var b = get_dark(image_blend, _use_dark);
+			var _info = [
+				[sprite_index, get_pep_palette_info()],
+				[spr_playerN_fightballratmount, get_noise_palette_info()]
+			];
+			for (var i = 0; i < array_length(_info); i++)
+			{
+				var sprite = _info[i][0];
+				var pal = _info[i][1];
+				pattern_set(global.Base_Pattern_Color, sprite, image_index, image_xscale, image_yscale, pal.patterntexture);
+				pal_swap_set(pal.spr_palette, pal.paletteselect, false);
+				draw_sprite_ext(sprite, image_index, x, y, image_xscale, image_yscale, image_angle, b, image_alpha);
+			}
+			pattern_reset();
+		}
+		exit;
+	}
+	if (!ispeppino && state == states.trashjumpprep)
+		exit;
+	
 	var b = get_dark(image_blend, other.use_dark);
-	if (object_index == obj_player1)
-		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, (xscale * scale_xs), (yscale * scale_ys), global.palettetexture);
+	var pattern = global.palettetexture;
 	var ps = paletteselect;
 	var spr = spr_palette;
+	if (ispeppino && room == boss_noise && (sprite_index == spr_playerN_doiseintro1 || sprite_index == spr_playerN_doiseintro2 || sprite_index == spr_playerN_doiseintro3))
+	{
+		var info = get_noise_palette_info();
+		pattern = info.patterntexture;
+		ps = info.paletteselect;
+		spr = info.spr_palette;
+	}
+	if (object_index == obj_player1)
+		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, xscale * scale_xs, yscale * scale_ys, pattern);
+	
 	if (isgustavo)
 		spr = spr_ratmountpalette;
+	if (!ispeppino && instance_exists(obj_pizzaface_thunderdark))
+		spr = spr_noisepalette_rage;
+	
 	pal_swap_set(spr, ps, false);
 	draw_sprite_ext(sprite_index, image_index, x, y, xscale * scale_xs, yscale * scale_ys, angle, b, image_alpha);
-	if (global.noisejetpack)
+	if (global.noisejetpack && (ispeppino || noisepizzapepper))
 	{
-		pal_swap_set(spr_peppalette, 2, false);
+		pal_swap_set(spr_palette, 2, false);
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale * scale_xs, yscale * scale_ys, angle, b, image_alpha);
 	}
 	draw_superslam_enemy();

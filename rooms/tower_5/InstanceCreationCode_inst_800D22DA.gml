@@ -1,2 +1,1 @@
-level = "war";
-treasureindex = 19;
+pumpkinroom = "chateau_2"

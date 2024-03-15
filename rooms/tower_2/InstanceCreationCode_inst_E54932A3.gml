@@ -1,8 +1,2 @@
-targetRoom = saloon_1;
-level = "saloon";
-sprite_index = spr_gate_saloon;
-bgsprite = spr_gate_saloonBG;
-title_index = 7;
-titlecard_index = 7;
-title_music = "event:/music/w2/saloontitle";
-group_arr = ["saloongroup"];
+targetRoom = tower_1
+sprite_index = spr_elevatordown1

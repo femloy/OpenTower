@@ -316,10 +316,10 @@ switch (scene)
 			scene++;
 			scenebuffer = 150;
 			slime1 = instance_create(1300, 386, obj_introprop);
-			slime1.sprite_index = spr_slimeidle;
+			slime1.sprite_index = spr_slime_intro;
 			slime1.image_speed = 0.35;
 			slime2 = instance_create(1400, 386, obj_introprop);
-			slime2.sprite_index = spr_slimeidle;
+			slime2.sprite_index = spr_slime_intro;
 			slime2.image_speed = 0.35;
 		}
 		break;

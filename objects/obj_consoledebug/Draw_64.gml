@@ -22,7 +22,7 @@ if (state > 0)
             bc = c_white
         }
         var txt = commands[i].name
-        draw_rectangle_color(0, yy, command_max_width, (yy + height), bc, bc, bc, bc, 0)
+        draw_rectangle_color(0, yy, command_max_width, (yy + height), bc, bc, bc, bc, false)
         draw_text_color(0, yy, txt, tc, tc, tc, tc, 1)
         yy += height
     }
@@ -30,7 +30,7 @@ if (state > 0)
     {
         var cmd_args = commands[selected].args
         var max_widths = array_create(0)
-        for (var i = 0; i < (array_length(args) + 1); i++)
+        for (var i = 0; i < array_length(args) + 1; i++)
 		{
 			if (array_length(cmd_args) == i)
 				break;
@@ -41,6 +41,7 @@ if (state > 0)
 			
 			var arg_array = cmd_args[i];
 			yy = 0;
+			
 			for (var j = 0; j < array_length(arg_array); j++)
 			{
 				w = string_width(string(arg_array[j]));

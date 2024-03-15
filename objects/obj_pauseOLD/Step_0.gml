@@ -83,10 +83,10 @@ if (pause && !instance_exists(obj_option))
 						obj_player2.restartbuffer = 15;
 						if (instance_exists(obj_player2))
 							obj_player2.targetDoor = "A";
-						break;
 					}
 					else
 					{
+						
 					}
 				}
 				break;

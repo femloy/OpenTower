@@ -80,20 +80,28 @@ switch (state)
 	case states.normal:
 	case states.victory:
 		if (!global.option_hud)
-            break;
+        {
+			
+		}
         else
         {
-			shader_set(global.Pal_Shader);
-			scr_bosscontroller_draw_health(spr_bossfight_playerhp, player_rowmax, player_columnmax, player_hp, player_maxhp, player_hp_x, player_hp_y, player_xpad, player_ypad, player_index, image_alpha, spr_peppalette, obj_player1.paletteselect, global.palettetexture);
+			shader_set(global.Pal_Shader)
+            scr_bosscontroller_draw_health(player_hpsprite, player_rowmax, player_columnmax, player_hp, player_maxhp, player_hp_x, player_hp_y, player_xpad, player_ypad, player_index, image_alpha, obj_player1.spr_palette, obj_player1.paletteselect, global.palettetexture);
 			var bpal = boss_palette;
 			var bpalsel = -4;
 			var btex = -4;
 			if (boss_hpsprite == spr_bossfight_fakepephp)
 			{
-				bpal = spr_peppalette;
-				bpalsel = obj_player1.paletteselect;
-				btex = global.palettetexture;
+				palinfo = get_pep_palette_info();
+                bpal = spr_peppalette;
+                bpalsel = palinfo.paletteselect;
+                btex = palinfo.patterntexture;
 			}
+			else if (bossspr == spr_vsdoise)
+            {
+                bpal = spr_noiseboss_palette;
+                bpalsel = 1;
+            }
 			scr_bosscontroller_draw_health(boss_hpsprite, boss_rowmax, boss_columnmax, boss_prevhp, boss_maxhp, boss_hp_x, boss_hp_y, boss_xpad, boss_ypad, boss_index, image_alpha, bpal, bpalsel, btex);
 			for (var i = 0; i < ds_list_size(particlelist); i++)
 			{

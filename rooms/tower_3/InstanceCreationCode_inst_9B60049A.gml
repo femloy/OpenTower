@@ -1,1 +1,1 @@
-sprite_index = spr_gushurt;
+text = lang_get_value_granny("garbage8")

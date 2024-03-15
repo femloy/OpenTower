@@ -11,7 +11,7 @@ if (draw)
 		if (scr_ventilator_update_leaf(b))
 		{
 			array_delete(leaves, i--, 1);
-			b = undefined;
+			delete b;
 		}
 	}
 }

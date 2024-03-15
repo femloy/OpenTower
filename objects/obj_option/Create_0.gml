@@ -166,7 +166,7 @@ add_option_toggle(video_menu, 4, "option_texfilter", function(val)
 }
 ).value = global.option_texfilter;
 
-add_option_toggle(video_menu, 4, "option_hud", function(val)
+add_option_toggle(video_menu, 5, "option_hud", function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "hud", val);
@@ -330,9 +330,9 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 	obj_savesystem.ini_str_options = ini_close()
 	with (obj_option)
 	{
-		for (i = 0; i < array_length(menus); i++)
+		for (var i = 0; i < array_length(menus); i++)
 		{
-			b = menus[i]
+			var b = menus[i]
 			if (b.menu_id == menus.controller || b.menu_id == menus.deadzone || b.menu_id == menus.keyboard)
 			{
 				for (var j = 0; j < array_length(b.options); j++)

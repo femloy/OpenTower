@@ -79,7 +79,7 @@ function scr_get_texture_name(texture)
 	}
 	return "none";
 }
-function scr_palette_texture(sprite, subimg, x, y, xscale, yscale, rot = 0, col = c_white, alpha = 1, gui = 0, texture = noone)
+function scr_palette_texture(sprite, subimg, x, y, xscale, yscale, rot = 0, col = c_white, alpha = 1, gui = false, texture = noone)
 {
 	if texture == noone
 		texture = global.palettetexture;

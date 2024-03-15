@@ -13,7 +13,7 @@ depth = -999;
 commands = array_create(0);
 state = 0;
 movebuffer = 0;
-create_command = function(_name, _func, _args)
+create_command = function(_name, _args, _func)
 {
 	var b = 
 	{

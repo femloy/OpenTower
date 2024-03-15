@@ -45,6 +45,8 @@ with (obj_player)
 {
 	pistolanim = -4;
 	sprite_index = spr_peppino_duel;
+	if (!ispeppino)
+		sprite_index = spr_noise_duel;
 	image_speed = 0.35;
 }
 with (obj_vigilanteboss)

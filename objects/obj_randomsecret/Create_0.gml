@@ -63,9 +63,9 @@ levels = [
 	war_secret3
 ];
 
-selected = 0
+selected = false
 minutes = 0
 seconds = 0
-start = 0
+start = false
 startstate = states.normal // PLAYER's state
 depth = -999

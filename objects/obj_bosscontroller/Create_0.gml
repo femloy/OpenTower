@@ -40,6 +40,7 @@ player_rowmax = 2;
 player_xpad = 44;
 player_ypad = 42;
 player_index = 0;
+player_hpsprite = spr_bossfight_playerhp;
 bosstimer_x = 257;
 bosstimer_y = 466;
 bell_sprite = spr_bosstimer_bell;

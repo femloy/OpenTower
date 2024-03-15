@@ -12,8 +12,8 @@ draw_set_valign(fa_middle);
 var tx = SCREEN_WIDTH - 120 + 43;
 var ty = y - 58;
 
-draw_text_color(tx, ty, hit, c_white, c_white, c_white, c_white, 1);
-draw_text_color(SCREEN_WIDTH - 120 + 43, y - 58, primoburg, c_white, c_white, c_white, c_white, 1);
+draw_text_color(x - 91, y - 117, hit, c_white, c_white, c_white, c_white, 1);
+draw_text_color(tx, ty, primoburg, c_white, c_white, c_white, c_white, 1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 

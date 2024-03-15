@@ -1,1 +1,1 @@
-state = states.underground;
+targetRoom = beach_11b

@@ -6,3 +6,4 @@ pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, 
 pal_swap_set(spr_noisepalette, pal, false);
 draw_self();
 pattern_reset();
+shader_reset();

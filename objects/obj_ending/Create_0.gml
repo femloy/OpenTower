@@ -34,6 +34,8 @@ for (var i = 0; i < array_length(credits); i++)
 		break;
 	}
 }
+if (!obj_player1.ispeppino || global.swapmode)
+	credits = [];
 
 bgalpha = 3;
 credits_pos = 0;
@@ -68,18 +70,18 @@ if (global.swapmode)
 if (_noise)
 	spawn_arr = [spr_playerN_move];
 
+with (instance_create(0, 0, obj_introprop))
+{
+	sprite_index = spr_towerending_bg;
+	depth = -3;
+}
+with (instance_create(0, 0, obj_introprop))
+{
+	sprite_index = spr_towerending;
+	depth = -7;
+}
 if (!_noise)
 {
-	with (instance_create(0, 0, obj_introprop))
-	{
-		sprite_index = spr_towerending_bg;
-		depth = -3;
-	}
-	with (instance_create(0, 0, obj_introprop))
-	{
-		sprite_index = spr_towerending;
-		depth = -7;
-	}
 	with (instance_create(0, 0, obj_introprop))
 	{
 		sprite_index = spr_towerending_bosses;

@@ -15,7 +15,7 @@ if active
     ini_open_from_string(obj_savesystem.ini_str)
     var count = (ini_read_real("halloween", "pumpkincount", 0) + 1)
     ini_write_real("halloween", "pumpkincount", count)
-    ini_write_real("halloween", room_get_name(room), 1)
+    ini_write_real("halloween", room_get_name(room), true)
     obj_savesystem.ini_str = ini_close()
     gamesave_async_save()
     notification_push(notifs.pumpkin_collect, [count])

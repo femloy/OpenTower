@@ -25,9 +25,12 @@ if (floor(other.x) == (x + _offset_x) && floor(other.y) == (y + _offset_y))
 	GamepadSetVibration(0, 0.8, 0.8, 0.65);
 	other.state = states.tube;
 	other.tube_id = id;
-	other.hsp = hsp * movespeed;
-	other.vsp = vsp * movespeed;
-	other.tube_vsp = vsp * movespeed;
+	var ms = movespeed;
+	if (!other.ispeppino)
+		ms += 5;
+	other.hsp = hsp * ms;
+	other.vsp = vsp * ms;
+	other.tube_vsp = vsp * ms;
 	stored_spd = 0;
 	fmod_event_one_shot_3d("event:/sfx/pipe/bump", x, y);
 	trace("hsp: ", other.hsp, " vsp: ", other.vsp);

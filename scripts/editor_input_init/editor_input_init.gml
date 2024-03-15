@@ -1,16 +1,16 @@
-function editor_input_init() //editor_input_init
+function editor_input_init()
 {
-    key_undo = 0
-    key_redo = 0
-    key_select = 0
-    key_zoom_out = 0
-    key_zoom_in = 0
-    key_place = 0
-    key_place_released = 0
-    key_delete = 0
-    laxis_vertical = 0
-    laxis_horizontal = 0
-    raxis_vertical = 0
-    raxis_horizontal = 0
-    input_method = -1
+    key_undo = false;
+    key_redo = false;
+    key_select = false;
+    key_zoom_out = false;
+    key_zoom_in = false;
+    key_place = false;
+    key_place_released = false;
+    key_delete = false;
+    laxis_vertical = 0;
+    laxis_horizontal = 0;
+    raxis_vertical = 0;
+    raxis_horizontal = 0;
+    input_method = -1;
 }

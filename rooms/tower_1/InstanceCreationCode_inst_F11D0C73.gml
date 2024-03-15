@@ -1,1 +1,1 @@
-escape = true;
+pumpkinroom = "ruin_12"

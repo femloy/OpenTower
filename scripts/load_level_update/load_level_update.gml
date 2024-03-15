@@ -43,21 +43,14 @@ function load_level_update(argument0) //load_level_update
                 var size = ds_map_size(other.object_map)
                 for (var j = 0; j < size; j++)
                 {
-                    var category = ds_map_find_value(other.object_map, key)
-                    var l = 0
-                    while (l < ds_list_size(category))
+                    for (var l = 0; l < ds_list_size(category); l++)
                     {
                         var object_template = ds_list_find_value(category, l)
                         if (object_template.ID == ID)
                         {
                             object_apply_values(object_template)
-                            j = (size + 1)
+                            j = size + 1
                             break
-                        }
-                        else
-                        {
-                            l++
-                            continue
                         }
                     }
                     key = ds_map_find_next(other.object_map, key)
@@ -82,7 +75,6 @@ function load_level_update(argument0) //load_level_update
         editor_state = saved_editor_state
         change_room(ds_list_find_value(global.current_level.rooms, 0))
         with (obj_itemlist)
-            dirty = 1
+            dirty = true
     }
 }
-

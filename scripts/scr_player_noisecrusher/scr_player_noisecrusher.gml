@@ -69,7 +69,7 @@ function scr_player_noisecrusher()
 				vsp = -11;
 				image_xscale *= -1;
 				hsp = 0;
-				momentum = false;
+				momentum = 0;
 			}
 		}
 		with (obj_camera)

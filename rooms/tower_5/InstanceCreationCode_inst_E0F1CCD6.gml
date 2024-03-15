@@ -1,1 +1,1 @@
-targetRoom = tower_finalhallway;
+escape = true

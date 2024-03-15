@@ -1,2 +1,2 @@
 targetRoom = boss_pizzaface;
-group_arr = ["bossgroup"];
+group_arr = ["bossgroup", "vigilantegroup"];

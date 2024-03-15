@@ -28,7 +28,10 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
 		instance_create(baddieID.x, baddieID.y, obj_parryeffect);
 		baddieID.alarm[3] = 3;
 		baddieID.state = states.hit;
-		baddieID.image_xscale = -other.image_xscale;
+		if (baddieID.x != other.x)
+			baddieID.image_xscale = sign(other.x - baddieID.x);
+		else
+			baddieID.image_xscale = -other.image_xscale;
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_slapstar);
@@ -42,6 +45,6 @@ if (instance_exists(baddieID) && baddieID.invtime == 0 && baddieID.state != stat
 		}
 		baddieID.invtime = 30;
 		baddieID.hitvsp = -4;
-		baddieID.hithsp = other.image_xscale * 22;
+		baddieID.hithsp = -baddieID.image_xscale * 22;
 	}
 }

@@ -5,7 +5,7 @@ switch (state)
 	case states.walk:
 		var targetplayer = obj_player1.id;
 		if (hamspotted == 1)
-			targetplayer = 1077;
+			targetplayer = obj_ham;
 		if ((targetplayer.x > x && image_xscale < 0) || (targetplayer.x < x && image_xscale > 0))
 		{
 			movespeed = Approach(movespeed, 0, 0.5);

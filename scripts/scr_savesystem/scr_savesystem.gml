@@ -72,7 +72,7 @@ function get_percentage()
 	var per = floor((count / _basemax) * 100);
 	if (per > 100)
 		per = 100;
-	var extraper = extracount >= _extramax;
+	var extraper = (extracount >= _extramax) ? 1 : 0;
 	trace("Base count: ", count, " out of ", _basemax);
 	trace("Extra count: ", extracount, " out of ", _extramax);
 	trace("Percentage: ", per, " and ", extraper);

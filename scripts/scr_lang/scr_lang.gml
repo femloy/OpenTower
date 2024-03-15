@@ -23,8 +23,12 @@ function scr_get_languages()
 function lang_parse_file(filename)
 {
 	var fo = file_text_open_read("lang/" + filename);
-	for (var str = ""; !file_text_eof(fo); str += "\n")
-		str += file_text_readln(fo);
+	var str = ""
+    while (!file_text_eof(fo))
+    {
+        str += file_text_readln(fo);
+        str += "\n";
+    }
 	file_text_close(fo);
 	var key = lang_parse(str);
 	if (lang_get_value_raw(key, "custom_graphics"))
@@ -53,20 +57,23 @@ function scr_lang_get_noise_credits()
 {
 	var arr = scr_lang_get_file_arr("noisecredits.txt");
 	var credits = array_create(0);
-	var i = 0;
-	while (i < array_length(arr))
-	{
-		var _name = arr[i++];
-		var _heads = array_create(0);
-		for (var _head = arr[i++]; _head != ""; _head = arr[i++])
+	for (var i = 0; i < array_length(arr); i++)
+    {
+        var _name = arr[i++];
+        var _heads = array_create(0);
+        for (var _head = arr[i++]; _head != ""; _head = arr[i++])
 		{
-			array_push(_heads, real(_head) - 1);
-			if (i >= array_length(arr))
-				break;
-		}
-		i--;
-		continue;
-	}
+            array_push(_heads, real(_head) - 1);
+            if (i >= array_length(arr))
+                break;
+        }
+        i--;
+        array_push(credits, 
+        {
+            name: _name,
+            heads: _heads
+        });
+    }
 	return credits;
 }
 
@@ -254,7 +261,7 @@ function lang_get_custom_font(fontname, language)
 		var font_xorig = 0;
 		var font_yorig = 0;
 		var spr = sprite_add(concat("lang/", ds_map_find_value(language, _dir)), font_size, false, false, font_xorig, font_yorig);
-		return font_add_sprite_ext(spr, font_map, 0, font_sep);
+		return font_add_sprite_ext(spr, font_map, false, font_sep);
 	}
 	return lang_get_font(fontname);
 }

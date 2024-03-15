@@ -1,1 +1,1 @@
-flash = 0
+flash = false;

@@ -26,7 +26,7 @@ switch (state)
 	case states.trashjumpprep:
 		with (playerid)
 		{
-			if (floor(image_index) == (image_number - 1))
+			if (state == states.trashjumpprep && floor(image_index) == (image_number - 1))
 				image_index = image_number - 3;
 		}
 		if (!shot)
@@ -71,8 +71,22 @@ switch (state)
 					movespeed = 0;
 					state = states.trashjump;
 					vsp = -25;
+					if (!ispeppino)
+						create_transformation_tip(lang_get_value("trashrolltipN"), "trashrollN");
 					fmod_event_one_shot_3d("event:/sfx/misc/trashjump2", x, y + vsp);
 					instance_create(x, y, obj_speedlinesup);
+					if (!ispeppino)
+					{
+						sprite_index = spr_playerN_trash;
+						repeat (3)
+						{
+							with (create_debris(x + irandom_range(-16, 16), y, spr_trashdebris))
+							{
+								hsp = random_range(-1, 1);
+								vsp = -random_range(23, 26);
+							}
+						}
+					}
 				}
 			}
 		}

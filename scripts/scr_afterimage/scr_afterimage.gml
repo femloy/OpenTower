@@ -131,9 +131,9 @@ function create_blue_afterimage(_x, _y, _sprite, _image_index, _xscale)
 	}
 	return b;
 }
-function create_noise_afterimage()
+function create_noise_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
-	var b = create_afterimage(argument0, argument1, argument2, argument3);
+	var b = create_afterimage(_x, _y, _sprite, _image_index);
 	with (b)
 	{
 		fadeout = false;
@@ -142,7 +142,7 @@ function create_noise_afterimage()
 		alarm[0] = -1;
 		alarm[1] = -1;
 		alarm[2] = -1;
-		image_xscale = argument4;
+		image_xscale = _xscale;
 		image_blend = c_white;
 		alpha = 0.9;
 		basealpha = 1;

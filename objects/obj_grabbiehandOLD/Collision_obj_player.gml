@@ -10,7 +10,7 @@ if (sprite_index == spr_grabbiehand_fall && player == noone)
 			var p = id;
 			repeat (4)
 			{
-				with (create_debris(x, y, spr_slimedebris))
+				with (create_debris(x, y, spr_boxxeddebris))
 				{
 					image_index = i;
 					vsp = random_range(-10, -5);
@@ -33,7 +33,7 @@ if (sprite_index == spr_grabbiehand_fall && player == noone)
 		{
 			repeat (8)
 			{
-				with (create_debris(x, y, 1517))
+				with (create_debris(x, y, spr_slimedebris))
 				{
 					vsp = random_range(-5, 0);
 					hsp = random_range(-3, 3);

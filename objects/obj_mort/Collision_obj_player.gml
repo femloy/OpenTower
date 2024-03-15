@@ -7,7 +7,7 @@ if (sprite_index != spr_mortspawn)
 			repeat (6)
 				create_debris(x, y, spr_feather);
 			mort = true;
-			instance_create_unique(x, y, obj_mortfollow);
+			//instance_create_unique(x, y, obj_mortfollow);
 			movespeed = hsp;
 			state = states.mort;
 			fmod_event_one_shot_3d("event:/sfx/mort/mortpickup", x, y);

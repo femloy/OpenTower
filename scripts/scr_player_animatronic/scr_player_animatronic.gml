@@ -34,11 +34,11 @@ function scr_player_animatronic()
 	else
 	{
 		fmod_event_one_shot_3d("event:/sfx/misc/detransfo", x, y);
-		with (create_debris(x, y, spr_animatronicdebris))
+		with (instance_create(x, y, obj_peshinodebris))
 			image_index = 0;
-		with (create_debris(x, y, spr_animatronicdebris))
+		with (instance_create(x, y, obj_peshinodebris))
 			image_index = 1;
-		with (create_debris(x, y, spr_animatronicdebris))
+		with (instance_create(x, y, obj_peshinodebris))
 			image_index = 2;
 		state = states.normal;
 	}

@@ -60,7 +60,7 @@ if (!dragged)
             var yy = pos[1]
             if (key_place && (!(editor_is_cursor_on_ui(obj_editorcursor.x, obj_editorcursor.y))) && place_meeting(xx, yy, other))
             {
-                other.dragged = 1
+                other.dragged = true
                 other.startx = _room.x
                 other.starty = _room.y
                 other.startwidth = (_room.x + _room.width)
@@ -157,5 +157,5 @@ else
             break
     }
     if obj_editor.key_place_released
-        dragged = 0
+        dragged = false
 }

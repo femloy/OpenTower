@@ -75,16 +75,14 @@ add_music(boss_pizzaface, "event:/music/boss/pizzaface", noone, false, function(
 	else if room == boss_pizzafacehub
 		fmod_event_instance_set_parameter(parameter, "state", 5, false);
 });
-add_music(entrance_1, "event:/music/w1/entrance", "event:/music/w1/entrancesecret", 0, function(room, event, event_secret)
+add_music(entrance_1, "event:/music/w1/entrance", "event:/music/w1/entrancesecret", false, function(room, event, event_secret)
 {
-	var s = 0
-	fmod_event_instance_set_parameter(event, "state", s, true)
-	exit;
-}
-)
-add_music(medieval_1, "event:/music/w1/medieval", "event:/music/w1/medievalsecret", 0, function(room, event, event_secret)
+	var s = 0;
+	fmod_event_instance_set_parameter(event, "state", s, true);
+});
+add_music(medieval_1, "event:/music/w1/medieval", "event:/music/w1/medievalsecret", false, function(room, event, event_secret)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case medieval_1:
@@ -103,9 +101,9 @@ add_music(medieval_1, "event:/music/w1/medieval", "event:/music/w1/medievalsecre
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
-add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", 0, function(room, event)
+add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", false, function(room, event)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case ruin_1:
@@ -121,9 +119,9 @@ add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", 0, funct
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(dungeon_1, "event:/music/w1/dungeon", "event:/music/w1/dungeonsecret", false)
-add_music(badland_1, "event:/music/w2/desert", "event:/music/w2/desertsecret", 0, function(room, event)
+add_music(badland_1, "event:/music/w2/desert", "event:/music/w2/desertsecret", false, function(room, event)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case badland_1:
@@ -140,9 +138,9 @@ add_music(badland_1, "event:/music/w2/desert", "event:/music/w2/desertsecret", 0
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
-add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", 0, function(room, event)
+add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", false, function(room, event)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case farm_2:
@@ -161,9 +159,9 @@ add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", 0, funct
 add_music(graveyard_1, "event:/music/w2/graveyard", "event:/music/w2/graveyardsecret", false)
 add_music(saloon_1, "event:/music/w2/saloon", "event:/music/w2/saloonsecret", false)
 add_music(plage_entrance, "event:/music/w3/beach", "event:/music/w3/beachsecret", false)
-add_music(forest_1, "event:/music/w3/forest", "event:/music/w3/forestsecret", 0, function(room, event)
+add_music(forest_1, "event:/music/w3/forest", "event:/music/w3/forestsecret", false, function(room, event)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case forest_1:
@@ -185,9 +183,9 @@ add_music(forest_1, "event:/music/w3/forest", "event:/music/w3/forestsecret", 0,
 
 add_music(minigolf_1, "event:/music/w3/golf", "event:/music/w3/golfsecret", false)
 add_music(space_1, "event:/music/w3/space", "event:/music/w3/spacesecret", false)
-add_music(freezer_1, "event:/music/w4/freezer", "event:/music/w4/freezersecret", 0, function(room, event, event_secret)
+add_music(freezer_1, "event:/music/w4/freezer", "event:/music/w4/freezersecret", false, function(room, event, event_secret)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case freezer_1:
@@ -202,9 +200,9 @@ add_music(freezer_1, "event:/music/w4/freezer", "event:/music/w4/freezersecret",
 	if (s != -1)
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
-add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industrialsecret", 0, function(room, event, event_secret)
+add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industrialsecret", false, function(room, event, event_secret)
 {
-	s = -1;
+	var s = -1;
 	switch room
 	{
 		case industrial_1:
@@ -220,7 +218,7 @@ add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industria
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(sewer_1, "event:/music/w4/sewer", "event:/music/w4/sewersecret", false)
-add_music(street_1, "event:/music/w4/street", "event:/music/w4/streetsecret", 0, function(room, event)
+add_music(street_1, "event:/music/w4/street", "event:/music/w4/streetsecret", false, function(room, event)
 {
 	if (room == street_1 || room == street_house3)
 		fmod_event_instance_set_parameter(event, "state", 0, true);

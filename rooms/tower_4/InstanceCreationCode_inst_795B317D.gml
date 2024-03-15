@@ -1,0 +1,1 @@
+pumpkinroom = "freezer_6"

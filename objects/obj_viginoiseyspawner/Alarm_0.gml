@@ -1,4 +1,4 @@
-if (!instance_exists(obj_noisey))
+if (!instance_exists(obj_noisey) && obj_player1.ispeppino)
 {
 	var _x = irandom_range(100, room_width - 100);
 	with (instance_create(_x, room_height + 100, obj_gustavograbbable))

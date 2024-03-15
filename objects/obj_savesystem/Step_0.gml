@@ -16,7 +16,6 @@ if (room == hub_loadingscreen && state != 2)
 			var _intro = ini_read_real("Tutorial", "finished", false);
 			player_paletteselect[0] = ini_read_real("Game", "palette", 1);
 			player_paletteselect[1] = ini_read_real("Game", "palette_player2", 1);
-			paletteselect = ini_read_real("Game", "palette", 1);
 			var _texture = ini_read_string("Game", "palettetexture", "none");
 			var _texture2 = ini_read_string("Game", "palettetexture_player2", "none");
 			player_patterntexture[0] = scr_get_texture_palette(_texture);

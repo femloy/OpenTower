@@ -1,1 +1,1 @@
-targetRoom = forest_escape1;
+escape = true;

@@ -81,7 +81,7 @@ function scr_playerN_machcancel()
 		vsp = -7;
 		if (move != 0)
 			xscale = move;
-		with (instance_create(x, y + 20, 422))
+		with (instance_create(x, y + 20, obj_noiseeffect))
 			sprite_index = spr_noisewalljumpeffect;
 		sprite_index = spr_playerN_wallbounce;
 		GamepadSetVibration(0, 0.5, 0.5, 0.5);
@@ -161,12 +161,12 @@ function scr_playerN_machcancel()
 	else
 	{
 		punch_afterimage = 5;
-		instance_create(x + random_range(5, -5), y + random_range(20, -20), 541);
+		instance_create(x + random_range(5, -5), y + random_range(20, -20), obj_tornadoeffect);
 		if (grounded && (sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall))
 		{
 			repeat (2)
 			{
-				with (instance_create(x + random_range(3, -3), y + 45, 480))
+				with (instance_create(x + random_range(3, -3), y + 45, obj_noisedebris))
 					sprite_index = spr_noisedrilldebris;
 			}
 		}

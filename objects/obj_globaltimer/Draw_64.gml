@@ -9,8 +9,6 @@ if (instance_exists(obj_pause) && obj_pause.pause && !global.option_speedrun_tim
 draw_set_color(c_white);
 var seconds = 0;
 var minutes = 0;
-var s_str = "";
-var m_str = "";
 if (global.option_timer_type == 0)
 {
 	seconds = global.level_seconds;

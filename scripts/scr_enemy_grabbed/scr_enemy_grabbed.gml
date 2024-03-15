@@ -142,65 +142,69 @@ function scr_enemy_grabbed()
 		}
 		if (_obj_player.state == states.finishingblow && (floor(_obj_player.image_index) >= 4 || (floor(_obj_player.image_index) < 1 && _obj_player.sprite_index == _obj_player.spr_swingdingend)))
 		{
-			thrown = 1
+			thrown = true;
 			if heavy
-				var lag = 15
+				var lag = 15;
 			else
-				lag = 5
-			hitLag = lag
-			hitX = x
-			hitY = y
+				lag = 5;
+			hitLag = lag;
+			hitX = x;
+			hitY = y;
 			if (object_index != obj_noisey && object_index != obj_tank)
 			{
 				
 			}
-			_obj_player.movespeed = 0
-			_obj_player.hitLag = lag
-			_obj_player.hitX = _obj_player.x
-			_obj_player.hitY = _obj_player.y
-			instance_create(x, y, obj_parryeffect)
-			alarm[3] = 1
-			global.combotime = 60
-			global.heattime = 60
+			else
+			{
+				
+			}
+			_obj_player.movespeed = 0;
+			_obj_player.hitLag = lag;
+			_obj_player.hitX = _obj_player.x;
+			_obj_player.hitY = _obj_player.y;
+			instance_create(x, y, obj_parryeffect);
+			alarm[3] = 1;
+			global.combotime = 60;
+			global.heattime = 60;
 			if (!important)
-				global.style += (5 + global.combo)
-			GamepadSetVibration(_obj_player.object_index == obj_player1 ? 0 : 1, 0.8, 0.8, 0.65)
-			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y)
-			fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y)
-			state = states.stun
-			image_xscale = -_obj_player.xscale
-			instance_create(x, y, obj_slapstar)
-			instance_create(x, y, obj_slapstar)
-			instance_create(x, y, obj_slapstar)
-			instance_create(x, y, obj_baddiegibs)
-			instance_create(x, y, obj_baddiegibs)
-			instance_create(x, y, obj_baddiegibs)
+				global.style += (5 + global.combo);
+			GamepadSetVibration(_obj_player.object_index == obj_player1 ? 0 : 1, 0.8, 0.8, 0.65);
+			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
+			fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
+			state = states.stun;
+			image_xscale = -_obj_player.xscale;
+			instance_create(x, y, obj_slapstar);
+			instance_create(x, y, obj_slapstar);
+			instance_create(x, y, obj_slapstar);
+			instance_create(x, y, obj_baddiegibs);
+			instance_create(x, y, obj_baddiegibs);
+			instance_create(x, y, obj_baddiegibs);
 			with obj_camera
 			{
-				shake_mag = 3
-				shake_mag_acc = (3 / room_speed)
+				shake_mag = 3;
+				shake_mag_acc = 3 / room_speed;
 			}
 			with _obj_player
 			{
 				if sprite_index == spr_uppercutfinishingblow
 				{
-					other.hithsp = 0
-					other.hitvsp = -25
-					other.linethrown = 1
+					other.hithsp = 0;
+					other.hitvsp = -25;
+					other.linethrown = true;
 				}
 				else
 				{
-					other.hithsp = (-other.image_xscale) * 25
-					other.hitvsp = -8
-					other.linethrown = 1
+					other.hithsp = -other.image_xscale * 25;
+					other.hitvsp = -8;
+					other.linethrown = true;
 				}
-				vsp = -6
+				vsp = -6;
 			}
-			check_grabbed_solid(_obj_player)
-			check_grabbed_solid(_obj_player)
-			hsp = hithsp
-			vsp = hitvsp
-			linethrown = 1
+			check_grabbed_solid(_obj_player);
+			check_grabbed_solid(_obj_player);
+			hsp = hithsp;
+			vsp = hitvsp;
+			linethrown = true;
 		}
 		if (_obj_player.state == states.throwing)
 		{

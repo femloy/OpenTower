@@ -1,0 +1,9 @@
+targetRoom = war_1
+level = "war"
+sprite_index = spr_gate_war
+bgsprite = spr_gate_warBG
+title_index = 4
+title_sprite = spr_titlecards_title2
+titlecard_index = 14
+title_music = "event:/music/w5/wartitle"
+group_arr = ["wargroup"]

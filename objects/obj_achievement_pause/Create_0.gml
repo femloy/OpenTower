@@ -59,7 +59,7 @@ else
 {
     sprite = spr_achievement_bosses;
     n = concat("achievement_", lvl);
-    _got = ini_read_real("achievements", lvl, 0);
+    _got = ini_read_real("achievements", lvl, false);
 	
     array_push(achievements, 
     {

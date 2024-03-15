@@ -15,7 +15,7 @@ if (baddie.object_index == obj_noiseboss && (baddie.state == states.walk || badd
         deadbuffer--;
     exit;
 }
-if (baddie.object_index == obj_pizzafaceboss && baddie.state == states.ram && baddie.substate == states.land && baddie.elitehit == 1)
+if (baddie.object_index == obj_pizzafaceboss && baddie.state == states.pizzaface_ram && baddie.substate == states.land && baddie.elitehit == 1)
 {
     with (bombID)
     {
@@ -34,7 +34,7 @@ if ((!baddie.invincible) || baddie.object_index == obj_vigilanteboss || baddie.o
         instance_destroy();
     }
 }
-else if ((baddie.object_index != obj_pizzafaceboss || ((baddie.state != states.ram || baddie.substate != states.jump) && baddie.state != states.walk)) && (baddie.object_index != obj_pepperman || baddie.state != states.mini))
+else if ((baddie.object_index != obj_pizzafaceboss || ((baddie.state != states.pizzaface_ram || baddie.substate != states.jump) && baddie.state != states.walk)) && (baddie.object_index != obj_pepperman || baddie.state != states.mini))
 {
     with (bombID)
         deadbuffer--;

@@ -60,13 +60,13 @@ enum notifs
 	johnresurrection, // with all treasures
 	knighttaken,
 	mrmooney_donated,
+	UNKNOWN_59,
 	
 	pumpkin_collect,
-	trickytreat,
+	trickytreat_enter,
 	trickytreat_fail,
 	trickytreat_leave,
 	
-	UNKNOWN_63,
 	cancel_noisedrill,
 	gate_taunt,
 	player_explosion,
@@ -74,10 +74,9 @@ enum notifs
 	breakdance,
 	slipbanan,
 	close_call, // do rank with pizzaface on screen
-	UNKNOWN_70,
 	antigrav,
 	seen_ptg,
-	UNKNOWN_73,
+	interact_granny,
 }
 
 // functions
@@ -311,13 +310,13 @@ function achievement_save_variables(achievement_array)
 }
 function achievement_get_steam_achievements(achievement_array)
 {
-	for (i = 0; i < array_length(achievement_array); i++)
+	for (var i = 0; i < array_length(achievement_array); i++)
 	{
-		b = achievement_array[i];
+		var b = achievement_array[i];
 		ini_open_from_string(obj_savesystem.ini_str);
 		with (b)
 		{
-			if ini_read_real("achievements", name, 0)
+			if ini_read_real("achievements", name, false)
 				scr_steam_unlock_achievement(name);
 		}
 		obj_savesystem.ini_str = ini_close();

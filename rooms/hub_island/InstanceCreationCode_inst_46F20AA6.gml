@@ -1,7 +1,7 @@
 sprite_index = spr_pepperman_idle;
 pm_dialog[0] = [dialog_create("Seems you don't have either a bottle or a piece of paper.")];
-pm_dialog[1] = [dialog_create("Beach	 boat")];
-pm_scene_info = [[cutscene_do_dialog, [dialog_create("Here you go")]], [cutscene_waitfor_dialog], [cutscene_set_player_actor], [cutscene_set_object_pos, 151071, 1696, 576], [cutscene_do_dialog, [dialog_create("Go ahead", -4, function()
+pm_dialog[1] = [dialog_create("Beach     boat")];
+pm_scene_info = [[cutscene_do_dialog, [dialog_create("Here you go")]], [cutscene_waitfor_dialog], [cutscene_set_player_actor], [cutscene_set_object_pos, inst_0D999246, 1696, 576], [cutscene_do_dialog, [dialog_create("Go ahead", -4, function()
 {
 	
 })]]];

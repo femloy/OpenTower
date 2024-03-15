@@ -11,6 +11,12 @@ if (start)
 	draw_sprite(sprite_index, image_index, 0, cy);
 	pattern_reset();
 	reset_shader_fix();
+	
+	if (sprite_index == spr_taxitransition_gusN)
+	{
+		draw_set_alpha(0.3);
+		draw_sprite(spr_taxitransition_gusN_shadow, 0, 0, cy);
+	}
 }
 draw_set_alpha(fade);
 draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 0, false);

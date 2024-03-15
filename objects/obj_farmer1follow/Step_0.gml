@@ -1,11 +1,11 @@
-var obj = 411;
+var obj = obj_farmerpeasantoprojectile;
 switch (object_index)
 {
 	case obj_farmer2follow:
-		obj = 230;
+		obj = obj_farmer2projectile;
 		break;
 	case obj_farmer3follow:
-		obj = 144;
+		obj = obj_farmer3projectile;
 		break;
 }
 visible = !instance_exists(obj);

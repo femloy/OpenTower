@@ -27,7 +27,7 @@ function scr_player_ghostdash_sprites(min_mag = 2.5)
 		sprite_index = spr_ghostidle;
 }
 
-function scr_player_ghost() //gml_Script_scr_player_ghost
+function scr_player_ghost()
 {
     visible = true
     image_speed = 0.35
@@ -63,8 +63,8 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
             if (key_slap2 && ghostdashcooldown <= 0 && ghostpepper > 0)
             {
                 ghostdashbuffer = 20
-                ghostdash = 1
-                ghostdashend = 0
+                ghostdash = true
+                ghostdashend = false
                 ghostbumpbuffer = 0
                 movespeed = magnitude(abs(hsp), abs(vsp))
                 scr_fmod_soundeffect(snd_ghostdash, x, y)
@@ -89,7 +89,7 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
                 if (ghostdashbuffer > 0)
                     ghostdashbuffer--
                 else
-                    ghostdashend = 1
+                    ghostdashend = true
                 if (ghostpepper == 1)
                     maxspeed = 18
                 if (ghostpepper == 2)
@@ -103,7 +103,7 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
                 movespeed = Approach(movespeed, 0, deccel)
                 if (movespeed <= 2 || (movespeed <= 6 && (move_h != 0 || move_v != 0)))
                 {
-                    ghostdash = 0
+                    ghostdash = false
                     movespeed = hsp
                 }
             }
@@ -114,11 +114,11 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
                 ghostangle = angle_rotate(ghostangle, new_angle, 1.5)
             else
             {
-                ghostdash = 0
+                ghostdash = false
                 movespeed = hsp
                 ghostdashbuffer = 0
-                ghostdashend = 1
-                fmod_event_instance_stop(snd_ghostdash, 1)
+                ghostdashend = true
+                fmod_event_instance_stop(snd_ghostdash, true)
             }
             var dx = lengthdir_x(movespeed, angle)
             var dy = lengthdir_y(movespeed, angle)
@@ -129,11 +129,11 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
                 ghostbumpbuffer++
                 if (ghostbumpbuffer >= 20)
                 {
-                    ghostdash = 0
+                    ghostdash = false
                     movespeed = 0
                     ghostdashbuffer = 0
-                    ghostdashend = 1
-                    fmod_event_instance_stop(snd_ghostdash, 1)
+                    ghostdashend = true
+                    fmod_event_instance_stop(snd_ghostdash, true)
                 }
             }
             else
@@ -180,7 +180,7 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
             if (key_slap2 && ghostdashcooldown <= 0)
             {
                 ghostdashbuffer = 20
-                ghostdashstart = 1
+                ghostdashstart = true
                 ghostdashmovespeed = 0
                 repeat (2)
                 {
@@ -219,13 +219,13 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
                 if (maxspeed < 6)
                 {
                     maxspeed = 6
-                    ghostdash = 0
+                    ghostdash = false
                 }
             }
             hspaccel = 0.4
             vspaccel = 0.4
         }
-        if (ghostdash && ghostpepper >= 3 && ghosteffect == 0)
+        if ((ghostdash && ghostpepper >= 3) && ghosteffect == 0)
         {
             instance_create((x + random_range(-25, 25)), (y + random_range(-25, 25)), obj_cloudeffect)
             ghosteffect = 5
@@ -273,7 +273,7 @@ function scr_player_ghost() //gml_Script_scr_player_ghost
             vsp = Approach(vsp, dy, vspaccel)
             if ((!ispeppino) && ghostdashstart)
             {
-                ghostdashstart = 0
+                ghostdashstart = false
                 movespeed = dx
                 vsp = dy
             }

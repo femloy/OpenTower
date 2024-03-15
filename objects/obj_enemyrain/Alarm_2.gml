@@ -31,7 +31,7 @@ if (instance_number(obj_baddie) < 20)
 				spawnxrandom += 1;
 		}
 	}
-	with (instance_create(clamp(spawnxrandom, 200, room_width - 200), spawny, choose(668, 646, 681, 670, 688, 659, obj_ancho)))
+	with (instance_create(clamp(spawnxrandom, 200, room_width - 200), spawny, choose(obj_swedishmonkey, obj_cheeseslime, obj_forknight, obj_pepgoblin, obj_fencer, obj_pizzagoblin, obj_ancho)))
 	{
 		instance_create(x, y, obj_pizzaportalfade);
 		important = true;

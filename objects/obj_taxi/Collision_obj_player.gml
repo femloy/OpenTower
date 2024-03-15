@@ -19,6 +19,13 @@ with (other)
 			hsp = 10;
 			obj_player1.cutscene = true;
 			depth = -100;
+			
+			with (obj_hamkuffattack)
+			{
+				if (state == 0)
+					instance_destroy();
+			}
+			
 			if (police)
 			{
 				with (instance_create(x, y, obj_taxicardboard))

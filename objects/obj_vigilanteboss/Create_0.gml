@@ -197,6 +197,8 @@ signy = -sprite_get_height(signspr);
 pizzahead = false;
 pizzaheadshot = false;
 sprite_index = spr_vigilante_intro1;
+if (!obj_player1.ispeppino)
+	sprite_index = spr_vigilante_intro1N;
 bullethit = 0;
 oldspotID = -4;
 uzi_speed = 0.35;

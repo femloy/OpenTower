@@ -46,6 +46,11 @@ switch (text_state)
 		{
 			text_state = states.fall;
 			text_vsp = 0;
+			if (object_index == obj_tutorialbook && ds_list_find_index(global.saveroom, id) == -1)
+			{
+				ds_list_add(global.saveroom, id);
+				notification_push(notifs.interact_granny, [lang_name]);
+			}
 		}
 		break;
 	

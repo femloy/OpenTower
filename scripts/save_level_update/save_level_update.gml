@@ -19,12 +19,17 @@ function save_level_update(levelname)
 			backgrounds: array_create(0),
 			tiles: array_create(0)
 		};
-		var i = 0;
-		while (i < array_length(_room.backgrounds))
-		{
-			var b = _room.backgrounds[i];
-			continue;
-		}
+		for (var i = 0; i < array_length(_room.backgrounds); i++)
+        {
+            var b = _room.backgrounds[i];
+            var bg = 
+            {
+                sprite_index: sprite_get_name(b.sprite_index),
+                depth: b.depth
+            }
+
+            array_push(struct.backgrounds, bg);
+        }
 		for (i = 0; i < array_length(_room.instances); i++)
 		{
 			b = _room.instances[i];
@@ -53,8 +58,8 @@ function save_level_update(levelname)
 				instance_deactivate_object(b);
 		}
 		var json = json_stringify(struct);
-		var buffer = buffer_create(string_byte_length(json) + 1, 0, 1);
-		buffer_write(buffer, 11, json);
+		var buffer = buffer_create(string_byte_length(json) + 1, buffer_fixed, 1);
+		buffer_write(buffer, buffer_string, json);
 		buffer_save(buffer, concat(path, "rooms/", _room.name, ".json"));
 		buffer_delete(buffer);
 		save_step++;

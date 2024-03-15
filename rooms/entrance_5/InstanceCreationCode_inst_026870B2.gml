@@ -1,1 +1,1 @@
-desireddepth = -20;
+content = obj_pizzakincheese;

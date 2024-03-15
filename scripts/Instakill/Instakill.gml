@@ -23,7 +23,7 @@ function Instakill()
 	}
 	if (state == states.mach3 && sprite_index != spr_player_Sjumpcancel && sprite_index != spr_mach3hit && (character == "P" || character == "V"))
 	{
-		if (fightball == 0)
+		if (sprite_index != spr_fightball)
 			sprite_index = spr_mach3hit;
 		image_index = 0;
 	}

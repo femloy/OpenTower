@@ -1,2 +1,2 @@
-event_inherited()
-ds_queue_destroy(spritequeue)
+event_inherited();
+ds_queue_destroy(spritequeue);

@@ -32,7 +32,7 @@ with (obj_player1)
 				if (sprite_index == spr_player_outofpizza3 && floor(image_index) == (image_number - 1))
 					sprite_index = spr_player_outofpizza4;
 				hsp = deathspeed * -xscale;
-				deathspeed = Approach(deathspeed, 0, 0.5);
+				deathspeed = Approach(deathspeed, 0, 0.1);
 				break;
 		}
 	}

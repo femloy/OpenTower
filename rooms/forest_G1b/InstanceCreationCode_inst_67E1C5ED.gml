@@ -1,1 +1,3 @@
-text = lang_get_value("forest3");
+text = lang_get_value_granny("forest1")
+if (!obj_player1.ispeppino)
+    text = lang_get_value_granny("forest1N")

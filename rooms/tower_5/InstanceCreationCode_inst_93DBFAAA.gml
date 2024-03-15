@@ -1,1 +1,1 @@
-scr_soundtest_secret();
+image_index = 4

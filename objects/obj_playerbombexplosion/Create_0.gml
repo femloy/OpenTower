@@ -1,7 +1,7 @@
 image_speed = 0.5;
 depth = -1;
-hit = 0;
-has_ended = 0;
+hit = false;
+has_ended = false;
 scr_fmod_soundeffect(global.snd_explosion, x, y);
 collision_list = [obj_pizzafaceboss_p2, obj_vigilanteboss, obj_vigilantecow, obj_johnecheese, obj_targetguy];
 hitlist = ds_list_create();
@@ -43,7 +43,7 @@ ds_map_set(collision_function, obj_baddie, function(obj)
         return false;
     }
 	
-    if (obj.object_index == obj_pizzafaceboss && obj.state == states.ram && obj.substate == states.land && obj.elitehit == 1)
+    if (obj.object_index == obj_pizzafaceboss && obj.state == states.pizzaface_ram && obj.substate == states.land && obj.elitehit == 1)
     {
         with (instance_create(other.x, other.y, obj_explosioneffect))
             sprite_index = spr_bombexplosion;
@@ -94,8 +94,8 @@ ds_map_set(collision_function, obj_baddie, function(obj)
                     image_xscale = ix;
                     hsp = -image_xscale * 8;
                     vsp = -6;
-                    thrown = 0;
-                    linethrown = 0;
+                    thrown = false;
+                    linethrown = false;
                     sprite_index = spr_fakepeppino_vulnerable;
                     stunned = 200;
                     flash = true;
@@ -199,6 +199,7 @@ ds_map_set(collision_function, obj_pepper_marbleblock, function(obj)
         hitLag = 10;
         return true;
     }
+	return false;
 });
 ds_map_set(collision_function, obj_peppermanartdude, function(obj)
 {

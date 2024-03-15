@@ -1,16 +1,16 @@
-function toggle_panel(argument0) //toggle_panel
+function toggle_panel(_id)
 {
-    var _closed = 0
+    var _closed = false;
     with (obj_panel)
     {
-        if (ID == argument0 && state == (1 << 0))
-            _closed = 1
+        if (ID == _id && state == (1 << 0))
+            _closed = true;
     }
     if _closed
     {
         with (obj_panel)
         {
-            if (ID == argument0)
+            if (ID == _id)
                 state = (0 << 0)
             else if (ID != -4)
                 state = (1 << 0)

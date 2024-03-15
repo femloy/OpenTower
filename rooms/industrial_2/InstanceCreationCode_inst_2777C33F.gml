@@ -1,2 +1,2 @@
-chosenstate = states.tackle;
-escape = true;
+targetRoom = industrial_1
+targetDoor = "D"

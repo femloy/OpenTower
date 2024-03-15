@@ -7,7 +7,7 @@ if (state == states.tube)
 			visible = true;
 			state = states.freefall;
 			vsp = 10;
-			sprite_index = spr_player_rockethitwall;
+			sprite_index = spr_rockethitwall;
 			if (place_meeting(x, y, obj_solid))
 			{
 				while (place_meeting(x, y, obj_solid))

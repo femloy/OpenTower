@@ -1,2 +1,2 @@
-has_ended = 1
-instance_destroy()
+has_ended = true;
+instance_destroy();

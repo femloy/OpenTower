@@ -1418,6 +1418,13 @@ function scr_noise_phase1hurt()
 				image_speed = 0.35;
 				sprite_index = spr_player_fightball;
 				image_index = 0;
+				if (!ispeppino)
+				{
+					y = 402;
+					x = room_width / 2;
+					with (instance_create(0, 0, obj_pizzahead_whitefade))
+						whitefade = 1;
+				}
 			}
 			with (obj_noiseboss)
 			{

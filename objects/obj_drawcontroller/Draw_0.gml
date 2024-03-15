@@ -71,9 +71,9 @@ if (room == boss_fakepep)
             var palinfo = get_pep_palette_info();
 			pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, palinfo.patterntexture);
 			var ps = palinfo.paletteselect;
-            pal_swap_set(spr_peppalette, ps, 0);
+            pal_swap_set(spr_peppalette, ps, false);
             draw_self();
-            pal_swap_set(spr_peppalette, 13, 0);
+            pal_swap_set(spr_peppalette, 13, false);
             draw_self();
             pattern_reset();
             draw_self();

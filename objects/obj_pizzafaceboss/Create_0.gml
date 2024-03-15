@@ -18,6 +18,7 @@ baddie_arr = [
 	[obj_minijohn, spr_minijohn_stun],
 	[obj_minijohn, spr_minijohn_stun]
 ];
+lasthit = false;
 nosespit = true;
 nosecount = 1;
 bighitbox = instance_create(x, y, obj_pizzafacehitbox);

@@ -1,1 +1,1 @@
-escape = true;
+targetRoom = trickytreat_1

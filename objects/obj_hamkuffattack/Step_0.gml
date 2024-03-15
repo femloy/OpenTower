@@ -1,6 +1,6 @@
 switch state
 {
-    case states.normal:
+    case 0:
         global.combotime = 60;
         var move = dir * 24;
         if (sign(move) != sign(movespeed))
@@ -29,7 +29,8 @@ switch state
         x = (playerid.x + xoffset);
         y = (playerid.y + yoffset);
         break;
-    case states.revolver:
+	
+    case 1:
         x += movespeed;
         if (abs(movespeed) < 25)
             movespeed += (sign(movespeed) * 2);

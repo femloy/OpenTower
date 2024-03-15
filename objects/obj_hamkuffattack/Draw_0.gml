@@ -1,4 +1,4 @@
-if (state == states.normal)
+if (state == 0)
 {
     if (ydir == -1)
         draw_self()
@@ -23,6 +23,6 @@ if (state == states.normal)
 else
 {
     draw_self()
-    if (state == states.revolver)
+    if (state == 1)
         draw_sprite_ext(spr_chargeeffectenemy, chargeindex, (x + (image_xscale * 20)), y, image_xscale, image_yscale, image_angle, image_blend, image_alpha)
 }

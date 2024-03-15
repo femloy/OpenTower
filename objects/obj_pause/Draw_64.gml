@@ -66,7 +66,7 @@ draw_sprite_ext(spr_pause_border, ui_index, border2_x, border2_y, 1, 1, 0, c_whi
 draw_sprite_ext(spr_pause_vine, ui_index, SCREEN_WIDTH / 2, vine_y, 1, 1, 0, c_white, 1);
 
 var lvlsave = global.leveltosave;
-if (fade > 0 && lvlsave != -4 && lvlsave != "tutorial" && lvlsave != "exit" && room != boss_fakepep && room != boss_fakepephallway && room != boss_fakepepkey && room != boss_vigilante && room != boss_noise && room != boss_pepperman && room != boss_pizzaface && room != Endingroom && room != Johnresurrectionroom && room != Creditsroom)
+if (fade > 0 && lvlsave != -4 && lvlsave != "tutorial" && lvlsave != "secretworld" && lvlsave != "exit" && room != boss_fakepep && room != boss_fakepephallway && room != boss_fakepepkey && room != boss_vigilante && room != boss_noise && room != boss_pepperman && room != boss_pizzaface && room != Endingroom && room != Johnresurrectionroom && room != Creditsroom)
 {
 	if (!instance_exists(obj_achievement_pause))
 	{

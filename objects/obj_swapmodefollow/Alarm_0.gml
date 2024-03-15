@@ -1,1 +1,1 @@
-get_character_spr()
+get_character_spr();

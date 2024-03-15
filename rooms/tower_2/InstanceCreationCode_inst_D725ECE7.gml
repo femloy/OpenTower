@@ -1,2 +1,1 @@
-targetRoom = tower_ravine;
-targetDoor = "F";
+text = lang_get_value_granny("hubtips3")

@@ -164,7 +164,7 @@ function pause_update_priests()
 		}
 		if (destroy)
 		{
-			b = undefined;
+			delete b;
 			ds_list_delete(priest_list, i--);
 		}
 	}

@@ -1,0 +1,1 @@
+pumpkinroom = "badland_7"

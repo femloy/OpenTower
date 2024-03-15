@@ -67,7 +67,7 @@ switch (state)
                     {
                         targetRoom = backtohubroom;
                         targetDoor = "D";
-                        ghostdash = 0;
+                        ghostdash = false;
                         ghostpepper = 0;
                     }
                     global.level_minutes = 0;

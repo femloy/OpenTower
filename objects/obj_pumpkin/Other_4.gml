@@ -2,6 +2,7 @@ if (!is_holiday(holiday.halloween))
 {
     instance_destroy(id, false)
     destroy_sounds([snd])
+	exit;
 }
 if (ds_list_find_index(global.saveroom, id) != -1)
 {

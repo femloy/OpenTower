@@ -144,9 +144,18 @@ function scr_player_supergrab()
 						{
 							baddiegrabbedID.state = states.ending;
 							state = states.ending;
-							instance_create(room_width / 2, room_height / 2, obj_pizzahead_finalecutscene);
-							instance_create(0, 0, obj_pizzahead_whitefade);
-							camzoom = 1;
+							if (!global.swapmode)
+							{
+								instance_create(room_width / 2, room_height / 2, obj_pizzahead_finalecutscene);
+								instance_create(0, 0, obj_pizzahead_whitefade);
+								camzoom = 1;
+							}
+							else
+							{
+								instance_create(room_width / 2, room_height / 2, obj_pizzahead_finalecutsceneN);
+								instance_create(0, 0, obj_pizzahead_whitefade);
+								camzoom = 1;
+							}
 						}
 					}
 				}
@@ -310,8 +319,8 @@ function scr_player_supergrab()
                             pizzahead_subhp = 0
                             hithsp = (-image_xscale * 25)
                             hitvsp = -5
-                            linethrown = 1
-                            mach2 = 0
+                            linethrown = true;
+							mach2 = false;
                             state = states.hit
                             if other.pizzahead
                                 hitLag = 15
@@ -370,8 +379,8 @@ function scr_player_supergrab()
                         if (baddiegrabbedID.object_index == obj_pizzafaceboss_p3 && baddiegrabbedID.elitehit <= 1)
                         {
                             baddiegrabbedID.destroyable = false
-                            baddiegrabbedID.state = states.finale
-                            state = states.finale
+                            baddiegrabbedID.state = states.ending
+                            state = states.ending
                             instance_create((room_width / 2), (room_height / 2), obj_pizzahead_finalecutsceneN)
                             instance_create(0, 0, obj_pizzahead_whitefade)
                             camzoom = 1

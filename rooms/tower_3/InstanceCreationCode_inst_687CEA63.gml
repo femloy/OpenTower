@@ -1,1 +1,1 @@
-escape = true;
+pumpkinroom = "plage_cavern1"

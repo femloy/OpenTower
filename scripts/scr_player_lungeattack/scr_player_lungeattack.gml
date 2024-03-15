@@ -109,7 +109,7 @@ function DoFinisher()
 		state = states.punch;
 		movespeed = 6;
 		image_index = 0;
-		sprite_index = spr_player_breakdanceuppercut;
+		sprite_index = spr_breakdanceuppercut;
 		vsp = -16;
 		hsp = xscale * movespeed;
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);

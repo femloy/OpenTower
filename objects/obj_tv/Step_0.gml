@@ -47,20 +47,22 @@ switch (state)
 {
 	case states.normal:
 		idlespr = spr_tv_idle;
-		if (!obj_player.ispeppino)
+		if (!obj_player1.ispeppino)
 			idlespr = spr_tv_idleN;
 		if (global.panic)
 			idlespr = spr_tv_exprpanic;
-		else if (global.combo >= 3 && global.stylethreshold < 3 && !obj_player.isgustavo)
+		else if (global.combo >= 3 && global.combo < 50 && !obj_player.isgustavo)
 			idlespr = spr_tv_exprcombo;
-		else if (global.stylethreshold >= 3 && !obj_player.isgustavo)
+		else if (global.combo >= 50 && !obj_player.isgustavo)
 			idlespr = spr_tv_exprheat;
-		if (obj_player.isgustavo)
+		if (obj_player1.isgustavo)
 		{
 			idlespr = spr_tv_idleG;
 			if (global.panic)
 				idlespr = spr_tv_escapeG;
 		}
+		if (!obj_player1.ispeppino && global.panic)
+			idlespr = spr_tv_exprpanicN;
 		var _state = obj_player1.state;
 		if (_state == states.backbreaker || _state == states.chainsaw)
 			_state = obj_player1.tauntstoredstate;
@@ -228,6 +230,7 @@ switch (state)
 		switch (expressionsprite)
 		{
 			case spr_tv_exprhurt:
+            case spr_tv_exprhurtN:
             case spr_tv_exprhurt1:
             case spr_tv_exprhurt2:
             case spr_tv_exprhurt3:
@@ -238,6 +241,16 @@ switch (state)
             case spr_tv_exprhurt8:
             case spr_tv_exprhurt9:
             case spr_tv_exprhurt10:
+            case spr_tv_exprhurtN1:
+            case spr_tv_exprhurtN2:
+            case spr_tv_exprhurtN3:
+            case spr_tv_exprhurtN4:
+            case spr_tv_exprhurtN5:
+            case spr_tv_exprhurtN6:
+            case spr_tv_exprhurtN7:
+            case spr_tv_exprhurtN8:
+            case spr_tv_exprhurtN9:
+            case spr_tv_exprhurtN10:
 				if (obj_player1.state != states.hurt)
 				{
 					if (expressionbuffer > 0)
@@ -249,6 +262,7 @@ switch (state)
 					}
 				}
 				break;
+			
 			case spr_tv_hurtG:
 				if (obj_player1.state != states.ratmounthurt)
 				{
@@ -261,7 +275,9 @@ switch (state)
 					}
 				}
 				break;
+			
 			case spr_tv_exprcombo:
+			case spr_tv_exprcomboN:
 				if (global.combo < 3 || _transfospr != -4 || obj_player1.isgustavo || obj_player1.mach4mode || obj_player1.state == states.hurt || obj_player1.state == states.mach3 || obj_player1.sprite_index == obj_player1.spr_mach3boost || global.stylethreshold >= 3)
 				{
 					state = states.tv_whitenoise;
@@ -270,7 +286,9 @@ switch (state)
 						tv_do_expression(spr_tv_exprhurt);
 				}
 				break;
+			
 			case spr_tv_exprcollect:
+			case spr_tv_exprcollectN:
             case spr_tv_happyG:
 				if (expressionbuffer > 0)
 					expressionbuffer--;
@@ -280,7 +298,9 @@ switch (state)
 					expressionsprite = -4;
 				}
 				break;
+			
 			case spr_tv_exprmach3:
+			case spr_tv_exprmach3N:
 				with (obj_player1)
 				{
 					if (state != states.mach3 && state != states.climbwall && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)) && sprite_index != spr_mach3boost && mach4mode == 0)
@@ -292,7 +312,9 @@ switch (state)
 						tv_do_expression(spr_tv_exprmach4);
 				}
 				break;
+			
 			case spr_tv_exprmach4:
+			case spr_tv_exprmach4N:
 				with (obj_player1)
 				{
 					if (mach4mode == 0 && (state != states.chainsaw || (tauntstoredstate != states.mach3 && tauntstoredstate != states.climbwall)))
@@ -302,7 +324,9 @@ switch (state)
 					}
 				}
 				break;
+			
 			case spr_tv_exprheat:
+			case spr_tv_exprheatN:
 				_transfo = false;
 				with (obj_player1)
 				{
@@ -317,7 +341,9 @@ switch (state)
 					expressionsprite = noone;
 				}
 				break;
+			
 			case spr_tv_exprpanic:
+			case spr_tv_exprpanicN:
 				_transfo = false;
 				with (obj_player1)
 				{
@@ -340,6 +366,14 @@ switch (state)
 			expressionsprite = -4;
 		}
 		break;
+}
+if (state != states.tv_whitenoise && state != states.tv_expression && instance_exists(obj_player1))
+{
+	spr_palette = obj_player1.spr_palette;
+	if (obj_player1.isgustavo)
+		spr_palette = spr_ratmountpalette;
+	paletteselect = obj_player1.paletteselect;
+	patterntexture = global.palettetexture;
 }
 if (state != states.tv_whitenoise)
 	tv_trans = 0;

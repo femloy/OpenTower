@@ -221,7 +221,7 @@ if pizzahead
 	with (obj_gustavograbbable)
 	{
 		if (enemy_is_superslam(id) || enemy_is_swingding(id))
-			other.invincible = 1
+			other.invincible = true;
 	}
 }
 if (!invincible && !flash && alarm[5] < 0)

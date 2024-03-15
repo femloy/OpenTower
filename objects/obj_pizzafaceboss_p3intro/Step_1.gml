@@ -73,7 +73,7 @@ switch (introstate)
 	case 4:
 		with (obj_player)
 		{
-			if (ispeppino && floor(image_index) == image_number - 1 && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
 		}
 		if (floor(image_index) == image_number - 1)
@@ -118,7 +118,7 @@ switch (introstate)
 	case 5:
 		with (obj_player)
 		{
-			if (ispeppino && floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
 		}
 		if (sprite_index == spr_pizzahead_grabitemtransition)
@@ -145,7 +145,7 @@ switch (introstate)
 						break;
 				}
 			}
-			if (floor(image_index) == (image_number - 1))
+			if (floor(image_index) == image_number - 1)
 			{
 				fmod_event_one_shot_3d("event:/sfx/pizzahead/throw", x, y);
 				sprite_index = spr_pizzahead_throwaway;
@@ -180,7 +180,7 @@ switch (introstate)
 	case 6:
 		with (obj_player)
 		{
-			if (ispeppino && floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
 		}
 		var t = true;
@@ -201,10 +201,10 @@ switch (introstate)
 	case 7:
 		with (obj_player)
 		{
-			if (ispeppino && floor(image_index) == (image_number - 1) && sprite_index != spr_player_gnomecutscene1)
+			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
 		}
-		if (floor(image_index) == (image_number - 1))
+		if (floor(image_index) == image_number - 1)
 			image_index = image_number - 1;
 		if (introbuffer > 0)
 			introbuffer--;
@@ -263,7 +263,8 @@ switch (introstate)
 		}
 		if ((obj_player1.image_index >= 20 || !obj_player1.ispeppino) && !shot)
 		{
-			fmod_event_one_shot("event:/sfx/voice/peppinoangryscream2");
+			if (obj_player1.ispeppino)
+				fmod_event_one_shot("event:/sfx/voice/peppinoangryscream2");
 			shot = true;
 			sprite_index = spr_pizzahead_phase3_intro3;
 			if (!obj_player1.ispeppino)

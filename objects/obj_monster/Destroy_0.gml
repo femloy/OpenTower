@@ -20,7 +20,7 @@ if (destroy)
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
 	}
-	global.combo++;
+	//global.combo++;
 	global.enemykilled++;
 	global.combotime = 60;
 	with (instance_create(x, y, obj_sausageman_dead))

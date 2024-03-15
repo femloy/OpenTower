@@ -154,8 +154,8 @@ function scr_collide_destructibles()
 		
 		
 		if (vsp <= 0.5 && (state == states.jump || state == states.machcancel || state == states.UNKNOWN_1
-		|| state == states.ratmountjump || state == states.UNKNOWN_2 || state == states.ratmountjump
-		|| state == states.mach3 || state == states.mach2 || state == states.antigrav || state == states.pogo
+		|| state == states.ratmountjump || state == states.UNKNOWN_2 || state == states.mach3 
+		|| state == states.machcancel || state == states.mach2 || state == states.antigrav || state == states.pogo
 		|| (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall
 		|| state == states.fireass || state == states.Sjump || state == states.UNKNOWN_3
 		|| state == states.cheeseballclimbwall || state == states.mach3 || state == states.machcancel

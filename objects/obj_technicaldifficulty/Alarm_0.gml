@@ -12,6 +12,7 @@ with (playerid)
 	x = roomstartx;
 	y = roomstarty;
 	landAnim = false;
+	swap_player();
 }
 with (obj_ghostfollow)
 {

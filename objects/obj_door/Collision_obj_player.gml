@@ -23,7 +23,7 @@ if (!place_meeting(x, y, obj_doorblocked))
 			{
 				if (other.object_index == obj_pumpkindoor)
 				{
-					notification_push(notifs.trickytreat, [room]);
+					notification_push(notifs.trickytreat_enter, [room]);
 					global.levelreset = true;
 				}
 				obj_player1.backtohubroom = room;

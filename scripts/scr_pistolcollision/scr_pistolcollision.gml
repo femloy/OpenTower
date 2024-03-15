@@ -1,4 +1,4 @@
-function scr_pistolcollision(damage, x_next = 0, line = 1)
+function scr_pistolcollision(damage, x_next = 0, line = true)
 {
     for (var i = 0; i < array_length(collision_list); i++)
     {
@@ -22,10 +22,10 @@ function scr_pistolhit(object, damage)
         switch object_index
         {
             case obj_vigilanteboss:
-                if (state != states.hit && (state != states.mach2 || kick) && flickertime <= 0 && vsp > 0 && !reposition)
+                if (state != states.hit && (state != states.mach2 || kick) && (flickertime <= 0 && vsp > 0) && !reposition)
                 {
                     _result = true
-                    flash = 1
+                    flash = true
                     alarm[2] = 3
                     if (other.object_index == obj_pistolbullet)
                     {
@@ -42,7 +42,7 @@ function scr_pistolhit(object, damage)
                     }
                     instance_create(other.x, other.y, obj_bangeffect)
                     if (bullethit < 8)
-                        bullethit += argument1
+                        bullethit += damage
                     if (bullethit >= 8)
                     {
                         if (!pizzahead)
@@ -55,12 +55,12 @@ function scr_pistolhit(object, damage)
                             instance_create(other.x, other.y, obj_parryeffect)
                             scr_sleep(30)
                             state = states.hit
-                            linethrown = 1
+                            linethrown = true
                             hitX = x
                             hitY = y
                             hitLag = 10
-                            thrown = 1
-                            mach2 = 0
+                            thrown = true
+                            mach2 = false
                             hithsp = (other.image_xscale * 20)
                             hitvsp = -7
                             image_xscale = (-other.image_xscale)
@@ -77,7 +77,7 @@ function scr_pistolhit(object, damage)
                                 buildup = 100
                                 with (obj_player)
                                 {
-                                    hurted = 0
+                                    hurted = false
                                     image_alpha = 1
                                     alarm[5] = -1
                                     alarm[6] = -1
@@ -98,10 +98,10 @@ function scr_pistolhit(object, damage)
                 }
                 break
             case obj_pizzafaceboss_p2:
-                if (state != states.hit && flickertime <= 0 && grounded && vsp > 0)
+                if (state != states.hit && (flickertime <= 0 && grounded && vsp > 0))
                 {
                     _result = true
-                    flash = 1
+                    flash = true
                     alarm[2] = 3
                     if (other.object_index == obj_pistolbullet)
                     {
@@ -143,7 +143,7 @@ function scr_pistolhit(object, damage)
                             hitY = y
                             with (obj_player)
                             {
-                                hurted = 0
+                                hurted = false
                                 image_alpha = 1
                                 alarm[5] = -1
                                 alarm[6] = -1
@@ -162,7 +162,7 @@ function scr_pistolhit(object, damage)
             case obj_pizzahead_cog:
             case obj_targetguy:
                 _result = true
-                flash = 1
+                flash = true
                 flashbuffer = 8
                 if (sprite_index == spr_peppinobulletGIANT)
                 {

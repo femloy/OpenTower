@@ -140,26 +140,26 @@ function screen_clear(color = c_black)
 function get_options()
 {
 	ini_open("saveData.ini");
-	global.option_fullscreen = ini_read_real("Option", "fullscreen", true);
+	global.option_fullscreen = ini_read_real("Option", "fullscreen", 1);
 	global.option_resolution = ini_read_real("Option", "resolution", 1);
 	global.option_master_volume = ini_read_real("Option", "master_volume", 1);
 	global.option_music_volume = ini_read_real("Option", "music_volume", 0.85);
 	global.option_sfx_volume = ini_read_real("Option", "sfx_volume", 1);
-	global.option_vibration = ini_read_real("Option", "vibration", true);
+	global.option_vibration = ini_read_real("Option", "vibration", 1);
 	global.option_scale_mode = ini_read_real("Option", "scale_mode", 0);
-	global.option_hud = ini_read_real("Option", "hud", true);
+	global.option_hud = ini_read_real("Option", "hud", 1);
 	global.option_lang = ini_read_string("Option", "lang", "en");
-	global.option_speedrun_timer = ini_read_real("Option", "speedrun_timer", false);
-	global.option_timer = ini_read_real("Option", "timer", false);
+	global.option_timer = ini_read_real("Option", "timer", 0);
+	global.option_speedrun_timer = ini_read_real("Option", "speedrun_timer", 0);
 	global.option_timer_type = ini_read_real("Option", "timer_type", 0);
-	global.option_unfocus_mute = ini_read_real("Option", "unfocus_mute", false);
-	global.option_texfilter = ini_read_real("Option", "texfilter", true);
-	global.option_vsync = ini_read_real("Option", "vsync", false);
-	global.option_screenshake = ini_read_real("Option", "screenshake", true);
+	global.option_unfocus_mute = ini_read_real("Option", "unfocus_mute", 0);
+	global.option_texfilter = ini_read_real("Option", "texfilter", 1);
+	global.option_vsync = ini_read_real("Option", "vsync", 0);
+	global.option_screenshake = ini_read_real("Option", "screenshake", 1);
 	global.lang = global.option_lang;
-	if (true && steam_utils_is_steam_running_on_steam_deck())
+	if (!debug && steam_utils_is_steam_running_on_steam_deck())
 	{
-		// ^ true is some kind of macro. i do not know what it is.
+		// "if true" probably not debug
 		global.option_fullscreen = 1;
 		global.option_resolution = 1;
 	}

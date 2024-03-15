@@ -41,8 +41,8 @@ if (!global.horse && (obj_player1.state == states.normal || obj_player1.state ==
 			obj_player2.image_index = 0;
 		}
 		global.gerome = false;
+		image_index = 1;
 	}
-	image_index = 1;
 }
 if (place_meeting(x, y, obj_player1) && floor(obj_player1.image_index) == (obj_player1.image_number - 1) && (obj_player1.state == states.victory || obj_player1.state == states.door))
 {

@@ -9,9 +9,12 @@ if (state == states.tube)
 			tube_id = other.id;
 			if (other.stored_spd == 0)
 				other.stored_spd = 1;
-			hsp = other.hsp * other.movespeed;
-			vsp = other.vsp * other.movespeed;
-			tube_vsp = other.vsp * other.movespeed;
+			var ms = other.movespeed;
+			if (!ispeppino)
+				ms += 5;
+			hsp = other.hsp * ms;
+			vsp = other.vsp * ms;
+			tube_vsp = other.vsp * ms;
 			stored_spd = 0;
 		}
 	}

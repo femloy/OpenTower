@@ -8,7 +8,7 @@ with (obj_player1)
 	global.pistol = false;
 	global.leveltorestart = -4;
 	global.leveltosave = -4;
-	global.startgate = 0;
+	global.startgate = false;
 	ds_list_clear(global.saveroom);
 	ds_list_clear(global.baddieroom);
 	pistolanim = -4;
