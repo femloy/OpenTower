@@ -111,6 +111,8 @@ if (!selecting)
 				startbuffer = 1;
 			}
 		}
+		if (selecting)
+			menu = string_copy(input[key_select][0], 0, 4) == "menu";
 	}
 }
 else if (!controller)
@@ -119,32 +121,58 @@ else if (!controller)
 	{
 		if (keyboard_key != vk_f1)
 		{
-			startbuffer = 5;
-			addbuffer = 5;
-			var in = tdp_input_get(input[key_select][0]);
-			if (!in.has_value(tdp_input.keyboard, keyboard_key))
-				array_push(in.actions, new tdp_input_action(0, keyboard_key));
-			selecting = false;
+			if (!menu || scr_check_menu_repeats(input[key_select][0], keyboard_key, false))
+			{
+				startbuffer = 5;
+				addbuffer = 5;
+				var in = tdp_input_get(input[key_select][0]);
+				if (!in.has_value(tdp_input.keyboard, keyboard_key))
+					array_push(in.actions, new tdp_input_action(0, keyboard_key));
+				selecting = false;
+			}
+			else if (input[key_select][0] != "menu_select" || !tdp_input_get(input[key_select][0]).is_empty())
+			{
+				startbuffer = 5;
+				addbuffer = 5;
+				selecting = false;
+			}
 		}
 	}
 }
 else
 {
+	if (!debug && keyboard_check_pressed(vk_anykey))
+	{
+		// "if true" probably not debug
+		startbuffer = 5;
+		addbuffer = 5;
+		selecting = false;
+		exit;
+	}
 	var val = scr_checkanygamepad(obj_inputAssigner.player_input_device[0]);
 	if (val == -4)
 		val = scr_check_joysticks(obj_inputAssigner.player_input_device[0]);
 	if (val != -4 && val != gp_select)
 	{
-		startbuffer = 5;
-		addbuffer = 5;
-		in = tdp_input_get(concat(input[key_select][0], "C"));
-		if (!is_array(val))
+		if (!menu || scr_check_menu_repeats(input[key_select][0], val, true))
 		{
-			if (!in.has_value(tdp_input.gamepad, val))
-				array_push(in.actions, new tdp_input_action(tdp_input.gamepad, val));
+			startbuffer = 5;
+			addbuffer = 5;
+			in = tdp_input_get(concat(input[key_select][0], "C"));
+			if (!is_array(val))
+			{
+				if (!in.has_value(tdp_input.gamepad, val))
+					array_push(in.actions, new tdp_input_action(tdp_input.gamepad, val));
+			}
+			else if (!in.has_value(tdp_input.joystick, val[0], val[1]))
+				array_push(in.actions, new tdp_input_action(tdp_input.joystick, val[0], val[1]));
+			selecting = false;
 		}
-		else if (!in.has_value(tdp_input.joystick, val[0], val[1]))
-			array_push(in.actions, new tdp_input_action(tdp_input.joystick, val[0], val[1]));
-		selecting = false;
+		else if (input[key_select][0] != "menu_select" || !tdp_input_get(concat(input[key_select][0], "C")).is_empty())
+		{
+			startbuffer = 5;
+			addbuffer = 5;
+			selecting = false;
+		}
 	}
 }

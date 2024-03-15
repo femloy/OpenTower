@@ -1,3 +1,6 @@
+if (instance_exists(obj_bossplayerdeath))
+	exit;
+
 state++;
 if (state == 1)
 {

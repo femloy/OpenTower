@@ -93,7 +93,7 @@ function swap_player(hurted = false, jumpscare = false)
 				ispeppino = !obj_player1.ispeppino;
 				if !obj_player1.ispeppino && obj_player1.noisecrusher
 					isgustavo = true;
-				get_character_spr(true);
+				get_character_spr();
 			}
 		}
 		with obj_tv

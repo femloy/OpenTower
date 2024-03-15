@@ -114,34 +114,34 @@ function scr_keyname(_key)
 			return "F12";
 			break;
 		case vk_numpad0:
-			return "NUMPAD 0";
+			return "0";
 			break;
 		case vk_numpad1:
-			return "NUMPAD 1";
+			return "1";
 			break;
 		case vk_numpad2:
-			return "NUMPAD 2";
+			return "2";
 			break;
 		case vk_numpad3:
-			return "NUMPAD 3";
+			return "3";
 			break;
 		case vk_numpad4:
-			return "NUMPAD 4";
+			return "4";
 			break;
 		case vk_numpad5:
-			return "NUMPAD 5";
+			return "5";
 			break;
 		case vk_numpad6:
-			return "NUMPAD 6";
+			return "6";
 			break;
 		case vk_numpad7:
-			return "NUMPAD 7";
+			return "7";
 			break;
 		case vk_numpad8:
-			return "NUMPAD 8";
+			return "8";
 			break;
 		case vk_numpad9:
-			return "NUMPAD 9";
+			return "9";
 			break;
 		case vk_multiply:
 			return "MULTIPLY";

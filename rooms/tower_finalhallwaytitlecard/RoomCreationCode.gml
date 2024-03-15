@@ -2,6 +2,11 @@ pal_swap_init_system(shd_pal_swapper);
 global.roommessage = "PIZZA TOWER ISLAND";
 global.leveltosave = "exit";
 global.exitrank = false;
+
+global.player_damage = 0;
+global.swap_damage[0] = 0;
+global.swap_damage[1] = 0;
+
 with (obj_player)
 {
 	state = states.titlescreen;

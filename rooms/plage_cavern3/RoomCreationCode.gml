@@ -9,8 +9,7 @@ if (!obj_secretmanager.init)
             secret_open_portal(1)
         else
             secret_close_portal(1)
-    }
-)
+    })
     secret_add(function()
     {
         touchedtriggers = 0

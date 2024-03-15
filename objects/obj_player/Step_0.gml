@@ -57,7 +57,7 @@ if (place_meeting(x, y + 1, obj_slope))
 	collision_flags |= colflag.sloped;
 
 // noise's standing superjump is just here I guess
-if (character == "P" && !ispeppino && ((scr_check_superjump() && key_jump2) || key_superjump) && state != states.mach3 && can_jump && vsp > 0 && (state == states.normal || state == states.mach2))
+if (character == "P" && !ispeppino && !skateboarding && ((scr_check_superjump() && key_jump2) || key_superjump) && state != states.mach3 && can_jump && vsp > 0 && (state == states.normal || state == states.mach2))
 {
 	sprite_index = spr_superjumpprep;
 	state = states.Sjumpprep;
@@ -1177,6 +1177,14 @@ if (object_index == obj_player1)
 		global.savedcombo = global.combo;
 		global.combotime = 0;
 		global.combo = 0;
+		with (obj_camera)
+		{
+			if (comboend)
+			{
+				comboend = false;
+				event_perform(ev_alarm, 4);
+			}
+		}
 		supercharge = 0;
 	}
 	if (global.heattime <= 0 && global.style > -1 && global.stylelock == 0)

@@ -91,7 +91,6 @@ var exit_function = function()
 			scr_characterspr();
 		}
 	}
-	alarm[3] = 1;
 	ds_list_add(il, id);
 	with (textures_offload(arr))
 	{
@@ -99,6 +98,8 @@ var exit_function = function()
 		ds_list_clear(instance_list);
 		ds_list_copy(sound_list, sl);
 		ds_list_copy(instance_list, il);
+		pause = true;
+		pauseID = other.id;
 	}
 	instance_deactivate_object(id);
 	ds_list_destroy(sl);

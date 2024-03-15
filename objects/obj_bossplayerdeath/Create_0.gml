@@ -16,6 +16,12 @@ with (obj_player1)
 		deathspeed = 16;
 	}
 }
+with (obj_playerbomb)
+{
+	dead = true;
+	deadbuffer = 0;
+	instance_destroy();
+}
 depth = -600;
 fade = 0;
 fade2 = 0;

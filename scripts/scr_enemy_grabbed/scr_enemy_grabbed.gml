@@ -49,7 +49,8 @@ function scr_enemy_grabbed()
 			state = states.stun;
 			hsp = -image_xscale * 25;
 			grav = 0;
-			global.combotime = 60;
+			if (object_index != obj_swapplayergrabbable)
+				global.combotime = 60;
 			if (!important)
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
@@ -91,7 +92,8 @@ function scr_enemy_grabbed()
 			image_xscale *= -1;
 			hsp = -image_xscale * 20;
 			vsp = -7;
-			global.combotime = 60;
+			if (object_index != obj_swapplayergrabbable)
+				global.combotime = 60;
 			if (!important)
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
@@ -128,7 +130,8 @@ function scr_enemy_grabbed()
 				hsp = -image_xscale * 10;
 				vsp = -15;
 			}
-			global.combotime = 60;
+			if (object_index != obj_swapplayergrabbable)
+				global.combotime = 60;
 			if (!important)
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
@@ -164,7 +167,8 @@ function scr_enemy_grabbed()
 			_obj_player.hitY = _obj_player.y;
 			instance_create(x, y, obj_parryeffect);
 			alarm[3] = 1;
-			global.combotime = 60;
+			if (object_index != obj_swapplayergrabbable)
+				global.combotime = 60;
 			global.heattime = 60;
 			if (!important)
 				global.style += (5 + global.combo);
@@ -200,8 +204,11 @@ function scr_enemy_grabbed()
 				}
 				vsp = -6;
 			}
-			check_grabbed_solid(_obj_player);
-			check_grabbed_solid(_obj_player);
+			if (_obj_player.sprite_index != spr_playerN_piledriver)
+			{
+				check_grabbed_solid(_obj_player);
+				check_grabbed_solid(_obj_player);
+			}
 			hsp = hithsp;
 			vsp = hitvsp;
 			linethrown = true;
@@ -236,7 +243,8 @@ function scr_enemy_grabbed()
 			hsp = -image_xscale * 2;
 			state = states.stun;
 			vsp = -20;
-			global.combotime = 60;
+			if (object_index != obj_swapplayergrabbable)
+				global.combotime = 60;
 			if (!important)
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);

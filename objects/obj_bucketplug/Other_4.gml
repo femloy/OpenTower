@@ -8,3 +8,5 @@ if (obj_player1.ispeppino && !global.swapmode)
 }
 else
     sprite_index = spr_plug;
+if (ds_list_find_index(global.saveroom, id) != -1)
+	sprite_index = spr_plugdead;

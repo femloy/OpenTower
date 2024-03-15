@@ -279,6 +279,15 @@ cursor_index += 0.35;
 pause_update_priests();
 
 var prevpause = pause;
+if (pause && !instance_exists(obj_loadingscreen) && alarm[3] == -1)
+{
+	with (obj_music)
+	{
+		fmod_event_instance_set_paused(pillarmusicID, true);
+		fmod_event_instance_set_paused(panicmusicID, true);
+		fmod_event_instance_set_paused(kidspartychaseID, true);
+	}
+}
 if (pause && !instance_exists(obj_option) && !instance_exists(obj_achievement_pause) && alarm[3] == -1)
 {
 	scr_menu_getinput();

@@ -37,8 +37,9 @@ with (other)
 		}
 		if (other.image_yscale == -1)
 		{
-			if (sprite_index == spr_bottle_idle || sprite_index == spr_bottle_activate)
+			if ((other.sprite_index == spr_bottle_idle || other.sprite_index == spr_bottle_activate) && !other.bottlepop)
 			{
+				other.bottlepop = true;
 				repeat (5)
 					instance_create(other.x, other.y + 40, obj_bubbles);
 				fmod_event_one_shot_3d("event:/sfx/misc/bottlepop", x, y);

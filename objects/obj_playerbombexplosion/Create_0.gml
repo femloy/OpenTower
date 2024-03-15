@@ -8,9 +8,12 @@ hitlist = ds_list_create();
 hitqueue = ds_queue_create();
 collision_function = ds_map_create();
 pistol_damage = 4;
+destroy = false;
 
 add_hit = function(inst, obj = noone)
 {
+	if (instance_exists(obj_bossplayerdeath))
+		exit;
     if (floor(image_index) > 9)
         exit;
     if (!ds_exists(hitlist, ds_type_list) || !ds_exists(hitqueue, ds_type_queue))
@@ -33,6 +36,8 @@ ds_map_set(collision_function, noone, function(obj)
 
 ds_map_set(collision_function, obj_baddie, function(obj)
 {
+	if (instance_exists(obj_bossplayerdeath))
+		exit;
     if (!instance_exists(obj))
         return false;
 	
@@ -51,8 +56,8 @@ ds_map_set(collision_function, obj_baddie, function(obj)
             scr_boss_do_hurt_phase2(obj_player1.id);
         if (x != other.x)
             image_xscale = sign(other.x - x);
-        instance_destroy(other)
-        exit;
+        destroy = true;
+		return true;
     }
 	
     if (obj.object_index == obj_fakepepboss)

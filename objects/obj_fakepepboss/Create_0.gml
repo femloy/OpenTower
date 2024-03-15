@@ -94,6 +94,7 @@ miniflash = false;
 staggerbuffer = 0;
 alarm[8] = 1;
 pizzahead = false;
+override_throw = false;
 flashbuffer = 0;
 deformed_cooldown = 0;
 deformed_timer = 0;

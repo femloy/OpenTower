@@ -1,3 +1,11 @@
+if (global.swapmode)
+{
+	with (obj_player1)
+	{
+		if (ispeppino)
+			swap_player(false);
+	}
+}
 switch (introstate)
 {
 	case 0:
@@ -35,7 +43,7 @@ switch (introstate)
 			image_xscale = -1;
 		else if (floor(image_index) >= 2 && sprite_index != spr_player_gnomecutscene1)
 		{
-			with (obj_player)
+			with (obj_player1)
 			{
 				if (sprite_index != spr_player_gnomecutscene2 && ispeppino)
 				{
@@ -55,7 +63,7 @@ switch (introstate)
 		break;
 	
 	case 3:
-		with (obj_player)
+		with (obj_player1)
 		{
 			if (ispeppino && floor(image_index) == image_number - 1)
 				image_index = image_number - 1;
@@ -71,7 +79,7 @@ switch (introstate)
 		break;
 	
 	case 4:
-		with (obj_player)
+		with (obj_player1)
 		{
 			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
@@ -116,7 +124,7 @@ switch (introstate)
 		break;
 	
 	case 5:
-		with (obj_player)
+		with (obj_player1)
 		{
 			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
@@ -178,7 +186,7 @@ switch (introstate)
 		break;
 	
 	case 6:
-		with (obj_player)
+		with (obj_player1)
 		{
 			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;
@@ -199,7 +207,7 @@ switch (introstate)
 		break;
 	
 	case 7:
-		with (obj_player)
+		with (obj_player1)
 		{
 			if (ispeppino && floor(image_index) == image_number - 1) && sprite_index != spr_player_gnomecutscene1
 				image_index = image_number - 1;

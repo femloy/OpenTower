@@ -32,6 +32,10 @@ function tdp_input_key(_name, _actions_array = noone) constructor
 		}
 		return false;
 	};
+	static is_empty = function()
+	{
+		return array_length(actions) <= 0;
+	};
 	
 	name = _name;
 	pressed = false;

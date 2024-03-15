@@ -101,10 +101,15 @@ function scr_noise_arenaintro()
 			{
 				boss_hp = 0;
 				boss_prevhp = 0;
-				if (state == 144)
+				if (state == states.arenaintro)
 					other.introbuffer = 10000;
 			}
 			scr_boss_genericintro(spr_playerN_animatronic, 250);
+			with (obj_player1)
+			{
+				if (state == states.normal)
+					state = states.actor;
+			}
 			if (state == states.walk)
 			{
 				with (instance_create(x, y, obj_doisedead))
@@ -514,7 +519,7 @@ function scr_noise_mach2()
 		skateboardjumpcooldown--;
 	if (skateboardjumpcooldown == 0 && state != states.machslide)
 	{
-		fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+		fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 		vsp = -11;
 		attackspeed = 8;
 		image_index = 0;
@@ -523,7 +528,7 @@ function scr_noise_mach2()
 	}
 	if ((sprite_index == spr_playerN_secondjump1 || sprite_index == spr_playerN_secondjump2) && place_meeting(x + hsp, y, obj_solid))
 	{
-		fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+		fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 		sprite_index = spr_playerN_walljumpstart;
 		image_xscale *= -1;
 		vsp = -11;
@@ -635,7 +640,7 @@ function scr_noise_spin()
 		}
 		else if (el == "jetpack")
 		{
-			fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+			fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 			if (x != targetplayer.x)
 				image_xscale = sign(targetplayer.x - x);
 			state = states.jump;
@@ -669,7 +674,7 @@ function scr_noise_spin()
 		else if (el == "hotair")
 		{
 			buttslamcooldown = 200;
-			fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+			fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 			state = states.dropstart;
 			sprite_index = spr_playerN_doublejump;
 			image_index = 0;

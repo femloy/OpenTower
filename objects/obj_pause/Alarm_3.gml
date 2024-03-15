@@ -1,10 +1,7 @@
 pause = false;
-scr_pause_stop_sounds();
 var rm = room;
 if (!hub)
 {
-	pause = false;
-	scr_pause_activate_objects();
 	obj_player1.targetRoom = Realtitlescreen;
 	obj_player2.targetRoom = Realtitlescreen;
 	room = Realtitlescreen;
@@ -27,9 +24,7 @@ if (!hub)
 }
 else
 {
-	scr_pause_activate_objects();
-	with (instance_create(0, 0, obj_backtohub_fadeout))
-		fadealpha = 0.9;
+	global.levelreset = false;
 	scr_playerreset();
 	with (obj_player1)
 		swap_player();
@@ -39,6 +34,16 @@ else
 		obj_player2.targetDoor = "HUB";
 	global.leveltorestart = -4;
 	global.leveltosave = -4;
+	with (instance_create(0, 0, obj_backtohub_fadeout))
+	{
+		fadealpha = 1;
+		fadein = false;
+		reset = true;
+		pos_player = false;
+		obj_player1.targetRoom = obj_player1.backtohubroom;
+		obj_player2.targetRoom = obj_player1.backtohubroom;
+		room_goto(obj_player1.backtohubroom);
+	}
 }
 if (rm == boss_pizzaface || rm == boss_noise || rm == boss_pepperman || rm == boss_fakepep || rm == boss_vigilante)
 	global.bossintro = true;

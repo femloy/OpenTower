@@ -1,3 +1,15 @@
+if (instance_exists(obj_bossplayerdeath))
+{
+	with (obj_camera)
+		lock = false;
+	fadein = false;
+	camzoom = 1;
+	alarm[0] = -1;
+	camera_set_view_size(view_camera[0], SCREEN_WIDTH * camzoom, SCREEN_HEIGHT * camzoom);
+	instance_destroy();
+	exit;
+}
+
 if (fadein)
 {
 	if (state == 0)

@@ -33,4 +33,5 @@ input = [
 	["menu_quit", "control_menu_quit"],
 	["menu_delete", "control_menu_delete"]
 ];
+menu = false;
 controller = false;

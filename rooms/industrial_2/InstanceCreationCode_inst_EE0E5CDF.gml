@@ -1,2 +1,2 @@
-chosenstate = states.slap
+chosenstate = states.tackle
 escape = true

@@ -28,7 +28,7 @@ function scr_fakepepclone_transitioncutscene()
 			}
 			else if (attack.attack == fakepep_attacks.tauntclone)
 			{
-				fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+				fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 				create_particle(x, y, particle.highjumpcloud2);
 				attacked = true;
 				taunted = false;

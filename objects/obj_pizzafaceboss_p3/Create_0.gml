@@ -44,6 +44,7 @@ scr_pizzaface_p3_add_attack(6, pizzaface_p3_attacks.laugh, 100);
 
 currentattack = 0;
 pizzahead = true;
+override_throw = false;
 playerpowerup = true;
 playerid = -4;
 introstate = states.arenaintro;

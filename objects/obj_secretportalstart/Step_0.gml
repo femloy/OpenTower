@@ -85,6 +85,14 @@ switch (sprite_index)
 							movespeed = tauntstoredmovespeed;
 							hsp = tauntstoredhsp;
 							sprite_index = tauntstoredsprite;
+							if (state == states.actor || state == states.backbreaker || state == states.chainsaw || state == states.machcancel)
+							{
+								sprite_index = spr_bodyslamstart;
+								image_index = 0;
+								state = states.freefallprep;
+								freefallsmash = 0;
+								vsp = (character == "P") ? -5 : -7;
+							}
 							if (state == states.knightpep)
 							{
 								hsp = 0;

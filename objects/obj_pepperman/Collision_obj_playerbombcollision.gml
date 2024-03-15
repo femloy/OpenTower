@@ -1,3 +1,4 @@
+/*
 if (wastedhits == 9 && phase == 1 && !pizzahead && state == states.contemplate)
 {
 	with (instance_create(other.x, other.y, obj_explosioneffect))
@@ -38,3 +39,4 @@ else if (state == states.mini && ministate != 8)
 	spr_dead = spr_pepperman_minifall;
 	instance_destroy();
 }
+*/

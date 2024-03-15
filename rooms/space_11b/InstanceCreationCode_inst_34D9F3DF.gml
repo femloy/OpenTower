@@ -1,1 +1,1 @@
-targetRoom = space_secret3;
+start = true

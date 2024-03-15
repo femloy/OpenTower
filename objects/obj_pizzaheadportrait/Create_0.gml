@@ -1,5 +1,6 @@
 event_inherited();
 pizzahead = false;
+override_throw = false;
 spd = 6;
 vsp = 0;
 grav = 0.5;

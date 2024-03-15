@@ -1,2 +1,2 @@
-chosenstate = states.mach1
-escape = true
+targetRoom = industrial_3
+targetDoor = "C"

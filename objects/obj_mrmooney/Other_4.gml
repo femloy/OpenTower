@@ -11,7 +11,7 @@ if (!unlocked && stickunlocked)
 		with (instance_create(0, 0, obj_mrsticknotification))
 		{
 			sprite_index = spr_mrmooney_notification;
-			if (!obj_player1.ispeppino)
+			if (!obj_player1.ispeppino || global.swapmode)
 				sprite_index = spr_noisetterabbitTV;
 		}
 	}

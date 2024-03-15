@@ -315,13 +315,14 @@ function scr_player_supergrab()
                         tauntstoredstate = states.mach3
                         with (baddiegrabbedID)
                         {
-                            image_xscale = (-other.xscale)
+                            image_xscale = -other.xscale
                             pizzahead_subhp = 0
-                            hithsp = (-image_xscale * 25)
+                            hithsp = -image_xscale * 25
                             hitvsp = -5
                             linethrown = true;
 							mach2 = false;
                             state = states.hit
+							override_throw = true;
                             if other.pizzahead
                                 hitLag = 15
                             else
@@ -347,7 +348,7 @@ function scr_player_supergrab()
                                     hsp = -irandom_range(-11, 11)
                                 }
                             }
-                            x = clamp(x, 50, room_width - 50)
+                            x = clamp(x, 100, room_width - 100)
 							
                             var old_x = x
                             var old_y = y

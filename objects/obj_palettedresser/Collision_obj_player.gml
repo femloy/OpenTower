@@ -1,4 +1,4 @@
-if (other.key_up2)
+if (other.key_up2 && other.ispeppino == ispeppino)
 {
 	with (other)
 	{

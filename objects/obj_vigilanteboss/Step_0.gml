@@ -201,7 +201,8 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 			image_xscale = -1;
 			x = room_width - dis;
 			y = 402;
-			instance_create(0, 0, obj_vigilante_duelintro);
+			if (!instance_exists(obj_bossplayerdeath))
+				instance_create(0, 0, obj_vigilante_duelintro);
 			duelphase = 0;
 			duelbuffer = 140;
 			duelplayer = false;

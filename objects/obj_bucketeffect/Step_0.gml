@@ -9,7 +9,7 @@ if (state == states.normal)
         {
             with (instance_create(x, y, obj_bucketsplash))
             {
-                vsp = (-(random_range(6, 9)))
+                vsp = -random_range(6, 9)
                 hsp = random_range(-2, 2)
             }
         }

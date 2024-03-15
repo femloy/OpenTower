@@ -15,6 +15,34 @@ function scr_check_menu_key(key)
 	return (global.key_start != key && global.key_slap != key && global.key_taunt != key);
 }
 
+function scr_check_menu_repeats(argument0, argument1, argument2)
+{
+	var query = [];
+	for (var i = 0; i < array_length(input); i++)
+	{
+		var in = input[i];
+		if (in[0] != "menu_quit" && in[0] != argument0 && string_copy(input[i][0], 0, 4) == "menu")
+			array_push(query, concat(input[i][0], argument2 ? "C" : ""));
+	}
+	for (i = 0; i < array_length(query); i++)
+	{
+		in = tdp_input_get(query[i]);
+		if (!argument2)
+		{
+			if (in.has_value(0, argument1))
+				return false;
+		}
+		else if (is_array(argument1))
+		{
+			if (in.has_value(2, argument1[0], argument1[1]))
+				return false;
+		}
+		else if (in.has_value(1, argument1))
+			return false;
+	}
+	return true;
+}
+
 function scr_checkanygamepad(device)
 {
 	if (gamepad_button_check_pressed(device, gp_face1))

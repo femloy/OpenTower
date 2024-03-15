@@ -430,7 +430,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Decompiled",
-    "path": "folders/Decompiled.yy",
+    "name": "Tower",
+    "path": "folders/Rooms/Tower.yy",
   },
 }

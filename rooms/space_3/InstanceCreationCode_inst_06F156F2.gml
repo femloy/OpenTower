@@ -1,1 +1,0 @@
-targetRoom = space_2;

@@ -4,6 +4,7 @@ fightball_buffer1 = 0;
 fightball_buffer2 = 0;
 skipintro = false;
 pizzahead = false;
+override_throw = false;
 pizzaheadshot = false;
 parryable = false;
 golf = false;

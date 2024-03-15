@@ -22,6 +22,19 @@ function fakepep_set_attack(phase, wastedhits, _attack, _cooldown, _deformed_tim
 		deformed_timer: _deformed_timer
 	};
 }
+function fakepep_clamp(_phase, _hit)
+{
+	if (_phase >= array_length(attacklist))
+		_phase = array_length(attacklist) - 1;
+	if (_hit >= array_length(attacklist[_phase]))
+		_hit = array_length(attacklist[_phase]) - 1;
+	
+	return 
+	{
+		phase: _phase,
+		hit: _hit
+	};
+}
 function fakepep_get_attack(phase, wastedhits)
 {
 	return attack_list[phase][wastedhits];
@@ -497,7 +510,7 @@ function scr_fakepepboss_walk()
 					break;
 				
 				case fakepep_attacks.tauntclone:
-					fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+					fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 					create_particle(x, y, particle.highjumpcloud2);
 					state = states.backbreaker;
 					taunted = false;

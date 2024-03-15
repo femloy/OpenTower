@@ -195,6 +195,7 @@ signspr = spr_preparetodraw;
 reposition = false;
 signy = -sprite_get_height(signspr);
 pizzahead = false;
+override_throw = false;
 pizzaheadshot = false;
 sprite_index = spr_vigilante_intro1;
 if (!obj_player1.ispeppino)

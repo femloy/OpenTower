@@ -179,6 +179,9 @@ function scr_bosscontroller_normal()
 				image_speed = 0.35;
 				image_index = 0;
 				state = states.arenaintro;
+				hsp = 0;
+				vsp = 0;
+				movespeed = 0;
 			}
 			with (obj_hppickup)
 			{

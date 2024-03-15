@@ -189,6 +189,8 @@ if instance_exists(obj_bosscontroller)
         create_particle(x, y, particle.genericpoofeffect);
     }
 }
+if room == characterselect
+	usable = false;
 if obj_player1.state == states.duel || instance_exists(obj_vigilante_duelintro)
     usable = false;
 if obj_player1.sprite_index == obj_player1.spr_fightball

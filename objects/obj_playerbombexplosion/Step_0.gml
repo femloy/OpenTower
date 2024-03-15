@@ -9,6 +9,11 @@ while (ds_queue_size(hitqueue) > 0)
         if func(obj)
             ds_list_add(hitlist, obj);
     }
+	if (destroy)
+	{
+		instance_destroy();
+		break;
+	}
     if (!instance_exists(id))
         break;
 }

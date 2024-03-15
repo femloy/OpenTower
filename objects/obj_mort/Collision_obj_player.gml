@@ -1,4 +1,4 @@
-if (sprite_index != spr_mortspawn)
+if (sprite_index != spr_mortspawn && !instance_exists(obj_backtohub_fadeout) && (!instance_exists(obj_pause) || obj_pause.alarm[5] == -1 || obj_pause.alarm[3] == -1))
 {
 	with (other)
 	{

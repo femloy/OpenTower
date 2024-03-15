@@ -30,7 +30,7 @@ function scr_init_input()
 function scr_check_superjump()
 {
 	var sj = global.gamepad_superjump;
-	if obj_inputAssigner.player_input_device[0] < 0
+	if obj_inputAssigner.player_input_device[obj_inputAssigner.player_index] < 0
 		sj = global.keyboard_superjump;
 	return ((sj && key_up) || key_superjump);
 }
@@ -38,7 +38,7 @@ function scr_check_superjump()
 function scr_check_groundpound()
 {
 	var gp = global.gamepad_groundpound;
-	if obj_inputAssigner.player_input_device[0] < 0
+	if obj_inputAssigner.player_input_device[obj_inputAssigner.player_index] < 0
 		gp = global.keyboard_groundpound;
 	return ((gp && key_down2) || key_groundpound);
 }
@@ -60,7 +60,7 @@ function scr_check_dive()
 function scr_check_groundpound2()
 {
 	var gp = global.gamepad_groundpound;
-	if obj_inputAssigner.player_input_device[0] < 0
+	if obj_inputAssigner.player_input_device[obj_inputAssigner.player_index] < 0
 		gp = global.keyboard_groundpound;
 	return ((gp && key_down) || key_groundpound2);
 }

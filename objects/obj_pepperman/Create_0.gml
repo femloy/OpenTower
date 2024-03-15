@@ -10,6 +10,7 @@ GIANTbowlingballcount = 0;
 MAX_bowlingballcount = 2;
 MAX_GIANTbowlingballcount = 3;
 pizzahead = false;
+override_throw = false;
 landbuffer2 = 0;
 supergrabstate = 0;
 savedthrown = false;

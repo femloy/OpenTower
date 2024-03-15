@@ -127,6 +127,8 @@ add_achievement_notify("pal_mooney", -4, function(data)
 {
 	if (!obj_achievementtracker.ispeppino)
 		exit;
+	if (global.swapmode)
+		exit;
 	var type = data[0];
 	if (type == notifs.mrmooney_donated)
 		palette_unlock(name, "mooney", 15);
@@ -581,7 +583,7 @@ add_achievement_notify("pal_porcupine", -4, function(data)
 
 add_achievement_notify("pal_feminine", -4, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if (obj_achievementtracker.ispeppino && !global.swapmode)
 		exit;
 	var type = data[0];
 	if (type == notifs.mrmooney_donated)

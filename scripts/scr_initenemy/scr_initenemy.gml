@@ -6,6 +6,7 @@ function scr_initenemy()
 	pizzaheadKO_buffer = 0;
 	pizzahead_maxsubhp = 3;
 	pizzahead_subhp = pizzahead_maxsubhp;
+	override_throw = false;
 	camzoom = 1;
 	mach2 = false;
 	steppy = false;

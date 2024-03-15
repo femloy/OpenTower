@@ -1,2 +1,1 @@
-particlespr = spr_spacedebris;
-targettiles = "Tiles_1";
+targetRoom = space_4

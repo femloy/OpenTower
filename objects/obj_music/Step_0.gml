@@ -50,7 +50,7 @@ if (global.panic)
 			fmod_event_instance_stop(music.event, true);
 			fmod_event_instance_stop(music.event_secret, true);
 		}
-		if (room == tower_finalhallway)
+		if (room == tower_finalhallway && music != -4)
 		{
 			exitmusic = true;
 			fmod_event_instance_stop(panicmusicID);

@@ -1,1 +1,1 @@
-particlespr = spr_chocolatedebris;
+particlespr = spr_pumpkindebris

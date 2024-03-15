@@ -1,1 +1,1 @@
-secret = 1
+secret = true

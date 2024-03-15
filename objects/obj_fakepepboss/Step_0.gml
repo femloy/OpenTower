@@ -111,6 +111,11 @@ else
 	grav = 0.5;
 if (state == states.stun)
 	instance_destroy(obj_grabmarker);
+if (instance_exists(obj_player1))
+{
+	if (!obj_player1.ispeppino || global.swapmode)
+		instance_destroy(obj_grabmarker);
+}
 if (prevhp != elitehit)
 {
 	if (elitehit < prevhp)

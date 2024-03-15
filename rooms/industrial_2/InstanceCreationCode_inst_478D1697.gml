@@ -1,2 +1,2 @@
-chosenstate = states.tackle
+chosenstate = states.mach1
 escape = true

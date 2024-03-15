@@ -226,7 +226,7 @@ function scr_pepperman_walk()
 	}
 	else if (stomp && cooldown == 0)
 	{
-		fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+		fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 		create_particle(x, y, particle.jumpdust);
 		state = states.jump;
 		landbuffer2 = 10;
@@ -632,7 +632,7 @@ function scr_pepperman_mini()
 						image_xscale = sign(targetplayer.x - x);
 					sprite_index = spr_pepperman_minijump;
 					image_index = 0;
-					fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
+					fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 					attackspeed = 10;
 					create_particle(x, y, particle.jumpdust);
 				}

@@ -13,7 +13,7 @@ function textures_offload(texturegroup_array)
 	}
 	return b;
 }
-function scr_playerreset()
+function scr_playerreset(stopmusic = true)
 {
 	trace("playerreset");
 	
@@ -65,13 +65,16 @@ function scr_playerreset()
 		achievement_reset_variables(achievements_update);
 	}
 	
-	with (obj_music)
+	if stopmusic
 	{
-		secretend = true;
-		secret = false;
-		exitmusic = false;
+		with (obj_music)
+		{
+			secretend = true;
+			secret = false;
+			exitmusic = false;
+		}
+		stop_music();
 	}
-	stop_music();
 	fmod_set_parameter("musicmuffle", 0, true);
 	fmod_set_parameter("pillarfade", 0, true);
 	
@@ -258,6 +261,7 @@ function scr_playerreset()
 	}
 	with (obj_player)
 	{
+		mort = false;
 		noisepizzapepper = false;
 		goblinkey = false;
 		transformationsnd = false;

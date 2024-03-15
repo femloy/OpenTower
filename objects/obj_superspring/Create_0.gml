@@ -10,3 +10,4 @@ grounded = false;
 grav = 0.5;
 activatespr = spr_presentbox_activate;
 depth = 0;
+bottlepop = false;

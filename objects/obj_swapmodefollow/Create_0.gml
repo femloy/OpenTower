@@ -19,18 +19,11 @@ notecreate = 0;
 grabbuffer = 0;
 steppybuffer = 0;
 
-get_character_spr = function(swap = false)
+get_character_spr = function()
 {
-    if !swap
-    {
-        paletteselect = obj_player1.player_paletteselect[!obj_player1.player_paletteindex];
-        patterntexture = obj_player1.player_patterntexture[!obj_player1.player_paletteindex];
-    }
-    else
-    {
-        paletteselect = obj_player1.player_paletteselect[obj_player1.player_paletteindex];
-        patterntexture = obj_player1.player_patterntexture[obj_player1.player_paletteindex];
-    }
+    var palinfo = ispeppino ? get_pep_palette_info() : get_noise_palette_info();
+	paletteselect = palinfo.paletteselect;
+	patterntexture = palinfo.patterntexture;
 	
     taunttimer = 0;
     breakdance_pressed = 0;

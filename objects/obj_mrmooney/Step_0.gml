@@ -4,7 +4,7 @@ if (sprite_index == idlespr)
 	if (showmoney && obj_player1.key_up2 && (global.pigtotal - global.pigreduction) >= maxscore)
 	{
 		sprite_index = smilespr;
-		if (!obj_player1.ispeppino)
+		if (!obj_player1.ispeppino || global.swapmode)
 			alarm[0] = 100;
 		fmod_event_one_shot_3d("event:/sfx/misc/kashing", x, y);
 		instance_destroy(uparrowID);
@@ -15,12 +15,16 @@ if (sprite_index == idlespr)
 		notification_push(notifs.mrmooney_donated, [room]);
 		with (obj_palettedresser)
 		{
-			for (var i = 0; i < array_length(palettes); i++)
+			var _clothes = (!obj_player1.ispeppino || global.swapmode) ? "feminine" : "mooney";
+			for (var j = 0; j < array_length(player_palettes); j++)
 			{
-				if (palettes[i][0] == "mooney" || palettes[i][0] == "feminine")
+				for (var i = 0; i < array_length(pals); i++)
 				{
-					palettes[i][1] = true;
-					break;
+					if (pals[i][0] == _clothes)
+					{
+						player_palettes[j][i][1] = true;
+						break;
+					}
 				}
 			}
 		}

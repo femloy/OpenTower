@@ -82,7 +82,7 @@ if (!obj_player1.ispeppino || global.swapmode)
 {
 	music_arr = [
 		["event:/music/soundtest/entrancenoise", "The Noise's Jam-Packed Radical Anthem - MrSauceman"],
-		["event:/music/soundtest/doise", "Doise At The Door - MrSauceman"],
+		["event:/music/soundtest/doise", "Impasta Syndrome - MrSauceman"],
 		["event:/music/soundtest/pizzatimenoise", "Distasteful Anchovi - ClascyJitto"],
 		["event:/music/soundtest/lap2noise", "World Wide Noise - ClascyJitto"],
 		["event:/music/soundtest/pizzaheadnoise", "Unexpectancy, Part 3 (Remix) - ClascyJitto"],

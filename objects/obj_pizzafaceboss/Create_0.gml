@@ -25,6 +25,7 @@ bighitbox = instance_create(x, y, obj_pizzafacehitbox);
 bighitbox.baddieID = id;
 baddie_range = 1;
 pizzahead = false;
+override_throw = false;
 spotlightID = -4;
 parryable = false;
 flameID = -4;
