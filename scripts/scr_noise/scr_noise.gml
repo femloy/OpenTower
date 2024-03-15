@@ -1388,8 +1388,8 @@ function scr_noise_phase1hurt()
 		var lay2 = layer_get_id("Backgrounds_5");
 		var bg1 = layer_background_get_id(lay1);
 		var bg2 = layer_background_get_id(lay2);
-		layer_background_sprite(bg1, 4149);
-		layer_background_sprite(bg2, 1542);
+		layer_background_sprite(bg1, bg_doisebossBG4);
+		layer_background_sprite(bg2, bg_doisebossBG2);
 		layer_background_speed(bg2, 0.35);
 		layer_hspeed(lay1, 0.4);
 		layer_vspeed(lay1, 0.4);
