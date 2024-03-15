@@ -1,10 +1,10 @@
 /*
 	Script made by loypoll
 	
-	Please do not take this and claim it as your own,
-	and please credit me when using this.
+	Don't take this and claim it as your own,
+	and please credit me if you'll use this.
 	
-	Feel free to improve this mess though...
+	Feel free to improve this mess though.
 */
 
 using System;
@@ -3044,6 +3044,7 @@ var folders = new Dictionary<string, spriteProps>()
 	{"spr_playerN_ratballoonfloat", new spriteProps("Noise", "folders/Sprites/Player/Noise.yy")},
 	{"spr_playerN_rocket", new spriteProps("Rocket", "folders/Sprites/Player/Noise/Rocket.yy")},
 	{"spr_playerN_rocketbump", new spriteProps("Rocket", "folders/Sprites/Player/Noise/Rocket.yy")},
+	{"spr_playerN_rocketbumpdebris", new spriteProps("Effects and Particles", "folders/Sprites/Effects and Particles.yy")},
 	{"spr_playerN_rocketbumpeffect", new spriteProps("Rocket", "folders/Sprites/Player/Noise/Rocket.yy")},
 	{"spr_playerN_rockethitwall", new spriteProps("Rocket", "folders/Sprites/Player/Noise/Rocket.yy")},
 	{"spr_playerN_rocketstart", new spriteProps("Rocket", "folders/Sprites/Player/Noise/Rocket.yy")},
