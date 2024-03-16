@@ -872,6 +872,7 @@ if ((state == states.jump || state == states.normal || state == states.machcance
 			{
 				if (movespeed != 0)
 					xscale = sign(movespeed);
+				movespeed = abs(movespeed);
 				if (abs(movespeed) < 10)
 					movespeed = 10;
 			}

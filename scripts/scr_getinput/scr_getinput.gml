@@ -106,8 +106,6 @@ function scr_menu_getinput()
 			["key_up2", "menu_up", 1],
 			["key_down", "menu_down", 0],
 			["key_down2", "menu_down", 1],
-			["key_left", "menu_left", 0],
-			["key_left2", "menu_left", 1],
 			["key_right", "menu_right", 0],
 			["key_right2", "menu_right", 1],
 			["key_start", "menu_start", 1],
@@ -133,6 +131,11 @@ function scr_menu_getinput()
 				variable_instance_set(id, input[0], _bool);
 			}
 		}
+		
+		if (key_left >= 0)
+			key_left = _dvc < 0 ? -tdp_input_get("menu_left").held : -tdp_input_get("menu_leftC").held;
+		if (key_left2 >= 0)
+			key_left2 = _dvc < 0 ? -tdp_input_get("menu_left").pressed : -tdp_input_get("menu_leftC").pressed;
 	}
 }
 

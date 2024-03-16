@@ -13,5 +13,5 @@ if (image_alpha == 1 && !place_meeting(x, y, obj_metalblock))
 	create_collect(x, y, sprite_index, val);
 	with (instance_create(x + 16, y, obj_smallnumber))
 		number = string(val);
-	tv_do_expression(spr_tv_exprcollect);
+	tv_do_expression(spr_tv_exprcollect, true);
 }

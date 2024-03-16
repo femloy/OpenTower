@@ -22,6 +22,7 @@ visualcombo = 0;
 spr_palette = spr_peppalette;
 paletteselect = 1;
 patterntexture = -4;
+reset_palette = false;
 tv_bg_index = 0;
 tv_trans = 0;
 tv_cooldown = 0;

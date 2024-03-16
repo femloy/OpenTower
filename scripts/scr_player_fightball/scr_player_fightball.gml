@@ -39,6 +39,12 @@ function scr_player_fightball()
                 ratmount_movespeed = 12;
             movespeed = ratmount_movespeed * xscale;
         }
+		with obj_tv
+		{
+			state = states.tv_whitenoise;
+			tv_trans = 0;
+			expressionsprite = -4;
+		}
     }
     if !jumpstop && vsp < 0 && ((jump_p2 && !key_jump2_p2) || (!jump_p2 && !key_jump2))
     {

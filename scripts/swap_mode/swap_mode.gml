@@ -10,7 +10,7 @@ function swap_player(hurted = false, jumpscare = false)
 			return false;
 		with obj_bosscontroller
 		{
-			if player_hp - 1 <= 0
+			if hurted && (player_hp - 1) <= 0
 				return false;
 		}
 		if hurted && instance_exists(obj_bosscontroller) && global.swap_boss_damage + 1 < 3

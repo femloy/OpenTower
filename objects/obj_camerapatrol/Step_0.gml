@@ -102,10 +102,11 @@ if (state == states.walk && point_in_camera(x, y, view_camera[0]))
 				p = true;
 		}
 	}
-	if (p)
+	if (p && (alarm[5] == -1 || patroltimer > 0))
 	{
 		patroltimer = 0;
-		alarm[5] = 1;
+		alarm[5] = -1;
+		event_perform(ev_alarm, 5);
 	}
 }
 if (state == states.punch)

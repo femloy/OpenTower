@@ -94,7 +94,18 @@ function tv_default_condition()
 {
 	return place_meeting(x, y, obj_player);
 }
-function tv_do_expression(sprite, force_pep = false)
+function tv_get_palette()
+{
+	if (!instance_exists(obj_player1))
+		exit;
+	
+	spr_palette = obj_player1.spr_palette;
+	if (obj_player1.isgustavo)
+		spr_palette = spr_ratmountpalette;
+	paletteselect = obj_player1.paletteselect;
+	patterntexture = global.palettetexture;
+}
+function tv_do_expression(sprite, reset_pal = false, force_pep = false)
 {
 	with (obj_tv)
 	{
@@ -149,6 +160,10 @@ function tv_do_expression(sprite, force_pep = false)
 				if (n > -1)
 					expressionsprite = n;
 			}
+			if (reset_pal)
+				reset_palette = true;
+			else
+				reset_palette = false;
 		}
 	}
 }

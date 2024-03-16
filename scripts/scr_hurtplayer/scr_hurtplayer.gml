@@ -319,7 +319,7 @@ function scr_hurtplayer(player)
 				if (noisecrusher)
 					tv_do_expression(spr_tv_hurtG);
 				else
-					tv_do_expression(!ispeppino ? spr_tv_exprhurt : spr_tv_exprhurtN, true);
+					tv_do_expression(!ispeppino ? spr_tv_exprhurt : spr_tv_exprhurtN, false, true);
 				
 				if (!ispeppino)
 					hurtTV = choose(spr_tv_exprhurt1, spr_tv_exprhurt2, spr_tv_exprhurt3, spr_tv_exprhurt4, spr_tv_exprhurt5, spr_tv_exprhurt6, spr_tv_exprhurt7, spr_tv_exprhurt8, spr_tv_exprhurt9, spr_tv_exprhurt10);

@@ -83,10 +83,13 @@ switch (state)
 		{
 			with (obj_player1)
 			{
-				if (mach4mode == 1)
-					tv_do_expression(spr_tv_exprmach4);
-				else if (state == states.mach3 || sprite_index == spr_mach3boost)
-					tv_do_expression(spr_tv_exprmach3);
+				if (!isgustavo || !ispeppino)
+				{
+					if (mach4mode == 1)
+						tv_do_expression(spr_tv_exprmach4);
+					else if (state == states.mach3 || sprite_index == spr_mach3boost)
+						tv_do_expression(spr_tv_exprmach3);
+				}
 			}
 		}
 		switch (sprite_index)
@@ -214,6 +217,11 @@ switch (state)
 		{
 			if (expressionsprite != -4)
 			{
+				if (reset_palette)
+				{
+					reset_palette = false;
+					tv_get_palette();
+				}
 				state = states.tv_expression;
 				sprite_index = expressionsprite;
 			}
@@ -283,7 +291,7 @@ switch (state)
 					state = states.tv_whitenoise;
 					expressionsprite = -4;
 					if (obj_player1.state == states.hurt)
-						tv_do_expression(spr_tv_exprhurt);
+						tv_do_expression(spr_tv_exprhurt, true);
 				}
 				break;
 			
@@ -309,7 +317,7 @@ switch (state)
 						other.expressionsprite = -4;
 					}
 					if (mach4mode)
-						tv_do_expression(spr_tv_exprmach4);
+						tv_do_expression(spr_tv_exprmach4, true);
 				}
 				break;
 			
@@ -368,13 +376,7 @@ switch (state)
 		break;
 }
 if (state != states.tv_whitenoise && state != states.tv_expression && instance_exists(obj_player1))
-{
-	spr_palette = obj_player1.spr_palette;
-	if (obj_player1.isgustavo)
-		spr_palette = spr_ratmountpalette;
-	paletteselect = obj_player1.paletteselect;
-	patterntexture = global.palettetexture;
-}
+	tv_get_palette();
 if (state != states.tv_whitenoise)
 	tv_trans = 0;
 else

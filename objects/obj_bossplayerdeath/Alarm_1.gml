@@ -4,6 +4,7 @@ with (obj_player1)
 	global.swap_damage[0] = 0;
 	global.swap_damage[1] = 0;
 	global.peppino_damage = 0;
+	global.swap_boss_damage = 0;
 	global.bossplayerhurt = false;
 	global.pistol = false;
 	global.leveltorestart = -4;
