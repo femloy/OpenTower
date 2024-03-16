@@ -1,4 +1,4 @@
-if (destroy)
+if destroy
 {
 	trace("self: ", baddie);
 	with (instance_create(x, y, obj_canonexplosion))

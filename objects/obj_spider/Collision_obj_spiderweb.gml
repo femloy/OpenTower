@@ -1,4 +1,4 @@
-if (!other.active && active && other.id == webID)
+if !other.active && active && other.id == webID
 {
 	other.active = true;
 	active = false;

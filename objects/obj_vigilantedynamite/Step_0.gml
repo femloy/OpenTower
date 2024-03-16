@@ -1,4 +1,4 @@
-if (grounded && vsp > 0)
+if grounded && vsp > 0
 	instance_destroy();
 if (scr_solid(x + hsp, y))
 {

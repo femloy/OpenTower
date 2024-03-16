@@ -1,12 +1,12 @@
-if (state == 0)
+if state == 0
 {
-	if (dirty)
+	if dirty
 	{
-		if (savegame)
+		if savegame
 		{
 			savegame = false;
 			state = 1;
-			with (obj_achievementtracker)
+			with obj_achievementtracker
 			{
 				achievement_save_variables(achievements_update);
 				achievement_save_variables(achievements_notify);
@@ -24,7 +24,7 @@ if (state == 0)
 			buffer_save_async(savebuff, get_savefile_ini(ispeppino), 0, buffer_get_size(savebuff));
 			saveid = buffer_async_group_end();
 		}
-		else if (saveoptions)
+		else if saveoptions
 		{
 			saveoptions = false;
 			state = 3;

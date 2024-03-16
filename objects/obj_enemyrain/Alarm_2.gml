@@ -1,4 +1,4 @@
-if (obj_player1.spotlight == 1)
+if obj_player1.spotlight == 1
 	playerid = obj_player1;
 else
 	playerid = obj_player2;
@@ -17,17 +17,17 @@ if (instance_number(obj_baddie) < 20)
 		while (position_meeting(spawnxrandom + 50, spawny - 50, objects[i]) || position_meeting(spawnxrandom - 50, spawny - 50, objects[i]))
 		{
 			spawny += 1;
-			if (spawnxrandom > playerid.x)
+			if spawnxrandom > playerid.x
 				spawnxrandom -= 1;
-			if (spawnxrandom <= playerid.x)
+			if spawnxrandom <= playerid.x
 				spawnxrandom += 1;
 		}
 		while (position_meeting(spawnxrandom + 50, spawny + 50, objects[i]) || position_meeting(spawnxrandom - 50, spawny + 50, objects[i]))
 		{
 			spawny -= 1;
-			if (spawnxrandom > playerid.x)
+			if spawnxrandom > playerid.x
 				spawnxrandom -= 1;
-			if (spawnxrandom <= playerid.x)
+			if spawnxrandom <= playerid.x
 				spawnxrandom += 1;
 		}
 	}

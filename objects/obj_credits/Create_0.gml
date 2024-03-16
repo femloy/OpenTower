@@ -8,7 +8,7 @@ var arr2 = array_create(0);
 for (var i = 0; i < array_length(global.credits_arr); i++)
 {
 	var b = string_replace_all(global.credits_arr[i], "\n", "");
-	if (b != "CHIVALROUS CUSTOMERS" && b != "COOL CUSTOMERS" && b != "WEENIE CUSTOMERS" && b != "CHEESY CUSTOMERS")
+	if b != "CHIVALROUS CUSTOMERS" && b != "COOL CUSTOMERS" && b != "WEENIE CUSTOMERS" && b != "CHEESY CUSTOMERS"
 	{
 		if ((i % 2) == 0)
 			array_push(arr2, b);
@@ -26,7 +26,7 @@ for (var i = 0; i < array_length(global.credits_arr); i++)
 array_push(credits_arr, arr1, arr2);
 var a1l = array_length(arr1);
 var a2l = array_length(arr2);
-if (a1l >= a2l)
+if a1l >= a2l
 	len = a1l;
 else
 	len = a2l;

@@ -15,7 +15,7 @@ alarm[1] = 10;
 idlespr = spr_pizzahead_TVprojectile;
 bouncespr = spr_pizzahead_TVprojectilebounce;
 var palinfo = get_pep_palette_info();
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
 	palinfo = get_noise_palette_info();
 	sprite_index = spr_pizzahead_TVprojectileN;

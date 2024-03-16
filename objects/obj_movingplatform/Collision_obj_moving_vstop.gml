@@ -1,4 +1,4 @@
-if (!changing_vdir)
+if !changing_vdir
 {
 	vdir *= -1;
 	changing_vdir = true;

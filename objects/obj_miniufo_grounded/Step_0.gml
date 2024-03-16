@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -10,14 +10,14 @@ switch (state)
 		break;
 	case states.walk:
 		image_speed = 0.35;
-		if (!grounded)
+		if !grounded
 			sprite_index = spr_ufogrounded_fall;
-		if (sprite_index != spr_ufogrounded_fall && sprite_index != spr_ufogrounded_land)
+		if sprite_index != spr_ufogrounded_fall && sprite_index != spr_ufogrounded_land
 			scr_enemy_walk();
-		else if (sprite_index == spr_ufogrounded_fall)
+		else if sprite_index == spr_ufogrounded_fall
 		{
 			hsp = 0;
-			if (grounded)
+			if grounded
 			{
 				sprite_index = spr_ufogrounded_land;
 				image_index = 0;
@@ -25,9 +25,9 @@ switch (state)
 		}
 		else
 		{
-			if (image_index > 11)
+			if image_index > 11
 				hsp = sign(image_xscale);
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 				sprite_index = spr_ufogrounded_walk;
 		}
 		break;
@@ -56,21 +56,21 @@ switch (state)
 		scr_enemy_rage();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
 scr_scareenemy();
 var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
-if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0 && grounded)
+if x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0 && grounded
 {
 	if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
 	{
@@ -83,11 +83,11 @@ if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0 &&
 		}
 	}
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

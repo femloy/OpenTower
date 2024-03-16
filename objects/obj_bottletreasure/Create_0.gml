@@ -7,7 +7,7 @@ got_func = function()
 		quick_ini_write_real(get_savefile_ini(), "cutscene", "bottle", true);
 	}
 };
-if (global.bottlecutscene == noone)
+if global.bottlecutscene == noone
 	global.bottlecutscene = quick_ini_read_real(get_savefile_ini(), "cutscene", "bottle", false);
-if (global.bottlecutscene)
+if global.bottlecutscene
 	instance_destroy();

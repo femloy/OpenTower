@@ -1,16 +1,16 @@
 function Approach(a, b, amount)
 {
-	// STOLEN! https://www.youtube.com/watch?v=2FroAhEsuE8
-	if (a < b)
+	// source: https://www.youtube.com/watch?v=2FroAhEsuE8
+	if a < b
 	{
 		a += amount;
-		if (a > b)
+		if a > b
 			return b;
 	}
 	else
 	{
 		a -= amount;
-		if (a < b)
+		if a < b
 			return b;
 	}
 	return a;
@@ -21,17 +21,17 @@ function get_milliseconds()
 }
 function camera_zoom(zoom, speed)
 {
-	with (obj_camera)
+	with obj_camera
 	{
 		targetzoom = zoom;
 		targetzoom = clamp(targetzoom, 0, max_zoom);
-		if (speed != undefined)
+		if speed != undefined
 			zoomspd = abs(speed);
 	}
 }
 function camera_set_zoom(target_zoom)
 {
-	with (obj_camera)
+	with obj_camera
 		zoom = target_zoom;
 }
 function try_solid(xoffset, yoffset, object, iterations)
@@ -64,7 +64,7 @@ function ledge_bump_vertical()
 		var ledge_dir = dirs[i];
 		var tx = try_solid(ledge_dir, 0, obj_solid, argument0);
 		y = old_y;
-		if (tx != -1)
+		if tx != -1
 		{
 			x -= (tx * ledge_dir);
 			y += argument1;
@@ -86,7 +86,7 @@ function ledge_bump(iterations, offset = 4)
 	x += (xscale * offset);
 	var ty = try_solid(0, -1, obj_solid, iterations);
 	x = old_x;
-	if (ty != -1)
+	if ty != -1
 	{
 		y -= ty;
 		x += xscale;
@@ -96,7 +96,7 @@ function ledge_bump(iterations, offset = 4)
 			y = old_y;
 			return true;
 		}
-		with (obj_camera)
+		with obj_camera
 			offset_y += ty;
 		return false;
 	}
@@ -151,7 +151,7 @@ function embed_value_string(str, array)
 }
 function ds_list_add_unique(list)
 {
-	if (argument_count > 1)
+	if argument_count > 1
 	{
 		for (var i = 1; i < argument_count; i++)
 		{
@@ -193,7 +193,7 @@ function instance_nearest_random(object, range)
 	{
 		var b = instance_find(object, i);
 		var t = distance_to_object(b);
-		if (t <= l)
+		if t <= l
 			ds_list_add(list, b);
 	}
 	b = undefined;

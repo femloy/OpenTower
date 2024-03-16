@@ -1,4 +1,4 @@
-with (obj_player)
+with obj_player
 {
 	if (state == states.backbreaker && (sprite_index == spr_supertaunt1 || sprite_index == spr_supertaunt2 || sprite_index == spr_supertaunt3 || sprite_index == spr_supertaunt4))
 		draw_superslam_enemy();
@@ -43,7 +43,7 @@ if (kidsparty_lightning || dark_lightning)
 		surf2 = surface_create(cw, ch);
 	var surf_x = camera_get_view_x(view_camera[0]);
 	var surf_y = camera_get_view_y(view_camera[0]);
-	if (kidsparty_lightning)
+	if kidsparty_lightning
 	{
 		if (surface_exists(surf))
 		{
@@ -54,7 +54,7 @@ if (kidsparty_lightning || dark_lightning)
 			draw_rectangle(0, 0, cw, ch, false);
 			gpu_set_blendmode(bm_subtract);
 			draw_set_color(c_white);
-			with (obj_patrolcone)
+			with obj_patrolcone
 			{
 				if (instance_exists(baddieID) && baddieID.state == states.walk)
 				{
@@ -76,7 +76,7 @@ if (kidsparty_lightning || dark_lightning)
 			draw_rectangle(0, 0, cw, ch, false);
 			gpu_set_blendmode(bm_subtract);
 			draw_set_color(c_white);
-			with (obj_patrolcone)
+			with obj_patrolcone
 			{
 				if (instance_exists(baddieID) && baddieID.state == states.walk)
 				{
@@ -88,7 +88,7 @@ if (kidsparty_lightning || dark_lightning)
 			draw_surface(surf, 0, 0);
 			gpu_set_blendmode(bm_add);
 			draw_set_alpha(0.3);
-			with (obj_patrolcone)
+			with obj_patrolcone
 			{
 				if (instance_exists(baddieID) && baddieID.state == states.walk)
 				{
@@ -106,7 +106,7 @@ if (kidsparty_lightning || dark_lightning)
 			draw_set_alpha(1);
 		}
 	}
-	else if (dark_lightning)
+	else if dark_lightning
 	{
 		if (surface_exists(surf))
 		{
@@ -121,19 +121,19 @@ if (kidsparty_lightning || dark_lightning)
 			{
 				var _player = asset_get_index(concat("obj_player", i + 1));
 				draw_set_alpha(circle_alpha_out);
-				with (_player)
+				with _player
 				{
-					if (state != states.gotoplayer)
+					if state != states.gotoplayer
 						draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), 178, false);
 				}
 				draw_set_alpha(circle_alpha_in);
-				with (_player)
+				with _player
 				{
-					if (state != states.gotoplayer)
+					if state != states.gotoplayer
 						draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), 128, false);
 				}
 			}
-			with (obj_chateaulight)
+			with obj_chateaulight
 			{
 				draw_set_alpha(circle_alpha_out);
 				draw_circle((x - surf_x) + irandom_range(-1, 1), (y - surf_y) + irandom_range(-1, 1), circle_size_out, false);

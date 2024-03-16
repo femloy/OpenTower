@@ -1,11 +1,11 @@
 mask_index = spr_player_mask;
-switch (state)
+switch state
 {
 	case states.normal:
 		launch_buffer = 120;
 		break;
 	case states.ghostpossess:
-		switch (substate)
+		switch substate
 		{
 			case states.normal:
 				var moveH = playerid.key_left + playerid.key_right;
@@ -18,7 +18,7 @@ switch (state)
 				hsp = 0;
 				vsp = 0;
 				angle += 32;
-				if (launch_buffer > 0)
+				if launch_buffer > 0
 					launch_buffer--;
 				else
 					substate = states.jump;
@@ -29,12 +29,12 @@ switch (state)
 				hsp = moveX * spd;
 				vsp = moveY * spd;
 				angle += 64;
-				with (obj_destructibles)
+				with obj_destructibles
 				{
 					if (place_meeting(x - other.hsp, y - other.vsp, other))
 						instance_destroy();
 				}
-				with (obj_metalblock)
+				with obj_metalblock
 				{
 					if (place_meeting(x - other.hsp, y - other.vsp, other))
 						instance_destroy();
@@ -42,7 +42,7 @@ switch (state)
 				if (place_meeting(x + hsp, y + vsp, obj_solid))
 				{
 					instance_destroy();
-					with (playerid)
+					with playerid
 					{
 						state = states.ghost;
 						visible = true;

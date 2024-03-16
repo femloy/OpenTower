@@ -1,22 +1,22 @@
-with (obj_player2)
+with obj_player2
 	state = states.titlescreen;
-switch (state)
+switch state
 {
 	case states.jump:
-		if (room != boss_pizzafacefinale && vsp < 0)
+		if room != boss_pizzafacefinale && vsp < 0
 			y += vsp;
 		vsp = Approach(vsp, -10, 0.1);
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
-			if (image_speed < 2)
+			if image_speed < 2
 				image_speed += 0.1;
-			if (room == boss_pizzafacefinale && image_speed < 4)
+			if room == boss_pizzafacefinale && image_speed < 4
 				image_speed += 0.1;
-			if (room != boss_pizzafacefinale)
+			if room != boss_pizzafacefinale
 			{
 				if (y < -200 && !instance_exists(obj_fadeout))
 				{
-					with (obj_player)
+					with obj_player
 					{
 						targetRoom = boss_pizzafacefinale;
 						targetDoor = "B";
@@ -34,12 +34,12 @@ switch (state)
 				depth = -20;
 				sprite_index = choose(spr_pizzaface_hiteffect1, spr_pizzaface_hiteffect2, spr_pizzaface_hiteffect3, spr_pizzaface_hiteffect4);
 			}
-			repeat (2)
+			repeat 2
 			{
 				with (create_debris(x, y, spr_slapstar))
 					vsp = -irandom_range(8, 11);
 			}
-			repeat (1)
+			repeat 1
 			{
 				with (create_debris(x, y, spr_baddiegibs))
 					vsp = -irandom_range(8, 11);
@@ -56,9 +56,9 @@ switch (state)
 				}
 			}
 			fmod_event_one_shot_3d("event:/sfx/pizzahead/beatdown", x, y);
-			if (image_xscale > 0)
+			if image_xscale > 0
 			{
-				switch (sprite_index)
+				switch sprite_index
 				{
 					case spr_pizzahead_beatdown1:
 						sprite_index = spr_pizzahead_beatdown2;
@@ -110,7 +110,7 @@ switch (state)
 			}
 			else
 			{
-				switch (sprite_index)
+				switch sprite_index
 				{
 					case spr_pizzahead_beatdown14:
 						sprite_index = spr_pizzahead_beatdown13;
@@ -158,9 +158,9 @@ switch (state)
 				}
 			}
 		}
-		if (superslam)
+		if superslam
 		{
-			if (state == states.hit)
+			if state == states.hit
 			{
 				x = hitX;
 				y = hitY;
@@ -175,7 +175,7 @@ switch (state)
 	case states.hit:
 		x = hitX + irandom_range(-4, 4);
 		y = hitY + irandom_range(-4, 4);
-		if (hitLag > 0)
+		if hitLag > 0
 			hitLag--;
 		else
 		{
@@ -188,7 +188,7 @@ switch (state)
 		layer_vspeed(beatdown1_lay, Approach(layer_get_vspeed(beatdown1_lay), -8, 0.1));
 		layer_vspeed(beatdown2_lay, Approach(layer_get_vspeed(beatdown2_lay), -9, 0.1));
 		layer_vspeed(beatdown3_lay, Approach(layer_get_vspeed(beatdown3_lay), -10, 0.1));
-		if (image_speed < 0.6)
+		if image_speed < 0.6
 			image_speed += 0.01;
 		switch (floor(image_index))
 		{

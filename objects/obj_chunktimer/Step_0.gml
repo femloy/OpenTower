@@ -10,7 +10,7 @@ if (global.fill <= 0 && global.panic == true && !global.tutorial_room && !instan
 	}
 	else
 	{
-		with (obj_player)
+		with obj_player
 		{
 			instance_destroy(obj_fadeout);
 			targetDoor = "A";
@@ -21,16 +21,16 @@ if (global.fill <= 0 && global.panic == true && !global.tutorial_room && !instan
 			backtohubroom = tower_finalhallway;
 			backtohubstartx = 206;
 			backtohubstarty = 690;
-			if (isgustavo)
+			if isgustavo
 				sprite_index = spr_player_ratmounttimesup;
 			visible = true;
 			image_blend = c_white;
 			audio_stop_all();
-			if (object_index == obj_player1 && ispeppino && !global.swapmode)
+			if object_index == obj_player1 && ispeppino && !global.swapmode
 				stop_music();
 			fmod_event_one_shot("event:/music/timesup");
 		}
 	}
 }
-if (global.fill <= 0)
+if global.fill <= 0
 	global.fill = 0;

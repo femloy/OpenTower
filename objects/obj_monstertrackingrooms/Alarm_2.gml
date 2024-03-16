@@ -1,5 +1,5 @@
 var puppet_pos = monster_pos[2];
-if (player_posX != -1 && player_posY != -1 && player_posY == puppet_pos.y && sound_pos.x != -1 && sound_pos.y != -1)
+if player_posX != -1 && player_posY != -1 && player_posY == puppet_pos.y && sound_pos.x != -1 && sound_pos.y != -1
 {
 	last_puppet_pos.x = puppet_pos.x;
 	last_puppet_pos.y = puppet_pos.y;

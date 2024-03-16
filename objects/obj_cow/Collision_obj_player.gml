@@ -1,4 +1,4 @@
-with (other)
+with other
 {
 	if (state != states.ridecow && vsp > 0 && !place_meeting(x, yprevious, other))
 	{

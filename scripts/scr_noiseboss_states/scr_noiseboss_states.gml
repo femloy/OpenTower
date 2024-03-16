@@ -9,9 +9,9 @@ enum noisedis // noise_behaviour
 // functions
 function boss_noise_decide_attack()
 {
-	if (attack_cooldown > 0)
+	if attack_cooldown > 0
 		attack_cooldown--;
-	else if (attack_cooldown == 0)
+	else if attack_cooldown == 0
 	{
 		current_attack = get_attack();
 		var c = attack_type[current_attack];
@@ -23,7 +23,7 @@ function get_attack()
 {
 	var chance = irandom(100) > 40;
 	var c = noisedis.none;
-	if (chance)
+	if chance
 		c = attack_pool[phase - 1][irandom(array_length(attack_pool[phase - 1]) - 1)];
 	else
 	{
@@ -41,14 +41,14 @@ function boss_noise_do_attack()
 	attack_cooldown = attack_max[phase - 1];
 	current_behaviour = noisedis.none;
 	image_xscale = (targetplayer.x != x) ? sign(targetplayer.x - x) : image_xscale;
-	if (!angry)
+	if !angry
 		noise_do_attack_normal();
 	else
 		noise_do_attack_angry();
 }
 function noise_do_attack_normal()
 {
-	switch (state)
+	switch state
 	{
 		case states.handstandjump:
 			slide = irandom(100) > 50;
@@ -141,7 +141,7 @@ function noise_do_attack_normal()
 }
 function noise_do_attack_angry()
 {
-	switch (state)
+	switch state
 	{
 		case states.handstandjump:
 			spinskateboard = false;
@@ -249,29 +249,29 @@ function noise_behaviour_none()
 	if (distance_to_object(targetplayer) > 332)
 		move = sign(targetplayer.x - x);
 	hsp = move * movespeed;
-	if (x != targetplayer.x)
+	if x != targetplayer.x
 		image_xscale = sign(targetplayer.x - x);
 	var targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < targetspeed)
+		if movespeed < targetspeed
 			movespeed += 0.25;
-		else if (movespeed > targetspeed)
+		else if movespeed > targetspeed
 			movespeed -= 0.5;
-		if (movespeed < 3)
+		if movespeed < 3
 			image_speed = 0.35;
-		else if (movespeed > 3 && movespeed < 6)
+		else if movespeed > 3 && movespeed < 6
 			image_speed = 0.45;
 		else
 			image_speed = 0.6;
 	}
-	else if (movespeed > 0)
+	else if movespeed > 0
 		movespeed -= 0.1;
-	else if (movespeed <= 0)
+	else if movespeed <= 0
 		movespeed = 0;
 	sprite_index = (hsp != 0) ? walkspr : idlespr;
 	image_xscale = (hsp != 0) ? sign(hsp) : image_xscale;
-	if (!grounded)
+	if !grounded
 		sprite_index = fallspr;
 	boss_decide_taunt(220);
 }
@@ -280,29 +280,29 @@ function noise_behaviour_close()
 	var dx = abs(targetplayer.x - x);
 	move = (dx > 80) ? sign(targetplayer.x - x) : 0;
 	hsp = move * movespeed;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < normal_spd)
+		if movespeed < normal_spd
 			movespeed += 0.5;
-		if (movespeed < 3)
+		if movespeed < 3
 			image_speed = 0.35;
-		else if (movespeed > 3 && movespeed < 6)
+		else if movespeed > 3 && movespeed < 6
 			image_speed = 0.45;
 		else
 			image_speed = 0.6;
 	}
-	else if (movespeed > 0)
+	else if movespeed > 0
 		movespeed -= 0.1;
-	else if (movespeed <= 0)
+	else if movespeed <= 0
 		movespeed = 0;
 	sprite_index = (hsp != 0) ? walkspr : idlespr;
 	image_xscale = (hsp != 0) ? sign(hsp) : image_xscale;
-	if (!grounded)
+	if !grounded
 		sprite_index = fallspr;
 	boss_decide_taunt(220);
-	if (state != states.backbreaker)
+	if state != states.backbreaker
 	{
-		if (dx < 192 && attack_cooldown == -1)
+		if dx < 192 && attack_cooldown == -1
 			boss_noise_do_attack();
 	}
 }
@@ -311,7 +311,7 @@ function noise_behaviour_anywhere()
 	image_speed = 0.35;
 	sprite_index = idlespr;
 	boss_decide_taunt(220);
-	if (state != states.backbreaker)
+	if state != states.backbreaker
 		boss_noise_do_attack();
 }
 function noise_behaviour_far()
@@ -319,15 +319,15 @@ function noise_behaviour_far()
 	var dx = abs(targetplayer.x - x);
 	image_speed = 0.35;
 	sprite_index = idlespr;
-	if (dx < 200)
+	if dx < 200
 	{
 		var i = 0;
-		while (current_behaviour == noisedis.far)
+		while current_behaviour == noisedis.far
 		{
 			attack_cooldown = 0;
 			boss_noise_decide_attack();
 			i++;
-			if (i > 20)
+			if i > 20
 				break;
 		}
 	}
@@ -337,7 +337,7 @@ function noise_behaviour_far()
 function boss_noise_normal()
 {
 	boss_noise_decide_attack();
-	switch (current_behaviour)
+	switch current_behaviour
 	{
 		case noisedis.none:
 			noise_behaviour_none();
@@ -357,13 +357,13 @@ function boss_noise_handstandjump()
 {
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
-	if (!spinskateboard && slidejump == 0 && movespeed > 0)
+	if !spinskateboard && slidejump == 0 && movespeed > 0
 		movespeed -= 0.35;
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
 		state = states.normal;
 		movespeed = 0;
-		if (slidejump == 1)
+		if slidejump == 1
 		{
 			movespeed = 6;
 			state = states.jump;
@@ -371,7 +371,7 @@ function boss_noise_handstandjump()
 			sprite_index = spr_playerN_fall;
 		}
 	}
-	if (slide && movespeed < 10 && spin_count <= 0)
+	if slide && movespeed < 10 && spin_count <= 0
 	{
 		state = states.crouchslide;
 		sprite_index = spr_playerN_crouchslip;
@@ -380,9 +380,9 @@ function boss_noise_handstandjump()
 	}
 	if (spin_count > 0 || spinskateboard)
 	{
-		if (spin_buffer > 0)
+		if spin_buffer > 0
 			spin_buffer--;
-		else if (spinskateboard)
+		else if spinskateboard
 		{
 			state = states.skateboard;
 			sprite_index = spr_playerN_mach3;
@@ -412,13 +412,13 @@ function boss_noise_crouchslide()
 {
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
-	if (movespeed > 0)
+	if movespeed > 0
 		movespeed -= 0.35;
 	else
 	{
 		movespeed = 0;
 		state = states.normal;
-		if (slideskateboard)
+		if slideskateboard
 		{
 			state = states.skateboard;
 			skateboard_turns = 1;
@@ -448,12 +448,12 @@ function boss_noise_jump()
 {
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
-	if (sprite_index == spr_playerN_jump && image_index > (image_number - 1))
+	if (sprite_index == spr_playerN_jump && image_index > image_number - 1)
 	{
 		sprite_index = spr_playerN_fall;
 		image_index = 0;
 	}
-	if (slidejump == 1 && vsp >= 0)
+	if slidejump == 1 && vsp >= 0
 	{
 		state = states.handstandjump;
 		slide = false;
@@ -461,10 +461,10 @@ function boss_noise_jump()
 		image_index = 0;
 		movespeed = 10;
 	}
-	if (grounded)
+	if grounded
 	{
 		state = states.normal;
-		if (slidejump == 2)
+		if slidejump == 2
 		{
 			slidejump = 0;
 			movespeed = 15;
@@ -478,7 +478,7 @@ function boss_noise_skateboard()
 {
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
-	if (movespeed < 18)
+	if movespeed < 18
 		movespeed += 0.5;
 	if (skateboard_turns > 0 && place_meeting(x + (sign(hsp) * 116), y, obj_solid))
 	{
@@ -494,26 +494,26 @@ function boss_noise_skateboard()
 		vsp = -4;
 		sprite_index = bumpspr;
 		image_index = 0;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (sprite_index == spr_playerN_mach1 && image_index > (image_number - 1))
+	if (sprite_index == spr_playerN_mach1 && image_index > image_number - 1)
 		sprite_index = spr_playerN_mach;
 }
 function boss_noise_skateboardturn()
 {
 	hsp = image_xscale * movespeed;
-	if (movespeed > 0)
+	if movespeed > 0
 		movespeed -= 0.4;
 	else
 		movespeed = 0;
 	image_speed = 0.35;
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
-		if (sprite_index == spr_playerN_machslideboost)
+		if sprite_index == spr_playerN_machslideboost
 		{
 			sprite_index = !angry ? spr_playerN_mach1 : spr_playerN_mach3;
 			state = states.skateboard;
@@ -527,7 +527,7 @@ function boss_noise_throwing()
 {
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
-	if (movespeed > 0)
+	if movespeed > 0
 		movespeed -= 0.5;
 	if (sprite_index == spr_playerN_noisebombkick && floor(image_index) == 4 && !bombkick)
 	{
@@ -540,15 +540,15 @@ function boss_noise_throwing()
 			image_xscale = other.image_xscale;
 		}
 	}
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
 		state = states.normal;
 		bombkick = false;
-		if (bombcount > 0)
+		if bombcount > 0
 		{
 			bombcount--;
 			state = states.throwing;
-			if (sprite_index == spr_playerN_noisebombkick)
+			if sprite_index == spr_playerN_noisebombkick
 			{
 				sprite_index = spr_playerN_noisebombthrow;
 				image_index = 0;
@@ -571,11 +571,11 @@ function boss_noise_pogo()
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
 	var maxpogo = !bombpogo ? 24 : 15;
-	if (movespeed < 6 && !grounded)
+	if movespeed < 6 && !grounded
 		movespeed += 0.5;
 	if (place_meeting(x + sign(hsp), y, obj_solid))
 		image_xscale *= -1;
-	if (grounded && sprite_index != spr_playerN_pogobounce && sprite_index != spr_playerN_pogobouncemach)
+	if grounded && sprite_index != spr_playerN_pogobounce && sprite_index != spr_playerN_pogobouncemach
 	{
 		image_index = 0;
 		vsp = 0;
@@ -587,22 +587,22 @@ function boss_noise_pogo()
 	if (!pogospeedprev && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach) && floor(image_index) == 4)
 	{
 		vsp = bombpogo ? -12 : -6;
-		if (pogospeed < maxpogo)
+		if pogospeed < maxpogo
 			pogospeed += !angry ? 4 : 8;
 		movespeed = pogospeed;
 		pogospeedprev = true;
 	}
-	if (image_index > (image_number - 1) && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach || sprite_index == spr_playerN_pogofallmach || sprite_index == spr_playerN_pogofall))
+	if (image_index > image_number - 1 && (sprite_index == spr_playerN_pogobounce || sprite_index == spr_playerN_pogobouncemach || sprite_index == spr_playerN_pogofallmach || sprite_index == spr_playerN_pogofall))
 		sprite_index = pogochargeactive ? spr_playerN_pogofallmach : spr_playerN_pogofall;
-	if (pogospeed > 12 && !pogochargeactive)
+	if pogospeed > 12 && !pogochargeactive
 		pogochargeactive = true;
-	if (pogospeed > maxpogo)
+	if pogospeed > maxpogo
 		pogospeed = maxpogo;
-	if (bombpogo && vsp < 5 && !grounded)
+	if bombpogo && vsp < 5 && !grounded
 	{
 		var dx = abs(targetplayer.x - x);
 		var tx = 64;
-		if (dx < tx && !bombpogoinst)
+		if dx < tx && !bombpogoinst
 		{
 			with (instance_create(x, y, obj_noisebossbomb))
 			{
@@ -612,12 +612,12 @@ function boss_noise_pogo()
 			}
 			bombpogoinst = true;
 		}
-		else if (dx > tx)
+		else if dx > tx
 			bombpogoinst = false;
 	}
-	if (pogo_buffer > 0)
+	if pogo_buffer > 0
 		pogo_buffer--;
-	else if (grounded)
+	else if grounded
 	{
 		movespeed = normal_spd;
 		state = states.normal;
@@ -628,7 +628,7 @@ function boss_noise_jetpackstart()
 	image_speed = 0.5;
 	hsp = 0;
 	vsp = 0;
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
 		state = states.jetpack;
 		movespeed = !angry ? 15 : 20;
@@ -640,11 +640,11 @@ function boss_noise_jetpack()
 	image_speed = 0.5;
 	var maxjetpack = 15;
 	hsp = image_xscale * movespeed;
-	if (movespeed > maxjetpack)
+	if movespeed > maxjetpack
 		movespeed -= 0.1;
 	vsp = 0;
 	var tx = (y != targetplayer.y) ? sign(targetplayer.y - y) : 0;
-	if (tx != 0)
+	if tx != 0
 		vsp = 3 * tx;
 	if (place_meeting(x + sign(hsp), y, obj_solid))
 	{
@@ -653,16 +653,16 @@ function boss_noise_jetpack()
 		vsp = -4;
 		sprite_index = bumpspr;
 		image_index = 0;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (jetpackcancel)
+	if jetpackcancel
 	{
 		var dx = abs(targetplayer.x - x);
-		if (dx < 200)
+		if dx < 200
 		{
 			state = states.jetpackspin;
 			vsp = -15;
@@ -678,25 +678,25 @@ function boss_noise_jetpackspin()
 	image_speed = 0.35;
 	move = 0;
 	var dx = abs(targetplayer.x - x);
-	if (dx > 16)
+	if dx > 16
 		move = sign(targetplayer.x - x);
 	hsp = move * movespeed;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < normal_spd)
+		if movespeed < normal_spd
 			movespeed += 0.1;
 	}
-	else if (movespeed > 0)
+	else if movespeed > 0
 		movespeed -= 0.1;
 	else
 		movespeed = 0;
-	if (hsp != 0)
+	if hsp != 0
 		image_xscale = sign(hsp);
-	if (grounded)
+	if grounded
 	{
 		state = states.normal;
 		jetpackcancel = false;
-		if (jumpcount > 0)
+		if jumpcount > 0
 		{
 			jumpcount--;
 			movespeed = 10;

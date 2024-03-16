@@ -1,4 +1,4 @@
-if (addseconds <= 0)
+if addseconds <= 0
 	draw_set_font(global.wartimerfont1);
 else
 	draw_set_font(global.wartimerfont2);
@@ -9,7 +9,7 @@ if (obj_player.y > (room_height - 139))
 else
 	draw_set_alpha(1);
 var b = false;
-if (minutes <= 0 && seconds <= 10)
+if minutes <= 0 && seconds <= 10
 	b = true;
 if (!b || addseconds > 0)
 	draw_sprite(spr_wartimer, (addseconds > 0) ? 1 : 0, xx, yy);

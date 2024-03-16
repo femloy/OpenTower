@@ -1,11 +1,11 @@
-if (do_rank)
+if do_rank
 {
 	with (instance_create(room_width / 2, room_height / 2, obj_rank))
 	{
 		toppinvisible = other.toppinvisible;
-		if (!toppinvisible && global.leveltosave != "exit" && global.leveltosave != "secretworld")
+		if !toppinvisible && global.leveltosave != "exit" && global.leveltosave != "secretworld"
 		{
-			if (!global.swapmode)
+			if !global.swapmode
 				array_delete(text, 0, 1);
 			else
 				array_delete(text, 0, 3);
@@ -15,7 +15,7 @@ if (do_rank)
 		ini_open_from_string(obj_savesystem.ini_str);
 		for (var i = 0; i < array_length(toppin); i++)
 		{
-			if (global.newtoppin[i])
+			if global.newtoppin[i]
 				toppin[i] = 1;
 			else if (ini_read_real("Toppin", global.leveltosave + string(i + 1), false))
 				toppin[i] = 2;
@@ -34,18 +34,18 @@ if (instance_exists(obj_treasureviewer) || !do_rank)
 	exit;
 obj_player1.visible = false;
 obj_player2.visible = false;
-if (global.collect >= global.collectN)
+if global.collect >= global.collectN
 {
 	with (instance_create(obj_player2.x, obj_player2.y, obj_dashcloud))
 		sprite_index = spr_bombexplosion;
-	repeat (6)
+	repeat 6
 		instance_create(obj_player2.x, obj_player2.y, obj_baddiegibs);
 }
-if (global.collectN > global.collect)
+if global.collectN > global.collect
 {
 	with (instance_create(obj_player1.x, obj_player1.y, obj_dashcloud))
 		sprite_index = spr_bombexplosion;
-	repeat (6)
+	repeat 6
 		instance_create(obj_player1.x, obj_player1.y, obj_baddiegibs);
 	fmod_event_one_shot("event:/sfx/misc/explosion");
 }

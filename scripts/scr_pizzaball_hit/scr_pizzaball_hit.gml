@@ -4,7 +4,7 @@ function scr_pizzaball_hit()
 	y = hitY + irandom_range(-6, 6);
 	hitLag--;
 	sprite_index = stunfallspr;
-	if (hitLag <= 0)
+	if hitLag <= 0
 	{
 		x = hitX;
 		y = hitY;
@@ -23,7 +23,7 @@ function scr_pizzaball_hit()
 function scr_pizzaball_grabbed()
 {
 	var pl = (grabbedby == 1) ? obj_player1 : obj_player2;
-	with (pl)
+	with pl
 	{
 		sprite_index = spr_golfidle;
 		image_index = 0;
@@ -44,7 +44,7 @@ function scr_pizzaball_go_to_thrown(_hsp, _vsp, capped_vsp = true)
 	if (sign(_hsp) != 0)
 		image_xscale = sign(_hsp);
 	jumpspeed = abs(_vsp);
-	if (capped_vsp && jumpspeed < 12)
+	if capped_vsp && jumpspeed < 12
 		jumpspeed = 12;
 	vsp = -jumpspeed;
 	bounced = false;

@@ -1,4 +1,4 @@
-if (global.panic && !donepanic)
+if global.panic && !donepanic
 {
 	donepanic = true;
 	text = lang_get_value("getout");
@@ -6,19 +6,19 @@ if (global.panic && !donepanic)
 }
 text_xscale = (SCREEN_WIDTH - 64) / sprite_get_width(spr_tutorialbubble);
 wave_timer += 20;
-if (text_xscale != text_oldxscale)
+if text_xscale != text_oldxscale
 	event_perform(ev_other, ev_room_start);
 
-if (showgranny)
+if showgranny
 {
-	if (voicecooldown > 1)
+	if voicecooldown > 1
 		voicecooldown--;
 	else if (!place_meeting(x, y, obj_player))
 		voicecooldown = 0;
 	if (place_meeting(x, y, obj_player))
 	{
 		sprite_index = spr_tutorialgranny_talk;
-		if (voicecooldown == 0)
+		if voicecooldown == 0
 		{
 			fmod_event_one_shot_3d("event:/sfx/voice/pizzagranny", x, y);
 			voicecooldown = 100;
@@ -29,18 +29,18 @@ if (showgranny)
 }
 
 var _hide = false;
-with (obj_grannypizzasign)
+with obj_grannypizzasign
 {
-	if (text_state != states.titlescreen)
+	if text_state != states.titlescreen
 		_hide = true;
 }
 if (instance_exists(obj_mrsticknotification))
 	_hide = true;
 
-switch (text_state)
+switch text_state
 {
 	case states.titlescreen:
-		repeat (_hide + 1)
+		repeat _hide + 1
 			text_y = Approach(text_y, -(text_sprite_height * text_yscale), 5);
 		if (obj_player1.state != states.backtohub && place_meeting(x, y, obj_player) && !_hide)
 		{
@@ -56,9 +56,9 @@ switch (text_state)
 	
 	case states.fall:
 		text_y += text_vsp;
-		if (text_vsp < 20)
+		if text_vsp < 20
 			text_vsp += 0.5;
-		if (text_y > text_ystart)
+		if text_y > text_ystart
 			text_state = states.normal;
 		break;
 	

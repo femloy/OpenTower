@@ -1,21 +1,21 @@
 function scr_player_ratmounttrickjump()
 {
 	hsp = movespeed * xscale;
-	if (sprite_index != spr_supertaunt1)
+	if sprite_index != spr_supertaunt1
 		image_speed = 0.35;
 	else
 	{
 		image_speed = 0.5;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			sprite_index = spr_player_ratmountwalljump;
 	}
-	if (ramp_buffer > 0)
+	if ramp_buffer > 0
 		ramp_buffer--;
-	if (grounded && ramp_buffer <= 0)
+	if grounded && ramp_buffer <= 0
 	{
-		if (sprite_index == spr_mach2jump)
+		if sprite_index == spr_mach2jump
 		{
-			if (movespeed > 2)
+			if movespeed > 2
 				state = states.ratmounttumble;
 			else
 				state = states.normal;

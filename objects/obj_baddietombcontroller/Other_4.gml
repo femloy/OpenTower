@@ -9,7 +9,7 @@ if (!ds_list_empty(global.baddietomb))
 		var Y = arr[2];
 		if (!is_undefined(tombRoom) && !is_undefined(X) && !is_undefined(Y))
 		{
-			if (room == tombRoom)
+			if room == tombRoom
 			{
 				with (instance_create(X, Y, obj_baddiegibsstick))
 				{

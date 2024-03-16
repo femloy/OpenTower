@@ -1,4 +1,4 @@
-if (use_palette)
+if use_palette
 {
 	shader_set(global.Pal_Shader);
 	pal_swap_set(spr_palette, paletteselect, false);

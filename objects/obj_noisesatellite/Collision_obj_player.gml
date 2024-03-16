@@ -1,17 +1,17 @@
-if (state != states.grabbed)
+if state != states.grabbed
 {
-	with (obj_player)
+	with obj_player
 	{
-		if (y < other.y && attacking == 0 && state == states.jump && vsp > 0)
+		if y < other.y && attacking == 0 && state == states.jump && vsp > 0
 		{
-			if (vsp > 0)
+			if vsp > 0
 			{
 				other.hp = 0;
 				other.stunned = 200;
-				if (x != other.x)
+				if x != other.x
 					other.image_xscale = -sign(other.x - x);
 				image_index = 0;
-				if (key_jump2)
+				if key_jump2
 				{
 					other.vsp = -5;
 					other.hsp = -other.image_xscale * 3;
@@ -35,24 +35,24 @@ if (state != states.grabbed)
 				}
 			}
 		}
-		if (state == states.mach1)
+		if state == states.mach1
 		{
 			instance_create(x, y, obj_bumpeffect);
 			other.stunned = 40;
-			if (x != other.x)
+			if x != other.x
 				other.image_xscale = -sign(other.x - x);
 			other.vsp = -5;
 			other.hsp = -other.image_xscale * 3;
 			hsp = -xscale * 4;
 			vsp = -4;
 			machpunchAnim = true;
-			if (x != other.x)
+			if x != other.x
 				other.image_xscale = -sign(other.x - x);
 			other.state = states.stun;
 			image_index = 0;
 			state = states.tackle;
 		}
-		if (state == states.mach2 && other.grounded == 1)
+		if state == states.mach2 && other.grounded == 1
 		{
 			other.hp = 0;
 			instance_create(x, y, obj_bumpeffect);
@@ -65,9 +65,9 @@ if (state != states.grabbed)
 			if (!scr_solid(x, y + 1) && state != states.freefall)
 				vsp = -10;
 		}
-		if (attacking == 1 && state != states.mach2)
+		if attacking == 1 && state != states.mach2
 		{
-			if (state == states.mach3)
+			if state == states.mach3
 				other.shot = true;
 			image_index = 0;
 			instance_destroy(other);
@@ -77,7 +77,7 @@ if (state != states.grabbed)
 		}
 		if (attacking == 0 && (state != states.tackle && state != states.hurt) && !(y < other.y) && grabbing == 0 && other.state != states.stun)
 		{
-			if (x != other.x)
+			if x != other.x
 			{
 				other.image_xscale = -sign(other.x - x);
 				xscale = -sign(x - other.x);
@@ -91,7 +91,7 @@ if (state != states.grabbed)
 				other.state = states.idle;
 			image_index = 0;
 			state = states.bump;
-			if (other.state == states.land)
+			if other.state == states.land
 				other.state = states.idle;
 		}
 	}

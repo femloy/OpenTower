@@ -1,6 +1,6 @@
-if (state == states.stun && thrown && other.state != states.tumble && other.state != states.stun)
+if state == states.stun && thrown && other.state != states.tumble && other.state != states.stun
 {
-	with (other)
+	with other
 	{
 		state = states.stun;
 		vsp = -5;

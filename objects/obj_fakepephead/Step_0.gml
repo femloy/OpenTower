@@ -1,4 +1,4 @@
-if (thrown)
+if thrown
 {
 	sprite_index = spr_headprojectile;
 	hsp = hithsp;
@@ -13,7 +13,7 @@ if (thrown)
 }
 else
 {
-	if (grounded)
+	if grounded
 	{
 		hsp = Approach(hsp, 0, 0.5);
 		sprite_index = spr_headprojectile_idle;

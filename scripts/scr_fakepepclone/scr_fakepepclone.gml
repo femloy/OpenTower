@@ -4,21 +4,21 @@ function scr_fakepepclone_transitioncutscene()
 	vsp = 0;
 	if ((floor(image_index) div 5) == 0)
 	{
-		if (sprite_index != spr_fakepeppino_deformdown)
+		if sprite_index != spr_fakepeppino_deformdown
 			create_debris(x + irandom_range(-20, 20), y + 43, spr_fakepepdebris);
 		else
 			create_debris(x + irandom_range(-20, 20), y, spr_fakepepdebris);
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		if (sprite_index == spr_fakepeppino_reform)
+		if sprite_index == spr_fakepeppino_reform
 		{
 			attacked = false;
 			state = states.walk;
 			cooldown = 15;
 			if (attack.attack == fakepep_attacks.machclone || attack.attack == fakepep_attacks.flailingclone || attack.attack == fakepep_attacks.tauntclone)
 				cooldown = 0;
-			if (attack.attack == fakepep_attacks.superjumpclone)
+			if attack.attack == fakepep_attacks.superjumpclone
 			{
 				state = states.Sjumpprep;
 				hsp = 0;
@@ -26,7 +26,7 @@ function scr_fakepepclone_transitioncutscene()
 				image_index = 0;
 				image_speed = 0;
 			}
-			else if (attack.attack == fakepep_attacks.tauntclone)
+			else if attack.attack == fakepep_attacks.tauntclone
 			{
 				fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 				create_particle(x, y, particle.highjumpcloud2);
@@ -36,7 +36,7 @@ function scr_fakepepclone_transitioncutscene()
 				sprite_index = spr_fakepeppino_jump;
 				image_index = 0;
 				hsp = 0;
-				if (image_xscale > 0)
+				if image_xscale > 0
 					vsp = attack.vsp1;
 				else
 					vsp = attack.vsp2;
@@ -51,20 +51,20 @@ function scr_fakepepclone_walk()
 	image_speed = 0.35;
 	var ix = sign(targetplayer.x - x);
 	hsp = Approach(hsp, ix * 8, 0.3);
-	if (hsp != 0)
+	if hsp != 0
 	{
 		image_xscale = sign(hsp);
 		sprite_index = spr_fakepeppino_walk;
 	}
 	else
 		sprite_index = spr_fakepeppino_idle;
-	if (!attacked)
+	if !attacked
 	{
-		if (cooldown > 0)
+		if cooldown > 0
 			cooldown--;
 		else
 		{
-			switch (attack.attack)
+			switch attack.attack
 			{
 				case fakepep_attacks.grabclone:
 					if (abs(x - targetplayer.x) <= 150)
@@ -73,7 +73,7 @@ function scr_fakepepclone_walk()
 						attacked = true;
 						state = states.grabdash;
 						grabstart = 10;
-						if (ix != 0)
+						if ix != 0
 							image_xscale = ix;
 						sprite_index = spr_fakepeppino_grabdashstart;
 						image_index = 0;
@@ -83,7 +83,7 @@ function scr_fakepepclone_walk()
 				
 				case fakepep_attacks.bodyslamclone:
 					attacked = true;
-					if (x != targetplayer.x)
+					if x != targetplayer.x
 						image_xscale = sign(targetplayer.x - x);
 					sprite_index = spr_fakepeppino_bodyslamstart;
 					image_index = 0;
@@ -97,7 +97,7 @@ function scr_fakepepclone_walk()
 					state = states.mach2;
 					machdir = 0;
 					bodyslam = attack.bodyslam;
-					if (bodyslam)
+					if bodyslam
 						machcooldown = 10000;
 					else
 						machcooldown = 330;
@@ -107,7 +107,7 @@ function scr_fakepepclone_walk()
 				case fakepep_attacks.flailingclone:
 					state = states.throwing;
 					hsp = 0;
-					if (!throwing)
+					if !throwing
 					{
 						with (instance_create(x, y, obj_fakepepheaddebris))
 						{
@@ -129,7 +129,7 @@ function scr_fakepepclone_walk()
 		state = states.transition;
 		sprite_index = spr_fakepeppino_deform;
 		image_index = 0;
-		if (attack.attack == fakepep_attacks.superjumpclone)
+		if attack.attack == fakepep_attacks.superjumpclone
 			sprite_index = spr_fakepeppino_deformdown;
 	}
 }
@@ -137,7 +137,7 @@ function scr_fakepepclone_Sjumpprep()
 {
 	hsp = 0;
 	vsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		steppybuffer = 0;
 		piledrivereffect = 0;
@@ -151,14 +151,14 @@ function scr_fakepepclone_Sjump()
 {
 	hsp = 0;
 	vsp = -18;
-	if (steppybuffer > 0)
+	if steppybuffer > 0
 		steppybuffer--;
 	else
 	{
 		create_particle(x + irandom_range(-25, 25), y + irandom_range(-10, 35), particle.cloudeffect, 0);
 		steppybuffer = 8;
 	}
-	if (sjumpbuffer > 0)
+	if sjumpbuffer > 0
 		sjumpbuffer--;
 	else
 	{
@@ -166,7 +166,7 @@ function scr_fakepepclone_Sjump()
 		with (create_red_afterimage(x, y, sprite_index, image_index, image_xscale))
 			alpha = 1;
 	}
-	if (piledrivereffect > 0)
+	if piledrivereffect > 0
 		piledrivereffect--;
 	else
 	{
@@ -192,11 +192,11 @@ function scr_fakepepclone_Sjump()
 }
 function scr_fakepepclone_throwing()
 {
-	if (sprite_index == spr_fakepeppino_throwhead)
+	if sprite_index == spr_fakepeppino_throwhead
 	{
-		if (x != targetplayer.x)
+		if x != targetplayer.x
 			image_xscale = sign(targetplayer.x - x);
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			state = states.walk;
 			attacked = true;
@@ -215,9 +215,9 @@ function scr_fakepepclone_throwing()
 			}
 		}
 	}
-	else if (sprite_index == spr_fakepeppino_flailing)
+	else if sprite_index == spr_fakepeppino_flailing
 	{
-		if (attackspeed < 14)
+		if attackspeed < 14
 			attackspeed += 0.1;
 		hsp = image_xscale * attackspeed;
 		if (place_meeting(x + sign(hsp), y, obj_solid))

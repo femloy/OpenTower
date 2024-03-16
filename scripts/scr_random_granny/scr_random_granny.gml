@@ -9,7 +9,7 @@ function scr_random_granny()
 	{
 		with (instance_find(obj_tutorialbook, n))
 		{
-			if (showgranny)
+			if showgranny
 			{
 				found = true;
 				b = id;
@@ -18,9 +18,9 @@ function scr_random_granny()
 		n = irandom(count - 1);
 	}
 	
-	with (obj_tutorialbook)
+	with obj_tutorialbook
 	{
-		if (id != b && showgranny)
+		if id != b && showgranny
 			instance_destroy();
 	}
 }

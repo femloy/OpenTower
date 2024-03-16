@@ -2,7 +2,7 @@ function scr_piggyblock_destroy()
 {
 	if (bbox_in_camera(view_camera[0]))
 	{
-		with (other)
+		with other
 		{
 			if (instakillmove && (place_meeting(x + 1, y, other) || place_meeting(x - 1, y, other) || place_meeting(x, y + 1, other) || place_meeting(x, y - 1, other)))
 				instance_destroy(other);
@@ -16,19 +16,19 @@ function scr_ratblock_destroy()
 		with (instance_place(x, y, obj_canonexplosion))
 		{
 			instance_destroy(other);
-			if (baddie)
+			if baddie
 				notification_push(notifs.ratblock_explode, [room]);
 		}
 	}
 	if (bbox_in_camera(view_camera[0]))
 	{
-		with (obj_player)
+		with obj_player
 		{
 			if ((other.sprite_index == spr_rattumbleblock || other.sprite_index == spr_rattumbleblock_big) && sprite_index == spr_tumble && (place_meeting(x + 1, y, other) || place_meeting(x - 1, y, other)))
 				instance_destroy(other);
 			if (state != states.mort && state != states.bombgrab && (!scr_transformationcheck() || state == states.barrel) && (place_meeting(x + 1, y, other) || place_meeting(x - 1, y, other) || place_meeting(x, y + 1, other) || place_meeting(x, y - 1, other)))
 			{
-				switch (state)
+				switch state
 				{
 					case states.barrel:
 						if (!place_meeting(x, y - 12, other))
@@ -36,7 +36,7 @@ function scr_ratblock_destroy()
 						break;
 					case states.boxxedpepspin:
 						vsp = -6;
-						if (!ispeppino)
+						if !ispeppino
 						{
 							sprite_index = spr_playerN_boxxedhit;
 							image_index = 0;
@@ -44,7 +44,7 @@ function scr_ratblock_destroy()
 						instance_destroy(other);
 						break;
 					case states.bombpep:
-						if (sprite_index != spr_bombpepend && sprite_index != spr_bombpepintro)
+						if sprite_index != spr_bombpepend && sprite_index != spr_bombpepintro
 						{
 							instance_create(x, y, obj_bombexplosion);
 							instance_destroy(other);
@@ -73,7 +73,7 @@ function scr_ratblock_destroy()
 							instance_destroy(other);
 						break;
 					default:
-						if (other.sprite_index != spr_rattumbleblock && other.sprite_index != spr_rattumbleblock_big)
+						if other.sprite_index != spr_rattumbleblock && other.sprite_index != spr_rattumbleblock_big
 							instance_destroy(other);
 				}
 			}

@@ -6,7 +6,7 @@ function scr_player_finishingblow()
 		movespeed = Approach(movespeed, 0, 1);
 	else
 		movespeed = Approach(movespeed, -xscale * 4, 0.5);
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		movespeed = 0;
 		railmovespeed = 4;
@@ -25,7 +25,7 @@ function scr_player_finishingblow()
 		with (instance_create(x, y, obj_dashcloud2))
 			image_xscale = other.xscale;
 	}
-	if (punch_afterimage > 0)
+	if punch_afterimage > 0
 		punch_afterimage--;
 	else
 	{

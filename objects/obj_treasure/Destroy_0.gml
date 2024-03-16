@@ -1,4 +1,4 @@
-if (got && player != 0)
+if got && player != 0
 {
 	global.collect += 3000;
 	global.combotime = 60;

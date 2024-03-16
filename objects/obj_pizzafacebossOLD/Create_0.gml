@@ -36,7 +36,7 @@ hitplayer = false;
 function player_hurt(damage, player)
 {
 	var _prevstate = state;
-	if (phase < 2)
+	if phase < 2
 		SUPER_player_hurt(damage, player);
 	else if ((player.state != states.backbreaker || player.parry_inst == noone) && player.state != states.parry && ds_list_find_index(hitlist, player) == -1)
 	{
@@ -48,14 +48,14 @@ function player_hurt(damage, player)
 }
 function boss_hurt(damage, player)
 {
-	if (phase == 0)
+	if phase == 0
 		SUPER_boss_hurt(damage, player);
 	else
 	{
 		var _removehp = true;
-		with (player)
+		with player
 		{
-			if (state != states.lungeattack && state != states.knightpep)
+			if state != states.lungeattack && state != states.knightpep
 				scr_pummel();
 			else if (state == states.knightpep && vsp > 0 && y < (other.y - 30))
 			{
@@ -64,18 +64,18 @@ function boss_hurt(damage, player)
 				vsp = -11;
 				movespeed = 6;
 			}
-			else if (state != states.lungeattack && state != states.parry)
+			else if state != states.lungeattack && state != states.parry
 				_removehp = false;
-			if (state == states.lungeattack)
+			if state == states.lungeattack
 				movespeed = 4;
 		}
-		if (_removehp)
+		if _removehp
 			hp -= damage;
 	}
 }
 function boss_hurt_noplayer(damage)
 {
-	if (inv_timer <= 0)
+	if inv_timer <= 0
 	{
 		hp -= damage;
 		inv_timer = 10;

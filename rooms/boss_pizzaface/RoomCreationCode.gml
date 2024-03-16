@@ -7,18 +7,18 @@ global.level_seconds = 0;
 
 with obj_player
 {
-    backtohubroom = tower_outside;
-    backtohubstartx = 522;
-    backtohubstarty = 2328;
+	backtohubroom = tower_outside;
+	backtohubstartx = 522;
+	backtohubstarty = 2328;
 }
 
 if obj_player1.ispeppino && !global.swapmode
 {
-    layer_set_visible("Backgrounds_Ring2", true);
-    layer_set_visible("Backgrounds_Ring3", false);
+	layer_set_visible("Backgrounds_Ring2", true);
+	layer_set_visible("Backgrounds_Ring3", false);
 }
 else
 {
-    layer_set_visible("Backgrounds_Ring3", true);
-    layer_set_visible("Backgrounds_Ring2", false);
+	layer_set_visible("Backgrounds_Ring3", true);
+	layer_set_visible("Backgrounds_Ring2", false);
 }

@@ -3,7 +3,7 @@ if (!instance_exists(obj_pizzafaceboss_p2))
 	instance_destroy();
 	exit;
 }
-switch (state)
+switch state
 {
 	case states.normal:
 		hsp = image_xscale * movespeed;
@@ -23,7 +23,7 @@ switch (state)
 			comeback = false;
 			vsp = -5;
 			hsp = -image_xscale * 4;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 10;
 				shake_mag_acc = 30 / room_speed;
@@ -33,11 +33,11 @@ switch (state)
 		scr_collide();
 		break;
 	case states.transition:
-		if (!comeback)
+		if !comeback
 		{
 			x += hsp;
 			y += vsp;
-			if (vsp < 20)
+			if vsp < 20
 				vsp += grav;
 		}
 		else

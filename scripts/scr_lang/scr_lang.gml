@@ -8,7 +8,7 @@ function scr_get_languages()
 	var arr = [];
 	for (var file = file_find_first("lang/*.txt", 0); file != ""; file = file_find_next())
 	{
-		if (file != "english.txt")
+		if file != "english.txt"
 			array_push(arr, file);
 	}
 	file_find_close();
@@ -24,11 +24,11 @@ function lang_parse_file(filename)
 {
 	var fo = file_text_open_read("lang/" + filename);
 	var str = ""
-    while (!file_text_eof(fo))
-    {
-        str += file_text_readln(fo);
-        str += "\n";
-    }
+	while (!file_text_eof(fo))
+	{
+		str += file_text_readln(fo);
+		str += "\n";
+	}
 	file_text_close(fo);
 	var key = lang_parse(str);
 	if (lang_get_value_raw(key, "custom_graphics"))
@@ -58,22 +58,22 @@ function scr_lang_get_noise_credits()
 	var arr = scr_lang_get_file_arr("noisecredits.txt");
 	var credits = array_create(0);
 	for (var i = 0; i < array_length(arr); i++)
-    {
-        var _name = arr[i++];
-        var _heads = array_create(0);
-        for (var _head = arr[i++]; _head != ""; _head = arr[i++])
+	{
+		var _name = arr[i++];
+		var _heads = array_create(0);
+		for (var _head = arr[i++]; _head != ""; _head = arr[i++])
 		{
-            array_push(_heads, real(_head) - 1);
-            if (i >= array_length(arr))
-                break;
-        }
-        i--;
-        array_push(credits, 
-        {
-            name: _name,
-            heads: _heads
-        });
-    }
+			array_push(_heads, real(_head) - 1);
+			if (i >= array_length(arr))
+				break;
+		}
+		i--;
+		array_push(credits, 
+		{
+			name: _name,
+			heads: _heads
+		});
+	}
 	return credits;
 }
 
@@ -86,7 +86,7 @@ function lang_get_value_raw(lang, entry)
 	{
 		n = "";
 		instance_create_unique(0, 0, obj_langerror);
-		with (obj_langerror)
+		with obj_langerror
 			text = concat("Error: Could not find lang value \"", entry, "\"\nPlease restore your english.txt file");
 	}
 	return n;
@@ -132,7 +132,7 @@ function lang_lexer(list, str)
 		var char = string_ord_at(str, pos);
 		pos += 1;
 		
-		switch (char)
+		switch char
 		{
 			case ord(" "):
 			case ord("	"): // horizontal tab

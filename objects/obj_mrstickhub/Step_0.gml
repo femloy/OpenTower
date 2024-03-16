@@ -1,13 +1,13 @@
-switch (state)
+switch state
 {
 	case states.normal:
 		break;
 	
 	case states.transition:
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			instance_activate_object(bossdoorID);
-			with (bossdoorID)
+			with bossdoorID
 			{
 				vsp = -5;
 				state = states.jump;
@@ -20,7 +20,7 @@ switch (state)
 	case states.jump:
 		sprite_index = spr_mrstick_helicopterhat;
 		y -= 10;
-		if (y < -100)
+		if y < -100
 			instance_destroy();
 		break;
 }

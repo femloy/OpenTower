@@ -1,10 +1,10 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-if (global.collectsound < 10)
+if global.collectsound < 10
 	global.collectsound += 1;
 if (distance_to_object(obj_player) < 10)
 {
-	if (global.timeattack == 1)
+	if global.timeattack == 1
 		instance_destroy();
 }
 if (place_meeting(x, y, obj_destructibles))
@@ -19,7 +19,7 @@ if (global.panic == true || instance_exists(obj_wartimer))
 		gotowardsplayer = true;
 		scr_ghostcollectible();
 	}
-	if (gotowardsplayer == 1)
+	if gotowardsplayer == 1
 	{
 		move_towards_point(obj_player1.x, obj_player1.y, movespeed);
 		movespeed++;

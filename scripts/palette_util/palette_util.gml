@@ -1,6 +1,6 @@
 function get_pep_palette_info()
 {
-	if (global.swapmode)
+	if global.swapmode
 	{
 		var pal = 1;
 		return 
@@ -10,7 +10,7 @@ function get_pep_palette_info()
 			patterntexture: obj_player1.player_patterntexture[pal]
 		};
 	}
-	else if (obj_savesystem.ispeppino)
+	else if obj_savesystem.ispeppino
 	{
 		return 
 		{
@@ -28,7 +28,7 @@ function get_pep_palette_info()
 }
 function get_noise_palette_info()
 {
-	if (global.swapmode)
+	if global.swapmode
 	{
 		var pal = 0;
 		return 
@@ -38,7 +38,7 @@ function get_noise_palette_info()
 			patterntexture: obj_player1.player_patterntexture[pal]
 		};
 	}
-	else if (!obj_savesystem.ispeppino)
+	else if !obj_savesystem.ispeppino
 	{
 		return 
 		{

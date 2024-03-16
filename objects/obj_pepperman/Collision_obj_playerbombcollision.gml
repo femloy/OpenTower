@@ -1,21 +1,21 @@
 /*
-if (wastedhits == 9 && phase == 1 && !pizzahead && state == states.contemplate)
+if wastedhits == 9 && phase == 1 && !pizzahead && state == states.contemplate
 {
 	with (instance_create(other.x, other.y, obj_explosioneffect))
 		sprite_index = spr_bombexplosion;
 	scr_boss_do_hurt_phase2(obj_player1);
-	if (x != other.x)
+	if x != other.x
 		image_xscale = sign(other.x - x);
 	instance_destroy(other.bombID, false);
 	instance_destroy(other);
 }
-else if (state == states.mini && ministate != 8)
+else if state == states.mini && ministate != 8
 {
 	with (instance_create(other.x, other.y, obj_explosioneffect))
 		sprite_index = spr_bombexplosion;
 	instance_destroy(other.bombID, false);
 	instance_destroy(other);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 5 / room_speed;

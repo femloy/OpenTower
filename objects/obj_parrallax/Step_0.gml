@@ -5,7 +5,7 @@ for (var i = 0; i < array_length(lay_arr); i++)
 {
 	var lay = lay_arr[i];
 	var lay_name = layer_get_name(lay);
-	switch (lay_name)
+	switch lay_name
 	{
 		case "Assets_BG2":
 			layer_x(lay, _cam_x * 0.1);
@@ -68,7 +68,7 @@ for (var i = 0; i < array_length(lay_arr); i++)
 			var per = 0.25;
 			var xof = bg_still2xoffset;
 			var yof = bg_still2yoffset;
-			if (lay_name == "Backgrounds_still1")
+			if lay_name == "Backgrounds_still1"
 			{
 				per = 0.3;
 				xof = bg_still1xoffset;

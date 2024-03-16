@@ -1,4 +1,4 @@
-if (state == states.transition)
+if state == states.transition
 {
 	var ty = SCREEN_HEIGHT / 2;
 	y -= movespeed;
@@ -10,16 +10,16 @@ if (state == states.transition)
 		state = states.normal;
 	}
 }
-else if (state == states.fall)
+else if state == states.fall
 {
 	y += movespeed;
 	movespeed = Approach(movespeed, 8, 2);
 	if (y > (SCREEN_HEIGHT + sprite_height))
 		instance_destroy();
 }
-else if (collect > 0)
+else if collect > 0
 {
-	if (alarm[0] == -1)
+	if alarm[0] == -1
 		alarm[0] = 5;
 }
 else

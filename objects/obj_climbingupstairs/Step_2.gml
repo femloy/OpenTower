@@ -1,6 +1,6 @@
-with (obj_pigtotal)
+with obj_pigtotal
 	visible = false;
-with (obj_tv)
+with obj_tv
 	visible = false;
-with (obj_camera)
+with obj_camera
 	visible = false;

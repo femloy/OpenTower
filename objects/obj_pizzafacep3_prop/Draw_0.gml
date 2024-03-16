@@ -1,4 +1,4 @@
-if (!usepalette)
+if !usepalette
 	draw_self();
 else
 {

@@ -1,4 +1,4 @@
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
 	
 }

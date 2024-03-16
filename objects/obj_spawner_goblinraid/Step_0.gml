@@ -1,6 +1,6 @@
 if (!instance_exists(baddieid))
 	refresh--;
-if (refresh <= 0)
+if refresh <= 0
 {
 	with (instance_create(x, y, content))
 	{

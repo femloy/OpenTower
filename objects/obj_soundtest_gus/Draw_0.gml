@@ -1,4 +1,4 @@
-if (palinfo != -4)
+if palinfo != -4
 {
 	shader_set(global.Pal_Shader);
 	var _palinfo = palinfo;

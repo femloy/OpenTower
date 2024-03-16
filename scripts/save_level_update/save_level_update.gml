@@ -1,7 +1,7 @@
 function save_level_update(levelname)
 {
 	var path = concat("levels/", levelname, "/");
-	if (save_step == -1)
+	if save_step == -1
 	{
 		var struct = {};
 		save_step++;
@@ -20,22 +20,22 @@ function save_level_update(levelname)
 			tiles: array_create(0)
 		};
 		for (var i = 0; i < array_length(_room.backgrounds); i++)
-        {
-            var b = _room.backgrounds[i];
-            var bg = 
-            {
-                sprite_index: sprite_get_name(b.sprite_index),
-                depth: b.depth
-            }
+		{
+			var b = _room.backgrounds[i];
+			var bg = 
+			{
+				sprite_index: sprite_get_name(b.sprite_index),
+				depth: b.depth
+			}
 
-            array_push(struct.backgrounds, bg);
-        }
+			array_push(struct.backgrounds, bg);
+		}
 		for (i = 0; i < array_length(_room.instances); i++)
 		{
 			b = _room.instances[i];
-			if (_room != global.current_level.current_room)
+			if _room != global.current_level.current_room
 				instance_activate_object(b);
-			with (b)
+			with b
 			{
 				var object_struct = 
 				{
@@ -54,7 +54,7 @@ function save_level_update(levelname)
 				}
 				array_push(struct.instances, object_struct);
 			}
-			if (_room != global.current_level.current_room)
+			if _room != global.current_level.current_room
 				instance_deactivate_object(b);
 		}
 		var json = json_stringify(struct);

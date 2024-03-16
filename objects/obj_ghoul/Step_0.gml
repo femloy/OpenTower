@@ -1,7 +1,7 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 image_speed = 0.35;
-switch (state)
+switch state
 {
 	case states.idle:
 		sprite_index = idlespr;
@@ -11,13 +11,13 @@ switch (state)
 		var x1 = 370;
 		if (bbox_in_camera(view_camera[0], 50))
 		{
-			if (image_xscale > 0)
+			if image_xscale > 0
 				var t = playerid.x > (x - 16) && playerid.x < (x + x1) && playerid.y > (y - 16) && playerid.y < (y + 200);
 			else
 				t = playerid.x < (x + 16) && playerid.x > (x - x1) && playerid.y > (y - 16) && playerid.y < (y + 200);
-			if (cooldown > 0)
+			if cooldown > 0
 				cooldown--;
-			else if (t)
+			else if t
 			{
 				state = states.transition;
 				sprite_index = spr_ghoul_attackstart;
@@ -50,7 +50,7 @@ switch (state)
 	case states.transition:
 		hsp = 0;
 		vsp = 0;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			fmod_event_one_shot_3d("event:/sfx/enemies/minijohnpunch", x, y);
 			state = states.punch;
@@ -63,7 +63,7 @@ switch (state)
 		attackvsp = Approach(attackvsp, -11, 0.5);
 		vsp = attackvsp;
 		hsp = image_xscale * 10;
-		if (y < attack_y && vsp < 0)
+		if y < attack_y && vsp < 0
 		{
 			y = attack_y;
 			vsp = 0;
@@ -97,25 +97,25 @@ switch (state)
 		scr_enemy_staggered();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
 if (grounded && state == states.pizzagoblinthrow && floor(image_index) == 3)
 	vsp = -5;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

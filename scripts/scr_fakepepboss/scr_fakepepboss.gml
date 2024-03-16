@@ -12,7 +12,7 @@ enum fakepep_attacks
 // attacks
 function fakepep_set_attack(phase, wastedhits, _attack, _cooldown, _deformed_timer)
 {
-	if (_cooldown != 0 && _deformed_timer == 0)
+	if _cooldown != 0 && _deformed_timer == 0
 		_deformed_timer = _cooldown;
 	
 	attack_list[phase][wastedhits] = 
@@ -81,7 +81,7 @@ function fakepep_add_machclone(phase, wastedhits, _direction, _cooldown, _bodysl
 }
 function fakepep_add_superjumpclones(phase, wastedhits, _direction, _timer, _size, _emptyspot, _cooldown, _x1 = 100, _x2 = 850, _y = 402)
 {
-	if (_direction == -1)
+	if _direction == -1
 		_emptyspot = _size - _emptyspot;
 	
 	fakepep_add_projectile(phase, wastedhits, 
@@ -146,7 +146,7 @@ function scr_fakepep_update_sounds()
 	}
 	else
 		fmod_event_instance_stop(snd_bodyslam, false);
-	if (state == states.mach2)
+	if state == states.mach2
 	{
 		if (!fmod_event_instance_is_playing(snd_mach))
 			fmod_event_instance_play(snd_mach);
@@ -159,7 +159,7 @@ function scr_fakepep_update_sounds()
 		if (!fmod_event_instance_is_playing(snd_superjump))
 			fmod_event_instance_play(snd_superjump);
 		var s = 0;
-		if (state == states.Sjumpprep)
+		if state == states.Sjumpprep
 			s = 0;
 		else
 			s = 1;
@@ -180,7 +180,7 @@ function scr_fakepep_update_sounds()
 	}
 	else
 		fmod_event_instance_stop(snd_headoff, false);
-	if (sprite_index == spr_fakepeppino_flailing)
+	if sprite_index == spr_fakepeppino_flailing
 	{
 		if (!fmod_event_instance_is_playing(snd_flailing))
 			fmod_event_instance_play(snd_flailing);
@@ -191,7 +191,7 @@ function scr_fakepep_update_sounds()
 }
 function scr_fakepepboss_do_projectiles(phase, wastedhits)
 {
-	if (pizzahead)
+	if pizzahead
 		exit;
 	var t = targetplayer;
 	if (currentprojectile >= array_length(projectile_list[phase][wastedhits]))
@@ -201,7 +201,7 @@ function scr_fakepepboss_do_projectiles(phase, wastedhits)
 	currentprojectile += 1;
 	deformed_cooldown = _attack.cooldown;
 	
-	switch (_attack.attack)
+	switch _attack.attack
 	{
 		case fakepep_attacks.grabclone:
 		case fakepep_attacks.bodyslamclone:
@@ -212,7 +212,7 @@ function scr_fakepepboss_do_projectiles(phase, wastedhits)
 				if (place_meeting(x, y, obj_solid))
 					x = t.x;
 				y = t.y;
-				if (t.x != x)
+				if t.x != x
 					image_xscale = sign(t.x - x);
 				x = clamp(x, 100, room_width - 100);
 				while (!place_meeting(x, y + 1, obj_solid))
@@ -230,7 +230,7 @@ function scr_fakepepboss_do_projectiles(phase, wastedhits)
 		case fakepep_attacks.machclone:
 			var yy = 402;
 			var xx = x;
-			if (_attack.direction == 1)
+			if _attack.direction == 1
 				xx = 94;
 			else
 				xx = 862;
@@ -261,7 +261,7 @@ function scr_fakepepboss_do_projectiles(phase, wastedhits)
 		
 		case fakepep_attacks.flailingclone:
 			xx = _attack.x1;
-			if (_attack.direction == -1)
+			if _attack.direction == -1
 				xx = _attack.x2;
 			with (instance_create(xx, _attack.y, obj_fakepepclone))
 			{
@@ -269,9 +269,9 @@ function scr_fakepepboss_do_projectiles(phase, wastedhits)
 				image_xscale = attack.direction;
 				if (other.object_index == obj_fakepepboss && (other.deformed_timer - attack.cooldown) <= 0 && other.phase == 1)
 					throwing = true;
-				if (other.phase == 2)
+				if other.phase == 2
 				{
-					if (other.wastedhits == 4)
+					if other.wastedhits == 4
 						throwing = true;
 					else
 						throwing = false;
@@ -295,10 +295,10 @@ function scr_fakepepboss_do_projectiles(phase, wastedhits)
 }
 function scr_fakepepboss_arenaintro()
 {
-	if (!skipintro)
+	if !skipintro
 	{
 		image_speed = 0.35;
-		with (obj_player)
+		with obj_player
 		{
 			hsp = 0;
 			movespeed = 0;
@@ -307,46 +307,46 @@ function scr_fakepepboss_arenaintro()
 			state = states.actor;
 			image_speed = 0.35;
 			xscale = -other.image_xscale;
-			if (other.sprite_index == spr_fakepeppino_intro1)
+			if other.sprite_index == spr_fakepeppino_intro1
 			{
-				if (ispeppino)
+				if ispeppino
 					sprite_index = spr_player_gnomecutscene1;
 				else
 					sprite_index = spr_playerN_bosscutscene1;
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
-				if (sprite_index == spr_player_gnomecutscene2)
+				if sprite_index == spr_player_gnomecutscene2
 					image_index = image_number - 1;
-				else if (sprite_index == spr_player_gnomecutscene3)
+				else if sprite_index == spr_player_gnomecutscene3
 					sprite_index = spr_player_gnomecutscene4;
-				else if (sprite_index == spr_noise_vulnerable1)
+				else if sprite_index == spr_noise_vulnerable1
 					sprite_index = spr_noise_vulnerable1loop;
-				else if (sprite_index == spr_noise_intro1)
+				else if sprite_index == spr_noise_intro1
 					sprite_index = spr_noise_intro2;
-				else if (sprite_index == spr_noise_intro2)
+				else if sprite_index == spr_noise_intro2
 					image_index = 7;
 				else if (sprite_index == spr_playerN_bosscutscene2 || sprite_index == spr_playerN_bosscutscene3)
 					image_index = image_number - 1;
 			}
 		}
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			if (sprite_index == spr_fakepeppino_intro1 || sprite_index == spr_fakepeppino_intro2)
 				image_index = image_number - 1;
-			else if (sprite_index == spr_fakepeppino_intro3)
+			else if sprite_index == spr_fakepeppino_intro3
 				image_index = image_number - 4;
 		}
-		if (introbuffer > 0)
+		if introbuffer > 0
 			introbuffer--;
-		else if (sprite_index == spr_fakepeppino_intro1)
+		else if sprite_index == spr_fakepeppino_intro1
 		{
 			sprite_index = spr_fakepeppino_intro2;
 			image_index = 0;
 			introbuffer = 70;
-			with (obj_player)
+			with obj_player
 			{
-				if (ispeppino)
+				if ispeppino
 				{
 					sprite_index = spr_player_gnomecutscene2;
 					image_index = 0;
@@ -358,15 +358,15 @@ function scr_fakepepboss_arenaintro()
 				}
 			}
 		}
-		else if (sprite_index == spr_fakepeppino_intro2)
+		else if sprite_index == spr_fakepeppino_intro2
 		{
 			sprite_index = spr_fakepeppino_intro3;
 			fmod_event_one_shot("event:/sfx/voice/fakepepscream");
 			image_index = 0;
 			introbuffer = 130;
-			with (obj_player)
+			with obj_player
 			{
-				if (ispeppino)
+				if ispeppino
 				{
 					fmod_event_one_shot("event:/sfx/pep/screamboss");
 					sprite_index = spr_player_gnomecutscene3;
@@ -379,21 +379,21 @@ function scr_fakepepboss_arenaintro()
 				}
 			}
 		}
-		else if (sprite_index == spr_fakepeppino_intro3)
+		else if sprite_index == spr_fakepeppino_intro3
 		{
 			sprite_index = spr_fakepeppino_intro4;
 			image_index = 0;
 			introbuffer = 0;
 		}
-		else if (sprite_index == spr_fakepeppino_intro4 && floor(image_index) == (image_number - 1))
+		else if (sprite_index == spr_fakepeppino_intro4 && floor(image_index) == image_number - 1)
 		{
 			state = states.walk;
 			spotlightID.expand = true;
 			with (instance_create(x, y, obj_grabmarker))
 				ID = other.id;
-			with (obj_player)
+			with obj_player
 			{
-				if (ispeppino)
+				if ispeppino
 				{
 					sprite_index = spr_player_screamtransition;
 					image_index = 0;
@@ -418,9 +418,9 @@ function scr_fakepepboss_walk()
 {
 	if (phase == 2 && (flickertime > 0 || !grounded))
 	{
-		if (grounded)
+		if grounded
 			hsp = Approach(hsp, 0, 0.25);
-		if (grounded && vsp > 0 && flickertime > 2)
+		if grounded && vsp > 0 && flickertime > 2
 		{
 			hsp = Approach(hsp, 0, 0.5);
 			create_particle(x, y, particle.landcloud);
@@ -431,31 +431,31 @@ function scr_fakepepboss_walk()
 		sprite_index = spr_fakepeppino_flicker;
 		exit;
 	}
-	if (formed)
+	if formed
 	{
 		image_speed = 0.35;
 		var ix = sign(targetplayer.x - x);
 		hsp = Approach(hsp, ix * 8, 0.3);
-		if (hsp != 0)
+		if hsp != 0
 		{
 			image_xscale = sign(hsp);
 			sprite_index = spr_fakepeppino_walk;
 		}
 		else
 			sprite_index = spr_fakepeppino_idle;
-		if (cooldown > 0)
+		if cooldown > 0
 			cooldown--;
-		else if (grounded && vsp > 0)
+		else if grounded && vsp > 0
 		{
 			var attack = fakepep_get_attack(phase - 1, wastedhits);
-			switch (attack.attack)
+			switch attack.attack
 			{
 				case fakepep_attacks.grabclone:
 					if (abs(x - targetplayer.x) <= 330)
 					{
 						fmod_event_instance_play(snd_grab);
 						state = states.grabdash;
-						if (ix != 0)
+						if ix != 0
 							image_xscale = ix;
 						sprite_index = spr_fakepeppino_grabdashstart;
 						grabstart = 10;
@@ -467,7 +467,7 @@ function scr_fakepepboss_walk()
 					break;
 				
 				case fakepep_attacks.bodyslamclone:
-					if (ix != 0)
+					if ix != 0
 						image_xscale = ix;
 					sprite_index = spr_fakepeppino_bodyslamstart;
 					image_index = 0;
@@ -476,7 +476,7 @@ function scr_fakepepboss_walk()
 					break;
 				
 				case fakepep_attacks.machclone:
-					if (ix != 0)
+					if ix != 0
 						image_xscale = ix;
 					attackspeed = 0;
 					state = states.mach2;
@@ -486,7 +486,7 @@ function scr_fakepepboss_walk()
 					break;
 				
 				case fakepep_attacks.superjumpclone:
-					if (ix != 0)
+					if ix != 0
 						image_xscale = ix;
 					attackspeed = 0;
 					hsp = 0;
@@ -499,7 +499,7 @@ function scr_fakepepboss_walk()
 					break;
 				
 				case fakepep_attacks.flailingclone:
-					if (ix != 0)
+					if ix != 0
 						image_xscale = ix;
 					attackspeed = 0;
 					hsp = 0;
@@ -525,13 +525,13 @@ function scr_fakepepboss_walk()
 					sprite_index = spr_fakepeppino_vulnerable;
 					state = states.stun;
 					stunned = 5000;
-					if (ix != 0)
+					if ix != 0
 						image_xscale = ix;
 					break;
 			}
 		}
 	}
-	else if (!formed && grounded)
+	else if !formed && grounded
 	{
 		fmod_event_one_shot_3d("event:/sfx/fakepep/deform", x, y);
 		state = states.deformed;
@@ -545,20 +545,20 @@ function scr_fakepepboss_deformed()
 	hsp = 0;
 	vsp = 0;
 	var t = targetplayer;
-	if (sprite_index == spr_fakepeppino_deform && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_fakepeppino_deform && floor(image_index) == image_number - 1)
 		image_index = image_number - 1;
-	if (floor(image_index) < (image_number - 1) && (floor(image_index) div 5) == 0)
+	if (floor(image_index) < image_number - 1 && (floor(image_index) div 5) == 0)
 		create_debris(x + irandom_range(-20, 20), y + 43, spr_fakepepdebris);
-	if (deformed_timer > 0)
+	if deformed_timer > 0
 		deformed_timer--;
-	if (deformed_cooldown > 0)
+	if deformed_cooldown > 0
 		deformed_cooldown--;
-	else if (deformed_timer > 0)
+	else if deformed_timer > 0
 		scr_fakepepboss_do_projectiles(phase - 1, wastedhits - 1);
 	else if (!instance_exists(obj_fakepepclone) && !instance_exists(obj_fakepepspawner))
 	{
 		instance_destroy(obj_fakepephead);
-		if (sprite_index != spr_fakepeppino_reform)
+		if sprite_index != spr_fakepeppino_reform
 		{
 			fmod_event_one_shot_3d("event:/sfx/fakepep/reform", x, y);
 			x = irandom_range(101, room_width - 101);
@@ -576,7 +576,7 @@ function scr_fakepepboss_deformed()
 			image_index = 0;
 			formed = true;
 		}
-		else if (floor(image_index) == (image_number - 1))
+		else if floor(image_index) == image_number - 1
 		{
 			state = states.walk;
 			sprite_index = spr_fakepeppino_idle;
@@ -595,18 +595,18 @@ function scr_fakepepboss_staggered()
 			other.dashcloudid = id;
 		}
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 		image_speed = 0;
-	if (floor(image_index) == (image_number - 1) && hsp == 0)
+	if (floor(image_index) == image_number - 1 && hsp == 0)
 		state = states.walk;
 }
 function scr_fakepepboss_grabdash()
 {
-	if (grabstart > 0)
+	if grabstart > 0
 	{
 		hsp += (-image_xscale * 1);
 		grabstart--;
-		if (grabstart <= 0)
+		if grabstart <= 0
 		{
 			sprite_index = spr_fakepeppino_grabdash;
 			image_index = 0;
@@ -615,11 +615,11 @@ function scr_fakepepboss_grabdash()
 	else
 	{
 		hsp = image_xscale * attackspeed;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			state = states.walk;
 		with (instance_place(x, y, obj_player))
 		{
-			if (!hurted && state != states.grabthrow && state != states.tackle && state != states.actor && state != states.supergrab)
+			if !hurted && state != states.grabthrow && state != states.tackle && state != states.actor && state != states.supergrab
 			{
 				other.state = states.grabthrow;
 				other.playerID = id;
@@ -634,7 +634,7 @@ function scr_fakepepboss_grabdash()
 }
 function scr_fakepepboss_grabthrow()
 {
-	with (playerID)
+	with playerID
 	{
 		x = other.x + (other.image_xscale * 20);
 		y = other.y;
@@ -644,7 +644,7 @@ function scr_fakepepboss_grabthrow()
 	{
 		playerID.invtime = 0;
 		scr_hurtplayer(playerID);
-		with (playerID)
+		with playerID
 		{
 			sprite_index = spr_hurt;
 			xscale = -other.image_xscale;
@@ -656,7 +656,7 @@ function scr_fakepepboss_grabthrow()
 		}
 		playerID = -4;
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.walk;
 		cooldown = 150;
@@ -664,13 +664,13 @@ function scr_fakepepboss_grabthrow()
 }
 function scr_fakepepboss_jump()
 {
-	if (sprite_index == spr_fakepeppino_bodyslamstart)
+	if sprite_index == spr_fakepeppino_bodyslamstart
 	{
 		hsp = 0;
 		vsp = 0;
-		if (x != targetplayer.x)
+		if x != targetplayer.x
 			image_xscale = sign(targetplayer.x - x);
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			sprite_index = spr_fakepeppino_bodyslamjump;
 			attackspeed = 8;
@@ -680,10 +680,10 @@ function scr_fakepepboss_jump()
 	}
 	else
 	{
-		if (sprite_index == spr_fakepeppino_bodyslamjump && floor(image_index) == (image_number - 1))
+		if (sprite_index == spr_fakepeppino_bodyslamjump && floor(image_index) == image_number - 1)
 			image_index = image_number - 3;
 		hsp = image_xscale * attackspeed;
-		if (vsp > 0)
+		if vsp > 0
 		{
 			state = states.freefall;
 			sprite_index = spr_fakepeppino_bodyslamfall;
@@ -694,18 +694,18 @@ function scr_fakepepboss_jump()
 }
 function scr_fakepepboss_freefall()
 {
-	if (sprite_index == spr_fakepeppino_bodyslamfall && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_fakepeppino_bodyslamfall && floor(image_index) == image_number - 1)
 		image_index = image_number - 4;
-	if (object_index == obj_fakepepclone && bodyslam && vsp > 2)
+	if object_index == obj_fakepepclone && bodyslam && vsp > 2
 		vsp += 0.5;
-	if (sprite_index != spr_fakepeppino_bodyslamland && !bodyslam)
+	if sprite_index != spr_fakepeppino_bodyslamland && !bodyslam
 	{
 		var t = sign(targetplayer.x - x);
 		hsp = Approach(hsp, t * 4, 0.5);
-		if (hsp != 0)
+		if hsp != 0
 			image_xscale = sign(hsp);
 	}
-	if (grounded && vsp > 0 && sprite_index != spr_fakepeppino_bodyslamland)
+	if grounded && vsp > 0 && sprite_index != spr_fakepeppino_bodyslamland
 	{
 		fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		create_particle(x, y, particle.landcloud);
@@ -714,34 +714,34 @@ function scr_fakepepboss_freefall()
 		bodyslamlandbuffer = 20;
 		hsp = 0;
 	}
-	if (bodyslamlandbuffer > 0)
+	if bodyslamlandbuffer > 0
 		bodyslamlandbuffer--;
-	if (sprite_index == spr_fakepeppino_bodyslamland && bodyslamlandbuffer <= 0)
+	if sprite_index == spr_fakepeppino_bodyslamland && bodyslamlandbuffer <= 0
 		state = states.walk;
 }
 function scr_fakepepboss_mach2()
 {
-	if (machcooldown > 0)
+	if machcooldown > 0
 	{
 		machcooldown--;
-		if (attackspeed < 24)
+		if attackspeed < 24
 			attackspeed += 0.25;
 	}
-	else if (machdir == 0)
+	else if machdir == 0
 	{
-		if (attackspeed > 0)
+		if attackspeed > 0
 			attackspeed -= 0.25;
 		else
 			state = states.walk;
 	}
-	else if (attackspeed < 8)
+	else if attackspeed < 8
 		attackspeed = 8;
 	image_speed = abs(attackspeed) / 10;
-	if (image_speed > 0.5)
+	if image_speed > 0.5
 		image_speed = 0.5;
-	else if (image_speed < 0.2)
+	else if image_speed < 0.2
 		image_speed = 0.2;
-	switch (machdir)
+	switch machdir
 	{
 		case 0:
 			sprite_index = spr_fakepeppino_mach;
@@ -755,7 +755,7 @@ function scr_fakepepboss_mach2()
 		
 		case 1:
 			sprite_index = spr_fakepeppino_machwall;
-			if (attackspeed < 6)
+			if attackspeed < 6
 				attackspeed = 6;
 			hsp = 0;
 			vsp = -attackspeed;
@@ -771,7 +771,7 @@ function scr_fakepepboss_mach2()
 			sprite_index = spr_fakepeppino_machceiling;
 			hsp = image_xscale * attackspeed;
 			vsp = 0;
-			if (!bodyslam)
+			if !bodyslam
 			{
 				if (place_meeting(x + sign(hsp), y, obj_solid))
 				{
@@ -790,7 +790,7 @@ function scr_fakepepboss_mach2()
 		
 		case 3:
 			sprite_index = spr_fakepeppino_machwalldown;
-			if (attackspeed < 6)
+			if attackspeed < 6
 				attackspeed = 6;
 			hsp = 0;
 			vsp = attackspeed;
@@ -807,7 +807,7 @@ function scr_fakepepboss_Sjumpprep()
 {
 	hsp = 0;
 	vsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.Sjump;
 		var h = 11;
@@ -816,7 +816,7 @@ function scr_fakepepboss_Sjumpprep()
 		piledrivereffect = 0;
 		sjumpbuffer = 0;
 		
-		switch (superjumpdir)
+		switch superjumpdir
 		{
 			case 0:
 				hithsp = image_xscale * h;
@@ -829,9 +829,9 @@ function scr_fakepepboss_Sjumpprep()
 				break;
 		}
 		
-		if (hitvsp < 0)
+		if hitvsp < 0
 			sprite_index = spr_fakepeppino_superjump;
-		else if (hitvsp > 0)
+		else if hitvsp > 0
 			sprite_index = spr_fakepeppino_superjumpdown;
 	}
 }
@@ -840,16 +840,16 @@ function scr_fakepepboss_Sjump()
 	hsp = hithsp;
 	vsp = hitvsp;
 	var yy = 75;
-	if (hitvsp > 0)
+	if hitvsp > 0
 		yy = 180;
-	if (steppybuffer > 0)
+	if steppybuffer > 0
 		steppybuffer--;
 	else
 	{
 		create_particle(x + irandom_range(-25, 25), y + irandom_range(-10, 35), particle.cloudeffect, 0);
 		steppybuffer = 8;
 	}
-	if (sjumpbuffer > 0)
+	if sjumpbuffer > 0
 		sjumpbuffer--;
 	else
 	{
@@ -857,14 +857,14 @@ function scr_fakepepboss_Sjump()
 		with (create_red_afterimage(x, y, sprite_index, image_index, image_xscale))
 			alpha = 1;
 	}
-	if (piledrivereffect > 0)
+	if piledrivereffect > 0
 		piledrivereffect--;
 	else
 	{
 		with (instance_create(x, y, obj_parryeffect))
 		{
 			sprite_index = spr_piledrivereffect;
-			if (other.hitvsp < 0)
+			if other.hitvsp < 0
 				image_yscale = -1;
 		}
 		piledrivereffect = 15;
@@ -885,10 +885,10 @@ function scr_fakepepboss_Sjump()
 			superjumpbounce--;
 			superjumpdir = !superjumpdir;
 			state = states.Sjumpprep;
-			if (hitvsp > 0)
+			if hitvsp > 0
 			{
 				sprite_index = spr_fakepeppino_superjumpstart;
-				repeat (10)
+				repeat 10
 					create_debris(x + irandom_range(-25, 25), y + 43, spr_fakepepdebris);
 				with (instance_create(x, y + 30, obj_explosioneffect))
 				{
@@ -897,10 +897,10 @@ function scr_fakepepboss_Sjump()
 					depth = -20;
 				}
 			}
-			else if (hitvsp < 0)
+			else if hitvsp < 0
 			{
 				sprite_index = spr_fakepeppino_superjumpdownstart;
-				repeat (10)
+				repeat 10
 					create_debris(x + irandom_range(-25, 25), y, spr_fakepepdebris);
 				with (instance_create(x, y + 20, obj_explosioneffect))
 				{
@@ -910,7 +910,7 @@ function scr_fakepepboss_Sjump()
 					depth = -20;
 				}
 			}
-			if (x != targetplayer.x)
+			if x != targetplayer.x
 				image_xscale = sign(targetplayer.x - x);
 			image_index = 7;
 		}
@@ -923,18 +923,18 @@ function scr_fakepepboss_Sjump()
 }
 function scr_fakepepboss_throwing()
 {
-	if (sprite_index == spr_fakepeppino_throwhead)
+	if sprite_index == spr_fakepeppino_throwhead
 	{
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			image_index = image_number - 1;
 			var b = false;
-			with (headID)
+			with headID
 			{
-				if (!thrown && grounded && vsp > 0)
+				if !thrown && grounded && vsp > 0
 					b = true;
 			}
-			if (b)
+			if b
 			{
 				sprite_index = spr_fakepeppino_flailing;
 				attackspeed = 0;
@@ -957,12 +957,12 @@ function scr_fakepepboss_throwing()
 			}
 		}
 	}
-	else if (sprite_index == spr_fakepeppino_flailing)
+	else if sprite_index == spr_fakepeppino_flailing
 	{
-		if (attackspeed < 20)
+		if attackspeed < 20
 			attackspeed += 0.5;
 		hsp = image_xscale * attackspeed;
-		with (headID)
+		with headID
 		{
 			if ((other.image_xscale > 0 && other.x > x) || (other.image_xscale < 0 && other.x < x))
 			{
@@ -973,19 +973,19 @@ function scr_fakepepboss_throwing()
 			}
 		}
 	}
-	else if (sprite_index == spr_fakepeppino_gethead && floor(image_index) == (image_number - 1))
+	else if (sprite_index == spr_fakepeppino_gethead && floor(image_index) == image_number - 1)
 		state = states.walk;
 }
 function scr_fakepepboss_backbreaker()
 {
-	if (sprite_index == spr_fakepeppino_jump && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_fakepeppino_jump && floor(image_index) == image_number - 1)
 		sprite_index = spr_fakepeppino_fall;
-	if (vsp > 0 && sprite_index == spr_fakepeppino_fall && !taunted)
+	if vsp > 0 && sprite_index == spr_fakepeppino_fall && !taunted
 	{
 		taunted = true;
 		sprite_index = choose(spr_fakepeppino_supertaunt1, spr_fakepeppino_supertaunt2, spr_fakepeppino_supertaunt3);
 		image_index = 0;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 5 / room_speed;
@@ -994,11 +994,11 @@ function scr_fakepepboss_backbreaker()
 		instance_create(x, y, obj_baddietaunteffect);
 		with (instance_create(x, y, obj_fakepeptauntspawner))
 		{
-			if (other.object_index != obj_fakepepboss)
+			if other.object_index != obj_fakepepboss
 			{
-				if (image_xscale == 1)
+				if image_xscale == 1
 					dir = 3;
-				if (image_xscale == -1)
+				if image_xscale == -1
 					dir = 1;
 				singleshot = true;
 			}
@@ -1007,9 +1007,9 @@ function scr_fakepepboss_backbreaker()
 	if (sprite_index == spr_fakepeppino_supertaunt1 || sprite_index == spr_fakepeppino_supertaunt2 || sprite_index == spr_fakepeppino_supertaunt3)
 	{
 		vsp = 0;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			sprite_index = spr_fakepeppino_fall;
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		state = states.walk;
 }

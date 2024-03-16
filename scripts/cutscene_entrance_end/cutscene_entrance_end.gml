@@ -1,6 +1,6 @@
 function cutscene_entrance_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;
@@ -13,7 +13,7 @@ function cutscene_entrance_end()
 }
 function cutscene_factory_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;

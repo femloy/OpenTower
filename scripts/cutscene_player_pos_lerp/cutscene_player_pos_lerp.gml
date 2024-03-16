@@ -1,7 +1,7 @@
 function cutscene_player_pos_lerp(_x, _y, _amount)
 {
 	var _finish = false;
-	with (obj_player)
+	with obj_player
 	{
 		hsp = 0;
 		vsp = 0;
@@ -13,6 +13,6 @@ function cutscene_player_pos_lerp(_x, _y, _amount)
 				_finish = true;
 		}
 	}
-	if (_finish)
+	if _finish
 		cutscene_end_action();
 }

@@ -5,7 +5,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		hsp = 2;
 	with (instance_create(x, y, obj_pizzaslice))
 		hsp = -2;
-	repeat (6)
+	repeat 6
 	{
 		with (instance_create(x, y, obj_debris))
 		{

@@ -18,7 +18,7 @@ function scr_pepperman_destroy_sounds()
 }
 function scr_pepperman_sounds()
 {
-	if (state == states.shoulderbash)
+	if state == states.shoulderbash
 	{
 		if (!fmod_event_instance_is_playing(snd_shoulderbash))
 			fmod_event_instance_play(snd_shoulderbash);
@@ -26,32 +26,32 @@ function scr_pepperman_sounds()
 	}
 	else
 		fmod_event_instance_stop(snd_shoulderbash, true);
-	if (state == states.freefallprep)
+	if state == states.freefallprep
 	{
 		if (!fmod_event_instance_is_playing(snd_groundpound))
 			fmod_event_instance_play(snd_groundpound);
 		fmod_event_instance_set_3d_attributes(snd_groundpound, x, y);
 	}
-	else if (state != states.freefall && state != states.freefallprep)
+	else if state != states.freefall && state != states.freefallprep
 		fmod_event_instance_stop(snd_groundpound, true);
-	if (state == states.mini)
+	if state == states.mini
 		shrinkstate = Approach(shrinkstate, 1, 0.05);
 	else
 		shrinkstate = Approach(shrinkstate, 0, 0.05);
-	with (obj_music)
+	with obj_music
 	{
-		if (music != -4)
+		if music != -4
 			fmod_event_instance_set_parameter(music.event, "state", other.shrinkstate, true);
 	}
 }
 function scr_pepperman_spawn_knight()
 {
-	if (knightdir == -1)
+	if knightdir == -1
 	{
 		with (instance_create(room_width + 10, 416, obj_peppermanGIANTbowlingball))
 			image_xscale = -1;
 	}
-	if (knightdir == 1)
+	if knightdir == 1
 	{
 		with (instance_create(-10, 416, obj_peppermanGIANTbowlingball))
 			image_xscale = 1;
@@ -60,7 +60,7 @@ function scr_pepperman_spawn_knight()
 }
 function scr_pepperman_shuffle_adds()
 {
-	if (bowlingballcount <= 0)
+	if bowlingballcount <= 0
 	{
 		if (throwknight && !instance_exists(obj_peppermanbowlingball) && !instance_exists(obj_peppermanbowlingballspawner))
 		{
@@ -79,10 +79,10 @@ function scr_pepperman_shuffle_adds()
 }
 function scr_pepperman_arenaintro()
 {
-	if (!skipintro)
+	if !skipintro
 	{
 		image_speed = 0.35;
-		with (obj_player)
+		with obj_player
 		{
 			state = states.actor;
 			image_speed = 0.35;
@@ -91,51 +91,51 @@ function scr_pepperman_arenaintro()
 			flash = false;
 			x = roomstartx;
 			xscale = -other.image_xscale;
-			if (other.sprite_index == spr_pepperman_intro1)
+			if other.sprite_index == spr_pepperman_intro1
 			{
-				if (ispeppino)
+				if ispeppino
 					sprite_index = spr_player_gnomecutscene1;
 				else
 					sprite_index = spr_playerN_bosscutscene1;
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				if (sprite_index == spr_player_gnomecutscene2 || sprite_index == spr_playerN_bosscutscene2 || sprite_index == spr_playerN_bosscutscene3)
 					image_index = image_number - 1;
-				else if (sprite_index == spr_player_gnomecutscene3)
+				else if sprite_index == spr_player_gnomecutscene3
 					sprite_index = spr_player_gnomecutscene4;
-				else if (sprite_index == spr_noise_vulnerable1)
+				else if sprite_index == spr_noise_vulnerable1
 					sprite_index = spr_noise_vulnerable1loop;
 			}
 		}
-		if (introbuffer > 0)
+		if introbuffer > 0
 		{
 			introbuffer--;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_pepperman_intro2)
+			if (floor(image_index) == image_number - 1 && sprite_index == spr_pepperman_intro2)
 				image_index = image_number - 1;
 		}
-		else if (sprite_index == spr_pepperman_intro1)
+		else if sprite_index == spr_pepperman_intro1
 		{
 			sprite_index = spr_pepperman_intro2;
 			image_index = 0;
 			introbuffer = 70;
-			with (obj_player)
+			with obj_player
 			{
 				image_index = 0;
-				if (ispeppino)
+				if ispeppino
 					sprite_index = spr_player_gnomecutscene2;
 				else
 					sprite_index = spr_playerN_bosscutscene2;
 			}
 		}
-		else if (sprite_index == spr_pepperman_intro2)
+		else if sprite_index == spr_pepperman_intro2
 		{
 			sprite_index = spr_pepperman_intro3;
 			image_index = 0;
 			fmod_event_one_shot_3d("event:/sfx/voice/peppermanlaugh", x, y);
-			with (obj_player1)
+			with obj_player1
 			{
-				if (ispeppino)
+				if ispeppino
 				{
 					fmod_event_one_shot("event:/sfx/pep/screamboss");
 					sprite_index = spr_player_gnomecutscene3;
@@ -148,9 +148,9 @@ function scr_pepperman_arenaintro()
 				}
 			}
 		}
-		else if (floor(image_index) == (image_number - 1))
+		else if floor(image_index) == image_number - 1
 		{
-			switch (sprite_index)
+			switch sprite_index
 			{
 				case spr_pepperman_intro3:
 					sprite_index = spr_pepperman_intro3loop;
@@ -162,9 +162,9 @@ function scr_pepperman_arenaintro()
 				case spr_pepperman_intro3end:
 					state = states.walk;
 					spotlightID.expand = true;
-					with (obj_player1)
+					with obj_player1
 					{
-						if (ispeppino)
+						if ispeppino
 						{
 							sprite_index = spr_player_screamtransition;
 							image_index = 0;
@@ -183,28 +183,28 @@ function scr_pepperman_arenaintro()
 }
 function scr_pepperman_walk()
 {
-	if (grounded)
+	if grounded
 		hsp = Approach(hsp, 0, 0.25);
-	if (grounded && vsp > 0 && sprite_index == spr_pepperman_scared && flickertime > 2)
+	if grounded && vsp > 0 && sprite_index == spr_pepperman_scared && flickertime > 2
 	{
 		hsp = Approach(hsp, 0, 0.5);
 		create_particle(x, y, particle.landcloud);
 		vsp = -5;
 		touchedground = true;
 	}
-	if (cooldown > 0 && flickertime <= 0 && obj_player1.state != states.animation)
+	if cooldown > 0 && flickertime <= 0 && obj_player1.state != states.animation
 		cooldown--;
-	if (flickertime > 0)
+	if flickertime > 0
 		sprite_index = spr_pepperman_scared;
-	else if (grounded)
+	else if grounded
 	{
-		if (phase == 2)
+		if phase == 2
 			sprite_index = spr_pepperman_sour;
 		else
 			sprite_index = spr_pepperman_idle;
 	}
 	woosh = false;
-	if (!pizzahead)
+	if !pizzahead
 	{
 		var shoulder = wastedhits < 4 || (wastedhits >= 8 && wastedhits < 10);
 		var stomp = wastedhits < 8 || wastedhits >= 10;
@@ -214,23 +214,23 @@ function scr_pepperman_walk()
 		shoulder = elitehit == 3 || elitehit == 4;
 		stomp = elitehit < 3;
 	}
-	if (shoulder && cooldown == 0)
+	if shoulder && cooldown == 0
 	{
 		state = states.shoulderbash;
 		attackspeed = 0;
 		turned = false;
 		sprite_index = spr_pepperman_shoulderstart;
 		image_index = 0;
-		if (x != targetplayer.x)
+		if x != targetplayer.x
 			image_xscale = sign(targetplayer.x - x);
 	}
-	else if (stomp && cooldown == 0)
+	else if stomp && cooldown == 0
 	{
 		fmod_event_one_shot_3d("event:/sfx/fakepep/jump", x, y);
 		create_particle(x, y, particle.jumpdust);
 		state = states.jump;
 		landbuffer2 = 10;
-		if (x != targetplayer.x)
+		if x != targetplayer.x
 			image_xscale = sign(targetplayer.x - x);
 		else
 			image_xscale = (x > (room_width / 2)) ? -1 : 1;
@@ -242,11 +242,11 @@ function scr_pepperman_walk()
 }
 function pepperman_nearestspot()
 {
-	if (elitehit > 1)
+	if elitehit > 1
 	{
 		if (instance_exists(obj_pepper_marbleblock))
 			targetspot = instance_nearest(x, y, obj_pepper_marbleblock).parentID;
-		if (targetspot == oldtargetspot)
+		if targetspot == oldtargetspot
 		{
 			do
 				targetspot = instance_nearest_random(obj_pepper_groundpoundspot, 3);
@@ -257,11 +257,11 @@ function pepperman_nearestspot()
 		targetspot = instance_nearest(obj_player1.x, obj_player1.y, obj_pepper_groundpoundspot);
 	state = states.jump;
 	jump_speed = floor(distance_to_object(targetspot) * 0.04);
-	if (jump_speed < 20)
+	if jump_speed < 20
 		jump_speed = 20;
 	jump_speed += floor(wastedhits / 2);
 	calculate_jump_velocity(targetspot.x + 16, (targetspot.y + 16) - 200, jump_speed, grav);
-	if (hsp > -2 && hsp < 2)
+	if hsp > -2 && hsp < 2
 		vsp = -jump_speed;
 	trace(hsp, " ", vsp);
 	sprite_index = spr_pepperman_jump;
@@ -269,9 +269,9 @@ function pepperman_nearestspot()
 }
 function scr_pepperman_jump()
 {
-	if (hsp != 0)
+	if hsp != 0
 		image_xscale = sign(hsp);
-	if (phase == 2)
+	if phase == 2
 		cooldown = 80;
 	else
 		cooldown = 40;
@@ -285,7 +285,7 @@ function scr_pepperman_jump()
 		hsp = 0;
 		grounded = false;
 	}
-	if (sprite_index == spr_pepperman_jump && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pepperman_jump && floor(image_index) == image_number - 1)
 		sprite_index = spr_pepperman_fall;
 }
 function scr_pepperman_freefallprep()
@@ -293,7 +293,7 @@ function scr_pepperman_freefallprep()
 	hsp = 0;
 	vsp = 0;
 	image_speed = 0.35;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.freefall;
 		sprite_index = spr_pepperman_groundpound;
@@ -304,46 +304,46 @@ function scr_pepperman_freefallprep()
 function scr_pepperman_freefall()
 {
 	hsp = Approach(hsp, sign(targetspot.x - x) * 5, 0.2);
-	if (hsp != 0)
+	if hsp != 0
 		image_xscale = sign(hsp);
-	if (vsp >= 2)
+	if vsp >= 2
 	{
-		if (wastedhits < 6)
+		if wastedhits < 6
 			vsp += 1;
 		else
 			vsp += 2;
 	}
-	if (grounded)
+	if grounded
 	{
 		create_particle(x, y, particle.groundpoundeffect);
-		if (!pizzahead)
+		if !pizzahead
 			var _land = wastedhits < 6;
 		else
 			_land = elitehit == 2;
-		if (_land)
+		if _land
 		{
 			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 			state = states.freefallland;
 			sprite_index = spr_pepperman_groundpoundland;
 			image_index = 0;
 			landbuffer = 100;
-			if (bowlingballcount > 0)
+			if bowlingballcount > 0
 				bowlingballcount--;
-			if (!pizzahead)
+			if !pizzahead
 			{
-				if (phase == 1)
+				if phase == 1
 				{
-					if (wastedhits == 5 && bowlingballcount <= 0)
+					if wastedhits == 5 && bowlingballcount <= 0
 					{
 						bowlingballcount = MAX_bowlingballcount;
 						with (instance_create(x, y, obj_peppermanbowlingballspawner))
 							balls = 1;
 					}
 				}
-				if (phase == 2)
+				if phase == 2
 					scr_pepperman_shuffle_adds();
 			}
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 5 / room_speed;
@@ -351,32 +351,32 @@ function scr_pepperman_freefall()
 		}
 		else
 		{
-			if (bowlingballcount > 0)
+			if bowlingballcount > 0
 				bowlingballcount--;
-			if (GIANTbowlingballcount > 0)
+			if GIANTbowlingballcount > 0
 				GIANTbowlingballcount--;
-			if (!pizzahead)
+			if !pizzahead
 			{
-				if (phase == 1)
+				if phase == 1
 				{
-					if (wastedhits == 7 && bowlingballcount <= 0)
+					if wastedhits == 7 && bowlingballcount <= 0
 					{
 						bowlingballcount = MAX_bowlingballcount;
 						with (instance_create(x, y, obj_peppermanbowlingballspawner))
 							balls = 2;
 					}
 				}
-				if (phase == 2)
+				if phase == 2
 					scr_pepperman_shuffle_adds();
 			}
 			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 			fmod_event_one_shot_3d("event:/sfx/pepperman/groundpoundjump", x, y);
-			if (x != targetplayer.x)
+			if x != targetplayer.x
 				image_xscale = sign(targetplayer.x - x);
 			state = states.groundpoundland;
 			sprite_index = spr_pepperman_groundpoundland;
 			image_index = 0;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 5 / room_speed;
@@ -386,7 +386,7 @@ function scr_pepperman_freefall()
 }
 function scr_pepperman_rolling()
 {
-	if (sprite_index != spr_pepperman_groundpoundland)
+	if sprite_index != spr_pepperman_groundpoundland
 	{
 		image_speed = 0.35;
 		sprite_index = spr_pepperman_rolling;
@@ -398,7 +398,7 @@ function scr_pepperman_rolling()
 			vsp = -10;
 			fmod_event_one_shot_3d("event:/sfx/pepperman/groundpoundbump", x, y);
 		}
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 		{
 			state = states.walk;
 			sprite_index = spr_pepperman_move;
@@ -421,7 +421,7 @@ function scr_pepperman_freefallland()
 {
 	hsp = 0;
 	image_speed = 0.35;
-	if (landbuffer > 0)
+	if landbuffer > 0
 	{
 		image_index = 0;
 		landbuffer--;
@@ -429,28 +429,28 @@ function scr_pepperman_freefallland()
 	else
 	{
 		image_speed = 0.35;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			state = states.walk;
 	}
 }
 function scr_pepperman_shoulderbash()
 {
 	image_speed = abs(attackspeed / 8);
-	if (image_speed < 0.2)
+	if image_speed < 0.2
 		image_speed = 0.2;
-	if (phase == 2)
+	if phase == 2
 		cooldown = 80;
 	else
 		cooldown = 40;
 	var a_treshold = 8;
-	if (!pizzahead)
+	if !pizzahead
 		var _turn = wastedhits >= 2;
 	else
 		_turn = elitehit == 3;
-	if (_turn && !turned)
+	if _turn && !turned
 	{
 		var ix = sign(targetplayer.x - x);
-		if (ix != image_xscale)
+		if ix != image_xscale
 		{
 			fmod_event_one_shot_3d("event:/sfx/pepperman/turn", x, y);
 			state = states.shoulderturn;
@@ -461,10 +461,10 @@ function scr_pepperman_shoulderbash()
 			attackspeed = 10;
 		}
 	}
-	if (attackspeed >= a_treshold)
+	if attackspeed >= a_treshold
 	{
 		hsp = image_xscale * attackspeed;
-		if (woosh == 0 && phase == 2)
+		if woosh == 0 && phase == 2
 		{
 			with (instance_create(x, y, obj_crazyrunothereffect))
 				image_xscale = other.image_xscale;
@@ -483,65 +483,65 @@ function scr_pepperman_shoulderbash()
 			sprite_index = spr_pepperman_shoulderhurtstart;
 			image_index = 0;
 			image_speed = 0.35;
-			if (bowlingballcount > 0)
+			if bowlingballcount > 0
 				bowlingballcount--;
-			if (GIANTbowlingballcount > 0)
+			if GIANTbowlingballcount > 0
 				GIANTbowlingballcount--;
-			if (!pizzahead)
+			if !pizzahead
 			{
-				if (phase == 1)
+				if phase == 1
 				{
-					if (wastedhits == 3 && bowlingballcount <= 0)
+					if wastedhits == 3 && bowlingballcount <= 0
 					{
 						bowlingballcount = MAX_bowlingballcount;
 						with (instance_create(x, y, obj_peppermanbowlingballspawner))
 							balls = 1;
 					}
 				}
-				if (phase == 2)
+				if phase == 2
 					scr_pepperman_shuffle_adds();
 			}
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 5 / room_speed;
 			}
-			repeat (4)
+			repeat 4
 				create_debris(x, y, spr_slapstar);
 			instance_create(x + 10, y + 10, obj_bumpeffect);
 		}
 	}
 	else
 		hsp = -image_xscale * 1;
-	if (attackspeed < 20)
+	if attackspeed < 20
 	{
-		if (phase == 2)
+		if phase == 2
 			attackspeed += 0.5;
 		else
 			attackspeed += 0.25;
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_pepperman_shoulderstart)
+	if (floor(image_index) == image_number - 1 && sprite_index == spr_pepperman_shoulderstart)
 		sprite_index = spr_pepperman_shoulderloop;
 }
 function scr_pepperman_do_contemplate()
 {
-	if (wastedhits >= 8)
+	if wastedhits >= 8
 	{
 		var b = false;
-		with (obj_pepper_marbleblock)
+		with obj_pepper_marbleblock
 		{
 			if (other.wastedhits == number && hp <= 0 && !instance_exists(other.marbleblockID) && distance_to_object(other) < 100)
 			{
 				b = true;
 				other.marbleblockID = id;
-				if (x != other.x)
+				if x != other.x
 					other.image_xscale = sign(x - other.x);
 				contemplated = true;
 			}
 		}
-		if (b)
+		if b
 		{
-			if (state != states.contemplate)
+			if state != states.contemplate
 				fmod_event_one_shot_3d("event:/sfx/voice/peppermansnicker", x, y);
 			state = states.contemplate;
 			animbuffer = 80;
@@ -558,16 +558,16 @@ function scr_pepperman_contemplate()
 }
 function scr_pepperman_shoulderturn()
 {
-	if (sprite_index != spr_pepperman_shoulderturn)
+	if sprite_index != spr_pepperman_shoulderturn
 		attackspeed = Approach(attackspeed, 0, 0.5);
 	else
 		attackspeed = Approach(attackspeed, 0, 0.1);
 	hsp = image_xscale * attackspeed;
-	if (sprite_index == spr_pepperman_shoulderturn && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pepperman_shoulderturn && floor(image_index) == image_number - 1)
 		sprite_index = spr_pepperman_shoulderturnloop;
-	if (attackspeed <= 0 && sprite_index == spr_pepperman_shoulderturnloop && floor(image_index) == (image_number - 1))
+	if (attackspeed <= 0 && sprite_index == spr_pepperman_shoulderturnloop && floor(image_index) == image_number - 1)
 	{
-		if (phase == 2)
+		if phase == 2
 		{
 			attackspeed = 24;
 			with (instance_create(x, y, obj_crazyrunothereffect))
@@ -583,21 +583,21 @@ function scr_pepperman_shoulderturn()
 function scr_pepperman_mini()
 {
 	image_speed = 0.35;
-	if (minibuffer > 0)
+	if minibuffer > 0
 		minibuffer--;
-	switch (ministate)
+	switch ministate
 	{
 		case states.transition:
 			hsp = 0;
 			vsp = 0;
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
-				if (sprite_index == spr_pepperman_ministart)
+				if sprite_index == spr_pepperman_ministart
 				{
 					ministate = states.normal;
 					sprite_index = spr_pepperman_miniidle;
 				}
-				else if (sprite_index == spr_pepperman_miniend)
+				else if sprite_index == spr_pepperman_miniend
 				{
 					state = states.walk;
 					sprite_index = spr_pepperman_idle;
@@ -609,20 +609,20 @@ function scr_pepperman_mini()
 			if (distance_to_object(targetplayer) < 250)
 				move = sign(x - targetplayer.x);
 			hsp = Approach(hsp, move * 8, 0.5);
-			if (hsp != 0)
+			if hsp != 0
 			{
 				image_xscale = sign(hsp);
 				sprite_index = spr_pepperman_minimove;
 			}
 			else
 				sprite_index = spr_pepperman_miniidle;
-			if (!grounded)
+			if !grounded
 			{
 				ministate = states.jump;
 				attackspeed = abs(hsp);
 				sprite_index = spr_pepperman_minifall;
 			}
-			else if (minibuffer > 0)
+			else if minibuffer > 0
 			{
 				if (place_meeting(x + (image_xscale * 18), y, obj_solid) && distance_to_object(targetplayer) < 100)
 				{
@@ -637,7 +637,7 @@ function scr_pepperman_mini()
 					create_particle(x, y, particle.jumpdust);
 				}
 			}
-			if (minibuffer <= 0)
+			if minibuffer <= 0
 			{
 				ministate = states.transition;
 				sprite_index = spr_pepperman_miniend;
@@ -648,9 +648,9 @@ function scr_pepperman_mini()
 			break;
 		case states.jump:
 			hsp = image_xscale * attackspeed;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_pepperman_minijump)
+			if (floor(image_index) == image_number - 1 && sprite_index == spr_pepperman_minijump)
 				sprite_index = spr_pepperman_minifall;
-			if (grounded && vsp > 0)
+			if grounded && vsp > 0
 				ministate = states.normal;
 			break;
 	}

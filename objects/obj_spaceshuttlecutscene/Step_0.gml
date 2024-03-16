@@ -1,4 +1,4 @@
-if (buffer > 0)
+if buffer > 0
 	buffer--;
 else if (!instance_exists(obj_fadeout))
 {
@@ -10,23 +10,23 @@ var h = sprite_get_height(bg_space1);
 var dir = point_direction(w, 0, 0, h);
 bg_x += lengthdir_x(bg_spd, dir);
 bg_y -= lengthdir_y(bg_spd, dir);
-if (fadein)
+if fadein
 {
 	var t = 0.5;
-	if (start)
+	if start
 		fade = Approach(fade, t, 0.05);
 	else
 		fade = Approach(fade, t, 0.1);
-	if (fade >= t)
+	if fade >= t
 	{
 		fadein = false;
-		if (!start)
+		if !start
 			start = true;
 	}
 }
 else
 {
 	fade = Approach(fade, 0, 0.05);
-	if (fade <= 0)
+	if fade <= 0
 		fadein = true;
 }

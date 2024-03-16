@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -30,40 +30,40 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
 if (state == states.walk && y > ystart && !scr_solid(x, y - 1))
 	y--;
 if (state == states.walk && y < ystart && !scr_solid(x, y + 1))
 	y++;
-if (state == states.stun)
+if state == states.stun
 	grav = 0.5;
 else
 	grav = 0;
-if (bombreset > 0 && state == states.walk)
+if bombreset > 0 && state == states.walk
 	bombreset--;
 var player = instance_nearest(x, y, obj_player);
-if (ragebuffer > 0)
+if ragebuffer > 0
 	ragebuffer--;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
 if (state == states.pizzagoblinthrow || state == states.rage)
 {
 	hsp = 0;
 	vsp = 0;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
 scr_scareenemy();
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

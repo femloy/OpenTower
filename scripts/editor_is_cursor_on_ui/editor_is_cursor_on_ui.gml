@@ -6,7 +6,7 @@ function editor_is_cursor_on_ui(_x, _y)
 	{
 		with (ds_list_find_value(global.instancelist, i))
 		{
-			if (active)
+			if active
 			{
 				found = true;
 				break;

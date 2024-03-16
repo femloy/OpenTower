@@ -1,11 +1,11 @@
 shader_set(global.Pal_Shader);
-if (!ispeppino)
-    spr_palette = spr_peppalette;
+if !ispeppino
+	spr_palette = spr_peppalette;
 else
 {
-    spr_palette = spr_noisepalette;
-    if (room == boss_pizzaface && instance_exists(obj_pizzaface_thunderdark))
-        spr_palette = spr_noisepalette_rage;
+	spr_palette = spr_noisepalette;
+	if (room == boss_pizzaface && instance_exists(obj_pizzaface_thunderdark))
+		spr_palette = spr_noisepalette_rage;
 }
 pal_swap_set(spr_palette, paletteselect, false);
 pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);

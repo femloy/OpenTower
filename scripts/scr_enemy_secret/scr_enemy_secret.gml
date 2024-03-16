@@ -8,10 +8,10 @@ function scr_enemy_secret()
 		secretjumped = true;
 		vsp = -8;
 	}
-	if (secretjumped)
+	if secretjumped
 	{
 		visible = true;
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 		{
 			invincible = savedsecretinvincible;
 			state = states.walk;

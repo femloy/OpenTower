@@ -21,7 +21,7 @@ mt_gameframe_std_haxe_class = new gameframe_std_haxe_class(-1, "gameframe_std_ha
 
 function gameframe_log(_args1) {
 	// gameframe_log(args:haxe_Rest<any>)
-	if (!gameframe_debug) exit;
+	if !gameframe_debug exit;
 	var _s = "[Gameframe]";
 	var __g = 0;
 	while (__g < argument_count) {
@@ -35,7 +35,7 @@ function gameframe_log(_args1) {
 function gameframe_update() {
 	/// gameframe_update()
 	/// @returns {void}
-	if (!gameframe_is_ready) exit;
+	if !gameframe_is_ready exit;
 	gameframe_effective_scale = display_get_dpi_x() / 96 / gameframe_dpi_scale;
 	gameframe_mouse_over_frame = false;
 	gameframe_delayed_update();
@@ -505,7 +505,7 @@ function gameframe_button_add_defaults() {
 	var _minimize = game_frame_button_create("minimize", gameframe_spr_buttons, 0, function(_button) {
 		gameframe_minimize()
 	});
-	if (!gameframe_has_native_extension) _minimize[@9/* enabled */] = false;
+	if !gameframe_has_native_extension _minimize[@9/* enabled */] = false;
 	array_push(gameframe_button_array, _minimize);
 	var _maxrest = game_frame_button_create("maxrest", gameframe_spr_buttons, 1, function(_button) {
 		if (gameframe_isMaximized_hx) gameframe_restore(); else gameframe_maximize();
@@ -1045,7 +1045,7 @@ function gameframe_tools_keyctl_update() {
 function gameframe_draw() {
 	/// gameframe_draw()
 	/// @returns {void}
-	if (!gameframe_is_ready) exit;
+	if !gameframe_is_ready exit;
 	if (window_get_fullscreen() || gameframe_isFullscreen_hx) exit;
 	var _gw = window_get_width();
 	var _gh = window_get_height();
@@ -1053,7 +1053,7 @@ function gameframe_draw() {
 	var __borderWidth = (gameframe_isMaximized_hx ? 0 : gameframe_border_width);
 	var __titlebarHeight = gameframe_caption_get_height();
 	var __buttons_x = gameframe_button_get_combined_offset(_gw);
-	if (!gameframe_isMaximized_hx) gameframe_caption_draw_border(0, 0, _gw, _gh);
+	if !gameframe_isMaximized_hx gameframe_caption_draw_border(0, 0, _gw, _gh);
 	gameframe_caption_draw_background(__borderWidth, __borderWidth, _gw - __borderWidth * 2, __titlebarHeight, __buttons_x);
 	gameframe_caption_draw_text(__borderWidth, __borderWidth, __buttons_x - __borderWidth, __titlebarHeight);
 	gameframe_button_draw(__buttons_x, __borderWidth, __titlebarHeight);

@@ -65,7 +65,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		}
 	}
 	fmod_event_one_shot_3d("event:/sfx/misc/rockbreak", x + 32, y + 32);
-	repeat (7)
+	repeat 7
 		create_debris(x + 32, y + 32, spr_rockdebris);
 	ds_list_add(global.saveroom, id);
 }

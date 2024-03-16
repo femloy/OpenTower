@@ -1,6 +1,6 @@
 if (instance_exists(obj_bossplayerdeath))
 {
-	with (obj_camera)
+	with obj_camera
 		lock = false;
 	fadein = false;
 	camzoom = 1;
@@ -10,16 +10,16 @@ if (instance_exists(obj_bossplayerdeath))
 	exit;
 }
 
-if (fadein)
+if fadein
 {
-	if (state == 0)
+	if state == 0
 		fade = Approach(fade, 1, 0.2);
 	else
 		fade = Approach(fade, 1, 0.08);
 }
 else
 	fade = Approach(fade, 0, 0.08);
-if (state > 0 && state > 0 && state < 5)
+if state > 0 && state > 0 && state < 5
 {
 	camera_set_view_size(view_camera[0], SCREEN_WIDTH * camzoom, SCREEN_HEIGHT * camzoom);
 	obj_screensizer.camzoom = camzoom;

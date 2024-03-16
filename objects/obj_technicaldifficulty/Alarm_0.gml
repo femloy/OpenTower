@@ -2,9 +2,9 @@ use_static = true;
 static_index = sprite_get_number(spr_tvstatic) - 1;
 static_dir = -1;
 fmod_event_one_shot("event:/sfx/ui/tvswitchback");
-with (playerid)
+with playerid
 {
-	if (!isgustavo)
+	if !isgustavo
 		state = states.normal;
 	else
 		state = states.ratmount;
@@ -14,7 +14,7 @@ with (playerid)
 	landAnim = false;
 	swap_player();
 }
-with (obj_ghostfollow)
+with obj_ghostfollow
 {
 	x = xstart;
 	y = ystart;

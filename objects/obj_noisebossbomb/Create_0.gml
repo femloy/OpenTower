@@ -18,6 +18,6 @@ while (scr_solid(x, y))
 {
 	x += obj_noiseboss.image_xscale;
 	i++;
-	if (i > room_width)
+	if i > room_width
 		break;
 }

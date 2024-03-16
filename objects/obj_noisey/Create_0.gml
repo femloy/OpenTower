@@ -43,7 +43,7 @@ grabbedby = 0;
 stuntouchbuffer = 0;
 ragedash = 0;
 ragecooldown = 0;
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
 	spr_palette = spr_noiseboss_palette;
 	usepalette = true;

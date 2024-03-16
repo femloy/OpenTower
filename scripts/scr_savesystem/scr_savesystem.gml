@@ -37,7 +37,7 @@ function get_percentage()
 				count++;
 		}
 		var r = ini_read_string("Ranks", level, "d");
-		if (r == "p")
+		if r == "p"
 			extracount++;
 		count += ds_map_find_value(_rank_map, r);
 		count += ini_read_real("Secret", level, 0);
@@ -47,7 +47,7 @@ function get_percentage()
 			if (ini_read_real("achievements", concat(level, j + 1), false))
 				ac++;
 		}
-		if (ac >= 3)
+		if ac >= 3
 			extracount++;
 	}
 	for (i = 0; i < array_length(bosses); i++)
@@ -60,7 +60,7 @@ function get_percentage()
 	{
 		boss = bossranks[i];
 		r = ini_read_string("Ranks", boss, "d");
-		if (r == "p")
+		if r == "p"
 			extracount++;
 		count += ds_map_find_value(_rank_map, r);
 	}
@@ -70,7 +70,7 @@ function get_percentage()
 			extracount++;
 	}
 	var per = floor((count / _basemax) * 100);
-	if (per > 100)
+	if per > 100
 		per = 100;
 	var extraper = (extracount >= _extramax) ? 1 : 0;
 	trace("Base count: ", count, " out of ", _basemax);
@@ -80,9 +80,9 @@ function get_percentage()
 }
 function gamesave_async_load()
 {
-	with (obj_savesystem)
+	with obj_savesystem
 	{
-		if (state == 0)
+		if state == 0
 		{
 			loadbuff = buffer_create(1, 1, 1);
 			buffer_async_group_begin(get_buffer_group_name());
@@ -94,7 +94,7 @@ function gamesave_async_load()
 }
 function gamesave_async_save()
 {
-	with (obj_savesystem)
+	with obj_savesystem
 	{
 		dirty = true;
 		savegame = true;
@@ -102,7 +102,7 @@ function gamesave_async_save()
 }
 function gamesave_async_save_options()
 {
-	with (obj_savesystem)
+	with obj_savesystem
 	{
 		dirty = true;
 		saveoptions = true;

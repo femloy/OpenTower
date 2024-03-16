@@ -1,6 +1,6 @@
-if (grounded)
+if grounded
 {
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;

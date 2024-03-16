@@ -1,26 +1,26 @@
 if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 {
-	if (global.golfhit < 10)
+	if global.golfhit < 10
 	{
-		repeat (10)
+		repeat 10
 		{
 			with (instance_create(x, y, obj_pizzaslice))
 				vsp = random_range(-1, -10);
 		}
 		global.golfhit = 0;
 	}
-	else if (global.golfhit < 20)
+	else if global.golfhit < 20
 	{
-		repeat (5)
+		repeat 5
 		{
 			with (instance_create(x, y, obj_pizzaslice))
 				vsp = random_range(-1, -10);
 		}
 		global.golfhit = 0;
 	}
-	else if (global.golfhit < 30)
+	else if global.golfhit < 30
 	{
-		repeat (1)
+		repeat 1
 		{
 			with (instance_create(x, y, obj_pizzaslice))
 				vsp = random_range(-1, -10);
@@ -37,13 +37,13 @@ if (ds_list_find_index(global.baddieroom, id) == -1 && important == 0)
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
 	}
 	instance_create(x, y + 30, obj_bangeffect);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 5;
 		shake_mag_acc = 20 / room_speed;

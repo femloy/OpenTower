@@ -1,7 +1,7 @@
 function cutscene_farm_middle()
 {
 	var _finish = false;
-	with (obj_mort_inline)
+	with obj_mort_inline
 	{
 		sprite_index = spr_mortwalk;
 		x += (dir * 5);
@@ -10,12 +10,12 @@ function cutscene_farm_middle()
 	}
 	if (!instance_exists(obj_mort_inline))
 		_finish = true;
-	if (_finish)
+	if _finish
 		cutscene_end_action();
 }
 function cutscene_farm_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;

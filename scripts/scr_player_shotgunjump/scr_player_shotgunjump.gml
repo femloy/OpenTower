@@ -3,24 +3,24 @@ function scr_player_shotgunjump()
 	image_speed = 0.35;
 	move = key_left + key_right;
 	hsp = move * movespeed;
-	if (ladderbuffer > 0)
+	if ladderbuffer > 0
 		ladderbuffer--;
-	if (dir != xscale)
+	if dir != xscale
 	{
 		dir = xscale;
 		movespeed = 0;
 	}
-	if (move != 0)
+	if move != 0
 	{
 		xscale = move;
-		if (movespeed < 8)
+		if movespeed < 8
 			movespeed += 0.5;
 		else if (floor(movespeed) == 8)
 			movespeed = 6;
 	}
 	else
 		movespeed = 0;
-	if (!key_jump2 && vsp < 0.5 && !jumpstop)
+	if !key_jump2 && vsp < 0.5 && !jumpstop
 	{
 		vsp /= 20;
 		jumpstop = true;
@@ -30,7 +30,7 @@ function scr_player_shotgunjump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (input_buffer_jump > 0 && can_jump)
+	if input_buffer_jump > 0 && can_jump
 	{
 		input_buffer_jump = 8;
 		state = states.shotgunjump;
@@ -39,24 +39,24 @@ function scr_player_shotgunjump()
 		sprite_index = spr_shotgunjump;
 		image_index = 0;
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 	{
 		sprite_index = spr_shotgunland;
 		image_index = 0;
 		landAnim = true;
 		state = states.shotgun;
 	}
-	if (key_attack2)
+	if key_attack2
 	{
 		state = states.shotgundash;
 		sprite_index = spr_shotgunsuplexdash;
 		image_index = 0;
 		movespeed = 10;
 	}
-	if (key_slap2)
+	if key_slap2
 	{
 		fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
-		if (!key_down)
+		if !key_down
 		{
 			sprite_index = spr_shotgunshoot;
 			image_index = 0;
@@ -113,6 +113,6 @@ function scr_player_shotgunjump()
 			}
 		}
 	}
-	if (sprite_index == spr_shotgunjump && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_shotgunjump && floor(image_index) == image_number - 1)
 		sprite_index = spr_shotgunfall;
 }

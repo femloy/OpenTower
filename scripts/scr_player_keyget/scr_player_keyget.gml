@@ -20,14 +20,14 @@ function scr_player_keyget()
 		keysound = true;
 		scr_fmod_soundeffect(snd_voiceok, obj_player1.x, obj_player1.y);
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		global.keyget = false;
 		state = states.normal;
 		image_index = 0;
 		with instance_create(x, y, obj_keyfollow)
 		{
-			if (other.goblinkey)
+			if other.goblinkey
 				sprite_index = spr_goblinkey;
 		}
 		goblinkey = false;

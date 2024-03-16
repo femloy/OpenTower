@@ -27,12 +27,12 @@ function scr_monster_collide()
 			break;
 		}
 	}
-	if (grav > 0)
+	if grav > 0
 	{
-		if (vsp < 20)
+		if vsp < 20
 			vsp += grav;
 	}
-	else if (vsp > -20)
+	else if vsp > -20
 		vsp += grav;
 	grounded = scr_monster_solid(x, y + 1);
 }

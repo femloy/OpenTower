@@ -1,14 +1,14 @@
-if (other.ispeppino && other.isgustavo)
-    exit;
+if other.ispeppino && other.isgustavo
+	exit;
 var _dir = other.xscale
-with (other)
+with other
 {
-    move = (key_left + key_right)
-    if (hsp != 0)
-        _dir = sign(hsp)
-    else if (move != 0)
-        _dir = move
+	move = (key_left + key_right)
+	if hsp != 0
+		_dir = sign(hsp)
+	else if move != 0
+		_dir = move
 }
 with (instance_create(x, y, obj_brickball))
-    image_xscale = _dir
+	image_xscale = _dir
 instance_destroy()

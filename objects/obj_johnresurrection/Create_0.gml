@@ -12,7 +12,7 @@ for (var i = 0; i < array_length(levels); i++)
 ini_write_real("Game", "john", treasure);
 obj_savesystem.ini_str = ini_close();
 global.johnresurrection = treasure;
-if (treasure)
+if treasure
 	notification_push(notifs.johnresurrection, []);
 depth = -600;
 state = 0; // not an enum

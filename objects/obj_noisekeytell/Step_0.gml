@@ -1,4 +1,4 @@
-if (start)
+if start
 {
 	var dir = point_direction(x, y, targetx, targety);
 	x = Approach(x, targetx, abs(lengthdir_x(8, dir)));

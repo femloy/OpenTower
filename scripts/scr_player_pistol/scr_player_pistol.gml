@@ -2,13 +2,13 @@ function scr_player_pistol()
 {
 	move = key_right + key_left;
 	hsp = xscale * movespeed;
-	if (movespeed < 10)
+	if movespeed < 10
 		movespeed += 0.15;
-	if (floor(image_index) == (image_number - 1) && grounded && key_attack)
+	if (floor(image_index) == image_number - 1 && grounded && key_attack)
 		state = states.mach2;
-	else if (floor(image_index) == (image_number - 1))
+	else if floor(image_index) == image_number - 1
 		state = states.normal;
-	if (key_jump && grounded && !key_down)
+	if key_jump && grounded && !key_down
 	{
 		jumpstop = false;
 		vsp = -11;
@@ -18,7 +18,7 @@ function scr_player_pistol()
 	if (scr_solid(x + xscale, y) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + xscale, y, obj_destructibles))
 	{
 		var _bump = ledge_bump((vsp >= 0) ? 32 : 22);
-		if (_bump)
+		if _bump
 		{
 			jumpstop = true;
 			state = states.jump;
@@ -27,7 +27,7 @@ function scr_player_pistol()
 			instance_create(x + (xscale * 10), y + 10, obj_bumpeffect);
 		}
 	}
-	if (key_down && grounded && global.attackstyle != 2)
+	if key_down && grounded && global.attackstyle != 2
 	{
 		grav = 0.5;
 		sprite_index = spr_crouchslip;
@@ -35,10 +35,10 @@ function scr_player_pistol()
 		state = states.crouchslide;
 		movespeed += 3;
 	}
-	if (state != states.bump && move != xscale && move != 0)
+	if state != states.bump && move != xscale && move != 0
 	{
 		image_index = 0;
-		if (!grounded)
+		if !grounded
 		{
 			sprite_index = spr_suplexcancel;
 			jumpAnim = true;

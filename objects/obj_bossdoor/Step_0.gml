@@ -1,11 +1,11 @@
 event_inherited();
-switch (state)
+switch state
 {
 	case states.jump:
-		if (vsp < 20)
+		if vsp < 20
 			vsp += grav;
 		y += vsp;
-		if (y > ystart && vsp > 0)
+		if y > ystart && vsp > 0
 		{
 			y = ystart;
 			state = states.normal;

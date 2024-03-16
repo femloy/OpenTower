@@ -1,14 +1,14 @@
-if (obj_player1.ispeppino != ispeppino)
+if obj_player1.ispeppino != ispeppino
 {
 	ispeppino = obj_player1.ispeppino;
 	paletteselect = 0;
-	if (obj_player1.ispeppino)
+	if obj_player1.ispeppino
 		palettes = player_palettes[0];
 	else
 		palettes = player_palettes[1];
-	with (obj_player1)
+	with obj_player1
 	{
-		if (paletteselect > 2)
+		if paletteselect > 2
 		{
 			for (var i = 0; i < array_length(other.palettes); i++)
 			{
@@ -28,7 +28,7 @@ if (obj_player1.ispeppino != ispeppino)
 showtext = place_meeting(x, y, obj_player);
 if (instance_exists(obj_transfotip))
 	showtext = false;
-if (showtext)
+if showtext
 	alpha = Approach(alpha, 1, 0.1);
 else
 	alpha = Approach(alpha, 0, 0.1);

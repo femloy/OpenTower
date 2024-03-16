@@ -1,4 +1,4 @@
-if (image_yscale == -1)
+if image_yscale == -1
 {
 	sprite_index = spr_bottle_idle;
 	activatespr = spr_bottle_activate;

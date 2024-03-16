@@ -1,5 +1,5 @@
 event_inherited();
-if (elite)
+if elite
 {
 	paletteselect = 1;
 	usepalette = true;

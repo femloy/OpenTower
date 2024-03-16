@@ -1,4 +1,4 @@
-with (obj_bosscontroller)
+with obj_bosscontroller
 	bossID = other.id;
 if (instance_exists(obj_fakepepflash))
 {

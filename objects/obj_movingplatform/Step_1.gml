@@ -1,10 +1,10 @@
-if (active)
+if active
 {
 	var hdeccel = abs(h_velocity) / 24;
-	if (hdir != hscale)
+	if hdir != hscale
 	{
 		hmovespeed = Approach(hmovespeed, 0, hdeccel);
-		if (hmovespeed <= 0)
+		if hmovespeed <= 0
 		{
 			hscale *= -1;
 			hdir = hscale;
@@ -13,10 +13,10 @@ if (active)
 	else
 		hmovespeed = Approach(hmovespeed, h_velocity, hdeccel);
 	var vdeccel = abs(v_velocity) / 24;
-	if (vdir != vscale)
+	if vdir != vscale
 	{
 		vmovespeed = Approach(vmovespeed, 0, vdeccel);
-		if (vmovespeed <= 0)
+		if vmovespeed <= 0
 		{
 			vscale *= -1;
 			vdir = vscale;
@@ -48,7 +48,7 @@ if (active)
 }
 else if (place_meeting(x, y - 1, obj_player))
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (place_meeting(x, y + 1, other) && !place_meeting(x, y, other))
 		{

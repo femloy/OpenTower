@@ -1,7 +1,7 @@
 var tx = playerid.x;
 var ty = playerid.y - 60;
 var acc = 0.1;
-switch (state)
+switch state
 {
 	case states.normal:
 		x = lerp(x, tx, acc);

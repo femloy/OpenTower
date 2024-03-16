@@ -45,14 +45,14 @@ function scr_check_groundpound()
 
 function scr_mach_check_dive()
 {
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		return key_down;
 	return scr_check_dive();
 }
 
 function scr_check_dive()
 {
-	if (!ispeppino)
+	if !ispeppino
 		return scr_check_groundpound2();
 	return key_down;
 }
@@ -95,7 +95,7 @@ function scr_menu_getinput()
 	key_quit = tdp_input_get("menu_quit").held || tdp_input_get("menu_quitC").held;
 	key_quit2 = tdp_input_get("menu_quit").pressed || tdp_input_get("menu_quitC").pressed;
 	
-	if (global.swapmode && obj_inputAssigner.player_input_device[0] != obj_inputAssigner.player_input_device[1])
+	if global.swapmode && obj_inputAssigner.player_input_device[0] != obj_inputAssigner.player_input_device[1]
 	{
 		var _dvc = obj_inputAssigner.player_input_device[!obj_inputAssigner.player_index];
 		tdp_input_update(_dvc);
@@ -124,7 +124,7 @@ function scr_menu_getinput()
 			if (!variable_instance_get(id, input[0]))
 			{
 				var _bool = false;
-				if (input[2])
+				if input[2]
 					_bool = (_dvc < 0) ? tdp_input_get(input[1]).pressed : tdp_input_get(input[1] + "C").pressed;
 				else
 					_bool = (_dvc < 0) ? tdp_input_get(input[1]).held : tdp_input_get(input[1] + "C").held;
@@ -132,9 +132,9 @@ function scr_menu_getinput()
 			}
 		}
 		
-		if (key_left >= 0)
+		if key_left >= 0
 			key_left = _dvc < 0 ? -tdp_input_get("menu_left").held : -tdp_input_get("menu_leftC").held;
-		if (key_left2 >= 0)
+		if key_left2 >= 0
 			key_left2 = _dvc < 0 ? -tdp_input_get("menu_left").pressed : -tdp_input_get("menu_leftC").pressed;
 	}
 }
@@ -153,7 +153,7 @@ function scr_getinput()
 	key_up_p2 = false;
 	key_start_p2 = false;
 	
-	if (global.swapmode && _dvc != _dvc2)
+	if global.swapmode && _dvc != _dvc2
 	{
 		tdp_input_update(_dvc2);
 		key_fightball = (_dvc2 >= 0) ? tdp_input_get("player_attackC").held : tdp_input_get("player_attack").held;
@@ -180,7 +180,7 @@ function scr_getinput()
 	var horizpress_dz = global.input_controller_deadzone_press;
 	
 	key_start = tdp_input_get("menu_start").pressed || tdp_input_get("menu_startC").pressed;
-	if (key_start_p2)
+	if key_start_p2
 		key_start = true;
 	
 	if (!global.swapmode || _dvc == -1)
@@ -206,7 +206,7 @@ function scr_getinput()
 		key_groundpound = tdp_input_get("player_groundpoundC").pressed || tdp_input_get("player_groundpound").pressed;
 		key_groundpound2 = tdp_input_get("player_groundpoundC").held || tdp_input_get("player_groundpound").held;
 	}
-	else if (_dvc >= 0)
+	else if _dvc >= 0
 	{
 		key_up = tdp_input_get("player_upC").held;
 		key_up2 = tdp_input_get("player_upC").pressed;
@@ -252,10 +252,10 @@ function scr_getinput()
 	
 	// gamepad analog stick bullshit
 	if object_index == obj_player1
-    {
-        if state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch || state == states.machcancel
-        {
-            if state == states.Sjumpprep
+	{
+		if state == states.Sjumpprep || state == states.crouch || state == states.ratmountcrouch || state == states.machcancel
+		{
+			if state == states.Sjumpprep
 			{
 				var in = tdp_input_get("player_upC");
 				var dz = global.gamepad_deadzone_superjump;
@@ -269,11 +269,11 @@ function scr_getinput()
 			for (var i = 0; i < array_length(in.actions); i++)
 			{
 				var b = in.actions[i];
-				with (b)
+				with b
 				{
-					if (type == tdp_input.joystick)
+					if type == tdp_input.joystick
 					{
-						switch (value)
+						switch value
 						{
 							case gp_axislv:
 								var inverted_axis = gamepad_axis_value(_dvc, gp_axislh);
@@ -288,7 +288,7 @@ function scr_getinput()
 								inverted_axis = gamepad_axis_value(_dvc, gp_axisrv);
 								break;
 						}
-						if (other.state == states.Sjumpprep)
+						if other.state == states.Sjumpprep
 						{
 							if (axis_value <= (-0.8 + dz) && (axis_value != 0 || inverted_axis != 0))
 								other.key_up = true;
@@ -298,8 +298,8 @@ function scr_getinput()
 					}
 				}
 			}
-        }
-    }
+		}
+	}
 }
 
 function scr_get_move_axis(input_str)
@@ -308,16 +308,16 @@ function scr_get_move_axis(input_str)
 	for (var i = 0; i < array_length(in.actions); i++)
 	{
 		var b = in.actions[i];
-		with (b)
+		with b
 		{
-			if (type == tdp_input.joystick)
+			if type == tdp_input.joystick
 			{
 				var av = axis_value;
-				if (joystick_direction == -1 && av > 0)
+				if joystick_direction == -1 && av > 0
 					av = 0;
-				else if (joystick_direction == 1 && av < 0)
+				else if joystick_direction == 1 && av < 0
 					av = 0;
-				if (av != 0)
+				if av != 0
 					return av;
 			}
 		}

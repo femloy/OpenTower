@@ -1,7 +1,7 @@
 old_x = x;
 x += (image_xscale * 5);
 var num = collision_line_list(x, y, old_x, y, obj_player, false, true, global.instancelist, false);
-if (num > 0)
+if num > 0
 {
 	for (var i = 0; i < num; i++)
 	{

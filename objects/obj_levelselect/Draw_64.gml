@@ -25,7 +25,7 @@ for (var i = 0; i < array_length(toppin_info); i++)
 		c = c_white;
 	draw_sprite_ext(b[1], ix, xx + (i * 47), yy, 1, 1, 0, c, 1);
 }
-if (_levelinfo[1] != war_1)
+if _levelinfo[1] != war_1
 {
 	if (!ini_read_real("Treasure", _levelinfo[2], false))
 		c = 0;
@@ -36,7 +36,7 @@ if (_levelinfo[1] != war_1)
 
 draw_set_font(lang_get_font("smallfont"));
 var sf = ini_read_real("Secret", _levelinfo[2], false);
-if (_levelinfo[1] != war_1)
+if _levelinfo[1] != war_1
 	draw_text_color(SCREEN_WIDTH / 2, yy + 88, concat(sf, " OUT OF 3 SECRETS"), c_white, c_white, c_white, c_white, 1);
 
 ini_close();

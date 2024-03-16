@@ -58,7 +58,7 @@ grannyID.text_color = make_color_rgb(171, 255, 0);
 
 update_text = function()
 {
-	if (text == 0)
+	if text == 0
 	{
 		var str = lang_get_value_newline("computer_text1");
 		str = embed_value_string(str, [toppins, maxtoppins, secrets, maxsecrets, treasure, maxtreasure]);
@@ -69,7 +69,7 @@ update_text = function()
 		str = embed_value_string(str, [achievements, maxachievements, palettes, maxpalettes, damage]);
 	}
 	trace(str);
-	with (grannyID)
+	with grannyID
 	{
 		change_y = false;
 		text = str;

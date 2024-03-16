@@ -1,6 +1,6 @@
 function scr_player_machfreefall()
 {
-	if (mach2 == 0)
+	if mach2 == 0
 	{
 		hsp = move * movespeed;
 		movespeed = 4;
@@ -37,7 +37,7 @@ function scr_player_machfreefall()
 	}
 	if (grounded && !(input_buffer_jump > 0))
 	{
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 20;
 			shake_mag_acc = 40 / room_speed;
@@ -50,7 +50,7 @@ function scr_player_machfreefall()
 			image_xscale = obj_player.image_xscale;
 		create_particle(x, y, particle.landcloud, 0);
 		freefallstart = 0;
-		with (obj_baddie)
+		with obj_baddie
 		{
 			if (shakestun && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0)
 			{
@@ -62,7 +62,7 @@ function scr_player_machfreefall()
 			}
 		}
 	}
-	if (can_jump && input_buffer_jump > 0 && vsp > 0)
+	if can_jump && input_buffer_jump > 0 && vsp > 0
 	{
 		input_buffer_jump = 0;
 		sprite_index = spr_player_hanstandjump;

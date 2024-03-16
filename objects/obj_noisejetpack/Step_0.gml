@@ -1,7 +1,7 @@
-switch (state)
+switch state
 {
 	case states.gottreasure:
-		if (cutscenebuffer > 0)
+		if cutscenebuffer > 0
 			cutscenebuffer--;
 		else
 		{
@@ -25,42 +25,42 @@ switch (state)
 		}
 		break;
 	case states.transition:
-		if (orangealpha > 0)
+		if orangealpha > 0
 			orangealpha -= 0.08;
-		if (flamebuffer > 0)
+		if flamebuffer > 0
 			flamebuffer--;
 		else
 		{
 			flamebuffer = 8;
-			repeat (3)
+			repeat 3
 				instance_create(x, y, obj_firemouthflame);
 		}
-		if (cutscenebuffer > 0)
+		if cutscenebuffer > 0
 			cutscenebuffer--;
 		else
 		{
-			with (obj_music)
+			with obj_music
 			{
-				if (music != -4)
+				if music != -4
 					fmod_event_instance_set_parameter(music.event, "state", 2, true);
 			}
 			global.noisejetpack = true;
 			global.combotime = 60;
-			with (playerid)
+			with playerid
 			{
 				state = states.actor;
 				sprite_index = spr_player_poweredup;
 				image_index = 0;
 				image_speed = 0.35;
-				if (!ispeppino)
+				if !ispeppino
 				{
 					noisepizzapepper = true;
 					sprite_index = spr_playerN_pizzapepper;
 				}
 			}
-			repeat (20)
+			repeat 20
 			{
-				with (obj_firemouthflame)
+				with obj_firemouthflame
 				{
 					hsp = 24;
 					vsp = 24;
@@ -71,12 +71,12 @@ switch (state)
 		}
 		break;
 	case states.actor:
-		if (flamebuffer > 0)
+		if flamebuffer > 0
 			flamebuffer--;
 		else
 		{
 			flamebuffer = 8;
-			repeat (3)
+			repeat 3
 			{
 				with (instance_create(x, y, obj_firemouthflame))
 				{
@@ -85,13 +85,13 @@ switch (state)
 				}
 			}
 		}
-		if (cutscenebuffer > 0)
+		if cutscenebuffer > 0
 			cutscenebuffer--;
 		else
 		{
-			with (obj_music)
+			with obj_music
 			{
-				if (music != -4)
+				if music != -4
 					fmod_event_instance_set_parameter(music.event, "state", 1, true);
 			}
 			playerid.state = states.normal;

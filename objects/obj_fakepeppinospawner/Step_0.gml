@@ -1,4 +1,4 @@
-if (!released)
+if !released
 {
 	if (!instance_exists(inst) && global.chase == 1)
 	{
@@ -9,13 +9,13 @@ if (!released)
 else if (!instance_exists(inst))
 {
 	inst = instance_create(x, y + 18, obj_fakepeppino);
-	with (inst)
+	with inst
 	{
 		targetDoor = other.targetDoor;
 		targetRoom = other.targetRoom;
 	}
 }
-if (global.key_inv == 1 && obj_player.state != states.keyget)
+if global.key_inv == 1 && obj_player.state != states.keyget
 	global.chase = true;
-if (global.panic == true)
+if global.panic == true
 	global.chase = true;

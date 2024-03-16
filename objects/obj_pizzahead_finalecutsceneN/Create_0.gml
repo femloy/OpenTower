@@ -5,18 +5,18 @@ noise.usepalette = true;
 peppinoID = noone;
 if global.swapmode
 {
-    peppinoID = instance_create((noise.x - 50), 402, obj_swapplayerprop);
-    peppinoID.ispeppino = true;
-    peppinoID.sprite_index = spr_player_idle;
-    peppinoID.image_speed = 0.35;
-    peppinoID.depth = 0;
-    peppinoID.hsp = 0;
-    peppinoID.vsp = 0;
+	peppinoID = instance_create((noise.x - 50), 402, obj_swapplayerprop);
+	peppinoID.ispeppino = true;
+	peppinoID.sprite_index = spr_player_idle;
+	peppinoID.image_speed = 0.35;
+	peppinoID.depth = 0;
+	peppinoID.hsp = 0;
+	peppinoID.vsp = 0;
 }
-with (obj_player1)
+with obj_player1
 {
-    if ispeppino
-        swap_player(false);
+	if ispeppino
+		swap_player(false);
 }
 
 pizzahead = instance_create(786, 369, obj_finaleN_prop);

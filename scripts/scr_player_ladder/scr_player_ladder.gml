@@ -12,11 +12,11 @@ function scr_player_ladder()
 	jumpstop = false;
 	movespeed = 0;
 	hsp = 0;
-	if (key_up && hooked == 0)
+	if key_up && hooked == 0
 	{
 		sprite_index = spr_laddermove;
 		vsp = -6;
-		if (steppybuffer > 0)
+		if steppybuffer > 0
 			steppybuffer--;
 		else
 		{
@@ -26,7 +26,7 @@ function scr_player_ladder()
 		}
 		image_speed = 0.35;
 	}
-	else if (key_down && hooked == 0)
+	else if key_down && hooked == 0
 	{
 		sprite_index = spr_ladderdown;
 		vsp = 10;
@@ -52,7 +52,7 @@ function scr_player_ladder()
 		jumpAnim = false;
 		state = states.normal;
 		image_index = 0;
-		if (!hooked && vsp < 0)
+		if !hooked && vsp < 0
 		{
 			var _y = y;
 			while (!scr_solid(x, y + 1))
@@ -73,7 +73,7 @@ function scr_player_ladder()
 		vsp = 0;
 		hooked = false;
 	}
-	if (input_buffer_jump > 0)
+	if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		hooked = false;
@@ -83,7 +83,7 @@ function scr_player_ladder()
 			ladderbuffer = 30;
 		jumpAnim = true;
 		state = states.jump;
-		if (key_down)
+		if key_down
 			vsp = 5;
 		else
 			vsp = -9;

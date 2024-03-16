@@ -1,6 +1,6 @@
 function scr_collide_destructibles()
 {
-	with (obj_player)
+	with obj_player
 	{
 		if ((state == states.jump && sprite_index == spr_playerN_noisebombspinjump)
 		|| (ghostdash && sprite_index != spr_ghostidle) || state == states.machcancel
@@ -18,9 +18,9 @@ function scr_collide_destructibles()
 					for (var j = 0; j < num; j++)
 					{
 						var inst = ds_list_find_value(global.instancelist, j);
-						if (inst != -4 && inst != -1 && inst != undefined)
+						if inst != -4 && inst != -1 && inst != undefined
 						{
-							with (inst)
+							with inst
 							{
 								GamepadSetVibration(0, 0.8, 0.8, 0.5);
 								instance_destroy();
@@ -46,20 +46,20 @@ function scr_collide_destructibles()
 		{
 			if (place_meeting(x + hsp, y, obj_destructibles))
 			{
-				if (character != "V")
+				if character != "V"
 				{
 					with (instance_place(x + hsp, y, obj_destructibles))
 					{
 						GamepadSetVibration(0, 0.8, 0.8, 0.5);
 						instance_destroy();
 					}
-					if (state == states.mach2)
+					if state == states.mach2
 						machpunchAnim = true;
 				}
 			}
 		}
 		
-		if (state == states.hurt && thrown == 1)
+		if state == states.hurt && thrown == 1
 		{
 			if (place_meeting(x - hsp, y, obj_destructibles))
 			{
@@ -99,40 +99,40 @@ function scr_collide_destructibles()
 						GamepadSetVibration(0, 0.8, 0.8, 0.5);
 						instance_destroy();
 					}
-					if (vsp > -11)
+					if vsp > -11
 						vsp = -11;
 					jumpstop = false;
 				}
 			}
 		}
 		
-		if (state == states.firemouth)
+		if state == states.firemouth
 		{
 			with (instance_place(x + xscale, y, obj_tntblock))
 			{
 				instance_destroy();
-				if (other.vsp > -11)
+				if other.vsp > -11
 					other.vsp = -11;
 				jumpstop = false;
 			}
 			with (instance_place(x, y + vsp, obj_tntblock))
 			{
 				instance_destroy();
-				if (other.vsp > -11)
+				if other.vsp > -11
 					other.vsp = -11;
 				jumpstop = false;
 			}
 			with (instance_place(x, y + 1, obj_tntblock))
 			{
 				instance_destroy();
-				if (other.vsp > -11)
+				if other.vsp > -11
 					other.vsp = -11;
 				jumpstop = false;
 			}
 			with (instance_place(x, y - 1, obj_tntblock))
 			{
 				instance_destroy();
-				if (other.vsp > -11)
+				if other.vsp > -11
 					other.vsp = -11;
 				jumpstop = false;
 			}
@@ -143,10 +143,10 @@ function scr_collide_destructibles()
 		{
 			with (ds_list_find_value(global.instancelist, k))
 			{
-				if (!falling)
+				if !falling
 					notification_push(notifs.cheeseblock_activate, [room]);
 				falling = true;
-				if (falling == 1)
+				if falling == 1
 					image_speed = 0.35;
 			}
 		}
@@ -180,11 +180,11 @@ function scr_collide_destructibles()
 				{
 					GamepadSetVibration(0, 0.6, 0.6, 0.5);
 					instance_destroy();
-					with (other)
+					with other
 					{
-						if (state != states.UNKNOWN_3 && state != states.UNKNOWN_2 && state != states.Sjump && state != states.punch && state != states.climbwall)
+						if state != states.UNKNOWN_3 && state != states.UNKNOWN_2 && state != states.Sjump && state != states.punch && state != states.climbwall
 							vsp = 0;
-						if (state == states.Sjump)
+						if state == states.Sjump
 							vsp = -11;
 					}
 				}
@@ -203,7 +203,7 @@ function scr_collide_destructibles()
 		if (state == states.freefall || state == states.superslam || state == states.freefallland || state == states.slipbanan || (state == states.ratmountbounce && vsp > 0))
 		{
 			vy = 1;
-			if (state == states.ratmountbounce)
+			if state == states.ratmountbounce
 				vy = vsp + 4;
 			if (place_meeting(x, y + vy, obj_metalblock) && (freefallsmash >= 10 || state == states.slipbanan || state == states.ratmountbounce))
 			{
@@ -216,19 +216,19 @@ function scr_collide_destructibles()
 			with (instance_place(x + hsp, y, obj_destructibles))
 			{
 				var _destroyed = false;
-				with (other)
+				with other
 				{
 					if (place_meeting(x + hsp, y, obj_bigdestructibles) && state != states.crouchslide && state != states.mach2 && state != states.machroll)
 					{
 						instance_destroy(other);
 						_destroyed = true;
 					}
-					else if (other.object_index != obj_bigdestructibles)
+					else if other.object_index != obj_bigdestructibles
 					{
 						instance_destroy(other);
 						_destroyed = true;
 					}
-					if (_destroyed && state == states.lungeattack)
+					if _destroyed && state == states.lungeattack
 						hit_connected = true;
 				}
 			}

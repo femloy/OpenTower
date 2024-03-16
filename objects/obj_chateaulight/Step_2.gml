@@ -1,4 +1,4 @@
-if (followID != -4)
+if followID != -4
 {
 	if (instance_exists(followID))
 	{

@@ -1,4 +1,4 @@
-if (sprite_index != spr_bucket_war)
+if sprite_index != spr_bucket_war
 {
 	instance_create(x, y, obj_playerexplosion);
 	with (instance_create(x, y, obj_sausageman_dead))
@@ -6,7 +6,7 @@ if (sprite_index != spr_bucket_war)
 		depth = -200;
 		sprite_index = spr_lonebrick_hurt;
 		var ix = 1;
-		if (other.image_angle > 90)
+		if other.image_angle > 90
 			ix = -1;
 		hsp = ix * 8;
 		vsp = -12;
@@ -21,7 +21,7 @@ if (sprite_index != spr_bucket_war)
 }
 else
 {
-	repeat (3)
+	repeat 3
 		create_debris(x, y, spr_bucketsplash);
 	create_debris(x, y, spr_bucketfall);
 }

@@ -1,14 +1,14 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-if (charge == 1 && grounded == 1)
+if charge == 1 && grounded == 1
 	hsp = image_xscale * movespeed;
-else if (stun == 1 && grounded == 0)
+else if stun == 1 && grounded == 0
 	hsp = -image_xscale * movespeed;
-else if (stun == 1 && grounded == 1)
+else if stun == 1 && grounded == 1
 	hsp = 0;
-if (stun == 0 && chargebuffer > 0)
+if stun == 0 && chargebuffer > 0
 	chargebuffer--;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionboxother))
 	{
@@ -28,9 +28,9 @@ if ((obj_player1.x > (x - 400) && obj_player1.x < (x + 400)) && (y <= (obj_playe
 	alarm[1] = 10;
 	image_speed = 0.5;
 }
-if (charge == 1)
+if charge == 1
 	movespeed += 0.1;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.05 * room_speed;
 if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x, y, obj_slope) && charge == 1)
 {
@@ -39,7 +39,7 @@ if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x, y, obj_slope) && c
 	stun = true;
 	movespeed = 5;
 	vsp = -10;
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 10;
 		shake_mag_acc = 30 / room_speed;
@@ -48,12 +48,12 @@ if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x, y, obj_slope) && c
 	charge = false;
 	image_speed = 0.35;
 }
-if (stun == 1)
+if stun == 1
 {
 	stunned--;
-	if (stunned == 0)
+	if stunned == 0
 	{
-		if (x != obj_player1.x)
+		if x != obj_player1.x
 			image_xscale = -sign(x - obj_player1.x);
 		vsp = -5;
 		sprite_index = spr_weeniesquire_idle;
@@ -61,7 +61,7 @@ if (stun == 1)
 	}
 	chargebuffer = 80;
 }
-if (hitboxcreate == 0 && stun == 0)
+if hitboxcreate == 0 && stun == 0
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_forkhitbox))
@@ -72,7 +72,7 @@ if (hitboxcreate == 0 && stun == 0)
 }
 if (charge == 1 && scr_solid(x, y + 1))
 	steppy--;
-if (steppy == 0)
+if steppy == 0
 {
 	instance_create(x, y + 43, obj_cloudeffect);
 	steppy = 20;

@@ -1,8 +1,8 @@
-if (state == states.hit)
+if state == states.hit
 {
 	x = hitX + irandom_range(-4, 4);
 	y = hitY + irandom_range(-1, 1);
-	if (hitLag > 0)
+	if hitLag > 0
 		hitLag--;
 	else
 	{
@@ -12,7 +12,7 @@ if (state == states.hit)
 		movespeed = 1;
 	}
 }
-else if (state == states.spaceshuttle)
+else if state == states.spaceshuttle
 {
 	x = hitX + irandom_range(-2, 2);
 	depth = -100;
@@ -21,7 +21,7 @@ else if (state == states.spaceshuttle)
 	y -= movespeed;
 	if (y < (camera_get_view_y(view_camera[0]) - 236) && !instance_exists(obj_spaceshuttlecutscene))
 	{
-		with (obj_player)
+		with obj_player
 		{
 			targetRoom = other.targetRoom;
 			targetDoor = "ROCKET";

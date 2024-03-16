@@ -6,46 +6,46 @@ function scr_player_rocket()
 	alarm[8] = 60;
 	alarm[7] = 120;
 	hurted = true;
-	if (!ispeppino && sprite_index == spr_rocketstart)
+	if !ispeppino && sprite_index == spr_rocketstart
 	{
 		global.combotimepause = 5;
 		image_speed = 0.35;
 		hsp = 0;
 		vsp = 0;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			sprite_index = spr_rocket;
 		exit;
 	}
 	with (instance_place(x + hsp, y, obj_asteroid))
 		instance_destroy();
-	if (sprite_index != spr_rocketstart)
+	if sprite_index != spr_rocketstart
 	{
 		var _spd = 6;
 		var _accel = 1;
-		if (key_up && !key_down)
+		if key_up && !key_down
 			rocketvsp = Approach(rocketvsp, -_spd, _accel);
-		else if (key_down && !key_up)
+		else if key_down && !key_up
 			rocketvsp = Approach(rocketvsp, _spd, _accel);
 		else
 			rocketvsp = Approach(rocketvsp, 0, _accel);
 		vsp = rocketvsp;
-		if (move == xscale)
+		if move == xscale
 			movespeed = Approach(movespeed, 16, 0.15);
-		else if (movespeed > 12)
+		else if movespeed > 12
 			movespeed = Approach(movespeed, 12, 0.15);
 	}
 	else
 	{
 		rocketvsp = 0;
 		vsp = 0;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			sprite_index = spr_rocket;
 			image_index = 0;
 			movespeed = 12;
 		}
 	}
-	if (input_buffer_jump > 0)
+	if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		dir = xscale;
@@ -61,19 +61,19 @@ function scr_player_rocket()
 			image_xscale = sign(hsp);
 		}
 	}
-	if (fightball == 0)
+	if fightball == 0
 	{
-		if (sprite_index != spr_rocketstart)
+		if sprite_index != spr_rocketstart
 		{
 			sprite_index = spr_rocket;
-			if (grounded && vsp >= 0 && ispeppino)
+			if grounded && vsp >= 0 && ispeppino
 				sprite_index = spr_player_rocketrun;
 		}
 	}
-	if (grounded)
+	if grounded
 	{
 		move = key_left + key_right;
-		if (ispeppino && move != 0 && move != xscale && sprite_index != spr_rocketstart && state != states.mach2)
+		if ispeppino && move != 0 && move != xscale && sprite_index != spr_rocketstart && state != states.mach2
 		{
 			state = states.rocketslide;
 			fmod_event_one_shot_3d("event:/sfx/pep/machslideboost", x, y);
@@ -83,20 +83,20 @@ function scr_player_rocket()
 	}
 	if (scr_solid(x + sign(hsp), y) && (!place_meeting(x + sign(hsp), y, obj_slope) || place_meeting(x + sign(hsp), y, obj_solid)) && (!place_meeting(x + sign(hsp), y, obj_metalblock) && (!place_meeting(x + sign(hsp), y, obj_ratblock) || place_meeting(x + sign(hsp), y, obj_rattumble)) && character != "V") && (!place_meeting(x + sign(hsp), y, obj_destructibles) && character != "V") && !place_meeting(x + sign(hsp), y, obj_hungrypillar))
 	{
-		if (ispeppino)
+		if ispeppino
 		{
 			pizzapepper = 0;
 			sprite_index = spr_rockethitwall;
 			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 			fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 20;
 				shake_mag_acc = 40 / room_speed;
 			}
 			hsp = 0;
 			image_speed = 0.35;
-			with (obj_baddie)
+			with obj_baddie
 			{
 				if (point_in_camera(x, y, view_camera[0]) && shakestun && grounded && vsp > 0)
 				{
@@ -136,7 +136,7 @@ function scr_player_rocket()
 	{
 		with (instance_create(x, y, obj_superdashcloud))
 		{
-			if (other.fightball == 1)
+			if other.fightball == 1
 				instance_create(obj_player.x, obj_player.y, obj_slapstar);
 			image_xscale = other.xscale;
 			other.dashcloudid = id;
@@ -146,7 +146,7 @@ function scr_player_rocket()
 	{
 		with (instance_create(x, y, obj_superdashcloud))
 		{
-			if (other.fightball == 1)
+			if other.fightball == 1
 				instance_create(obj_player.x, obj_player.y, obj_slapstar);
 			image_xscale = other.xscale;
 			sprite_index = spr_watereffect;
@@ -163,13 +163,13 @@ function scr_player_rocket()
 	}
 	if (sprite_index == spr_mach4 || sprite_index == spr_fightball)
 		image_speed = 0.4;
-	if (sprite_index == spr_crazyrun)
+	if sprite_index == spr_crazyrun
 		image_speed = 0.75;
 	if (sprite_index == spr_rollgetup || sprite_index == spr_mach3hit)
 		image_speed = 0.4;
 	else
 		image_speed = 0.4;
-	if (steppybuffer > 0)
+	if steppybuffer > 0
 		steppybuffer--;
 	else if ((collision_flags & colflag.secret) <= 0)
 	{

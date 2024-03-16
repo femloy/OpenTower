@@ -1,16 +1,16 @@
-if (obj_player1.state == states.debugstate)
+if obj_player1.state == states.debugstate
 	exit;
-if (obj_player1.state == states.backtohub)
+if obj_player1.state == states.backtohub
 	exit;
-if (obj_player1.state == states.titlescreen)
+if obj_player1.state == states.titlescreen
 	exit;
 if (instance_exists(obj_jumpscare))
 	exit;
 
 var hall = id;
-with (other)
+with other
 {
-	if (!other.savedposition)
+	if !other.savedposition
 	{
 		other.savedposition = true;
 		other.savedx = x;

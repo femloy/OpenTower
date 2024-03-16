@@ -23,7 +23,7 @@ function tile_layer_show(depth)
 		for(__j = 0; __j < __numels; __j++)
 		{
 			var __eltype = layer_get_element_type(__els[__j]);
-			if (__eltype == layerelementtype_tile)
+			if __eltype == layerelementtype_tile
 			{
 				layer_tile_visible(__els[__j],true);			
 			}

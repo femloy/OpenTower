@@ -1,6 +1,6 @@
 if (ds_list_find_index(global.baddieroom, id) == -1)
 {
-	repeat (6)
+	repeat 6
 	{
 		with (instance_create(x, y, obj_sausageman_dead))
 		{

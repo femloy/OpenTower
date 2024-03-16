@@ -1,4 +1,4 @@
-if (showtext)
+if showtext
 {
 	draw_set_font(lang_get_font("creditsfont"));
 	draw_set_halign(fa_left);

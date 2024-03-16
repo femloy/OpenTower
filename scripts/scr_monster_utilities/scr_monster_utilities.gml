@@ -1,35 +1,35 @@
 function scr_monster_deactivate(stopmusic = true)
 {
-	with (obj_monster)
+	with obj_monster
 	{
 		x = xstart;
 		y = ystart;
 		xscale = 1;
 		yscale = 1;
-		if (grav < 0)
+		if grav < 0
 			grav *= -1;
 		state = states.robotidle;
 		event_perform(ev_other, ev_room_start);
 	}
-	with (obj_objecticontracker)
+	with obj_objecticontracker
 	{
-		if (sprite_index == spr_monsteralert)
+		if sprite_index == spr_monsteralert
 			instance_destroy();
 	}
-	with (obj_monstergate)
+	with obj_monstergate
 	{
 		active = false;
 		instance_activate_object(solidID);
 		y = ystart;
 	}
-	with (obj_pineapplemonsterzone)
+	with obj_pineapplemonsterzone
 		shot = false;
-	with (obj_camerapatrol)
+	with obj_camerapatrol
 	{
 		alarm[5] = -1;
 		patrolfound = false;
 	}
-	with (obj_patroller)
+	with obj_patroller
 	{
 		alarm[5] = -1;
 		patrolfound = false;
@@ -40,17 +40,17 @@ function scr_monster_deactivate(stopmusic = true)
 		instance_destroy(obj_camerapatrol)
 	}
 	fmod_event_instance_stop(global.snd_alarm, true);
-	if (stopmusic)
+	if stopmusic
 		scr_monster_stop_music();
 }
 function scr_monster_stop_music()
 {
-	with (obj_music)
+	with obj_music
 	{
 		if (fmod_event_instance_is_playing(kidspartychaseID))
 		{
 			fmod_event_instance_stop(kidspartychaseID, false);
-			if (music != -4)
+			if music != -4
 			{
 				fmod_event_instance_set_paused(music.event, savedmusicpause);
 				fmod_event_instance_set_paused(music.event_secret, savedsecretpause);
@@ -64,9 +64,9 @@ function scr_monster_activate()
 {
 	if !instance_exists(obj_ghostcollectibles)
 		notification_push(notifs.monster_activate, [room, object_index]);
-	with (obj_monster)
+	with obj_monster
 	{
-		if (state == states.robotidle)
+		if state == states.robotidle
 		{
 			state = states.robotintro;
 			with (instance_create(x, y, obj_objecticontracker))
@@ -77,9 +77,9 @@ function scr_monster_activate()
 			}
 		}
 	}
-	with (obj_monstergate)
+	with obj_monstergate
 	{
-		if (!active)
+		if !active
 		{
 			active = true;
 			instance_deactivate_object(solidID);
@@ -87,12 +87,12 @@ function scr_monster_activate()
 		}
 	}
 	instance_create_unique(0, 0, obj_kidspartybg);
-	with (obj_music)
+	with obj_music
 	{
 		if (!global.panic && !instance_exists(obj_ghostcollectibles) && !fmod_event_instance_is_playing(kidspartychaseID))
 		{
 			fmod_event_instance_play(kidspartychaseID);
-			if (music != -4)
+			if music != -4
 			{
 				savedmusicpause = fmod_event_instance_get_paused(music.event);
 				savedsecretpause = fmod_event_instance_get_paused(music.event_secret);
@@ -122,20 +122,20 @@ function scr_monster_detect(width, height, player)
 		var detect = false;
 		if (player.y > (y - 200))
 		{
-			with (player)
+			with player
 			{
 				if (state != states.crouch || (!scr_solid(x, y - 24) && !place_meeting(x, y - 24, obj_platform)))
 					detect = true;
 			}
 		}
-		if (detect)
+		if detect
 			return true;
 	}
 	return false;
 }
 function scr_puppet_detect()
 {
-	with (obj_player)
+	with obj_player
 	{
 		if ((object_index != obj_player2 || global.coop) && !place_meeting(x, y, obj_puppetsafezone))
 		{
@@ -152,7 +152,7 @@ function scr_puppet_appear(player)
 	{
 		_xdir--;
 		i++;
-		if (i > room_width)
+		if i > room_width
 		{
 			x = player.x;
 			break;
@@ -167,14 +167,14 @@ function scr_puppet_appear(player)
 	{
 		x += (player.x > x) ? 1 : -1;
 		i++;
-		if (i > room_width)
+		if i > room_width
 		{
 			x = player.x;
 			break;
 		}
 	}
 	var _col = collision_line(x, y, x, y - room_height, obj_solid, true, false);
-	if (_col != -4)
+	if _col != -4
 	{
 		while (!place_meeting(x, y - 1, obj_solid))
 			y--;
@@ -184,7 +184,7 @@ function scr_monsterinvestigate(speed, walkspr, idlespr)
 {
 	targetplayer = instance_nearest(x, y, obj_player);
 	image_speed = 0.35;
-	switch (investigatestate)
+	switch investigatestate
 	{
 		case 0:
 		case 1:
@@ -195,7 +195,7 @@ function scr_monsterinvestigate(speed, walkspr, idlespr)
 				investigatestate++;
 				image_xscale *= -1;
 			}
-			if (investigatestate == 1)
+			if investigatestate == 1
 			{
 				if ((image_xscale > 0 && x > (room_width / 2)) || (image_xscale < 0 && x < (room_width / 2)))
 				{
@@ -208,7 +208,7 @@ function scr_monsterinvestigate(speed, walkspr, idlespr)
 		case 2:
 			sprite_index = idlespr;
 			hsp = 0;
-			if (waitbuffer > 0)
+			if waitbuffer > 0
 				waitbuffer--;
 			else
 			{
@@ -233,7 +233,7 @@ function scr_monster_detect_audio()
 		else
 		{
 			targetplayer = instance_nearest(x, y, obj_player);
-			if (object_index == obj_blobmonster)
+			if object_index == obj_blobmonster
 			{
 				state = states.fall;
 				gravdir *= -1;
@@ -248,7 +248,7 @@ function scr_monster_audio_check()
 {
 	/*
 	if (audio_is_playing(sfx_groundpound) || audio_is_playing(sfx_scream5))
-        return true;
-    return false;
+		return true;
+	return false;
 	*/
 }

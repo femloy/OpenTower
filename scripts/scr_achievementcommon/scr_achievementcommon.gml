@@ -3,7 +3,7 @@ function add_secrets_achievement(secret, levelarray)
 	var b = add_achievement_notify(concat("secrets", secret), -4, function(achievement)
 	{
 		var type = achievement[0];
-		if (type == notifs.end_level)
+		if type == notifs.end_level
 		{
 			var n = levelarray;
 			var _unfinished = false;
@@ -12,11 +12,11 @@ function add_secrets_achievement(secret, levelarray)
 			{
 				var b = n[i];
 				var s = ini_read_real("Secret", b, 0);
-				if (s < 3)
+				if s < 3
 					_unfinished = true;
 			}
 			ini_close();
-			if (!_unfinished)
+			if !_unfinished
 				achievement_unlock(name, -4, spr_achievement_farm, 0);
 		}
 	});
@@ -28,7 +28,7 @@ function add_rank_achievements(world, rank, sprite, index, levelarray)
 	var b = add_achievement_notify(concat(rank, "ranks", world), -4, function(achievement)
 	{
 		var type = achievement[0];
-		if (type == notifs.end_level)
+		if type == notifs.end_level
 		{
 			var n = levelarray;
 			var _finished = true;
@@ -49,7 +49,7 @@ function add_rank_achievements(world, rank, sprite, index, levelarray)
 			}
 			ds_map_destroy(map);
 			ini_close();
-			if (_finished)
+			if _finished
 				achievement_unlock(name, "", sprite, index);
 		}
 	});
@@ -65,7 +65,7 @@ function add_boss_achievements(boss, bossroom, sprite, index)
 	{
 		var type = achievement[0];
 		var arr = achievement[1];
-		if (type == notifs.boss_dead && arr[0] == bossroom && !global.bossplayerhurt)
+		if type == notifs.boss_dead && arr[0] == bossroom && !global.bossplayerhurt
 			achievement_unlock(name, "", sprite, index);
 	});
 	
@@ -78,7 +78,7 @@ function scr_custom_notification_destructibles()
 	active = false;
 	step = function()
 	{
-		if (!active)
+		if !active
 		{
 			if (!place_meeting(x, y, obj_destructibles))
 			{

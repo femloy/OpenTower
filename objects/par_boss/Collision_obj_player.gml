@@ -1,9 +1,9 @@
 var _player = other.id;
 if (ds_map_empty(player_hurtstates))
 	exit;
-if (!attacking)
+if !attacking
 {
-	if (!invincible)
+	if !invincible
 	{
 		var s = ds_map_find_value(player_hurtstates, _player.state);
 		if (!is_undefined(s))

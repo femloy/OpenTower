@@ -12,5 +12,5 @@ if (instance_exists(obj_treasure))
 	treasure = true;
 else
 	treasure = false;
-if (room == rank_room)
+if room == rank_room
 	instance_destroy();

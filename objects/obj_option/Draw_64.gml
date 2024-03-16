@@ -2,9 +2,9 @@ draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 0, false);
 for (var i = 0; i < array_length(bg_alpha); i++)
 	draw_sprite_tiled_ext(spr_optionsBG, i, bg_x, bg_y, 1, 1, c_white, bg_alpha[i]);
 
-if (room != Mainmenu)
+if room != Mainmenu
 {
-	with (obj_keyconfig)
+	with obj_keyconfig
 		event_perform(ev_draw, ev_gui);
 }
 if (instance_exists(obj_keyconfig) || instance_exists(obj_screenconfirm))
@@ -23,7 +23,7 @@ var size = (string_height(lang_get_value("default_letter")) * len) + (len * m.yp
 var xx = SCREEN_WIDTH / 2;
 var yy = (SCREEN_HEIGHT / 2) - (size / 4);
 
-switch (m.anchor)
+switch m.anchor
 {
 	case anchor.center:
 		tdp_draw_set_halign(fa_center);
@@ -34,11 +34,11 @@ switch (m.anchor)
 		{
 			var o = options[i];
 			c = c_gray;
-			if (i == _os)
+			if i == _os
 				c = c_white;
 			var t = lang_get_value(o.name);
 			tdp_draw_text_color(xx, yy + (m.ypad * i), t, c, c, c, c, a);
-			if (menu == menus.options)
+			if menu == menus.options
 				scr_pauseicon_draw(i, xx + (string_width(t) / 2) + 50, yy + (m.ypad * i) + (string_height(t) / 2));
 		}
 		break;
@@ -55,17 +55,17 @@ switch (m.anchor)
 			tdp_draw_set_halign(fa_left);
 			o = options[i];
 			c = c_gray;
-			if (i == _os)
+			if i == _os
 				c = c_white;
 			
-			if (o.type == menutype.press && !o.localization)
-                var txt = o.name;
-            else
-                var txt = lang_get_value(o.name);
-            tdp_draw_text_color(xx, yy + (m.ypad * i), txt, c, c, c, c, a);
+			if o.type == menutype.press && !o.localization
+				var txt = o.name;
+			else
+				var txt = lang_get_value(o.name);
+			tdp_draw_text_color(xx, yy + (m.ypad * i), txt, c, c, c, c, a);
 			
 			tdp_draw_set_halign(fa_right);
-			switch (o.type)
+			switch o.type
 			{
 				case menutype.toggle:
 					tdp_draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), o.value ? lang_get_value("option_on") : lang_get_value("option_off"), c, c, c, c, a);
@@ -95,7 +95,7 @@ switch (m.anchor)
 				case menutype.multiple:
 					var select = o.values[o.value];
 					var n = select.name;
-					if (select.localization)
+					if select.localization
 						n = lang_get_value(select.name);
 					tdp_draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), n, c, c, c, c, a);
 					break;
@@ -104,8 +104,8 @@ switch (m.anchor)
 		break;
 }
 tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-if (room != Mainmenu)
+if room != Mainmenu
 {
-	with (obj_transfotip)
+	with obj_transfotip
 		event_perform(ev_draw, ev_gui);
 }

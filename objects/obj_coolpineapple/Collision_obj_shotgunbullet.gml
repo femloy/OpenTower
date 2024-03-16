@@ -1,14 +1,14 @@
-if (state != states.parry && state != states.backbreaker)
+if state != states.parry && state != states.backbreaker
 	exit;
-with (other)
+with other
 {
 	var _maxhsp = abs(spd);
 	var _dir = sign(spd);
-	if (x != other.x)
+	if x != other.x
 		_dir = sign(x - other.x);
 	spd = _maxhsp * _dir;
 }
-if (state != states.parry)
+if state != states.parry
 {
 	sprite_index = parryspr;
 	movespeed = 8;

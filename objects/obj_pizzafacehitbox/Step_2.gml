@@ -5,10 +5,10 @@ if (!instance_exists(baddieID))
 }
 x = baddieID.x;
 y = baddieID.y;
-if (baddieID.state == states.walk)
+if baddieID.state == states.walk
 	sprite_index = spr_pizzaface_attackend;
 else
 	sprite_index = baddieID.mask_index;
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 	sprite_index = spr_pizzaface_attackend;
 mask_index = sprite_index;

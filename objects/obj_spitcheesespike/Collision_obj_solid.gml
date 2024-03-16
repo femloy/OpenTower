@@ -1,5 +1,5 @@
 instance_destroy();
-repeat (3)
+repeat 3
 {
 	with (create_debris(x, y, spr_slimedebris))
 	{

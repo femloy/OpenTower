@@ -8,12 +8,12 @@ function do_dialog(dialog_array)
 		currenttext = scr_calculate_text(dialog[0][0]);
 		dialogheight = scr_calculate_height(currenttext);
 	}
-	with (obj_player)
+	with obj_player
 	{
-		if (state == states.ghostpossess)
+		if state == states.ghostpossess
 		{
 			visible = true;
-			with (possessID)
+			with possessID
 			{
 				state = states.stun;
 				stunned = 50;

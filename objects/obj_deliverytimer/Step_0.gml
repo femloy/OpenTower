@@ -1,4 +1,4 @@
-if (!init)
+if !init
 {
 	maxminutes = minutes;
 	maxseconds = seconds;

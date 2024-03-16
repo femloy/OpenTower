@@ -1,23 +1,23 @@
-if (playerid != -4)
+if playerid != -4
 {
-	with (playerid)
+	with playerid
 	{
 		if (floor(image_index) >= 9)
 		{
 			if ((global.noisejetpack && ispeppino) || (noisepizzapepper && !ispeppino))
 			{
 				fmod_event_one_shot_3d("event:/sfx/misc/cow", x, y);
-				if (ispeppino)
+				if ispeppino
 					global.noisejetpack = false;
 				else
 					noisepizzapepper = false;
 			}
 		}
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			state = states.normal;
 			landAnim = false;
-			with (other)
+			with other
 			{
 				playerid = -4;
 				if (ds_list_find_index(global.saveroom, id) == -1)
@@ -32,5 +32,5 @@ if (playerid != -4)
 		}
 	}
 }
-if (sprite_index == spr_freemilksuprised && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_freemilksuprised && floor(image_index) == image_number - 1)
 	sprite_index = spr_freemilk;

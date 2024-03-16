@@ -1,17 +1,17 @@
 var _hide = false;
 wave_timer += 20;
-with (obj_tutorialbook)
+with obj_tutorialbook
 {
-	if (text_state != states.titlescreen)
+	if text_state != states.titlescreen
 		_hide = true;
 }
 if (instance_exists(obj_mrsticknotification))
 	_hide = true;
 
-switch (text_state)
+switch text_state
 {
 	case states.titlescreen:
-		repeat (_hide + 1)
+		repeat _hide + 1
 			text_y = Approach(text_y, -(text_sprite_height * text_yscale), 5);
 		if (place_meeting(x, y, obj_player) && !_hide)
 		{
@@ -22,9 +22,9 @@ switch (text_state)
 	
 	case states.fall:
 		text_y += text_vsp;
-		if (text_vsp < 20)
+		if text_vsp < 20
 			text_vsp += 0.5;
-		if (text_y > text_ystart)
+		if text_y > text_ystart
 			text_state = states.normal;
 		break;
 	

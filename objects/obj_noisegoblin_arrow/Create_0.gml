@@ -8,5 +8,5 @@ turn = false;
 elite = false;
 alarm[1] = 250;
 depth = -99;
-if (global.stylethreshold >= 3)
+if global.stylethreshold >= 3
 	turn = true;

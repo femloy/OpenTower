@@ -1,5 +1,5 @@
 scr_menu_getinput();
-if (state == 3)
+if state == 3
 	showtext = true;
 else
 	showtext = false;
@@ -11,23 +11,23 @@ for (var i = 0; i < array_length(bg_arr); i++)
 	layer_background_alpha(bg, bgalpha);
 }
 bgalpha = Approach(bgalpha, 0, 0.0003);
-switch (state)
+switch state
 {
 	case 0:
 		if (!fmod_event_instance_is_playing(snd))
 			fmod_event_instance_play(snd);
 		var ty = room_height + 200;
-		with (towerID)
+		with towerID
 		{
 			hitY = Approach(hitY, ty, 1);
-			if (hitY > ystart)
+			if hitY > ystart
 				y = hitY + irandom_range(-1, 1);
 			else
 				y = ystart + irandom_range(-1, 1);
 			x = xstart + irandom_range(-1, 1);
-			if (other.puffbuffer > 0)
+			if other.puffbuffer > 0
 				other.puffbuffer--;
-			else if (hitY <= room_height)
+			else if hitY <= room_height
 			{
 				other.puffbuffer = 10 + irandom(15);
 				with (instance_create(x + irandom_range(-48, 48), 259 + irandom_range(-16, 16), obj_endingeffect))
@@ -37,7 +37,7 @@ switch (state)
 				}
 			}
 		}
-		if (towerID.y == ty)
+		if towerID.y == ty
 		{
 			state++;
 			whitefadein = true;
@@ -45,10 +45,10 @@ switch (state)
 		break;
 	
 	case 1:
-		if (whitefadein)
+		if whitefadein
 		{
 			whitefade = Approach(whitefade, 2, 0.05);
-			if (whitefade >= 2)
+			if whitefade >= 2
 				room = Johnresurrectionroom;
 		}
 		break;
@@ -63,14 +63,14 @@ switch (state)
 				{
 					with (instance_create(0, 0, obj_endingcard))
 					{
-						if (b[0] == noone)
+						if b[0] == noone
 						{
 							showsprite = false;
 							image_alpha = 1;
 						}
 						image_index = b[0];
 						text = b[1];
-						if (text == noone)
+						if text == noone
 						{
 							depth = -50;
 							alarm[0] = 1200;
@@ -84,7 +84,7 @@ switch (state)
 			else
 				state++;
 		}
-		if (spawn_buffer > 0)
+		if spawn_buffer > 0
 			spawn_buffer--;
 		else
 		{
@@ -98,9 +98,9 @@ switch (state)
 					image_speed = 0.35;
 					if (sprite_index == spr_pepbat_move || sprite_index == spr_ufolive || sprite_index == spr_kentukybomber_move || sprite_index == spr_ghoul_attack || sprite_index == spr_ancho)
 						y = irandom_range(160, 288);
-					if (sprite_index == spr_tank_walk)
+					if sprite_index == spr_tank_walk
 						y++;
-					if (sprite_index == spr_ghostknight_move)
+					if sprite_index == spr_ghostknight_move
 						image_alpha = 0.5;
 				}
 			}
@@ -109,16 +109,16 @@ switch (state)
 	
 	case 3:
 		var _continue = false;
-		with (obj_music)
+		with obj_music
 		{
 			if (music != -4 && !fmod_event_instance_is_playing(music.event))
 				_continue = true;
 		}
-		if (key_jump)
+		if key_jump
 			_continue = true;
-		if (_continue)
+		if _continue
 			state++;
-		if (spawn_buffer > 0)
+		if spawn_buffer > 0
 			spawn_buffer--;
 		else
 		{
@@ -132,9 +132,9 @@ switch (state)
 					image_speed = 0.35;
 					if (sprite_index == spr_pepbat_move || sprite_index == spr_ufolive || sprite_index == spr_kentukybomber_move || sprite_index == spr_ghoul_attack || sprite_index == spr_ancho)
 						y = irandom_range(160, 288);
-					if (sprite_index == spr_tank_walk)
+					if sprite_index == spr_tank_walk
 						y++;
-					if (sprite_index == spr_ghostknight_move)
+					if sprite_index == spr_ghostknight_move
 						image_alpha = 0.5;
 				}
 			}
@@ -143,15 +143,15 @@ switch (state)
 	
 	case 4:
 		fade = Approach(fade, 2, 0.05);
-		if (fade >= 2)
+		if fade >= 2
 		{
 			state++;
 			with (instance_create(0, 0, obj_introprop))
 			{
 				sprite_index = spr_theendshot;
-				if (!obj_player1.ispeppino)
+				if !obj_player1.ispeppino
 					sprite_index = spr_theendshotN;
-				if (global.swapmode)
+				if global.swapmode
 					sprite_index = spr_theendshotSN;
 				depth = other.depth + 1;
 			}
@@ -161,7 +161,7 @@ switch (state)
 	
 	case 5:
 		fade = Approach(fade, 0, 0.05);
-		if (buffer > 0)
+		if buffer > 0
 			buffer--;
 		else if (fade <= 0 && (keyboard_check_pressed(vk_anykey) || scr_checkanygamepad(obj_inputAssigner.player_input_device[0]) != -4))
 			state++;
@@ -169,7 +169,7 @@ switch (state)
 	
 	case 6:
 		fade = Approach(fade, 2, 0.05);
-		if (fade >= 2)
+		if fade >= 2
 		{
 			state++;
 			instance_create(0, 0, obj_endingrank);
@@ -182,9 +182,9 @@ switch (state)
 		break;
 	
 	case 8:
-		if (obj_player1.key_jump)
+		if obj_player1.key_jump
 		{
-			with (obj_player)
+			with obj_player
 				state = states.titlescreen;
 			room_goto(Realtitlescreen);
 		}

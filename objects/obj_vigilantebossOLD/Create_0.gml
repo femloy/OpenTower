@@ -101,11 +101,11 @@ function boss_destroy(player)
 }
 function boss_hurt(damage, player)
 {
-	if (targetstunned > 0)
+	if targetstunned > 0
 	{
 		targetstunned -= targetstunnedminus[phase - 1];
 		attack_cooldown = 0;
-		if (targetstunned < 0)
+		if targetstunned < 0
 			targetstunned = 1;
 	}
 	else
@@ -115,11 +115,11 @@ function boss_hurt(damage, player)
 }
 function boss_hurt_noplayer(damage)
 {
-	if (targetstunned > 0)
+	if targetstunned > 0
 	{
 		targetstunned -= targetstunnedminus[phase - 1];
 		attack_cooldown = 0;
-		if (targetstunned < 0)
+		if targetstunned < 0
 			targetstunned = 1;
 	}
 	else
@@ -136,12 +136,12 @@ function player_hurt(damage, player)
 		if (state != states.uppunch || vsp < 0)
 		{
 			SUPER_player_hurt(damage, player);
-			with (argument1)
+			with argument1
 			{
 				inv_frames = true;
 				alarm[1] = 15;
 			}
-			if (hitstate == states.superattack)
+			if hitstate == states.superattack
 			{
 				hithsp = 0;
 				hitvsp = 0;

@@ -1,13 +1,13 @@
-if (buffer > 0)
+if buffer > 0
 	buffer--;
-else if (!expand)
+else if !expand
 {
 	expand = true;
 	expandbuffer = 120;
 }
-if (expand)
+if expand
 {
-	if (expandbuffer > 0)
+	if expandbuffer > 0
 	{
 		image_xscale = Approach(image_xscale, dir * 10, 3);
 		expandbuffer--;
@@ -15,7 +15,7 @@ if (expand)
 	else
 	{
 		image_xscale = Approach(image_xscale, 0, 5);
-		if (image_xscale == 0)
+		if image_xscale == 0
 			instance_destroy();
 	}
 }

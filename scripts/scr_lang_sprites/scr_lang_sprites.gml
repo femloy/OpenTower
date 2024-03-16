@@ -35,19 +35,19 @@ function lang_sprites_parse(language)
 function lang_draw_sprite_ext(sprite, subimg, x, y, xscale, yscale, rot, col, alpha)
 {
 	var spr = lang_get_sprite(sprite);
-	if (spr != noone)
+	if spr != noone
 	{
 		subimg = floor(subimg);
 		var frame = spr.frames[subimg];
 		var texture = lang_get_texture(frame.texture);
-		if (texture != -4)
+		if texture != -4
 		{
 			var w = frame.width;
 			var h = frame.height;
 			var offset = frame.offset;
-			if (w == -1)
+			if w == -1
 				w = sprite_get_width(texture);
-			if (h == -1)
+			if h == -1
 				h = sprite_get_height(texture);
 			draw_sprite_part_ext(texture, 0, frame.x, frame.y, w, h, x - offset.x, y - offset.y, xscale, yscale, col, alpha);
 		}

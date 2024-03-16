@@ -1,15 +1,15 @@
 image_speed = 0.35;
-if (active)
+if active
 {
-	if (sprite_index == spr_secretportal_close && !touched)
+	if sprite_index == spr_secretportal_close && !touched
 	{
 		sprite_index = spr_secretportal_open;
 		image_index = 0;
 	}
 }
-if (touched && sprite_index == spr_secretportal_close)
+if touched && sprite_index == spr_secretportal_close
 {
-	with (playerid)
+	with playerid
 	{
 		hsp = 0;
 		vsp = 0;
@@ -21,32 +21,32 @@ if (touched && sprite_index == spr_secretportal_close)
 		if (state == states.mach2 || state == states.mach3)
 			state = states.normal;
 	}
-	with (obj_heatafterimage)
+	with obj_heatafterimage
 		visible = false;
 }
-if (floor(image_index) == (image_number - 1))
+if floor(image_index) == image_number - 1
 {
-	switch (sprite_index)
+	switch sprite_index
 	{
 		case spr_secretportal_open:
 			sprite_index = spr_secretportal_idle;
 			break;
 		case spr_secretportal_close:
 			image_index = image_number - 1;
-			if (touched)
+			if touched
 			{
 				if (!instance_exists(obj_fadeout))
 				{
-					with (obj_player)
+					with obj_player
 					{
 						lastTargetDoor = targetDoor;
 						targetDoor = "S";
-						if (other.soundtest)
+						if other.soundtest
 						{
 							lastroom_soundtest = room;
 							lastroom_secretportalID = other.id;
 						}
-						if (!other.secret)
+						if !other.secret
 						{
 							lastroom = room;
 							targetRoom = other.targetRoom;
@@ -65,7 +65,7 @@ if (floor(image_index) == (image_number - 1))
 						{
 							obj_randomsecret.selected = true;
 							var len = array_length(obj_randomsecret.levels);
-							if (len > 0)
+							if len > 0
 							{
 								var num = irandom(len - 1);
 								targetRoom = obj_randomsecret.levels[num];

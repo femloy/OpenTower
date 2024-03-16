@@ -1,4 +1,4 @@
-if (!dead)
+if !dead
 {
 	with (instance_create(x, y, obj_playerbombexplosion))
 	{

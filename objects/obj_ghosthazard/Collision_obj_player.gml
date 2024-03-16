@@ -1,11 +1,11 @@
-with (other)
+with other
 {
-	if (character == "V")
+	if character == "V"
 		scr_hurtplayer(id);
-	else if (!isgustavo && state != states.ghost && state != states.ghostpossess && state != states.johnghost && state != states.actor && state != states.parry && state != states.gotoplayer)
+	else if !isgustavo && state != states.ghost && state != states.ghostpossess && state != states.johnghost && state != states.actor && state != states.parry && state != states.gotoplayer
 	{
 		scr_losepoints();
-		if (ispeppino)
+		if ispeppino
 			create_transformation_tip(lang_get_value("ghosttip"), "ghost");
 		else
 			create_transformation_tip(lang_get_value("ghosttipN"), "ghostN");

@@ -5,7 +5,7 @@ function scr_pizzaball_golf()
 	vsp = 0;
 	hsp = 0;
 	var _i = 9;
-	if (!player.ispeppino)
+	if !player.ispeppino
 		_i = 7;
 	if (player.key_up || shootup)
 		arrow = true;
@@ -23,7 +23,7 @@ function scr_pizzaball_golf()
 		fmod_event_one_shot_3d("event:/sfx/misc/golfpunch", x, y);
 		if (player.key_up || shootup)
 			scr_pizzaball_go_to_thrown(player.xscale * 15, -16, false);
-		else if (player.key_down)
+		else if player.key_down
 			scr_pizzaball_go_to_thrown(player.xscale * 18, 5, false);
 		else
 			scr_pizzaball_go_to_thrown(player.xscale * 17, -7, false);

@@ -27,9 +27,9 @@ credits = [
 ];
 for (var i = 0; i < array_length(credits); i++)
 {
-	if (credits[i][0] == 7)
+	if credits[i][0] == 7
 	{
-		if (!global.johnresurrection)
+		if !global.johnresurrection
 			credits[i][0] = 8;
 		break;
 	}
@@ -65,9 +65,9 @@ spawn_arr = [
 
 // scene
 var _noise = !obj_player1.ispeppino;
-if (global.swapmode)
+if global.swapmode
 	_noise = true;
-if (_noise)
+if _noise
 	spawn_arr = [spr_playerN_move];
 
 with (instance_create(0, 0, obj_introprop))
@@ -80,7 +80,7 @@ with (instance_create(0, 0, obj_introprop))
 	sprite_index = spr_towerending;
 	depth = -7;
 }
-if (!_noise)
+if !_noise
 {
 	with (instance_create(0, 0, obj_introprop))
 	{
@@ -125,11 +125,11 @@ else
 		sprite_index = spr_towerending_noisey;
 		depth = -9;
 	}
-	if (global.swapmode)
+	if global.swapmode
 	{
-		with (obj_player1)
+		with obj_player1
 		{
-			if (ispeppino)
+			if ispeppino
 				swap_player(false);
 		}
 		with (instance_create(0, 0, obj_introprop))
@@ -141,12 +141,12 @@ else
 }
 
 towerID = instance_create(468, 188, obj_introprop);
-with (towerID)
+with towerID
 {
 	hitY = y - 100;
 	depth = -5;
 	sprite_index = spr_towerending_tower;
 }
-with (obj_player)
+with obj_player
 	state = states.titlescreen;
 depth = -10;

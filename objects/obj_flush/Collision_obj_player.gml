@@ -1,9 +1,9 @@
-if (state == states.flushidle)
+if state == states.flushidle
 {
 	scr_fmod_soundeffect(global.snd_cardflip, x, y);
 	state = states.flushtransition;
 	image_index = 0;
-	switch (type)
+	switch type
 	{
 		case 0:
 			sprite_index = spr_flush_pizzatransition;
@@ -16,17 +16,17 @@ if (state == states.flushidle)
 			break;
 	}
 	var _found = false;
-	with (obj_flush)
+	with obj_flush
 	{
-		if (state == states.flushidle && trigger == other.trigger)
+		if state == states.flushidle && trigger == other.trigger
 			_found = true;
 	}
-	if (!_found)
+	if !_found
 	{
 		var c = 0;
-		with (obj_flush)
+		with obj_flush
 		{
-			if (trigger == other.trigger)
+			if trigger == other.trigger
 			{
 				c++;
 				instance_destroy();
@@ -35,7 +35,7 @@ if (state == states.flushidle)
 		with (instance_create(0, 0, obj_flushcount))
 		{
 			count = c;
-			switch (other.type)
+			switch other.type
 			{
 				case 0:
 					spr = spr_flush_pizza;

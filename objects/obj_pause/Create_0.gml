@@ -36,10 +36,10 @@ ds_map_set(pause_menu_map, "pause_restart", [2, function()
 {
 	if (room == Endingroom || room == tower_soundtest || room == tower_soundtestlevel || room == Creditsroom || room == Johnresurrectionroom)
 		exit;
-	if (!global.snickchallenge)
+	if !global.snickchallenge
 	{
 		var rm = global.leveltorestart;
-		if (rm != -4 && rm != -1)
+		if rm != -4 && rm != -1
 		{
 			alarm[5] = 1;
 			roomtorestart = rm;
@@ -72,7 +72,7 @@ var exit_function = function()
 	var arr = -4;
 	ds_list_copy(sl, sound_list);
 	ds_list_copy(il, instance_list);
-	if (global.leveltorestart != -4)
+	if global.leveltorestart != -4
 	{
 		hub = true;
 		arr = ["hubgroup"];
@@ -84,7 +84,7 @@ var exit_function = function()
 	{
 		hub = false;
 		arr = ["menugroup"];
-		with (obj_player1)
+		with obj_player1
 		{
 			character = "P";
 			ispeppino = true;

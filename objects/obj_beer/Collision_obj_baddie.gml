@@ -1,4 +1,4 @@
-if (cooldown == 0 && other.thrown == 1)
+if cooldown == 0 && other.thrown == 1
 {
 	instance_create(x, y, obj_bangeffect);
 	cooldown = 30;

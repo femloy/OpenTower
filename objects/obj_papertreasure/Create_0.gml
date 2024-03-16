@@ -7,7 +7,7 @@ got_func = function()
 		quick_ini_write_real(get_savefile_ini(), "cutscene", "paper", true);
 	}
 };
-if (global.papercutscene == noone)
+if global.papercutscene == noone
 	global.papercutscene = quick_ini_read_real(get_savefile_ini(), "cutscene", "paper", false);
-if (global.papercutscene)
+if global.papercutscene
 	instance_destroy();

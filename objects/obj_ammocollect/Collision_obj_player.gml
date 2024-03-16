@@ -1,7 +1,7 @@
-if (sprite_index == spr_bulletHUD && global.bullet < 3)
+if sprite_index == spr_bulletHUD && global.bullet < 3
 {
 	global.bullet += 1;
-	with (obj_tv)
+	with obj_tv
 	{
 		sprite = spr_tvrevolver;
 		alarm[0] = 50;
@@ -11,10 +11,10 @@ if (sprite_index == spr_bulletHUD && global.bullet < 3)
 		letters = "BULLET";
 	instance_destroy();
 }
-if (sprite_index == spr_fuelHUD && global.fuel < 3)
+if sprite_index == spr_fuelHUD && global.fuel < 3
 {
 	global.fuel += 1;
-	with (obj_tv)
+	with obj_tv
 	{
 		sprite = spr_tvchainsaw;
 		alarm[0] = 50;

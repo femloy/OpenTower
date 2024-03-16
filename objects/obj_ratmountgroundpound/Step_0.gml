@@ -2,12 +2,12 @@ instance_destroy(instance_place(x, y + 16, obj_destructibles));
 instance_destroy(instance_place(x, y + vsp, obj_destructibles));
 instance_destroy(instance_place(x, y + 16, obj_metalblock));
 instance_destroy(instance_place(x, y + vsp, obj_metalblock));
-if (!kicked)
+if !kicked
 {
 	x = obj_player.x - (obj_player.xscale * 10);
 	y = obj_player.y + 60;
 }
-if (hitbox == 0)
+if hitbox == 0
 {
 	with (instance_create(x, y, obj_shotgunbullet))
 	{

@@ -81,13 +81,13 @@ function robot_create(argument0, argument1)
 	{
 		var _inst = instance_create(x, y, obj_robotmonster);
 		var _dir = monster_dir[0];
-		with (_inst)
+		with _inst
 		{
 			fake = argument1;
-			if (argument0)
+			if argument0
 			{
 				var _hinst = -4;
-				with (obj_hallwaymonster)
+				with obj_hallwaymonster
 				{
 					if ((_dir.x < 0 && x > (room_width / 2)) || (_dir.x > 0 && x < (room_width / 2)))
 						_hinst = id;
@@ -104,14 +104,14 @@ function robot_create(argument0, argument1)
 			else
 			{
 				var _doorInst = -4;
-				with (obj_doorMonster)
+				with obj_doorMonster
 				{
 					if (!place_meeting(x, y - 32, obj_solid))
 						_doorInst = id;
 				}
 				if (!instance_exists(_doorInst))
 					_doorInst = asset_get_index("obj_door" + obj_player1.targetDoor);
-				if (_dir.x != 0)
+				if _dir.x != 0
 					image_xscale = _dir.x;
 				if (instance_exists(_doorInst))
 				{
@@ -130,13 +130,13 @@ function blob_create(argument0, argument1)
 	{
 		var _inst = instance_create(x, y, obj_blobmonster);
 		var _dir = monster_dir[1];
-		with (_inst)
+		with _inst
 		{
 			fake = argument1;
-			if (argument0)
+			if argument0
 			{
 				var _hinst = -4;
-				with (obj_hallwaymonster)
+				with obj_hallwaymonster
 				{
 					if ((_dir.x < 0 && x > (room_width / 2)) || (_dir.x > 0 && x < (room_width / 2)))
 						_hinst = id;
@@ -153,11 +153,11 @@ function blob_create(argument0, argument1)
 			else
 			{
 				var _doorInst = -4;
-				with (obj_doorMonster)
+				with obj_doorMonster
 					_doorInst = id;
 				if (!instance_exists(_doorInst))
 					_doorInst = asset_get_index("obj_door" + obj_player1.targetDoor);
-				if (_dir.x != 0)
+				if _dir.x != 0
 					image_xscale = _dir.x;
 				if (instance_exists(_doorInst))
 				{
@@ -170,7 +170,7 @@ function blob_create(argument0, argument1)
 						{
 							y++;
 							i++;
-							if (i > room_height)
+							if i > room_height
 								break;
 						}
 					}
@@ -191,13 +191,13 @@ function hillbilly_create(argument0, argument1)
 	{
 		var _inst = instance_create(x, y, obj_hillbillymonster);
 		var _dir = monster_dir[3];
-		with (_inst)
+		with _inst
 		{
 			fake = argument1;
-			if (argument0)
+			if argument0
 			{
 				var _hinst = -4;
-				with (obj_hallwaymonster)
+				with obj_hallwaymonster
 				{
 					if ((_dir.x < 0 && x > (room_width / 2)) || (_dir.x > 0 && x < (room_width / 2)))
 						_hinst = id;
@@ -214,14 +214,14 @@ function hillbilly_create(argument0, argument1)
 			else
 			{
 				var _doorInst = -4;
-				with (obj_doorMonster)
+				with obj_doorMonster
 				{
 					if (!place_meeting(x, y - 32, obj_solid))
 						_doorInst = id;
 				}
 				if (!instance_exists(_doorInst))
 					_doorInst = asset_get_index("obj_door" + obj_player1.targetDoor);
-				if (_dir.x != 0)
+				if _dir.x != 0
 					image_xscale = _dir.x;
 				if (instance_exists(_doorInst))
 				{

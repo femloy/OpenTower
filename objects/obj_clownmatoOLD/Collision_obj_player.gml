@@ -1,6 +1,6 @@
 if (other.cutscene || other.state == states.firemouth)
 	exit;
-with (other)
+with other
 {
 	vsp = -18;
 	sprite_index = spr_machfreefall;

@@ -1,7 +1,7 @@
 hp = 0;
 image_speed = 0.35;
 depth = 2;
-if (room == rm_editor)
+if room == rm_editor
 {
 	if (place_meeting(x, y + 32, obj_solid))
 	{

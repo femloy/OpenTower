@@ -1,6 +1,6 @@
-if (sprite_index == spr_tinyslime_jump && vsp > 0)
+if sprite_index == spr_tinyslime_jump && vsp > 0
 	sprite_index = spr_tinyslime_fall;
-if (grounded && vsp > 0)
+if grounded && vsp > 0
 {
 	hsp = 0;
 	sprite_index = spr_tinyslime_idle;

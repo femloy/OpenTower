@@ -1,8 +1,8 @@
-if (count < countmax)
+if count < countmax
 {
 	with (instance_place(x, y - 1, obj_weenie))
 	{
-		if (state != states.grabbed)
+		if state != states.grabbed
 		{
 			other.count++;
 			other.savedcount++;
@@ -10,5 +10,5 @@ if (count < countmax)
 		}
 	}
 }
-if (savedcount > 0 && alarm[0] < 0)
+if savedcount > 0 && alarm[0] < 0
 	alarm[0] = 20;

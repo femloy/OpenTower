@@ -1,5 +1,5 @@
 instance_destroy();
-repeat (3)
+repeat 3
 {
 	with (create_debris(x, y, spr_slapstar))
 	{
@@ -9,7 +9,7 @@ repeat (3)
 }
 fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
 instance_create(x, y, obj_bangeffect);
-with (obj_camera)
+with obj_camera
 {
 	shake_mag = 3;
 	shake_mag_acc = 3 / room_speed;

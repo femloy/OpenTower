@@ -11,21 +11,21 @@ function scr_player_shoulderbash()
 			depth = other.depth - 1;
 		}
 	}
-	if (sprite_index == spr_pepperman_shoulderstart && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_pepperman_shoulderstart && floor(image_index) == image_number - 1)
 		sprite_index = spr_pepperman_shoulderloop;
-	if (sprite_index == spr_pepperman_shoulderloop && !key_attack)
+	if sprite_index == spr_pepperman_shoulderloop && !key_attack
 	{
 		state = states.normal;
 		image_index = 0;
 	}
-	if (grounded)
+	if grounded
 		jumpstop = false;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+	if !key_jump2 && jumpstop == 0 && vsp < 0.5
 	{
 		vsp /= 20;
 		jumpstop = true;
 	}
-	if (input_buffer_jump > 0 && can_jump)
+	if input_buffer_jump > 0 && can_jump
 	{
 		input_buffer_jump = 0;
 		vsp = -shoulderbash_jumpspeed;

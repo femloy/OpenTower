@@ -7,7 +7,7 @@ sprite_index = spr_gustavoswitch1;
 switchstart = spr_gustavoswitch1;
 switchend = spr_gustavoswitch2;
 spr_sign = spr_pepsign;
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
 	sprite_index = spr_noiseswitch1;
 	switchstart = spr_noiseswitch1;

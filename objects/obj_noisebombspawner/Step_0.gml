@@ -8,7 +8,7 @@ if (floor(image_index) == 2 && canthrowbomb == 1)
 	}
 	canthrowbomb = false;
 }
-if (floor(image_index) == (image_number - 1) && canthrowbomb == 0)
+if (floor(image_index) == image_number - 1 && canthrowbomb == 0)
 	image_speed = 0;
 else
 	image_speed = 0.35;

@@ -1,9 +1,9 @@
-if (global.panic)
+if global.panic
 {
 	instance_destroy();
 	exit;
 }
-switch (room)
+switch room
 {
 	case tower_1:
 		scr_add_grannypizzalevel("entrance", 0);

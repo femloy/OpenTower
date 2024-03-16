@@ -1,4 +1,4 @@
-if (sprite_index == spr_grabbiehand_hifive && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_grabbiehand_hifive && floor(image_index) == image_number - 1)
 {
 	sprite_index = spr_grabbiehand_idle;
 	thumbingup = false;
@@ -10,7 +10,7 @@ for (var i = 0; i < 2; i++)
 	if (distance_to_pos(x, y, xstart, ystart, 6, 6) && targetplayer.sprite_index != spr_player_catched && targetplayer.x > (x - 50) && targetplayer.x < (x + 50) && targetplayer.y > y && targetplayer.y < (y + 200) && !thumbingup)
 	{
 		delay--;
-		if (delay <= 0)
+		if delay <= 0
 		{
 			grav = 0.35;
 			vsp = 10;
@@ -19,9 +19,9 @@ for (var i = 0; i < 2; i++)
 		}
 	}
 }
-if (grabbing)
+if grabbing
 {
-	if (sprite_index == spr_grabbiehand_catch && !released)
+	if sprite_index == spr_grabbiehand_catch && !released
 	{
 		var _normalaccel = true;
 		if (distance_to_pos(x, y, grab_xstart, grab_ystart, 78, 78))
@@ -36,7 +36,7 @@ if (grabbing)
 			accel -= 0.5;
 			_normalaccel = false;
 		}
-		if (_normalaccel)
+		if _normalaccel
 		{
 			trace("middle");
 			accel = maxaccel;
@@ -56,19 +56,19 @@ if (grabbing)
 		sprite_index = spr_grabbiehand_release;
 		released = true;
 	}
-	if (sprite_index == spr_grabbiehand_release && floor(image_index) == (image_number - 1) && released)
+	if (sprite_index == spr_grabbiehand_release && floor(image_index) == image_number - 1 && released)
 		sprite_index = spr_grabbiehand_idle;
-	if (sprite_index == spr_grabbiehand_idle)
+	if sprite_index == spr_grabbiehand_idle
 	{
-		if (released)
+		if released
 		{
-			if (xstarte > x)
+			if xstarte > x
 				x += 4;
-			if (xstarte < x)
+			if xstarte < x
 				x -= 4;
-			if (ystarte > y)
+			if ystarte > y
 				y += 4;
-			if (ystarte < y)
+			if ystarte < y
 				y -= 4;
 		}
 		if (distance_to_pos(x, y, xstart, ystart, 6, 6) && grabbing)
@@ -80,7 +80,7 @@ if (grabbing)
 }
 else
 {
-	if (sprite_index == spr_grabbiehand_fall && grounded)
+	if sprite_index == spr_grabbiehand_fall && grounded
 	{
 		grav = 0;
 		sprite_index = spr_grabbiehand_idle;

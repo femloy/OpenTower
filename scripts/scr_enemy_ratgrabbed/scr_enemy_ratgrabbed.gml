@@ -6,13 +6,13 @@ function scr_enemy_ratgrabbed()
 		visible = false;
 		x = ratplayerid.x;
 		y = ratplayerid.y;
-		if (!p)
+		if !p
 			sprite_index = stunfallspr;
-		if (!p && state != states.stun)
+		if !p && state != states.stun
 			state = states.ratgrabbed;
-		if (p && !ratgrabbed)
+		if p && !ratgrabbed
 			ratgrabbed = true;
-		if (ratplayerid.state == states.ratmountspit && ratplayerid.image_index >= 5)
+		if ratplayerid.state == states.ratmountspit && ratplayerid.image_index >= 5
 		{
 			hsp = ratplayerid.xscale * 22;
 			vsp = -2;
@@ -20,7 +20,7 @@ function scr_enemy_ratgrabbed()
 			y = ratplayerid.y - 5;
 			thrown = true;
 			visible = true;
-			if (!p)
+			if !p
 			{
 				grounded = false;
 				hp = -1;

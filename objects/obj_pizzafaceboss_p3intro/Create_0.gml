@@ -15,22 +15,22 @@ proparr = [
 	[spr_playerN_hurt, spr_playerN_panicidle, spr_player_mask, -5],
 	[spr_fakepeppino_stun, spr_fakepeppino_intro3loop, spr_player_mask, -4]
 ];
-with (obj_music)
+with obj_music
 {
-	if (music != noone)
+	if music != noone
 		fmod_event_instance_set_parameter(music.event, "state", 2, false);
 }
-if (room == rm_testing4)
+if room == rm_testing4
 {
-	with (obj_player)
+	with obj_player
 		state = states.actor;
 }
 peppinoID = -4;
-if (global.swapmode)
+if global.swapmode
 {
-	with (obj_player1)
+	with obj_player1
 	{
-		if (ispeppino)
+		if ispeppino
 			swap_player(false);
 	}
 	peppinoID = instance_create((room_width * 0.3) - 50, 402, 257);

@@ -1,4 +1,4 @@
-if (room != tower_5)
+if room != tower_5
 {
 	if (!surface_exists(surf))
 		surf = surface_create(sprite_width, sprite_height);

@@ -1,4 +1,4 @@
-if (sprite_index == spr_player_mach)
+if sprite_index == spr_player_mach
 {
 	with (instance_create(x, y, obj_playereffectprop))
 	{

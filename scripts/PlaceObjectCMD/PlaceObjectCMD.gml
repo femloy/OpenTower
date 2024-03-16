@@ -14,14 +14,14 @@ function PlaceObject(_inst) : Command() constructor
 	};
 	static destroy = function()
 	{
-		if (!placed)
+		if !placed
 		{
 			instance_destroy(inst);
-			with (global.current_level.current_room)
+			with global.current_level.current_room
 			{
 				for (var i = 0; i < array_length(instances); i++)
 				{
-					if (instances[i] == other.inst)
+					if instances[i] == other.inst
 					{
 						array_delete(instances, i, 1);
 						break;

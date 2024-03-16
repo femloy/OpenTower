@@ -1,6 +1,6 @@
 if (move && !instance_exists(obj_taxitransition))
 {
-	with (obj_player)
+	with obj_player
 	{
 		lastroom = room;
 		targetRoom = other.targetRoom;
@@ -11,27 +11,27 @@ if (move && !instance_exists(obj_taxitransition))
 	with (instance_create(x, y, obj_taxitransition))
 	{
 		bgsprite = spr_taxitransition_bg1;
-		if (other.police)
+		if other.police
 		{
 			sprite_index = spr_taxitransition_cop;
-			if (obj_player1.ispeppino)
+			if obj_player1.ispeppino
 				fmod_event_one_shot("event:/sfx/voice/muffledscream");
 		}
-		else if (obj_player1.isgustavo)
+		else if obj_player1.isgustavo
 			sprite_index = spr_taxitransition_gus;
-		else if (global.panic)
+		else if global.panic
 		{
 			bgsprite = spr_taxitransition_bg2;
 			sprite_index = spr_taxitransition_pizzaface;
-			if (obj_player1.ispeppino)
+			if obj_player1.ispeppino
 				fmod_event_one_shot("event:/sfx/voice/muffledscream");
 		}
 		else
 			sprite_index = spr_taxitransition_pep;
 		
-		if (!obj_player1.ispeppino)
+		if !obj_player1.ispeppino
 		{
-			switch (sprite_index)
+			switch sprite_index
 			{
 				case spr_taxitransition_pep:
 					sprite_index = spr_taxitransition_noise;
@@ -46,7 +46,7 @@ if (move && !instance_exists(obj_taxitransition))
 					sprite_index = spr_taxitransition_pizzafaceN;
 					break;
 			}
-			if (obj_player1.noisecrusher)
+			if obj_player1.noisecrusher
 				sprite_index = spr_taxitransition_gusN;
 		}
 	}

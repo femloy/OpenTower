@@ -1,6 +1,6 @@
 function scr_keyname(_key)
 {
-	switch (_key)
+	switch _key
 	{
 		case vk_up:
 			return lang_get_value("key_up");
@@ -163,311 +163,311 @@ function scr_keyname(_key)
 			break;
 	}
 	
-	switch (_key)
+	switch _key
 	{
-        case vk_backspace:
-            return "BACKSPACE";
+		case vk_backspace:
+			return "BACKSPACE";
 			break;
-        case vk_tab:
-            return "TAB";
+		case vk_tab:
+			return "TAB";
 			break;
-        case vk_enter:
-            return "ENTER";
+		case vk_enter:
+			return "ENTER";
 			break;
-        case vk_pause:
-            return "PAUSE";
+		case vk_pause:
+			return "PAUSE";
 			break;
-        case 20:
-            return "CAPS LOCK";
+		case 20:
+			return "CAPS LOCK";
 			break;
-        case vk_escape:
-            return "ESC";
+		case vk_escape:
+			return "ESC";
 			break;
-        case vk_space:
-            return "SPACE";
+		case vk_space:
+			return "SPACE";
 			break;
-        case vk_pageup:
-            return "PAGEUP";
+		case vk_pageup:
+			return "PAGEUP";
 			break;
-        case vk_pagedown:
-            return "PAGEDOWN";
+		case vk_pagedown:
+			return "PAGEDOWN";
 			break;
-        case vk_end:
-            return "END";
+		case vk_end:
+			return "END";
 			break;
-        case vk_home:
-            return "HOME";
+		case vk_home:
+			return "HOME";
 			break;
-        case vk_left:
-            return "LEFT";
+		case vk_left:
+			return "LEFT";
 			break;
-        case vk_up:
-            return "UP";
+		case vk_up:
+			return "UP";
 			break;
-        case vk_right:
-            return "RIGHT";
+		case vk_right:
+			return "RIGHT";
 			break;
-        case vk_down:
-            return "DOWN";
+		case vk_down:
+			return "DOWN";
 			break;
-        case vk_insert:
-            return "INSERT";
+		case vk_insert:
+			return "INSERT";
 			break;
-        case vk_delete:
-            return "DELETE";
+		case vk_delete:
+			return "DELETE";
 			break;
-        case ord("0"):
-            return "0";
+		case ord("0"):
+			return "0";
 			break;
-        case ord("1"):
-            return "1";
+		case ord("1"):
+			return "1";
 			break;
-        case ord("2"):
-            return "2";
+		case ord("2"):
+			return "2";
 			break;
-        case ord("3"):
-            return "3";
+		case ord("3"):
+			return "3";
 			break;
-        case ord("4"):
-            return "4";
+		case ord("4"):
+			return "4";
 			break;
-        case ord("5"):
-            return "5";
+		case ord("5"):
+			return "5";
 			break;
-        case ord("6"):
-            return "6";
+		case ord("6"):
+			return "6";
 			break;
-        case ord("7"):
-            return "7";
+		case ord("7"):
+			return "7";
 			break;
-        case ord("8"):
-            return "8";
+		case ord("8"):
+			return "8";
 			break;
-        case ord("9"):
-            return "9";
+		case ord("9"):
+			return "9";
 			break;
-        case ord("A"):
-            return "A";
+		case ord("A"):
+			return "A";
 			break;
-        case ord("B"):
-            return "B";
+		case ord("B"):
+			return "B";
 			break;
-        case ord("C"):
-            return "C";
+		case ord("C"):
+			return "C";
 			break;
-        case ord("D"):
-            return "D";
+		case ord("D"):
+			return "D";
 			break;
-        case ord("E"):
-            return "E";
+		case ord("E"):
+			return "E";
 			break;
-        case ord("F"):
-            return "F";
+		case ord("F"):
+			return "F";
 			break;
-        case ord("G"):
-            return "G";
+		case ord("G"):
+			return "G";
 			break;
-        case ord("H"):
-            return "H";
+		case ord("H"):
+			return "H";
 			break;
-        case ord("I"):
-            return "I";
+		case ord("I"):
+			return "I";
 			break;
-        case ord("J"):
-            return "J";
+		case ord("J"):
+			return "J";
 			break;
-        case ord("K"):
-            return "K";
+		case ord("K"):
+			return "K";
 			break;
-        case ord("L"):
-            return "L";
+		case ord("L"):
+			return "L";
 			break;
-        case ord("M"):
-            return "M";
+		case ord("M"):
+			return "M";
 			break;
-        case ord("N"):
-            return "N";
+		case ord("N"):
+			return "N";
 			break;
-        case ord("O"):
-            return "O";
+		case ord("O"):
+			return "O";
 			break;
-        case ord("P"):
-            return "P";
+		case ord("P"):
+			return "P";
 			break;
-        case ord("Q"):
-            return "Q";
+		case ord("Q"):
+			return "Q";
 			break;
-        case ord("R"):
-            return "R";
+		case ord("R"):
+			return "R";
 			break;
-        case ord("S"):
-            return "S";
+		case ord("S"):
+			return "S";
 			break;
-        case ord("T"):
-            return "T";
+		case ord("T"):
+			return "T";
 			break;
-        case ord("U"):
-            return "U";
+		case ord("U"):
+			return "U";
 			break;
-        case ord("V"):
-            return "V";
+		case ord("V"):
+			return "V";
 			break;
-        case ord("W"):
-            return "W";
+		case ord("W"):
+			return "W";
 			break;
-        case ord("X"):
-            return "X";
+		case ord("X"):
+			return "X";
 			break;
-        case ord("Y"):
-            return "Y";
+		case ord("Y"):
+			return "Y";
 			break;
-        case ord("Z"):
-            return "Z";
+		case ord("Z"):
+			return "Z";
 			break;
-        case ord("["):
-            return "LEXPLR";
+		case ord("["):
+			return "LEXPLR";
 			break;
-        case ord("\\"):
-            return "REXPLR";
+		case ord("\\"):
+			return "REXPLR";
 			break;
-        case vk_numpad0:
-            return "NUMPAD 0";
+		case vk_numpad0:
+			return "NUMPAD 0";
 			break;
-        case vk_numpad1:
-            return "NUMPAD 1";
+		case vk_numpad1:
+			return "NUMPAD 1";
 			break;
-        case vk_numpad2:
-            return "NUMPAD 2";
+		case vk_numpad2:
+			return "NUMPAD 2";
 			break;
-        case vk_numpad3:
-            return "NUMPAD 3";
+		case vk_numpad3:
+			return "NUMPAD 3";
 			break;
-        case vk_numpad4:
-            return "NUMPAD 4";
+		case vk_numpad4:
+			return "NUMPAD 4";
 			break;
-        case vk_numpad5:
-            return "NUMPAD 5";
+		case vk_numpad5:
+			return "NUMPAD 5";
 			break;
-        case vk_numpad6:
-            return "NUMPAD 6";
+		case vk_numpad6:
+			return "NUMPAD 6";
 			break;
-        case vk_numpad7:
-            return "NUMPAD 7";
+		case vk_numpad7:
+			return "NUMPAD 7";
 			break;
-        case vk_numpad8:
-            return "NUMPAD 8";
+		case vk_numpad8:
+			return "NUMPAD 8";
 			break;
-        case vk_numpad9:
-            return "NUMPAD 9";
+		case vk_numpad9:
+			return "NUMPAD 9";
 			break;
-        case vk_multiply:
-            return "ASTERISK";
+		case vk_multiply:
+			return "ASTERISK";
 			break;
-        case vk_add:
-            return "ADD";
+		case vk_add:
+			return "ADD";
 			break;
-        case vk_subtract:
-            return "DIVIDE";
+		case vk_subtract:
+			return "DIVIDE";
 			break;
-        case vk_decimal:
-            return "DOT";
+		case vk_decimal:
+			return "DOT";
 			break;
-        case vk_divide:
-            return "SLASH";
+		case vk_divide:
+			return "SLASH";
 			break;
-        case vk_f1:
-            return "F1";
+		case vk_f1:
+			return "F1";
 			break;
-        case vk_f2:
-            return "F2";
+		case vk_f2:
+			return "F2";
 			break;
-        case vk_f3:
-            return "F3";
+		case vk_f3:
+			return "F3";
 			break;
-        case vk_f4:
-            return "F4";
+		case vk_f4:
+			return "F4";
 			break;
-        case vk_f5:
-            return "F5";
+		case vk_f5:
+			return "F5";
 			break;
-        case vk_f6:
-            return "F6";
+		case vk_f6:
+			return "F6";
 			break;
-        case vk_f7:
-            return "F7";
+		case vk_f7:
+			return "F7";
 			break;
-        case vk_f8:
-            return "F8";
+		case vk_f8:
+			return "F8";
 			break;
-        case vk_f9:
-            return "F9";
+		case vk_f9:
+			return "F9";
 			break;
-        case vk_f10:
-            return "F10";
+		case vk_f10:
+			return "F10";
 			break;
-        case vk_f11:
-            return "F11";
+		case vk_f11:
+			return "F11";
 			break;
-        case vk_f12:
-            return "F12";
+		case vk_f12:
+			return "F12";
 			break;
-        case 144:
-            return "NUMLCK";
+		case 144:
+			return "NUMLCK";
 			break;
-        case 145:
-            return "SCROLLLCK";
+		case 145:
+			return "SCROLLLCK";
 			break;
-        case vk_lshift:
-            return "LSHIFT";
+		case vk_lshift:
+			return "LSHIFT";
 			break;
-        case vk_rshift:
-            return "RSHIFT";
+		case vk_rshift:
+			return "RSHIFT";
 			break;
-        case vk_lcontrol:
-            return "LCTRL";
+		case vk_lcontrol:
+			return "LCTRL";
 			break;
-        case vk_rcontrol:
-            return "RCTRL";
+		case vk_rcontrol:
+			return "RCTRL";
 			break;
-        case vk_lalt:
-            return "LALT";
+		case vk_lalt:
+			return "LALT";
 			break;
-        case vk_ralt:
-            return "RALT";
+		case vk_ralt:
+			return "RALT";
 			break;
-        case 186:
-            return "SEMICOLON";
+		case 186:
+			return "SEMICOLON";
 			break;
-        case 187:
-            return "EQUAL";
+		case 187:
+			return "EQUAL";
 			break;
-        case 188:
-            return "COMMA";
+		case 188:
+			return "COMMA";
 			break;
-        case 189:
-            return "UNDERSCR";
+		case 189:
+			return "UNDERSCR";
 			break;
-        case 190:
-            return "DOT";
+		case 190:
+			return "DOT";
 			break;
-        case 191:
-            return "SLASH";
+		case 191:
+			return "SLASH";
 			break;
-        case 192:
-            return "TILDE";
+		case 192:
+			return "TILDE";
 			break;
-        case 219:
-            return "LBRACKET";
+		case 219:
+			return "LBRACKET";
 			break;
-        case 220:
-            return "VERTBAR";
+		case 220:
+			return "VERTBAR";
 			break;
-        case 221:
-            return "RBRACKET";
+		case 221:
+			return "RBRACKET";
 			break;
-        case 222:
-            return "APOSTRPH";
+		case 222:
+			return "APOSTRPH";
 			break;
-    }
+	}
 	return chr(_key);
 }

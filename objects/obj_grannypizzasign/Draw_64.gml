@@ -1,4 +1,4 @@
-if (!global.option_hud)
+if !global.option_hud
 	exit;
 if (text_state == states.titlescreen && text_y <= -(text_sprite_height * text_yscale))
 	exit;
@@ -18,10 +18,10 @@ for (var i = 0; i < array_length(levelarray); i++)
 	xx = round(xx);
 	draw_sprite(spr_list5, b.icon, xx, y1);
 	y1 += 47;
-	if (b.rank)
+	if b.rank
 	{
 		var n = 0;
-		switch (b.gotrank)
+		switch b.gotrank
 		{
 			case "p":
 				n = 6;
@@ -45,7 +45,7 @@ for (var i = 0; i < array_length(levelarray); i++)
 		draw_sprite(spr_list4, n, xx, y1);
 		y1 += 29;
 	}
-	if (b.toppins)
+	if b.toppins
 	{
 		var w = sprite_get_width(spr_list1);
 		var x2 = (array_length(b.toppinarr) * w) / 2;
@@ -58,7 +58,7 @@ for (var i = 0; i < array_length(levelarray); i++)
 		}
 		y1 += 29;
 	}
-	if (b.secrets)
+	if b.secrets
 	{
 		w = sprite_get_width(spr_list2);
 		x2 = (3 * w) / 2;
@@ -71,7 +71,7 @@ for (var i = 0; i < array_length(levelarray); i++)
 		}
 		y1 += 29;
 	}
-	if (b.treasure)
+	if b.treasure
 		draw_sprite(spr_list3, b.gottreasure ? 0 : 1, xx, y1);
 	xx += level_xpad;
 }

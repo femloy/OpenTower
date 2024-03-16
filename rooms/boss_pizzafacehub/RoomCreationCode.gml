@@ -9,29 +9,29 @@ gamesave_async_save();
 
 if obj_player1.ispeppino && !global.swapmode
 {
-    layer_set_visible("Backgrounds_Ring2", true);
-    layer_set_visible("Backgrounds_Ring3", false);
+	layer_set_visible("Backgrounds_Ring2", true);
+	layer_set_visible("Backgrounds_Ring3", false);
 }
 else
 {
-    layer_set_visible("Backgrounds_Ring3", true);
-    layer_set_visible("Backgrounds_Ring2", false);
+	layer_set_visible("Backgrounds_Ring3", true);
+	layer_set_visible("Backgrounds_Ring2", false);
 }
 
 with obj_player1
 {
-    tauntstoredstate = states.normal;
-    landAnim = true;
-    state = states.animation;
-    buffer = 100;
-    sprite_index = spr_slipbanan2;
-    image_index = sprite_get_number(spr_slipbanan2) - 1;
-    image_speed = 0.35;
-    if !ispeppino
-    {
-        sprite_index = spr_playerN_bombend;
-        image_index = 0;
-    }
+	tauntstoredstate = states.normal;
+	landAnim = true;
+	state = states.animation;
+	buffer = 100;
+	sprite_index = spr_slipbanan2;
+	image_index = sprite_get_number(spr_slipbanan2) - 1;
+	image_speed = 0.35;
+	if !ispeppino
+	{
+		sprite_index = spr_playerN_bombend;
+		image_index = 0;
+	}
 }
 global.roommessage = "PIZZA TOWER ISLAND";
 global.leveltorestart = tower_finalhallway;

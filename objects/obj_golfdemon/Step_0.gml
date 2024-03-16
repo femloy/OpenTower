@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -40,22 +40,22 @@ switch (state)
 }
 if (state == states.walk || state == states.idle)
 {
-	if (sprite_index != spr_golfdemon_idle2)
+	if sprite_index != spr_golfdemon_idle2
 		sprite_index = spr_golfdemon_idle;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (ragecooldown > 0)
+if ragecooldown > 0
 	ragecooldown--;
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.chase)
+if state != states.chase
 	momentum = 0;
 if (state == states.walk || state == states.idle)
 {
@@ -66,25 +66,25 @@ if (state == states.walk || state == states.idle)
 		sprite_index = spr_golfdemon_idle2;
 		image_index = 0;
 	}
-	if (sprite_index == spr_golfdemon_idle2 && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_golfdemon_idle2 && floor(image_index) == image_number - 1)
 	{
 		idle = false;
 		movespeed = 6;
-		if (targetplayer.x != x)
+		if targetplayer.x != x
 			image_xscale = -sign(x - targetplayer.x);
 		alarm[5] = 30;
 		state = states.chase;
 		sprite_index = spr_golfdemon_charge;
 	}
 }
-if (state == states.chase)
+if state == states.chase
 {
 	if !fmod_event_instance_is_playing(snd)
 		fmod_event_instance_play(snd);
 	fmod_event_instance_set_3d_attributes(snd, x, y);
 	
 	snd_count = 0;
-	with (obj_golfdemon)
+	with obj_golfdemon
 	{
 		if (point_in_camera(x, y, view_camera[0]) && fmod_event_instance_is_playing(snd))
 			other.snd_count++;
@@ -93,11 +93,11 @@ if (state == states.chase)
 }
 else
 	fmod_event_instance_stop(snd, true);
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{
@@ -107,7 +107,7 @@ if (boundbox == 0)
 		other.boundbox = true;
 	}
 }
-if (state != states.chase && state != states.hit)
+if state != states.chase && state != states.hit
 	invincible = false;
-if (state == states.chase)
+if state == states.chase
 	invincible = true;

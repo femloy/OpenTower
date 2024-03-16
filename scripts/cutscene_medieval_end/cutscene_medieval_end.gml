@@ -1,7 +1,7 @@
 function cutscene_medieval_end()
 {
 	instance_destroy(obj_actor);
-	with (obj_player)
+	with obj_player
 	{
 		if (object_index != obj_player2 || global.coop)
 		{

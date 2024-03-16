@@ -1,4 +1,4 @@
-if (buffer == 0)
+if buffer == 0
 {
 	global.spaceblockswitch = !global.spaceblockswitch;
 	if (sprite_index == spr_switchblock_happy || (sprite_index == spr_switchblock_gohappy && image_index > 0))

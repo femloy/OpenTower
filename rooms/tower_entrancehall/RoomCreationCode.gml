@@ -5,16 +5,16 @@ global.door_index = 0
 global.gameframe_caption_text = lang_get_value("caption_tower_entrancehall")
 with (obj_player1)
 {
-    if (targetDoor == "C")
-    {
-        targetDoor = "HUB"
-        verticalhallway = 0
-        backtohubstartx = (obj_doorC.x + 32)
-        backtohubstarty = (obj_doorC.y - 14)
-        x = backtohubstartx
-        y = (backtohubstarty - (obj_screensizer.actual_height * 2))
-        state = states.backtohub
-        sprite_index = spr_slipbanan1
-        image_index = 10
-    }
+	if (targetDoor == "C")
+	{
+		targetDoor = "HUB"
+		verticalhallway = 0
+		backtohubstartx = (obj_doorC.x + 32)
+		backtohubstarty = (obj_doorC.y - 14)
+		x = backtohubstartx
+		y = (backtohubstarty - (obj_screensizer.actual_height * 2))
+		state = states.backtohub
+		sprite_index = spr_slipbanan1
+		image_index = 10
+	}
 }

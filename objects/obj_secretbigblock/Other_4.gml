@@ -6,7 +6,7 @@ else
 	for (var i = 0; i < num; i++)
 	{
 		var b = ds_list_find_value(global.instancelist, i);
-		with (b)
+		with b
 		{
 			secretjumped = false;
 			savedsecretinvincible = invincible;

@@ -1,6 +1,6 @@
 if (sprite_index == spr_player_mach || sprite_index == spr_player_mach4)
 {
-	if (alarm[1] == -1)
+	if alarm[1] == -1
 		alarm[1] = 1;
 	if (!instance_exists(speedlinesID))
 	{

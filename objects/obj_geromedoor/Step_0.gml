@@ -1,12 +1,12 @@
 if (global.gerome || image_index != 0)
 {
-	if (!uparrow)
+	if !uparrow
 	{
 		uparrow = true;
 		uparrowID = scr_create_uparrowhitbox();
 	}
 }
-else if (uparrow)
+else if uparrow
 {
 	uparrow = false;
 	instance_destroy(uparrowID);
@@ -16,12 +16,12 @@ if (!global.horse && (obj_player1.state == states.normal || obj_player1.state ==
 	ds_list_add(global.saveroom, id);
 	fmod_event_one_shot_3d("event:/sfx/misc/keyunlock", x, y);
 	fmod_event_one_shot("event:/sfx/misc/cheers");
-	with (obj_player)
+	with obj_player
 	{
 		targetRoom = other.targetRoom;
 		targetDoor = other.targetDoor;
 	}
-	if (global.gerome)
+	if global.gerome
 	{
 		obj_geromefollow.visible = false;
 		obj_geromefollow.do_end = true;
@@ -46,7 +46,7 @@ if (!global.horse && (obj_player1.state == states.normal || obj_player1.state ==
 }
 if (place_meeting(x, y, obj_player1) && floor(obj_player1.image_index) == (obj_player1.image_number - 1) && (obj_player1.state == states.victory || obj_player1.state == states.door))
 {
-	with (obj_player1)
+	with obj_player1
 	{
 		obj_player1.targetDoor = other.targetDoor;
 		obj_player1.targetRoom = other.targetRoom;

@@ -11,9 +11,9 @@ if (instance_exists(baddieID))
 }
 if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.cutscene == 0)
 {
-	if (baddieID.state != states.grabbed && !baddieID.invincible && baddieID.state != states.ghostpossess)
+	if baddieID.state != states.grabbed && !baddieID.invincible && baddieID.state != states.ghostpossess
 	{
-		with (obj_player)
+		with obj_player
 		{
 			var _obj_player = id;
 			var _playerindex = (object_index == obj_player1) ? 1 : 2;
@@ -22,22 +22,22 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				fmod_event_one_shot_3d("event:/sfx/enemies/stomp", x, y);
 				image_index = 0;
 				other.baddieID.stompbuffer = 15;
-				if (other.baddieID.object_index != obj_tank)
+				if other.baddieID.object_index != obj_tank
 				{
-					if (x != other.baddieID.x)
+					if x != other.baddieID.x
 						other.baddieID.image_xscale = -sign(other.baddieID.x - x);
 					other.baddieID.hsp = xscale * 5;
-					if (other.baddieID.vsp >= 0 && other.baddieID.grounded)
+					if other.baddieID.vsp >= 0 && other.baddieID.grounded
 						other.baddieID.vsp = -5;
 					other.baddieID.state = states.stun;
-					if (other.baddieID.stunned < 100)
+					if other.baddieID.stunned < 100
 						other.baddieID.stunned = 100;
 					other.baddieID.xscale = 1.4;
 					other.baddieID.yscale = 0.6;
 				}
-				if (other.baddieID.object_index == obj_pizzaball)
+				if other.baddieID.object_index == obj_pizzaball
 				{
-					with (other.baddieID)
+					with other.baddieID
 						global.golfhit++;
 				}
 				if (key_jump2 || input_buffer_jump > 0)
@@ -45,7 +45,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					instance_create(x, y + 50, obj_stompeffect);
 					stompAnim = true;
 					vsp = -14;
-					if (state == states.jump)
+					if state == states.jump
 					{
 						jumpstop = true;
 						sprite_index = spr_stompprep;
@@ -56,18 +56,18 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					instance_create(x, y + 50, obj_stompeffect);
 					stompAnim = true;
 					vsp = -9;
-					if (state == states.jump)
+					if state == states.jump
 					{
 						jumpstop = true;
 						sprite_index = spr_stompprep;
 					}
 				}
-				if (isgustavo)
+				if isgustavo
 				{
 					jumpAnim = true;
 					jumpstop = true;
 					instance_destroy(other.baddieID);
-					if (brick)
+					if brick
 						sprite_index = spr_player_ratmountmushroombounce;
 					else
 						sprite_index = spr_lonegustavo_jumpstart;
@@ -81,13 +81,13 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 			{
 				swingdingthrow = false;
 				image_index = 0;
-				if (!key_up)
+				if !key_up
 				{
-					if (movespeed <= 10)
+					if movespeed <= 10
 						sprite_index = spr_haulingstart;
 					else
 						sprite_index = spr_swingding;
-					if (!grounded)
+					if !grounded
 						vsp = -6;
 					swingdingendcooldown = 0;
 					state = states.grab;
@@ -96,13 +96,13 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					heavy = other.baddieID.heavy;
 					other.baddieID.state = states.grabbed;
 					other.baddieID.grabbedby = _playerindex;
-					with (other.baddieID)
+					with other.baddieID
 					{
 						if (object_index == obj_pepperman || object_index == obj_noiseboss || object_index == obj_vigilanteboss || object_index == obj_pizzafaceboss || object_index == obj_fakepepboss || object_index == obj_pizzafaceboss_p3)
 							scr_boss_grabbed();
 					}
 				}
-				else if (key_up)
+				else if key_up
 				{
 					baddiegrabbedID = other.baddieID;
 					grabbingenemy = true;
@@ -115,7 +115,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 					image_speed = 0.35;
 				}
 			}
-			else if (state == states.handstandjump && global.attackstyle == 3 && !other.baddieID.invincible)
+			else if state == states.handstandjump && global.attackstyle == 3 && !other.baddieID.invincible
 			{
 				var _ms = movespeed;
 				movespeed = 0;
@@ -125,18 +125,18 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				other.baddieID.state = states.grabbed;
 				other.baddieID.grabbedby = _playerindex;
 				heavy = other.baddieID.heavy;
-				if (global.pummeltest)
+				if global.pummeltest
 				{
-					if (image_index > 6)
+					if image_index > 6
 					{
-						if (key_up)
+						if key_up
 						{
 							state = states.finishingblow;
 							sprite_index = spr_uppercutfinishingblow;
 							image_index = 4;
 							movespeed = 0;
 						}
-						else if (key_down)
+						else if key_down
 						{
 							sprite_index = spr_piledriver;
 							vsp = -5;
@@ -161,14 +161,14 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				else
 				{
 					image_index = 0;
-					if (key_up)
+					if key_up
 					{
 						state = states.finishingblow;
 						sprite_index = spr_uppercutfinishingblow;
 						image_index = 4;
 						movespeed = 0;
 					}
-					else if (key_down)
+					else if key_down
 					{
 						sprite_index = spr_piledriver;
 						vsp = -5;
@@ -186,14 +186,14 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 			}
 			if (place_meeting(x, y + 1, other) && state == states.pogo && vsp > 0 && other.baddieID.vsp >= 0 && sprite_index != spr_playerN_pogobounce && !other.baddieID.invincible)
 			{
-				switch (pogochargeactive)
+				switch pogochargeactive
 				{
 					case 0:
 						pogospeedprev = false;
 						other.baddieID.vsp = -3;
 						fmod_event_one_shot_3d("event:/sfx/enemies/stomp", x, y);
 						other.baddieID.state = states.stun;
-						if (other.baddieID.stunned < 100)
+						if other.baddieID.stunned < 100
 							other.baddieID.stunned = 100;
 						sprite_index = spr_playerN_pogobounce;
 						break;
@@ -221,7 +221,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 			{
 				var lag = 0;
 				other.baddieID.stuntouchbuffer = 15;
-				with (other.baddieID)
+				with other.baddieID
 				{
 					fmod_event_one_shot_3d("event:/sfx/pep/mach2bump", x, y);
 					xscale = 0.8;
@@ -246,7 +246,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				global.combotimepause = 15;
 				hitX = x;
 				hitY = y;
-				repeat (2)
+				repeat 2
 				{
 					with (create_debris(x, y, spr_slapstar))
 						vsp = irandom_range(-6, -11);
@@ -257,19 +257,19 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 				if (instance_exists(other.baddieID) && y < (other.baddieID.y - 50) && attacking == 0 && state != states.handstandjump && other.baddieID.state != states.grabbed && sprite_index != spr_player_mach2jump && (state == states.jump || state == states.mach1 || (state == states.grab && sprite_index != spr_swingding)) && vsp > 0 && (other.baddieID.vsp >= 0 || other.baddieID.object_index == obj_farmerbaddie || other.baddieID.object_index == obj_farmerbaddie2 || other.baddieID.object_index == obj_farmerbaddie3) && sprite_index != spr_stompprep && !other.baddieID.invincible)
 				{
 					fmod_event_one_shot_3d("event:/sfx/enemies/stomp", x, y);
-					if (x != other.baddieID.x)
+					if x != other.baddieID.x
 						other.baddieID.image_xscale = -sign(other.baddieID.x - x);
 					image_index = 0;
 					other.baddieID.state = states.stun;
-					if (other.baddieID.stunned < 100)
+					if other.baddieID.stunned < 100
 						other.baddieID.stunned = 100;
-					if (key_jump2)
+					if key_jump2
 					{
 						instance_create(x, y + 50, obj_stompeffect);
 						stompAnim = true;
 						other.baddieID.image_index = 0;
 						vsp = -14;
-						if (state != states.grab)
+						if state != states.grab
 							sprite_index = spr_stompprep;
 					}
 					else
@@ -278,7 +278,7 @@ if (instance_exists(baddieID) && place_meeting(x, y, obj_player) && obj_player.c
 						stompAnim = true;
 						other.baddieID.image_index = 0;
 						vsp = -9;
-						if (state != states.grab)
+						if state != states.grab
 							sprite_index = spr_stompprep;
 					}
 				}

@@ -1,6 +1,6 @@
 targetplayer = instance_nearest(x, y, obj_player);
 image_speed = 0.35;
-switch (state)
+switch state
 {
 	case states.normal:
 		hand_xscale = (drawhandx < x) ? 1 : -1;
@@ -19,30 +19,30 @@ switch (state)
 		}
 		handx = Approach(handx, tx, spd);
 		handy = Approach(handy, ty, spd);
-		if (handy < y)
+		if handy < y
 			handy = y;
 		drawhandx = lerp(drawhandx, handx, 0.2);
 		drawhandy = lerp(drawhandy, handy, 0.2);
-		if (shootbuffer > 0)
+		if shootbuffer > 0
 			shootbuffer--;
 		if (shootbuffer <= 0 && place_meeting(handx, handy, obj_player))
 		{
 			playerid = instance_place(handx, handy, obj_player);
-			with (playerid)
+			with playerid
 			{
-				if (state == states.cheeseball)
+				if state == states.cheeseball
 				{
-					repeat (3)
+					repeat 3
 						create_debris(x + (xscale * 30), y + random_range(-8, 8), spr_cheesechunk);
 				}
 			}
-			if (playerid.state != states.hook)
+			if playerid.state != states.hook
 			{
 				launch_hsp = sign(playerid.hsp) * 3;
 				launch_vsp = -20;
 				hsp = playerid.hsp;
 				vsp = 10;
-				with (playerid)
+				with playerid
 				{
 					if (state == states.trashjump || state == states.trashjumpprep)
 						create_debris(x, y, spr_player_trashlid);
@@ -53,7 +53,7 @@ switch (state)
 					stringid = other.id;
 					movespeed = hsp;
 					other.previousx = x;
-                    other.previousy = y;
+					other.previousy = y;
 					if (abs(movespeed) >= 16)
 						movespeeddeccel = 1.8;
 					else
@@ -73,11 +73,11 @@ switch (state)
 		if (handy < (y - 200) || playerid.state == states.tube)
 		{
 			state = states.normal;
-			with (playerid)
+			with playerid
 			{
-				if (state == states.stringfall)
+				if state == states.stringfall
 				{
-					if (tauntstoredstate == states.cheesepepjump)
+					if tauntstoredstate == states.cheesepepjump
 						state = states.cheesepepjump;
 					else
 					{
@@ -95,18 +95,18 @@ switch (state)
 			hand_xscale = playerid.xscale;
 			if playerid.state != states.tube
 			{
-				with (playerid)
+				with playerid
 				{
 					sprite_index = spr_player_mrpinch;
 					stringid = other.id;
 					state = states.stringfall;
-					if (grounded && vsp > 0)
+					if grounded && vsp > 0
 					{
 						hsp_carry = sign(other.x - x) * 4;
 						if (abs(hsp) > abs(hsp_carry) && sign(hsp) != sign(hsp_carry))
 							hsp_carry = -hsp;
 					}
-					if (y > other.y)
+					if y > other.y
 					{
 						if (y > other.y + (other.maxhandlen / 2) && vsp > 0 && y > other.y)
 						{
@@ -118,14 +118,14 @@ switch (state)
 					}
 					var _solid = false;
 					if place_meeting(x, y - 1, obj_solid)
-                        _solid = true;
-                    if (_solid || (vsp > 0 && y < other.y) || (x == other.previousx && y == other.previousy))
+						_solid = true;
+					if (_solid || (vsp > 0 && y < other.y) || (x == other.previousx && y == other.previousy))
 						other.idlebuffer++;
 					else
 						other.idlebuffer = 0;
 					other.previousx = x;
-                    other.previousy = y;
-					if (other.idlebuffer > 60)
+					other.previousy = y;
+					if other.idlebuffer > 60
 					{
 						other.state = states.normal;
 						other.shootbuffer = 20;
@@ -150,17 +150,17 @@ switch (state)
 		var s1 = 0.9;
 		hsp += lengthdir_x(s1, launch_dir);
 		vsp += lengthdir_y(s1, launch_dir);
-		with (playerid)
+		with playerid
 		{
 			sprite_index = spr_player_mrpinch;
 			other.shootbuffer = 10;
 			hsp = other.hsp;
 			vsp = other.vsp;
-			if (y <= other.y)
+			if y <= other.y
 			{
 				other.shootbuffer = 0;
 				movespeed = abs(movespeed);
-				if (movespeed != 0)
+				if movespeed != 0
 					xscale = sign(movespeed);
 				vsp = other.launch_vsp;
 				instance_create(x, y, obj_speedlinesup);
@@ -170,7 +170,7 @@ switch (state)
 				jumpstop = true;
 				sprite_index = spr_machfreefall;
 				state = states.jump;
-				with (other)
+				with other
 				{
 					state = states.transition;
 					shootbuffer = 80;
@@ -187,7 +187,7 @@ switch (state)
 		handy = Approach(handy, y + 5, 4);
 		drawhandx = handx;
 		drawhandy = handy;
-		if (shootbuffer > 0)
+		if shootbuffer > 0
 			shootbuffer--;
 		else
 		{

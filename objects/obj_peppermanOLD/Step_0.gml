@@ -1,14 +1,14 @@
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (obj_bosscontroller.state == states.arenaintro)
+if obj_bosscontroller.state == states.arenaintro
 	exit;
-if (hp <= 0 && state != states.arenaround && state != states.fistmatch)
+if hp <= 0 && state != states.arenaround && state != states.fistmatch
 {
-	if (!thrown && !destroyable)
+	if !thrown && !destroyable
 		boss_destroy(lastplayerid);
 }
-if (chooseparry_buffer > 0)
+if chooseparry_buffer > 0
 	chooseparry_buffer--;
-switch (phase)
+switch phase
 {
 	case 1:
 	case 2:
@@ -21,7 +21,7 @@ switch (phase)
 		normal_func = boss_pepperman_phase3normal;
 		break;
 }
-switch (state)
+switch state
 {
 	case states.arenaround:
 		grav = 0.5;

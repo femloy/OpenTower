@@ -1,6 +1,6 @@
 function cutscene_forest_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;
@@ -14,7 +14,7 @@ function cutscene_forest_end()
 }
 function cutscene_beach_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;
@@ -28,7 +28,7 @@ function cutscene_beach_end()
 }
 function cutscene_sewer_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;

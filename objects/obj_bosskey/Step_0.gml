@@ -1,17 +1,17 @@
-switch (state)
+switch state
 {
 	case states.jump:
 		y += vsp;
-		if (vsp < 20)
+		if vsp < 20
 			vsp += grav;
-		if (y >= y_to)
+		if y >= y_to
 		{
-			if (touchedground)
+			if touchedground
 			{
 				fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 				y = y_to;
 				state = states.normal
-				with (obj_camera)
+				with obj_camera
 				{
 					shake_mag = 3;
 					shake_mag_acc = 5 / room_speed;
@@ -33,7 +33,7 @@ switch (state)
 					sprite_index = spr_highjumpcloud2;
 					image_speed = 0.4;
 				}
-				with (obj_camera)
+				with obj_camera
 				{
 					shake_mag = 3;
 					shake_mag_acc = 5 / room_speed;

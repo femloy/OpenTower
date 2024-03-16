@@ -1,7 +1,7 @@
 global.levelcomplete = true;
 global.noisejetpack = false;
 scr_playerreset();
-with (obj_player)
+with obj_player
 {
 	swap_player();
 	global.noisejetpack = false;

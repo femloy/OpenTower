@@ -1,16 +1,16 @@
 active = place_meeting(x, y, obj_baddie);
-if (active != preactive)
+if active != preactive
 {
 	var _alreadyactive = false;
-	with (obj_baddiebutton)
+	with obj_baddiebutton
 	{
-		if (id != other.id && trigger == other.trigger)
+		if id != other.id && trigger == other.trigger
 		{
-			if (active)
+			if active
 				_alreadyactive = true;
 		}
 	}
-	with (obj_baddiegate)
+	with obj_baddiegate
 	{
 		if (trigger == other.trigger && !(active && _alreadyactive))
 			active = !active;

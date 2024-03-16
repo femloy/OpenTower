@@ -1,9 +1,9 @@
 var p = other.id;
-with (other)
+with other
 {
-	if (state != states.antigrav && state != states.backbreaker && state != states.chainsaw && other.cooldown == 0)
+	if state != states.antigrav && state != states.backbreaker && state != states.chainsaw && other.cooldown == 0
 	{
-		if (obj_player1.ispeppino)
+		if obj_player1.ispeppino
 			create_transformation_tip(lang_get_value("antigravtip"), "antigrav");
 		else
 			create_transformation_tip(lang_get_value("antigravtipN"), "antigravN");
@@ -26,9 +26,9 @@ with (other)
 		}
 		fmod_event_one_shot("event:/sfx/antigrav/start");
 		fmod_event_one_shot_3d("event:/sfx/misc/bubblestation", x, y);
-		with (obj_antigravbubble)
+		with obj_antigravbubble
 		{
-			if (playerid == other.id)
+			if playerid == other.id
 				instance_destroy();
 		}
 		other.cooldown = 50;

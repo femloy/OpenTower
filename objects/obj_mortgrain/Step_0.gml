@@ -1,6 +1,6 @@
 with (instance_place(x - 1, y, obj_player))
 {
-	if (state == states.mort && other.eaten == 0)
+	if state == states.mort && other.eaten == 0
 	{
 		movespeed = abs(movespeed);
 		other.eaten = true;
@@ -10,7 +10,7 @@ with (instance_place(x - 1, y, obj_player))
 }
 with (instance_place(x + 1, y, obj_player))
 {
-	if (state == states.mort && other.eaten == 0)
+	if state == states.mort && other.eaten == 0
 	{
 		movespeed = abs(movespeed);
 		other.eaten = true;
@@ -18,7 +18,7 @@ with (instance_place(x + 1, y, obj_player))
 		state = states.normal;
 	}
 }
-if (eaten)
+if eaten
 {
 	x = -100;
 	y = -100;

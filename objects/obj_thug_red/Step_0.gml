@@ -1,11 +1,11 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
-if (state == states.walk)
+if state == states.walk
 {
-	if (!chasing)
+	if !chasing
 	{
 		sprite_index = idlespr;
 		if (collision_line(x, y, targetplayer.x, targetplayer.y, obj_solid, false, true) == noone && ((image_xscale < 0 && targetplayer.x < x) || (image_xscale > 0 && targetplayer.x > x)) && (targetplayer.y < (y + threshold_y) && targetplayer.y > (y - threshold_y)))
@@ -15,7 +15,7 @@ if (state == states.walk)
 			chasing = true;
 			state = states.charge;
 			attack_count = attack_max;
-			if (x != targetplayer.x)
+			if x != targetplayer.x
 				image_xscale = -sign(x - targetplayer.x);
 			sprite_index = walkspr;
 			image_index = 0;
@@ -29,24 +29,24 @@ if (state == states.walk)
 		image_index = 0;
 	}
 }
-else if (state == states.chase)
+else if state == states.chase
 {
-	if (sprite_index == spr_shrimp_throw)
+	if sprite_index == spr_shrimp_throw
 		sprite_index = spr_shrimp_walk;
 	if (abs(x - targetplayer.x) < 64)
 	{
-		if (grounded && vsp > -1)
+		if grounded && vsp > -1
 			hsp = 0;
-		else if (!grounded)
+		else if !grounded
 			hsp = image_xscale * chasespeed;
 	}
-	else if (grounded)
+	else if grounded
 	{
-		if (x != targetplayer.x && grounded)
+		if x != targetplayer.x && grounded
 			image_xscale = -sign(x - targetplayer.x);
 		hsp = image_xscale * chasespeed;
 	}
-	if (bombreset <= 0 && grounded)
+	if bombreset <= 0 && grounded
 	{
 		if ((targetplayer.x > (x - attackthreshold_x) && targetplayer.x < (x + attackthreshold_x)) && (targetplayer.y > (y - attackthreshold_y) && targetplayer.y < (y + attackthreshold_y)))
 		{
@@ -59,20 +59,20 @@ else if (state == states.chase)
 	var inst_up = collision_line(x + (sign(hsp) * 96), y + 25, x + (sign(hsp) * 96), (y - 78) + 50, obj_platform, false, true);
 	var inst_down = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_solid, false, true);
 	var inst_down2 = collision_line(x + (sign(hsp) * 16), y, x + (sign(hsp) * 16), y + 64, obj_platform, false, true);
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
-		if (sprite_index == spr_shrimp_jump)
+		if sprite_index == spr_shrimp_jump
 		{
 			sprite_index = spr_shrimp_fall;
 			image_index = 0;
 		}
-		else if (sprite_index == spr_shrimp_land)
+		else if sprite_index == spr_shrimp_land
 		{
 			sprite_index = spr_shrimp_walk;
 			image_index = 0;
 		}
 	}
-	if (grounded && sprite_index == spr_shrimp_fall)
+	if grounded && sprite_index == spr_shrimp_fall
 	{
 		sprite_index = spr_shrimp_land;
 		image_index = 0;
@@ -85,12 +85,12 @@ else if (state == states.chase)
 		hsp = image_xscale * chasespeed;
 	}
 }
-if (state == states.charge)
+if state == states.charge
 {
 	bombreset = attackreset;
-	if (attack_count > 0)
+	if attack_count > 0
 	{
-		if (sprite_index != spr_shrimp_punch)
+		if sprite_index != spr_shrimp_punch
 		{
 			sprite_index = spr_shrimp_punch;
 			image_index = 0;
@@ -104,21 +104,21 @@ if (state == states.charge)
 		hsp = image_xscale * attackspeed;
 	}
 }
-if (state == states.punch)
+if state == states.punch
 {
 	if (!instance_exists(punchinst))
 	{
 		fmod_event_one_shot_3d("event:/sfx/enemies/minijohnpunch", x, y);
 		punchinst = instance_create(x, y, obj_forkhitbox);
-		with (punchinst)
+		with punchinst
 			ID = other.id;
 	}
 	hsp = image_xscale * attackspeed;
-	if (attackspeed > 0)
+	if attackspeed > 0
 		attackspeed -= deccel;
 	else
 		attackspeed = 0;
-	if (attackspeed == 0)
+	if attackspeed == 0
 	{
 		bombreset = attackreset;
 		state = states.walk;
@@ -133,7 +133,7 @@ if (state == states.punch)
 		ds_list_clear(global.instancelist);
 	}
 }
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -165,15 +165,15 @@ switch (state)
 		scr_enemy_rage();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (elite && ragecooldown <= 0)
+if elite && ragecooldown <= 0
 {
 	var player = instance_nearest(x, y, obj_player);
 	if (state == states.walk || state == states.charge)
@@ -190,14 +190,14 @@ if (elite && ragecooldown <= 0)
 		}
 	}
 }
-if (ragecooldown > 0)
+if ragecooldown > 0
 	ragecooldown--;
 scr_scareenemy();
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

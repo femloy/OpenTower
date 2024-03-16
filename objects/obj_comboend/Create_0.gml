@@ -12,7 +12,7 @@ x = 832;
 y = 197;
 ystart = y;
 depth = -300;
-with (obj_player)
+with obj_player
 {
 	if (!place_meeting(x, y, obj_exitgate))
 		global.combodropped = true;

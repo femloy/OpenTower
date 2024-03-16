@@ -3,12 +3,12 @@ function scr_player_ratmountclimbwall()
 	image_speed = 0.5;
 	hsp = 0;
 	vsp = 0;
-	if (sprite_index != spr_player_ratmountbounceside)
+	if sprite_index != spr_player_ratmountbounceside
 	{
 		sprite_index = spr_player_ratmountbounceside;
 		image_index = 0;
 	}
-	else if (floor(image_index) == (image_number - 1))
+	else if floor(image_index) == image_number - 1
 		image_index = image_number - 1;
 	if (!grounded && !place_meeting(x + 1, y, obj_solid) && !place_meeting(x - 1, y, obj_solid))
 	{
@@ -16,9 +16,9 @@ function scr_player_ratmountclimbwall()
 		jumpAnim = false;
 		sprite_index = spr_player_ratmountfall;
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		if (key_jump2 && input_buffer_jump_negative <= 0)
+		if key_jump2 && input_buffer_jump_negative <= 0
 		{
 			state = states.ratmountbounce;
 			xscale *= -1;

@@ -1,11 +1,11 @@
-if (state == 0)
+if state == 0
 {
 	var dir = point_direction(xstart, ystart, targetx, targety);
 	hsp = lengthdir_x(movespeed, dir);
 	vsp = lengthdir_y(movespeed, dir);
 	x += hsp;
 	y += vsp;
-	if (target == -4)
+	if target == -4
 	{
 		if (distance_to_object(obj_player1) >= distance)
 			state++;
@@ -13,13 +13,13 @@ if (state == 0)
 	else if (distance_to_point(targetx, targety) <= movespeed)
 		state++;
 }
-else if (state == 1)
+else if state == 1
 {
 	x += hsp;
 	y += vsp;
 	hsp = Approach(hsp, 0, deccel);
 	vsp = Approach(vsp, 0, deccel);
-	if (hsp == 0 && vsp == 0)
+	if hsp == 0 && vsp == 0
 		state++;
 }
 else

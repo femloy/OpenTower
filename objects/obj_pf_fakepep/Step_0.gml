@@ -1,7 +1,7 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 targetplayer = obj_player1.id;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -14,7 +14,7 @@ switch (state)
 		y = -200;
 		if (!instance_exists(obj_pf_fakepepgianthead))
 		{
-			if (fakepepspawn > 0)
+			if fakepepspawn > 0
 				fakepepspawn--;
 			else
 			{
@@ -22,9 +22,9 @@ switch (state)
 				instance_create(x, y, obj_pf_fakepepgianthead);
 			}
 		}
-		if (elitehit < 4)
+		if elitehit < 4
 		{
-			if (clonespawn > 0)
+			if clonespawn > 0
 				clonespawn--;
 			else
 			{
@@ -33,7 +33,7 @@ switch (state)
 				{
 					var i = irandom(4);
 					fakepep_start_projectiles(0, 0);
-					switch (i)
+					switch i
 					{
 						case 1:
 							fakepep_add_machclone(0, 0, choose(-1, 1), 30, true);
@@ -56,7 +56,7 @@ switch (state)
 				}
 			}
 		}
-		if (junkspawn > 0)
+		if junkspawn > 0
 			junkspawn--;
 		else
 		{
@@ -100,11 +100,11 @@ switch (state)
 		scr_enemy_ghostpossess();
 		break;
 	case states.transition:
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			state = states.walk;
 		break;
 }
-if (prevhp != elitehit)
+if prevhp != elitehit
 {
 	prevhp = elitehit;
 	sprite_index = spr_fakepeppino_deform;
@@ -112,30 +112,30 @@ if (prevhp != elitehit)
 	state = states.transition;
 	hsp = 0;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (state == states.stun && thrown)
+if state == states.stun && thrown
 	stunned = 10;
-if (state == states.stun && !thrown)
+if state == states.stun && !thrown
 	invincible = false;
 else
 	invincible = true;
-if (!invincible && !flash && alarm[5] == -1)
+if !invincible && !flash && alarm[5] == -1
 	alarm[5] = 10;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
 scr_scareenemy();
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

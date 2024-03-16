@@ -1,6 +1,6 @@
-if (sprite_index == spr_player_move)
+if sprite_index == spr_player_move
 {
-	if (steppy > 0)
+	if steppy > 0
 		steppy--;
 	else
 	{

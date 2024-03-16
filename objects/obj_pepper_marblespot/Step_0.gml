@@ -1,9 +1,9 @@
-with (obj_pepperman)
+with obj_pepperman
 {
-	if (wastedhits == other.number && other.created == 0)
+	if wastedhits == other.number && other.created == 0
 	{
 		instance_destroy(obj_pepper_marbleblock);
-		with (other)
+		with other
 		{
 			with (instance_create(x, -85, obj_pepper_marbleblock))
 			{

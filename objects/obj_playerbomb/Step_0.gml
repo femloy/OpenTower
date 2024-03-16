@@ -1,14 +1,14 @@
-if (deadbuffer <= 0)
+if deadbuffer <= 0
 {
 	dead = true;
 	instance_destroy();
 	exit;
 }
-switch (state)
+switch state
 {
 	case states.fall:
 		hsp = image_xscale * movespeed;
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 		{
 			fmod_event_one_shot_3d("event:/sfx/noise/bombbounce", x, y);
 			sprite_index = spr_playerN_noisebombland;
@@ -20,12 +20,12 @@ switch (state)
 		hsp = image_xscale * 6;
 		if (floor(image_index) == image_number - 1)
 		{
-			if (sprite_index == spr_playerN_noisebombland)
+			if sprite_index == spr_playerN_noisebombland
 				sprite_index = spr_playerN_noisebomb;
-			if (sprite_index == spr_playerN_noisebombhitwall)
+			if sprite_index == spr_playerN_noisebombhitwall
 				sprite_index = spr_playerN_noisebomb;
 		}
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 		{
 			fmod_event_one_shot_3d("event:/sfx/noise/bombbounce", x, y);
 			sprite_index = spr_playerN_noisebombland;
@@ -49,11 +49,11 @@ switch (state)
 		}
 		break;
 }
-if (sprite_index == spr_playerN_noisebomb && countdown <= countdownmax / 2)
+if sprite_index == spr_playerN_noisebomb && countdown <= countdownmax / 2
 	sprite_index = spr_playerN_noisebombflash;
-if (state != states.fall)
+if state != states.fall
 {
-	if (countdown > 0)
+	if countdown > 0
 		countdown--;
 	else
 		instance_destroy();

@@ -27,12 +27,12 @@ function __background_get_element(bind)
 		if (string_pos(__fgstring, __layername) > 0)
 		{
 			var __slotchr = string_char_at(__layername, __fglen + 1);
-			if (__slotchr == "")
+			if __slotchr == ""
 				continue;
 			
 			var __slot = real( __slotchr );
 		
-			if (__slot == __bind)
+			if __slot == __bind
 			{
 				__layerid = __layerlist[__i];
 				__isforeground = true;
@@ -43,12 +43,12 @@ function __background_get_element(bind)
 		else if (string_pos(__bgstring, __layername) > 0)
 		{
 			var __slotchr = string_char_at(__layername, __bglen + 1);
-			if (__slotchr == "")
+			if __slotchr == ""
 				continue;
 			
 			var __slot = real( __slotchr );
 		
-			if (__slot == __bind)
+			if __slot == __bind
 			{
 				__layerid = __layerlist[__i];
 				__isforeground = false;
@@ -58,7 +58,7 @@ function __background_get_element(bind)
 		}	
 	}
 
-	if (__layerid != -1)
+	if __layerid != -1
 	{
 		// We have a winner!
 		// Get id of background element on this layer

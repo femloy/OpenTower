@@ -1,6 +1,6 @@
-if (player != -1)
+if player != -1
 {
-	with (player)
+	with player
 	{
 		hsp = 0;
 		vsp = 0;

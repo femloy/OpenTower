@@ -1,13 +1,13 @@
 function room_layer_add(argument0)
 {
-	with (obj_itemlist)
+	with obj_itemlist
 	{
-		if (ID == argument0)
+		if ID == argument0
 		{
-			if (global.current_level.current_room == -4)
+			if global.current_level.current_room == -4
 				exit;
 			var arr = global.current_level.current_room.backgrounds;
-			if (argument0 == 1)
+			if argument0 == 1
 				arr = global.current_level.current_room.tiles;
 			var lowest_depth = -100;
 			if (array_length(arr) > 0)
@@ -15,7 +15,7 @@ function room_layer_add(argument0)
 				for (var i = 0; i < array_length(arr); i++)
 				{
 					var b = arr[i];
-					if (b.depth > lowest_depth)
+					if b.depth > lowest_depth
 						lowest_depth = b.depth;
 				}
 			}
@@ -23,9 +23,9 @@ function room_layer_add(argument0)
 				lowest_depth = 0;
 			var _layer = new RoomLayer();
 			_layer.depth = lowest_depth + 1;
-			if (_layer.depth == 0)
+			if _layer.depth == 0
 				_layer.depth++;
-			if (argument0 == 1)
+			if argument0 == 1
 				_layer.layer_type = 1;
 			array_push(arr, _layer);
 			dirty = true;
@@ -34,14 +34,14 @@ function room_layer_add(argument0)
 }
 function room_layer_delete(argument0)
 {
-	with (obj_itemlist)
+	with obj_itemlist
 	{
-		if (ID == argument0 && selected_item != -4)
+		if ID == argument0 && selected_item != -4
 		{
-			if (global.current_level.current_room == -4)
+			if global.current_level.current_room == -4
 				exit;
 			var arr = global.current_level.current_room.backgrounds;
-			if (argument0 == 1)
+			if argument0 == 1
 				arr = global.current_level.current_room.tiles;
 			for (var i = 0; i < array_length(arr); i++)
 			{
@@ -59,15 +59,15 @@ function room_layer_delete(argument0)
 }
 function room_layer_move_up(argument0)
 {
-	with (obj_itemlist)
+	with obj_itemlist
 	{
-		if (ID == argument0 && selected_item != -4)
+		if ID == argument0 && selected_item != -4
 		{
 			var _room = global.current_level.current_room;
-			if (_room == -4)
+			if _room == -4
 				exit;
 			var _arr = _room.backgrounds;
-			if (argument0 == 1)
+			if argument0 == 1
 				_arr = _room.tiles;
 			for (var i = 0; i < array_length(_arr); i++)
 			{
@@ -85,15 +85,15 @@ function room_layer_move_up(argument0)
 }
 function room_layer_move_down(argument0)
 {
-	if (global.current_level.current_room == -4)
+	if global.current_level.current_room == -4
 		exit;
-	with (obj_itemlist)
+	with obj_itemlist
 	{
-		if (ID == argument0 && selected_item != -4)
+		if ID == argument0 && selected_item != -4
 		{
 			var _room = global.current_level.current_room;
 			var _arr = _room.backgrounds;
-			if (argument0 == 1)
+			if argument0 == 1
 				_arr = _room.tiles;
 			for (var i = 0; i < array_length(_arr); i++)
 			{
@@ -111,37 +111,37 @@ function room_layer_move_down(argument0)
 }
 function room_layer_item_dirty(argument0)
 {
-	if (global.current_level.current_room == -4)
+	if global.current_level.current_room == -4
 		exit;
 	ds_list_clear(items);
 	var _arr = array_create(0);
-	with (global.current_level.current_room)
+	with global.current_level.current_room
 	{
 		for (var i = 0; i < array_length(argument0); i++)
-        {
-            var b = argument0[i]
-            var _name = ""
-            switch b.layer_type
-            {
-                case (1 << 0):
-                    _name = "Tile "
-                    if (b.depth < 0)
-                        _name = "Tile FG "
-                    break
-                case (0 << 0):
-                    _name = "Background "
-                    if (b.depth < 0)
-                        _name = "Foreground "
-                    break
-            }
+		{
+			var b = argument0[i]
+			var _name = ""
+			switch b.layer_type
+			{
+				case (1 << 0):
+					_name = "Tile "
+					if b.depth < 0
+						_name = "Tile FG "
+					break
+				case (0 << 0):
+					_name = "Background "
+					if b.depth < 0
+						_name = "Foreground "
+					break
+			}
 
-            _name += string(abs(b.depth))
-            array_push(_arr, 
-            {
-                name: _name,
-                depth: b.depth
-            });
-        }
+			_name += string(abs(b.depth))
+			array_push(_arr, 
+			{
+				name: _name,
+				depth: b.depth
+			});
+		}
 	}
 	array_sort(_arr, function(argument0, argument1)
 	{
@@ -160,18 +160,18 @@ function RoomLayer() constructor
 	{
 		var old_depth = depth;
 		depth--;
-		if (depth == 0)
+		if depth == 0
 			depth--;
-		if (argument0 != -4)
+		if argument0 != -4
 		{
 			for (var i = 0; i < array_length(argument0); i++)
 			{
 				var b = argument0[i];
-				if (b != self)
+				if b != self
 				{
 					if (sign(depth) == sign(old_depth))
 					{
-						if (b.depth == depth)
+						if b.depth == depth
 						{
 							b.move_down();
 							break;
@@ -190,18 +190,18 @@ function RoomLayer() constructor
 	{
 		var old_depth = depth;
 		depth++;
-		if (depth == 0)
+		if depth == 0
 			depth++;
-		if (argument0 != -4)
+		if argument0 != -4
 		{
 			for (var i = 0; i < array_length(argument0); i++)
 			{
 				var b = argument0[i];
-				if (b != self)
+				if b != self
 				{
 					if (sign(depth) == sign(old_depth))
 					{
-						if (b.depth == depth)
+						if b.depth == depth
 						{
 							b.move_up();
 							break;
@@ -218,7 +218,7 @@ function RoomLayer() constructor
 	};
 	static draw = function(argument0)
 	{
-		switch (layer_type)
+		switch layer_type
 		{
 			case (0 << 0):
 				draw_sprite_repeat(sprite_index, image_index, argument0.x, argument0.y, argument0.width, argument0.height);

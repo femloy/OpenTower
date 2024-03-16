@@ -1,4 +1,4 @@
-if (destroy)
+if destroy
 {
 	ds_list_add(global.saveroom, id);
 	with (instance_create(x, y, obj_explosioneffect))
@@ -10,7 +10,7 @@ if (destroy)
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;

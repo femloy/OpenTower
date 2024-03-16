@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -28,30 +28,30 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == states.stun && stunned > 40 && birdcreated == 0)
+if state == states.stun && stunned > 40 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
 idlespr = spr_cheeserobot_idle;
 stunfallspr = spr_cheeserobot_stun;
 walkspr = spr_cheeserobot_walk;
 stunspr = spr_cheeserobot_stun;
 grabbedspr = spr_cheeserobot_stun;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (hp <= 0)
+if hp <= 0
 	instance_destroy();
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
-if (x != obj_player.x && state != states.pizzagoblinthrow && bombreset == 0)
+if x != obj_player.x && state != states.pizzagoblinthrow && bombreset == 0
 {
 	if ((obj_player.x > (x - 400) && obj_player.x < (x + 400)) && (y <= (obj_player.y + 20) && y >= (obj_player.y - 20)))
 	{

@@ -1,12 +1,12 @@
 function scr_deactivate_escape()
 {
-	with (obj_baddie)
+	with obj_baddie
 	{
 		hitboxcreate = false;
 		boundbox = false;
 		event_perform(ev_other, ev_room_start);
 	}
-	with (obj_hiddenobject)
+	with obj_hiddenobject
 	{
 		if (!ds_list_empty(deactivatedlist))
 		{
@@ -19,7 +19,7 @@ function scr_deactivate_escape()
 			}
 		}
 	}
-	with (obj_arenaspawn)
+	with obj_arenaspawn
 	{
 		if (state == states.spawnenemy || state == states.arena)
 		{

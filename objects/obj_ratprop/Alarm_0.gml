@@ -1,4 +1,4 @@
-if (state == states.normal)
+if state == states.normal
 {
 	hsp = 0;
 	state = states.idle;

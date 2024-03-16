@@ -1,13 +1,13 @@
-if (phase == 0 && attacking)
+if phase == 0 && attacking
 {
-	if (state == states.pizzaface_ram)
+	if state == states.pizzaface_ram
 	{
-		if (other.state == states.backbreaker && other.parry_inst != -4)
+		if other.state == states.backbreaker && other.parry_inst != -4
 		{
 			state = states.normal;
 			boss_hurt(10, other.id);
 			stunned = 50;
-			with (other)
+			with other
 			{
 				state = states.parry;
 				sprite_index = choose(spr_parry1, spr_parry2, spr_parry3);
@@ -22,10 +22,10 @@ if (phase == 0 && attacking)
 				flash = true;
 			}
 			parrycount++;
-			if (parrycount > 1)
+			if parrycount > 1
 			{
 				parrycount = 0;
-				if (lostattacks > 0)
+				if lostattacks > 0
 				{
 					lostattacks--;
 					var choseattack = -4;
@@ -36,7 +36,7 @@ if (phase == 0 && attacking)
 					{
 						vsp = -11;
 						hsp = choose(-5, 5);
-						switch (choseattack)
+						switch choseattack
 						{
 							case states.pizzaface_mouth:
 								sprite_index = spr_pizzafaceword;
@@ -64,5 +64,5 @@ if (phase == 0 && attacking)
 		player_hurt(20, other.id);
 	}
 }
-else if (phase > 0)
+else if phase > 0
 	event_inherited();

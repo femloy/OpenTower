@@ -6,7 +6,7 @@ LAG_STEPS = 20;
 followqueue = ds_queue_create();
 spritequeue = ds_queue_create();
 farmerpos = 0;
-switch (object_index)
+switch object_index
 {
 	case obj_farmer2follow:
 		farmerpos = 1;

@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_bee_idle();

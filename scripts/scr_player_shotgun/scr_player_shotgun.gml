@@ -1,12 +1,12 @@
 function scr_player_shotgun()
 {
-	if (sprite_index == spr_shotgunpullout)
+	if sprite_index == spr_shotgunpullout
 	{
 		image_speed = 0.4;
 		hsp = 0;
 		vsp = 0;
 		movespeed = 0;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			sprite_index = spr_shotgunidle;
 			image_index = 0;
@@ -16,53 +16,53 @@ function scr_player_shotgun()
 		else
 			exit;
 	}
-	if (dir != xscale)
+	if dir != xscale
 	{
 		dir = xscale;
 		movespeed = 2;
 	}
 	move = key_left + key_right;
 	hsp = move * movespeed;
-	if (move != 0)
+	if move != 0
 	{
 		xscale = move;
-		if (movespeed < 8)
+		if movespeed < 8
 			movespeed += 0.5;
 		else if (floor(movespeed) == 8)
 			movespeed = 6;
-		if (movespeed < 3)
+		if movespeed < 3
 			image_speed = 0.35;
-		else if (movespeed > 3 && movespeed < 6)
+		else if movespeed > 3 && movespeed < 6
 			image_speed = 0.45;
 		else
 			image_speed = 0.6;
 	}
 	else
 		movespeed = 0;
-	if (movespeed > 8)
+	if movespeed > 8
 		movespeed -= 0.1;
-	if (!landAnim)
+	if !landAnim
 	{
-		if (grounded && move != 0)
+		if grounded && move != 0
 			sprite_index = spr_shotgunwalk;
-		else if (grounded)
+		else if grounded
 			sprite_index = spr_shotgunidle;
 	}
-	else if (floor(image_index) == (image_number - 1))
+	else if floor(image_index) == image_number - 1
 	{
-		if (move != 0)
+		if move != 0
 			sprite_index = spr_shotgunwalk;
 		else
 			sprite_index = spr_shotgunidle;
 		image_index = 0;
 	}
-	if (!grounded)
+	if !grounded
 	{
 		state = states.shotgunjump;
 		sprite_index = spr_shotgunfall;
 		image_index = 0;
 	}
-	else if (input_buffer_jump > 0)
+	else if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		state = states.shotgunjump;
@@ -71,20 +71,20 @@ function scr_player_shotgun()
 		jumpstop = false;
 		vsp = -11;
 	}
-	if (grounded && key_down)
+	if grounded && key_down
 	{
 		state = states.shotguncrouch;
 		sprite_index = spr_shotgungoduck;
 		image_index = 0;
 	}
-	if (key_attack2)
+	if key_attack2
 	{
 		state = states.shotgundash;
 		sprite_index = spr_shotgunsuplexdash;
 		image_index = 0;
 		movespeed = 10;
 	}
-	if (key_slap2)
+	if key_slap2
 	{
 		fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
 		state = states.shotgunshoot;

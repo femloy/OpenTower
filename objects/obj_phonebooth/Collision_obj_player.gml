@@ -1,4 +1,4 @@
-if (sprite_index == spr_phone)
+if sprite_index == spr_phone
 {
 	obj_player.hsp = 0;
 	obj_player.movespeed = 0;

@@ -11,7 +11,7 @@ depth = -500;
 DEBUG = debug;
 if (parameter_count() > 2)
 	DEBUG = true;
-if (!DEBUG)
+if !DEBUG
 {
 	var n = parameter_count();
 	for (var i = 0; i < n; i++)
@@ -21,9 +21,9 @@ if (!DEBUG)
 			DEBUG = true;
 	}
 }
-if (!DEBUG)
+if !DEBUG
 	instance_destroy();
-if (DEBUG)
+if DEBUG
 {
 	active = false;
 	showoverlay = false;
@@ -49,12 +49,12 @@ if (DEBUG)
 	});
 	SET_BOSS_HP = new DebugCommand("set_boss_hp", "", "<int>", function(int)
 	{
-		with (obj_baddie)
+		with obj_baddie
 			elitehit = real(int);
 	});
 	SWITCH_CHAR = new DebugCommand("switch_char", "Switches character", "", function()
 	{
-		with (obj_player)
+		with obj_player
 		{
 			character = "P";
 			ispeppino = !ispeppino;
@@ -100,7 +100,7 @@ if (DEBUG)
 	});
 	LOCKCAMERA = new DebugCommand("lockcam", "", "", function()
 	{
-		with (obj_camera)
+		with obj_camera
 			lock = !lock;
 	});
 	BOSSINVINCIBLE = new DebugCommand("bossinv", "", "", function()
@@ -133,7 +133,7 @@ if (DEBUG)
 	});
 	GOTOEDITOR = new DebugCommand("editor", "", "", function()
 	{
-		with (obj_player)
+		with obj_player
 		{
 			targetRoom = editor_room;
 			targetDoor = "A";
@@ -142,7 +142,7 @@ if (DEBUG)
 	});
 	NOCLIP = new DebugCommand("noclip", "", "", function()
 	{
-		with (obj_player1)
+		with obj_player1
 			state = states.debugstate;
 	});
 	GIVEKEY = new DebugCommand("givekey", "", "", function()
@@ -151,7 +151,7 @@ if (DEBUG)
 	});
 	LOADTEST = new DebugCommand("loadtest", "", "", function()
 	{
-		with (obj_debugcontroller)
+		with obj_debugcontroller
 		{
 			DoCommand("player_room rm_testing4 A");
 			alarm[0] = 20;
@@ -159,7 +159,7 @@ if (DEBUG)
 	});
 	OTHERTEST = new DebugCommand("othertest", "", "", function()
 	{
-		with (obj_debugcontroller)
+		with obj_debugcontroller
 		{
 			DoCommand("showcollisions 1");
 			DoCommand("player_room rm_testing4 A");
@@ -169,14 +169,14 @@ if (DEBUG)
 	});
 	SETCOMBO = new DebugCommand("set_combo", "Set the combo", "<combo> <combotime:optional>", function(combo, combotime)
 	{
-		if (combo == undefined)
+		if combo == undefined
 			exit;
-		if (combotime == undefined)
+		if combotime == undefined
 			combotime = 60;
 		
 		global.combo = real(combo);
 		global.combotime = real(combotime);
-		with (obj_player)
+		with obj_player
 			supercharge = 10;
 	});
 	GIVEHEAT = new DebugCommand("giveheat", "Gives heat", "", function()
@@ -203,23 +203,23 @@ if (DEBUG)
 	});
 	PANIC = new DebugCommand("panic", "Toggles pizza time", "<fill>", function(fill)
 	{
-		if (fill != undefined && fill != "")
+		if fill != undefined && fill != ""
 			fill = get_number_string(fill);
 		else
 			fill = 4000;
 		
 		global.panic = !global.panic;
 		global.fill = fill;
-		if (global.panic)
+		if global.panic
 			obj_camera.alarm[1] = 60;
 		obj_tv.chunkmax = global.fill;
 	});
 	SHOW_COLLISIONS = new DebugCommand("showcollisions", "Shows the collisions", "<bool>", function(toggle)
 	{
-		if (toggle == undefined)
+		if toggle == undefined
 			exit;
 		toggle = get_bool(toggle);
-		if (toggle != undefined)
+		if toggle != undefined
 		{
 			showcollisions = toggle;
 			event_perform(ev_other, ev_room_start);
@@ -227,29 +227,29 @@ if (DEBUG)
 	});
 	SHOW_HUD = new DebugCommand("showhud", "Shows the HUD", "<bool>", function(toggle)
 	{
-		if (toggle == undefined)
+		if toggle == undefined
 			exit;
 		toggle = get_bool(toggle);
 		show_debug_message(!toggle);
-		if (toggle != undefined)
+		if toggle != undefined
 		{
 			showhud = toggle;
-			with (obj_tv)
+			with obj_tv
 			{
 				visible = toggle;
 				show_debug_message(visible);
 			}
-			with (obj_camera)
+			with obj_camera
 			{
 				visible = toggle;
 				show_debug_message(visible);
 			}
-			with (obj_roomname)
+			with obj_roomname
 			{
 				visible = toggle;
 				show_debug_message(visible);
 			}
-			with (obj_pigtotal)
+			with obj_pigtotal
 			{
 				visible = toggle;
 				show_debug_message(visible);
@@ -258,15 +258,15 @@ if (DEBUG)
 	});
 	PLAYER_ROOM = new DebugCommand("player_room", "Go to given room", "<targetRoom> <targetDoor>", function(_room, _door)
 	{
-		if (_room == undefined)
+		if _room == undefined
 			exit;
-		if (_door == undefined)
+		if _door == undefined
 			exit;
 		
 		_room = asset_get_index(_room);
-		if (_room == -1)
+		if _room == -1
 			exit;
-		with (obj_player)
+		with obj_player
 		{
 			targetRoom = _room;
 			targetDoor = _door;
@@ -275,16 +275,16 @@ if (DEBUG)
 	});
 	CAMERA_ZOOM = new DebugCommand("camera_zoom", "Zoom", "<targetzoom> <spd>", function(zoom, spd)
 	{
-		if (zoom == undefined)
+		if zoom == undefined
 			exit;
-		if (spd != undefined)
+		if spd != undefined
 			spd = get_number_string(spd);
 		
-		with (obj_camera)
+		with obj_camera
 		{
 			targetzoom = zoom;
 			targetzoom = clamp(targetzoom, 0, max_zoom);
-			if (spd != undefined)
+			if spd != undefined
 				zoomspd = abs(spd);
 		}
 	});
@@ -295,31 +295,31 @@ if (DEBUG)
 	});
 	HARDMODE = new DebugCommand("hardmode", "Toggles hardmode", "<bool>", function(toggle)
 	{
-		if (toggle == undefined)
+		if toggle == undefined
 			exit;
 		toggle = get_bool(toggle);
 		show_debug_message(!toggle);
-		if (toggle != undefined)
+		if toggle != undefined
 		{
 			global.hardmode = toggle;
-			with (obj_hardmode)
+			with obj_hardmode
 				event_perform(ev_other, ev_room_start);
 		}
 	});
 	PLAYER_SET_STATE = new DebugCommand("player_set_state", "Changes the player state", "<states.state>", function(_state)
 	{
-		if (_state == undefined)
+		if _state == undefined
 			exit;
 		_state = ds_map_find_value(state_map, _state);
 		if (!is_undefined(_state))
 		{
-			with (obj_player)
+			with obj_player
 			{
 				if (object_index == obj_player1 || global.coop)
 				{
 					state = _state;
 					var _spr = sprite_index;
-					switch (_state)
+					switch _state
 					{
 						case states.normal:
 							_spr = spr_idle;
@@ -371,7 +371,7 @@ if (DEBUG)
 		for (var i = 0; i < ds_list_size(command_list); i++)
 		{
 			var b = ds_list_find_value(command_list, i);
-			if (b.command_id == _id)
+			if b.command_id == _id
 				return b;
 		}
 		return undefined;
@@ -383,7 +383,7 @@ if (DEBUG)
 		if (array_length(commands) > 0)
 		{
 			var c = FindCommand(commands[0]);
-			if (c != undefined)
+			if c != undefined
 			{
 				TextList_Add(1, text);
 				array_delete(commands, 0, 1);
@@ -406,7 +406,7 @@ if (DEBUG)
 	function GetDouble(str)
 	{
 		var n = string_digits(str);
-		if (n != undefined && n != "")
+		if n != undefined && n != ""
 		{
 			n = real(str);
 			return n;
@@ -415,12 +415,12 @@ if (DEBUG)
 	}
 	function get_bool(str)
 	{
-		if (str == "true")
+		if str == "true"
 		{
 			str = true;
 			return str;
 		}
-		else if (str == "false")
+		else if str == "false"
 		{
 			str = false;
 			return str;

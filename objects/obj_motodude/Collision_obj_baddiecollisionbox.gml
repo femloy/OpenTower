@@ -1,5 +1,5 @@
 instance_destroy();
-with (other)
+with other
 {
 	instance_destroy(baddieID);
 	instance_destroy();

@@ -1,16 +1,16 @@
 function scr_pizzaball_normal()
 {
-	if (thrown)
+	if thrown
 	{
 		hsp = image_xscale * (movespeed + slopespeed);
-		with (obj_destructibles)
+		with obj_destructibles
 		{
 			if (place_meeting(x - other.hsp, y, other.id))
 				instance_destroy();
 			if (place_meeting(x, y - other.vsp, other.id))
 				instance_destroy();
 		}
-		with (obj_rollblock)
+		with obj_rollblock
 		{
 			if (place_meeting(x - other.hsp, y, other.id))
 				instance_destroy();
@@ -32,11 +32,11 @@ function scr_pizzaball_normal()
 			sprite_index = spr_pizzaball_hitwall;
 			image_index = 0;
 		}
-		if (grounded && !kicked)
+		if grounded && !kicked
 		{
-			if (movespeed > 2)
+			if movespeed > 2
 			{
-				if (jspd > 1 && sprite_index != spr_pizzaball_hitwall)
+				if jspd > 1 && sprite_index != spr_pizzaball_hitwall
 				{
 					sprite_index = spr_pizzaball_hitwall2;
 					image_index = 0;
@@ -48,9 +48,9 @@ function scr_pizzaball_normal()
 		}
 		else if (grounded || kicked)
 		{
-			if (movespeed > 0)
+			if movespeed > 0
 				movespeed -= deccel;
-			else if (slopespeed <= 0)
+			else if slopespeed <= 0
 				movespeed = 0;
 		}
 		if (place_meeting(x, y + 1, obj_current))
@@ -68,26 +68,26 @@ function scr_pizzaball_normal()
 		kicked = false;
 		hsp = image_xscale * (movespeed + slopespeed);
 		var _deccel = 0.1;
-		if (movespeed > 0)
+		if movespeed > 0
 			movespeed -= _deccel;
 		else
 			movespeed = 0;
 	}
-	if (jspd < 0)
+	if jspd < 0
 		jspd = 0;
-	if (floor(image_index) == (image_number - 1) && (sprite_index == spr_pizzaball_hitwall || sprite_index == spr_pizzaball_hitwall2))
+	if (floor(image_index) == image_number - 1 && (sprite_index == spr_pizzaball_hitwall || sprite_index == spr_pizzaball_hitwall2))
 		sprite_index = spr_pizzaball_idle2;
-	if (sprite_index != spr_pizzaball_hitwall && sprite_index != spr_pizzaball_hitwall2)
+	if sprite_index != spr_pizzaball_hitwall && sprite_index != spr_pizzaball_hitwall2
 	{
 		if (thrown || kicked)
 			sprite_index = spr_pizzaball_roll;
-		else if (chair)
+		else if chair
 			sprite_index = spr_pizzaball_idle1;
-		else if (sprite_index == spr_pizzaball_roll)
+		else if sprite_index == spr_pizzaball_roll
 		{
 			if (!scr_slope())
 			{
-				if (sprite_index != spr_pizzaball_hitwall2)
+				if sprite_index != spr_pizzaball_hitwall2
 				{
 					sprite_index = spr_pizzaball_hitwall2;
 					image_index = 0;
@@ -95,7 +95,7 @@ function scr_pizzaball_normal()
 				image_speed = 0.35;
 			}
 		}
-		else if (floor(image_index) == (image_number - 1))
+		else if floor(image_index) == image_number - 1
 			sprite_index = spr_pizzaball_idle2;
 	}
 }

@@ -1,8 +1,8 @@
 highest_y = -270;
 var _instY = collision_line(obj_player1.x, obj_player1.y, obj_player1.x, obj_player1.y - 270, obj_solid, false, true);
-if (_instY != -4)
+if _instY != -4
 	highest_y = -abs(obj_player1.y - (_instY.y + _instY.sprite_height)) - 32;
-if (random_buffer > 0)
+if random_buffer > 0
 	random_buffer--;
 else
 {

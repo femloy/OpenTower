@@ -1,6 +1,6 @@
-with (other)
+with other
 	holycross = 300;
-if (sprite_index != spr_crosspriest_pray)
+if sprite_index != spr_crosspriest_pray
 {
 	sprite_index = spr_crosspriest_pray;
 	image_index = 0;

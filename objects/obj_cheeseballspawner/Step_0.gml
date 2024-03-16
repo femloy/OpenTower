@@ -1,5 +1,5 @@
 refresh--;
-if (sprite_index != spr_giantslimethrow)
+if sprite_index != spr_giantslimethrow
 {
 	if (refresh <= 0 && distance_to_pos(x, y, obj_player.x, obj_player.y, 400, 400))
 	{
@@ -19,7 +19,7 @@ else if (!shot && floor(image_index) == 1)
 	}
 	shot = true;
 }
-else if (floor(image_index) == (image_number - 1))
+else if floor(image_index) == image_number - 1
 {
 	sprite_index = spr_giantslime;
 	refresh = 100;

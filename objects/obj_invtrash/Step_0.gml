@@ -1,6 +1,6 @@
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
-if (bombreset <= 0 && sprite_index == spr_invtrash_idle)
+if bombreset <= 0 && sprite_index == spr_invtrash_idle
 {
 	image_index = 0;
 	sprite_index = spr_invtrash_throw;
@@ -15,5 +15,5 @@ if (floor(image_index) == 2 && sprite_index == spr_invtrash_throw && bombreset <
 	}
 	bombreset = 100;
 }
-if (sprite_index == spr_invtrash_throw && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_invtrash_throw && floor(image_index) == image_number - 1)
 	sprite_index = spr_invtrash_idle;

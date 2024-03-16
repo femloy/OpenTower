@@ -1,11 +1,11 @@
 if (instance_exists(obj_player1))
 	player_index = obj_player1.player_index;
-if (!deactivated)
+if !deactivated
 {
 	swap_ready = false;
-	if (mode == 0)
+	if mode == 0
 	{
-		if (room == characterselect && global.swapmode)
+		if room == characterselect && global.swapmode
 		{
 			mode = 1;
 			player_input_device[0] = -2;
@@ -16,10 +16,10 @@ if (!deactivated)
 			for (var i = 0; i < gamepad_get_device_count(); i++)
 			{
 				var _index = scr_anybutton_pressed(i);
-				if (_index > -2)
+				if _index > -2
 				{
 					device_selected[0] = true;
-					if (player_input_device[0] != _index)
+					if player_input_device[0] != _index
 					{
 						for (var j = 0; j < gamepad_get_device_count(); j++)
 						{
@@ -33,25 +33,25 @@ if (!deactivated)
 			}
 		}
 	}
-	else if (mode == 1)
+	else if mode == 1
 	{
-		if (!global.swapmode)
+		if !global.swapmode
 			mode = 0;
 		swap_ready = false;
 		var _found = false;
 		for (var player = 0; player < 2; player++)
 		{
-			if (player_input_device[player] == -2)
+			if player_input_device[player] == -2
 				_found = true;
 		}
-		if (!_found)
+		if !_found
 			swap_ready = true;
 		for (player = 0; player < 2; player++)
 		{
 			for (i = 0; i < 8; i++)
 			{
 				_index = scr_button_pressed(i);
-				if (player_input_device[player] == -2 && _index >= -1)
+				if player_input_device[player] == -2 && _index >= -1
 				{
 					player_input_device[player] = _index;
 					trace("Player ", player, " connected at index: ", _index);
@@ -63,7 +63,7 @@ if (!deactivated)
 	}
 	for (i = 0; i < 2; i++)
 	{
-		if (player_input_device[i] >= 0)
+		if player_input_device[i] >= 0
 		{
 			if (!gamepad_is_connected(player_input_device[i]))
 			{
@@ -82,7 +82,7 @@ else
 	for (i = 0; i < 8; i++)
 	{
 		_index = scr_button_pressed(i);
-		if (player_input_device[device_to_reconnect] == -2 && _index >= -1)
+		if player_input_device[device_to_reconnect] == -2 && _index >= -1
 		{
 			player_input_device[device_to_reconnect] = _index;
 			deactivated = false;

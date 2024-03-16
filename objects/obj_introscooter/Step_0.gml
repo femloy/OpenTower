@@ -1,13 +1,13 @@
-switch (state)
+switch state
 {
 	case 1:
 		x += movespeed;
-		if (x >= 358)
+		if x >= 358
 		{
 			x = 358;
 			movespeed = 0;
 		}
-		if (boulder_x <= x)
+		if boulder_x <= x
 		{
 			boulder_index = 1;
 			state++;
@@ -18,9 +18,9 @@ switch (state)
 	case 2:
 		x += 16;
 		y += vsp;
-		if (vsp < 20)
+		if vsp < 20
 			vsp += grav;
-		if (y > ystart)
+		if y > ystart
 			y = ystart;
 		if (x > (room_width + 100))
 			state++;
@@ -28,7 +28,7 @@ switch (state)
 	case 3:
 		fade = Approach(fade, 1, 0.1);
 		fmod_event_one_shot("event:/sfx/intro/pepgustavointro");
-		if (fade >= 1)
+		if fade >= 1
 		{
 			state++;
 			fade = 1.5;
@@ -38,7 +38,7 @@ switch (state)
 				sprite_index = spr_towerintro;
 				depth = -6;
 			}
-			if (obj_player1.ispeppino && !global.swapmode)
+			if obj_player1.ispeppino && !global.swapmode
 			{
 				with (instance_create(246, 405, obj_introprop))
 				{
@@ -53,7 +53,7 @@ switch (state)
 			}
 			else
 			{
-				if (global.swapmode)
+				if global.swapmode
 				{
 					with (instance_create(130, 401, obj_introprop))
 					{
@@ -76,9 +76,9 @@ switch (state)
 		break;
 	case 4:
 		fade = Approach(fade, 0, 0.05);
-		if (introbuffer > 0)
+		if introbuffer > 0
 			introbuffer--;
-		else if (fade <= 0)
+		else if fade <= 0
 		{
 			state++;
 			introbuffer = 120;
@@ -86,16 +86,16 @@ switch (state)
 		break;
 	case 5:
 		whitefade = Approach(whitefade, 1, 0.1);
-		if (introbuffer > 0)
+		if introbuffer > 0
 			introbuffer--;
-		else if (whitefade >= 1)
+		else if whitefade >= 1
 			state++;
 		break;
 	case 6:
 		fade = Approach(fade, 1, 0.1);
 		if (fade >= 1 && !instance_exists(obj_fadeout))
 		{
-			with (obj_player)
+			with obj_player
 			{
 				targetRoom = tower_entrancehall;
 				targetDoor = "A";
@@ -107,5 +107,5 @@ switch (state)
 		}
 		break;
 }
-if (movespeed == 0)
+if movespeed == 0
 	boulder_x -= 20;

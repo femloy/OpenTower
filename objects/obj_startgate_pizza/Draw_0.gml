@@ -1,5 +1,5 @@
 draw_self();
-if (state > 0)
+if state > 0
 {
 	draw_set_valign(fa_top);
 	draw_set_halign(fa_left);
@@ -39,7 +39,7 @@ if (state > 0)
 		var _char_y = b[1];
 		var yy = (((i + 1) % 2) == 0) ? -5 : 0;
 		var ty = 0;
-		if (_char_y >= y)
+		if _char_y >= y
 			ty = text_y;
 		draw_text(xx, ((_char_y + yy) - 56) + ty, _char);
 		xx += (w / num);

@@ -1,14 +1,14 @@
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (hp <= 0 && state != states.arenaround)
+if hp <= 0 && state != states.arenaround
 {
-	if (!destroyed && !thrown && !destroyable)
+	if !destroyed && !thrown && !destroyable
 		boss_destroy(lastplayerid);
 }
-if (chooseparry_buffer > 0)
+if chooseparry_buffer > 0
 	chooseparry_buffer--;
 if ((state == states.handstandjump || state == states.crouchslide || state == states.skateboardturn || state == states.jetpack || state == states.jetpackspin || (state == states.pogo && pogochargeactive) || state == states.skateboard) && alarm[0] <= 0)
 	alarm[0] = 6;
-switch (state)
+switch state
 {
 	case states.arenaround:
 		grav = 0.5;

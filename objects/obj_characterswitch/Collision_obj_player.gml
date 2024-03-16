@@ -1,6 +1,6 @@
-with (other)
+with other
 {
-	if (character == "P")
+	if character == "P"
 		character = "N";
 	else
 		character = "P";

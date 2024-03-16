@@ -5,24 +5,24 @@ function scr_player_shotgunshoot()
 	hsp = xscale * movespeed;
 	if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope))
 		movespeed = 0;
-	if (move != 0)
+	if move != 0
 	{
-		if (move == xscale)
+		if move == xscale
 			movespeed = Approach(movespeed, 4, 0.25);
 		else
 			movespeed = Approach(movespeed, -8, 0.2);
 	}
 	else
 		movespeed = Approach(movespeed, 0, 0.1);
-	if (ispeppino)
+	if ispeppino
 	{
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
-			if (grounded)
+			if grounded
 				state = states.normal;
 			else
 				state = states.jump;
-			if (move == -xscale)
+			if move == -xscale
 			{
 				xscale = move;
 				dir = xscale;
@@ -30,24 +30,24 @@ function scr_player_shotgunshoot()
 				momemtum = true;
 			}
 		}
-		if (input_buffer_slap > 0 && image_index > (image_number - 3))
+		if (input_buffer_slap > 0 && image_index > image_number - 3)
 			scr_shotgunshoot();
 	}
 	else
 	{
-		if (sprite_index != spr_shotgunshoot && sprite_index != spr_playerN_minigundown)
+		if sprite_index != spr_shotgunshoot && sprite_index != spr_playerN_minigundown
 		{
 			image_index = 0;
 			sprite_index = spr_shotgunshoot;
 		}
-		if (minigunbuffer > 0)
+		if minigunbuffer > 0
 			minigunbuffer--;
-		else if (minigunshot > 0)
+		else if minigunshot > 0
 		{
 			minigunshot--;
 			minigunbuffer = 1.5;
 			fmod_event_one_shot_3d("event:/sfx/playerN/minigunshot", x, y);
-			if (sprite_index != spr_playerN_minigundown)
+			if sprite_index != spr_playerN_minigundown
 			{
 				with (instance_create(x + (xscale * 60), y + 27, 657))
 				{
@@ -75,18 +75,18 @@ function scr_player_shotgunshoot()
 				}
 			}
 		}
-		else if (sprite_index != spr_playerN_minigundown)
+		else if sprite_index != spr_playerN_minigundown
 		{
-			if (key_slap)
+			if key_slap
 				scr_shotgunshoot();
 			else
 			{
 				notification_push(notifs.shotgunblast_end, [room]);
-				if (grounded)
+				if grounded
 					state = states.normal;
 				else
 					state = states.jump;
-				if (move == -xscale)
+				if move == -xscale
 				{
 					xscale = move;
 					dir = xscale;
@@ -95,7 +95,7 @@ function scr_player_shotgunshoot()
 				}
 			}
 		}
-		else if (!key_down)
+		else if !key_down
 		{
 			notification_push(notifs.shotgunblast_end, [room]);
 			vsp = -8;

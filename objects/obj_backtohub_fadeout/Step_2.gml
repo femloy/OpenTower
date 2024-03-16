@@ -1,7 +1,7 @@
-if (fadein)
+if fadein
 {
 	fadealpha = Approach(fadealpha, 1, 0.03);
-	if (fadealpha >= 1)
+	if fadealpha >= 1
 	{
 		if (!instance_exists(obj_player1))
 			instance_activate_object(obj_player1);
@@ -18,6 +18,6 @@ if (fadein)
 else
 {
 	fadealpha = Approach(fadealpha, 0, 0.03);
-	if (fadealpha <= 0)
+	if fadealpha <= 0
 		instance_destroy();
 }

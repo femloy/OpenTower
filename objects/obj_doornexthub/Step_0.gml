@@ -45,9 +45,9 @@ if (instance_exists(obj_player2))
 		global.key_inv = false;
 	}
 }
-if (floor(image_index) == (image_number - 1))
+if floor(image_index) == image_number - 1
 	image_index = image_number - 1;
-if (_save)
+if _save
 {
 	unlocked = true;
 	ini_open_from_string(obj_savesystem.ini_str);
@@ -55,9 +55,9 @@ if (_save)
 	obj_savesystem.ini_str = ini_close();
 	gamesave_async_save();
 }
-if (sprite_index == spr_elevatoropening && floor(image_index) == (image_number - 1) && place_meeting(x, y, obj_player1) && !instance_exists(obj_jumpscare) && floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == states.victory)
+if (sprite_index == spr_elevatoropening && floor(image_index) == image_number - 1 && place_meeting(x, y, obj_player1) && !instance_exists(obj_jumpscare) && floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == states.victory)
 {
-	with (obj_player1)
+	with obj_player1
 	{
 		obj_player1.targetDoor = other.targetDoor;
 		obj_player1.targetRoom = other.targetRoom;

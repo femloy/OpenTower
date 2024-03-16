@@ -8,17 +8,17 @@ for (var i = 0; i < ds_grid_width(room_grid); i++)
 		var _drawNum = 0;
 		for (var xx = 0; xx < array_length(monster_room); xx++)
 		{
-			if (xx == 4)
+			if xx == 4
 			{
 				
 			}
-			else if (monster_pos[xx].x == i && monster_pos[xx].y == j && monster_active[xx])
+			else if monster_pos[xx].x == i && monster_pos[xx].y == j && monster_active[xx]
 				_drawNum += 1;
 		}
-		if (_room != -4)
+		if _room != -4
 		{
 			var _c = (_room != room_get_name(room)) ? c_white : 65280;
-			if (i == sound_pos.x && j == sound_pos.y)
+			if i == sound_pos.x && j == sound_pos.y
 				_c = 255;
 			draw_text_color(300 + (16 * i), 32 + (16 * j), string(_drawNum), _c, _c, _c, _c, 1);
 		}

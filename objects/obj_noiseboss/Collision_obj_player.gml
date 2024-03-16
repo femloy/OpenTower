@@ -1,12 +1,12 @@
 if ((state == states.mach2 && hsp != 0) || (state == states.pizzahead_spinningkick && image_index > 3) || (state == states.freefall && !grounded) || state == states.machslide || state == states.pogo || state == states.jetpack || state == states.bounce)
 {
-	if (other.flash)
+	if other.flash
 		other.flash = false;
 	scr_hurtplayer(other);
 }
 else if (((state == states.walk || (state == states.stun && !savedthrown)) && flickertime <= 0 && wastedhits == 7 && (other.instakillmove || other.state == states.handstandjump)) && !pizzahead)
 {
-	if (phase == 1)
+	if phase == 1
 		scr_boss_do_hurt_phase2(other);
 	else
 	{
@@ -23,7 +23,7 @@ else if (((state == states.walk || (state == states.stun && !savedthrown)) && fl
 		other.image_speed = 0.35;
 		other.sprite_index = spr_player_fightball;
 		other.image_index = 0;
-		if (doise)
+		if doise
 			scr_doise_end_start();
 	}
 }

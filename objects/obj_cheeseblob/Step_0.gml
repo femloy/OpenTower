@@ -1,6 +1,6 @@
 if (grounded || scr_solid(x + 1, y) || scr_solid(x - 1, y))
 {
-	repeat (8)
+	repeat 8
 	{
 		with (create_debris(x, y + 20, spr_slimedebris))
 		{

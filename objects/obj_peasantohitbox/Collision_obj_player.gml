@@ -1,6 +1,6 @@
-with (other)
+with other
 {
-	if (character == "V")
+	if character == "V"
 		scr_hurtplayer(id);
 	else if (state != states.mach3 && (state != states.chainsaw || tauntstoredstate != states.mach3) && state != states.boots && state != states.dead && state != states.rideweenie && state != states.gotoplayer)
 	{

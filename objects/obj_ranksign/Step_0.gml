@@ -1,14 +1,14 @@
-if (rank == "none")
+if rank == "none"
 	visible = false;
 else
 	visible = true;
-if (rank == "s")
+if rank == "s"
 	image_index = 0;
-if (rank == "a")
+if rank == "a"
 	image_index = 1;
-if (rank == "b")
+if rank == "b"
 	image_index = 2;
-if (rank == "c")
+if rank == "c"
 	image_index = 3;
-if (rank == "d")
+if rank == "d"
 	image_index = 4;

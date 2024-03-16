@@ -1,14 +1,14 @@
 function scr_destroy_tiles(_size, _layer, _spread = 0)
 {
 	var lay_id = layer_get_id(_layer);
-	if (lay_id != -1)
+	if lay_id != -1
 	{
 		var map_id = layer_tilemap_get_id(lay_id);
 		var w = abs(sprite_width) / _size;
 		var h = abs(sprite_height) / _size;
 		var ix = sign(image_xscale);
 		var iy = sign(image_yscale);
-		if (ix < 0)
+		if ix < 0
 			w++;
 		for (var yy = 0 - _spread; yy < (h + _spread); yy++)
 		{
@@ -64,7 +64,7 @@ function scr_cutoff()
 				var b = ds_list_find_value(list, j);
 				if (!is_undefined(b) && instance_exists(b))
 				{
-					with (b)
+					with b
 					{
 						if (!place_meeting(x, y, obj_solid))
 							instance_destroy();
@@ -72,15 +72,15 @@ function scr_cutoff()
 						{
 							var a = scr_cutoff_get_angle(b);
 							var da = a;
-							if (d[0] < 0)
+							if d[0] < 0
 								da = 0;
-							else if (d[0] > 0)
+							else if d[0] > 0
 								da = 180;
-							else if (d[1] < 0)
+							else if d[1] < 0
 								da = 270;
-							else if (d[1] > 0)
+							else if d[1] > 0
 								da = 90;
-							if (a == da)
+							if a == da
 								visible = true;
 						}
 					}

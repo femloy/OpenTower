@@ -9,7 +9,7 @@ switchstart = spr_peppinoswitch1;
 switchend = spr_peppinoswitch2;
 spr_sign = spr_gustavosign;
 collisioned = false;
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
 	sprite_index = spr_noiseswitch1;
 	switchstart = spr_noiseswitch1;

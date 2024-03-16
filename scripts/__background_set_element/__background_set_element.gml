@@ -53,7 +53,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 		if (string_pos(__fgstring, __layername) > 0)
 		{
 			var __slotchr = string_char_at(__layername, __fglen + 1);
-			if (__slotchr == "")
+			if __slotchr == ""
 				continue;
 			
 			var __slot = real( __slotchr );
@@ -66,7 +66,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 		else if (string_pos(__bgstring, __layername) > 0)
 		{
 			var __slotchr = string_char_at(__layername, __bglen + 1);
-			if (__slotchr == "")
+			if __slotchr == ""
 				continue;
 			
 			var __slot = real( __slotchr );
@@ -86,10 +86,10 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 		{
 			var __currdepth = layer_get_depth(__layerlist[__i]);
 		
-			if (__currdepth < __nearestdepth)
+			if __currdepth < __nearestdepth
 				__nearestdepth = __currdepth;
 			
-			if (__currdepth > __farthestdepth)
+			if __currdepth > __farthestdepth
 				__farthestdepth = __currdepth;
 		}
 	}
@@ -105,10 +105,10 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 
 	for(__i = 0; __i < 8; __i++)
 	{
-		if (__slots[__i] != -1)
+		if __slots[__i] != -1
 		{
 			var __depth = 0;
-			if (__isforeground[__i] == true)
+			if __isforeground[__i] == true
 			{
 				__depth = __nearestdepth - (__i * __depthinc);
 			}
@@ -121,7 +121,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 		}
 	}
 
-	if (__collayer != -1)
+	if __collayer != -1
 	{
 		layer_depth(__collayer, __farthestdepth);
 	}
@@ -130,7 +130,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 	// Construct our layer name and depth
 	var __layername;
 	var __layerdepth;
-	if (__bind == -1)
+	if __bind == -1
 	{
 		// This is the background colour layer
 		__layername = __colstring;
@@ -138,7 +138,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 	}
 	else
 	{
-		if (__fore == true)
+		if __fore == true
 		{
 			__layername = __fgstring + string(__bind);
 			__layerdepth = __nearestdepth - (__bind * __depthinc);
@@ -152,7 +152,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 
 	// If we already have a background in this slot, nuke it
 	var __layerid;
-	if (__bind == -1)
+	if __bind == -1
 	{
 		__layerid = __collayer;
 	}
@@ -161,7 +161,7 @@ function __background_set_element(bind, vis, fore, back, x, y, htiled, vtiled, x
 		__layerid = __slots[__bind];
 	}
 	
-	if (__layerid != -1)
+	if __layerid != -1
 	{
 		layer_destroy(__layerid);
 	}

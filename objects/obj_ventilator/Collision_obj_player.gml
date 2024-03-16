@@ -1,9 +1,9 @@
-with (other)
+with other
 {
-	if (vsp > -5)
+	if vsp > -5
 		vsp = Approach(vsp, -5, 5);
 	noisewalljump = 0;
-	if (state == states.jump)
+	if state == states.jump
 		sprite_index = spr_machfreefall;
 	jumpstop = true;
 	if ((state == states.machslide || state == states.freefall) || (state == states.tumble && sprite_index != spr_dive))

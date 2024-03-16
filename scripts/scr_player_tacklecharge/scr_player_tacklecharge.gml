@@ -1,6 +1,6 @@
 function scr_player_tacklecharge()
 {
-	if (windingAnim < 2000)
+	if windingAnim < 2000
 		windingAnim++;
 	if (!place_meeting(x, y + 1, obj_railparent))
 		hsp = xscale * movespeed;
@@ -13,16 +13,16 @@ function scr_player_tacklecharge()
 	move = key_right + key_left;
 	movespeed = 10;
 	crouchslideAnim = true;
-	if (movespeed < 24 && move == xscale)
+	if movespeed < 24 && move == xscale
 		movespeed += 0.05;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5)
+	if !key_jump2 && jumpstop == 0 && vsp < 0.5
 	{
 		vsp /= 20;
 		jumpstop = true;
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		jumpstop = false;
-	if (input_buffer_jump > 0 && can_jump)
+	if input_buffer_jump > 0 && can_jump
 	{
 		input_buffer_jump = 0;
 		image_index = 0;
@@ -32,11 +32,11 @@ function scr_player_tacklecharge()
 	}
 	if (scr_solid(x + hsp, y) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
-		if (baddiegrabbedID != obj_null)
+		if baddiegrabbedID != obj_null
 		{
 			if (baddiegrabbedID.object_index == obj_player1 || baddiegrabbedID.object_index == obj_player2)
 			{
-				with (baddiegrabbedID)
+				with baddiegrabbedID
 				{
 					other.thrown = true;
 					instance_create(x, y, obj_slapstar);
@@ -63,26 +63,26 @@ function scr_player_tacklecharge()
 	}
 	sprite_index = spr_charge;
 	image_speed = 0.65;
-	if (key_down && grounded)
+	if key_down && grounded
 	{
 		sprite_index = spr_crouchslip;
-		if (character == "P")
+		if character == "P"
 			machhitAnim = false;
 		state = states.crouchslide;
 	}
-	if (!key_attack && move != xscale && grounded)
+	if !key_attack && move != xscale && grounded
 	{
 		image_index = 0;
 		state = states.machslide;
 		sprite_index = spr_machslidestart;
 	}
-	if (move == -xscale && grounded)
+	if move == -xscale && grounded
 	{
 		image_index = 0;
 		state = states.machslide;
 		sprite_index = spr_machslideboost;
 	}
-	if (move == xscale && !key_attack && grounded)
+	if move == xscale && !key_attack && grounded
 		state = states.normal;
 	if (!instance_exists(dashcloudid) && grounded)
 	{

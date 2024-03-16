@@ -32,14 +32,14 @@ setVibration = function(player, left_motor, right_motor, force)
 {
 	vibration[player][0] = left_motor;
 	vibration[player][1] = right_motor;
-	if (force != undefined)
+	if force != undefined
 		vibration[player][2] = force;
 }
 function CheckUsedIndex(index)
 {
 	for (var _x = 0; _x < 2; _x++)
 	{
-		if (player_input_device[_x] == index)
+		if player_input_device[_x] == index
 			return true;
 	}
 	return false;

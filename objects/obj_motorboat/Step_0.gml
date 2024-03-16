@@ -1,7 +1,7 @@
-switch (state)
+switch state
 {
 	case states.normal:
-		with (obj_player)
+		with obj_player
 		{
 			if (other.state != states.walk && state == states.normal && vsp > 0 && key_up && place_meeting(x, y + 1, other))
 			{
@@ -9,7 +9,7 @@ switch (state)
 				hsp = 0;
 				vsp = 0;
 				sprite_index = spr_idle;
-				with (other)
+				with other
 				{
 					playerid = other.id;
 					playerxoffset = other.x - x;
@@ -27,10 +27,10 @@ switch (state)
 		playerid.vsp = 0;
 		if (place_meeting(x + dir, y, obj_solid))
 		{
-			with (playerid)
+			with playerid
 				state = states.normal;
 			state = states.normal;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 5;
 				shake_mag_acc = 5 / room_speed;

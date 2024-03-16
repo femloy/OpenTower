@@ -1,26 +1,26 @@
 var b = false;
-with (obj_bosscontroller)
+with obj_bosscontroller
 {
-	if (state == states.arenaintro)
+	if state == states.arenaintro
 		b = false;
 }
-with (obj_noisey)
+with obj_noisey
 	b = false;
-with (obj_noiseboss)
+with obj_noiseboss
 {
 	if (state == states.arenaintro || state == states.stun || wastedhits >= 6)
 		b = false;
 }
 if (instance_exists(rockID))
 	b = false;
-if (b)
+if b
 {
-	if (spawnbuffer > 0)
+	if spawnbuffer > 0
 		spawnbuffer--;
 	else
 	{
 		spawnbuffer = spawnmax;
-		if (obj_player1.ispeppino && !global.swapmode)
+		if obj_player1.ispeppino && !global.swapmode
 		{
 			with (instance_create(disx1, -64, obj_noisey))
 			{

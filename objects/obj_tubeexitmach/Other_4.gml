@@ -1,4 +1,4 @@
-switch (object_index)
+switch object_index
 {
 	case obj_tubeexitdownexit:
 		tube_angle = 270;

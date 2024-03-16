@@ -1,24 +1,24 @@
 function get_dark(blend, use_dark, use_position = false, posX = 0, posY = 0)
 {
-	if (use_dark)
+	if use_dark
 	{
-		if (room == boss_vigilante)
+		if room == boss_vigilante
 			blend = make_color_rgb(247, 109, 22);
 		var d = room_width * room_height;
 		var b = d;
 		var bb = b;
-		with (obj_lightsource)
+		with obj_lightsource
 		{
 			if (object_index != obj_lightsource_attach || instance_exists(objectID))
 			{
-				if (!use_position)
+				if !use_position
 					var dis = distance_to_object(other);
 				else
 					dis = distance_between_points(x, y, posX, posY);
-				if (dis < d)
+				if dis < d
 				{
 					bb = dis / distance;
-					if (bb < b)
+					if bb < b
 					{
 						b = bb;
 						d = dis;
@@ -34,11 +34,11 @@ function get_dark(blend, use_dark, use_position = false, posX = 0, posY = 0)
 		var r = (color_get_red(blend) - t) + a;
 		var g = (color_get_green(blend) - t) + a;
 		b = (color_get_blue(blend) - t) + a;
-		if (r < 0)
+		if r < 0
 			r = 0;
-		if (g < 0)
+		if g < 0
 			g = 0;
-		if (b < 0)
+		if b < 0
 			b = 0;
 		return make_color_rgb(r, g, b);
 	}
@@ -73,7 +73,7 @@ function enemy_is_swingding(baddieid)
 }
 function draw_enemy(healthbar, palette, color = c_white)
 {
-	if (object_index == obj_swapplayergrabbable)
+	if object_index == obj_swapplayergrabbable
 	{
 		shader_set(global.Pal_Shader);
 		var b = get_dark(image_blend, obj_drawcontroller.use_dark);
@@ -88,29 +88,29 @@ function draw_enemy(healthbar, palette, color = c_white)
 	var _stun = 0;
 	if ((state == states.stun && thrown == 0 && object_index != obj_peppinoclone) || state == states.pizzaheadjump || (state == states.supergrab && sprite_index == stunfallspr))
 		_stun = 25;
-	if (state == states.pizzaheadjump && object_index == obj_gustavograbbable)
+	if state == states.pizzaheadjump && object_index == obj_gustavograbbable
 		_stun = 0;
 	
 	if (visible && object_index != obj_pizzaball && object_index != obj_fakesanta && bbox_in_camera(view_camera[0], 32))
 	{
 		var c = image_blend;
-		if (elite)
+		if elite
 			c = c_yellow;
-		if (elitegrab)
+		if elitegrab
 			c = c_green;
-		if (color != c_white)
+		if color != c_white
 			c = color;
 		var b = get_dark(c, obj_drawcontroller.use_dark);
-		if (object_index == obj_peppinoclone)
+		if object_index == obj_peppinoclone
 		{
 			shader_set(global.Pal_Shader);
 			pal_swap_set(spr_peppalette, 1, false);
 		}
-		else if (usepalette && palette)
+		else if usepalette && palette
 		{
 			shader_set(global.Pal_Shader);
 			pal_swap_set(spr_peppalette, 0);
-			if (!global.swapmode)
+			if !global.swapmode
 			{
 				if (object_index == obj_fakepepboss || object_index == obj_gustavograbbable) && obj_player1.ispeppino
 					pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale * xscale, image_yscale * yscale, global.palettetexture);
@@ -123,7 +123,7 @@ function draw_enemy(healthbar, palette, color = c_white)
 			pal_swap_set(spr_palette, paletteselect, false);
 		}
 		var _ys = 1;
-		if (state == states.grabbed)
+		if state == states.grabbed
 		{
 			if (enemy_is_superslam(id))
 			{
@@ -132,15 +132,15 @@ function draw_enemy(healthbar, palette, color = c_white)
 			}
 		}
 		draw_sprite_ext(sprite_index, image_index, x, y + _stun, xscale * image_xscale, yscale * _ys, angle, b, image_alpha);
-		if (healthbar)
+		if healthbar
 		{
-			if (hp > maxhp)
+			if hp > maxhp
 				maxhp = hp;
 			draw_healthbar(x - 16, y - 50, x + 16, y - 45, (hp / maxhp) * 100, 0, 255, 255, 0, true, true);
 		}
-		if (object_index == obj_fakepepboss)
+		if object_index == obj_fakepepboss
 		{
-			if (miniflash)
+			if miniflash
 			{
 				pal_swap_set(spr_peppalette, 14, false);
 				draw_sprite_ext(sprite_index, image_index, x, y + _stun, xscale * image_xscale, yscale * _ys, angle, b, image_alpha);
@@ -151,13 +151,13 @@ function draw_enemy(healthbar, palette, color = c_white)
 			pattern_reset();
 			shader_reset();
 		}
-		if (object_index == obj_hamkuff)
+		if object_index == obj_hamkuff
 		{
 			if (state == states.blockstance && instance_exists(playerid))
 			{
 				var x1 = x + (6 * image_xscale);
 				var y1 = y + 29;
-				if (sprite_index == spr_hamkuff_chain2)
+				if sprite_index == spr_hamkuff_chain2
 				{
 					x1 = x + (15 * image_xscale);
 					y1 = y + 33;
@@ -178,7 +178,7 @@ function draw_superslam_enemy()
 {
 	if (state == states.superslam && floor(image_index) >= 5 && floor(image_index) <= 7 && instance_exists(baddiegrabbedID))
 	{
-		with (baddiegrabbedID)
+		with baddiegrabbedID
 			draw_enemy(global.kungfu, true);
 	}
 }
@@ -187,7 +187,7 @@ function draw_player()
 	if (instance_exists(obj_swapgusfightball))
 	{
 		var _use_dark = other.use_dark;
-		with (obj_swapgusfightball)
+		with obj_swapgusfightball
 		{
 			var b = get_dark(image_blend, _use_dark);
 			var _info = [
@@ -206,7 +206,7 @@ function draw_player()
 		}
 		exit;
 	}
-	if (!ispeppino && state == states.trashjumpprep)
+	if !ispeppino && state == states.trashjumpprep
 		exit;
 	
 	var b = get_dark(image_blend, other.use_dark);
@@ -220,10 +220,10 @@ function draw_player()
 		ps = info.paletteselect;
 		spr = info.spr_palette;
 	}
-	if (object_index == obj_player1)
+	if object_index == obj_player1
 		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, xscale * scale_xs, yscale * scale_ys, pattern);
 	
-	if (isgustavo)
+	if isgustavo
 		spr = spr_ratmountpalette;
 	if (!ispeppino && instance_exists(obj_pizzaface_thunderdark))
 		spr = spr_noisepalette_rage;
@@ -236,10 +236,10 @@ function draw_player()
 		draw_sprite_ext(sprite_index, image_index, x, y, xscale * scale_xs, yscale * scale_ys, angle, b, image_alpha);
 	}
 	draw_superslam_enemy();
-	if (global.pistol)
+	if global.pistol
 	{
 		pal_swap_set(spr_peppalette, 0, false);
-		if (pistolcharge >= 4)
+		if pistolcharge >= 4
 			draw_sprite(spr_revolvercharge, pistolcharge, x, y - 70);
 	}
 	pattern_reset();

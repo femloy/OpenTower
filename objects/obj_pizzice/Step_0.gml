@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -24,9 +24,9 @@ switch (state)
 		break;
 	case states.pizzagoblinthrow:
 		var is = 1.25;
-		if (image_speed < is)
+		if image_speed < is
 			image_speed = Approach(image_speed, is, 0.015);
-		else if (cooldown > 0)
+		else if cooldown > 0
 			cooldown--;
 		else
 		{
@@ -49,7 +49,7 @@ switch (state)
 					image_yscale = b[1];
 				}
 			}
-			if (shot <= 0)
+			if shot <= 0
 			{
 				bombreset = 180;
 				state = states.stun;
@@ -75,17 +75,17 @@ switch (state)
 		scr_enemy_ghostpossess();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (bombreset > 0 && state != states.stun)
+if bombreset > 0 && state != states.stun
 	bombreset--;
 else if (state == states.walk && distance_to_object(obj_player) < 250)
 {
@@ -95,11 +95,11 @@ else if (state == states.walk && distance_to_object(obj_player) < 250)
 	image_speed = 0.25;
 	shot = 3;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

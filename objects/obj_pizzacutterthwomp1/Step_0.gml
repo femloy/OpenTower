@@ -1,5 +1,5 @@
-if (y == yup)
+if y == yup
 	vsp = 1;
-if (y == ydown)
+if y == ydown
 	vsp = -1;
 scr_collide();

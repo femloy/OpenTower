@@ -1,8 +1,8 @@
-if (destroyable && elitehit <= 0)
+if destroyable && elitehit <= 0
 {
 	global.pistol = false;
 	scr_pizzaface_p2_destroy_sounds();
-	with (obj_player)
+	with obj_player
 	{
 		sprite_index = spr_idle;
 		pistolanim = -4;
@@ -25,7 +25,7 @@ if (destroyable && elitehit <= 0)
 		image_index = 0;
 		introbuffer = 120;
 	}
-	with (obj_player)
+	with obj_player
 	{
 		hsp = 0;
 		vsp = 0;

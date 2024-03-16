@@ -1,4 +1,4 @@
-if (debris)
+if debris
 {
 	with (instance_create(x, y, obj_rancherbullet_debris))
 	{

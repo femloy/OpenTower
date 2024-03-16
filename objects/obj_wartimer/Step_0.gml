@@ -1,4 +1,4 @@
-if (room == rank_room)
+if room == rank_room
 {
 	visible = false;
 	instance_destroy();

@@ -17,16 +17,16 @@ function noise_start_round()
 }
 function mrstick_start_round()
 {
-	with (obj_mrstickboss)
+	with obj_mrstickboss
 	{
 		var b = boss_array[phase - 1];
-		if (b != -4)
+		if b != -4
 		{
 			var tx = (x > (room_width / 2)) ? 1 : -1;
 			var xx = tx * 32;
 			with (instance_create(x + xx, y, b[0]))
 			{
-				if (object_index == obj_vigilanteboss)
+				if object_index == obj_vigilanteboss
 					honor = false;
 				create_particle(x, y, particle.genericpoofeffect, 0);
 				important = false;
@@ -39,9 +39,9 @@ function mrstick_start_round()
 }
 function mrstick_end_round()
 {
-	with (par_boss)
+	with par_boss
 	{
-		if (object_index != obj_mrstickboss)
+		if object_index != obj_mrstickboss
 		{
 			create_particle(x, y, particle.genericpoofeffect, 0);
 			instance_destroy();

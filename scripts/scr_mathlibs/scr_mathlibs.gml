@@ -98,12 +98,12 @@ function calculate_jump_velocity_alt(targetx, targety, spd, grav)
 	var yy = targety - y;
 	var g = grav;
 	var tmp = power(spd, 4) - (g * ((g * power(xx, 2)) + (2 * yy * power(spd, 2))));
-	if (tmp > 0)
+	if tmp > 0
 	{
-		if (xx == 0)
+		if xx == 0
 		{
 			var a1 = pi / 2;
-			if (yy < 0)
+			if yy < 0
 				var a2 = -pi / 2;
 			else
 				a2 = pi / 2;
@@ -115,7 +115,7 @@ function calculate_jump_velocity_alt(targetx, targety, spd, grav)
 		}
 		hsp = cos(a1) * spd * 1.2;
 		vsp = cos(a2) * spd;
-		if (vsp > 0)
+		if vsp > 0
 			vsp *= -1;
 		hsp = abs(hsp) * sign(xx);
 	}

@@ -1,7 +1,7 @@
 if (!instance_exists(obj_noiseboss))
 {
-    instance_destroy(id, false);
-    exit;
+	instance_destroy(id, false);
+	exit;
 }
 hsp = 0;
 vsp = 0;

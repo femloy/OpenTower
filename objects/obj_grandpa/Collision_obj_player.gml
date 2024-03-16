@@ -1,6 +1,6 @@
-if (other.ispeppino && !global.swapmode)
+if other.ispeppino && !global.swapmode
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (state == states.knightpep || state == states.knightpepslopes)
 		{
@@ -8,11 +8,11 @@ if (other.ispeppino && !global.swapmode)
 			instance_destroy(other);
 		}
 	}
-	if (other.state != states.ghost)
+	if other.state != states.ghost
 	{
 		sprite_index = spr_grandpa_punch;
 		image_index = 0;
-		if (!global.swapmode)
+		if !global.swapmode
 		{
 			other.hurted = false;
 			other.flash = false;

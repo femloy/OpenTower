@@ -1,5 +1,5 @@
 var gate = id;
-with (other)
+with other
 {
 	if (place_meeting(x, y, other) && key_up && grounded && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.victory && state != states.comingoutdoor && spotlight == 1)
 	{
@@ -21,9 +21,9 @@ with (other)
 		obj_player2.backtohubstartx = x;
 		obj_player2.backtohubstarty = y;
 		obj_player2.backtohubroom = room;
-		if (global.coop == 1)
+		if global.coop == 1
 		{
-			with (obj_player2)
+			with obj_player2
 			{
 				x = obj_player1.x;
 				y = obj_player1.y;
@@ -38,17 +38,17 @@ with (other)
 }
 if ((floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == states.victory) || (floor(obj_player2.image_index) == (obj_player2.image_number - 1) && obj_player2.state == states.victory))
 {
-	with (obj_player)
+	with obj_player
 	{
-		if (other.level == "snickchallenge")
+		if other.level == "snickchallenge"
 		{
 			global.wave = 0;
 			global.maxwave = ((global.minutes * 60) + global.seconds) * 60;
-			if (global.panicbg)
+			if global.panicbg
 				scr_panicbg_init();
 			global.snickchallenge = true;
 			global.collect = 10000;
-			with (obj_camera)
+			with obj_camera
 			{
 				alarm[1] = 60;
 				global.seconds = 59;
@@ -58,11 +58,11 @@ if ((floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_pla
 		obj_music.fadeoff = 0;
 		targetDoor = other.targetDoor;
 		targetRoom = other.targetRoom;
-		if (targetRoom == tower_finalhallway)
+		if targetRoom == tower_finalhallway
 			global.exitrank = true;
-		if (gate.level != "tutorial")
+		if gate.level != "tutorial"
 		{
-			if (gate.object_index != obj_bossdoor)
+			if gate.object_index != obj_bossdoor
 			{
 				if (!instance_exists(obj_titlecard))
 				{

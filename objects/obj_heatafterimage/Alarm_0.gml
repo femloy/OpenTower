@@ -10,7 +10,7 @@ else
 	visible = obj_player1.visible;
 	is_visible = true;
 }
-if (room == rank_room)
+if room == rank_room
 	visible = false;
 if (instance_exists(obj_pizzaface_thunderdark))
 	alpha = 0.2;

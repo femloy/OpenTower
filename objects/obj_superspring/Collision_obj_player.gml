@@ -1,7 +1,7 @@
 var v = id;
-with (other)
+with other
 {
-	if (state != states.Sjump && state != states.gotoplayer && state != states.actor)
+	if state != states.Sjump && state != states.gotoplayer && state != states.actor
 	{
 		if (state == states.knightpep || state == states.knightpepattack || state == states.knightpepslopes)
 		{
@@ -18,12 +18,12 @@ with (other)
 			with (instance_create(x, y, obj_knightdebris))
 				image_index = 5;
 		}
-		if (state == states.bombpep)
+		if state == states.bombpep
 			instance_create(x, y, obj_bombexplosion);
 		x = other.x;
-		if (other.image_yscale == 1)
+		if other.image_yscale == 1
 			instance_create(x, y - 20, obj_bangeffect);
-		if (other.image_yscale == 1)
+		if other.image_yscale == 1
 		{
 			sprite_index = spr_superspringplayer;
 			state = states.Sjump;
@@ -35,12 +35,12 @@ with (other)
 			vsp = 10;
 			sprite_index = spr_rockethitwall;
 		}
-		if (other.image_yscale == -1)
+		if other.image_yscale == -1
 		{
 			if ((other.sprite_index == spr_bottle_idle || other.sprite_index == spr_bottle_activate) && !other.bottlepop)
 			{
 				other.bottlepop = true;
-				repeat (5)
+				repeat 5
 					instance_create(other.x, other.y + 40, obj_bubbles);
 				fmod_event_one_shot_3d("event:/sfx/misc/bottlepop", x, y);
 			}
@@ -51,7 +51,7 @@ with (other)
 			image_yscale = v.image_yscale;
 		}
 		other.image_index = 0;
-		if (other.sprite_index != other.activatespr)
+		if other.sprite_index != other.activatespr
 			fmod_event_one_shot_3d("event:/sfx/misc/superspring", x, y);
 		other.sprite_index = other.activatespr;
 	}

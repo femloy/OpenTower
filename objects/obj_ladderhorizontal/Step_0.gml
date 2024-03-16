@@ -7,11 +7,11 @@ if (place_meeting(x + hsp, y, obj_solid))
 	dir *= -1;
 }
 x += hsp;
-if (hooked)
+if hooked
 {
-	with (obj_player)
+	with obj_player
 	{
-		if (state == states.ladder && hooked)
+		if state == states.ladder && hooked
 		{
 			x = other.x + 16;
 			y = other.y + 40;
@@ -19,14 +19,14 @@ if (hooked)
 		}
 	}
 }
-if (destroy)
+if destroy
 {
 	var b = false;
-	with (obj_cowstampede)
+	with obj_cowstampede
 	{
 		if ((image_xscale < 0 && x > (room_width * 0.3)) || (image_xscale > 0 && x < (room_width * 0.7)))
 			b = true;
 	}
-	if (!b)
+	if !b
 		instance_destroy();
 }

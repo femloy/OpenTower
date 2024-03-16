@@ -1,6 +1,6 @@
 function scr_timedgate_object(list)
 {
-	if (timedgate)
+	if timedgate
 	{
 		if (ds_list_find_index(list, id) == -1)
 			ds_list_add(list, id);
@@ -15,7 +15,7 @@ function scr_timedgate_object(list)
 }
 function timedgate_trigger()
 {
-	with (obj_timedgatespawn)
+	with obj_timedgatespawn
 	{
 		if (!instance_exists(contentID))
 		{
@@ -32,7 +32,7 @@ function timedgate_trigger()
 }
 function timedgate_add_objects(object, list)
 {
-	with (object)
+	with object
 	{
 		if (!variable_instance_exists(id, "timedgate"))
 			timedgate = false;

@@ -115,31 +115,31 @@ add_boss_achievements("pizzaface", boss_pizzafacehub, spr_achievement_bosses, 4)
 
 add_achievement_notify("pal_unfunny", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.combo_end && arr[0] >= 75)
+	if type == notifs.combo_end && arr[0] >= 75
 		palette_unlock(name, "unfunny", 3);
 }, false, "Palettes", "unfunny");
 
 add_achievement_notify("pal_mooney", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
-	if (global.swapmode)
+	if global.swapmode
 		exit;
 	var type = data[0];
-	if (type == notifs.mrmooney_donated)
+	if type == notifs.mrmooney_donated
 		palette_unlock(name, "mooney", 15);
 }, false, "Palettes", "mooney");
 
 add_achievement_notify("pal_sage", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.end_level)
+	if type == notifs.end_level
 	{
 		var _found = false;
 		ini_open_from_string(obj_savesystem.ini_str);
@@ -153,17 +153,17 @@ add_achievement_notify("pal_sage", -4, function(data)
 			}
 		}
 		ini_close();
-		if (!_found && global.file_minutes < 60)
+		if !_found && global.file_minutes < 60
 			palette_unlock(name, "sage", 5);
 	}
 }, false, "Palettes", "sage");
 
 add_achievement_notify("pal_money", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.end_level)
+	if type == notifs.end_level
 	{
 		var _money = 0;
 		ini_open_from_string(obj_savesystem.ini_str);
@@ -179,32 +179,32 @@ add_achievement_notify("pal_money", -4, function(data)
 		_money -= ini_read_real("w1stick", "reduction", 0);
 		_money -= ini_read_real("w2stick", "reduction", 0);
 		ini_close();
-		if (_money >= 300)
+		if _money >= 300
 			palette_unlock(name, "money", 4);
 	}
 }, false, "Palettes", "money");
 
 add_achievement_notify("pal_blood", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.end_level)
+	if type == notifs.end_level
 	{
 		ini_open_from_string(obj_savesystem.ini_str);
 		var _count = ini_read_real("Game", "enemies", 0);
 		ini_close();
-		if (_count >= 1000)
+		if _count >= 1000
 			palette_unlock(name, "blood", 6);
 	}
 }, false, "Palettes", "blood");
 
 add_achievement_notify("pal_tv", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.end_level)
+	if type == notifs.end_level
 	{
 		ini_open_from_string(obj_savesystem.ini_str);
 		var _found = false;
@@ -224,14 +224,14 @@ add_achievement_notify("pal_tv", -4, function(data)
 		}
 		ds_map_destroy(map);
 		ini_close();
-		if (!_found)
+		if !_found
 			palette_unlock(name, "tv", 7);
 	}
 }, false, "Palettes", "tv");
 
 add_achievement_notify("pal_dark", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
@@ -246,26 +246,26 @@ add_achievement_notify("pal_dark", -4, function(data)
 				_found = true;
 		}
 		ini_close();
-		if (!_found)
+		if !_found
 			palette_unlock(name, "dark", 8);
 	}
 }, false, "Palettes", "dark");
 
 add_achievement_notify("pal_shitty", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.crawl_in_shit)
+	if type == notifs.crawl_in_shit
 		palette_unlock(name, "shitty", 9);
 }, false, "Palettes", "shitty");
 
 add_achievement_notify("pal_golden", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.end_level)
+	if type == notifs.end_level
 	{
 		ini_open_from_string(obj_savesystem.ini_str);
 		var _found = false;
@@ -285,7 +285,7 @@ add_achievement_notify("pal_golden", -4, function(data)
 		}
 		ds_map_destroy(map);
 		ini_close();
-		if (!_found)
+		if !_found
 			palette_unlock(name, "golden", 10);
 	}
 }, false, "Palettes", "golden");
@@ -295,10 +295,10 @@ add_achievement_notify("pal_garish", function()
 	achievement_add_variable("garish_count", 0, true, false);
 }, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.taunt)
+	if type == notifs.taunt
 	{
 		achievement_get_variable("garish_count").value += 1;
 		if (achievement_get_variable("garish_count").value >= 50)
@@ -309,31 +309,31 @@ add_achievement_notify("pal_garish", function()
 // PATTERNS
 add_achievement_notify("pal_funny", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.combo_end && arr[0] >= 70 && arr[0] < 75)
+	if type == notifs.combo_end && arr[0] >= 70 && arr[0] < 75
 		palette_unlock(name, "funny", 12, spr_peppattern1);
 }, false, "Palettes", "funny");
 
 add_achievement_notify("pal_itchy", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
 	
-	if (global.leveltosave == "street" && type == notifs.hurt_player && arr[2] == obj_grandpa)
+	if global.leveltosave == "street" && type == notifs.hurt_player && arr[2] == obj_grandpa
 		palette_unlock(name, "itchy", 12, spr_peppattern2);
 }, false, "Palettes", "itchy");
 
 add_achievement_notify("pal_pizza", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.firsttime_ending)
+	if type == notifs.firsttime_ending
 		palette_unlock(name, "pizza", 12, spr_peppattern3);
 }, false, "Palettes", "pizza");
 
@@ -342,10 +342,10 @@ add_achievement_notify("pal_stripes", function()
 	achievement_add_variable("stripes_count", 0, true, false);
 }, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.rattumble_dead)
+	if type == notifs.rattumble_dead
 	{
 		achievement_get_variable("stripes_count").value += 1;
 		if (achievement_get_variable("stripes_count").value >= 30)
@@ -355,10 +355,10 @@ add_achievement_notify("pal_stripes", function()
 
 add_achievement_notify("pal_goldemanne", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.unlocked_achievement)
+	if type == notifs.unlocked_achievement
 	{
 		var lvl = ["entrance", "medieval", "ruin", "dungeon", "badland", "graveyard", "farm", "saloon", "plage", "forest", "space", "minigolf", "street", "sewer", "industrial", "freezer", "chateau", "kidsparty", "war"];
 		var ach = ["pepperman", "vigilante", "noise", "fakepep", "pizzaface", "sranks1", "sranks2", "sranks3", "sranks4", "sranks5"];
@@ -379,7 +379,7 @@ add_achievement_notify("pal_goldemanne", -4, function(data)
 			}
 		}
 		ini_close();
-		if (!_found)
+		if !_found
 			palette_unlock(name, "goldemanne", 12, spr_peppattern5);
 	}
 }, false, "Palettes", "goldemanne");
@@ -389,10 +389,10 @@ add_achievement_notify("pal_badbones", function()
 	achievement_add_variable("badbones_count", 0, true, false);
 }, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.hurt_player)
+	if type == notifs.hurt_player
 	{
 		achievement_get_variable("badbones_count").value += 1;
 		if (achievement_get_variable("badbones_count").value >= 50)
@@ -402,10 +402,10 @@ add_achievement_notify("pal_badbones", function()
 
 add_achievement_notify("pal_pp", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.firsttime_ending)
+	if type == notifs.firsttime_ending
 	{
 		ini_open_from_string(obj_savesystem.ini_str_options);
 		var n = ini_read_real("Game", "beaten", 0);
@@ -413,34 +413,34 @@ add_achievement_notify("pal_pp", -4, function(data)
 		ini_write_real("Game", "beaten", n);
 		gamesave_async_save_options();
 		obj_savesystem.ini_str_options = ini_close();
-		if (n >= 2)
+		if n >= 2
 			palette_unlock(name, "pp", 12, spr_peppattern7);
 	}
 }, false, "Palettes", "pp");
 
 add_achievement_notify("pal_war", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.end_level && arr[0] == "war")
+	if type == notifs.end_level && arr[0] == "war"
 	{
 		ini_open_from_string(obj_savesystem.ini_str);
 		var n = ini_read_real("Attempts", "war", 0);
 		ini_close();
-		if (n <= 1)
+		if n <= 1
 			palette_unlock(name, "war", 12, spr_peppattern8);
 	}
 }, false, "Palettes", "war");
 
 add_achievement_notify("pal_john", -4, function(data)
 {
-	if (!obj_achievementtracker.ispeppino)
+	if !obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.johnresurrection && global.file_minutes < 135)
+	if type == notifs.johnresurrection && global.file_minutes < 135
 		palette_unlock(name, "john", 12, spr_peppattern9);
 }, false, "Palettes", "john");
 
@@ -460,7 +460,7 @@ for (var i = 0; i < array_length(pats); i++)
 	{
 		var type = data[0];
 		var arr = data[1];
-		if (type == notifs.pumpkin_collect && arr[0] >= pattern[1])
+		if type == notifs.pumpkin_collect && arr[0] >= pattern[1]
 			palette_unlock(name, pattern[0], 12, pattern[2]);
 	}, false, "Palettes", pat[0]);
 	if (!is_undefined(p) && !p.unlocked)
@@ -476,18 +476,18 @@ add_achievement_update("pal_boise", 1, function()
 	achievement_add_variable("boise_count", 0);
 }, function()
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	
 	var _state = achievement_get_variable("boise_prevstate");
 	var _count = achievement_get_variable("boise_count");
-	if (obj_player1.state != _state.value && obj_player1.state != states.chainsaw)
+	if obj_player1.state != _state.value && obj_player1.state != states.chainsaw
 	{
-		if (obj_player1.state == states.ratmountbounce)
+		if obj_player1.state == states.ratmountbounce
 			_count.value += 0.5;
 		else if (_count.value > 0 && (obj_player1.sprite_index == spr_playerN_sidewayspin || obj_player1.sprite_index == spr_playerN_sidewayspinend))
 			_count.value += 0.5;
-		if (_count.value >= 3)
+		if _count.value >= 3
 			palette_unlock(name, "boise", 3, -4, false);
 		_state.value = obj_player1.state;
 	}
@@ -500,17 +500,17 @@ add_achievement_notify("pal_roise", function()
 	achievement_add_variable("roise_count", 0);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("roise_count");
-	if (type == notifs.cancel_noisedrill)
+	if type == notifs.cancel_noisedrill
 		count.value = 0;
 	else if (type == notifs.baddie_kill && (obj_player1.sprite_index == spr_playerN_divebomb || obj_player1.sprite_index == spr_playerN_divebombfall || obj_player1.sprite_index == spr_playerN_divebombland))
 	{
 		count.value++;
-		if (count.value >= 4)
+		if count.value >= 4
 			palette_unlock(name, "roise", 4, noone, false);
 	}
 }, false, "Palettes", "roise");
@@ -520,24 +520,24 @@ add_achievement_notify("pal_poise", function()
 	achievement_add_variable("poise_count", 0, false, true);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("poise_count");
-	if (type == notifs.gate_taunt)
+	if type == notifs.gate_taunt
 		count.value++;
-	else if (type == notifs.end_level && global.rank == "p" && count.value >= 10)
+	else if type == notifs.end_level && global.rank == "p" && count.value >= 10
 		palette_unlock(name, "poise", 5, noone, false);
 }, false, "Palettes", "poise");
 
 add_achievement_notify("pal_reverse", -4, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.end_level && global.rank == "d" && global.leveltosave == "entrance")
+	if type == notifs.end_level && global.rank == "d" && global.leveltosave == "entrance"
 		palette_unlock(name, "reverse", 6, -4, false);
 }, false, "Palettes", "reverse");
 
@@ -556,14 +556,14 @@ for (i = 0; i < array_length(pats); i++)
 		achievement_add_variable("count", 0, false, true);
 	}, function(data)
 	{
-		if (obj_achievementtracker.ispeppino)
+		if obj_achievementtracker.ispeppino
 			exit;
 		var type = data[0];
 		var arr = data[1];
 		var count = achievement_get_variable("count");
-		if (type == notifs.player_explosion)
+		if type == notifs.player_explosion
 			count.value++;
-		else if (type == notifs.boss_dead && arr[0] == pattern[2] && count.value <= 0)
+		else if type == notifs.boss_dead && arr[0] == pattern[2] && count.value <= 0
 			palette_unlock(name, pattern[0], pattern[1], -4, false);
 	}, false, "Palettes", pat[0]);
 	
@@ -573,26 +573,26 @@ for (i = 0; i < array_length(pats); i++)
 
 add_achievement_notify("pal_porcupine", -4, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.endingrank && arr[0] == "quick")
+	if type == notifs.endingrank && arr[0] == "quick"
 		palette_unlock(name, "porcupine", 15, -4, false);
 }, false, "Palettes", "porcupine");
 
 add_achievement_notify("pal_feminine", -4, function(data)
 {
-	if (obj_achievementtracker.ispeppino && !global.swapmode)
+	if obj_achievementtracker.ispeppino && !global.swapmode
 		exit;
 	var type = data[0];
-	if (type == notifs.mrmooney_donated)
+	if type == notifs.mrmooney_donated
 		palette_unlock(name, "feminine", 16, -4, false);
 }, false, "Palettes", "feminine");
 
 add_achievement_update("pal_realdoise", 2, -4, function()
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	if (obj_player1.state == states.normal && obj_player1.sprite_index == obj_player1.spr_breakdance && room == boss_pizzaface && instance_exists(obj_noiseboss))
 		palette_unlock(name, "realdoise", 17, -4, false);
@@ -603,30 +603,30 @@ add_achievement_notify("pal_forest", function()
 	achievement_add_variable("forest_count", 0, false, true);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("forest_count");
-	if (type == notifs.baddie_kill && arr[2] == obj_noisegoblin)
+	if type == notifs.baddie_kill && arr[2] == obj_noisegoblin
 		count.value++;
-	else if (type == notifs.end_level && arr[0] == "forest" && count.value <= 0)
+	else if type == notifs.end_level && arr[0] == "forest" && count.value <= 0
 		palette_unlock(name, "forest", 18, -4, false);
 }, false, "Palettes", "forest");
 
 // PATTERNS
 add_achievement_notify("pal_racer", -4, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.firsttime_ending)
+	if type == notifs.firsttime_ending
 	{
 		var game = global.game[global.currentsavefile - 1];
 		var noise_secs = (global.file_minutes * 60) + global.file_seconds;
 		var pep_secs = (game.minutes * 60) + game.seconds;
-		if (game.judgement != "none" && noise_secs < pep_secs)
+		if game.judgement != "none" && noise_secs < pep_secs
 			palette_unlock(name, "racer", 28, spr_noisepattern1, false);
 	}
 }, false, "Palettes", "racer");
@@ -636,7 +636,7 @@ add_achievement_update("pal_comedian", 1, function()
 	achievement_add_variable("comedian_count", 0, false, false);
 }, function()
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var count = achievement_get_variable("comedian_count");
 	var arr = [obj_pepperman, obj_vigilanteboss, obj_noiseboss, obj_fakepepboss, obj_pizzafaceboss, obj_pizzafaceboss_p2, obj_pizzafaceboss_p3];
@@ -649,15 +649,15 @@ add_achievement_update("pal_comedian", 1, function()
 			break;
 		}
 	}
-	if (!found)
+	if !found
 	{
 		count.value = 0;
 		exit;
 	}
-	if (obj_player1.sprite_index == obj_player1.spr_breakdance)
+	if obj_player1.sprite_index == obj_player1.spr_breakdance
 	{
 		count.value++;
-		if (count.value >= 600)
+		if count.value >= 600
 			palette_unlock(name, "comedian", 27, spr_noisepattern2, false);
 	}
 	else
@@ -669,14 +669,14 @@ add_achievement_notify("pal_banana", function()
 	achievement_add_variable("banana_count", 0, true, false);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var count = achievement_get_variable("banana_count");
-	if (type == notifs.slipbanan)
+	if type == notifs.slipbanan
 	{
 		count.value++;
-		if (count.value >= 10)
+		if count.value >= 10
 			palette_unlock(name, "banana", 26, spr_noisepattern3, false);
 	}
 }, false, "Palettes", "banana");
@@ -685,16 +685,16 @@ add_achievement_update("pal_noiseTV", 1, -4, function()
 {
 	if (!instance_exists(obj_tv) || obj_achievementtracker.ispeppino)
 		exit;
-	if (obj_tv.idlespr == spr_tv_exprheatN)
+	if obj_tv.idlespr == spr_tv_exprheatN
 		palette_unlock(name, "noiseTV", 25, spr_noisepattern4, false);
 }, false, "Palettes", "noiseTV");
 
 add_achievement_notify("pal_madman", -4, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
-	if (type == notifs.close_call)
+	if type == notifs.close_call
 		palette_unlock(name, "madman", 24, spr_noisepattern5, false);
 }, false, "Palettes", "madman");
 
@@ -703,15 +703,15 @@ add_achievement_notify("pal_bubbly", function()
 	achievement_add_variable("bubbly_count", 0, false, true);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("bubbly_count");
-	if (type == notifs.antigrav && arr[0] == "space")
+	if type == notifs.antigrav && arr[0] == "space"
 	{
 		count.value++;
-		if (count.value >= 21)
+		if count.value >= 21
 			palette_unlock(name, "bubbly", 23, spr_noisepattern6, false);
 	}
 }, false, "Palettes", "bubbly");
@@ -721,15 +721,15 @@ add_achievement_notify("pal_welldone", function()
 	achievement_add_variable("welldone_count", 0, false, true);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
 	var count = achievement_get_variable("welldone_count");
-	if (type == notifs.cow_kick_count && arr[0] == "badland")
+	if type == notifs.cow_kick_count && arr[0] == "badland"
 	{
 		count.value++;
-		if (count.value >= 45)
+		if count.value >= 45
 			palette_unlock(name, "welldone", 22, spr_noisepattern7, false);
 	}
 }, false, "Palettes", "welldone");
@@ -763,11 +763,11 @@ add_achievement_notify("pal_grannykisses", function()
 	achievement_add_variable("granny_forest1N", false, true, false);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.interact_granny)
+	if type == notifs.interact_granny
 	{
 		var b = achievement_get_variable(concat("granny_", arr[0]));
 		if (!is_undefined(b))
@@ -777,13 +777,13 @@ add_achievement_notify("pal_grannykisses", function()
 			var found = false;
 			for (var i = 0; i < array_length(vals); i++)
 			{
-				if (!vals[i].value)
+				if !vals[i].value
 				{
 					found = true;
 					break;
 				}
 			}
-			if (!found)
+			if !found
 				palette_unlock(name, "grannykisses", 21, spr_noisepattern8, false);
 		}
 	}
@@ -813,11 +813,11 @@ add_achievement_notify("pal_towerguy", function()
 	achievement_add_variable("towerguy_exit", false, true, false);
 }, function(data)
 {
-	if (obj_achievementtracker.ispeppino)
+	if obj_achievementtracker.ispeppino
 		exit;
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.seen_ptg)
+	if type == notifs.seen_ptg
 	{
 		var b = achievement_get_variable(concat("towerguy_", arr[0]));
 		if (!is_undefined(b))
@@ -827,13 +827,13 @@ add_achievement_notify("pal_towerguy", function()
 			var found = false;
 			for (var i = 0; i < array_length(vals); i++)
 			{
-				if (!vals[i].value)
+				if !vals[i].value
 				{
 					found = true;
 					break;
 				}
 			}
-			if (!found)
+			if !found
 				palette_unlock(name, "towerguy", 20, spr_noisepattern9, false);
 		}
 	}
@@ -847,7 +847,7 @@ add_achievement_notify("halloween1", -4, function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.pumpkin_collect && arr[0] >= 30)
+	if type == notifs.pumpkin_collect && arr[0] >= 30
 		achievement_unlock(name, "Pumpkin Munchkin", spr_achievement_halloween, 0);
 });
 
@@ -859,15 +859,15 @@ add_achievement_notify("halloween2", function()
 {
 	var type = data[0];
 	var arr = data[1];
-	switch (type)
+	switch type
 	{
 		case notifs.trickytreat_enter:
-			if (arr[0] == trickytreat_1)
+			if arr[0] == trickytreat_1
 			{
 				if (achievement_get_variable("hw2count").value >= 10)
 				{
 					achievement_unlock(name, "Tricksy", spr_achievement_halloween, 1);
-					with (obj_achievementviewer)
+					with obj_achievementviewer
 						event_perform(ev_other, ev_room_start);
 				}
 				else
@@ -902,7 +902,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.levelblock_break && global.leveltosave == "entrance" && arr[0] == obj_deadjohnparent)
+	if type == notifs.levelblock_break && global.leveltosave == "entrance" && arr[0] == obj_deadjohnparent
 	{
 		achievement_get_variable("entr1count").value += 1;
 		if (achievement_get_variable("entr1count").value >= 16)
@@ -942,13 +942,13 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "medieval")
+	if global.leveltosave == "medieval"
 	{
-		if (type == notifs.knighttaken)
+		if type == notifs.knighttaken
 			achievement_get_variable("med1start").value = true;
-		else if (type == notifs.knightpep_bump)
+		else if type == notifs.knightpep_bump
 			achievement_get_variable("med1hurt").value = true;
-		else if (type == notifs.priest_collect)
+		else if type == notifs.priest_collect
 		{
 			if (achievement_get_variable("med1start").value == 1 && achievement_get_variable("med1hurt").value == false)
 				achievement_get_variable("med1count").value += 1;
@@ -966,7 +966,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.parry && global.leveltosave == "medieval" && arr[1] == obj_forknight)
+	if type == notifs.parry && global.leveltosave == "medieval" && arr[1] == obj_forknight
 	{
 		achievement_get_variable("med2count").value += 1;
 		if (achievement_get_variable("med2count").value >= 10)
@@ -993,12 +993,12 @@ add_achievement_notify("ruin1", function(data)
 	var type = data[0];
 	var arr = data[1];
 	var val = achievement_get_variable("ruin1hurt");
-	if (type == notifs.hurt_player && global.leveltosave == "ruin" && arr[2] == obj_canonexplosion)
+	if type == notifs.hurt_player && global.leveltosave == "ruin" && arr[2] == obj_canonexplosion
 	{
 		val.value = true;
 		trace("Locked out of Thrill Seeker!");
 	}
-	else if (type == 5 && arr[0] == "ruin" && !val.value)
+	else if type == 5 && arr[0] == "ruin" && !val.value
 		achievement_unlock(name, "Thrill Seeker", spr_achievement_ruin, 0);
 });
 add_achievement_notify("ruin2", function(data)
@@ -1007,7 +1007,7 @@ add_achievement_notify("ruin2", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.ratblock_explode && global.leveltosave == "ruin")
+	if type == notifs.ratblock_explode && global.leveltosave == "ruin"
 		achievement_unlock(name, "Volleybomb", spr_achievement_ruin, 1);
 });
 add_achievement_notify("ruin3", function(data)
@@ -1017,7 +1017,7 @@ add_achievement_notify("ruin3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.cheeseblock_activate && global.leveltosave == "ruin")
+	if type == notifs.cheeseblock_activate && global.leveltosave == "ruin"
 	{
 		achievement_get_variable("ruin3count").value += 1;
 		if (achievement_get_variable("ruin3count").value >= 350)
@@ -1035,7 +1035,7 @@ add_achievement_notify("dungeon1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.boilingsauce && global.leveltosave == "dungeon")
+	if type == notifs.boilingsauce && global.leveltosave == "dungeon"
 		achievement_get_variable("dun1hurt").value = true;
 	else if (type == notifs.end_level && arr[0] == "dungeon" && achievement_get_variable("dun1hurt").value == 0)
 		achievement_unlock(name, "Very Very Hot Sauce", spr_achievement_dungeon, 0);
@@ -1045,7 +1045,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.panic && type == notifs.superjump_timer && global.leveltosave == "dungeon" && arr[0] >= 120)
+	if global.panic && type == notifs.superjump_timer && global.leveltosave == "dungeon" && arr[0] >= 120
 		achievement_unlock(name, "Eruption Man", spr_achievement_dungeon, 1);
 });
 
@@ -1056,7 +1056,7 @@ add_achievement_notify("dungeon3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.hurt_player && global.leveltosave == "dungeon" && arr[2] == obj_pizzacutter2)
+	if type == notifs.hurt_player && global.leveltosave == "dungeon" && arr[2] == obj_pizzacutter2
 		achievement_get_variable("dun3hurt").value = true;
 	else if (type == notifs.end_level && arr[0] == "dungeon" && achievement_get_variable("dun3hurt").value == false)
 		achievement_unlock(name, "Unsliced Pizzaman", spr_achievement_dungeon, 2);
@@ -1072,7 +1072,7 @@ add_achievement_notify("badland1", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.totem_revive && global.leveltosave == "badland")
+	if type == notifs.totem_revive && global.leveltosave == "badland"
 		achievement_unlock(name, "Peppino's Rain Dance", spr_achievement_badland, 0);
 });
 
@@ -1083,7 +1083,7 @@ add_achievement_notify("badland2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.baddie_kill && global.leveltosave == "badland" && arr[2] == obj_clerk)
+	if type == notifs.baddie_kill && global.leveltosave == "badland" && arr[2] == obj_clerk
 	{
 		achievement_get_variable("bad2count").value += 1;
 		if (achievement_get_variable("bad2count").value >= 5)
@@ -1098,7 +1098,7 @@ add_achievement_notify("badland3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.cow_kick && global.leveltosave == "badland")
+	if type == notifs.cow_kick && global.leveltosave == "badland"
 		achievement_get_variable("bad3hurt").value = true;
 	else if (type == notifs.end_level && arr[0] == "badland" && achievement_get_variable("bad3hurt").value == 0)
 		achievement_unlock(name, "Alien Cow", spr_achievement_badland, 2);
@@ -1114,7 +1114,7 @@ add_achievement_notify("graveyard1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.johnghost_collide && global.leveltosave == "graveyard")
+	if type == notifs.johnghost_collide && global.leveltosave == "graveyard"
 		achievement_get_variable("grav1hurt").value = true;
 	else if (type == notifs.end_level && arr[0] == "graveyard" && achievement_get_variable("grav1hurt").value == 0)
 		achievement_unlock(name, "Ghosted", spr_achievement_graveyard, 0);
@@ -1127,7 +1127,7 @@ add_achievement_notify("graveyard2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "graveyard")
+	if global.leveltosave == "graveyard"
 	{
 		if (type == notifs.baddie_kill && (obj_player1.state == states.ghost || (obj_player1.state == states.chainsaw && obj_player1.tauntstoredstate == states.ghost)))
 		{
@@ -1145,7 +1145,7 @@ add_achievement_notify("graveyard3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.corpsesurf && global.leveltosave == "graveyard")
+	if type == notifs.corpsesurf && global.leveltosave == "graveyard"
 	{
 		achievement_get_variable("grav3count").value += 1;
 		if (achievement_get_variable("grav3count").value >= 10)
@@ -1163,14 +1163,14 @@ add_achievement_notify("farm1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.enemies_dead)
+	if type == notifs.enemies_dead
 	{
 		var n = achievement_get_variable("f1_count");
 		var r = room_get_name(arr[1]);
 		if (obj_player.state == states.backbreaker && (string_letters(r) == "farm" || string_letters(r) == "farmb"))
 		{
 			n.value++;
-			if (n.value >= 3)
+			if n.value >= 3
 				achievement_unlock(name, "No one is safe", spr_achievement_farm, 2);
 		}
 	}
@@ -1179,7 +1179,7 @@ add_achievement_notify("farm1", function(data)
 add_achievement_notify("farm2", -4, function(data)
 {
 	var type = data[0];
-	if (type == notifs.mort_block)
+	if type == notifs.mort_block
 		achievement_unlock(name, "Cube Menace", spr_achievement_farm, 1);
 });
 
@@ -1205,7 +1205,7 @@ add_achievement_notify("saloon1", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.beer_destroy && global.leveltosave == "saloon")
+	if type == notifs.beer_destroy && global.leveltosave == "saloon"
 	{
 		achievement_get_variable("s1_beer").value += 1;
 		if (achievement_get_variable("s1_beer").value >= 58)
@@ -1219,9 +1219,9 @@ add_achievement_notify("saloon2", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.timedgateclock && global.leveltosave == "saloon")
+	if type == notifs.timedgateclock && global.leveltosave == "saloon"
 		achievement_get_variable("s2_count").value += 1;
-	else if (type == notifs.end_level)
+	else if type == notifs.end_level
 	{
 		var arr = data[1];
 		if (arr[0] == "saloon" && achievement_get_variable("s2_count").value == 9)
@@ -1235,7 +1235,7 @@ add_achievement_notify("saloon3", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.flush && global.leveltosave == "saloon")
+	if type == notifs.flush && global.leveltosave == "saloon"
 	{
 		achievement_get_variable("s3_count").value += 1;
 		if (achievement_get_variable("s3_count").value >= 8)
@@ -1252,7 +1252,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.baddie_hurtboxkill && global.leveltosave == "plage" && arr[1] == obj_canongoblin && arr[3] == obj_canongoblinbomb)
+	if type == notifs.baddie_hurtboxkill && global.leveltosave == "plage" && arr[1] == obj_canongoblin && arr[3] == obj_canongoblinbomb
 		achievement_unlock(name, "Blowback", spr_achievement_beach, 0);
 });
 
@@ -1264,7 +1264,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.treasureguy_unbury && global.leveltosave == "plage" && arr[1] == obj_treasureguy)
+	if type == notifs.treasureguy_unbury && global.leveltosave == "plage" && arr[1] == obj_treasureguy
 	{
 		achievement_get_variable("b2_count").value += 1;
 		if (achievement_get_variable("b2_count").value >= 7)
@@ -1280,7 +1280,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.hurt_player && global.leveltosave == "plage" && arr[2] == obj_canonexplosion)
+	if type == notifs.hurt_player && global.leveltosave == "plage" && arr[2] == obj_canonexplosion
 		achievement_get_variable("b3_hurt").value = true;
 	else if (type == notifs.end_level && arr[0] == "plage" && achievement_get_variable("b3_hurt").value == false)
 		achievement_unlock(name, "Demolition Expert", spr_achievement_beach, 2);
@@ -1291,15 +1291,15 @@ function(data)
 
 add_achievement_update("forest1", 5, -4, function(data)
 {
-	if (global.leveltosave == "forest")
+	if global.leveltosave == "forest"
 	{
 		var b = false;
-		with (obj_player)
+		with obj_player
 		{
 			if (!b && state == states.backbreaker && distance_to_object(obj_beedeco) < 300)
 				b = true;
 		}
-		if (b)
+		if b
 			achievement_unlock(name, "Bee Nice", spr_achievement_forest, 0);
 	}
 });
@@ -1325,7 +1325,7 @@ function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.baddie_hurtboxkill && global.leveltosave == "forest" && arr[1] == obj_noisegoblin && arr[3] == obj_noisegoblin_arrow)
+	if type == notifs.baddie_hurtboxkill && global.leveltosave == "forest" && arr[1] == obj_noisegoblin && arr[3] == obj_noisegoblin_arrow
 		achievement_unlock(name, "Bullseye", spr_achievement_forest, 2);
 });
 
@@ -1338,25 +1338,25 @@ add_achievement_update("space1", 1, function(data)
 },
 function(data)
 {
-	if (room == space_10)
+	if room == space_10
 	{
 		if (instance_exists(obj_fadeout))
 		{
-			if (obj_player1.targetDoor == "B")
+			if obj_player1.targetDoor == "B"
 				achievement_get_variable("sp1_hit").value = false;
 		}
 		var b = false;
-		with (obj_antigravbubble)
+		with obj_antigravbubble
 		{
-			if (sprite_index == spr_antigrav_bubblesquish)
+			if sprite_index == spr_antigrav_bubblesquish
 				b = true;
 		}
-		if (b)
+		if b
 			achievement_get_variable("sp1_hit").value = true;
 		var _q = false;
-		with (obj_player1)
+		with obj_player1
 		{
-			if (y < 608)
+			if y < 608
 				_q = true;
 		}
 		if (_q && achievement_get_variable("sp1_hit").value == 0)
@@ -1371,7 +1371,7 @@ add_achievement_notify("space2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.levelblock_break && global.leveltosave == "space" && arr[0] == obj_asteroid)
+	if type == notifs.levelblock_break && global.leveltosave == "space" && arr[0] == obj_asteroid
 	{
 		achievement_get_variable("sp2_count").value += 1;
 		if (achievement_get_variable("sp2_count").value >= 18)
@@ -1386,9 +1386,9 @@ add_achievement_notify("space3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "space")
+	if global.leveltosave == "space"
 	{
-		if (type == notifs.bodyslam_start)
+		if type == notifs.bodyslam_start
 			achievement_get_variable("space3start").value = true;
 		else if (achievement_get_variable("space3start").value == 1 && type == notifs.baddie_kill && arr[2] == obj_miniufo)
 		{
@@ -1397,7 +1397,7 @@ add_achievement_notify("space3", function(data)
 			if (achievement_get_variable("space3count").value >= 5)
 				achievement_unlock(name, "Man Meteor", spr_achievement_space, 1);
 		}
-		else if (type == notifs.bodyslam_end)
+		else if type == notifs.bodyslam_end
 		{
 			achievement_get_variable("space3start").value = false;
 			achievement_get_variable("space3count").value = 0;
@@ -1415,7 +1415,7 @@ add_achievement_notify("minigolf1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.pizzaball_goal && arr[0] == spr_pizzaball_rank1)
+	if type == notifs.pizzaball_goal && arr[0] == spr_pizzaball_rank1
 	{
 		achievement_get_variable("g1_count").value += 1;
 		if (achievement_get_variable("g1_count").value >= 9)
@@ -1431,7 +1431,7 @@ add_achievement_notify("minigolf2", function(data)
 	var arr = data[1];
 	if (type == notifs.pizzaball && (arr[0] == obj_player1 || arr[0] == obj_player1))
 		achievement_get_variable("g2_count").value = 0;
-	else if (type == notifs.pizzaball_killenemy)
+	else if type == notifs.pizzaball_killenemy
 	{
 		achievement_get_variable("g2_count").value += 1;
 		if (achievement_get_variable("g2_count").value >= 3)
@@ -1445,9 +1445,9 @@ add_achievement_notify("minigolf3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.pizzaball)
+	if type == notifs.pizzaball
 	{
-		if (arr[0] == obj_golfburger)
+		if arr[0] == obj_golfburger
 			achievement_get_variable("g3_hit").value = true;
 		else
 			achievement_get_variable("g3_hit").value = false;
@@ -1462,7 +1462,7 @@ add_achievement_notify("minigolf3", function(data)
 
 add_achievement_update("street1", 60, -4, function(data)
 {
-	if (room == street_bacon)
+	if room == street_bacon
 		achievement_unlock(name, "Pan Fried", spr_achievement_street, 0);
 });
 add_achievement_notify("street2", function(data)
@@ -1471,11 +1471,11 @@ add_achievement_notify("street2", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (global.leveltosave == "street")
+	if global.leveltosave == "street"
 	{
-		if (type == notifs.brickball)
+		if type == notifs.brickball
 			achievement_get_variable("st2_count").value = 0;
-		else if (type == notifs.brick_killenemy)
+		else if type == notifs.brick_killenemy
 		{
 			achievement_get_variable("st2_count").value += 1;
 			if (achievement_get_variable("st2_count").value >= 3)
@@ -1489,7 +1489,7 @@ add_achievement_notify("street3", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.pigcitizen_photo)
+	if type == notifs.pigcitizen_photo
 	{
 		achievement_get_variable("st3_count").value += 1;
 		if (achievement_get_variable("st3_count").value >= 14)
@@ -1507,7 +1507,7 @@ add_achievement_notify("sewer1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.pizzaboy_dead)
+	if type == notifs.pizzaboy_dead
 		achievement_get_variable("sw1_killed").value = true;
 	else if (type == notifs.end_level && arr[0] == "sewer" && achievement_get_variable("sw1_killed").value == 0)
 		achievement_unlock(name, "Can't Fool Me", spr_achievement_sewer, 0);
@@ -1519,7 +1519,7 @@ add_achievement_notify("sewer2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "sewer" && type == notifs.parry && arr[1] == obj_ninja)
+	if global.leveltosave == "sewer" && type == notifs.parry && arr[1] == obj_ninja
 	{
 		achievement_get_variable("sw2_count").value += 1;
 		if (achievement_get_variable("sw2_count").value >= 10)
@@ -1533,7 +1533,7 @@ add_achievement_notify("sewer3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "sewer" && global.panic && type == notifs.mrpinch_launch)
+	if global.leveltosave == "sewer" && global.panic && type == notifs.mrpinch_launch
 		achievement_get_variable("sw3_count").value += 1;
 	else if (type == notifs.end_level && arr[0] == "sewer" && achievement_get_variable("sw3_count").value <= 0)
 		achievement_unlock(name, "Penny Pincher", spr_achievement_sewer, 2);
@@ -1564,11 +1564,11 @@ add_achievement_notify("industrial2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (room == industrial_secret1)
+	if room == industrial_secret1
 	{
-		if (type == notifs.baddie_kill && arr[2] == obj_sausageman)
+		if type == notifs.baddie_kill && arr[2] == obj_sausageman
 			achievement_get_variable("i2_count").value += 1;
-		else if (type == notifs.hurt_player)
+		else if type == notifs.hurt_player
 			achievement_get_variable("i2_hurt").value = true;
 	}
 	if (type == notifs.secret_exit && arr[0] == industrial_secret1 && achievement_get_variable("i2_hurt").value == 0 && achievement_get_variable("i2_count").value >= 11)
@@ -1581,7 +1581,7 @@ add_achievement_notify("industrial3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "industrial" && type == notifs.baddie_kill && arr[2] == obj_robot)
+	if global.leveltosave == "industrial" && type == notifs.baddie_kill && arr[2] == obj_robot
 	{
 		achievement_get_variable("i3_count").value += 1;
 		if (achievement_get_variable("i3_count").value >= 31)
@@ -1598,7 +1598,7 @@ add_achievement_notify("freezer1", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (global.leveltosave == "freezer" && type == notifs.destroy_iceblock)
+	if global.leveltosave == "freezer" && type == notifs.destroy_iceblock
 	{
 		achievement_get_variable("fr1_count").value += 1;
 		if (achievement_get_variable("fr1_count").value >= 13)
@@ -1612,7 +1612,7 @@ add_achievement_notify("freezer2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "freezer" && type == notifs.baddie_kill && arr[2] == obj_fakesanta)
+	if global.leveltosave == "freezer" && type == notifs.baddie_kill && arr[2] == obj_fakesanta
 	{
 		achievement_get_variable("fr2_count").value += 1;
 		if (achievement_get_variable("fr2_count").value >= 5)
@@ -1626,7 +1626,7 @@ add_achievement_notify("freezer3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.fall_outofbounds && global.leveltosave == "freezer")
+	if type == notifs.fall_outofbounds && global.leveltosave == "freezer"
 		achievement_get_variable("fr3_fall").value = true;
 	else if (type == notifs.end_level && arr[0] == "freezer" && achievement_get_variable("fr3_fall").value == 0)
 		achievement_unlock(name, "Ice Climber", spr_achievement_freezer, 2);
@@ -1643,7 +1643,7 @@ add_achievement_notify("chateau1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "chateau" && type == notifs.baddie_kill && arr[2] == obj_ghostknight)
+	if global.leveltosave == "chateau" && type == notifs.baddie_kill && arr[2] == obj_ghostknight
 	{
 		achievement_get_variable("ch1_count").value += 1;
 		if (achievement_get_variable("ch1_count").value >= 30)
@@ -1668,7 +1668,7 @@ add_achievement_notify("chateau3", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.destroyed_area && global.leveltosave == "chateau")
+	if type == notifs.destroyed_area && global.leveltosave == "chateau"
 	{
 		achievement_get_variable("ch3_count").value += 1;
 		if (achievement_get_variable("ch3_count").value >= 10)
@@ -1685,7 +1685,7 @@ add_achievement_notify("kidsparty1", function(data)
 }, function(data)
 {
 	var type = data[0];
-	if (type == notifs.monster_dead && global.leveltosave == "kidsparty" && global.panic && room != kidsparty_secret1)
+	if type == notifs.monster_dead && global.leveltosave == "kidsparty" && global.panic && room != kidsparty_secret1
 	{
 		achievement_get_variable("kp1_count").value += 1;
 		if (achievement_get_variable("kp1_count").value >= 9)
@@ -1699,9 +1699,9 @@ add_achievement_notify("kidsparty2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.monster_activate && global.leveltosave == "kidsparty" && !global.panic)
+	if type == notifs.monster_activate && global.leveltosave == "kidsparty" && !global.panic
 		achievement_get_variable("kp2_count").value += 1;
-	else if (type == notifs.hungrypillar_dead && arr[0] == kidsparty_john)
+	else if type == notifs.hungrypillar_dead && arr[0] == kidsparty_john
 	{
 		if (achievement_get_variable("kp2_count").value <= 6)
 			achievement_unlock(name, "Let Them Sleep", spr_achievement_kidsparty, 1);
@@ -1714,9 +1714,9 @@ add_achievement_notify("kidsparty3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.monster_jumpscare && global.leveltosave == "kidsparty")
+	if type == notifs.monster_jumpscare && global.leveltosave == "kidsparty"
 		achievement_get_variable("kp3_hurted").value = true;
-	else if (type == notifs.end_level && arr[0] == "kidsparty")
+	else if type == notifs.end_level && arr[0] == "kidsparty"
 	{
 		if (achievement_get_variable("kp3_hurted").value == 0)
 			achievement_unlock(name, "Jumpspared", spr_achievement_kidsparty, 2);
@@ -1733,7 +1733,7 @@ add_achievement_notify("war1", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.hurt_player && global.leveltosave == "war")
+	if type == notifs.hurt_player && global.leveltosave == "war"
 		achievement_get_variable("war1hurt").value += 1;
 	else if (type == notifs.end_level && arr[0] == "war" && achievement_get_variable("war1hurt").value <= 3)
 		achievement_unlock(name, "Decorated Veteran", spr_achievement_war, 0);
@@ -1747,20 +1747,20 @@ add_achievement_notify("war2", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (global.leveltosave == "war")
+	if global.leveltosave == "war"
 	{
-		if (type == notifs.shotgunblast_start)
+		if type == notifs.shotgunblast_start
 		{
 			achievement_get_variable("war2_hit").value = false;
 			achievement_get_variable("war2_start").value = true;
 		}
 		else if ((type == notifs.baddie_kill || type == notifs.enemies_dead || type == notifs.block_break || type == notifs.bazooka_explode) && achievement_get_variable("war2_start").value == 1)
 			achievement_get_variable("war2_hit").value = true;
-		else if (type == notifs.shotgunblast_end)
+		else if type == notifs.shotgunblast_end
 		{
 			var val = achievement_get_variable("war2_hit").value;
 			achievement_get_variable("war2_start").value = false;
-			if (!val)
+			if !val
 			{
 				achievement_get_variable("war2_missed").value += 1;
 				trace("Sharpshooter: Shot missed!");
@@ -1777,7 +1777,7 @@ add_achievement_notify("war3", function(data)
 {
 	var type = data[0];
 	var arr = data[1];
-	if (type == notifs.wartimer_endlevel && arr[0] >= 1)
+	if type == notifs.wartimer_endlevel && arr[0] >= 1
 		achievement_unlock(name, "Trip to the Warzone", spr_achievement_war, 2);
 });
 

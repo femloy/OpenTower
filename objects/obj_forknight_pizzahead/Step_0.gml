@@ -1,5 +1,5 @@
 y += vsp;
-if (vsp < 20)
+if vsp < 20
 	vsp += grav;
 if (vsp > 0 && place_meeting(x, y + vsp, obj_solid))
 {

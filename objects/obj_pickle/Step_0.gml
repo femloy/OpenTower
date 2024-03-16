@@ -1,8 +1,8 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 if (!instance_exists(cloneid))
 	cloneid = -4;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -38,30 +38,30 @@ switch (state)
 		scr_enemy_chase();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (state != states.chase && image_alpha >= 1)
+if state != states.chase && image_alpha >= 1
 	scr_scareenemy();
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
-if (sprite_index == scaredspr)
+if sprite_index == scaredspr
 {
 	image_alpha = 1;
 	attacking = false;
 }
-if (bombreset == 0 && state == states.walk)
+if bombreset == 0 && state == states.walk
 {
 	attacking = false;
 	targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
@@ -73,17 +73,17 @@ if (bombreset == 0 && state == states.walk)
 		fade = true;
 	}
 }
-if (state == states.chase)
+if state == states.chase
 {
-	if (fade)
+	if fade
 	{
-		if (image_alpha > 0)
+		if image_alpha > 0
 		{
 			if (hsp < -0.2 || hsp > 0.2)
 				hsp *= 0.5;
 			image_alpha -= fadeout_time;
 		}
-		else if (image_alpha <= 0)
+		else if image_alpha <= 0
 		{
 			x = targetplayer.x;
 			y = targetplayer.y;
@@ -112,7 +112,7 @@ if (state == states.chase)
 						break;
 					}
 				}
-				if (ground)
+				if ground
 					y = yy;
 			}
 			fade = false;
@@ -120,9 +120,9 @@ if (state == states.chase)
 	}
 	else
 	{
-		if (image_alpha < 1)
+		if image_alpha < 1
 			image_alpha += fadein_time;
-		if (image_alpha >= 1)
+		if image_alpha >= 1
 		{
 			image_alpha = 1;
 			image_index = 0;
@@ -130,16 +130,16 @@ if (state == states.chase)
 			fmod_event_one_shot_3d("event:/sfx/enemies/pickledance", x, y);
 			var old_xscale = image_xscale;
 			image_xscale = -sign(x - targetplayer.x);
-			if (image_xscale == 0)
+			if image_xscale == 0
 				image_xscale = old_xscale;
 			state = states.pizzagoblinthrow;
-			if (elite && cloneid == noone)
+			if elite && cloneid == noone
 			{
 				var tx = image_xscale * 32;
 				if (scr_solid(x + tx, y))
 					tx = 0;
 				cloneid = instance_create(x + tx, y, obj_pickle);
-				with (cloneid)
+				with cloneid
 				{
 					cloneid = other.id;
 					important = true;
@@ -158,15 +158,15 @@ if (state == states.chase)
 	}
 }
 invincible = attacking;
-if (state == states.idle)
+if state == states.idle
 {
-	if (scaredbuffer > 0 && attacking)
+	if scaredbuffer > 0 && attacking
 	{
 		image_alpha = 0.8;
 		invincible = true;
 	}
 }
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

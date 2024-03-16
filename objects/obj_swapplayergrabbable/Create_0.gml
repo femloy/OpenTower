@@ -24,8 +24,8 @@ var _hurt = obj_player1.spr_hurt;
 var _dead = obj_player1.spr_dead;
 if obj_player1.isgustavo
 {
-    _hurt = spr_player_ratmounthurt;
-    _dead = spr_player_ratmountgameover;
+	_hurt = spr_player_ratmounthurt;
+	_dead = spr_player_ratmountgameover;
 }
 landspr = _hurt;
 idlespr = _hurt;

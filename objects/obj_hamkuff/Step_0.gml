@@ -1,4 +1,4 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 switch state
 {
@@ -19,24 +19,24 @@ switch state
 		}
 		else
 		{
-			if (x != playerid.x)
+			if x != playerid.x
 				image_xscale = -sign(x - playerid.x);
 			var _is_brick = playerid.object_index == obj_brickcomeback
-			if (!_is_brick)
+			if !_is_brick
 			{
-				with (playerid)
+				with playerid
 				{
-					if (state == states.policetaxi)
+					if state == states.policetaxi
 						other.state = states.walk;
-					else if (!launched)
+					else if !launched
 					{
 						hamkuffID = other.id;
 						var _xs = 0;
-						if (x != other.x)
+						if x != other.x
 							_xs = -sign(x - other.x);
 						var dis = 180;
 						var m = (abs(x - other.x) > dis ? abs(hsp) : abs(hsp) - max(0, abs(hsp) - 2));
-						if (hsp == 0)
+						if hsp == 0
 							m = _xs;
 						if !(state == states.machslide && sprite_index == spr_mach3boost)
 							hsp_carry = _xs * abs(m);
@@ -47,7 +47,7 @@ switch state
 							state = states.bump;
 							fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
 							sprite_index = spr_bump;
-							if (x != other.x)
+							if x != other.x
 							{
 								hsp = -sign(x - other.x) * 3;
 								if (!other.attract_player && place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope))
@@ -68,9 +68,9 @@ switch state
 						}
 						if (state == states.mach3 || (state == states.machslide && sprite_index == spr_mach3boost))
 							launch = true;
-						if (state == states.machslide && sprite_index == spr_mach3boost && launch)
+						if state == states.machslide && sprite_index == spr_mach3boost && launch
 							movespeed -= 0.6;
-						if (state == states.mach3 && movespeed > 15)
+						if state == states.mach3 && movespeed > 15
 							movespeed = 15;
 						freefallsmash = 0;
 						if (state == states.grind || state == states.climbwall || state == states.Sjumpprep || state == states.Sjump || state == states.Sjumpland || y < other.y - 400)
@@ -116,7 +116,7 @@ switch state
 							instance_destroy(other);
 							global.combotime = 60;
 						}
-						if (other.grabsound == false)
+						if other.grabsound == false
 						{
 							fmod_event_one_shot_3d("event:/sfx/enemies/hamkuffgrab", x, y);
 							other.grabsound = true;
@@ -130,7 +130,7 @@ switch state
 			}
 			else
 			{
-				with (playerid)
+				with playerid
 				{
 					tx = other.x + (other.image_xscale * 32);
 					ty = other.y;
@@ -173,13 +173,13 @@ switch state
 		break;
 }
 
-if (state == states.stun && stunned > 100 && birdcreated == false)
+if state == states.stun && stunned > 100 && birdcreated == false
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.walk && state != states.blockstance)
+if state != states.walk && state != states.blockstance
 	attract_player = false;
 
 var _dis = 300;
@@ -215,7 +215,7 @@ if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && ob
 		baddieID = other.id;
 		other.playerid = id;
 	}
-	with (obj_player1)
+	with obj_player1
 	{
 		fmod_event_one_shot_3d("event:/sfx/enemies/hamkuffgrab", other.x, other.y);
 		fmod_event_one_shot_3d("event:/sfx/rat/ratdead", x, y);
@@ -225,11 +225,11 @@ if (state == states.walk && obj_player1.isgustavo && !obj_player1.cutscene && ob
 		state = states.ratmount;
 	}
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;

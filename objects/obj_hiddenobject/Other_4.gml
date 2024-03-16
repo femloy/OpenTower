@@ -13,12 +13,12 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 			if (ds_list_find_index(deactivatedlist, _currentobj.id) == -1)
 			{
 				ds_list_add(deactivatedlist, _currentobj.id);
-				switch (obj)
+				switch obj
 				{
 					case obj_baddie:
-						if (_currentobj.boundbox)
+						if _currentobj.boundbox
 							boundbox = false;
-						if (_currentobj.hitboxcreate)
+						if _currentobj.hitboxcreate
 							hitboxcreate = false;
 						break;
 				}

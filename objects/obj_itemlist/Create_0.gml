@@ -14,7 +14,7 @@ on_item_click = function(item_id)
 {
 	if (item_id < ds_list_size(items))
 	{
-		if (selected_item == item_id)
+		if selected_item == item_id
 			on_item_double_click(item_id);
 		selected_item = item_id;
 	}
@@ -41,7 +41,7 @@ on_dirty = function()
 on_left_click = function()
 {
 	var yy = get_list_pos(obj_editorcursor.y);
-	if (yy < 0)
+	if yy < 0
 		exit;
 	clicked = true;
 	on_item_click(yy);

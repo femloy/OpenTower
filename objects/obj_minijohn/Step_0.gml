@@ -1,5 +1,5 @@
 var player = instance_nearest(x, y, obj_player);
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -41,11 +41,11 @@ switch (state)
 		scr_enemy_pizzaheadjump();
 		break;
 	case states.punch:
-		if (sprite_index == spr_minijohn_punchstart)
+		if sprite_index == spr_minijohn_punchstart
 		{
 			image_speed = 0.35;
 			hsp = Approach(hsp, 0, 1);
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				fmod_event_one_shot_3d("event:/sfx/enemies/minijohnpunch", x, y);
 				punchspd = 8;
@@ -61,14 +61,14 @@ switch (state)
 				}
 			}
 		}
-		else if (sprite_index == spr_minijohn_punch)
+		else if sprite_index == spr_minijohn_punch
 		{
 			image_speed = 0.25;
 			punchspd = Approach(punchspd, 0, 0.25);
 			hsp = punchspd * image_xscale;
 			with (instance_place(x + hsp, y, obj_destructibles))
 				instance_destroy();
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				state = states.chase;
 				ragecooldown = 100;
@@ -78,52 +78,52 @@ switch (state)
 		break;
 	case states.underground:
 		hsp = 0;
-		if (underground)
+		if underground
 		{
-			if (vsp < 0)
+			if vsp < 0
 				vsp = 0;
 			sprite_index = spr_minijohn_ground;
 			image_index = 0;
 			if (player.x > (x - 200) && player.x < (x + 200) && y <= (player.y + 60) && y >= (player.y - 60))
 			{
 				underground = false;
-				if (player.x != x)
+				if player.x != x
 					image_xscale = sign(x - player.x);
 				fmod_event_one_shot_3d("event:/sfx/enemies/comingoutground", x, y);
 			}
 		}
-		else if (sprite_index == spr_minijohn_ground)
+		else if sprite_index == spr_minijohn_ground
 		{
-			if (vsp < 0)
+			if vsp < 0
 				vsp = 0;
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				sprite_index = spr_minijohn_stun;
 				vsp = -4;
-				repeat (3)
+				repeat 3
 					create_debris(x, y, spr_graveyarddebris2);
 			}
 		}
-		else if (grounded)
+		else if grounded
 		{
 			state = states.chase;
 			sprite_index = spr_minijohn_charge;
 		}
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state == states.chase && ragecooldown <= 0)
+if state == states.chase && ragecooldown <= 0
 {
 	if (player.x > (x - 400) && player.x < (x + 400) && y <= (player.y + 60) && y >= (player.y - 60))
 	{
-		if (x != player.x)
+		if x != player.x
 			image_xscale = sign(player.x - x);
-		if (elite)
+		if elite
 		{
 			sprite_index = spr_minijohn_rage1;
 			image_index = 0;
@@ -149,21 +149,21 @@ if (state == states.chase && ragecooldown <= 0)
 		}
 	}
 }
-if (ragecooldown > 0)
+if ragecooldown > 0
 	ragecooldown--;
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.chase)
+if state != states.chase
 	momentum = 0;
 if (state == states.walk || state == states.idle)
 {
 	var targetplayer = obj_player1;
-	if (obj_player1.spotlight == 0)
+	if obj_player1.spotlight == 0
 		targetplayer = obj_player2;
 	movespeed = 4;
-	if (targetplayer.x != x)
+	if targetplayer.x != x
 		image_xscale = -sign(x - targetplayer.x);
 	state = states.chase;
 }
@@ -171,20 +171,20 @@ if (instance_exists(obj_player2))
 {
 	if ((obj_player2.x > (x - 400) && obj_player2.x < (x + 400)) && (y <= (obj_player2.y + 60) && y >= (obj_player2.y - 60)))
 	{
-		if (state != states.idle && obj_player2.state == states.mach3)
+		if state != states.idle && obj_player2.state == states.mach3
 		{
 			state = states.idle;
 			sprite_index = scaredspr;
-			if (x != obj_player2.x)
+			if x != obj_player2.x
 				image_xscale = -sign(x - obj_player2.x);
 		}
 	}
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{
@@ -194,10 +194,10 @@ if (boundbox == 0)
 		other.boundbox = true;
 	}
 }
-if (state == states.underground)
+if state == states.underground
 {
 	invincible = true;
-	if (sprite_index != spr_minijohn_underground && sprite_index != spr_minijohn_undergroundout)
+	if sprite_index != spr_minijohn_underground && sprite_index != spr_minijohn_undergroundout
 		image_blend = c_gray;
 }
 else

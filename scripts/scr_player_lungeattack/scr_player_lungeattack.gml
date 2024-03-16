@@ -1,10 +1,10 @@
 function scr_player_lungeattack()
 {
-	if (sprite_index != spr_player_backflip)
+	if sprite_index != spr_player_backflip
 	{
 		image_speed = 0.35;
 		hsp = xscale * movespeed;
-		if (hit_connected)
+		if hit_connected
 		{
 			movespeed = 6;
 			vsp = 0;
@@ -15,11 +15,11 @@ function scr_player_lungeattack()
 		image_speed = 0.35;
 		movespeed = Approach(movespeed, 0, 0.1);
 	}
-	if (key_slap2 && !supercharged)
+	if key_slap2 && !supercharged
 		input_attack_buffer = 60;
-	if (hit_connected && input_attack_buffer > 0 && input_finisher_buffer <= 0)
+	if hit_connected && input_attack_buffer > 0 && input_finisher_buffer <= 0
 		input_attack_buffer = 60;
-	if (key_slap2 && supercharged)
+	if key_slap2 && supercharged
 	{
 		suplexmove = true;
 		fmod_event_instance_play(suplexdashsnd);
@@ -30,17 +30,17 @@ function scr_player_lungeattack()
 		sprite_index = spr_player_lunge;
 	}
 	var cancelindex = 4;
-	if (floor(image_index) > (image_number - 2) && !hit_connected)
+	if (floor(image_index) > image_number - 2 && !hit_connected)
 	{
-		if (state != states.punch && input_attack_buffer > 0)
+		if state != states.punch && input_attack_buffer > 0
 		{
 			ds_list_clear(hitlist);
 			hit_connected = false;
 			uplaunch = false;
 			downlaunch = false;
-			if (input_attack_buffer > 0)
+			if input_attack_buffer > 0
 			{
-				if (finisher)
+				if finisher
 					finisher_buffer += 15;
 				input_attack_buffer = 0;
 				state = states.lungeattack;
@@ -49,28 +49,28 @@ function scr_player_lungeattack()
 			}
 		}
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.normal;
 		ds_list_clear(hitlist);
 		hit_connected = false;
 	}
-	if (floor(image_index) > (image_number - cancelindex) && hit_connected)
+	if (floor(image_index) > image_number - cancelindex && hit_connected)
 	{
-		if (finisher)
+		if finisher
 		{
-			if (input_finisher_buffer > 0)
+			if input_finisher_buffer > 0
 				DoFinisher();
 		}
-		if (state != states.punch && input_attack_buffer > 0)
+		if state != states.punch && input_attack_buffer > 0
 		{
 			ds_list_clear(hitlist);
 			hit_connected = false;
 			uplaunch = false;
 			downlaunch = false;
-			if (input_attack_buffer > 0)
+			if input_attack_buffer > 0
 			{
-				if (finisher)
+				if finisher
 					finisher_buffer += 15;
 				input_attack_buffer = 0;
 				state = states.lungeattack;
@@ -104,7 +104,7 @@ function DoFinisher()
 	input_up_buffer = 0;
 	input_down_buffer = 0;
 	hit_connected = false;
-	if (key_up)
+	if key_up
 	{
 		state = states.punch;
 		movespeed = 6;
@@ -126,7 +126,7 @@ function DoFinisher()
 		particle_set_scale(particle.crazyrunothereffect, xscale, 1);
 		create_particle(x, y, particle.crazyrunothereffect, 0);
 	}
-	else if (key_down)
+	else if key_down
 	{
 		sprite_index = spr_player_breakdance;
 		image_index = 0;

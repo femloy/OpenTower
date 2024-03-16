@@ -21,7 +21,7 @@ function scr_solid(_x, _y)
 				_collided = true;
 		}
 		ds_list_clear(global.instancelist);
-		if (_collided)
+		if _collided
 		{
 			x = old_x;
 			y = old_y;
@@ -41,14 +41,14 @@ function scr_solid(_x, _y)
 function check_slope(slope_object)
 {
 	var slope = instance_place(x, y, slope_object);
-	if (slope)
+	if slope
 	{
-		with (slope)
+		with slope
 		{
 			var object_side = 0;
 			var slope_start = 0;
 			var slope_end = 0;
-			if (image_xscale > 0)
+			if image_xscale > 0
 			{
 				object_side = other.bbox_right;
 				slope_start = bbox_bottom;
@@ -62,7 +62,7 @@ function check_slope(slope_object)
 			}
 			var m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
 			slope = slope_start - round(m * (object_side - bbox_left));
-			if (other.bbox_bottom >= slope)
+			if other.bbox_bottom >= slope
 			{
 				return true;
 			}

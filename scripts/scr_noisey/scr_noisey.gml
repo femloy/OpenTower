@@ -5,7 +5,7 @@ function scr_noisey_float()
 	vsp = 0;
 	var spd = 4;
 	var acc = 0.25;
-	if (dir == 0)
+	if dir == 0
 	{
 		float_vsp = spd;
 		float_hsp = 0;
@@ -13,7 +13,7 @@ function scr_noisey_float()
 		if (abs(y - y_to) < 32)
 			dir++;
 	}
-	else if (dir == 1)
+	else if dir == 1
 	{
 		float_hsp = Approach(float_hsp, spd, acc);
 		float_vsp = Approach(float_vsp, 0, acc);

@@ -1,4 +1,4 @@
-if (room != kidsparty_entrance1)
+if room != kidsparty_entrance1
 {
 	var roomname = room_get_name(room);
 	roomname = string_letters(roomname);

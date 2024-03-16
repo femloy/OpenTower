@@ -5,7 +5,7 @@ function scr_savescore(level)
 		global.rank = "s";
 		if (scr_is_p_rank())
 			global.rank = "p";
-		if (global.snickchallenge == 1)
+		if global.snickchallenge == 1
 			global.SAGEsnicksrank = true;
 	}
 	else if ((global.collect + global.collectN) > global.arank)
@@ -28,7 +28,7 @@ function scr_savescore(level)
 	ini_write_real("Game", "enemies", _enemies + global.enemykilled);
 	var _damage = ini_read_real("Game", "damage", 0);
 	ini_write_real("Game", "damage", _damage + global.player_damage);
-	if (global.secretfound > 3)
+	if global.secretfound > 3
 		global.secretfound = 3;
 	if (ini_read_real("Secret", level, 0) < global.secretfound)
 		ini_write_string("Secret", level, global.secretfound);
@@ -39,31 +39,31 @@ function scr_savescore(level)
 	global.newtoppin[4] = false;
 	if (ini_read_real("Toppin", level + "1", false) == 0)
 	{
-		if (global.shroomfollow)
+		if global.shroomfollow
 			global.newtoppin[0] = true;
 		ini_write_real("Toppin", level + "1", global.shroomfollow);
 	}
 	if (ini_read_real("Toppin", level + "2", false) == 0)
 	{
-		if (global.cheesefollow)
+		if global.cheesefollow
 			global.newtoppin[1] = true;
 		ini_write_real("Toppin", level + "2", global.cheesefollow);
 	}
 	if (ini_read_real("Toppin", level + "3", false) == 0)
 	{
-		if (global.tomatofollow)
+		if global.tomatofollow
 			global.newtoppin[2] = true;
 		ini_write_real("Toppin", level + "3", global.tomatofollow);
 	}
 	if (ini_read_real("Toppin", level + "4", false) == 0)
 	{
-		if (global.sausagefollow)
+		if global.sausagefollow
 			global.newtoppin[3] = true;
 		ini_write_real("Toppin", level + "4", global.sausagefollow);
 	}
 	if (ini_read_real("Toppin", level + "5", false) == 0)
 	{
-		if (global.pineapplefollow)
+		if global.pineapplefollow
 			global.newtoppin[4] = true;
 		ini_write_real("Toppin", level + "5", global.pineapplefollow);
 	}
@@ -73,17 +73,17 @@ function scr_savescore(level)
 function scr_play_rank_music()
 {
 	var s = 4.5;
-	if (global.rank == "p")
+	if global.rank == "p"
 		s = 5.5;
-	if (global.rank == "s")
+	if global.rank == "s"
 		s = 0.5;
-	if (global.rank == "a")
+	if global.rank == "a"
 		s = 1.5;
-	if (global.rank == "b")
+	if global.rank == "b"
 		s = 2.5;
-	if (global.rank == "c")
+	if global.rank == "c"
 		s = 3.5;
-	if (global.rank == "d")
+	if global.rank == "d"
 		s = 4.5;
 	if ((room != tower_entrancehall || global.exitrank) && room != tower_tutorial1 && room != tower_tutorial1N)
 	{

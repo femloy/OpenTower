@@ -1,10 +1,10 @@
 event_inherited();
 func = function()
 {
-	with (obj_soundtest)
+	with obj_soundtest
 	{
 		play = !play;
-		if (play)
+		if play
 		{
 			other.active = false;
 			if (!fmod_event_instance_is_playing(music_event))

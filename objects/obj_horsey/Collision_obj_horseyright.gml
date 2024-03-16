@@ -1,4 +1,4 @@
-if (!other.used)
+if !other.used
 {
 	hsp = 0;
 	vsp = 0;
@@ -8,7 +8,7 @@ if (!other.used)
 	{
 		hsp = other.hsp * spd;
 		vsp = other.vsp * spd;
-		if (hsp != 0)
+		if hsp != 0
 			image_xscale = sign(hsp);
 		other.used = true;
 	}

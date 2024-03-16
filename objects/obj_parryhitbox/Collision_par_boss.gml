@@ -1,8 +1,8 @@
 var _boss = other.id;
 var hb = id;
-if (collisioned)
+if collisioned
 	exit;
-with (_boss)
+with _boss
 {
 	var upb = ds_map_find_value(boss_unparryablestates, state);
 	var sb = ds_map_find_value(boss_hurtstates, state);
@@ -12,7 +12,7 @@ with (_boss)
 		var pstate = p.tauntstoredstate;
 		var pmovespeed = p.tauntstoredmovespeed;
 		var psprite = p.tauntstoredsprite;
-		if (object_index == obj_pizzafaceboss && phase > 1)
+		if object_index == obj_pizzafaceboss && phase > 1
 			SUPER_boss_hurt(30, p);
 		else
 		{
@@ -21,12 +21,12 @@ with (_boss)
 			movespeed = 0;
 			hithsp = 0;
 		}
-		with (hb)
+		with hb
 		{
-			if (!collisioned)
+			if !collisioned
 				event_user(0);
 		}
-		with (p)
+		with p
 		{
 			tauntstoredstate = pstate;
 			tauntstoredmovespeed = pmovespeed;

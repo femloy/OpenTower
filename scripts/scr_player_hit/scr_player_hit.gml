@@ -7,7 +7,7 @@ function scr_player_hit()
 	hitLag--;
 	xscale = hitxscale;
 	image_speed = 0;
-	if (hitLag <= 0)
+	if hitLag <= 0
 	{
 		fmod_event_one_shot_3d("event:/sfx/pep/hurt", x, y);
 		image_speed = 0.35;

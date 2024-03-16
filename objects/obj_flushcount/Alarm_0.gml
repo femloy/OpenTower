@@ -1,4 +1,4 @@
-if (count > 0)
+if count > 0
 {
 	count--;
 	scr_sound_multiple("event:/sfx/misc/collect", obj_player1.x, obj_player1.y);
@@ -6,7 +6,7 @@ if (count > 0)
 	global.heattime = clamp(global.heattime, 0, 60);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
-	with (obj_camera)
+	with obj_camera
 		healthshaketime = 30;
 	global.collect += val;
 	create_collect(obj_player1.x, obj_player1.y, spr, val);

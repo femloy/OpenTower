@@ -50,10 +50,10 @@ add_music(tower_peppinohouse, "event:/music/peppinohouse", noone, false);
 add_music(tower_soundtestlevel, "event:/sfx/misc/pillarmusic", noone, false) 
 add_music(trickytreat_1, "event:/music/halloween2023", noone, false, function(room, parameter)
 {
-    if (room == trickytreat_1)
-        fmod_event_instance_set_parameter(parameter, "state", 0, true)
-    else
-        fmod_event_instance_set_parameter(parameter, "state", 1, true)
+	if room == trickytreat_1
+		fmod_event_instance_set_parameter(parameter, "state", 0, true)
+	else
+		fmod_event_instance_set_parameter(parameter, "state", 1, true)
 })
 add_music(secret_entrance, "event:/music/secretworld", noone, false) 
 
@@ -98,7 +98,7 @@ add_music(medieval_1, "event:/music/w1/medieval", "event:/music/w1/medievalsecre
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", false, function(room, event)
@@ -115,7 +115,7 @@ add_music(ruin_1, "event:/music/w1/ruin", "event:/music/w1/ruinsecret", false, f
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(dungeon_1, "event:/music/w1/dungeon", "event:/music/w1/dungeonsecret", false)
@@ -135,7 +135,7 @@ add_music(badland_1, "event:/music/w2/desert", "event:/music/w2/desertsecret", f
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", false, function(room, event)
@@ -152,7 +152,7 @@ add_music(farm_2, "event:/music/w2/farm", "event:/music/w2/farmsecret", false, f
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 
@@ -177,7 +177,7 @@ add_music(forest_1, "event:/music/w3/forest", "event:/music/w3/forestsecret", fa
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 
@@ -197,7 +197,7 @@ add_music(freezer_1, "event:/music/w4/freezer", "event:/music/w4/freezersecret",
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industrialsecret", false, function(room, event, event_secret)
@@ -214,7 +214,7 @@ add_music(industrial_1, "event:/music/w4/industrial", "event:/music/w4/industria
 			break;
 	}
 
-	if (s != -1)
+	if s != -1
 		fmod_event_instance_set_parameter(event, "state", s, true);
 });
 add_music(sewer_1, "event:/music/w4/sewer", "event:/music/w4/sewersecret", false)
@@ -222,9 +222,9 @@ add_music(street_1, "event:/music/w4/street", "event:/music/w4/streetsecret", fa
 {
 	if (room == street_1 || room == street_house3)
 		fmod_event_instance_set_parameter(event, "state", 0, true);
-	else if (room == street_bacon)
+	else if room == street_bacon
 		fmod_event_instance_set_parameter(event, "state", 2, true);
-	if (room == street_jail)
+	if room == street_jail
 		fmod_set_parameter("musicmuffle", 1, false);
 	else
 		fmod_set_parameter("musicmuffle", 0, false);

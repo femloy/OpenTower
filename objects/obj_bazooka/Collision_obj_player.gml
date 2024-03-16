@@ -1,3 +1,3 @@
 scr_hurtplayer(other.id);
-if (destroy)
+if destroy
 	instance_destroy();

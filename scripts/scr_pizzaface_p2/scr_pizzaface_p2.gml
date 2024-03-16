@@ -32,7 +32,7 @@ function scr_pizzaface_p2_update_sounds()
 	}
 	else
 		fmod_event_instance_stop(snd_haywire, true);
-	if (state == states.pizzahead_portraitthrow)
+	if state == states.pizzahead_portraitthrow
 	{
 		if (!fmod_event_instance_is_playing(snd_tvthrow))
 			fmod_event_instance_play(snd_tvthrow);
@@ -93,43 +93,43 @@ function scr_pizzaface_p2_fall()
 {
 	image_speed = 0.35;
 	hsp = 0;
-	with (obj_player1)
+	with obj_player1
 	{
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
-			if (sprite_index == spr_player_gnomecutscene2)
+			if sprite_index == spr_player_gnomecutscene2
 				image_index = image_number - 1;
-			else if (sprite_index == spr_player_gnomecutscene3)
+			else if sprite_index == spr_player_gnomecutscene3
 				sprite_index = spr_player_gnomecutscene4;
-			else if (sprite_index == spr_pepbossintro2)
+			else if sprite_index == spr_pepbossintro2
 				image_index = image_number - 2;
-			else if (sprite_index == spr_noisebossintro1)
+			else if sprite_index == spr_noisebossintro1
 				image_index = image_number - 3;
-			else if (sprite_index == spr_noisebossintro2)
+			else if sprite_index == spr_noisebossintro2
 				image_index = image_number - 3;
-			else if (sprite_index == spr_playerN_doiseintro2)
+			else if sprite_index == spr_playerN_doiseintro2
 				sprite_index = spr_playerN_doiseintro3;
 		}
 	}
-	switch (substate)
+	switch substate
 	{
 		case states.jump:
 			vsp = 0;
 			y -= 18;
-			if (y < -600)
+			if y < -600
 				substate = states.fall;
 			break;
 		
 		case states.fall:
 			sprite_index = spr_pizzahead_piledriver;
-			if (y < 200)
+			if y < 200
 			{
 				y += 20;
 				vsp = 0;
 			}
 			else
 				vsp = 20;
-			if (grounded && vsp > 0)
+			if grounded && vsp > 0
 			{
 				laugh_snd = false;
 				instance_create(0, 0, obj_pizzafaceboss_p2background);
@@ -143,23 +143,23 @@ function scr_pizzaface_p2_fall()
 				substate = states.transition;
 				sprite_index = spr_pizzahead_intro4;
 				image_index = 0;
-				with (obj_bosscontroller)
+				with obj_bosscontroller
 				{
 					global.playerhit = 0;
 					player_hp = player_maxhp;
 					boss_hpsprite = spr_bossfight_pizzaheadHP;
 					boss_palette = spr_bossfight_pizzaheadpalette;
 				}
-				with (obj_player1)
+				with obj_player1
 				{
 					sprite_index = spr_player_gnomecutscene3;
-					if (!ispeppino)
+					if !ispeppino
 						sprite_index = spr_playerN_doiseintro2;
 					else
 						fmod_event_one_shot("event:/sfx/pep/screamboss");
 					image_index = 0;
 				}
-				with (obj_camera)
+				with obj_camera
 				{
 					shake_mag = 3;
 					shake_mag_acc = 5 / room_speed;
@@ -176,15 +176,15 @@ function scr_pizzaface_p2_fall()
 				laugh_snd = true;
 				fmod_event_one_shot("event:/sfx/voice/pizzahead");
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				state = states.walk;
 				image_xscale = 1;
-				with (obj_player1)
+				with obj_player1
 				{
 					state = states.animation;
 					tauntstoredstate = states.normal;
-					if (ispeppino)
+					if ispeppino
 					{
 						sprite_index = spr_player_screamtransition;
 						image_index = 0;
@@ -192,11 +192,11 @@ function scr_pizzaface_p2_fall()
 					}
 					landAnim = false;
 				}
-				if (!obj_player1.ispeppino)
+				if !obj_player1.ispeppino
 				{
-					with (obj_music)
+					with obj_music
 					{
-						if (music != -4)
+						if music != -4
 							fmod_event_instance_set_parameter(music.event, "state", 1.4, true);
 					}
 				}
@@ -206,7 +206,7 @@ function scr_pizzaface_p2_fall()
 }
 function scr_pizzaface_p2_normal()
 {
-	if (elitehit <= 0)
+	if elitehit <= 0
 	{
 		destroyable = true;
 		instance_destroy();
@@ -219,19 +219,19 @@ function scr_pizzaface_p2_normal()
 	}
 	else
 	{
-		if (!obj_player1.ispeppino)
+		if !obj_player1.ispeppino
 		{
-			with (obj_music)
+			with obj_music
 			{
 				if (music != -4 && fmod_event_instance_get_parameter(music.event, "state") < 1)
 					fmod_event_instance_set_parameter(music.event, "state", 1.4, true);
 			}
 		}
-		if (flickertime <= 0)
+		if flickertime <= 0
 		{
 			if (instance_exists(obj_pizzaheadportrait) || instance_exists(obj_forknightspawner))
 				idle_buffer = 10;
-			if (idle_buffer > 0)
+			if idle_buffer > 0
 			{
 				idle_buffer--;
 				hsp = 0;
@@ -253,9 +253,9 @@ function scr_pizzaface_p2_normal()
 		else
 		{
 			sprite_index = spr_pizzahead_hurt;
-			if (grounded)
+			if grounded
 				hsp = Approach(hsp, 0, 0.25);
-			if (grounded && vsp > 0 && flickertime > 0)
+			if grounded && vsp > 0 && flickertime > 0
 			{
 				hsp = Approach(hsp, 0, 0.5);
 				create_particle(x, y, particle.landcloud);
@@ -268,9 +268,9 @@ function scr_pizzaface_p2_normal()
 function scr_pizzaface_p2_look()
 {
 	hsp = 0;
-	if (fishingbuffer > 0)
+	if fishingbuffer > 0
 		fishingbuffer--;
-	else if (fishcount > 0)
+	else if fishcount > 0
 	{
 		fishcount--;
 		state = states.walk;
@@ -294,9 +294,9 @@ function scr_pizzaface_p2_fishing()
 		sprite_index = spr_pizzahead_pullinglevel2;
 		image_index = 0;
 	}
-	else if (!global.pistol)
+	else if !global.pistol
 	{
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			saveddir = -image_xscale;
 			hsp = 0;
@@ -307,12 +307,12 @@ function scr_pizzaface_p2_fishing()
 			image_index = 0;
 		}
 	}
-	else if (floor(image_index) == (image_number - 1))
+	else if floor(image_index) == image_number - 1
 	{
 		saveddir = -image_xscale;
-		if (throwsword && lastattack != pizzaface_p2_attacks.pullinglevel)
+		if throwsword && lastattack != pizzaface_p2_attacks.pullinglevel
 			leveldown = true;
-		if (miniguncount > 0)
+		if miniguncount > 0
 		{
 			brick = false;
 			state = states.shotgun;
@@ -328,7 +328,7 @@ function scr_pizzaface_p2_fishing()
 			availablemoves = [];
 			for (var i = 0; i < array_length(movecount); i++)
 			{
-				if (movecount[i] < 2)
+				if movecount[i] < 2
 					array_push(availablemoves, i);
 			}
 			do var t = availablemoves[irandom(array_length(availablemoves) - 1)];
@@ -337,7 +337,7 @@ function scr_pizzaface_p2_fishing()
 			lastattack = t;
 			idle_buffer = 0;
 			
-			switch (t)
+			switch t
 			{
 				case pizzaface_p2_attacks.pullinglevel:
 					state = states.pizzahead_pullinglevel;
@@ -346,7 +346,7 @@ function scr_pizzaface_p2_fishing()
 					image_index = 0;
 					shot = false;
 					instance_create(x + (42 * image_xscale), y + 200, obj_pizzaheadswordstone);
-					with (obj_camera)
+					with obj_camera
 					{
 						shake_mag = 3;
 						shake_mag_acc = 1 / room_speed;
@@ -373,7 +373,7 @@ function scr_pizzaface_p2_fishing()
 					image_index = 0;
 					state = states.shotgun;
 					ammo = 20;
-					if (image_xscale > 0)
+					if image_xscale > 0
 					{
 						minigun_angle = 225;
 						minigun_dir = -1;
@@ -399,7 +399,7 @@ function scr_pizzaface_p2_fishing()
 function boss_pizzahead_pinup()
 {
 	hsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.pizzahead_fishing;
 		hsp = 0;
@@ -421,7 +421,7 @@ function boss_pizzahead_portraitthrow()
 				x += (x > (room_width / 2)) ? -1 : 1;
 		}
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		image_xscale *= -1;
 		state = states.walk;
@@ -429,28 +429,28 @@ function boss_pizzahead_portraitthrow()
 }
 function boss_pizzahead_pullinglevel()
 {
-	if (sprite_index == spr_pizzahead_pullinglevel2)
+	if sprite_index == spr_pizzahead_pullinglevel2
 	{
 		var ix = floor(image_index);
-		with (obj_pizzaheadswordstone)
+		with obj_pizzaheadswordstone
 		{
-			if (ix < 8)
+			if ix < 8
 				y = other.y + 33;
-			else if (ix == 8)
+			else if ix == 8
 				y = other.y + 64;
-			else if (ix == 9)
+			else if ix == 9
 				y = other.y + 99;
-			else if (ix == 10)
+			else if ix == 10
 				y = other.y + 118;
-			else if (ix == 11)
+			else if ix == 11
 				y = other.y + 141;
-			else if (ix == 12)
+			else if ix == 12
 				y = other.y + 159;
 		}
 	}
-	else if (sprite_index == spr_pizzahead_pullinglevel1)
+	else if sprite_index == spr_pizzahead_pullinglevel1
 	{
-		with (obj_pizzaheadswordstone)
+		with obj_pizzaheadswordstone
 		{
 			if (floor(other.image_index) >= 21)
 			{
@@ -495,12 +495,12 @@ function boss_pizzahead_pullinglevel()
 				vsp = -irandom_range(18, 26);
 		}
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		if (sprite_index == spr_pizzahead_pullinglevel1)
+		if sprite_index == spr_pizzahead_pullinglevel1
 		{
 			image_index = image_number - 1;
-			with (obj_pizzaheadswordstone)
+			with obj_pizzaheadswordstone
 				y = other.y + 33;
 			if (!instance_exists(obj_forknight_pizzahead) && !instance_exists(obj_medievalprojectile))
 			{
@@ -508,11 +508,11 @@ function boss_pizzahead_pullinglevel()
 				fmod_event_one_shot("event:/sfx/pizzahead/medievalbringup");
 				sprite_index = spr_pizzahead_pullinglevel2;
 				image_index = 0;
-				with (obj_pizzaheadswordstone)
+				with obj_pizzaheadswordstone
 					y = other.y + 33;
 			}
 		}
-		else if (sprite_index == spr_pizzahead_pullinglevel2)
+		else if sprite_index == spr_pizzahead_pullinglevel2
 		{
 			sprite_index = spr_pizzahead_giddy;
 			state = states.walk;
@@ -527,22 +527,22 @@ function boss_pizzahead_pullinglevel()
 function boss_pizzahead_throwing()
 {
 	hsp = 0;
-	if (!brick)
+	if !brick
 	{
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			state = states.walk;
 	}
 	else
 	{
-		if (sprite_index == spr_pizzahead_ratballstart)
+		if sprite_index == spr_pizzahead_ratballstart
 		{
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				sprite_index = spr_pizzahead_ratballidle;
 				image_xscale *= -1;
 			}
 		}
-		else if (sprite_index == spr_pizzahead_ratballthrow)
+		else if sprite_index == spr_pizzahead_ratballthrow
 		{
 			if (floor(image_index) >= 18 && !shot)
 			{
@@ -557,28 +557,28 @@ function boss_pizzahead_throwing()
 					if (abs(hsp) <= 1 && (abs(vsp) <= 1 || vsp > 0))
 						calculate_jump_velocity(obj_player1.x, obj_player1.y, s2, grav);
 					movespeed = abs(hsp);
-					if (movespeed <= 4)
+					if movespeed <= 4
 						movespeed = 10;
 				}
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 				sprite_index = spr_pizzahead_ratballidle;
 		}
-		else if (sprite_index == spr_pizzahead_ratballcatch)
+		else if sprite_index == spr_pizzahead_ratballcatch
 		{
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 				sprite_index = spr_pizzahead_ratballidle;
 		}
-		else if (sprite_index == spr_pizzahead_ratballend)
+		else if sprite_index == spr_pizzahead_ratballend
 		{
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 				state = states.walk;
 		}
-		if (sprite_index == spr_pizzahead_ratballidle)
+		if sprite_index == spr_pizzahead_ratballidle
 		{
 			if (!instance_exists(obj_pizzaheadbrickball))
 			{
-				if (brickcount > 0)
+				if brickcount > 0
 				{
 					brickcount--;
 					shot = false;
@@ -596,40 +596,40 @@ function boss_pizzahead_throwing()
 }
 function boss_pizzahead_shotgun()
 {
-	switch (substate)
+	switch substate
 	{
 		case states.mini:
-			if (sprite_index == spr_pizzahead_grabgun)
+			if sprite_index == spr_pizzahead_grabgun
 			{
-				if (floor(image_index) == (image_number - 1))
+				if floor(image_index) == image_number - 1
 					sprite_index = spr_pizzahead_machinegun;
 			}
-			else if (attackbuffer > 0)
+			else if attackbuffer > 0
 				attackbuffer--;
 			else
 			{
 				attackbuffer = 5;
 				ammo--;
-				if (ammo > 0)
+				if ammo > 0
 				{
 					fmod_event_one_shot_3d("event:/sfx/pizzahead/uzi", x, y);
 					with (instance_create(x, y, obj_pizzaheadbullet))
 					{
 						image_angle = other.minigun_angle;
-						if (other.image_xscale == -1)
+						if other.image_xscale == -1
 							image_angle *= -1;
 					}
 					minigun_angle += (minigun_dir * 15);
-					if (image_xscale > 0)
+					if image_xscale > 0
 					{
-						if (minigun_dir == -1 && minigun_angle < 120)
+						if minigun_dir == -1 && minigun_angle < 120
 							minigun_dir *= -1;
-						else if (minigun_dir == 1 && minigun_angle > 225)
+						else if minigun_dir == 1 && minigun_angle > 225
 							minigun_dir *= -1;
 					}
-					else if (minigun_dir == -1 && minigun_angle < 315)
+					else if minigun_dir == -1 && minigun_angle < 315
 						minigun_dir *= -1;
-					else if (minigun_dir == 1 && minigun_angle > 405)
+					else if minigun_dir == 1 && minigun_angle > 405
 						minigun_dir *= -1;
 				}
 				else
@@ -651,9 +651,9 @@ function boss_pizzahead_shotgun()
 			}
 			break;
 		case states.throwing:
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
-				if (sprite_index == spr_pizzahead_grabbox)
+				if sprite_index == spr_pizzahead_grabbox
 				{
 					fmod_event_one_shot_3d("event:/sfx/pizzahead/throw", x, y);
 					sprite_index = spr_pizzahead_throwaway;
@@ -665,13 +665,13 @@ function boss_pizzahead_shotgun()
 						vsp = -irandom_range(7, 14);
 					}
 				}
-				else if (sprite_index == spr_pizzahead_grabdynamite)
+				else if sprite_index == spr_pizzahead_grabdynamite
 				{
 					fmod_event_one_shot_3d("event:/sfx/pizzahead/throw", x, y);
 					idle_buffer = 0;
 					sprite_index = spr_pizzahead_throwaway;
 					image_index = 0;
-					repeat (5)
+					repeat 5
 					{
 						with (instance_create(x - (image_xscale * 5), y - 15, obj_vigilantedynamite))
 						{
@@ -683,18 +683,18 @@ function boss_pizzahead_shotgun()
 				else
 				{
 					state = states.walk;
-					if (!global.pistol)
+					if !global.pistol
 					{
 						image_xscale = saveddir;
 						sprite_index = spr_pizzahead_idle;
 					}
 					else
 					{
-						if (miniguncount > 0)
+						if miniguncount > 0
 							fishcount = 0;
 						else
 							image_xscale = saveddir;
-						if (miniguncount == 2)
+						if miniguncount == 2
 							image_xscale = saveddir;
 					}
 				}
@@ -708,7 +708,7 @@ function boss_pizzahead_p2_phase1hurt()
 	y = hitY + irandom_range(-1, 1);
 	hsp = 0;
 	vsp = 0;
-	with (obj_player)
+	with obj_player
 	{
 		actorbuffer = 10000;
 		hsp = 0;
@@ -717,11 +717,11 @@ function boss_pizzahead_p2_phase1hurt()
 		state = states.actor;
 		pistolanim = -4;
 		sprite_index = spr_player_pistolshotend;
-		if (!ispeppino)
+		if !ispeppino
 			sprite_index = spr_playerN_bosstransition;
 	}
 	instance_create_unique(0, 0, obj_bossdark);
-	if (buildup > 0)
+	if buildup > 0
 	{
 		obj_camera.lock = true;
 		camzoom = lerp(camzoom, 0.5, 0.2);
@@ -739,7 +739,7 @@ function boss_pizzahead_p2_phase1hurt()
 		camzoom = 1;
 		camera_set_view_size(view_camera[0], SCREEN_WIDTH, SCREEN_HEIGHT);
 		elitehit--;
-		with (obj_player)
+		with obj_player
 			state = states.normal;
 	}
 	obj_screensizer.camzoom = camzoom;

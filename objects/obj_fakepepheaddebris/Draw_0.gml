@@ -4,7 +4,7 @@ pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, 
 var pal = palinfo.paletteselect;
 pal_swap_set(spr_peppalette, pal, false);
 draw_self();
-if (clone)
+if clone
 {
 	pal_swap_set(spr_peppalette, 13, false);
 	draw_self();

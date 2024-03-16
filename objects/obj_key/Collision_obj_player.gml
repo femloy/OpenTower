@@ -1,10 +1,10 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-if (global.key_inv)
+if global.key_inv
 	exit;
-with (other)
+with other
 {
-	if (state != states.bombpep && state != states.gotoplayer && state != states.ghost && state != states.knightpep && state != states.cheeseball && state != states.boxxedpep && state != states.cheesepep && state != states.knightpepattack && state != states.knightpepslopes && state != states.hurt && state != states.knightpepbump)
+	if state != states.bombpep && state != states.gotoplayer && state != states.ghost && state != states.knightpep && state != states.cheeseball && state != states.boxxedpep && state != states.cheesepep && state != states.knightpepattack && state != states.knightpepslopes && state != states.hurt && state != states.knightpepbump
 	{
 		instance_destroy(other);
 		goblinkey = false;

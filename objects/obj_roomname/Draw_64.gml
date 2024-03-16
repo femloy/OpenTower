@@ -1,6 +1,6 @@
 if (room == Mainmenu || room == tower_soundtest || room == tower_soundtestlevel)
 	exit;
-if (!global.option_hud)
+if !global.option_hud
 	exit;
 draw_set_font(lang_get_font("smallfont"));
 draw_set_halign(fa_center);

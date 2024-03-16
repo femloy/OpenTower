@@ -1,17 +1,17 @@
-if (!pause && obj_player1.key_start)
+if !pause && obj_player1.key_start
 {
 	var _cutscenehandler = false;
-	with (obj_cutscene_handler)
+	with obj_cutscene_handler
 	{
-		if (!loop)
+		if !loop
 			_cutscenehandler = true;
 	}
-	with (obj_secretportal)
+	with obj_secretportal
 	{
-		if (touched)
+		if touched
 			_cutscenehandler = true;
 	}
-	with (obj_secretportalstart)
+	with obj_secretportalstart
 		_cutscenehandler = true;
 	if (obj_savesystem.state == 0 && !_cutscenehandler && (room != rank_room && room != Realtitlescreen && room != timesuproom) && !instance_exists(obj_jumpscare) && !instance_exists(obj_fadeout) && !instance_exists(obj_technicaldifficulty))
 	{
@@ -20,7 +20,7 @@ if (!pause && obj_player1.key_start)
 			instance_create(x, y, obj_pausefadeout);
 	}
 }
-with (obj_player1)
+with obj_player1
 {
 	other.paletteselect = paletteselect;
 	other.spr_palette = spr_palette;
@@ -31,11 +31,11 @@ if (pause && !instance_exists(obj_option))
 	var prevselected = selected;
 	moveselect = -key_up2 + key_down2;
 	selected += moveselect;
-	if (moveselect != 0 && selected >= 0 && selected <= 2)
+	if moveselect != 0 && selected >= 0 && selected <= 2
 		selected = clamp(selected, 0, array_length(pause_menu) - 1);
-	if (prevselected != selected)
+	if prevselected != selected
 	{
-		switch (selected)
+		switch selected
 		{
 			case 0:
 				peppino_sprite = spr_player_idle;
@@ -53,9 +53,9 @@ if (pause && !instance_exists(obj_option))
 		peppino_sprite_number = sprite_get_number(peppino_sprite);
 		peppino_index = 0;
 	}
-	if (key_jump)
+	if key_jump
 	{
-		switch (selected)
+		switch selected
 		{
 			case 0:
 				if (!instance_exists(obj_pausefadeout))
@@ -63,13 +63,13 @@ if (pause && !instance_exists(obj_option))
 				break;
 			case 2:
 				var roomname = room_get_name(room);
-				if (!global.snickchallenge)
+				if !global.snickchallenge
 				{
 					var rm = -4;
 					rm = global.leveltorestart;
 					ds_list_clear(global.saveroom);
 					ds_list_clear(global.baddieroom);
-					if (rm != -4 && rm != -1)
+					if rm != -4 && rm != -1
 					{
 						instance_destroy(obj_fadeout);
 						instance_activate_all();
@@ -100,7 +100,7 @@ if (pause && !instance_exists(obj_option))
 					pause = false;
 					instance_activate_all();
 					room = Realtitlescreen;
-					with (obj_player1)
+					with obj_player1
 					{
 						character = "P";
 						scr_characterspr();
@@ -134,13 +134,13 @@ if (pause && !instance_exists(obj_option))
 		}
 	}
 	cursor_index += 0.35;
-	if (cursor_index > cursor_sprite_number)
+	if cursor_index > cursor_sprite_number
 	{
 		var p = cursor_index - floor(cursor_index);
 		cursor_index = p;
 	}
 	peppino_index += 0.35;
-	if (peppino_index > peppino_sprite_number)
+	if peppino_index > peppino_sprite_number
 	{
 		p = peppino_index - floor(peppino_index);
 		peppino_index = p;
@@ -148,7 +148,7 @@ if (pause && !instance_exists(obj_option))
 	for (var i = 0; i < array_length(toppin_sprite); i++)
 	{
 		toppin_index[i] += 0.35;
-		if (toppin_index[i] > toppin_number[i])
+		if toppin_index[i] > toppin_number[i]
 		{
 			var t = toppin_index[i];
 			p = t - floor(t);

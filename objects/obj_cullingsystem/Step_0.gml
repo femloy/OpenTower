@@ -1,6 +1,6 @@
-if (frames > 0)
+if frames > 0
 	frames--;
-if (frames <= 0)
+if frames <= 0
 {
 	frames = framesmax;
 	var cx = camera_get_view_x(view_camera[0]);
@@ -13,7 +13,7 @@ if (frames <= 0)
 		if (rectangle_in_rectangle(b.bbox_left, b.bbox_top, b.bbox_right, b.bbox_bottom, cx - offset, cy - offset, cx + cw + offset, cy + ch + offset))
 		{
 			instance_activate_object(b.ID);
-			switch (b.object_index)
+			switch b.object_index
 			{
 				case obj_baddiecollisionbox:
 					instance_activate_object(b.baddieID);
@@ -25,7 +25,7 @@ if (frames <= 0)
 	for (i = 0; i < array_length(object_arr); i++)
 	{
 		b = object_arr[i];
-		with (b)
+		with b
 		{
 			if (!rectangle_in_rectangle(bbox_left, bbox_top, bbox_right, bbox_bottom, cx - other.offset, cy - other.offset, cx + cw + other.offset, cy + ch + other.offset))
 			{
@@ -39,19 +39,19 @@ if (frames <= 0)
 				q.bbox_bottom = bbox_bottom;
 				q.bbox_top = bbox_top;
 				var _deactivate = true;
-				switch (b)
+				switch b
 				{
 					case obj_baddiecollisionbox:
 						if (instance_exists(baddieID) && (baddieID.important || baddieID.thrown || !baddieID.grounded))
 							_deactivate = false;
-						if (_deactivate)
+						if _deactivate
 						{
 							q.baddieID = baddieID;
 							instance_deactivate_object(baddieID);
 						}
 						break;
 				}
-				if (_deactivate)
+				if _deactivate
 				{
 					ds_list_add(other.cull_list, q);
 					instance_deactivate_object(id);

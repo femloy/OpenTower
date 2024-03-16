@@ -1,10 +1,10 @@
 if (state == 0 || state == 1)
 	instance_deactivate_object(baddieID);
 
-switch (state)
+switch state
 {
 	case 0:
-		if (!global.panic)
+		if !global.panic
 			visible = false;
 		else
 			state = 1;
@@ -26,16 +26,16 @@ switch (state)
 		{
 			instance_activate_object(baddieID);
 			fmod_event_one_shot_3d("event:/sfx/enemies/escapespawn", x, y);
-			with (baddieID)
+			with baddieID
 			{
 				x = other.x;
 				y = other.y;
-				if (escapestun)
+				if escapestun
 				{
 					state = states.stun;
 					sprite_index = stunfallspr;
 					stunned = 20;
-					if (elite)
+					if elite
 						stunned *= 6;
 				}
 				boundbox = false;
@@ -46,7 +46,7 @@ switch (state)
 		break;
 	
 	case 3:
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			visible = false;
 		break;
 }

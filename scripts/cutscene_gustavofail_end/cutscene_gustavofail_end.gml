@@ -2,9 +2,9 @@ function cutscene_gustavofail_end(frames)
 {
 	var time = frames;
 	timer++;
-	with (obj_gustavo)
+	with obj_gustavo
 		visible = false;
-	with (obj_player1)
+	with obj_player1
 	{
 		xscale = -1;
 		sprite_index = spr_gustavo_pummel;
@@ -16,15 +16,15 @@ function cutscene_gustavofail_end(frames)
 				negative = true;
 				number = "-50";
 			}
-			if (global.collect > 50)
+			if global.collect > 50
 				global.collect -= 50;
 			else
 				global.collect = 0;
-			if (global.collect != 0)
+			if global.collect != 0
 			{
 				if (character == "P" || character == "V")
 				{
-					repeat (10)
+					repeat 10
 					{
 						with (instance_create(x, y, obj_pizzaloss))
 							sprite_index = choose(spr_shroomcollect, spr_tomatocollect, spr_cheesecollect, spr_sausagecollect, spr_pineapplecollect);
@@ -32,15 +32,15 @@ function cutscene_gustavofail_end(frames)
 				}
 				else
 				{
-					repeat (10)
+					repeat 10
 						instance_create(x, y, obj_pizzaloss);
 				}
 			}
 		}
 	}
-	if (timer >= time)
+	if timer >= time
 	{
-		with (obj_gustavo)
+		with obj_gustavo
 		{
 			visible = true;
 			sprite_index = spr_gustavo_idle;

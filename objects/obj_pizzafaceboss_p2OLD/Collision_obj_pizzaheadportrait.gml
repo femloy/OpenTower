@@ -1,4 +1,4 @@
-if (other.thrown)
+if other.thrown
 {
 	instance_destroy(other);
 	hp--;

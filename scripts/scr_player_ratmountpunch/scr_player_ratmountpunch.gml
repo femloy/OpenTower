@@ -5,14 +5,14 @@ function scr_player_ratmountpunch()
 	move = key_left + key_right;
 	landAnim = false;
 	sprite_index = spr_lonegustavo_punch;
-	if (grounded)
+	if grounded
 		movespeed = Approach(movespeed, xscale * 4, 0.1);
 	ratmountpunchtimer--;
 	if (ratmountpunchtimer < 0 && (!key_slap || gustavohitwall))
 	{
 		sprite_index = spr_lonegustavo_walk;
 		state = states.ratmount;
-		if (hsp != 0)
+		if hsp != 0
 		{
 			dir = sign(hsp);
 			xscale = dir;
@@ -37,7 +37,7 @@ function scr_player_ratmountpunch()
 		image_index = 0;
 		sprite_index = spr_lonegustavo_groundpoundstart;
 	}
-	if (punch_afterimage > 0)
+	if punch_afterimage > 0
 		punch_afterimage--;
 	else
 	{

@@ -1,10 +1,10 @@
-if (state == states.shoulderbash && hsp != 0)
+if state == states.shoulderbash && hsp != 0
 {
-	if (other.flash)
+	if other.flash
 		other.flash = false;
 	var s = other.state;
 	scr_hurtplayer(other);
-	if (other.state != s && other.state == states.hurt)
+	if other.state != s && other.state == states.hurt
 	{
 		state = states.stun;
 		hsp = -image_xscale * 5;
@@ -13,12 +13,12 @@ if (state == states.shoulderbash && hsp != 0)
 		sprite_index = spr_pepperman_shoulderhurtstart;
 		image_index = 0;
 		image_speed = 0.35;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 5 / room_speed;
 		}
-		repeat (4)
+		repeat 4
 			create_debris(x, y, spr_slapstar);
 	}
 }
@@ -26,9 +26,9 @@ else if (wastedhits == 9 && phase == 1 && !pizzahead && (other.instakillmove || 
 	scr_boss_do_hurt_phase2(other);
 else if (state == states.mini && ministate != states.transition && (other.instakillmove || other.state == states.handstandjump))
 {
-	with (other)
+	with other
 		scr_pummel();
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 5 / room_speed;

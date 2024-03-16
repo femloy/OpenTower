@@ -1,6 +1,6 @@
-if (other.state != states.chainsaw)
+if other.state != states.chainsaw
 {
-	repeat (8)
+	repeat 8
 	{
 		with (create_debris(x, y, spr_slimedebris))
 		{
@@ -8,7 +8,7 @@ if (other.state != states.chainsaw)
 			hsp = random_range(-3, 3);
 		}
 	}
-	if (other.state != states.cheesepep)
+	if other.state != states.cheesepep
 	{
 	}
 	other.state = states.cheesepep;

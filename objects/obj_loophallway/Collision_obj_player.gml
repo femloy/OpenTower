@@ -1,2 +1,2 @@
-with (other)
+with other
 	scr_loophallway(other);

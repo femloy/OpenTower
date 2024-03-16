@@ -26,7 +26,7 @@ font = lang_get_font("tutorialfont");
 draw_set_font(font);
 
 trace("Separating text: ", old_text);
-while (p <= l)
+while p <= l
 {
 	text = string_insert(string_char_at(old_text, p), text, p + 1);
 	text = scr_separate_text(text, -4, (text_sprite_width * text_xscale) - (text_contentpad * 2));

@@ -1,6 +1,6 @@
-if (other.key_up2 && other.ispeppino == ispeppino)
+if other.key_up2 && other.ispeppino == ispeppino
 {
-	with (other)
+	with other
 	{
 		with (instance_create(x, y, obj_sausageman_dead))
 		{
@@ -9,7 +9,7 @@ if (other.key_up2 && other.ispeppino == ispeppino)
 			vsp = -irandom_range(6, 11);
 			usepalette = true;
 			sprite_index = spr_palettedresserdebris;
-			if (!obj_player1.ispeppino)
+			if !obj_player1.ispeppino
 				sprite_index = spr_palettedresserdebrisN;
 			spr_palette = obj_player1.spr_palette;
 			paletteselect = other.paletteselect;
@@ -20,7 +20,7 @@ if (other.key_up2 && other.ispeppino == ispeppino)
 	paletteselect++;
 	if (paletteselect >= array_length(palettes))
 		paletteselect = 0;
-	while (palettes[paletteselect][1] == 0)
+	while palettes[paletteselect][1] == 0
 	{
 		paletteselect++;
 		if (paletteselect >= array_length(palettes))

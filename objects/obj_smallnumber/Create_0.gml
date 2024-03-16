@@ -6,5 +6,5 @@ number = "1";
 negative = false;
 flash = true;
 depth = -100;
-if (!global.option_hud)
+if !global.option_hud
 	instance_destroy();

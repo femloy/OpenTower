@@ -1,4 +1,4 @@
-if (current_room == -4)
+if current_room == -4
 	exit;
 array_sort(current_room.backgrounds, function()
 {
@@ -7,7 +7,7 @@ array_sort(current_room.backgrounds, function()
 var arr = current_room.backgrounds;
 for (var i = 0; i < array_length(arr); i++)
 {
-	if (arr[i].depth >= 0)
+	if arr[i].depth >= 0
 		draw_set_alpha(1);
 	else
 		draw_set_alpha(0.1);
@@ -26,7 +26,7 @@ draw_line_width(current_room.x, current_room.y, current_room.x + current_room.wi
 draw_line_width(current_room.x, current_room.y, current_room.x, current_room.y + current_room.height, w);
 draw_line_width(current_room.x, current_room.y + current_room.height, current_room.x + current_room.width, current_room.y + current_room.height, w);
 draw_line_width(current_room.x + current_room.width, current_room.y, current_room.x + current_room.width, current_room.y + current_room.height, w);
-with (obj_editorobject)
+with obj_editorobject
 	event_perform(ev_draw, 0);
-with (obj_component)
+with obj_component
 	event_perform(ev_draw, 0);

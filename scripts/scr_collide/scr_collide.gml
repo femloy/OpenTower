@@ -3,7 +3,7 @@ function scr_collide()
 	grounded = false;
 	with (instance_place(x, y + 2, obj_movingplatform))
 	{
-		with (other)
+		with other
 		{
 			if (!place_meeting(x, y - (3 + abs(other.v_velocity)), other))
 			{
@@ -81,9 +81,9 @@ function scr_collide()
 			}
 		}
 	}
-	if (vsp < 10)
+	if vsp < 10
 		vsp += grav;
-	if (platformid != -4)
+	if platformid != -4
 	{
 		if (vsp < 0 || !instance_exists(platformid) || !place_meeting(x, y + 12 + (abs(platformid.v_velocity) * 2), platformid))
 		{
@@ -94,7 +94,7 @@ function scr_collide()
 		{
 			grounded = true;
 			vsp = grav;
-			if (platformid.vsp > 0)
+			if platformid.vsp > 0
 				vsp = abs(platformid.v_velocity);
 			y = platformid.y - 46;
 			if (!place_meeting(x, y + 1, platformid))
@@ -107,14 +107,14 @@ function scr_collide()
 						break;
 				}
 			}
-			if (platformid.v_velocity != 0)
+			if platformid.v_velocity != 0
 			{
 				if (scr_solid(x, y))
 				{
 					for (i = 0; scr_solid(x, y); i++)
 					{
 						y--;
-						if (i > 32)
+						if i > 32
 							break;
 					}
 				}
@@ -123,7 +123,7 @@ function scr_collide()
 					for (i = 0; scr_solid(x, y); i++)
 					{
 						y++;
-						if (i > 64)
+						if i > 64
 							break;
 					}
 				}

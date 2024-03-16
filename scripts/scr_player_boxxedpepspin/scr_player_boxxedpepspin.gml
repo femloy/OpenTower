@@ -21,7 +21,7 @@ function scr_player_boxxedpepspin()
 		movespeed = -(sign(hsp) * 6);
 		GamepadSetVibration(0, 0.4, 0.4, 0.65);
 	}
-	if (ispeppino)
+	if ispeppino
 	{
 		if ((!key_slap || abs(movespeed) <= 3) && boxxedspinbuffer == 0)
 		{
@@ -36,6 +36,6 @@ function scr_player_boxxedpepspin()
 		state = 33;
 		sprite_index = spr_boxxedpepidle;
 	}
-	if ((sprite_index == spr_playerN_boxxeddashstart || sprite_index == spr_playerN_boxxedhit) && floor(image_index) == (image_number - 1))
+	if ((sprite_index == spr_playerN_boxxeddashstart || sprite_index == spr_playerN_boxxedhit) && floor(image_index) == image_number - 1)
 		sprite_index = spr_playerN_boxxeddash;
 }

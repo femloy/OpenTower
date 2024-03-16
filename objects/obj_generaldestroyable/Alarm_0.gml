@@ -5,7 +5,7 @@ if (scr_solid(x, y))
 	{
 		y--;
 		i++;
-		if (i > 128)
+		if i > 128
 		{
 			y = ystart;
 			break;

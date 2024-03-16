@@ -1,6 +1,6 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
-	repeat (8)
+	repeat 8
 	{
 		with (create_debris(x + 16, y + 50, spr_wooddebris))
 		{

@@ -7,7 +7,7 @@ hub_array[4] = [hub_industrialcomplex, "INDUSTRIAL COMPLEX"];
 isgustavo = false;
 playerid = -4;
 selected = 0;
-switch (room)
+switch room
 {
 	case hub_room1:
 		selected = 0;

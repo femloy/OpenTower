@@ -1,4 +1,4 @@
-with (obj_player1)
+with obj_player1
 {
 	global.player_damage = 0;
 	global.peppino_damage = 0;

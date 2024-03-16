@@ -1,15 +1,15 @@
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (obj_bosscontroller.state == states.arenaintro)
+if obj_bosscontroller.state == states.arenaintro
 	exit;
-if (hp <= 0 && state != states.arenaround && state != states.fistmatch)
+if hp <= 0 && state != states.arenaround && state != states.fistmatch
 {
-	if (!thrown && !destroyable)
+	if !thrown && !destroyable
 		boss_destroy(lastplayerid);
 }
 image_speed = 0.35;
-if (knightbuffer > 0)
+if knightbuffer > 0
 	knightbuffer--;
-switch (phase)
+switch phase
 {
 	case 0:
 		normal_func = boss_pizzaface_phase1normal;
@@ -21,7 +21,7 @@ switch (phase)
 		normal_func = boss_pizzahead_phase3normal;
 		break;
 }
-switch (state)
+switch state
 {
 	case states.arenaround:
 		grav = 0.5;
@@ -106,7 +106,7 @@ switch (state)
 		break;
 	case states.walk:
 		grav = 0.5;
-		if (grounded)
+		if grounded
 			state = states.normal;
 		invincible = true;
 		inv_timer = 2;
@@ -137,13 +137,13 @@ switch (state)
 		state_boss_stun();
 		break;
 }
-if (phase == 0 && state != states.pizzaface_ram)
+if phase == 0 && state != states.pizzaface_ram
 	invincible = true;
 else
 	invincible = false;
 attacking = state == states.pizzaface_ram || state == states.pizzaface_nose || state == states.pizzahead_spinningkick || state == states.pizzahead_spinningpunch || state == states.pizzahead_groundpunch || state == states.pizzahead_slamhead || state == states.pizzahead_slamhead2;
 colliding = state != states.pizzaface_ram;
-if (phase > 0)
+if phase > 0
 {
 	mask_index = spr_pizzahead_giddy;
 	stunfallspr = spr_pizzahead_giddy;

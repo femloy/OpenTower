@@ -1,6 +1,6 @@
-if (other.id != baddieID && other.state != states.tumble && other.state != states.stun)
+if other.id != baddieID && other.state != states.tumble && other.state != states.stun
 {
-	with (other)
+	with other
 	{
 		stunstate = 1;
 		stuntimer = stunmax;

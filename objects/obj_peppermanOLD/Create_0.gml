@@ -87,7 +87,7 @@ function boss_destroy(player)
 {
 	hitstate = states.normal;
 	SUPER_boss_destroy(player);
-	with (obj_peppermanbrick)
+	with obj_peppermanbrick
 		instance_destroy();
 	global.peppermancutscene2 = true;
 	quick_ini_write_real(get_savefile_ini(), "cutscene", "pepperman2", true);
@@ -96,11 +96,11 @@ function boss_destroy(player)
 }
 function boss_hurt(damage, player)
 {
-	if (targetstunned > 0)
+	if targetstunned > 0
 	{
 		targetstunned -= targetstunnedminus[phase - 1];
 		attack_cooldown = 0;
-		if (targetstunned < 0)
+		if targetstunned < 0
 			targetstunned = 1;
 	}
 	else
@@ -110,11 +110,11 @@ function boss_hurt(damage, player)
 }
 function boss_hurt_noplayer(damage)
 {
-	if (targetstunned > 0)
+	if targetstunned > 0
 	{
 		targetstunned -= targetstunnedminus[phase - 1];
 		attack_cooldown = 0;
-		if (targetstunned < 0)
+		if targetstunned < 0
 			targetstunned = 1;
 	}
 	else
@@ -129,7 +129,7 @@ function player_hurt(damage, player)
 		SUPER_player_hurt(damage, player);
 		if (_prevstate == states.shoulderbash || _prevstate == states.supershoulderbash || _prevstate == states.shoulder || _prevstate == states.superslam)
 		{
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
@@ -139,9 +139,9 @@ function player_hurt(damage, player)
 			hitvsp = -4;
 			hithsp = -image_xscale * 8;
 		}
-		else if (_prevstate == states.backbreaker)
+		else if _prevstate == states.backbreaker
 		{
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
@@ -160,9 +160,9 @@ function player_hurt(damage, player)
 			hitstate = states.normal;
 		}
 	}
-	else if (state == states.superslam)
+	else if state == states.superslam
 	{
-		with (player)
+		with player
 		{
 			if (state == states.hit || state == states.chainsaw)
 			{

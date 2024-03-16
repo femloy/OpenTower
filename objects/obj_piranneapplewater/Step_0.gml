@@ -1,4 +1,4 @@
-if (vsp < 12)
+if vsp < 12
 	vsp += grav;
 if (floor(image_index) == 3 && !shot)
 {

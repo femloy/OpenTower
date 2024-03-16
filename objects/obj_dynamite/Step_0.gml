@@ -3,10 +3,10 @@ mask_index = spr_player_mask;
 if (scr_solid(x, y + 1) && vsp > 0)
 {
 	vsp = -5;
-	if (movespeed > 0)
+	if movespeed > 0
 		movespeed -= 1;
 }
-if (obj_explosion != obj_dynamiteexplosion_boss && obj_explosion != obj_canonexplosion && playerid.key_shoot2 && playerid.state != states.dynamite)
+if obj_explosion != obj_dynamiteexplosion_boss && obj_explosion != obj_canonexplosion && playerid.key_shoot2 && playerid.state != states.dynamite
 {
 	instance_destroy();
 	instance_create(x, y, obj_explosion);
@@ -18,12 +18,12 @@ if (place_meeting(x + hsp, y + vsp, obj_destructibles) || place_meeting(x + hsp,
 	instance_destroy();
 	instance_create(x, y, obj_explosion);
 }
-if (countdown <= 0)
+if countdown <= 0
 {
 	instance_destroy();
 	instance_create(x, y, obj_explosion);
 }
-if (sprite_index == spr_dynamite && alarm[0] < 60)
+if sprite_index == spr_dynamite && alarm[0] < 60
 	sprite_index = spr_dynamiteabouttoexplode;
 if (sprite_index == spr_dynamite || sprite_index == spr_dynamiteabouttoexplode)
 	countdown--;

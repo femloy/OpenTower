@@ -1,8 +1,8 @@
-if (state == states.flushtransition)
+if state == states.flushtransition
 {
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		switch (sprite_index)
+		switch sprite_index
 		{
 			case spr_flush_pizzatransition:
 				sprite_index = spr_flush_pizza;

@@ -1,4 +1,4 @@
-if (destroy)
+if destroy
 {
 	instance_create(x, y, obj_haystack);
 	global.vigilantecutscene3 = true;

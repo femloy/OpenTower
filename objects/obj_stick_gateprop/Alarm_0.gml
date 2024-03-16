@@ -1,5 +1,5 @@
 alarm[0] = 5;
-with (obj_camera)
+with obj_camera
 {
 	shake_mag = 4;
 	shake_mag_acc = 3 / room_speed;

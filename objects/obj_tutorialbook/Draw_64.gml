@@ -1,9 +1,9 @@
-if (!global.option_hud)
+if !global.option_hud
 	exit;
 if (text_state == states.titlescreen && text_y <= -(text_sprite_height * text_yscale))
 	exit;
 reset_blendmode();
-if (showgranny)
+if showgranny
 {
 	draw_sprite(spr_tutorialbubble_rope, 0, 64 + text_wave_x, text_y + text_wave_y);
 	draw_sprite(spr_tutorialbubble_rope, 0, (SCREEN_WIDTH - 64) + text_wave_x, text_y + text_wave_y);

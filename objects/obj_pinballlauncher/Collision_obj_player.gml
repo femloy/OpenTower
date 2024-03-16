@@ -1,5 +1,5 @@
 var _obj = id;
-with (other)
+with other
 {
 	if (scr_transformationcheck() || state == states.tumble)
 	{
@@ -21,7 +21,7 @@ with (other)
 			if (scr_solid(x, y))
 			{
 				var i = 0;
-				while (i <= _max)
+				while i <= _max
 				{
 					if (scr_solid(x, y))
 					{
@@ -35,7 +35,7 @@ with (other)
 			if (scr_solid(x, y))
 			{
 				i = 0;
-				while (i <= _max)
+				while i <= _max
 				{
 					if (scr_solid(x, y))
 					{

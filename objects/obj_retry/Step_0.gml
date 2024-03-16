@@ -1,4 +1,4 @@
-if (selected == 0)
+if selected == 0
 {
 	image_speed = 0;
 	image_index = 2;

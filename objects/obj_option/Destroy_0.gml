@@ -1,6 +1,6 @@
-with (obj_player)
+with obj_player
 {
-	if (state == states.actor)
+	if state == states.actor
 		state = states.normal;
 }
 gamesave_async_save_options();

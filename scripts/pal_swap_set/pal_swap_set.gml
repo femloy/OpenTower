@@ -1,7 +1,7 @@
 function pal_swap_set(_pal_sprite, _pal_index)
 {
 	var _surface = false;
-	if (!_surface)
+	if !_surface
 	{
 		var tex = sprite_get_texture(_pal_sprite, 0);
 		var UVs = sprite_get_uvs(_pal_sprite, 0);

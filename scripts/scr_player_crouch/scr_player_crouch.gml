@@ -11,7 +11,7 @@ function scr_player_crouch()
 	movespeed = 4;
 	mask_index = spr_crouchmask;
 	turning = false;
-	if (!grounded && !key_jump)
+	if !grounded && !key_jump
 	{
 		jumpAnim = false;
 		state = states.crouchjump;
@@ -28,36 +28,36 @@ function scr_player_crouch()
 		image_index = 0;
 		mask_index = spr_player_mask;
 	}
-	if (crouchAnim == 0)
+	if crouchAnim == 0
 	{
-		if (move == 0)
+		if move == 0
 		{
-			if (shotgunAnim == 0)
+			if shotgunAnim == 0
 				sprite_index = spr_crouch;
 			else
 				sprite_index = spr_shotgunduck;
 		}
-		if (move != 0)
+		if move != 0
 		{
-			if (shotgunAnim == 0)
+			if shotgunAnim == 0
 				sprite_index = spr_crawl;
 			else
 				sprite_index = spr_shotguncrawl;
 		}
 	}
-	if (crouchAnim == 1)
+	if crouchAnim == 1
 	{
-		if (move == 0)
+		if move == 0
 		{
-			if (shotgunAnim == 0)
+			if shotgunAnim == 0
 				sprite_index = spr_couchstart;
 			else
 				sprite_index = spr_shotgungoduck;
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 				crouchAnim = false;
 		}
 	}
-	if (move != 0)
+	if move != 0
 	{
 		xscale = move;
 		crouchAnim = false;
@@ -74,7 +74,7 @@ function scr_player_crouch()
 	}
 	if (key_shoot2 && character == "V" && !instance_exists(dynamite_inst))
 	{
-		if (move == 0)
+		if move == 0
 			movespeed = 0;
 		state = states.dynamite;
 		image_index = 0;
@@ -88,9 +88,9 @@ function scr_player_crouch()
 			playerid = other.id;
 		}
 	}
-	if (key_slap2 && character == "V")
+	if key_slap2 && character == "V"
 	{
-		if (move == 0)
+		if move == 0
 			movespeed = 0;
 		state = states.revolver;
 		image_index = 0;

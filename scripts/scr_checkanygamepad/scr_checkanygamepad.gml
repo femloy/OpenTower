@@ -27,7 +27,7 @@ function scr_check_menu_repeats(argument0, argument1, argument2)
 	for (i = 0; i < array_length(query); i++)
 	{
 		in = tdp_input_get(query[i]);
-		if (!argument2)
+		if !argument2
 		{
 			if (in.has_value(0, argument1))
 				return false;
@@ -90,20 +90,20 @@ function scr_checkanygamepad(device)
 function scr_check_joysticks(device)
 {
 	if (gamepad_axis_value(device, gp_axislh) > 0.5)
-        return [gp_axislh, 1];
-    if (gamepad_axis_value(device, gp_axislh) < -0.5)
-        return [gp_axislh, -1];
-    if (gamepad_axis_value(device, gp_axislv) > 0.5)
-        return [gp_axislv, 1];
-    if (gamepad_axis_value(device, gp_axislv) < -0.5)
-        return [gp_axislv, -1];
-    if (gamepad_axis_value(device, gp_axisrh) > 0.5)
-        return [gp_axisrh, 1];
-    if (gamepad_axis_value(device, gp_axisrh) < -0.5)
-        return [gp_axisrh, -1];
-    if (gamepad_axis_value(device, gp_axisrv) > 0.5)
-        return [gp_axisrv, 1];
-    if (gamepad_axis_value(device, gp_axisrv) < -0.5)
-        return [gp_axisrv, -1];
-    return noone;
+		return [gp_axislh, 1];
+	if (gamepad_axis_value(device, gp_axislh) < -0.5)
+		return [gp_axislh, -1];
+	if (gamepad_axis_value(device, gp_axislv) > 0.5)
+		return [gp_axislv, 1];
+	if (gamepad_axis_value(device, gp_axislv) < -0.5)
+		return [gp_axislv, -1];
+	if (gamepad_axis_value(device, gp_axisrh) > 0.5)
+		return [gp_axisrh, 1];
+	if (gamepad_axis_value(device, gp_axisrh) < -0.5)
+		return [gp_axisrh, -1];
+	if (gamepad_axis_value(device, gp_axisrv) > 0.5)
+		return [gp_axisrv, 1];
+	if (gamepad_axis_value(device, gp_axisrv) < -0.5)
+		return [gp_axisrv, -1];
+	return noone;
 }

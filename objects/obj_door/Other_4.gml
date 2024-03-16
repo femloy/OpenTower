@@ -2,7 +2,7 @@ if (place_meeting(x, y, obj_player) && !ds_list_find_index(global.saveroom, id))
 	ds_list_add(global.saveroom, id);
 if (ds_list_find_index(global.saveroom, id) != -1)
 	visited = true;
-if (visited == 1 && sprite_index != spr_pumpkingate && sprite_index != spr_cheftaskdoor && sprite_index != spr_pepperdoor && sprite_index != spr_elevatordown1 && sprite_index != spr_elevatordown2 && sprite_index != spr_elevatordown3 && sprite_index != spr_elevatordown4)
+if visited == 1 && sprite_index != spr_pumpkingate && sprite_index != spr_cheftaskdoor && sprite_index != spr_pepperdoor && sprite_index != spr_elevatordown1 && sprite_index != spr_elevatordown2 && sprite_index != spr_elevatordown3 && sprite_index != spr_elevatordown4
 	sprite_index = spr_doorvisited;
 if (sprite_index == spr_doorvisited || sprite_index == spr_doorunvisited)
 {
@@ -10,17 +10,17 @@ if (sprite_index == spr_doorvisited || sprite_index == spr_doorunvisited)
 	image_index = global.door_index;
 	image_speed = 0;
 }
-if (john && global.panic)
+if john && global.panic
 {
-	if (room == saloon_4)
+	if room == saloon_4
 		sprite_index = spr_doorblockedsaloon;
 	else
 		sprite_index = spr_doorblocked;
 }
-if (sprite_index == spr_cheftaskdoor)
+if sprite_index == spr_cheftaskdoor
 {
 	var arr = ["placebo"];
-	switch (room)
+	switch room
 	{
 		case tower_1:
 		case tower_cheftask1:
@@ -55,6 +55,6 @@ if (sprite_index == spr_cheftaskdoor)
 		}
 	}
 	ini_close();
-	if (!_found)
+	if !_found
 		sprite_index = spr_cheftaskdoor_gold;
 }

@@ -1,4 +1,4 @@
-if (!touched)
+if !touched
 {
 	var xx = obj_player1.x;
 	var yy = obj_player1.y;
@@ -16,19 +16,19 @@ if (!touched)
 		mask_index = b[4];
 	}
 	image_speed = 0.35;
-	switch (state)
+	switch state
 	{
 		case states.normal:
-			if (sprite_index != spr_fakepeppino_land)
+			if sprite_index != spr_fakepeppino_land
 			{
-				if (x != xprevious)
+				if x != xprevious
 					sprite_index = spr_fakepeppino_walk;
 				else
 					sprite_index = spr_fakepeppino_idle;
 			}
-			else if (floor(image_index) == (image_number - 1))
+			else if floor(image_index) == image_number - 1
 				sprite_index = spr_fakepeppino_idle;
-			if (sprite_index == spr_fakepeppino_walk)
+			if sprite_index == spr_fakepeppino_walk
 			{
 				if (!steppy && (floor(image_index) == 2 || floor(image_index) == 7))
 				{
@@ -38,10 +38,10 @@ if (!touched)
 				if (steppy && floor(image_index) != 2 && floor(image_index) != 7)
 					steppy = false;
 			}
-			if (!grounded)
+			if !grounded
 			{
 				state = states.jump;
-				if (vsp < 0)
+				if vsp < 0
 				{
 					with (instance_create(x, y, obj_highjumpcloud1))
 					{
@@ -63,14 +63,14 @@ if (!touched)
 			break;
 		
 		case states.jump:
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
-				if (sprite_index == spr_fakepeppino_jumpstart)
+				if sprite_index == spr_fakepeppino_jumpstart
 					sprite_index = spr_fakepeppino_jump;
-				else if (sprite_index == spr_fakepeppino_jump)
+				else if sprite_index == spr_fakepeppino_jump
 					sprite_index = spr_fakepeppino_fall;
 			}
-			if (grounded && vsp > 0)
+			if grounded && vsp > 0
 			{
 				create_particle(x, y, particle.landcloud, 0);
 				sprite_index = spr_fakepeppino_land;

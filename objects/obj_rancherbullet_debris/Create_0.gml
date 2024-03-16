@@ -2,8 +2,8 @@ hsp = 0;
 vsp = 0;
 grav = 0.5;
 depth = -8;
-with (obj_drawcontroller)
+with obj_drawcontroller
 {
-	if (use_dark)
+	if use_dark
 		other.depth = 0;
 }

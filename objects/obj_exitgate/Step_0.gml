@@ -1,23 +1,23 @@
 if global.panic == true || random_secret || (instance_exists(obj_wartimer) && room != war_1)
 {
 	image_index = 1;
-	if (!uparrow)
+	if !uparrow
 	{
 		uparrowID = scr_create_uparrowhitbox();
 		uparrow = true;
 	}
 }
-else if (uparrow)
+else if uparrow
 {
 	uparrow = false;
 	instance_destroy(uparrowID);
 }
-if (drop && global.panic)
+if drop && global.panic
 {
-	if (dropstate == states.grabbed)
+	if dropstate == states.grabbed
 	{
 		sprite_index = spr_exitgategrabbed;
-		if (snd == 0)
+		if snd == 0
 		{
 			fmod_event_one_shot_3d("event:/sfx/pep/hitwall", x, y);
 			snd = true;
@@ -26,7 +26,7 @@ if (drop && global.panic)
 	else
 		sprite_index = spr_exitgate;
 	
-	switch (dropstate)
+	switch dropstate
 	{
 		case states.normal:
 			if (distance_to_object(obj_player1) < 300)
@@ -63,17 +63,17 @@ if (drop && global.panic)
 			break;
 		
 		case states.fall:
-			if (vsp < 20)
+			if vsp < 20
 				vsp += grav;
 			y += vsp;
-			if (y >= drop_y)
+			if y >= drop_y
 			{
 				depth = 50;
 				fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 				y = drop_y;
 				dropstate = states.idle;
 				handsprite = spr_grabbiehand_idle;
-				with (obj_camera)
+				with obj_camera
 				{
 					shake_mag = 5;
 					shake_mag_acc = 3 / room_speed;

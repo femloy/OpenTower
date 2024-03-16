@@ -1,4 +1,4 @@
-if (selected == 0)
+if selected == 0
 {
 	if ((obj_player.key_right2 || keyboard_check_pressed(vk_right)) && optionselected < 2)
 		optionselected += 1;

@@ -1,6 +1,6 @@
 function scr_player_barrelclimbwall()
 {
-	if (!ispeppino)
+	if !ispeppino
 	{
 		move = key_left + key_right;
 		vsp = -wallspeed;
@@ -29,12 +29,12 @@ function scr_player_barrelclimbwall()
 			ledge_bump(32);
 			state = states.barrelslide;
 			vsp = 0;
-			if (wallspeed < 6)
+			if wallspeed < 6
 				wallspeed = 6;
 			movespeed = wallspeed;
 			sprite_index = spr_barrelroll;
 		}
-		if (input_buffer_jump > 8)
+		if input_buffer_jump > 8
 		{
 			fmod_event_one_shot_3d("event:/sfx/pep/jump", x, y);
 			input_buffer_jump = 0;
@@ -53,7 +53,7 @@ function scr_player_barrelclimbwall()
 	}
 	move = key_left + key_right;
 	hsp = 0;
-	if (sprite_index == spr_barrelslipnslide && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_barrelslipnslide && floor(image_index) == image_number - 1)
 		sprite_index = spr_barrelroll;
 	if ((!key_attack && !place_meeting(x, y + 1, obj_current)) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
@@ -65,7 +65,7 @@ function scr_player_barrelclimbwall()
 			sprite_index = spr_barrelfall;
 		}
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 	{
 		state = states.barrelslide;
 		xscale *= -1;

@@ -4,9 +4,9 @@ function scr_player_ratmountcrouch()
 	hsp = movespeed;
 	if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_destructibles))
 		movespeed = 0;
-	if (move != 0)
+	if move != 0
 	{
-		if (move == xscale)
+		if move == xscale
 		{
 			if (abs(movespeed) < 4)
 				movespeed = Approach(movespeed, xscale * 4, 0.5);
@@ -28,7 +28,7 @@ function scr_player_ratmountcrouch()
 	}
 	else
 		movespeed = Approach(movespeed, 0, 0.5);
-	if (!grounded)
+	if !grounded
 	{
 		state = states.ratmountjump;
 		jumpAnim = false;
@@ -36,7 +36,7 @@ function scr_player_ratmountcrouch()
 	}
 	if (((grounded && !key_down) || brick) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 		state = states.ratmount
-	if (hsp != 0)
+	if hsp != 0
 		sprite_index = spr_lonegustavo_crouchwalk;
 	else
 		sprite_index = spr_lonegustavo_crouch;

@@ -1,6 +1,6 @@
-if (other.instakillmove)
+if other.instakillmove
 	instance_destroy();
-else if (other.state == states.freefall)
+else if other.state == states.freefall
 {
 	other.xscale = sign(image_xscale);
 	other.state = states.motorcycle;

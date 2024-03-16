@@ -1,4 +1,4 @@
-if (other.state == states.knightpep && state == states.pizzahead_enguarde && vsp > 0)
+if other.state == states.knightpep && state == states.pizzahead_enguarde && vsp > 0
 {
 	hp--;
 	other.state = states.normal;

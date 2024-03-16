@@ -21,16 +21,16 @@ function scr_add_grannypizzalevel(level, _icon, _secrets = true, _toppins = true
 		gotrank: -4
 	};
 	ini_open_from_string(obj_savesystem.ini_str);
-	if (q.secrets)
+	if q.secrets
 		q.secretcount = ini_read_real("Secret", level, 0);
-	if (q.toppins)
+	if q.toppins
 	{
 		for (var i = 0; i < array_length(q.toppinarr); i++)
 			q.toppinarr[i] = ini_read_real("Toppin", concat(level, i + 1), false);
 	}
-	if (q.treasure)
+	if q.treasure
 		q.gottreasure = ini_read_real("Treasure", level, false);
-	if (q.rank)
+	if q.rank
 		q.gotrank = ini_read_string("Ranks", level, "none");
 	ini_close();
 	array_push(levelarray, q);

@@ -1,10 +1,10 @@
-if (grounded && grabbed == 0 && !ratgrabbed)
+if grounded && grabbed == 0 && !ratgrabbed
 	thrown = false;
-if (!ratgrabbed)
+if !ratgrabbed
 	state = states.normal;
-if (ratgrabbed && ratplayerid.ratgrabbedID != id)
+if ratgrabbed && ratplayerid.ratgrabbedID != id
 	ratgrabbed = false;
-if (grabbed == 1 && !ratgrabbed)
+if grabbed == 1 && !ratgrabbed
 {
 	image_xscale = -playerid.xscale;
 	grav = 0;
@@ -14,7 +14,7 @@ if (grabbed == 1 && !ratgrabbed)
 		grav = 0;
 		grounded = false;
 		x = playerid.x;
-		if (playerid.sprite_index != spr_player_haulingstart && playerid.state != states.finishingblow)
+		if playerid.sprite_index != spr_player_haulingstart && playerid.state != states.finishingblow
 			y = playerid.y - 60;
 		else if (floor(playerid.image_index) == 0)
 			y = playerid.y - 20;
@@ -26,7 +26,7 @@ if (grabbed == 1 && !ratgrabbed)
 			y = playerid.y - 50;
 		image_xscale = -playerid.xscale;
 	}
-	with (playerid)
+	with playerid
 	{
 		move = key_left2 + key_right2;
 		if (!(state == states.finishingblow || state == states.grab || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
@@ -38,12 +38,12 @@ if (grabbed == 1 && !ratgrabbed)
 		}
 	}
 	hsp = 0;
-	if (playerid.state == states.finishingblow)
+	if playerid.state == states.finishingblow
 	{
 		x = playerid.x + (playerid.xscale * 50);
 		y = playerid.y;
 	}
-	if (playerid.state == states.grab && playerid.sprite_index == playerid.spr_swingding)
+	if playerid.state == states.grab && playerid.sprite_index == playerid.spr_swingding
 	{
 		if (floor(playerid.image_index) == 0)
 		{
@@ -94,7 +94,7 @@ if (grabbed == 1 && !ratgrabbed)
 			y = playerid.y;
 		}
 	}
-	if (playerid.state == states.shoulder)
+	if playerid.state == states.shoulder
 	{
 		grav = 0.5;
 		instance_create(x, y + 20, obj_bumpeffect);
@@ -102,27 +102,27 @@ if (grabbed == 1 && !ratgrabbed)
 		thrown = true;
 		x = playerid.x;
 		y = playerid.y;
-		if (playerid.sprite_index == spr_player_shoulder)
+		if playerid.sprite_index == spr_player_shoulder
 			vsp = 15;
-		if (playerid.sprite_index == spr_player_diagonaldownthrow)
+		if playerid.sprite_index == spr_player_diagonaldownthrow
 		{
 			hsp = -image_xscale * 10;
 			vsp = 15;
 		}
-		if (playerid.sprite_index == spr_player_diagonalupthrow)
+		if playerid.sprite_index == spr_player_diagonalupthrow
 		{
 			hsp = -image_xscale * 10;
 			vsp = -15;
 		}
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (playerid.state == states.throwing)
+	if playerid.state == states.throwing
 	{
 		grav = 0.5;
 		grabbed = false;
@@ -132,7 +132,7 @@ if (grabbed == 1 && !ratgrabbed)
 		hsp = -image_xscale * 10;
 		vsp = -10;
 	}
-	if (playerid.state == states.uppunch)
+	if playerid.state == states.uppunch
 	{
 		instance_create(x + (-playerid.xscale * 15), y - 50, obj_bumpeffect);
 		grav = 0.5;
@@ -143,20 +143,20 @@ if (grabbed == 1 && !ratgrabbed)
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
 		flash = true;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (playerid.state == states.tacklecharge)
+	if playerid.state == states.tacklecharge
 	{
 		x = playerid.x + (playerid.xscale * 15);
 		y = playerid.y;
 	}
-	if (playerid.state == states.superslam)
+	if playerid.state == states.superslam
 	{
-		if (playerid.character == "P")
+		if playerid.character == "P"
 		{
 			if (floor(playerid.image_index) == 0)
 			{
@@ -213,7 +213,7 @@ if (grabbed == 1 && !ratgrabbed)
 			x = playerid.x;
 			y = playerid.y - 40;
 		}
-		if (playerid.sprite_index == playerid.spr_piledriverland)
+		if playerid.sprite_index == playerid.spr_piledriverland
 		{
 			instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
@@ -229,7 +229,7 @@ if (grabbed == 1 && !ratgrabbed)
 }
 if (vsp > 0 && grounded && !place_meeting(x, y, obj_spike))
 	hsp = 0;
-if (grabbed == 0 && ratgrabbed == 0 && use_collision)
+if grabbed == 0 && ratgrabbed == 0 && use_collision
 	scr_collide();
 if (place_meeting(x, y, obj_swordhitbox) && thrown == 0)
 {
@@ -241,7 +241,7 @@ if (place_meeting(x, y, obj_swordhitbox) && thrown == 0)
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
@@ -255,10 +255,10 @@ if (place_meeting(x, y, obj_swordhitbox) && thrown == 0)
 	grav = 0.5;
 	other.alarm[8] = 60;
 	other.alarm[7] = 120;
-	with (playerid)
+	with playerid
 	{
 		move = key_right + key_left;
-		if (sprite_index == spr_uppercutfinishingblow)
+		if sprite_index == spr_uppercutfinishingblow
 			other.vsp = -25;
 		else
 		{
@@ -267,7 +267,7 @@ if (place_meeting(x, y, obj_swordhitbox) && thrown == 0)
 		}
 	}
 }
-if (thrown)
+if thrown
 {
 	var num = instance_place_list(x + hsp, y, obj_destructibles, global.instancelist, false);
 	for (var i = 0; i < num; i++)

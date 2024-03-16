@@ -1,12 +1,12 @@
 function scr_player_barrelslide()
 {
 	image_speed = abs(movespeed) / 8;
-	if (image_speed < 0.35)
+	if image_speed < 0.35
 		image_speed = 0.35;
-	if (image_speed > 0.85)
+	if image_speed > 0.85
 		image_speed = 0.85;
 	hsp = movespeed;
-	if (ispeppino)
+	if ispeppino
 	{
 		if (abs(movespeed) < 14)
 			movespeed = Approach(movespeed, xscale * 14, 0.1);
@@ -19,19 +19,19 @@ function scr_player_barrelslide()
 			image_xscale = other.xscale;
 		dashcloudtimer = 15;
 	}
-	if (dashcloudtimer > 0)
+	if dashcloudtimer > 0
 		dashcloudtimer--;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		if (sprite_index == spr_barrelslipnslide)
+		if sprite_index == spr_barrelslipnslide
 			sprite_index = spr_barrelroll;
 	}
-	if (!jumpstop && !key_jump2 && vsp < 0)
+	if !jumpstop && !key_jump2 && vsp < 0
 	{
 		jumpstop = true;
 		vsp /= 20;
 	}
-	if (input_buffer_jump > 0 && can_jump)
+	if input_buffer_jump > 0 && can_jump
 	{
 		scr_fmod_soundeffect(jumpsnd, x, y);
 		input_buffer_jump = 0;
@@ -44,7 +44,7 @@ function scr_player_barrelslide()
 		mask_index = spr_player_mask;
 		if (!place_meeting(x, y, obj_solid))
 		{
-			if (grounded)
+			if grounded
 				state = states.barrel;
 			else
 			{
@@ -69,10 +69,10 @@ function scr_player_barrelslide()
 				vsp = -abs(movespeed);
 			state = states.barrelclimbwall;
 			movespeed = 0;
-			if (!ispeppino)
+			if !ispeppino
 				wallspeed = abs(vsp);
 			fmod_event_one_shot_3d("event:/sfx/barrel/slope", x, y);
-			if (sprite_index != spr_barrelroll)
+			if sprite_index != spr_barrelroll
 				sprite_index = spr_barrelroll;
 		}
 		else

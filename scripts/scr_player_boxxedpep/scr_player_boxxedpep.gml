@@ -1,25 +1,25 @@
 function scr_player_boxxedpep()
 {
 	mask_index = spr_crouchmask;
-	if (boxxeddash == 1)
+	if boxxeddash == 1
 		image_speed = abs(movespeed) / 15;
 	else
 		image_speed = 0.5;
 	doublejump = false;
 	if (abs(hsp) <= 2)
 		boxxeddash = false;
-	if (!ispeppino)
+	if !ispeppino
 		noisejetpack = 80;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+	if !key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0
 	{
 		vsp /= 2;
 		jumpstop = true;
 	}
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 		jumpstop = false;
-	if (dir != xscale)
+	if dir != xscale
 		dir = xscale;
-	if (sprite_index != spr_boxxedpepintro)
+	if sprite_index != spr_boxxedpepintro
 	{
 		move = key_left + key_right;
 		if (place_meeting(x, y + 1, obj_railparent))
@@ -36,26 +36,26 @@ function scr_player_boxxedpep()
 		movespeed = 0;
 	if (xscale == sign(hsp) && scr_solid(x + sign(hsp), y) && (!place_meeting(x - 1, y, obj_slope) || scr_solid_slope(x - 1, y)))
 		boxxeddashbuffer = 0;
-	if (!grounded && boxxeddashbuffer > 0)
+	if !grounded && boxxeddashbuffer > 0
 		boxxeddashbuffer--;
 	if ((can_jump && input_buffer_jump > 0 && vsp > 0) && !scr_solid(x, y - 16) && !scr_solid(x, y - 32))
 	{
 		GamepadSetVibration(0, 0.4, 0.4, 0.65);
-		if (ispeppino)
+		if ispeppino
 			fmod_event_one_shot_3d("event:/sfx/boxxed/flap", x, y);
 		instance_create(x, y, obj_highjumpcloud2);
 		vsp = -boxxedpepjump;
-		if (!ispeppino)
+		if !ispeppino
 		{
 			target_vsp = -4;
 			vsp = target_vsp;
 		}
 		state = states.boxxedpepjump;
 		sprite_index = spr_boxxedpep_flap;
-		if (!ispeppino)
+		if !ispeppino
 			sprite_index = spr_playerN_boxxedjetpack;
 		image_index = 0;
-		repeat (7)
+		repeat 7
 		{
 			with (instance_create(x + random_range(-50, 50), y + random_range(0, 50), obj_highjumpcloud2))
 			{
@@ -70,54 +70,54 @@ function scr_player_boxxedpep()
 		sprite_index = spr_boxxedpepdashend;
 		image_index = 0;
 	}
-	if (sprite_index == spr_boxxedpepdashend && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_boxxedpepdashend && floor(image_index) == image_number - 1)
 		sprite_index = (move != 0) ? spr_boxxedpepwalk : spr_boxxedpepidle;
-	if (sprite_index != spr_boxxedpepintro && boxxeddashbuffer <= 0)
+	if sprite_index != spr_boxxedpepintro && boxxeddashbuffer <= 0
 	{
-		if (move != 0)
+		if move != 0
 		{
 			if (((xscale > 0 && movespeed < 12) || (xscale < 0 && movespeed > -12)) && move == xscale)
 				movespeed += (xscale * 0.8);
-			if (boxxeddash == 0)
+			if boxxeddash == 0
 				xscale = move;
-			else if (move != xscale)
+			else if move != xscale
 				movespeed = Approach(movespeed, 0, 0.8);
 		}
-		else if (boxxeddash == 0)
+		else if boxxeddash == 0
 			movespeed = Approach(movespeed, 0, 0.8);
 		else
 			movespeed = Approach(movespeed, 0, 0.25);
 	}
-	if (sprite_index == spr_boxxedpepintro && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_boxxedpepintro && floor(image_index) == image_number - 1)
 		sprite_index = spr_boxxedpepidle;
-	if (sprite_index != spr_boxxedpepintro)
+	if sprite_index != spr_boxxedpepintro
 	{
-		if (sprite_index != spr_boxxedpep_flap)
+		if sprite_index != spr_boxxedpep_flap
 		{
-			if (grounded)
+			if grounded
 			{
-				if (sprite_index != spr_boxxedpepdashend)
+				if sprite_index != spr_boxxedpepdashend
 				{
-					if (movespeed != 0)
+					if movespeed != 0
 						sprite_index = spr_boxxedpepwalk;
 					else
 						sprite_index = spr_boxxedpepidle;
 				}
 			}
-			else if (boxxeddashbuffer <= 0)
+			else if boxxeddashbuffer <= 0
 			{
 				sprite_index = spr_boxxedpepair;
 				state = states.boxxedpepjump;
 			}
 		}
 	}
-	if (input_buffer_slap > 0)
+	if input_buffer_slap > 0
 	{
 		GamepadSetVibration(0, 0.8, 0.8, 0.65);
 		input_buffer_slap = 0;
 		state = states.boxxedpepspin;
 		sprite_index = spr_boxxedpep_spin;
-		if (!ispeppino)
+		if !ispeppino
 			sprite_index = spr_playerN_boxxedhit;
 		boxxedspinbuffer = 25;
 		image_index = 0;
@@ -125,9 +125,9 @@ function scr_player_boxxedpep()
 		with (instance_create(x, y, obj_crazyrunothereffect))
 			image_xscale = other.xscale;
 	}
-	if (move != 0 && grounded && vsp > 0)
+	if move != 0 && grounded && vsp > 0
 	{
-		if (steppybuffer > 0)
+		if steppybuffer > 0
 			steppybuffer--;
 		else
 		{
@@ -136,12 +136,12 @@ function scr_player_boxxedpep()
 			fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
 		}
 	}
-	if (sprite_index == spr_boxxedpepwalk && !steppy && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_boxxedpepwalk && !steppy && floor(image_index) == image_number - 1)
 	{
 		steppy = true;
-		if (ispeppino)
+		if ispeppino
 			fmod_event_one_shot_3d("event:/sfx/boxxed/step", x, y);
 	}
-	else if (floor(image_index) != (image_number - 1))
+	else if floor(image_index) != image_number - 1
 		steppy = false;
 }

@@ -1,6 +1,6 @@
 image_speed = 0.35;
 content = obj_pizzakinshroom;
-if (obj_player.character == "S")
+if obj_player.character == "S"
 	instance_destroy();
 depth = 0;
 subimg = 0;

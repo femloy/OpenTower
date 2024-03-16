@@ -1,16 +1,16 @@
-if (room == hub_loadingscreen && state != 2)
+if room == hub_loadingscreen && state != 2
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.comingoutdoor;
 		sprite_index = spr_walkfront;
 		image_index = 0;
 	}
-	if (!fadeoutcreate)
+	if !fadeoutcreate
 	{
 		fadeoutcreate = true;
 		var grouparr = ["hubgroup"];
-		with (obj_player)
+		with obj_player
 		{
 			ini_open_from_string(obj_savesystem.ini_str);
 			var _intro = ini_read_real("Tutorial", "finished", false);
@@ -21,14 +21,14 @@ if (room == hub_loadingscreen && state != 2)
 			player_patterntexture[0] = scr_get_texture_palette(_texture);
 			player_patterntexture[1] = scr_get_texture_palette(_texture2);
 			ini_close();
-			if (_intro)
+			if _intro
 			{
 				targetRoom = tower_entrancehall;
 				targetDoor = "A";
 				state = states.victory;
-				if (other.ispeppino)
+				if other.ispeppino
 				{
-					with (obj_player1)
+					with obj_player1
 					{
 						character = "P";
 						ispeppino = true;
@@ -37,7 +37,7 @@ if (room == hub_loadingscreen && state != 2)
 				}
 				else
 				{
-					with (obj_player1)
+					with obj_player1
 					{
 						character = "P";
 						ispeppino = false;
@@ -58,7 +58,7 @@ if (room == hub_loadingscreen && state != 2)
 			restarttimer = true;
 		}
 		icon_alpha = 0;
-		with (obj_achievementtracker)
+		with obj_achievementtracker
 		{
 			achievement_get_steam_achievements(achievements_update);
 			achievement_get_steam_achievements(achievements_notify);
@@ -71,18 +71,18 @@ if (room == hub_loadingscreen && state != 2)
 		}
 	}
 }
-if (state != 0)
+if state != 0
 {
 	showicon = true;
 	icon_alpha = 3;
 }
-else if (showicon)
+else if showicon
 {
 	icon_alpha = Approach(icon_alpha, 0, 0.05);
-	if (icon_alpha <= 0)
+	if icon_alpha <= 0
 		showicon = false;
 }
-if (showicon)
+if showicon
 {
 	icon_index += 0.35;
 	if (icon_index > (icon_max - 1))

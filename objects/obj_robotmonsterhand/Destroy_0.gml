@@ -1,5 +1,5 @@
-if (touched_player)
+if touched_player
 {
-	with (obj_robotmonster)
+	with obj_robotmonster
 		instance_destroy();
 }

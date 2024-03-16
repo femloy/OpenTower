@@ -13,16 +13,16 @@ function scr_player_cheesepep()
 		var _railinst = instance_place(x, y + 1, obj_railparent);
 		hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
 	}
-	if (move != xscale && move != 0)
+	if move != xscale && move != 0
 	{
 		movespeed = 2;
 		xscale = move;
 	}
-	if (grounded && move != 0 && sprite_index == spr_cheesepepidle)
+	if grounded && move != 0 && sprite_index == spr_cheesepepidle
 		sprite_index = spr_cheesepepwalk;
-	else if (grounded && move == 0 && sprite_index == spr_cheesepepwalk)
+	else if grounded && move == 0 && sprite_index == spr_cheesepepwalk
 		sprite_index = spr_cheesepepidle;
-	if (move != 0 && sprite_index != spr_cheesepepjumpstart)
+	if move != 0 && sprite_index != spr_cheesepepjumpstart
 	{
 		xscale = move;
 		movespeed = Approach(movespeed, 6, 0.25);
@@ -35,26 +35,26 @@ function scr_player_cheesepep()
 		create_debris(x, y + 43, spr_slimedebris);
 		fmod_event_one_shot_3d("event:/sfx/cheese/ground", x, y);
 	}
-	if (!grounded)
+	if !grounded
 	{
 		state = states.cheesepepjump;
 		sprite_index = spr_cheesepepfall;
 		jumpstop = true;
 		movespeed = xscale * movespeed;
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		if (sprite_index == spr_cheesepepland || sprite_index == spr_cheesepepintro)
 		{
-			if (move != 0)
+			if move != 0
 				sprite_index = spr_cheesepepwalk;
 			else
 				sprite_index = spr_cheesepepidle;
 		}
 	}
-	if (input_buffer_jump > 0 && sprite_index != spr_cheesepepjumpstart)
+	if input_buffer_jump > 0 && sprite_index != spr_cheesepepjumpstart
 	{
-		if (sprite_index != spr_cheesepepland)
+		if sprite_index != spr_cheesepepland
 		{
 			input_buffer_jump = 0;
 			image_index = 0;
@@ -63,7 +63,7 @@ function scr_player_cheesepep()
 		else
 			input_buffer_jump = 8;
 	}
-	if (sprite_index == spr_cheesepepjumpstart && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_cheesepepjumpstart && floor(image_index) == image_number - 1)
 	{
 		create_particle(x, y, particle.highjumpcloud1);
 		vsp = -11;

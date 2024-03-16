@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -42,24 +42,24 @@ switch (state)
 		scr_enemy_ghostpossess();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
 scr_scareenemy();
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (hitboxcreate == 0 && state == states.walk)
+if hitboxcreate == 0 && state == states.walk
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_forkhitbox))
 		ID = other.id;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;

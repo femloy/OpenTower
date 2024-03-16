@@ -2,7 +2,7 @@ event_inherited();
 active = true;
 func = function()
 {
-	with (obj_soundtest)
+	with obj_soundtest
 	{
 		other.active = false;
 		other.alarm[1] = 10;
@@ -12,7 +12,7 @@ func = function()
 		fmod_event_instance_stop(music_event, true);
 		fmod_event_instance_release(music_event);
 		music_event = fmod_event_create_instance(music_arr[music_pos][0]);
-		if (play)
+		if play
 			fmod_event_instance_play(music_event);
 	}
 };

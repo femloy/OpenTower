@@ -67,7 +67,7 @@ function scr_collide_player()
 			{
 				if (scr_solid_player(x + sh, y) && !scr_solid_player(x + sh, y - k))
 					y -= k;
-				if (state != states.ghost && state != states.rocket && state != states.UNKNOWN_1)
+				if state != states.ghost && state != states.rocket && state != states.UNKNOWN_1
 				{
 					if (!scr_solid_player(x + sh, y) && !scr_solid_player(x + sh, y + 1) && scr_solid_player(x + sh, y + (k + 1)))
 						y += k;
@@ -84,11 +84,11 @@ function scr_collide_player()
 	}
 	
 	// gravity
-	if (vsp < 20)
+	if vsp < 20
 		vsp += grav;
 	
 	// moving platforms
-	if (platformid != -4)
+	if platformid != -4
 	{
 		if (vsp < -1 || !instance_exists(platformid) || (!place_meeting(x, y + 16, platformid) || !place_meeting(x, y + 32, platformid)))
 		{
@@ -99,19 +99,19 @@ function scr_collide_player()
 		{
 			grounded = true;
 			vsp = grav;
-			if (platformid.vsp > 0)
+			if platformid.vsp > 0
 				vsp_carry = platformid.vsp;
 			y = platformid.y - 46;
 			if (!place_meeting(x, y + 1, platformid))
 				y++;
-			if (platformid.v_velocity != 0)
+			if platformid.v_velocity != 0
 			{
 				if (scr_solid(x, y))
 				{
 					for (i = 0; scr_solid(x, y); i++)
 					{
 						y--;
-						if (i > 32)
+						if i > 32
 							break;
 					}
 				}
@@ -120,7 +120,7 @@ function scr_collide_player()
 					for (i = 0; scr_solid(x, y); i++)
 					{
 						y++;
-						if (i > 64)
+						if i > 64
 							break;
 					}
 				}
@@ -135,6 +135,6 @@ function scr_collide_player()
 	grounded |= grinding;
 	if (platformid != -4 || (place_meeting(x, y + 1, obj_movingplatform) && !place_meeting(x, y - 3, obj_movingplatform)) || place_meeting(x, y + 8, obj_movingplatform && !place_meeting(x, y + 6, obj_movingplatform)))
 		grounded = true;
-	if (grounded && platformid == noone)
+	if grounded && platformid == noone
 		y = floor(y);
 }

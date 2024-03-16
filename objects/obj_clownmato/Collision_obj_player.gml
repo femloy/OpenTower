@@ -1,4 +1,4 @@
-with (other)
+with other
 {
 	if ((!instakillmove || state == states.mach2) && state != states.animatronic && state != states.bump && other.state == states.walk && state != states.chainsaw)
 	{

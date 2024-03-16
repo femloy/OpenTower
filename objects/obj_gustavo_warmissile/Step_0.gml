@@ -3,5 +3,5 @@ if (instance_exists(baddieID))
 else
 	baddieID = instance_nearest(x, y, baddieID);
 image_angle = direction;
-if (sprite_index == spr_bucket_war)
+if sprite_index == spr_bucket_war
 	angle += 25;

@@ -32,11 +32,11 @@ function tile_meeting(tileX, tileY, layer_id, flags = tile_flag.solid)
 		for (var _yy = _y1; _yy <= _y2; _yy++)
 		{
 			var tile = tile_get_index(tilemap_get(_tm, _xx, _yy));
-			if (tile)
+			if tile
 			{
-				if (tile == 1 && solid_flag)
+				if tile == 1 && solid_flag
 					return true;
-				if (slope_flag && tile != 1)
+				if slope_flag && tile != 1
 				{
 					_checker.x = _xx * tilemap_get_tile_width(_tm);
 					_checker.y = _yy * tilemap_get_tile_height(_tm);

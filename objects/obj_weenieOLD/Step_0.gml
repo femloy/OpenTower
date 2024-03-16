@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -30,23 +30,23 @@ switch (state)
 		scr_enemy_rage();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (sprite_index != stunspr)
+if sprite_index != stunspr
 	scr_scareenemy();
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

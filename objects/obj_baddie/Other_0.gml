@@ -1,4 +1,4 @@
-if (state != states.pizzaheadjump)
+if state != states.pizzaheadjump
 {
 	if (y > (room_height + 100))
 		instance_destroy();

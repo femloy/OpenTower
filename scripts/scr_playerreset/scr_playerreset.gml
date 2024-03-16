@@ -1,10 +1,10 @@
 function textures_offload(texturegroup_array)
 {
 	var b = instance_create(0, 0, obj_loadingscreen);
-	with (b)
+	with b
 	{
 		group_arr = texturegroup_array;
-		if (global.offload_tex != -4)
+		if global.offload_tex != -4
 		{
 			offload_arr = array_create(0);
 			array_copy(offload_arr, 0, global.offload_tex, 0, array_length(global.offload_tex));
@@ -18,7 +18,7 @@ function scr_playerreset(stopmusic = true)
 	trace("playerreset");
 	
 	global.lap = false;
-	if (room != boss_pizzaface && room != boss_noise && room != boss_pepperman && room != boss_fakepep && room != boss_vigilante)
+	if room != boss_pizzaface && room != boss_noise && room != boss_pepperman && room != boss_fakepep && room != boss_vigilante
 		global.bossintro = false;
 	global.bossplayerhurt = false;
 	global.swap_boss_damage = 0;
@@ -38,28 +38,28 @@ function scr_playerreset(stopmusic = true)
 	global.prank_enemykilled = false;
 	global.prank_cankillenemy = true;
 	global.noisejetpack = false;
-	with (obj_player)
+	with obj_player
 		noisepizzapepper = false;
 	global.level_minutes = 0;
 	global.level_seconds = 0;
 	global.pistol = false;
 	
-	with (obj_screensizer)
+	with obj_screensizer
 		camzoom = 1;
-	with (obj_camera)
+	with obj_camera
 	{
 		camzoom = 1;
 		lock = false;
 		state = states.normal;
 	}
 	
-	with (obj_swapmodefollow)
+	with obj_swapmodefollow
 	{
 		isgustavo = false;
 		get_character_spr();
 	}
 	
-	with (obj_achievementtracker)
+	with obj_achievementtracker
 	{
 		achievement_reset_variables(achievements_notify);
 		achievement_reset_variables(achievements_update);
@@ -67,7 +67,7 @@ function scr_playerreset(stopmusic = true)
 	
 	if stopmusic
 	{
-		with (obj_music)
+		with obj_music
 		{
 			secretend = true;
 			secret = false;
@@ -100,26 +100,26 @@ function scr_playerreset(stopmusic = true)
 	instance_destroy(obj_crosspriest_cross);
 	instance_destroy(obj_gravecorpse, false);
 	
-	with (obj_camera)
+	with obj_camera
 	{
 		alarm[4] = -1;
 		comboend = false;
 		previousrank = 0;
 	}
 	
-	if (!global.levelreset)
+	if !global.levelreset
 	{
 		instance_destroy(obj_surfback);
 		instance_destroy(obj_randomsecret);
 		instance_destroy(obj_deliverytimer);
 		instance_destroy(obj_wartimer);
-		with (obj_cutscene_handler)
+		with obj_cutscene_handler
 			instance_destroy();
-		with (obj_snowparticle)
+		with obj_snowparticle
 			instance_destroy();
-		with (obj_camera)
+		with obj_camera
 			alarm[4] = -1;
-		with (obj_tv)
+		with obj_tv
 		{
 			shownranka = false;
 			shownrankb = false;
@@ -130,7 +130,7 @@ function scr_playerreset(stopmusic = true)
 			promptx = promptxstart;
 			tv_bg_index = 0;
 			expressionsprite = -4;
-			if (!global.levelreset)
+			if !global.levelreset
 			{
 				sprite_index = spr_tv_off;
 				tvsprite = spr_tv_idle;
@@ -138,7 +138,7 @@ function scr_playerreset(stopmusic = true)
 				tv_set_idle();
 			}
 		}
-		with (obj_secretmanager)
+		with obj_secretmanager
 		{
 			ds_list_clear(secrettriggers);
 			ds_list_clear(touchall);
@@ -184,7 +184,7 @@ function scr_playerreset(stopmusic = true)
 		global.golfhit = 0;
 		global.railspeed = global.maxrailspeed;
 		global.temperature = 0;
-		if (room != freezer_1)
+		if room != freezer_1
 			global.use_temperature = false;
 		global.heatmeter_count = 0;
 		global.monsterspeed = 0;
@@ -219,9 +219,9 @@ function scr_playerreset(stopmusic = true)
 		global.hit = 0;
 		global.playerhealth = 100;
 		global.panic = false;
-		with (obj_stylebar)
+		with obj_stylebar
 			sprite = spr_mild;
-		with (obj_music)
+		with obj_music
 			arena = false;
 		
 		if (instance_exists(obj_endlevelfade))
@@ -239,7 +239,7 @@ function scr_playerreset(stopmusic = true)
 		if (instance_exists(obj_snickexe))
 			instance_destroy(obj_snickexe);
 		
-		with (obj_pizzaface)
+		with obj_pizzaface
 			destroy_sounds([snd])
 		instance_destroy(obj_pizzaface, false)
 		
@@ -259,7 +259,7 @@ function scr_playerreset(stopmusic = true)
 		if (instance_exists(obj_timesup))
 			instance_destroy(obj_timesup);
 	}
-	with (obj_player)
+	with obj_player
 	{
 		mort = false;
 		noisepizzapepper = false;
@@ -289,12 +289,12 @@ function scr_playerreset(stopmusic = true)
 		if (instance_exists(obj_gnome_checklist))
 		{
 			var destroy = true;
-			with (obj_player)
+			with obj_player
 			{
 				if (state == states.dead || state == states.timesup)
 					destroy = false;
 			}
-			if (destroy)
+			if destroy
 				instance_destroy(obj_gnome_checklist);
 		}
 		obj_timeattack.stop = false;
@@ -315,7 +315,7 @@ function scr_playerreset(stopmusic = true)
 		ds_list_clear(global.saveroom);
 		ds_list_clear(global.escaperoom);
 		ds_list_clear(global.baddieroom);
-		with (obj_player)
+		with obj_player
 		{
 			flash = false;
 			pistolcharge = 0;
@@ -438,7 +438,7 @@ function scr_playerreset(stopmusic = true)
 			noisebossscream = false;
 		}
 	}
-	with (obj_player2)
+	with obj_player2
 	{
 		pizzashield = false;
 		image_blend = make_colour_hsv(0, 0, 255);
@@ -563,9 +563,9 @@ function scr_playerreset(stopmusic = true)
 		anger = 0;
 		angry = false;
 	}
-	with (obj_followcharacter)
+	with obj_followcharacter
 	{
-		if (persistent && object_index != obj_swapmodefollow)
+		if persistent && object_index != obj_swapmodefollow
 			instance_destroy();
 	}
 	instance_destroy(obj_shotgunback);

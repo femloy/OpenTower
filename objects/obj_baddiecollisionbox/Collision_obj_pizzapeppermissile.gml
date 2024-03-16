@@ -2,7 +2,7 @@ if (instance_exists(baddieID) && other.target == baddieID && baddieID.invtime ==
 {
 	baddieID.invtime = 15;
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
-	if (!baddieID.important)
+	if !baddieID.important
 	{
 		global.style += (5 + global.combo);
 		global.combotime = 60;
@@ -17,7 +17,7 @@ if (instance_exists(baddieID) && other.target == baddieID && baddieID.invtime ==
 	instance_create(baddieID.x, baddieID.y, obj_parryeffect);
 	baddieID.alarm[3] = 3;
 	baddieID.state = states.hit;
-	if (baddieID.x != other.x)
+	if baddieID.x != other.x
 		baddieID.image_xscale = sign(other.x - baddieID.x);
 	else
 		baddieID.image_xscale = -other.image_xscale;
@@ -27,7 +27,7 @@ if (instance_exists(baddieID) && other.target == baddieID && baddieID.invtime ==
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
@@ -35,9 +35,9 @@ if (instance_exists(baddieID) && other.target == baddieID && baddieID.invtime ==
 	baddieID.invtime = 30;
 	baddieID.hitvsp = -4;
 	baddieID.hithsp = -baddieID.image_xscale * 22;
-	with (other)
+	with other
 	{
-		repeat (3)
+		repeat 3
 			instance_create(x, y, obj_firemouthflame);
 		instance_destroy();
 	}

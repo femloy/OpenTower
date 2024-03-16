@@ -1,2 +1,2 @@
-if (fall == 1)
+if fall == 1
 	scr_hurtplayer(other);

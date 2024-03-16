@@ -3,7 +3,7 @@ function scr_get_tutorial_key(char)
 	var spr = -4;
 	var ix = 0;
 	var txt = -4;
-	switch (char)
+	switch char
 	{
 		case vk_left:
 			spr = global.spr_gamepadbuttons;
@@ -56,7 +56,7 @@ function scr_string_width(str)
 			array_push(str_arr, string_copy(originalstr, 1, pos));
 			string_delete(originalstr, 1, pos);
 			pos = 0;
-			if (originalstr == "")
+			if originalstr == ""
 				break;
 			continue;
 		}
@@ -87,7 +87,7 @@ function scr_separate_text(str, font, width)
 		while (!scr_is_separation(string_char_at(str, _pos), separation))
 		{
 			_pos--;
-			if (_pos < 0)
+			if _pos < 0
 				_pos = _oldpos;
 		}
 		if (string_char_at(str, _pos) == " ")
@@ -104,7 +104,7 @@ function scr_is_separation(char, separation)
 {
 	for (var i = 0; i < array_length(separation); i++)
 	{
-		if (char == separation[i])
+		if char == separation[i]
 			return true;
 	}
 	return false;
@@ -114,12 +114,12 @@ function scr_calculate_text(str)
 	draw_set_font(font2);
 	var pos = 0;
 	var str2 = "";
-    while (pos <= string_length(str))
-    {
-        pos++;
-        str2 = string_insert(string_char_at(str, pos), str2, string_length(str2) + 1);
-        str2 = scr_separate_text(str2);
-    }
+	while (pos <= string_length(str))
+	{
+		pos++;
+		str2 = string_insert(string_char_at(str, pos), str2, string_length(str2) + 1);
+		str2 = scr_separate_text(str2);
+	}
 	return str2;
 }
 function scr_calculate_height(str)

@@ -1,4 +1,4 @@
-if (start)
+if start
 {
 	var bgx = bg_x;
 	var bgy = bg_y - 200;

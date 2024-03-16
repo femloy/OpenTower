@@ -1,18 +1,18 @@
 var _transfo = false;
 var _state = other.state;
-with (other)
+with other
 {
 	if (!scr_transformationcheck() && state != states.comingoutdoor && state != states.door)
 	{
-		if (state == states.ghost)
+		if state == states.ghost
 			notification_push(notifs.priest_ghost, [ghosttimer, room]);
 		if (state == states.mort || state == states.mortjump || state == states.morthook || state == states.mortattack || state == states.mortjump || state == states.boxxedpep || state == states.boxxedpepjump || state == states.boxxedpepspin || state == states.ghost || state == states.barrelslide || state == states.barrel || state == states.barreljump)
 		{
-			if (hsp != 0)
+			if hsp != 0
 				xscale = sign(hsp);
 			movespeed = abs(hsp);
 		}
-		with (obj_mortprojectile)
+		with obj_mortprojectile
 		{
 			create_particle(x, y, particle.genericpoofeffect);
 			instance_destroy();
@@ -27,7 +27,7 @@ with (other)
 		instance_create(x, y, obj_genericpoofeffect);
 	}
 }
-if (_transfo)
+if _transfo
 {
 	fmod_event_one_shot("event:/sfx/pep/pray");
 	var p = other.id;
@@ -36,12 +36,12 @@ if (_transfo)
 		priestID = other.id;
 		playerid = p;
 	}
-	with (other)
+	with other
 	{
 		if (state == states.mort || state == states.morthook || state == states.mortjump || state == states.mortattack)
 			create_debris(x, y - 40, spr_mortdead);
 	}
-	if (sprite_index != spr_angelpriest)
+	if sprite_index != spr_angelpriest
 		sprite_index = spr_priest_pray;
 	if (collect && ds_list_find_index(global.saveroom, id) == -1)
 	{
@@ -53,7 +53,7 @@ if (_transfo)
 		with (instance_create(x + 16, y, obj_smallnumber))
 			number = string(val);
 		scr_sound_multiple("event:/sfx/misc/collect", x, y);
-		if (escape)
+		if escape
 			ds_list_add(global.escaperoom, id);
 		var d = round(val / 16);
 		for (var i = 0; i < val; i += d)

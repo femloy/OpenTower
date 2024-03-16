@@ -1,4 +1,4 @@
-if (patroltimer > 0)
+if patroltimer > 0
 {
 	patroltimer--;
 	alarm[5] = 60;

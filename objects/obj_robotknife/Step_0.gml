@@ -1,4 +1,4 @@
 x += hsp;
 y += vsp;
-if (vsp < 20)
+if vsp < 20
 	vsp += grav;

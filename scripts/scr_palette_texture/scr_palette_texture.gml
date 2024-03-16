@@ -18,7 +18,7 @@ function scr_palette_textureOLD()
 	var yy = _y;
 	draw_sprite_ext(global.palettetexture, 0, xx, yy, xs, ys, 0, blend, alpha);
 	gpu_set_alphatestenable(false);
-	if (!_gui)
+	if !_gui
 		gpu_set_blendmode(bm_normal);
 	else
 		reset_blendmode();
@@ -56,11 +56,11 @@ function scr_get_texture_array()
 function scr_get_texture_palette(texture)
 {
 	var _arr = scr_get_texture_array();
-	if (texture != "none")
+	if texture != "none"
 	{
 		for (var i = 0; i < array_length(_arr); i++)
 		{
-			if (_arr[i][0] == texture)
+			if _arr[i][0] == texture
 				return _arr[i][1];
 		}
 	}
@@ -69,11 +69,11 @@ function scr_get_texture_palette(texture)
 function scr_get_texture_name(texture)
 {
 	var _arr = scr_get_texture_array();
-	if (texture != noone)
+	if texture != noone
 	{
 		for (var i = 0; i < array_length(_arr); i++)
 		{
-			if (_arr[i][1] == texture)
+			if _arr[i][1] == texture
 				return _arr[i][0];
 		}
 	}
@@ -112,7 +112,7 @@ function scr_palette_texture(sprite, subimg, x, y, xscale, yscale, rot = 0, col 
 	draw_rectangle_color(0, 0, 960, 540, c_white, c_white, c_white, c_white, false);
 	gpu_set_blendmode(bm_subtract);
 	draw_sprite_ext(sprite, subimg, x - cx, y - cy, xscale, yscale, rot, c_white, 1);
-	if (gui)
+	if gui
 		reset_blendmode();
 	else
 		gpu_set_blendmode(bm_normal);
@@ -127,15 +127,15 @@ function scr_palette_texture(sprite, subimg, x, y, xscale, yscale, rot = 0, col 
 	var xx = x - cx - xo;
 	var yy = y - cy - yo;
 	
-	if (xscale < 0)
+	if xscale < 0
 		xx = ((x - cx) + xo) - sw;
-	if (yscale < 0)
+	if yscale < 0
 		yy = ((y - cy) + yo) - sh;
 	
 	draw_sprite_ext(texture, 0, xx, yy, xs + 4, ys + 4, 0, col, 1);
 	gpu_set_blendmode(bm_subtract);
 	draw_surface(global.palettesurfaceclip, 0, 0);
-	if (gui)
+	if gui
 		reset_blendmode();
 	else
 		gpu_set_blendmode(bm_normal);

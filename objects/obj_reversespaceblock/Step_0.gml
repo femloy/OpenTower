@@ -1,4 +1,4 @@
-if (global.spaceblockswitch == 1)
+if global.spaceblockswitch == 1
 {
 	if ((x != xstart || sprite_index != spr_spaceblock_closed) && !place_meeting(xstart, ystart, obj_player) && !place_meeting(xstart, ystart, obj_baddie) && !place_meeting(xstart, ystart, obj_clownmato) && !place_meeting(xstart, ystart, obj_monster))
 	{
@@ -16,7 +16,7 @@ else
 	sprite_index = spr_spaceblock_open;
 	image_alpha = 0.5;
 }
-with (blockid)
+with blockid
 {
 	x = other.x;
 	y = other.y;

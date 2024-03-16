@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.normal:
 		sprite_index = spr_stupidratprop1;

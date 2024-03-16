@@ -1,10 +1,10 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		cliff_index = 1;
 		var tx = SCREEN_WIDTH - 73;
 		gerome_x = Approach(gerome_x, tx, 2);
-		if (gerome_x == tx)
+		if gerome_x == tx
 		{
 			alarm[0] = 1;
 			state = states.jump;
@@ -20,7 +20,7 @@ switch (state)
 		{
 			if (!instance_exists(obj_fadeout))
 			{
-				with (obj_player)
+				with obj_player
 				{
 					targetRoom = other.targetRoom;
 					targetDoor = other.targetDoor;

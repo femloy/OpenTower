@@ -1,6 +1,6 @@
-if (DEBUG)
+if DEBUG
 {
-	if (!active)
+	if !active
 		exit;
 	draw_set_font(-1);
 	draw_set_halign(fa_left);
@@ -21,7 +21,7 @@ if (DEBUG)
 		var txt = array_get(ds_list_find_value(text_list, i), 1);
 		var str = txt;
 		var c = c_white;
-		switch (t)
+		switch t
 		{
 			case debug_text_type.error:
 				str = concat("[ERROR] ", txt);
@@ -39,13 +39,13 @@ if (DEBUG)
 		draw_text_color(8, ys + (16 * i), str, c, c, c, c, 1);
 	}
 	draw_text(8, 128, concat("> ", input_text));
-	if (input_text != "")
+	if input_text != ""
 	{
 		search_y += 8;
 		for (var w = 0; w < ds_list_size(search_commands); w++)
 		{
 			var b = ds_list_find_value(search_commands, w);
-			if (b != undefined)
+			if b != undefined
 				draw_text_color(8, search_y + (16 * w), b, c_white, c_white, c_white, c_white, 1);
 		}
 	}

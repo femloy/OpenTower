@@ -1,2 +1,2 @@
-if (other.holycross > 0)
+if other.holycross > 0
 	instance_destroy();

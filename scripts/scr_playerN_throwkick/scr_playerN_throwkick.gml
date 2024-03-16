@@ -3,7 +3,7 @@ function scr_playerN_throwkick()
 	hsp = -xscale * movespeed;
 	move = key_left + key_right;
 	movespeed = Approach(movespeed, 0, 0.2);
-	if (image_index > 4 && !bombthrow)
+	if image_index > 4 && !bombthrow
 	{
 		with (instance_create(x + (xscale * 20), y, obj_playerbomb))
 		{
@@ -20,9 +20,9 @@ function scr_playerN_throwkick()
 		bombthrow = true;
 	}
 	image_speed = 0.35;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 		state = 0;
-	if (punch_afterimage > 0)
+	if punch_afterimage > 0
 		punch_afterimage--;
 	else
 	{
@@ -30,6 +30,6 @@ function scr_playerN_throwkick()
 		with (create_blur_afterimage(x, y, sprite_index, image_index, xscale))
 			playerid = other.id;
 	}
-	if (input_buffer_shoot > 0)
+	if input_buffer_shoot > 0
 		scr_bombshoot();
 }

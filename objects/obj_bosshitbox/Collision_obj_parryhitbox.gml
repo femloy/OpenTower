@@ -1,8 +1,8 @@
-if (!parryable)
+if !parryable
 	exit;
 parry();
-with (other)
+with other
 {
-	if (!collisioned)
+	if !collisioned
 		event_user(0);
 }

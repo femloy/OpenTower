@@ -10,12 +10,12 @@ for (var i = 0; i < 3; i++)
 {
 	var lay_id = layer_get_id(concat("Tiles_Secret", i + 1));
 	tilemap_sprite[i] = -4;
-	if (lay_id != -1)
+	if lay_id != -1
 	{
 		var map_id = layer_tilemap_get_id(lay_id);
 		var ts = tilemap_get_tileset(map_id);
 		var t = -4;
-		switch (ts)
+		switch ts
 		{
 			case tile_towerentrancehall:
 				t = spr_towerentrancehall

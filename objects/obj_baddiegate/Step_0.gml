@@ -3,7 +3,7 @@ if (active && x != xstart && !place_meeting(xstart, ystart, obj_baddie) && !plac
 	x = xstart;
 	y = ystart;
 }
-else if (!active)
+else if !active
 {
 	x = xstart - room_width - 100;
 	x = ystart - room_height - 100;

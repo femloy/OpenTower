@@ -10,11 +10,11 @@ if (place_meeting(x, y + 1, obj_railparent))
 	var _railinst = instance_place(x, y + 1, obj_railparent);
 	hsp = _railinst.movespeed * _railinst.dir;
 }
-if (vsp < 12)
+if vsp < 12
 	vsp += grav;
-if (countdown < 50)
+if countdown < 50
 	sprite_index = spr_bomblit;
-if (countdown == 0)
+if countdown == 0
 	instance_destroy();
 if (scr_solid(x + floor(hsp), y))
 {

@@ -65,7 +65,7 @@ vstitleplayer = spr_vstitle_player;
 playerspr = spr_vspeppino;
 playersprshadow = spr_vspeppinoshadow;
 bossspr = spr_vsnoise;
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
 	playerspr = spr_vsnoiseplayer;
 	playersprshadow = spr_vsnoiseplayershadow;

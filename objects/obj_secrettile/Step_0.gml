@@ -1,9 +1,9 @@
 if (place_meeting(x, y, obj_player))
 	active = true;
-if (active)
+if active
 {
 	var b = true;
-	with (obj_player1)
+	with obj_player1
 	{
 		if (!place_meeting(x, y, obj_secrettile))
 		{
@@ -11,7 +11,7 @@ if (active)
 			b = false;
 		}
 	}
-	if (b)
+	if b
 	{
 		with (instance_place(x + 1, y, obj_secrettile))
 			active = true;
@@ -23,7 +23,7 @@ if (active)
 			active = true;
 	}
 	depth = -8;
-	if (depth < desireddepth)
+	if depth < desireddepth
 		depth = desireddepth;
 	alpha = Approach(alpha, 0, 0.05);
 }

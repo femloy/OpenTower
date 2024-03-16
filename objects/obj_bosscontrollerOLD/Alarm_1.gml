@@ -1,7 +1,7 @@
-if (!fakedeath)
+if !fakedeath
 {
 	scr_playerreset();
-	with (obj_player)
+	with obj_player
 	{
 		if (object_index == obj_player1 || global.coop)
 		{
@@ -21,7 +21,7 @@ else
 	timer_buffer = timer_max;
 	state = states.arenaround;
 	fade = 1;
-	with (par_boss)
+	with par_boss
 	{
 		destroyed = false;
 		destroyable = true;

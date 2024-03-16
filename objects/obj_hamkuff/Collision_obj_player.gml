@@ -1,12 +1,12 @@
-if (state != states.stun)
+if state != states.stun
 {
-	if (other.ispeppino)
+	if other.ispeppino
 	{
-		if (!other.isgustavo)
+		if !other.isgustavo
 		{
 			if (other.state != states.mach3 || !other.launched)
 			{
-				if (state != states.blockstance)
+				if state != states.blockstance
 				{
 					sprite_index = spr_hamkuff_chain1;
 					state = states.blockstance;
@@ -19,13 +19,13 @@ if (state != states.stun)
 				instance_destroy();
 			}
 		}
-		else if (other.brick && state != states.blockstance)
+		else if other.brick && state != states.blockstance
 		{
 			other.brick = false;
 			state = states.blockstance;
 			sprite_index = spr_hamkuff_chain1;
 			state = states.blockstance;
-			with (other)
+			with other
 			{
 				state = states.ratmounthurt;
 				xscale = -other.image_xscale;

@@ -1,4 +1,4 @@
-if (expand)
+if expand
 {
 	radius += 15;
 	if (radius > (SCREEN_WIDTH * SCREEN_HEIGHT))

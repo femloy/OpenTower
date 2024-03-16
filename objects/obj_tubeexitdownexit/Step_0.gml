@@ -1,8 +1,8 @@
-if (state == states.tube)
+if state == states.tube
 {
 	if (floor(image_index) >= 6)
 	{
-		with (playerid)
+		with playerid
 		{
 			visible = true;
 			state = states.freefall;
@@ -17,11 +17,11 @@ if (state == states.tube)
 			GamepadSetVibration(p, 1, 1, 0.9);
 		}
 	}
-	with (playerid)
+	with playerid
 	{
 		if (!place_meeting(x, y, other.id))
 		{
-			with (other)
+			with other
 			{
 				GamepadSetVibration(0, 1, 1, 0.65);
 				playerid = -1;

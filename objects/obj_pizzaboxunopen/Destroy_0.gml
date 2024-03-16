@@ -16,7 +16,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	}
 	ds_list_add(global.saveroom, id);
 }
-if (snd != -4)
+if snd != -4
 {
 	fmod_event_instance_stop(snd, true);
 	fmod_event_instance_release(snd);

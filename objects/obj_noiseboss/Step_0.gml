@@ -1,10 +1,10 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 targetplayer = obj_player1.id;
 wastedhits = 8 - elitehit;
-if (elitehit <= 1 && pizzahead)
+if elitehit <= 1 && pizzahead
 	destroyable = true;
-switch (state)
+switch state
 {
 	case states.arenaintro:
 		scr_noise_arenaintro();
@@ -91,9 +91,9 @@ switch (state)
 		scr_enemy_staggered();
 		break;
 }
-if (sprite_index == spr_playerN_fightball)
+if sprite_index == spr_playerN_fightball
 {
-	if (fightball_buffer1 > 0)
+	if fightball_buffer1 > 0
 		fightball_buffer1--;
 	else
 	{
@@ -101,7 +101,7 @@ if (sprite_index == spr_playerN_fightball)
 		repeat (irandom(4) + 1)
 			instance_create(x + irandom_range(-60, 60), y + irandom_range(-20, 60), obj_gusbrickcloud);
 	}
-	if (fightball_buffer2 > 0)
+	if fightball_buffer2 > 0
 		fightball_buffer2--;
 	else
 	{
@@ -113,18 +113,18 @@ if (sprite_index == spr_playerN_fightball)
 	}
 }
 boss_update_pizzaheadKO(spr_bossfight_noiseHP, spr_bossfight_noisepalette);
-with (obj_noisey)
+with obj_noisey
 {
 	var t = id;
 	if (thrown && (place_meeting(x + hsp, y, other) || place_meeting(x, y, other)))
 	{
-		with (other)
+		with other
 			scr_noise_do_hurt(t);
 	}
 }
-if (!doise)
+if !doise
 	boss_hurt_gustavo();
-if (state == states.phase1hurt && doise)
+if state == states.phase1hurt && doise
 {
 	image_speed = 0.35;
 	image_index = obj_player1.image_index;
@@ -139,7 +139,7 @@ if (droptrap && (state == states.walk || state == states.stun))
 		image_index = 0;
 	}
 }
-if (wastedhits >= 8 && phase == 1 && !pizzahead)
+if wastedhits >= 8 && phase == 1 && !pizzahead
 {
 	elitehit = 8;
 	wastedhits = 0;
@@ -147,7 +147,7 @@ if (wastedhits >= 8 && phase == 1 && !pizzahead)
 	ballooncrash = true;
 	flickertime = 0;
 	cooldown = 20;
-	if (doise)
+	if doise
 		ballooncrash = false;
 	avaiblemoves = [];
 	skateboardhit = 0;
@@ -157,11 +157,11 @@ if (wastedhits >= 8 && phase == 1 && !pizzahead)
 	destroyable = false;
 	scr_sleep(25);
 }
-if (state == states.stun)
+if state == states.stun
 {
-	if (thrown)
+	if thrown
 		savedthrown = true;
-	if (grounded && vsp > 0 && savedthrown)
+	if grounded && vsp > 0 && savedthrown
 	{
 		stunned = 1;
 		idle_timer = 1;
@@ -169,24 +169,24 @@ if (state == states.stun)
 }
 else
 	savedthrown = false;
-if (prevhp != elitehit)
+if prevhp != elitehit
 {
-	if (elitehit < prevhp)
+	if elitehit < prevhp
 	{
 		pizzahead_subhp = pizzahead_maxsubhp;
 		if (irandom(100) <= 25)
 			fmod_event_one_shot_3d("event:/sfx/voice/noisenegative", x, y);
 		avaiblemoves = [];
-		if (lastattack == 0)
+		if lastattack == 0
 			skateboardhit += 1;
-		if (lastattack == 1)
+		if lastattack == 1
 			jetpackhit += 1;
-		if (lastattack == 2)
+		if lastattack == 2
 			pogohit += 1;
-		if (lastattack == 3)
+		if lastattack == 3
 			hotairhit += 1;
 		boss_do_pizzaheadKO();
-		if (pizzahead && elitehit <= 2 && !pizzaheadshot)
+		if pizzahead && elitehit <= 2 && !pizzaheadshot
 			pizzaheadshot = true;
 		cooldown = 0;
 		touchedground = false;
@@ -195,7 +195,7 @@ if (prevhp != elitehit)
 		alarm[6] = 5;
 		global.playerhit++;
 		pogobomb = false;
-		if (global.playerhit >= 3)
+		if global.playerhit >= 3
 		{
 			global.playerhit = 0;
 			instance_create(obj_player1.x, -32, obj_hppickup);
@@ -203,7 +203,7 @@ if (prevhp != elitehit)
 	}
 	prevhp = elitehit;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -215,11 +215,11 @@ else
 	invincible = true;
 if (!doise && instance_exists(obj_noiseballooncrash))
 	invincible = true;
-if (state == states.KO)
+if state == states.KO
 	invincible = true;
-if (pizzahead)
+if pizzahead
 {
-	with (obj_gustavograbbable)
+	with obj_gustavograbbable
 	{
 		if (enemy_is_superslam(id) || enemy_is_swingding(id))
 			other.invincible = true;
@@ -229,7 +229,7 @@ if ((!invincible || ((state == states.walk && flickertime <= 0) || (state == sta
 	alarm[5] = 0.15 * room_speed;
 else if (invincible && (state != states.walk || flickertime > 0) && (state != states.stun || savedthrown))
 	flash = false;
-if (doise && pizzahead)
+if doise && pizzahead
 {
 	elitehit = 0;
 	prevhp = 0;
@@ -239,15 +239,15 @@ if (doise && pizzahead)
 if ((state == states.mach2 || state == states.machslide || state == states.jetpack || state == states.bounce || state == states.pogo) && alarm[4] < 0)
 	alarm[4] = 5;
 mask_index = spr_player_mask;
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

@@ -1,7 +1,7 @@
 targetplayer = obj_player1.id;
 image_speed = 0.35;
 wastedhits = 8 - elitehit;
-switch (state)
+switch state
 {
 	case states.fall:
 		scr_pizzaface_p2_fall();
@@ -53,9 +53,9 @@ if (obj_player1.state != states.actor && obj_player1.y >= (y - 20) && obj_player
 {
 	if ((x > (room_width / 2) && obj_player1.x >= (x - 60)) || (x <= (room_width / 2) && obj_player1.x <= (x + 60)))
 	{
-		with (obj_player)
+		with obj_player
 		{
-			if (state != states.tackle)
+			if state != states.tackle
 			{
 				var ix = (x > (room_width / 2)) ? 1 : -1;
 				xscale = ix;
@@ -71,32 +71,32 @@ if (obj_player1.state != states.actor && obj_player1.y >= (y - 20) && obj_player
 		}
 	}
 }
-if (prevhp != elitehit)
+if prevhp != elitehit
 {
-	if (elitehit < prevhp)
+	if elitehit < prevhp
 	{
 		instance_destroy(obj_pizzaheadswordstone);
-		if (lastattack != -1 && lastattack != pizzaface_p2_attacks.pinup)
+		if lastattack != -1 && lastattack != pizzaface_p2_attacks.pinup
 			movecount[lastattack] += 1;
 		bullethit = 0;
-		if (elitehit <= 0)
+		if elitehit <= 0
 			instance_destroy();
 		global.playerhit++;
-		if (global.playerhit >= 3)
+		if global.playerhit >= 3
 		{
 			global.playerhit = 0;
 			instance_create(obj_player1.x, -15, obj_hppickup);
 		}
-		if (wastedhits >= 3 && elitehit > 0)
+		if wastedhits >= 3 && elitehit > 0
 			instance_create_unique(room_width / 2, -200, obj_pizzahead_haywire);
 	}
 	prevhp = elitehit;
 }
-if (state == states.stun)
+if state == states.stun
 {
-	if (thrown)
+	if thrown
 		savedthrown = true;
-	if (grounded && vsp > 0 && savedthrown)
+	if grounded && vsp > 0 && savedthrown
 	{
 		stunned = 1;
 		idle_timer = 1;
@@ -104,33 +104,33 @@ if (state == states.stun)
 }
 else
 	savedthrown = false;
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state == states.stun && savedthrown == thrown && !savedthrown)
+if state == states.stun && savedthrown == thrown && !savedthrown
 	invincible = false;
 else
 	invincible = true;
-if (state == states.pizzaface_ram && alarm[4] < 0)
+if state == states.pizzaface_ram && alarm[4] < 0
 	alarm[4] = 6;
 mask_index = spr_pizzahead_idle;
-if (state == states.stun && thrown)
+if state == states.stun && thrown
 {
 	while (place_meeting(x, y, obj_solid))
 		y--;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

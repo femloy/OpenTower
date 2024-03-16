@@ -1,5 +1,5 @@
 image_speed = 0.35;
-switch (state)
+switch state
 {
 	case states.robotidle:
 		sprite_index = spr_introidle;
@@ -7,12 +7,12 @@ switch (state)
 		break;
 	
 	case states.robotintro:
-		if (sprite_index != spr_intro)
+		if sprite_index != spr_intro
 		{
 			sprite_index = spr_intro;
 			image_index = 0;
 		}
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 			state = states.robotchase;
 		break;
 	
@@ -20,15 +20,15 @@ switch (state)
 		sprite_index = spr_monstertomato_idle;
 		x = camera_get_view_x(view_camera[0]) + (SCREEN_WIDTH / 2);
 		y = camera_get_view_y(view_camera[0]) + yy;
-		switch (substate)
+		switch substate
 		{
 			case states.fall:
 				yy += 2;
-				if (yy > 440)
+				if yy > 440
 				{
 					var pid = scr_puppet_detect();
 					trace(pid);
-					if (pid != -4)
+					if pid != -4
 					{
 						playerid = pid;
 						substate = states.chase;
@@ -40,10 +40,10 @@ switch (state)
 			
 			case states.jump:
 				yy -= 3;
-				if (yy < -100)
+				if yy < -100
 				{
 					destroy = false;
-					with (obj_monstertrackingrooms)
+					with obj_monstertrackingrooms
 					{
 						sound_buffer = 0;
 						monster_pos[other.monsterid].x = last_puppet_pos.x;
@@ -55,7 +55,7 @@ switch (state)
 			
 			case states.chase:
 				yy -= 10;
-				if (yy < -100)
+				if yy < -100
 					scr_puppet_appear(playerid);
 				break;
 		}
@@ -70,13 +70,13 @@ switch (state)
 			x += lengthdir_x(6, dir);
 			y += lengthdir_y(6, dir);
 		}
-		if (x != playerid.x)
+		if x != playerid.x
 			image_xscale = sign(playerid.x - x);
 		break;
 }
-if (state != states.robotidle)
+if state != states.robotidle
 	inactivebuffer = 900;
-if (state == states.robotchase)
+if state == states.robotchase
 {
 	if (!fmod_event_instance_is_playing(snd))
 		fmod_event_instance_play(snd);
@@ -84,5 +84,5 @@ if (state == states.robotchase)
 }
 else
 	fmod_event_instance_stop(snd, true);
-if (state == states.robotchase)
+if state == states.robotchase
 	depth = -100;

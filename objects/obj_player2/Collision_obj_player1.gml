@@ -1,8 +1,8 @@
-if (other.cutscene == 0 && other.state != states.actor && state != states.actor && other.state != states.gotoplayer && state != states.gotoplayer)
+if other.cutscene == 0 && other.state != states.actor && state != states.actor && other.state != states.gotoplayer && state != states.gotoplayer
 {
 	if (hurted == 0 && other.hurted == 0 && fightballadvantage == 1 && (state == states.handstandjump || state == states.punch) && (other.state == states.handstandjump || other.state == states.punch))
 	{
-		if (object_index == obj_player1)
+		if object_index == obj_player1
 		{
 			obj_player1.state = states.mach3;
 			obj_player2.state = states.grabbed;
@@ -10,7 +10,7 @@ if (other.cutscene == 0 && other.state != states.actor && state != states.actor 
 			obj_player1.depth = -7;
 			obj_player2.depth = -6;
 		}
-		if (object_index == obj_player2)
+		if object_index == obj_player2
 		{
 			obj_player2.state = states.mach3;
 			obj_player1.state = states.grabbed;
@@ -25,7 +25,7 @@ if (other.cutscene == 0 && other.state != states.actor && state != states.actor 
 		obj_player1.fightball = true;
 		obj_player2.fightball = true;
 	}
-	with (obj_player1)
+	with obj_player1
 	{
 		if (state == states.handstandjump && other.hurted == 0 && other.state != states.hurt && other.state != states.knightpepslopes && other.state != states.knightpep && other.state != states.tumble && other.state != states.fireass && other.state != states.bombpep && other.cutscene == 0 && other.hurted == 0 && hurted == 0 && !(other.state == states.handstandjump || other.state == states.punch))
 		{
@@ -38,7 +38,7 @@ if (other.cutscene == 0 && other.state != states.actor && state != states.actor 
 			obj_player1.depth = -7;
 			obj_player2.depth = -6;
 		}
-		if (state == states.freefall && other.hurted == 0 && other.state != states.stunned && other.state != states.hurt && hurted == 0)
+		if state == states.freefall && other.hurted == 0 && other.state != states.stunned && other.state != states.hurt && hurted == 0
 		{
 			obj_player1.depth = -7;
 			obj_player2.depth = -6;
@@ -48,7 +48,7 @@ if (other.cutscene == 0 && other.state != states.actor && state != states.actor 
 		}
 		if (other.state == states.punch && hurted == 0 && other.hurted == 0 && !(state == states.handstandjump || state == states.punch))
 		{
-			with (other)
+			with other
 				scr_pummel();
 			xscale = -other.xscale;
 			obj_player1.depth = -6;
@@ -60,7 +60,7 @@ if (other.cutscene == 0 && other.state != states.actor && state != states.actor 
 			instance_create(x, y, obj_baddiegibs);
 			instance_create(x, y, obj_baddiegibs);
 			instance_create(x, y, obj_baddiegibs);
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;

@@ -1,15 +1,15 @@
-if (state == 0)
+if state == 0
 {
-	if (spawnbuffer > 0)
+	if spawnbuffer > 0
 	{
 		spawnbuffer--;
-		if (spawn == attack.emptyspot)
+		if spawn == attack.emptyspot
 			spawn++;
 	}
-	else if (spawn <= attack.size)
+	else if spawn <= attack.size
 	{
 		var xx = attack.x1 + (xplus * spawn);
-		if (attack.direction == -1)
+		if attack.direction == -1
 			xx = attack.x2 - (xplus * spawn);
 		var yy = attack.y;
 		with (instance_create(xx, yy, obj_fakepepclone))
@@ -23,16 +23,16 @@ if (state == 0)
 	else
 	{
 		var b = true;
-		with (obj_fakepepclone)
+		with obj_fakepepclone
 		{
-			if (spawnerID == other.id && state != states.Sjumpprep)
+			if spawnerID == other.id && state != states.Sjumpprep
 				b = false;
 		}
-		if (b)
+		if b
 		{
-			with (obj_fakepepclone)
+			with obj_fakepepclone
 			{
-				if (spawnerID == other.id)
+				if spawnerID == other.id
 					image_speed = 0.35;
 			}
 			state++;
@@ -42,11 +42,11 @@ if (state == 0)
 else
 {
 	b = false;
-	with (obj_fakepepclone)
+	with obj_fakepepclone
 	{
-		if (spawnerID == other.id)
+		if spawnerID == other.id
 			b = true;
 	}
-	if (!b)
+	if !b
 		instance_destroy();
 }

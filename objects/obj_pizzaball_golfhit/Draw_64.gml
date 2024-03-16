@@ -17,9 +17,9 @@ draw_text_color(tx, ty, primoburg, c_white, c_white, c_white, c_white, 1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_top);
 
-if (!obj_player1.ispeppino)
+if !obj_player1.ispeppino
 {
-	if (hand_shake != 0)
+	if hand_shake != 0
 		draw_sprite(spr_noisearmgolfcloud, cloud_index, tx, ty);
 	shader_set(global.Pal_Shader);
 	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, global.palettetexture);

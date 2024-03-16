@@ -1,4 +1,4 @@
-if (DEBUG)
+if DEBUG
 {
 	if (keyboard_check_pressed(vk_f8))
 		DoCommand("loadtest");
@@ -7,7 +7,7 @@ if (DEBUG)
 		active = !active;
 		keyboard_string = "";
 	}
-	if (active)
+	if active
 	{
 		var _search = false;
 		if (keyboard_check(vk_anykey) && !keyboard_check(vk_f5))
@@ -17,7 +17,7 @@ if (DEBUG)
 			{
 				var b = string_char_at(keyboard_string, i + 1);
 				var d = string_upper(b);
-				if (d == "")
+				if d == ""
 					d = string_lettersdigits(b);
 				keyboard_key_release(ord(d));
 			}
@@ -38,7 +38,7 @@ if (DEBUG)
 			_search = true;
 			active = false;
 		}
-		if (_search)
+		if _search
 		{
 			ds_list_clear(search_commands);
 			search_w = 0;
@@ -53,7 +53,7 @@ if (DEBUG)
 					var txt = concat(b.command_id, " ", b.format, " - ", b.description);
 					ds_list_add(search_commands, txt);
 					var w = string_width(txt);
-					if (w > search_w)
+					if w > search_w
 						search_w = w;
 				}
 			}

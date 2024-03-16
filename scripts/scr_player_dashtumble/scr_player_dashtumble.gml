@@ -4,11 +4,11 @@ function scr_player_dashtumble()
 	momemtum = true;
 	dir = xscale;
 	hsp = xscale * movespeed;
-	if (movespeed < 10 && grounded)
+	if movespeed < 10 && grounded
 		movespeed += 0.5;
-	else if (!grounded)
+	else if !grounded
 		movespeed = 10;
-	if (input_buffer_jump > 0 && grounded && !key_down)
+	if input_buffer_jump > 0 && grounded && !key_down
 	{
 		jumpstop = false;
 		input_buffer_jump = 0;
@@ -16,9 +16,9 @@ function scr_player_dashtumble()
 		state = states.mach2;
 		sprite_index = spr_mach2jump;
 	}
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		if (!grounded)
+		if !grounded
 			sprite_index = spr_mach2jump;
 		image_speed = 0.35;
 		state = states.mach2;

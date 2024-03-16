@@ -9,7 +9,7 @@ if (instance_exists(obj_pause) && obj_pause.pause && !global.option_speedrun_tim
 draw_set_color(c_white);
 var seconds = 0;
 var minutes = 0;
-if (global.option_timer_type == 0)
+if global.option_timer_type == 0
 {
 	seconds = global.level_seconds;
 	minutes = global.level_minutes;
@@ -20,7 +20,7 @@ else if (global.option_timer_type == 1 || global.option_timer_type == 2)
 	minutes = global.file_minutes;
 }
 var str = [scr_get_timer_string(minutes, seconds, true)];
-if (global.option_timer_type == 2)
+if global.option_timer_type == 2
 	array_push(str, scr_get_timer_string(global.level_minutes, global.level_seconds, true));
 draw_set_halign(fa_left);
 draw_set_valign(fa_bottom);
@@ -31,7 +31,7 @@ var yy = 0;
 for (var i = array_length(str) - 1; i >= 0; i--)
 {
 	var b = str[i];
-	if (!global.option_speedrun_timer)
+	if !global.option_speedrun_timer
 		b = string_copy(b, 0, string_length(b) - 2);
 	var len = string_length(b) - 1;
 	draw_text(SCREEN_WIDTH - (len * string_width("A")), SCREEN_HEIGHT - 8 - (string_height("A") * yy), b);

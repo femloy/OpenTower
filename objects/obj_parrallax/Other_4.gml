@@ -32,15 +32,15 @@ for (var i = 0; i < array_length(asset_layers); i++)
 			var _x = layer_sprite_get_x(_asset);
 			var _y = layer_sprite_get_y(_asset);
 			var spr = layer_sprite_get_sprite(_asset);
-			if (p[0] != 0)
+			if p[0] != 0
 				layer_sprite_x(_asset, (_x - (_x * p[0])) + ((SCREEN_WIDTH / 4) * p[0]));
-			if (p[1] != 0 && spr != spr_industrialpipe && spr != bg_farmdirtwall)
+			if p[1] != 0 && spr != spr_industrialpipe && spr != bg_farmdirtwall
 				layer_sprite_y(_asset, (_y - (_y * p[1])) + ((SCREEN_HEIGHT / 4) * p[1]));
 		}
 	}
 }
 
-if (global.hidetiles)
+if global.hidetiles
 {
 	layer_set_visible("Tiles_BG", false);
 	layer_set_visible("Tiles_BG2", false);

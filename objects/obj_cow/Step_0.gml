@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		if (!instance_exists(blockinst))
@@ -19,7 +19,7 @@ switch (state)
 		movespeed = Approach(movespeed, 8, 0.5);
 		with (instance_place(x + sign(hsp), y, obj_ratblock))
 		{
-			if (sprite_index != spr_rattumbleblock && sprite_index != spr_rattumbleblock_big)
+			if sprite_index != spr_rattumbleblock && sprite_index != spr_rattumbleblock_big
 				instance_destroy();
 		}
 		if (scr_solid(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_destructibles) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid(x + sign(hsp), y - 2)) && (!place_meeting(x + sign(hsp), y, obj_ratblock) || place_meeting(x + sign(hsp), y, obj_rattumble)))

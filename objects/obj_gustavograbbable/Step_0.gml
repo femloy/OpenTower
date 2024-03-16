@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -13,14 +13,14 @@ switch (state)
 		image_speed = 0.35;
 		hsp = 0;
 		var _boss = -4;
-		with (obj_baddie)
+		with obj_baddie
 		{
-			if (object_index != obj_gustavograbbable)
+			if object_index != obj_gustavograbbable
 				_boss = id;
 		}
-		if (_boss != -4)
+		if _boss != -4
 		{
-			if (_boss.x != x)
+			if _boss.x != x
 				image_xscale = sign(_boss.x - x);
 		}
 		break;
@@ -32,7 +32,7 @@ switch (state)
 		break;
 	case states.stun:
 		scr_enemy_stun();
-		if (sprite_index == spr_dead)
+		if sprite_index == spr_dead
 			sprite_index = spr_lonegustavo_dashjump;
 		break;
 	case states.pizzagoblinthrow:
@@ -57,21 +57,21 @@ switch (state)
 		scr_enemy_ghostpossess();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

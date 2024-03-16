@@ -5,11 +5,11 @@ if (!ds_list_empty(global.debris_list))
 		var q = ds_list_find_value(global.debris_list, i);
 		if (is_struct(q))
 		{
-			with (q)
+			with q
 			{
-				if (vsp < 20)
+				if vsp < 20
 					vsp += grav;
-				if (type == part_type.fadeout)
+				if type == part_type.fadeout
 				{
 					vsp = 0;
 					alpha -= 0.05;
@@ -17,12 +17,12 @@ if (!ds_list_empty(global.debris_list))
 				x += hsp;
 				y += vsp;
 				var _destroy = false;
-				if (animated)
+				if animated
 				{
-					if (image_index > image_number - 1)
+					if image_index > image_number - 1
 					{
 						image_index = frac(image_index);
-						if (destroyonanimation)
+						if destroyonanimation
 							_destroy = true;
 					}
 					image_index += image_speed;
@@ -31,7 +31,7 @@ if (!ds_list_empty(global.debris_list))
 				var outofy = y > (room_height + sprh) || y < -sprh;
 				if (outofx || outofy || (type == part_type.fadeout && alpha <= 0))
 					_destroy = true;
-				if (_destroy)
+				if _destroy
 				{
 					ds_list_delete(global.debris_list, i);
 					i--;
@@ -52,7 +52,7 @@ if (!ds_list_empty(global.collect_list))
 		var b = ds_list_find_value(global.collect_list, i);
 		if (is_struct(b))
 		{
-			with (b)
+			with b
 			{
 				var _dir = point_direction(x, y, 110, 80);
 				hsp = lengthdir_x(25, _dir);
@@ -60,13 +60,13 @@ if (!ds_list_empty(global.collect_list))
 				x += hsp;
 				y += vsp;
 				image_index += 0.35;
-				if (image_index > image_number - 1)
+				if image_index > image_number - 1
 					image_index = frac(image_index);
 				outofx = x < 140;
 				outofy = y < 120;
-				if (outofx && outofy)
+				if outofx && outofy
 				{
-					with (obj_camera)
+					with obj_camera
 						collect_shake += 10;
 					ds_list_delete(global.collect_list, i);
 					i--;

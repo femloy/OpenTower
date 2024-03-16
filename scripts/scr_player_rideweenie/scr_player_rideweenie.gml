@@ -2,11 +2,11 @@ function scr_player_rideweenie()
 {
 	hsp = movespeed;
 	move = key_right + key_left;
-	if (sprite_index != spr_weenieturn)
+	if sprite_index != spr_weenieturn
 		sprite_index = spr_rideweenie;
-	if (move != 0)
+	if move != 0
 	{
-		if (move == xscale)
+		if move == xscale
 			movespeed = Approach(movespeed, xscale * 16, 0.35);
 		else
 		{
@@ -27,7 +27,7 @@ function scr_player_rideweenie()
 	}
 	else
 		movespeed = Approach(movespeed, 0, 0.7);
-	if (sprite_index == spr_weenieturn && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_weenieturn && floor(image_index) == image_number - 1)
 		sprite_index = spr_rideweenie;
 	if (place_meeting(x + hsp, y, obj_solid) && !place_meeting(x + hsp, y, obj_slope) && !place_meeting(x + hsp, y, obj_ratblock) && !place_meeting(x + hsp, y, obj_destructibles))
 	{
@@ -37,7 +37,7 @@ function scr_player_rideweenie()
 		{
 			scr_fmod_soundeffect(weeniebumpsnd, x, y);
 			movespeed = -movespeed * 0.5;
-			repeat (3)
+			repeat 3
 			{
 				with (create_debris(x, y, spr_slapstar))
 				{
@@ -47,12 +47,12 @@ function scr_player_rideweenie()
 			}
 		}
 	}
-	if (input_buffer_jump > 0)
+	if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		scr_fmod_soundeffect(jumpsnd, x, y);
 		movespeed = abs(hsp);
-		if (movespeed < 8)
+		if movespeed < 8
 			movespeed = 8;
 		dir = xscale;
 		state = states.mach2;
@@ -73,14 +73,14 @@ function scr_player_rideweenie()
 			image_xscale = other.xscale;
 		dashcloudtimer = 15;
 	}
-	if (dashcloudtimer > 0)
+	if dashcloudtimer > 0
 		dashcloudtimer--;
-	if (punch_afterimage > 0)
+	if punch_afterimage > 0
 		punch_afterimage--;
 	else if (abs(hsp) > 12)
 	{
 		punch_afterimage = 10;
-		if (punch_afterimage > 0)
+		if punch_afterimage > 0
 			punch_afterimage--;
 		else
 		{

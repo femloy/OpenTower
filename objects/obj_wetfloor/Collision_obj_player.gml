@@ -1,6 +1,6 @@
-with (obj_player)
+with obj_player
 {
 	state = states.slipnslide;
-	if (movespeed < 8)
+	if movespeed < 8
 		movespeed = 8;
 }

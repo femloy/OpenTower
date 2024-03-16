@@ -1,4 +1,4 @@
-if (room == editor_room)
+if room == editor_room
 	exit;
 draw_set_font(lang_get_font("bigfont"));
 draw_set_halign(fa_center);
@@ -41,7 +41,7 @@ for (var i = num; i > 0; i--)
 }
 
 // tv
-if (room != strongcold_endscreen)
+if room != strongcold_endscreen
 {
 	draw_sprite_ext(spr_tv_bgfinal, tv_bg_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	pattern_set(global.Base_Pattern_Color, sprite_index, image_index, image_xscale, image_yscale, patterntexture);
@@ -49,7 +49,7 @@ if (room != strongcold_endscreen)
 	draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	
 	var _red = global.noisejetpack && (obj_player1.ispeppino || obj_player1.noisepizzapepper);
-	if (_red)
+	if _red
 	{
 		pal_swap_set(spr_palette, 2, false);
 		draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
@@ -59,23 +59,23 @@ if (room != strongcold_endscreen)
 	{
 		pal_swap_set(spr_tv_palette, 1, false);
 		var spr = spr_tv_empty;
-		if (sprite_index == spr_tv_open)
+		if sprite_index == spr_tv_open
 			spr = sprite_index;
 		draw_sprite_ext(spr, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
 	}
 	
-	if (state == states.tv_whitenoise)
+	if state == states.tv_whitenoise
 	{
 		if (!obj_player1.ispeppino || global.swapmode)
 			pal_swap_set(spr_tv_palette, 1, false);
 		draw_sprite(spr_tv_whitenoise, tv_trans, tv_x + collect_x, tv_y + collect_y + hud_posY);
 	}
 	
-	if (sprite_index == spr_tv_exprheatN)
+	if sprite_index == spr_tv_exprheatN
 	{
 		pal_swap_set(spr_palette, paletteselect, false);
 		draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
-		if (_red)
+		if _red
 		{
 			pal_swap_set(spr_palette, 2, false);
 			draw_sprite_ext(sprite_index, image_index, tv_x + collect_x, tv_y + collect_y + hud_posY, 1, 1, 0, c_white, alpha);
@@ -86,7 +86,7 @@ if (room != strongcold_endscreen)
 }
 reset_shader_fix();
 
-if (bubblespr != -4)
+if bubblespr != -4
 	draw_sprite_ext(bubblespr, bubbleindex, SCREEN_WIDTH - 448, 53, 1, 1, 1, c_white, alpha);
 if (!surface_exists(promptsurface))
 	promptsurface = surface_create(290, 102);
@@ -95,7 +95,7 @@ draw_clear_alpha(0, 0);
 draw_set_font(font1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
-if (bubblespr == spr_tv_bubble)
+if bubblespr == spr_tv_bubble
 {
 	promptx -= promptspd;
 	if (bubblespr != spr_tv_bubbleclose && promptx < (350 - string_width(prompt)))
@@ -110,7 +110,7 @@ surface_reset_target();
 draw_surface(promptsurface, SCREEN_WIDTH - 610, 0);
 draw_set_font(global.smallnumber_fnt);
 draw_set_halign(fa_center);
-if (global.panic)
+if global.panic
 {
 	var _fill = global.fill;
 	var _currentbarpos = chunkmax - _fill;
@@ -120,7 +120,7 @@ if (global.panic)
 	if (!surface_exists(bar_surface))
 		bar_surface = surface_create(298, 30);
 	var _barfillpos = floor(_barpos) + 13;
-	if (_barfillpos > 0)
+	if _barfillpos > 0
 	{
 		surface_resize(bar_surface, _barfillpos, 30);
 		surface_set_target(bar_surface);
@@ -135,13 +135,13 @@ if (global.panic)
 	draw_sprite(spr_timer_bar, -1, timer_x, timer_y);
 	draw_sprite(johnface_sprite, johnface_index, timer_x + 13 + _barpos, timer_y + 20);
 	var timerspr = pizzaface_sprite;
-	if (timer_tower)
+	if timer_tower
 		timerspr = spr_timer_tower;
 	draw_sprite(timerspr, pizzaface_index, timer_x + 320, timer_y + 10);
 	var minutes = 0;
 	for (var seconds = ceil(global.fill / 12); seconds > 59; seconds -= 60)
 		minutes++;
-	if (seconds < 10)
+	if seconds < 10
 		seconds = concat("0", seconds);
 	else
 		seconds = string(seconds);

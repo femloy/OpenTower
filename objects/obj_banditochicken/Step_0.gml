@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -33,15 +33,15 @@ switch (state)
 		scr_enemy_pizzaheadjump();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
 var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
 if (state == states.walk || state == states.idle)
@@ -55,12 +55,12 @@ if ((state == states.walk || state == states.idle) && activated == 1 && sprite_i
 {
 	fmod_event_one_shot_3d("event:/sfx/enemies/banditochicken", x, y);
 	movespeed = 0;
-	if (x != targetplayer.x)
+	if x != targetplayer.x
 		image_xscale = -sign(x - targetplayer.x);
 	image_index = 0;
 	sprite_index = spr_banditochicken_wake;
 }
-if (sprite_index == spr_banditochicken_wake && floor(image_index) == (image_number - 1))
+if (sprite_index == spr_banditochicken_wake && floor(image_index) == image_number - 1)
 {
 	image_xscale *= -1;
 	sprite_index = spr_banditochicken_chase;
@@ -69,17 +69,17 @@ if (sprite_index == spr_banditochicken_wake && floor(image_index) == (image_numb
 	with (instance_create(x, y, obj_jumpdust))
 		image_xscale = other.image_xscale;
 }
-if (state == states.charge && bonebuffer > 0)
+if state == states.charge && bonebuffer > 0
 	bonebuffer--;
-if (grounded && jumping < 40 && state == states.charge)
+if grounded && jumping < 40 && state == states.charge
 	jumping++;
-if (state == states.charge && grounded && jumping >= 40)
+if state == states.charge && grounded && jumping >= 40
 {
 	vsp = -11;
 	jumping = 0;
 	instance_create(x, y, obj_highjumpcloud2);
 }
-if (bonebuffer == 0)
+if bonebuffer == 0
 {
 	with (instance_create(x, y - 20, obj_banditochicken_dynamite))
 	{
@@ -90,7 +90,7 @@ if (bonebuffer == 0)
 		instance_create(x, y, obj_genericpoofeffect);
 		var old_y = y;
 		var t = false;
-		while (y < room_height)
+		while y < room_height
 		{
 			if (place_meeting(x, y, obj_solid))
 				y++;
@@ -100,16 +100,16 @@ if (bonebuffer == 0)
 				break;
 			}
 		}
-		if (!t)
+		if !t
 			y = old_y;
 	}
 	bonebuffer = 100;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

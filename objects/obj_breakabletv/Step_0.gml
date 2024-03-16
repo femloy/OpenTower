@@ -1,6 +1,6 @@
 if (place_meeting(x, y, obj_player))
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (state == states.mach1 || state == states.mach2)
 		{
@@ -10,7 +10,7 @@ if (place_meeting(x, y, obj_player))
 			hsp = 0;
 			movespeed = 0;
 		}
-		if (state == states.mach3)
+		if state == states.mach3
 		{
 			hsp = -xscale * 3;
 			state = states.bump;
@@ -21,7 +21,7 @@ if (place_meeting(x, y, obj_player))
 		}
 	}
 }
-if (grabbed == 1)
+if grabbed == 1
 {
 	image_xscale = -obj_player.xscale;
 	grav = 0;
@@ -30,7 +30,7 @@ if (grabbed == 1)
 	{
 		grounded = false;
 		x = obj_player.x;
-		if (obj_player.sprite_index != spr_player_haulingstart)
+		if obj_player.sprite_index != spr_player_haulingstart
 			y = obj_player.y - 40;
 		else if (floor(obj_player.image_index) == 0)
 			y = obj_player.y;
@@ -42,7 +42,7 @@ if (grabbed == 1)
 			y = obj_player.y - 30;
 		image_xscale = -obj_player.xscale;
 	}
-	with (obj_player)
+	with obj_player
 	{
 		move = key_left2 + key_right2;
 		if (!(state == states.grab || state == states.grabbing || state == states.throwing || state == states.slam || state == states.tacklecharge || state == states.punch || state == states.superslam || state == states.backkick || state == states.uppunch || state == states.shoulder))
@@ -53,7 +53,7 @@ if (grabbed == 1)
 		}
 	}
 	hsp = 0;
-	if (obj_player.state == states.punch)
+	if obj_player.state == states.punch
 	{
 		instance_create(x + (obj_player.xscale * 30), y, obj_bumpeffect);
 		grabbed = false;
@@ -66,13 +66,13 @@ if (grabbed == 1)
 		grav = 0;
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (obj_player.state == states.shoulder)
+	if obj_player.state == states.shoulder
 	{
 		grav = 0.5;
 		instance_create(x, y + 20, obj_bumpeffect);
@@ -80,27 +80,27 @@ if (grabbed == 1)
 		thrown = true;
 		x = obj_player.x;
 		y = obj_player.y;
-		if (obj_player.sprite_index == spr_player_shoulder)
+		if obj_player.sprite_index == spr_player_shoulder
 			vsp = 15;
-		if (obj_player.sprite_index == spr_player_diagonaldownthrow)
+		if obj_player.sprite_index == spr_player_diagonaldownthrow
 		{
 			hsp = -image_xscale * 10;
 			vsp = 15;
 		}
-		if (obj_player.sprite_index == spr_player_diagonalupthrow)
+		if obj_player.sprite_index == spr_player_diagonalupthrow
 		{
 			hsp = -image_xscale * 10;
 			vsp = -15;
 		}
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (obj_player.state == states.throwing)
+	if obj_player.state == states.throwing
 	{
 		grav = 0.5;
 		grabbed = false;
@@ -110,7 +110,7 @@ if (grabbed == 1)
 		hsp = -image_xscale * 10;
 		vsp = -10;
 	}
-	if (obj_player.state == states.uppunch)
+	if obj_player.state == states.uppunch
 	{
 		instance_create(x + (-obj_player.xscale * 15), y - 50, obj_bumpeffect);
 		grav = 0.5;
@@ -123,20 +123,20 @@ if (grabbed == 1)
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
 		flash = true;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
 		}
 	}
-	if (obj_player.state == states.tacklecharge)
+	if obj_player.state == states.tacklecharge
 	{
 		x = obj_player.x + (obj_player.xscale * 15);
 		y = obj_player.y;
 	}
-	if (obj_player.state == states.superslam)
+	if obj_player.state == states.superslam
 	{
-		if (obj_player.character == "P")
+		if obj_player.character == "P"
 		{
 			if (floor(obj_player.image_index) == 0)
 			{
@@ -193,7 +193,7 @@ if (grabbed == 1)
 			x = obj_player.x;
 			y = obj_player.y - 40;
 		}
-		if (obj_player.sprite_index == obj_player.spr_piledriverland)
+		if obj_player.sprite_index == obj_player.spr_piledriverland
 		{
 			instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
@@ -207,11 +207,11 @@ if (grabbed == 1)
 		}
 	}
 }
-if (vsp > 0 && grounded)
+if vsp > 0 && grounded
 	hsp = 0;
 if (place_meeting(x + hsp, y, obj_solid) && thrown == 1)
 	instance_destroy();
-if (grounded == 1 && thrown == 1 && vsp > 0)
+if grounded == 1 && thrown == 1 && vsp > 0
 	instance_destroy();
-if (grabbed == 0)
+if grabbed == 0
 	scr_collide();

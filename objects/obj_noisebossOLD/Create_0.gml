@@ -118,12 +118,12 @@ function boss_destroy(player)
 	SUPER_boss_destroy(player);
 	targetstunned = 1000;
 	stunned = 1000;
-	if (fakedeath)
+	if fakedeath
 	{
 		angry = true;
 		fakedeath = false;
 		destroyable = false;
-		with (obj_bosscontroller)
+		with obj_bosscontroller
 		{
 			alarm[1] = room_speed * 4;
 			fakedeath = true;
@@ -139,29 +139,29 @@ function boss_destroy(player)
 }
 function boss_hurt(damage, player)
 {
-	if (targetstunned > 0)
+	if targetstunned > 0
 	{
 		targetstunned -= targetstunnedminus[phase - 1];
 		attack_cooldown = 0;
 		boss_noise_decide_attack();
-		if (targetstunned < 0)
+		if targetstunned < 0
 			targetstunned = 1;
 	}
 	else
 		targetstunned = 150;
 	var ps = state;
 	SUPER_boss_hurt(damage, player);
-	if (ps == states.pogo)
+	if ps == states.pogo
 		movespeed = 0;
 	targetxscale = -player.xscale;
 }
 function boss_hurt_noplayer(damage)
 {
-	if (targetstunned > 0)
+	if targetstunned > 0
 	{
 		targetstunned -= targetstunnedminus[phase - 1];
 		attack_cooldown = 0;
-		if (targetstunned < 0)
+		if targetstunned < 0
 			targetstunned = 1;
 	}
 	else
@@ -176,7 +176,7 @@ function player_hurt(damage, player)
 		hithsp = hsp;
 		hitvsp = vsp;
 		SUPER_player_hurt(damage, player);
-		with (player)
+		with player
 		{
 			inv_frames = true;
 			alarm[1] = 15;
@@ -184,7 +184,7 @@ function player_hurt(damage, player)
 		if (hitstate == states.skateboard || hitstate == states.jetpack)
 		{
 			stunned = (hitstate == states.skateboard) ? 30 : 70;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;

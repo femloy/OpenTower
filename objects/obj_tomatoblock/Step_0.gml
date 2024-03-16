@@ -1,5 +1,5 @@
 var _block = id;
-with (obj_player)
+with obj_player
 {
 	if (state != states.dead && place_meeting(x, y + 1, _block))
 	{

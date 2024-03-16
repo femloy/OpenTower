@@ -1,4 +1,4 @@
-if (monster_active[4] && room != kidsparty_entrance1 && room != kidsparty_entrance2)
+if monster_active[4] && room != kidsparty_entrance1 && room != kidsparty_entrance2
 {
 	var n = irandom(3);
 	if (!instance_exists(obj_pineapplemonster))
@@ -7,12 +7,12 @@ if (monster_active[4] && room != kidsparty_entrance1 && room != kidsparty_entran
 		monster_pos[4].y = player_posY;
 		instance_create(obj_player1.x, obj_player1.y, obj_pineapplemonster);
 	}
-	with (obj_pineapplemonster)
+	with obj_pineapplemonster
 	{
 		sprite_index = choose(spr_monsterpineapple_pose1, spr_monsterpineapple_pose2, spr_monsterpineapple_pose3);
 		image_index = 0;
 	}
-	switch (n)
+	switch n
 	{
 		case 0:
 			monster_dir[0].x = choose(-1, 1);

@@ -1,19 +1,19 @@
 function scr_enemy_rage()
 {
-	switch (object_index)
+	switch object_index
 	{
 		case obj_forknight:
 			image_speed = 0.6;
-			if (sprite_index == spr_forknight_ragestart)
+			if sprite_index == spr_forknight_ragestart
 			{
 				hsp = 0;
-				if (image_index > (image_number - 1))
+				if (image_index > image_number - 1)
 				{
 					sprite_index = spr_forknight_rageloop;
 					image_index = 0;
 				}
 			}
-			else if (sprite_index == spr_forknight_rageloop)
+			else if sprite_index == spr_forknight_rageloop
 			{
 				hsp = image_xscale * (4 + (global.baddiespeed - 1));
 				with (instance_place(x + hsp, y, obj_destructibles))
@@ -29,7 +29,7 @@ function scr_enemy_rage()
 			break;
 		case obj_soldier:
 			hsp = 0;
-			if (!hitboxcreate)
+			if !hitboxcreate
 			{
 				hitboxcreate = true;
 				with (instance_create(x, y, obj_forkhitbox))
@@ -38,7 +38,7 @@ function scr_enemy_rage()
 					ID = other.id;
 				}
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				ragebuffer = 100;
 				state = states.walk;
@@ -59,7 +59,7 @@ function scr_enemy_rage()
 				with (instance_create(x + (image_xscale * 15), y + 5, obj_slugbullet))
 					image_xscale = other.image_xscale;
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				shot = false;
 				sprite_index = spr_pizzaslug_walk;
@@ -69,14 +69,14 @@ function scr_enemy_rage()
 			break;
 		case obj_indiancheese:
 			ragedash--;
-			if (ragedash == 0)
+			if ragedash == 0
 			{
 				ragecooldown = 200;
 				ragedash = 50;
 				state = states.walk;
 				sprite_index = walkspr;
 			}
-			if (!shot && ragedash < 30)
+			if !shot && ragedash < 30
 			{
 				fmod_event_one_shot_3d("event:/sfx/enemies/projectile", x, y);
 				shot = true;
@@ -94,7 +94,7 @@ function scr_enemy_rage()
 				shoot = true;
 				instance_create(x, y, obj_warplaserhoming);
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 				state = states.walk;
 			break;
 		case obj_cheeseslime:
@@ -109,7 +109,7 @@ function scr_enemy_rage()
 			}
 			else
 				hsp = 0;
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				state = states.walk;
 				sprite_index = walkspr;
@@ -117,12 +117,12 @@ function scr_enemy_rage()
 			break;
 		case obj_minijohn:
 			hsp = movespeed * image_xscale;
-			if (sprite_index == spr_minijohn_rage1 && floor(image_index) == (image_number - 1))
+			if (sprite_index == spr_minijohn_rage1 && floor(image_index) == image_number - 1)
 				sprite_index = spr_minijohn_rage2;
-			if (grounded && vsp > 0)
+			if grounded && vsp > 0
 			{
 				var targetplayer = obj_player1;
-				if (obj_player1.spotlight == 0)
+				if obj_player1.spotlight == 0
 					targetplayer = obj_player2;
 				movespeed = 4;
 				image_xscale = -sign(x - targetplayer.x);
@@ -132,10 +132,10 @@ function scr_enemy_rage()
 			break;
 		case obj_fencer:
 			var thespeed = 0;
-			if (image_index > 7)
+			if image_index > 7
 				thespeed = 12;
 			hsp = image_xscale * thespeed;
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				with (instance_create(x, y, obj_forkhitbox))
 					ID = other.id;
@@ -148,15 +148,15 @@ function scr_enemy_rage()
 			break;
 		case obj_ancho:
 			hsp = 0;
-			if (sprite_index == spr_ancho_rage1)
+			if sprite_index == spr_ancho_rage1
 				vsp = 0;
-			if (sprite_index == spr_ancho_rage2)
+			if sprite_index == spr_ancho_rage2
 				vsp = 10;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_ancho_rage1)
+			if (floor(image_index) == image_number - 1 && sprite_index == spr_ancho_rage1)
 				sprite_index = spr_ancho_rage2;
-			if (grounded && sprite_index == spr_ancho_rage2)
+			if grounded && sprite_index == spr_ancho_rage2
 			{
-				with (obj_camera)
+				with obj_camera
 				{
 					shake_mag = 10;
 					shake_mag_acc = 30 / room_speed;
@@ -164,7 +164,7 @@ function scr_enemy_rage()
 				image_index = 0;
 				sprite_index = spr_ancho_rage3;
 			}
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_ancho_rage3)
+			if (floor(image_index) == image_number - 1 && sprite_index == spr_ancho_rage3)
 			{
 				state = states.walk;
 				sprite_index = spr_ancho;
@@ -172,7 +172,7 @@ function scr_enemy_rage()
 			break;
 		case obj_spitcheese:
 			ragedash--;
-			if (ragedash <= 0)
+			if ragedash <= 0
 			{
 				with (instance_create(x, y, obj_bigspitcheesespike))
 				{
@@ -181,25 +181,25 @@ function scr_enemy_rage()
 					vsp = -7;
 				}
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				state = states.walk;
 				sprite_index = spr_spitcheese_idle;
 			}
 			break;
 		case obj_tank:
-			if (sprite_index != spr_tank_chargestart)
+			if sprite_index != spr_tank_chargestart
 			{
 				if ((x + hsp) == xprevious)
 					slope_buffer--;
 				else
 					slope_buffer = 12;
 			}
-			if (sprite_index == spr_tank_chargestart)
+			if sprite_index == spr_tank_chargestart
 				hsp = 0;
-			if (sprite_index == spr_tank_charge)
+			if sprite_index == spr_tank_charge
 				hsp = image_xscale * 8;
-			if (floor(image_index) == (image_number - 1) && sprite_index == spr_tank_chargestart)
+			if (floor(image_index) == image_number - 1 && sprite_index == spr_tank_chargestart)
 				sprite_index = spr_tank_charge;
 			with (instance_place(x + hsp, y, obj_destructibles))
 				instance_destroy();
@@ -226,7 +226,7 @@ function scr_enemy_rage()
 					hsp = other.image_xscale * 5;
 				}
 			}
-			if (floor(image_index) == (image_number - 1))
+			if floor(image_index) == image_number - 1
 			{
 				ragecooldown = 100;
 				state = states.walk;

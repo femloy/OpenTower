@@ -1,9 +1,9 @@
-if (spawn_buffer > 0)
+if spawn_buffer > 0
 	spawn_buffer--;
-else if (content != -4)
+else if content != -4
 {
 	var _collidewithplayer = false;
-	with (obj_player)
+	with obj_player
 	{
 		var _oldmask = mask_index;
 		mask_index = spr_player_mask;

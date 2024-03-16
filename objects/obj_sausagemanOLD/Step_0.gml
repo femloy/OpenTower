@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -22,17 +22,17 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == states.stun && stunned > 40 && birdcreated == 0)
+if state == states.stun && stunned > 40 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (hp <= 0)
+if hp <= 0
 	instance_destroy();
-if (cigar == 1)
+if cigar == 1
 {
 	landspr = spr_sausageman_land;
 	idlespr = spr_sausageman_idle;
@@ -52,7 +52,7 @@ if (cigar == 1)
 	stompedspr = spr_sausageman_stomped;
 	grabbedspr = spr_sausageman_grabbed;
 }
-if (cigar == 0)
+if cigar == 0
 {
 	landspr = spr_sausagemannocigar_land;
 	idlespr = spr_sausagemannocigar_idle;
@@ -78,9 +78,9 @@ if (cigar == 1 && cigarcreate == 0 && (state == states.idle || state == states.w
 	with (instance_create(x, y, obj_sausagemancigar))
 		ID = other.id;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;

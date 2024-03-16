@@ -61,15 +61,15 @@ unlock_noise = function(show_screen)
 			break;
 		}
 	}
-	if (!show_screen)
+	if !show_screen
 	{
 		ini_open_from_string(obj_savesystem.ini_str_options);
 		show_screen = ini_read_real("Game", "beaten", 0) > 0;
-		if (!show_screen)
+		if !show_screen
 			show_screen = ini_read_real("Game", "noiseunlocked", 0);
 		ini_close();
 	}
-	if (show_screen)
+	if show_screen
 	{
 		noise_unlocked = true;
 		ini_open_from_string(obj_savesystem.ini_str_options);
@@ -88,19 +88,19 @@ unlock_swap = function(show_screen)
 {
 	for (var i = 0; i < 3; i++)
 	{
-		if (global.gameN[i].judgement != "none")
+		if global.gameN[i].judgement != "none"
 		{
 			show_screen = true;
 			break;
 		}
 	}
-	if (!show_screen)
+	if !show_screen
 	{
 		ini_open_from_string(obj_savesystem.ini_str_options);
 		show_screen = ini_read_real("Game", "swapunlocked", 0);
 		ini_close();
 	}
-	if (show_screen)
+	if show_screen
 	{
 		swap_unlocked = true;
 		ini_open_from_string(obj_savesystem.ini_str_options);

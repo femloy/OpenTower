@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -46,7 +46,7 @@ switch (state)
 		break;
 }
 var _b = false;
-if (bounce && grounded && vsp > 0)
+if bounce && grounded && vsp > 0
 {
 	state = states.stun;
 	stunned = 100;
@@ -57,27 +57,27 @@ if (bounce && grounded && vsp > 0)
 	_b = true;
 	create_particle(x, y, particle.highjumpcloud1);
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (state != states.float)
+if state != states.float
 	scr_scareenemy();
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (hitboxcreate == 0 && state == states.walk && grounded && vsp > 0 && state != states.stun)
+if hitboxcreate == 0 && state == states.walk && grounded && vsp > 0 && state != states.stun
 {
 	hitboxcreate = true;
 	with (instance_create(x, y, obj_forkhitbox))
 		ID = other.id;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
 if (boundbox == 0 && ((grounded && vsp > 0) || _b))
 {

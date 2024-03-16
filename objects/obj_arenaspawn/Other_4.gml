@@ -5,18 +5,18 @@ if (ds_list_find_index(global.saveroom, id) != -1)
 }
 else
 {
-	with (obj_baddie)
+	with obj_baddie
 	{
-		if (arena)
+		if arena
 		{
 			ds_list_add(other.baddielist, [wave, id]);
-			if (wave > other.maxwave)
+			if wave > other.maxwave
 				other.maxwave = wave;
 			maxhp = hp;
 			instance_deactivate_object(id);
 		}
 	}
-	with (obj_arenadoor)
+	with obj_arenadoor
 	{
 		if (objectlist != -4 && (array_length(objectlist) - 1) > other.maxwave)
 			other.maxwave = array_length(objectlist) - 1;

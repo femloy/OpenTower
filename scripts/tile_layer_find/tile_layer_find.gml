@@ -28,7 +28,7 @@ function tile_layer_find(depth, x, y)
 		for(__j = 0; __j < __numels; __j++)
 		{
 			var __eltype = layer_get_element_type(__els[__j]);
-			if (__eltype == layerelementtype_tile)
+			if __eltype == layerelementtype_tile
 			{
 				var __tileXscale = layer_tile_get_xscale(__els[__j]);
 				var __tileYscale = layer_tile_get_yscale(__els[__j]);
@@ -37,21 +37,21 @@ function tile_layer_find(depth, x, y)
 				if ((__tileXscale >= 0) && (__tileYscale >= 0))
 				{			
 					var __tileX = layer_tile_get_x(__els[__j]);						
-					if (__x < __tileX)
+					if __x < __tileX
 						continue;
 					
 					var __tileY = layer_tile_get_y(__els[__j]);
-					if (__y < __tileY)
+					if __y < __tileY
 						continue;
 							
 					var __tileReg = layer_tile_get_region(__els[__j]);			
 					var __tileRight = __tileX + (__tileXscale * __tileReg[2]);
-					if (__x >= __tileRight)
+					if __x >= __tileRight
 						continue;
 					
 				
 					var __tileBottom = __tileY + (__tileYscale * __tileReg[3]);
-					if (__y >= __tileBottom)
+					if __y >= __tileBottom
 						continue;
 				
 					// Passed all the tests so return this tile
@@ -62,32 +62,32 @@ function tile_layer_find(depth, x, y)
 					var __tileReg = layer_tile_get_region(__els[__j]);
 					var __minx = layer_tile_get_x(__els[__j]);
 					var __maxx = __minx + (__tileXscale * __tileReg[2]);
-					if (__minx > __maxx)
+					if __minx > __maxx
 					{
 						var __temp = __minx;
 						__minx = __maxx;
 						__maxx = __temp;
 					}
 				
-					if (__x < __minx)
+					if __x < __minx
 						continue;
 					
-					if (__x >= __maxx)
+					if __x >= __maxx
 						continue;
 					
 					var __miny = layer_tile_get_y(__els[__j]);
 					var __maxy = __miny + (__tileYscale * __tileReg[3]);
-					if (__miny > __maxy)
+					if __miny > __maxy
 					{
 						var __temp = __miny;
 						__miny = __maxy;
 						__maxy = __temp;
 					}
 				
-					if (__y < __miny)
+					if __y < __miny
 						continue;
 					
-					if (__y >= __maxy)
+					if __y >= __maxy
 						continue;
 					
 					// Passed all the tests so return this tile

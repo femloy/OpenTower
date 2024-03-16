@@ -1,14 +1,14 @@
 function scr_player_cheesepeplaunch()
 {
 	hsp = xscale * movespeed;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
-		if (sprite_index == spr_cheesepepjumpstart)
+		if sprite_index == spr_cheesepepjumpstart
 			sprite_index = spr_cheesepepjump;
-		else if (sprite_index == spr_cheesepepjump && vsp > 0)
+		else if sprite_index == spr_cheesepepjump && vsp > 0
 			sprite_index = spr_cheesepepfall;
 	}
-	if (grounded)
+	if grounded
 	{
 		state = states.cheesepep;
 		sprite_index = spr_cheesepepland;
@@ -18,12 +18,12 @@ function scr_player_cheesepeplaunch()
 	{
 		state = states.cheesepepstick;
 		wallspeed = movespeed;
-		if (vsp < 0)
+		if vsp < 0
 		{
 			wallspeed = movespeed - 2;
-			if (wallspeed < 2)
+			if wallspeed < 2
 				wallspeed = 6;
-			if (wallspeed > 8)
+			if wallspeed > 8
 				wallspeed = 8;
 		}
 		else

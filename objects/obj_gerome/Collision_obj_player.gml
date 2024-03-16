@@ -5,6 +5,6 @@ global.combotime = 60;
 instance_create(x, y, obj_geromefollow);
 instance_create(x, y, obj_baddietaunteffect);
 instance_destroy();
-with (obj_player)
+with obj_player
 {
 }

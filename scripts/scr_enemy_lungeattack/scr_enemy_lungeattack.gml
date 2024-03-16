@@ -3,14 +3,14 @@ function scr_enemy_lungeattack()
 	hsp = -image_xscale * 4;
 	vsp = 0;
 	var _l = false;
-	with (obj_player)
+	with obj_player
 	{
-		if (state == states.lungeattack && image_index <= 4)
+		if state == states.lungeattack && image_index <= 4
 			_l = true;
 	}
-	if (!_l)
+	if !_l
 		hitLag = 0;
-	if (hitLag > 0)
+	if hitLag > 0
 		hitLag--;
 	else
 	{

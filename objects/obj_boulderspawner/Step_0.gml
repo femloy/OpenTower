@@ -8,5 +8,5 @@ if (cooldown == 0 && !instance_exists(boulderID))
 	}
 	cooldown = 1000;
 }
-if (cooldown > 0)
+if cooldown > 0
 	cooldown--;

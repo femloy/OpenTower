@@ -21,7 +21,7 @@ function scr_hub_bg_reinit(xoffset, yoffset)
 	for (var i = 0; i < bgsprite_number; i++)
 	{
 		bgspritepos[i] = 0;
-		if (bg_useparallax)
+		if bg_useparallax
 		{
 			var p = bgparallax2[i];
 			bgspriteposstart[i] = [xoffset - (xoffset * p) - ((SCREEN_WIDTH / 4) * p), yoffset - (yoffset * p) - ((SCREEN_HEIGHT / 4) * p)];
@@ -33,7 +33,7 @@ function scr_hub_bg_step()
 {
 	for (var i = 0; i < array_length(bgspritepos); i++)
 	{
-		if (!bg_useparallax)
+		if !bg_useparallax
 		{
 			bgspritepos[i] -= bgparallax[i];
 			if (bgspritepos[i] <= -(bgsprite_width + bgparallax[i]))
@@ -49,7 +49,7 @@ function scr_hub_bg_step()
 }
 function scr_hub_bg_draw(x, y, sprite, frame, gui = false)
 {
-	if (bgalpha < 1)
+	if bgalpha < 1
 	{
 		var w = sprite_get_width(sprite);
 		var h = sprite_get_height(sprite);
@@ -62,7 +62,7 @@ function scr_hub_bg_draw(x, y, sprite, frame, gui = false)
 			draw_clear(0);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite(sprite, frame, x1, y1);
-			if (!gui)
+			if !gui
 				gpu_set_blendmode(bm_normal);
 			else
 				reset_blendmode();
@@ -74,7 +74,7 @@ function scr_hub_bg_draw(x, y, sprite, frame, gui = false)
 		draw_clear_alpha(0, 0);
 		for (var i = 0; i < array_length(bgspritepos); i++)
 		{
-			if (!bg_useparallax)
+			if !bg_useparallax
 			{
 				var b = bgspritepos[i];
 				draw_sprite_tiled(bgsprite, i, b, h);
@@ -88,13 +88,13 @@ function scr_hub_bg_draw(x, y, sprite, frame, gui = false)
 		}
 		gpu_set_blendmode(bm_subtract);
 		draw_surface(bgmask_surface, 0, 0);
-		if (!gui)
+		if !gui
 			gpu_set_blendmode(bm_normal);
 		else
 			reset_blendmode();
 		surface_reset_target();
 		draw_surface(bgclip_surface, x - x1, y - y1);
 	}
-	if (bgalpha > 0)
+	if bgalpha > 0
 		draw_sprite_ext(sprite, frame, x, y, image_xscale, image_yscale, image_angle, image_blend, bgalpha);
 }

@@ -6,7 +6,7 @@ for (var i = 0; i < array_length(credits_arr); i++)
 	var q = credits_arr[i];
 	var yy = scroll_y;
 	var xx = 0;
-	if (i == 0)
+	if i == 0
 	{
 		draw_set_halign(fa_left);
 		xx = 16;
@@ -32,7 +32,7 @@ for (var i = 0; i < array_length(credits_arr); i++)
 		}
 		if (!title || i == 0)
 			draw_text_color(xx, yy, b, c_white, c_white, c_white, c_white, image_alpha);
-		if (title)
+		if title
 		{
 			draw_set_halign(old_halign);
 			xx = old_x;

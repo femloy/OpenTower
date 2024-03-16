@@ -1,4 +1,4 @@
-if (!first)
+if !first
 {
 	if (distance_to_object(obj_player) < 300 && obj_player.y > (y - 100))
 	{

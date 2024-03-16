@@ -2,7 +2,7 @@ function MoveObjectCMD(_inst, _x, _y, _oldx, _oldy) : Command() constructor
 {
 	static execute = function()
 	{
-		with (inst)
+		with inst
 		{
 			x = other.x;
 			y = other.y;
@@ -10,7 +10,7 @@ function MoveObjectCMD(_inst, _x, _y, _oldx, _oldy) : Command() constructor
 	};
 	static undo = function()
 	{
-		with (inst)
+		with inst
 		{
 			x = other.oldx;
 			y = other.oldy;

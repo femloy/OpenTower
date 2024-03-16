@@ -5,7 +5,7 @@ global.heattime += 10;
 global.heattime = clamp(global.heattime, 0, 60);
 global.combotime += 10;
 global.combotime = clamp(global.combotime, 0, 60);
-with (obj_camera)
+with obj_camera
 	healthshaketime = 30;
 var val = heat_calculate(10);
 global.collect += val;

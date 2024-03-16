@@ -1,10 +1,10 @@
-if (state == states.thrown)
+if state == states.thrown
 	exit;
-if (other.state == states.handstandjump)
+if other.state == states.handstandjump
 {
-	if (state == states.handstandjump)
+	if state == states.handstandjump
 	{
-		with (other)
+		with other
 		{
 			state = states.supergrab;
 			substate = states.grab;
@@ -21,7 +21,7 @@ if (other.state == states.handstandjump)
 	}
 	else
 	{
-		with (other)
+		with other
 		{
 			state = states.supergrab;
 			substate = states.grab;
@@ -37,7 +37,7 @@ if (other.state == states.handstandjump)
 		cooldown += 15;
 	}
 }
-else if (state == states.handstandjump)
+else if state == states.handstandjump
 {
 	state = states.supergrab;
 	substate = states.grab;

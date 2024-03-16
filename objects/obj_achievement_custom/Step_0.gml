@@ -1,5 +1,5 @@
 var a = active;
-if (step != -4)
+if step != -4
 	step();
-if (a != active)
+if a != active
 	ds_list_add(global.saveroom, id);

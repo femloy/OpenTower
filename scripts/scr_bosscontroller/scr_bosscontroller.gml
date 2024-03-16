@@ -1,6 +1,6 @@
 function scr_bosscontroller_particle_hp(sprite, image, x, y, hsp, spr_palette, paletteselect, palettetexture = noone)
 {
-	with (obj_bosscontroller)
+	with obj_bosscontroller
 	{
 		var q = 
 		{
@@ -21,7 +21,7 @@ function scr_bosscontroller_particle_hp(sprite, image, x, y, hsp, spr_palette, p
 }
 function scr_bosscontroller_particle_anim(sprite, image, x, y, imagespeed, spr_palette = spr_peppalette, paletteselect = 0)
 {
-	with (obj_bosscontroller)
+	with obj_bosscontroller
 	{
 		var q = 
 		{
@@ -40,7 +40,7 @@ function scr_bosscontroller_particle_anim(sprite, image, x, y, imagespeed, spr_p
 }
 function scr_bosscontroller_intro()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.actor;
 		image_blend = make_colour_hsv(0, 0, 255);
@@ -49,9 +49,9 @@ function scr_bosscontroller_intro()
 		flash = false;
 		x = roomstartx;
 	}
-	with (bossID)
+	with bossID
 	{
-		if (state != states.actor)
+		if state != states.actor
 			other.bossintrostate = state;
 		state = states.actor;
 		x = xstart;
@@ -60,14 +60,14 @@ function scr_bosscontroller_intro()
 		vsp = 0;
 	}
 	flamey -= 4;
-	if (introshake > 0)
+	if introshake > 0
 		introshake -= introshake_acc;
 	var a = 0.1;
-	if (arenabuffer > 0)
+	if arenabuffer > 0
 		arenabuffer--;
 	else
 	{
-		switch (arenastate)
+		switch arenastate
 		{
 			case 0:
 				var ptx = 0;
@@ -86,7 +86,7 @@ function scr_bosscontroller_intro()
 				break;
 			case 2:
 				whitefade += 0.02;
-				if (whitefade >= 2)
+				if whitefade >= 2
 				{
 					whitefade = 0;
 					arenastate++;
@@ -97,7 +97,7 @@ function scr_bosscontroller_intro()
 				break;
 			case 3:
 				state = states.normal;
-				with (obj_player)
+				with obj_player
 				{
 					state = states.actor;
 					hsp = 0;
@@ -105,12 +105,12 @@ function scr_bosscontroller_intro()
 					flash = false;
 					x = roomstartx;
 				}
-				with (bossID)
+				with bossID
 				{
 					skipintro = false;
 					state = other.bossintrostate;
 				}
-				with (obj_music)
+				with obj_music
 				{
 					if (!instance_exists(obj_noiseboss) || obj_noiseboss.sprite_index != spr_playerN_animatronic)
 						fmod_event_instance_play(music.event);
@@ -121,11 +121,11 @@ function scr_bosscontroller_intro()
 }
 function scr_bosscontroller_normal()
 {
-	if (boss_func != -4)
+	if boss_func != -4
 		boss_func();
-	if (boss_prevhp != boss_hp)
+	if boss_prevhp != boss_hp
 	{
-		if (boss_prevhp > boss_hp)
+		if boss_prevhp > boss_hp
 		{
 			boss_prevhp = boss_hp;
 			var pos = scr_bosscontroller_get_health_pos(boss_hp + 1, boss_rowmax, boss_columnmax, boss_maxhp, boss_hp_x, boss_hp_y, boss_xpad, boss_ypad, true);
@@ -134,15 +134,15 @@ function scr_bosscontroller_normal()
 				var bpal = boss_palette;
 				var bpalsel = pos[2];
 				var btex = -4;
-				if (boss_hpsprite == spr_bossfight_fakepephp)
+				if boss_hpsprite == spr_bossfight_fakepephp
 				{
 					bpal = spr_peppalette;
 					bpalsel = obj_player1.paletteselect;
-					if (!obj_player1.ispeppino)
+					if !obj_player1.ispeppino
 						bpalsel = 1;
 					btex = global.palettetexture;
 				}
-				else if (bossspr == spr_vsdoise)
+				else if bossspr == spr_vsdoise
 				{
 					bpal = spr_noiseboss_palette;
 					bpalsel = 1;
@@ -150,7 +150,7 @@ function scr_bosscontroller_normal()
 				scr_bosscontroller_particle_hp(boss_hpsprite, irandom(sprite_get_number(boss_hpsprite) - 1), pos[0], pos[1], -1, bpal, bpalsel, btex);
 			}
 		}
-		else if (boss_prevhpbuffer > 0)
+		else if boss_prevhpbuffer > 0
 			boss_prevhpbuffer--;
 		else
 		{
@@ -168,13 +168,13 @@ function scr_bosscontroller_normal()
 			bossdead = true;
 			notification_push(notifs.boss_dead, [room]);
 			alarm[0] = 480;
-			with (obj_player1)
+			with obj_player1
 			{
 				fmod_event_instance_play(global.snd_bossbeaten);
 				global.pistol = false;
 				pistolanim = -4;
 				sprite_index = spr_player_levelcomplete;
-				if (!ispeppino)
+				if !ispeppino
 					sprite_index = spr_playerN_levelcomplete;
 				image_speed = 0.35;
 				image_index = 0;
@@ -183,12 +183,12 @@ function scr_bosscontroller_normal()
 				vsp = 0;
 				movespeed = 0;
 			}
-			with (obj_hppickup)
+			with obj_hppickup
 			{
 				scr_collect_hat()
 				instance_destroy()
 			}
-			with (obj_music)
+			with obj_music
 				fmod_event_instance_stop(music.event, false);
 		}
 	}
@@ -200,11 +200,11 @@ function scr_bosscontroller_normal()
 }
 function scr_bosscontroller_victory()
 {
-	if (victory_buffer > 0)
+	if victory_buffer > 0
 		victory_buffer--;
 	else if (!instance_exists(obj_bosskeynoise))
 	{
-		if (player_hp > 0)
+		if player_hp > 0
 		{
 			victory_buffer = 25;
 			var pos = scr_bosscontroller_get_health_pos(player_hp, player_rowmax, player_columnmax, player_maxhp, player_hp_x, player_hp_y, player_xpad, player_ypad);
@@ -219,7 +219,7 @@ function scr_bosscontroller_victory()
 		}
 		else if (!instance_exists(obj_hpeffect) && !instance_exists(obj_endlevelfade))
 		{
-			with (obj_player1)
+			with obj_player1
 				scr_do_rank(false, true);
 		}
 	}
@@ -227,7 +227,7 @@ function scr_bosscontroller_victory()
 function scr_bosscontroller_pizzaface_p3_health()
 {
 	var e = elitehit;
-	while (e > 2)
+	while e > 2
 		e -= 2;
 	var eh = e + ((e - 1) * pizzahead_maxsubhp) + pizzahead_subhp;
 	return eh;
@@ -239,16 +239,16 @@ function scr_bosscontroller_draw_health(sprite, rows, columns, hp, maxhp, x, y, 
 	{
 		var c = c_white;
 		var zpad = _index * 3;
-		if (spr_palette != -4)
+		if spr_palette != -4
 		{
-			if (paletteselect == noone)
+			if paletteselect == noone
 				pal_swap_set(spr_palette, _index, false);
 			else
 				pal_swap_set(spr_palette, paletteselect, false);
 		}
 		var _x = 0;
 		var _y = 0;
-		repeat (rows * columns)
+		repeat rows * columns
 		{
 			if (_index == 0 && hp < (rows * columns) && hpp >= hp)
 				c = 0;
@@ -256,12 +256,12 @@ function scr_bosscontroller_draw_health(sprite, rows, columns, hp, maxhp, x, y, 
 			{
 				var xf = (x + (_x * xpad)) - zpad;
 				var yf = (y + (_y * ypad)) - zpad;
-				if (palettetexture != -4)
+				if palettetexture != -4
 					pattern_set(global.Base_Pattern_Color, sprite, index, 1, 1, palettetexture);
 				draw_sprite_ext(sprite, index, xf, yf, 1, 1, 0, c, alpha);
 			}
 			_x++;
-			if (_x >= columns)
+			if _x >= columns
 			{
 				_x = 0;
 				_y++;
@@ -279,13 +279,13 @@ function scr_bosscontroller_get_health_pos(hp, rows, columns, maxhp, x, y, xpad,
 		var zpad = _index * 3;
 		var _x = 0;
 		var _y = 0;
-		repeat (rows * columns)
+		repeat rows * columns
 		{
 			hpp++;
-			if (hpp >= hp)
+			if hpp >= hp
 				return [(x + (_x * xpad)) - zpad, (y + (_y * ypad)) - zpad, _index];
 			_x++;
-			if (_x >= columns)
+			if _x >= columns
 			{
 				_x = 0;
 				_y++;
@@ -296,7 +296,7 @@ function scr_bosscontroller_get_health_pos(hp, rows, columns, maxhp, x, y, xpad,
 }
 function scr_collect_hat(_persistent = false)
 {
-	with (obj_bosscontroller)
+	with obj_bosscontroller
 	{
 		if ((player_hp + instance_number(obj_hpeffect)) < player_maxhp)
 		{
@@ -313,10 +313,10 @@ function scr_collect_hat(_persistent = false)
 		}
 		else
 		{
-			with (other)
+			with other
 			{
 				scr_sound_multiple("event:/sfx/misc/collect", x, y)
-				with (obj_camera)
+				with obj_camera
 					healthshaketime = 30
 				var val = 50
 				fmod_event_one_shot("event:/sfx/misc/cardcollect")

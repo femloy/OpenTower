@@ -8,9 +8,9 @@ function scr_player_crouchslide()
 		hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
 	}
 	move = key_left + key_right;
-	if (movespeed >= 0 && grounded)
+	if movespeed >= 0 && grounded
 		movespeed -= 0.2;
-	if (!key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0)
+	if !key_jump2 && jumpstop == 0 && vsp < 0.5 && stompAnim == 0
 	{
 		vsp /= 20;
 		jumpstop = true;
@@ -32,7 +32,7 @@ function scr_player_crouchslide()
 		sprite_index = spr_crouchslip;
 		jumpstop = false;
 	}
-	if (sprite_index == spr_player_jumpdive1 && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_player_jumpdive1 && floor(image_index) == image_number - 1)
 		sprite_index = spr_player_jumpdive2;
 	mask_index = spr_crouchmask;
 	if ((grounded && key_attack) && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))

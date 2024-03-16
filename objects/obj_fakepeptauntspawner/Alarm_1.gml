@@ -1,6 +1,6 @@
-with (obj_fakepepprojectile)
+with obj_fakepepprojectile
 {
-	if (spawnerID == other.id)
+	if spawnerID == other.id
 	{
 		create_particle(x, y, particle.genericpoofeffect);
 		instance_destroy();

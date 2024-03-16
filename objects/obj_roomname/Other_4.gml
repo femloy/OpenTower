@@ -1,4 +1,4 @@
-if (room != rank_room && room != timesuproom && room != Mainmenu)
+if room != rank_room && room != timesuproom && room != Mainmenu
 {
 	msg = global.roommessage;
 	showtext = true;

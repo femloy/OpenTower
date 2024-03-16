@@ -1,4 +1,4 @@
-if (levelselect == 1)
+if levelselect == 1
 {
 	draw_set_font(global.bigfont);
 	draw_set_halign(fa_center);

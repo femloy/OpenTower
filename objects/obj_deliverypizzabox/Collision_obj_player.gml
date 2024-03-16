@@ -1,4 +1,4 @@
-if (other.ispeppino && !global.swapmode)
+if other.ispeppino && !global.swapmode
 {
 	instance_destroy();
 	var follower = instance_create(x, y, obj_deliveryfollower);

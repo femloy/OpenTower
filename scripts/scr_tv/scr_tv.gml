@@ -1,6 +1,6 @@
 function tv_set_idle()
 {
-	with (obj_tv)
+	with obj_tv
 	{
 		state = states.normal
 		sprite_index = spr_tv_idle;
@@ -8,7 +8,7 @@ function tv_set_idle()
 }
 function tv_reset()
 {
-	with (obj_tv)
+	with obj_tv
 	{
 		state = states.normal;
 		sprite_index = spr_tv_idle;
@@ -21,11 +21,11 @@ function tv_create_prompt(text, type, sprite, textspeed)
 }
 function tv_push_prompt(text, type, sprite, textspeed)
 {
-	with (obj_tv)
+	with obj_tv
 	{
 		var b = [text, type, sprite, textspeed];
 		var play = false;
-		switch (type)
+		switch type
 		{
 			case tvprompt.normal:
 				play = true;
@@ -37,16 +37,16 @@ function tv_push_prompt(text, type, sprite, textspeed)
 				for (var i = 0; i < ds_list_size(tvprompts_list); i++)
 				{
 					var b2 = ds_list_find_value(tvprompts_list, i);
-					if (b2[1] == tvprompt.transfo)
+					if b2[1] == tvprompt.transfo
 					{
-						if (i == 0)
+						if i == 0
 							play = true;
 						ds_list_insert(tvprompts_list, i, b);
 						placed = true;
 						break;
 					}
 				}
-				if (!placed)
+				if !placed
 					ds_list_add(tvprompts_list, b);
 				break;
 			
@@ -54,7 +54,7 @@ function tv_push_prompt(text, type, sprite, textspeed)
 				ds_list_add(tvprompts_list, b);
 				break;
 		}
-		if (play)
+		if play
 			state = states.normal;
 	}
 }
@@ -62,7 +62,7 @@ function tv_push_prompt_array(prompt_array)
 {
 	for (var i = 0; i < array_length(prompt_array); i++)
 	{
-		with (obj_tv)
+		with obj_tv
 		{
 			var b = prompt_array[i];
 			tv_push_prompt(b[0], b[1], b[2], b[3]);
@@ -71,14 +71,14 @@ function tv_push_prompt_array(prompt_array)
 }
 function tv_push_prompt_once(prompt_array, prompt_entry)
 {
-	with (obj_tv)
+	with obj_tv
 	{
-		if (special_prompts == noone)
+		if special_prompts == noone
 			return false;
 		var b = ds_map_find_value(special_prompts, prompt_entry);
 		if (is_undefined(b))
 			return false;
-		if (b != true)
+		if b != true
 		{
 			tv_push_prompt(prompt_array[0], prompt_array[1], prompt_array[2], prompt_array[3]);
 			ds_map_set(special_prompts, prompt_entry, 1);
@@ -100,16 +100,16 @@ function tv_get_palette()
 		exit;
 	
 	spr_palette = obj_player1.spr_palette;
-	if (obj_player1.isgustavo)
+	if obj_player1.isgustavo
 		spr_palette = spr_ratmountpalette;
 	paletteselect = obj_player1.paletteselect;
 	patterntexture = global.palettetexture;
 }
 function tv_do_expression(sprite, reset_pal = false, force_pep = false)
 {
-	with (obj_tv)
+	with obj_tv
 	{
-		if (expressionsprite != sprite && bubblespr == noone)
+		if expressionsprite != sprite && bubblespr == noone
 		{
 			state = states.tv_whitenoise;
 			expressionsprite = sprite;
@@ -157,10 +157,10 @@ function tv_do_expression(sprite, reset_pal = false, force_pep = false)
 			if (!force_pep && instance_exists(obj_player1) && !obj_player1.ispeppino)
 			{
 				var n = asset_get_index(sprite_get_name(sprite) + "N");
-				if (n > -1)
+				if n > -1
 					expressionsprite = n;
 			}
-			if (reset_pal)
+			if reset_pal
 				reset_palette = true;
 			else
 				reset_palette = false;
@@ -175,7 +175,7 @@ function scr_tv_get_transfo_sprite()
 	var _spr = noone;
 	if (instance_exists(obj_bucketfollower))
 		_spr = spr_tv_bucket;
-	switch (_state)
+	switch _state
 	{
 		case states.knightpep:
 		case states.knightpepattack:
@@ -195,7 +195,7 @@ function scr_tv_get_transfo_sprite()
 		case states.tumble:
 			if (obj_player1.sprite_index == obj_player1.spr_tumble || obj_player1.sprite_index == obj_player1.spr_tumblestart || obj_player1.sprite_index == obj_player1.spr_tumbleend)
 				_spr = spr_tv_tumble;
-			else if (obj_player1.shotgunAnim)
+			else if obj_player1.shotgunAnim
 				_spr = spr_tv_shotgun;
 			break;
 		case states.firemouth:
@@ -206,7 +206,7 @@ function scr_tv_get_transfo_sprite()
 			_spr = spr_tv_ghost;
 			break;
 		case states.stunned:
-			if (obj_player1.sprite_index == obj_player1.spr_squished)
+			if obj_player1.sprite_index == obj_player1.spr_squished
 				_spr = spr_tv_squished;
 			break;
 		case states.normal:
@@ -217,22 +217,22 @@ function scr_tv_get_transfo_sprite()
 		case states.mach3:
 		case states.machslide:
 		case states.bump:
-			with (obj_player1)
+			with obj_player1
 			{
-				if (shotgunAnim)
+				if shotgunAnim
 					_spr = spr_tv_shotgun;
-				else if (global.mort)
+				else if global.mort
 					_spr = spr_tv_mort;
 			}
 			break;
 		case states.freefallprep:
 		case states.freefall:
 		case states.freefallland:
-			if (obj_player1.shotgunAnim)
+			if obj_player1.shotgunAnim
 				_spr = spr_tv_shotgun;
 			break;
 		case states.pistol:
-			if (global.mort)
+			if global.mort
 				_spr = spr_tv_mort;
 			break;
 		case states.shotgun:
@@ -285,15 +285,15 @@ function scr_tv_get_transfo_sprite()
 		case states.climbwall:
 		case states.machroll:
 		case states.grind:
-			if (obj_player1.skateboarding)
+			if obj_player1.skateboarding
 				_spr = spr_tv_clown;
-			else if (obj_player1.shotgunAnim)
+			else if obj_player1.shotgunAnim
 				_spr = spr_tv_shotgun;
 			break;
 	}
-	with (obj_player1)
+	with obj_player1
 	{
-		if (state == states.actor && sprite_index == spr_tumble)
+		if state == states.actor && sprite_index == spr_tumble
 			_spr = spr_tv_tumble;
 	}
 	return _spr;

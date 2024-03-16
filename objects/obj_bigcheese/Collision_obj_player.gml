@@ -1,4 +1,4 @@
-if (state != states.throwing)
+if state != states.throwing
 {
 	pizzaball = false;
 	playerid = other.id;

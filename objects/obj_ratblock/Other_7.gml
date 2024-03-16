@@ -1,4 +1,4 @@
-switch (sprite_index)
+switch sprite_index
 {
 	case spr_ratblock1_bump:
 		sprite_index = spr_ratblock;

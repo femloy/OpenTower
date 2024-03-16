@@ -150,11 +150,11 @@ if !steam_utils_is_steam_running_on_steam_deck()
 
 add_option_toggle(video_menu, 3, "option_vsync", function(val)
 {
-    ini_open_from_string(obj_savesystem.ini_str_options);
-    ini_write_real("Option", "vsync", val);
-    obj_savesystem.ini_str_options = ini_close();
-    global.option_vsync = val;
-    screen_apply_vsync();
+	ini_open_from_string(obj_savesystem.ini_str_options);
+	ini_write_real("Option", "vsync", val);
+	obj_savesystem.ini_str_options = ini_close();
+	global.option_vsync = val;
+	screen_apply_vsync();
 }).value = global.option_vsync;
 
 add_option_toggle(video_menu, 4, "option_texfilter", function(val)
@@ -181,18 +181,18 @@ array_push(menus, video_menu);
 
 var window_menu = create_menu_fixed(menus.window, anchor.left, 150, 40, menus.video);
 add_option_press(window_menu, 0, "option_back", function() {
-    menu_goto(menus.video);
+	menu_goto(menus.video);
 });
 add_option_press(window_menu, 1, "option_windowed", function() {
-    screen_option_apply_fullscreen(0);
+	screen_option_apply_fullscreen(0);
 	screen_apply_size_delayed();
 });
 add_option_press(window_menu, 2, "option_fullscreen", function() {
-    screen_option_apply_fullscreen(1);
+	screen_option_apply_fullscreen(1);
 	screen_apply_size_delayed();
 });
 add_option_press(window_menu, 3, "option_borderless", function() {
-    screen_option_apply_fullscreen(2);
+	screen_option_apply_fullscreen(2);
 	screen_apply_size_delayed();
 });
 array_push(menus, window_menu);
@@ -203,27 +203,27 @@ array_push(menus, window_menu);
 var resolution_menu = create_menu_fixed(menus.resolution, anchor.left, 150, 40, menus.video);
 add_option_press(resolution_menu, 0, "option_back", function()
 {
-    menu_goto(menus.video)
+	menu_goto(menus.video)
 });
 
 for (i = 0; i < array_length(global.resolutions[obj_screensizer.aspect_ratio]); i++)
 {
-    b = global.resolutions[obj_screensizer.aspect_ratio][i];
-    add_option_press(resolution_menu, i + 1, concat(b[0], "X", b[1]), function()
-    {
-        var opt = global.option_resolution;
-        global.option_resolution = menus[menu].options[optionselected].option_id - 1;
-        screen_apply_size();
+	b = global.resolutions[obj_screensizer.aspect_ratio][i];
+	add_option_press(resolution_menu, i + 1, concat(b[0], "X", b[1]), function()
+	{
+		var opt = global.option_resolution;
+		global.option_resolution = menus[menu].options[optionselected].option_id - 1;
+		screen_apply_size();
 		
-        with instance_create(0, 0, obj_screenconfirm)
-        {
-            savedoption = opt;
-            section = "Option";
-            key = "resolution";
-            varname = "option_resolution";
-            depth = obj_option.depth - 1;
-        }
-    }).localization = false;
+		with instance_create(0, 0, obj_screenconfirm)
+		{
+			savedoption = opt;
+			section = "Option";
+			key = "resolution";
+			varname = "option_resolution";
+			depth = obj_option.depth - 1;
+		}
+	}).localization = false;
 }
 array_push(menus, resolution_menu)
 
@@ -273,7 +273,7 @@ var lang_option = add_option_multiple(game_menu, 2, "option_lang", lang, functio
 var r = 0;
 for (i = 0; i < array_length(lang); i++)
 {
-	if (lang[i].value == global.option_lang)
+	if lang[i].value == global.option_lang
 	{
 		r = i;
 		break;
@@ -328,7 +328,7 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 	ini_section_delete("InputConfig");
 	scr_initinput(false)
 	obj_savesystem.ini_str_options = ini_close()
-	with (obj_option)
+	with obj_option
 	{
 		for (var i = 0; i < array_length(menus); i++)
 		{
@@ -338,25 +338,25 @@ add_option_press(controls_menu, 3, "option_reset_config", function()
 				for (var j = 0; j < array_length(b.options); j++)
 				{
 					var q = b.options[j]
-					if (q.name == "option_deadzone")
+					if q.name == "option_deadzone"
 						q.value = global.input_controller_deadzone * 100;
-					else if (q.name == "option_deadzone_h")
+					else if q.name == "option_deadzone_h"
 						q.value = global.input_controller_deadzone_horizontal * 100;
-					else if (q.name == "option_deadzone_v")
+					else if q.name == "option_deadzone_v"
 						q.value = global.input_controller_deadzone_vertical * 100;
-					else if (q.name == "option_deadzone_press")
+					else if q.name == "option_deadzone_press"
 						q.value = global.input_controller_deadzone_press * 100;
-					else if (q.name == "option_deadzone_superjump")
+					else if q.name == "option_deadzone_superjump"
 						q.value = global.gamepad_deadzone_superjump * 100;
-					else if (q.name == "option_deadzone_crouch")
-                        q.value = global.gamepad_deadzone_crouch * 100;
-					else if (q.name == "option_controller_superjump")
+					else if q.name == "option_deadzone_crouch"
+						q.value = global.gamepad_deadzone_crouch * 100;
+					else if q.name == "option_controller_superjump"
 						q.value = global.gamepad_superjump;
-					else if (q.name == "option_controller_groundpound")
+					else if q.name == "option_controller_groundpound"
 						q.value = global.gamepad_groundpound;
-					else if (q.name == "option_keyboard_superjump")
+					else if q.name == "option_keyboard_superjump"
 						q.value = global.keyboard_superjump;
-					else if (q.name == "option_keyboard_groundpound")
+					else if q.name == "option_keyboard_groundpound"
 						q.value = global.keyboard_groundpound;
 				}
 			}
@@ -444,7 +444,7 @@ add_option_press(deadzones_menu, 0, "option_back", function() {
 });
 add_option_slide(deadzones_menu, 1, "option_deadzone", function(val)
 {
-	if (val > 90)
+	if val > 90
 		val = 90;
 	global.input_controller_deadzone = val / 100;
 	trace(val / 100);
@@ -462,7 +462,7 @@ add_option_slide(deadzones_menu, 2, "option_deadzone_h", function(val)
 
 add_option_slide(deadzones_menu, 3, "option_deadzone_v", function(val)
 {
-	if (val > 90)
+	if val > 90
 		val = 90;
 	global.input_controller_deadzone_vertical = val / 100;
 	trace(val / 100);
@@ -471,7 +471,7 @@ add_option_slide(deadzones_menu, 3, "option_deadzone_v", function(val)
 
 add_option_slide(deadzones_menu, 4, "option_deadzone_press", function(val)
 {
-	if (val > 90)
+	if val > 90
 		val = 90;
 	global.input_controller_deadzone_press = val / 100;
 	trace(val / 100);
@@ -487,8 +487,8 @@ add_option_slide(deadzones_menu, 5, "option_deadzone_superjump", function(val)
 
 add_option_slide(deadzones_menu, 5, "option_deadzone_crouch", function(val)
 {
-    global.gamepad_deadzone_crouch = val / 100;
-    set_controller_config();
+	global.gamepad_deadzone_crouch = val / 100;
+	set_controller_config();
 	trace(val / 100);
 }).value = (global.gamepad_deadzone_crouch * 100);
 

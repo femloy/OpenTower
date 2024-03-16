@@ -41,7 +41,7 @@ if (floor(image_index) == 2)
 	image_speed = 0;
 if (place_meeting(x, y, obj_player1) && !instance_exists(obj_jumpscare) && floor(obj_player1.image_index) == (obj_player1.image_number - 1) && obj_player1.state == states.victory)
 {
-	with (obj_player1)
+	with obj_player1
 	{
 		obj_player1.targetDoor = other.targetDoor;
 		obj_player1.targetRoom = other.targetRoom;

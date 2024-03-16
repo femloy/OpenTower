@@ -1,9 +1,9 @@
 ventilator_index += 0.35;
-if (ventilator_index > 4)
+if ventilator_index > 4
 	ventilator_index = frac(ventilator_index);
 
 draw = bbox_in_camera(view_camera[0], 32);
-if (draw)
+if draw
 {
 	for (var i = 0; i < array_length(leaves); i++)
 	{

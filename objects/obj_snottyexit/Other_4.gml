@@ -4,7 +4,7 @@ if (ini_read_real("Game", "snotty", false))
 {
 	ds_list_add(global.baddieroom, id);
 	instance_destroy();
-	if (global.panic)
+	if global.panic
 		instance_create(x, y, obj_snotty);
 }
 ini_close();

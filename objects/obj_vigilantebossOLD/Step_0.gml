@@ -1,25 +1,25 @@
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (hp <= 0 && state != states.arenaround && state != states.fistmatch)
+if hp <= 0 && state != states.arenaround && state != states.fistmatch
 {
-	if (!thrown && !destroyable)
+	if !thrown && !destroyable
 		boss_destroy(lastplayerid);
 }
 if ((state == states.mach1 || state == states.machslide || state == states.crouchslide || state == states.uppunch || state == states.punch || state == states.millionpunch || state == states.handstandjump) && alarm[0] <= 0)
 	alarm[0] = 6;
-if (chooseparry_buffer > 0)
+if chooseparry_buffer > 0
 	chooseparry_buffer--;
-if (important && honor && nexthonor && phase > 3 && state != states.superattack)
+if important && honor && nexthonor && phase > 3 && state != states.superattack
 {
 	var ch = false;
-	with (obj_player)
+	with obj_player
 	{
-		if (state == states.chainsawbump)
+		if state == states.chainsawbump
 			ch = true;
 	}
 	if (instance_exists(obj_shotgunbullet) || ch)
 	{
 		nexthonor = false;
-		with (obj_tv)
+		with obj_tv
 		{
 			showtext = true;
 			message = "NO HONOR";
@@ -27,7 +27,7 @@ if (important && honor && nexthonor && phase > 3 && state != states.superattack)
 		}
 	}
 }
-switch (phase)
+switch phase
 {
 	case 4:
 	case 5:
@@ -37,7 +37,7 @@ switch (phase)
 	default:
 		normal_func = boss_vigilante_normal;
 }
-switch (state)
+switch state
 {
 	case states.arenaround:
 		grav = 0.5;
@@ -159,13 +159,13 @@ switch (state)
 }
 if (hitstate == states.superattack || state == states.superattack)
 {
-	with (lastplayerid)
+	with lastplayerid
 	{
-		if (state != states.hit && state != states.thrown)
+		if state != states.hit && state != states.thrown
 		{
-			if (sprite_index == spr_player_pistolshot && image_index > (image_number - 1))
+			if (sprite_index == spr_player_pistolshot && image_index > image_number - 1)
 				sprite_index = spr_player_pistolidle;
-			if (sprite_index != spr_player_pistolshot && sprite_index != spr_idle && other.state == states.superattack && other.duel_buffer > 0)
+			if sprite_index != spr_player_pistolshot && sprite_index != spr_idle && other.state == states.superattack && other.duel_buffer > 0
 				sprite_index = spr_idle;
 		}
 	}

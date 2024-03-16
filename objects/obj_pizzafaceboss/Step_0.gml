@@ -1,7 +1,7 @@
 targetplayer = obj_player1.id;
 wastedhits = 8 - elitehit;
 destroyable = false;
-switch (state)
+switch state
 {
 	case states.arenaintro:
 		scr_pizzaface_arenaintro();
@@ -37,13 +37,13 @@ switch (state)
 		scr_enemy_staggered();
 		break;
 }
-if (superslambuffer > 0)
+if superslambuffer > 0
 	superslambuffer--;
-if (state != states.walk)
+if state != states.walk
 	on_y = true;
-if (prevhp != elitehit)
+if prevhp != elitehit
 {
-	if (elitehit < prevhp)
+	if elitehit < prevhp
 	{
 		baddie_range++;
 		cooldown = 0;
@@ -55,14 +55,14 @@ if (prevhp != elitehit)
 		on_y = false;
 		alarm[6] = 5;
 		global.playerhit++;
-		if (global.playerhit >= 3)
+		if global.playerhit >= 3
 		{
 			global.playerhit = 0;
 			instance_create(obj_player1.x, -15, obj_hppickup);
 		}
-		if (elitehit <= 0)
+		if elitehit <= 0
 		{
-			with (obj_music)
+			with obj_music
 				fmod_event_instance_set_parameter(music.event, "state", 1, true);
 			instance_destroy(obj_forkhitbox);
 			instance_destroy(obj_spitcheesespike);
@@ -77,7 +77,7 @@ if (prevhp != elitehit)
 			image_alpha = 1;
 			with (instance_create(0, 0, obj_pizzahead_whitefade))
 				deccel = 0.1;
-			with (obj_player1)
+			with obj_player1
 			{
 				hsp = 0;
 				vsp = 0;
@@ -85,7 +85,7 @@ if (prevhp != elitehit)
 				movespeed = 0;
 				image_index = 0;
 				sprite_index = spr_player_gnomecutscene1;
-				if (!ispeppino)
+				if !ispeppino
 					sprite_index = spr_noisebossintro2;
 				image_speed = 0.35;
 				state = states.actor;
@@ -95,20 +95,20 @@ if (prevhp != elitehit)
 			x = room_width / 2;
 			y = obj_player1.y - 100;
 			sprite_index = spr_pizzahead_intro1;
-			with (obj_baddie)
+			with obj_baddie
 			{
-				if (object_index != obj_pizzafaceboss && object_index != obj_pizzafaceboss_p2)
+				if object_index != obj_pizzafaceboss && object_index != obj_pizzafaceboss_p2
 					instance_destroy();
 			}
 		}
 	}
 	prevhp = elitehit;
 }
-if (state == states.stun)
+if state == states.stun
 {
-	if (thrown)
+	if thrown
 		savedthrown = true;
-	if (grounded && vsp > 0 && savedthrown)
+	if grounded && vsp > 0 && savedthrown
 	{
 		stunned = 1;
 		idle_timer = 1;
@@ -117,7 +117,7 @@ if (state == states.stun)
 else
 	savedthrown = false;
 
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -125,7 +125,7 @@ if (state == states.stun && stunned > 100 && birdcreated == 0)
 }
 
 var _inv = (state == states.stun && savedthrown == thrown && !savedthrown) || (!obj_player1.ispeppino && state == states.pizzaface_ram && substate == states.land);
-if (_inv && elitehit > 1)
+if _inv && elitehit > 1
 	invincible = false;
 else
 	invincible = true;
@@ -137,15 +137,15 @@ else if (invincible && (state != states.stun || (savedthrown != thrown && savedt
 
 if ((state == states.pizzaface_ram && substate != states.transition) && alarm[4] < 0)
 	alarm[4] = 6;
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
 
 depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

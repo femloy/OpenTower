@@ -15,7 +15,7 @@ function scr_player_freefallland()
 	alarm[4] = 14;
 	vsp = 0;
 	hsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		facehurt = true;
 		sprite_index = spr_facehurtup;

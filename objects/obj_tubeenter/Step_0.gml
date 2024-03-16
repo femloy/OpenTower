@@ -1,16 +1,16 @@
-if (state == states.tube)
+if state == states.tube
 {
 	if (floor(image_index) >= 11 && !shot)
 	{
 		shot = true;
-		with (playerid)
+		with playerid
 		{
 			state = states.tube;
 			tube_id = other.id;
-			if (other.stored_spd == 0)
+			if other.stored_spd == 0
 				other.stored_spd = 1;
 			var ms = other.movespeed;
-			if (!ispeppino)
+			if !ispeppino
 				ms += 5;
 			hsp = other.hsp * ms;
 			vsp = other.vsp * ms;
@@ -18,19 +18,19 @@ if (state == states.tube)
 			stored_spd = 0;
 		}
 	}
-	else if (!shot)
+	else if !shot
 	{
-		with (playerid)
+		with playerid
 		{
 			hsp = 0;
 			vsp = 0;
 		}
 	}
-	with (playerid)
+	with playerid
 	{
 		if (!place_meeting(x, y, other.id))
 		{
-			with (other)
+			with other
 			{
 				playerid = -1;
 				state = states.normal;

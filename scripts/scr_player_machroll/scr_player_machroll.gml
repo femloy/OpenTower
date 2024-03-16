@@ -10,7 +10,7 @@ function scr_player_machroll()
 	mach2 = 100;
 	machslideAnim = true;
 	move = key_right + key_left;
-	switch (character)
+	switch character
 	{
 		case "P":
 			if (scr_solid(x + xscale, y) && (!place_meeting(x + sign(hsp), y, obj_slope) || scr_solid_slope(x + sign(hsp), y)) && !place_meeting(x + sign(hsp), y, obj_destructibles))
@@ -29,7 +29,7 @@ function scr_player_machroll()
 				if (scr_solid(x, y))
 				{
 					var ty = try_solid(0, 1, obj_solid, 32);
-					if (ty != -1)
+					if ty != -1
 						y += ty;
 				}
 			}
@@ -41,9 +41,9 @@ function scr_player_machroll()
 					other.dashcloudid = id;
 				}
 			}
-			if (grounded && sprite_index != spr_playerV_divekickstart)
+			if grounded && sprite_index != spr_playerV_divekickstart
 				sprite_index = !skateboarding ? spr_machroll : spr_clowncrouch;
-			else if (sprite_index != spr_dive && !skateboarding)
+			else if sprite_index != spr_dive && !skateboarding
 			{
 				sprite_index = spr_dive;
 				vsp = 10;
@@ -54,26 +54,26 @@ function scr_player_machroll()
 			if (!key_down && !scr_solid(x + 27, y - 32) && !scr_solid(x - 27, y - 32) && !scr_solid(x, y - 32) && !scr_solid(x, y - 16))
 			{
 				image_index = 0;
-				if (grounded)
+				if grounded
 					sprite_index = spr_rollgetup;
 				if (movespeed < 12 || skateboarding == 1)
 				{
-					if (!grounded)
+					if !grounded
 						sprite_index = spr_mach;
 					state = states.mach2;
 				}
 				else
 				{
-					if (!grounded)
+					if !grounded
 						sprite_index = spr_mach4;
 					state = states.mach3;
 				}
 			}
-			if (skateboarding && movespeed < 12)
+			if skateboarding && movespeed < 12
 				movespeed += 0.5;
 			break;
 		case "V":
-			if (sprite_index == spr_playerV_divekickstart && floor(image_index) == (image_number - 1))
+			if (sprite_index == spr_playerV_divekickstart && floor(image_index) == image_number - 1)
 				sprite_index = spr_playerV_divekick;
 			if ((scr_solid(x + 1, y) && xscale == 1) && !place_meeting(x + sign(hsp), y, obj_slope))
 			{
@@ -109,9 +109,9 @@ function scr_player_machroll()
 					other.dashcloudid = id;
 				}
 			}
-			if (grounded && sprite_index != spr_playerV_divekickstart)
+			if grounded && sprite_index != spr_playerV_divekickstart
 				sprite_index = spr_machroll;
-			else if (sprite_index != spr_dive)
+			else if sprite_index != spr_dive
 			{
 				sprite_index = spr_dive;
 				vsp = 10;

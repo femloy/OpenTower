@@ -9,11 +9,11 @@ function scr_player_fireass()
 		image_xscale *= -1;
 	if (sprite_index == spr_fireass || sprite_index == spr_scaredjump1 || sprite_index == spr_scaredjump2)
 	{
-		if (floor(image_index) == (image_number - 1) && sprite_index == spr_fireass)
+		if (floor(image_index) == image_number - 1 && sprite_index == spr_fireass)
 			create_particle(x, y + 25, particle.shotgunimpact, 0);
-		if (sprite_index == spr_fireass)
+		if sprite_index == spr_fireass
 		{
-			if (fireasseffect > 0)
+			if fireasseffect > 0
 				fireasseffect--;
 			else
 			{
@@ -23,17 +23,17 @@ function scr_player_fireass()
 		}
 		move = key_left + key_right;
 		hsp = movespeed;
-		if (vsp > 0)
+		if vsp > 0
 			fireasslock = false;
-		if (fireasslock == 0)
+		if fireasslock == 0
 		{
-			if (move != 0)
+			if move != 0
 			{
-				if (move == xscale)
+				if move == xscale
 					movespeed = Approach(movespeed, xscale * 8, 0.5);
 				else
 					movespeed = Approach(movespeed, 0, 0.5);
-				if (movespeed <= 0)
+				if movespeed <= 0
 					xscale = move;
 			}
 			else
@@ -44,7 +44,7 @@ function scr_player_fireass()
 		else if (grounded && vsp > 0 && !place_meeting(x, y + 1, obj_ratblock))
 		{
 			movespeed = 6;
-			if (sprite_index == spr_fireass)
+			if sprite_index == spr_fireass
 				sprite_index = spr_fireassground;
 			else
 			{
@@ -60,14 +60,14 @@ function scr_player_fireass()
 			image_index = 0;
 		}
 	}
-	if (floor(image_index) == (image_number - 1) && sprite_index == spr_scaredjump1)
+	if (floor(image_index) == image_number - 1 && sprite_index == spr_scaredjump1)
 		sprite_index = spr_scaredjump2;
 	if (sprite_index == spr_fireassground || sprite_index == spr_bombpepend)
 	{
 		hsp = xscale * movespeed;
-		if (movespeed > 0)
+		if movespeed > 0
 			movespeed -= 0.25;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			movespeed = 0;
 			landAnim = false;
@@ -79,9 +79,9 @@ function scr_player_fireass()
 			image_index = 0;
 		}
 	}
-	if (sprite_index == spr_fireassend)
+	if sprite_index == spr_fireassend
 	{
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			movespeed = 0;
 			landAnim = false;

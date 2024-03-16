@@ -1,2 +1,2 @@
-if (!grabbed && !thrown)
+if !grabbed && !thrown
 	instance_destroy();

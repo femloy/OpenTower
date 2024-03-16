@@ -5,7 +5,7 @@ function scr_player_grind()
 	machhitAnim = false;
 	crouchslideAnim = true;
 	hsp = xscale * movespeed;
-	if (movespeed < 10)
+	if movespeed < 10
 		movespeed = Approach(movespeed, 10, 0.5);
 	if (!place_meeting(x, y + 18, obj_grindrail) && !place_meeting(x, y + 18, obj_grindrailslope))
 	{
@@ -22,7 +22,7 @@ function scr_player_grind()
 	}
 	if (place_meeting(x + xscale, y, obj_solid) && !place_meeting(x, y + 18, obj_grindrailslope) && !place_meeting(x, y + 1, obj_slope))
 	{
-		if (ispeppino)
+		if ispeppino
 		{
 			state = states.bump;
 			hsp = -xscale * 5;
@@ -31,25 +31,25 @@ function scr_player_grind()
 		else
 			xscale *= -1;
 	}
-	if (!ispeppino && key_down)
+	if !ispeppino && key_down
 	{
 		ignore_grind = true;
 		state = states.mach2;
 		sprite_index = spr_playerN_grindcancel;
 		image_index = 0;
 		vsp = 10;
-		if (movespeed < 6)
+		if movespeed < 6
 			movespeed = 6;
 		exit;
 	}
-	if (input_buffer_jump > 0)
+	if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		with (instance_create(x, y, obj_jumpdust))
 			image_xscale = other.xscale;
 		vsp = -11;
 		jumpstop = false;
-		if (skateboarding)
+		if skateboarding
 		{
 			sprite_index = spr_clownjump;
 			image_index = 0;

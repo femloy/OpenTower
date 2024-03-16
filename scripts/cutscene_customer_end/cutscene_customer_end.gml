@@ -1,6 +1,6 @@
 function cutscene_customer_check(gnome_id, player, gnome)
 {
-	with (obj_gnome_checklist)
+	with obj_gnome_checklist
 		gnome_check[gnome_id] = true;
 	global.pizzasdelivered++;
 	if (instance_exists(obj_gnomecustomerblock))
@@ -16,7 +16,7 @@ function cutscene_customer_check(gnome_id, player, gnome)
 }
 function cutscene_customer_end(gnome_id)
 {
-	with (obj_customeractor)
+	with obj_customeractor
 		happy = true;
 	cutscene_end_action();
 }

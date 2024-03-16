@@ -1,4 +1,4 @@
-if (cooldown == 0)
+if cooldown == 0
 {
 	notification_push(notifs.cow_kick, [room]);
 	if (ds_list_find_index(global.saveroom, id) == -1)
@@ -12,7 +12,7 @@ if (cooldown == 0)
 	fmod_event_one_shot_3d("event:/sfx/misc/cow", x, y);
 	sprite_index = spr_cowkick;
 	image_index = 0;
-	with (other)
+	with other
 	{
 		other.cooldown = 100;
 		sprite_index = spr_rockethitwall;

@@ -1,8 +1,8 @@
-with (other)
+with other
 {
-	if (other.hurtplayer == 0)
+	if other.hurtplayer == 0
 	{
-		if (key_jump2)
+		if key_jump2
 		{
 			vsp = -20;
 			if (state == states.normal || state == states.jump || hsp == 0)

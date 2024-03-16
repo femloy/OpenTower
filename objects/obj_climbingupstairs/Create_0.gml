@@ -14,7 +14,7 @@ peppino_index = 0;
 peppino_x = SCREEN_WIDTH / 2;
 peppino_xstart = peppino_x;
 peppino_y = 426;
-with (obj_player)
+with obj_player
 {
 	state = states.titlescreen;
 	x = -SCREEN_WIDTH - 100;

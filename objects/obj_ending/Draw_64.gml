@@ -1,4 +1,4 @@
-if (state == 3)
+if state == 3
 {
 	draw_set_font(lang_get_font("creditsfont"));
 	draw_set_halign(fa_left);

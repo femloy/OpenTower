@@ -1,4 +1,4 @@
-if (state != states.policetaxi)
+if state != states.policetaxi
 {
 	var xx = obj_player1.x;
 	var yy = obj_player1.y;

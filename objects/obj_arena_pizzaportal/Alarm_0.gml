@@ -1,4 +1,4 @@
-if (stored_id != -4)
+if stored_id != -4
 {
 	instance_activate_object(stored_id);
 	if (instance_exists(stored_id))

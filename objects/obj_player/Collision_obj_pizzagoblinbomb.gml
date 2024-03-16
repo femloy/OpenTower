@@ -1,6 +1,6 @@
-if (!other.grabbable)
+if !other.grabbable
 	exit;
-if (state != states.boxxedpepspin)
+if state != states.boxxedpepspin
 {
 	if (state == states.handstandjump || state == states.lungeattack || state == states.punch)
 	{
@@ -11,7 +11,7 @@ if (state != states.boxxedpepspin)
 			sprite_index = spr_haulingstart;
 			other.defused = true;
 			bombgrabID = other.id;
-			if (!ispeppino)
+			if !ispeppino
 				create_transformation_tip(lang_get_value("bombtipN"), "bombtipN");
 			fmod_event_one_shot_3d("event:/sfx/noise/bombbounce", x, y);
 			with (instance_create(x + (xscale * 25), y, obj_parryeffect))
@@ -20,7 +20,7 @@ if (state != states.boxxedpepspin)
 				image_xscale = other.xscale;
 				image_speed = 0.35;
 			}
-			with (other)
+			with other
 			{
 				state = states.grabbed;
 				playerid = other.id;
@@ -28,7 +28,7 @@ if (state != states.boxxedpepspin)
 		}
 	}
 }
-else if (other.kickbuffer <= 0)
+else if other.kickbuffer <= 0
 {
 	other.vsp = -9;
 	other.movespeed = 7;

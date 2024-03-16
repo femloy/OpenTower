@@ -1,4 +1,4 @@
-with (other)
+with other
 {
 	if (key_up && ladderbuffer == 0 && (state == states.normal || state == states.pogo || state == states.machcancel || state == states.mach2 || state == states.mach3 || state == states.mach1 || state == states.punch || state == states.shotgunjump || state == states.jump || state == states.highjump || (state == states.ratmountbounce && !ispeppino)) && state != states.hurt && state != states.machslide && state != states.freefall && state != states.freefallland)
 	{
@@ -13,7 +13,7 @@ with (other)
 	{
 		input_buffer_jump = 0;
 		state = states.ratmountladder;
-		if (brick == 1)
+		if brick == 1
 		{
 			with (instance_create(x, y, obj_brickcomeback))
 			{

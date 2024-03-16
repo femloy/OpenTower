@@ -1,6 +1,6 @@
 function noise_aftimg_set_pattern(sprite, subimg)
 {
-	if (sprite == noone)
+	if sprite == noone
 	{
 		shader_set_uniform_i(global.N_Pattern_Enabled, 0);
 		exit;

@@ -12,10 +12,10 @@ function scr_solid_player(_x, _y)
 		var b = ds_list_find_value(global.instancelist, i);
 		if (instance_exists(b))
 		{
-			switch (b.object_index)
+			switch b.object_index
 			{
 				case obj_ghostwall:
-					if (state != states.ghost)
+					if state != states.ghost
 						_collided = true;
 					break;
 				case obj_mach3solid:
@@ -27,11 +27,11 @@ function scr_solid_player(_x, _y)
 			}
 			var par = object_get_parent(b.object_index);
 		}
-		if (_collided)
+		if _collided
 			break;
 	}
 	ds_list_clear(global.instancelist);
-	if (_collided)
+	if _collided
 	{
 		x = old_x;
 		y = old_y;
@@ -49,7 +49,7 @@ function scr_solid_player(_x, _y)
 				_collided = true;
 		}
 		ds_list_clear(global.instancelist);
-		if (_collided)
+		if _collided
 		{
 			x = old_x;
 			y = old_y;
@@ -81,14 +81,14 @@ function scr_solid_player(_x, _y)
 function check_slope_player(slope_obj)
 {
 	var slope = instance_place(x, y, slope_obj);
-	if (slope)
+	if slope
 	{
-		with (slope)
+		with slope
 		{
 			var object_side = 0;
 			var slope_start = 0;
 			var slope_end = 0;
-			if (image_xscale > 0)
+			if image_xscale > 0
 			{
 				object_side = other.bbox_right;
 				slope_start = bbox_bottom;
@@ -102,7 +102,7 @@ function check_slope_player(slope_obj)
 			}
 			var m = (sign(image_xscale) * (bbox_bottom - bbox_top)) / (bbox_right - bbox_left);
 			slope = slope_start - round(m * (object_side - bbox_left));
-			if (other.bbox_bottom >= slope)
+			if other.bbox_bottom >= slope
 				return true;
 		}
 	}

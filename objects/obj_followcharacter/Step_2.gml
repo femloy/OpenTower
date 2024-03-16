@@ -1,18 +1,18 @@
-if (lock)
+if lock
 	exit;
 if (followid != -4 && !instance_exists(obj_player1))
 	exit;
 playerid = obj_player1.id;
-if (playerid.state != states.ladder && playerid.state != states.door && playerid.state != states.comingoutdoor)
+if playerid.state != states.ladder && playerid.state != states.door && playerid.state != states.comingoutdoor
 {
-	if (space < maxspace && dir == -1)
+	if space < maxspace && dir == -1
 		space += spaceaccel;
-	if (space > -maxspace && dir == 1)
+	if space > -maxspace && dir == 1
 		space -= spaceaccel;
 }
 else
 	space = Approach(space, 0, spaceaccel);
-if (dir != playerid.xscale)
+if dir != playerid.xscale
 	dir = playerid.xscale;
 if (followid == -4 && object_index != obj_swapmodefollow && instance_exists(obj_swapmodefollow))
 	followid = obj_swapmodefollow.id;
@@ -31,9 +31,9 @@ if (ds_queue_size(followqueue) > (LAG_STEPS * 2))
 {
 	var _x = ds_queue_dequeue(followqueue);
 	var _y = ds_queue_dequeue(followqueue);
-	if (!use_collision)
+	if !use_collision
 	{
-		if (interp < 1)
+		if interp < 1
 		{
 			x = lerp(x, _x, interp);
 			y = lerp(y, _y, interp);

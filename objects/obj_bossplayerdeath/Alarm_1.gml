@@ -1,4 +1,4 @@
-with (obj_player1)
+with obj_player1
 {
 	global.player_damage = 0;
 	global.swap_damage[0] = 0;
@@ -26,7 +26,7 @@ with (obj_player1)
 }
 global.level_minutes = 0;
 global.level_seconds = 0;
-with (obj_screensizer)
+with obj_screensizer
 	camzoom = 1;
 with (instance_create(0, 0, obj_backtohub_fadeout))
 {

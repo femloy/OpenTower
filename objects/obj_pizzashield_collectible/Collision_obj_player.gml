@@ -1,7 +1,7 @@
-if (other.state != states.gotoplayer)
+if other.state != states.gotoplayer
 {
 	scr_sound_multiple("event:/sfx/misc/collect", x, y);
-	with (other)
+	with other
 		pizzashield = true;
 	instance_destroy();
 }

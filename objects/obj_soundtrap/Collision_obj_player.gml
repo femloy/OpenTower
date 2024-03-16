@@ -1,6 +1,6 @@
-with (other)
+with other
 {
-	if (state != states.gotoplayer && state != states.fireass)
+	if state != states.gotoplayer && state != states.fireass
 	{
 		image_index = 0;
 		state = states.fireass;

@@ -1,17 +1,17 @@
-if (other.state != states.gotoplayer)
+if other.state != states.gotoplayer
 {
-	if (obj_player1.character == "V")
+	if obj_player1.character == "V"
 		global.playerhealth = clamp(global.playerhealth + 100, 0, 100);
 	global.heattime = 60;
-	with (obj_camera)
+	with obj_camera
 		healthshaketime = 120;
 	fmod_event_one_shot("event:/sfx/misc/collectgiantpizza");
 	var val = heat_calculate(1000);
-	if (other.object_index == obj_player1)
+	if other.object_index == obj_player1
 		global.collect += val;
 	else
 		global.collectN += val;
-	if (global.bullet < 3)
+	if global.bullet < 3
 		global.bullet += 1;
 	var _x = x - 48;
 	var _y = y - 48;
@@ -31,7 +31,7 @@ if (other.state != states.gotoplayer)
 	instance_destroy();
 	if (secret && !instance_exists(obj_fadeout))
 	{
-		with (obj_player)
+		with obj_player
 		{
 			targetRoom = lastroom;
 			targetDoor = "S";

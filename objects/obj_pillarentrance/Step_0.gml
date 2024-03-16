@@ -1,2 +1,2 @@
-if (global.panic == true)
+if global.panic == true
 	sprite_index = spr_entrancepillarpanic;

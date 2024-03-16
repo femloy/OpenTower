@@ -1,3 +1,3 @@
 event_inherited();
-if (!global.mort)
+if !global.mort
 	instance_destroy();

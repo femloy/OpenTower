@@ -9,7 +9,7 @@ state = states.normal;
 x = SCREEN_WIDTH - 100;
 y = SCREEN_HEIGHT - 100;
 add_y = -150;
-if (global.pigtotal_add > 0)
+if global.pigtotal_add > 0
 {
 	alarm[0] = 100;
 	state = states.titlescreen;

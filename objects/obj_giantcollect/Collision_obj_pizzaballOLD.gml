@@ -1,7 +1,7 @@
-if (obj_player1.character == "V")
+if obj_player1.character == "V"
 	global.playerhealth = clamp(global.playerhealth + 100, 0, 100);
 global.heattime = 60;
-with (obj_camera)
+with obj_camera
 	healthshaketime = 120;
 global.collect += 1000;
 var _x = x - 48;

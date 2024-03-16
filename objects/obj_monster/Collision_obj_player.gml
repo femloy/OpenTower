@@ -1,34 +1,34 @@
-with (obj_secretportal)
+with obj_secretportal
 {
-	if (touched)
+	if touched
 		exit;
 }
 if (!instance_exists(obj_fadeout) && state != states.robotidle && other.state != states.actor && other.state != states.chainsaw && other.state != states.hit && !other.cutscene && other.state != states.door && !instance_exists(obj_jumpscare))
 {
-	if (!global.panic)
+	if !global.panic
 	{
-		with (obj_player)
+		with obj_player
 		{
 			state = states.actor;
 			hsp = 0;
 			vsp = 0;
 		}
 	}
-	else if (global.panic)
+	else if global.panic
 	{
-		with (obj_monster)
+		with obj_monster
 		{
 			state = states.robotidle;
 			x = xstart;
 			y = ystart;
 		}
 	}
-	if (room == kidsparty_secret2)
+	if room == kidsparty_secret2
 	{
 		global.spaceblockswitch = true;
-		with (obj_spaceblockswitch)
+		with obj_spaceblockswitch
 			sprite_index = spr_switchblock_happy;
-		with (obj_patroller)
+		with obj_patroller
 		{
 			x = xstart;
 			y = ystart;
@@ -39,7 +39,7 @@ if (!instance_exists(obj_fadeout) && state != states.robotidle && other.state !=
 	}
 	with (instance_create(x, y, obj_jumpscare))
 	{
-		switch (other.object_index)
+		switch other.object_index
 		{
 			case obj_robotmonster:
 				monsterid = 0;

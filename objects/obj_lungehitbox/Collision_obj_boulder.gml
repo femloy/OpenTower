@@ -1,11 +1,11 @@
-if (other.state != states.grabbed && playerid.state != states.grab)
+if other.state != states.grabbed && playerid.state != states.grab
 {
 	other.state = states.grabbed;
-	if (playerid.object_index == obj_player1)
+	if playerid.object_index == obj_player1
 		other.grabbedby = 1;
 	else
 		other.grabbedby = 2;
-	with (playerid)
+	with playerid
 	{
 		state = states.grab;
 		baddiegrabbedID = other.id;

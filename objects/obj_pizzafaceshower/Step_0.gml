@@ -1,4 +1,4 @@
-switch (state)
+switch state
 {
 	case states.idle:
 		if (start && distance_to_object(obj_player) <= 150)
@@ -6,7 +6,7 @@ switch (state)
 			state = states.actor;
 			substate = states.idle;
 			cutscenebuffer = 120;
-			with (obj_player)
+			with obj_player
 			{
 				state = states.actor;
 				sprite_index = spr_idle;
@@ -14,16 +14,16 @@ switch (state)
 				image_speed = 0.35;
 				hsp = 0;
 				vsp = 0;
-				if (!grounded)
+				if !grounded
 					create_particle(x, y, particle.genericpoofeffect);
 			}
 		}
 		break;
 	case states.actor:
-		switch (substate)
+		switch substate
 		{
 			case states.idle:
-				if (cutscenebuffer > 0)
+				if cutscenebuffer > 0
 					cutscenebuffer--;
 				else
 				{
@@ -35,7 +35,7 @@ switch (state)
 				break;
 			
 			case states.normal:
-				if (cutscenebuffer > 0)
+				if cutscenebuffer > 0
 					cutscenebuffer--;
 				else
 				{
@@ -47,9 +47,9 @@ switch (state)
 				break;
 			
 			case states.transition:
-				if (cutscenebuffer > 0)
+				if cutscenebuffer > 0
 					cutscenebuffer--;
-				else if (sprite_index == spr_pizzafaceshower2)
+				else if sprite_index == spr_pizzafaceshower2
 				{
 					fmod_event_instance_set_parameter(snd, "state", 3, true);
 					cutscenebuffer = 70;
@@ -77,7 +77,7 @@ switch (state)
 				if (!bbox_in_camera(view_camera[0], 50))
 				{
 					substate = states.dead;
-					with (obj_player)
+					with obj_player
 					{
 						state = states.normal;
 						landAnim = false;
@@ -87,7 +87,7 @@ switch (state)
 			
 			case states.dead:
 				y -= 20;
-				if (y < -200)
+				if y < -200
 				{
 					ini_open_from_string(obj_savesystem.ini_str);
 					ini_write_real("Game", "shower", true);

@@ -1,4 +1,4 @@
-if (sprite_index != spr_piraneapple_projectile)
+if sprite_index != spr_piraneapple_projectile
 {
 	create_particle(x, y, particle.cloudeffect, 0);
 	alarm[1] = 6;

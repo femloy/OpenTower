@@ -1,6 +1,6 @@
 if (other.instakillmove || other.state == states.handstandjump)
 {
-	with (other)
+	with other
 	{
 		hsp = 0;
 		vsp = 0;
@@ -10,17 +10,17 @@ if (other.instakillmove || other.state == states.handstandjump)
 		with (instance_create(x, y - 50, obj_noisebigkey))
 			alarm[0] = 150;
 	}
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 5;
 		shake_mag_acc = 10 / room_speed;
 	}
-	repeat (2)
+	repeat 2
 	{
 		with (create_debris(x, y, spr_slapstar))
 			vsp = -irandom_range(5, 11);
 	}
-	repeat (2)
+	repeat 2
 	{
 		with (create_debris(x, y, spr_baddiegibs))
 			vsp = -irandom_range(5, 11);

@@ -1,6 +1,6 @@
-if (state != states.titlescreen && other.grounded && other.key_up2)
+if state != states.titlescreen && other.grounded && other.key_up2
 {
-	if (other.isgustavo)
+	if other.isgustavo
 		isgustavo = true;
 	else
 		isgustavo = false;

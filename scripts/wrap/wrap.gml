@@ -10,7 +10,7 @@ function wrap()
 		{
 			if _val > _max
 				_val = _min + _val - _max - 1;
-			else if (_val < _min)
+			else if _val < _min
 			{
 				_val = _max + _val - _min + 1;
 				continue;

@@ -1,6 +1,6 @@
 if (instance_exists(baddieID) && baddieID.stun == 1 && (other.state == states.handstandjump || other.state == states.punch || other.instakillmove == 1))
 {
-	with (other)
+	with other
 	{
 		sprite_index = choose(spr_suplexmash1, spr_suplexmash2, spr_suplexmash3, spr_suplexmash4, spr_punch);
 		image_index = 0;

@@ -1,14 +1,14 @@
-if (other.tube_id == id)
+if other.tube_id == id
 	exit;
-if (other.state == states.hurt)
+if other.state == states.hurt
 	exit;
-if (other.state == states.gotoplayer)
+if other.state == states.gotoplayer
 	exit;
 var _offset_x = 32 * image_xscale;
 var _offset_y = 14 * image_yscale;
-with (other)
+with other
 {
-	if (other.stored_spd == 0)
+	if other.stored_spd == 0
 	{
 		
 	}
@@ -26,7 +26,7 @@ if (floor(other.x) == (x + _offset_x) && floor(other.y) == (y + _offset_y))
 	other.state = states.tube;
 	other.tube_id = id;
 	var ms = movespeed;
-	if (!other.ispeppino)
+	if !other.ispeppino
 		ms += 5;
 	other.hsp = hsp * ms;
 	other.vsp = vsp * ms;

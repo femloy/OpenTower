@@ -9,7 +9,7 @@ function scr_hillbilly_idle()
 }
 function scr_hillbilly_chase()
 {
-	if (hsp != 0)
+	if hsp != 0
 		sprite_index = chasespr;
 	else
 		sprite_index = chasespr_idle;
@@ -30,9 +30,9 @@ function scr_hillbilly_machslide()
 	sprite_index = skidspr;
 	if (abs(hsp) > 0)
 	{
-		if (hsp < 0.5)
+		if hsp < 0.5
 			hsp += deccel;
-		else if (hsp > 0.5)
+		else if hsp > 0.5
 			hsp -= deccel;
 		else
 			hsp = 0;
@@ -50,7 +50,7 @@ function scr_hillbilly_detect()
 	var _col = collision_line(x, y, playerinst.x, playerinst.y, obj_solid, false, true);
 	var _player_colX = playerinst.x > (x - threshold_x) && playerinst.x < (x + threshold_x);
 	var _player_colY = playerinst.y > (y - threshold_y) && playerinst.y < (y + threshold_y);
-	if (_col == noone && _player_colX && _player_colY)
+	if _col == noone && _player_colX && _player_colY
 	{
 		image_xscale = (playerinst.x > x) ? 1 : -1;
 		state = states.chase;
@@ -60,7 +60,7 @@ function scr_hillbilly_detect()
 }
 function scr_hillbilly_destroyables()
 {
-	with (obj_woodenwalls)
+	with obj_woodenwalls
 	{
 		if (place_meeting(x - other.hsp, y, other.id))
 			instance_destroy();

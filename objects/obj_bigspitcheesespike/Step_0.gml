@@ -1,4 +1,4 @@
-if (vsp < 12)
+if vsp < 12
 	vsp += grav;
 image_speed = 0;
 if (place_meeting(x + floor(hsp), y, obj_null))

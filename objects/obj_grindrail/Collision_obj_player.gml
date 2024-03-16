@@ -4,31 +4,31 @@ if (!other.ignore_grind && (other.state != states.tumble || (other.sprite_index 
 {
 	if (!other.isgustavo && (other.ispeppino || !other.noisecrusher))
 	{
-		if (other.state == states.punch)
+		if other.state == states.punch
 			other.movespeed = abs(other.hsp);
 		
 		var old_y = other.y;
 		other.y = y - 49;
 		var dif = old_y - other.y;
-		with (obj_camera)
+		with obj_camera
 			offset_y += dif;
-		if (other.state == states.machcancel)
+		if other.state == states.machcancel
 		{
-			if (other.move != 0)
+			if other.move != 0
 				other.xscale = other.move;
-			else if (other.savedmove != 0)
+			else if other.savedmove != 0
 				other.xscale = other.savedmove;
-			else if (other.movespeed != 0)
+			else if other.movespeed != 0
 				other.xscale = sign(other.movespeed);
 			other.movespeed = abs(other.hsp);
 		}
 		other.state = states.grind;
 	}
-	else if (other.state != states.ratmountgrind)
+	else if other.state != states.ratmountgrind
 	{
-		with (other)
+		with other
 		{
-			if (brick == true && ispeppino)
+			if brick == true && ispeppino
 			{
 				with (instance_create(x, y, obj_brickcomeback))
 					wait = true;
@@ -40,7 +40,7 @@ if (!other.ignore_grind && (other.state != states.tumble || (other.sprite_index 
 				image_speed = 0.35;
 			}
 			brick = false;
-			with (obj_camera)
+			with obj_camera
 			{
 				followtarget = other.id;
 				state = states.camera_followtarget;
@@ -48,7 +48,7 @@ if (!other.ignore_grind && (other.state != states.tumble || (other.sprite_index 
 		}
 		other.y = y + 8;
 		other.state = states.ratmountgrind;
-		if (!other.ispeppino)
+		if !other.ispeppino
 			other.movespeed = other.hsp;
 	}
 }

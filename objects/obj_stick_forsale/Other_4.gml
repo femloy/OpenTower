@@ -2,7 +2,7 @@ ini_open_from_string(obj_savesystem.ini_str);
 unlocked = ini_read_real(save, "unlocked", false);
 first = ini_read_real(save, "first", false);
 ini_close();
-if (first && !unlocked)
+if first && !unlocked
 {
 	with (instance_create(obj_stick_target.x, obj_stick_target.y, obj_stick))
 	{
@@ -13,9 +13,9 @@ if (first && !unlocked)
 }
 if (!unlocked && (global.pigtotal - global.pigreduction) >= maxscore)
 	instance_create(0, 0, obj_mrsticknotification);
-if (unlocked)
+if unlocked
 {
-	if (room != tower_5)
+	if room != tower_5
 	{
 		with (instance_create(x, y, obj_bossdoor))
 		{

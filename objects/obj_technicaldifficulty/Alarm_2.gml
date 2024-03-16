@@ -1,13 +1,13 @@
 instance_destroy();
-with (playerid)
+with playerid
 {
-	if (!isgustavo)
+	if !isgustavo
 		state = states.normal;
 	else
 		state = states.ratmount;
 	visible = true;
 }
-with (obj_ghostfollow)
+with obj_ghostfollow
 {
 	x = xstart;
 	y = ystart;

@@ -1,8 +1,8 @@
-if (collect > 0)
+if collect > 0
 {
 	var diff = collect;
 	collect -= collectminus;
-	if (collect < 0)
+	if collect < 0
 		collect = 0;
 	diff -= collect;
 	diff = round(diff);
@@ -12,7 +12,7 @@ if (collect > 0)
 	global.heattime = clamp(global.heattime, 0, 60);
 	global.combotime += 10;
 	global.combotime = clamp(global.combotime, 0, 60);
-	with (obj_camera)
+	with obj_camera
 		healthshaketime = 30;
 	with (instance_create(obj_player1.x, obj_player1.y, obj_smallnumber))
 		number = string(diff);

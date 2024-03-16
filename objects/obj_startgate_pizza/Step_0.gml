@@ -1,11 +1,11 @@
-switch (state)
+switch state
 {
 	case 0:
 		image_index = 8;
-		if (vsp < 20)
+		if vsp < 20
 			vsp += 0.5;
 		y += vsp;
-		if (y >= y_to)
+		if y >= y_to
 		{
 			y = y_to;
 			state++;
@@ -18,17 +18,17 @@ switch (state)
 		for (var i = 0; i < array_length(highscore); i++)
 		{
 			var ty = cy - (i * 64);
-			if (highscore[i][1] < ty)
+			if highscore[i][1] < ty
 				highscore[i][1] = ty;
-			if (highscore[i][2] < 25)
+			if highscore[i][2] < 25
 				highscore[i][2] += grav;
 			highscore[i][1] += highscore[i][2];
-			if (highscore[i][1] >= y)
+			if highscore[i][1] >= y
 				highscore[i][1] = y;
 			else
 				_found = true;
 		}
-		if (!_found)
+		if !_found
 		{
 			state++;
 			rank_scale = 2;

@@ -19,7 +19,7 @@ function scr_player_mach1()
 		var _railinst = instance_place(x, y + 1, obj_railparent);
 		hsp = (xscale * movespeed) + (_railinst.movespeed * _railinst.dir);
 	}
-	if (xscale != move && move != 0)
+	if xscale != move && move != 0
 	{
 		sprite_index = spr_mach1;
 		image_index = 0;
@@ -28,17 +28,17 @@ function scr_player_mach1()
 		movespeed = 6;
 		xscale = move;
 	}
-	if (grounded)
+	if grounded
 	{
-		if (movespeed <= 8)
+		if movespeed <= 8
 			movespeed += 0.075;
-		if (movespeed >= 8)
+		if movespeed >= 8
 		{
 			state = states.mach2;
 			particle_set_scale(particle.jumpdust, xscale, 1);
 			create_particle(x, y, particle.jumpdust, 0);
 		}
-		if (vsp > 0)
+		if vsp > 0
 			jumpstop = false;
 		if (!instance_exists(dashcloudid))
 		{
@@ -48,12 +48,12 @@ function scr_player_mach1()
 				other.dashcloudid = id;
 			}
 		}
-		if (sprite_index != spr_mach1 && vsp > 0)
+		if sprite_index != spr_mach1 && vsp > 0
 		{
 			sprite_index = spr_mach1;
 			image_index = 0;
 		}
-		if (input_buffer_jump > 0)
+		if input_buffer_jump > 0
 		{
 			input_buffer_jump = 0;
 			sprite_index = spr_airdash1;
@@ -64,16 +64,16 @@ function scr_player_mach1()
 			jumpAnim = true;
 		}
 	}
-	else if (sprite_index != spr_airdash1)
+	else if sprite_index != spr_airdash1
 		sprite_index = spr_airdash2;
-	if (sprite_index == spr_airdash1 && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_airdash1 && floor(image_index) == image_number - 1)
 		sprite_index = spr_airdash2;
-	if (!key_attack)
+	if !key_attack
 	{
 		state = states.normal;
 		image_index = 0;
 	}
-	if (!key_jump2 && !jumpstop && vsp < 0.5)
+	if !key_jump2 && !jumpstop && vsp < 0.5
 	{
 		vsp /= 20;
 		jumpstop = true;
@@ -83,10 +83,10 @@ function scr_player_mach1()
 		movespeed = 0;
 		state = states.normal;
 	}
-	switch (character)
+	switch character
 	{
 		case "V":
-			if (key_slap2)
+			if key_slap2
 			{
 				sprite_index = spr_playerV_airrevolver;
 				image_index = 0;
@@ -117,7 +117,7 @@ function scr_player_mach1()
 	}
 	if (scr_check_groundpound() && !grounded)
 	{
-		if (!shotgunAnim)
+		if !shotgunAnim
 		{
 			sprite_index = spr_bodyslamstart;
 			image_index = 0;

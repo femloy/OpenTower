@@ -1,14 +1,14 @@
 for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 {
 	var b = ds_list_find_value(global.afterimage_list, i);
-	with (b)
+	with b
 	{
 		for (var l = 0; l < array_length(alarm); l++)
 		{
-			if (alarm[l] >= 0)
+			if alarm[l] >= 0
 				alarm[l]--;
 		}
-		switch (identifier)
+		switch identifier
 		{
 			case afterimage.mach3effect:
 				if !(playerid.state == states.jump && playerid.sprite_index == spr_playerN_noisebombspinjump)
@@ -35,7 +35,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 					alpha = clamp(alpha, 0, 1);
 				}
 				visible = playerid.visible;
-				with (playerid)
+				with playerid
 				{
 					if (place_meeting(x, y, obj_secretportal) || place_meeting(x, y, obj_secretportalstart))
 						other.visible = false;
@@ -53,7 +53,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 			case afterimage.enemy:
 			case afterimage.noise:
 				alpha -= 0.05;
-				if (alpha <= 0 && alarm[0] != 0)
+				if alpha <= 0 && alarm[0] != 0
 					alarm[0] = 0;
 				break;
 			
@@ -61,7 +61,7 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 				alpha -= spd;
 				x += hsp;
 				y += vsp;
-				if (alpha <= 0 && alarm[0] != 0)
+				if alpha <= 0 && alarm[0] != 0
 					alarm[0] = 0;
 				if (playerid != -4 && instance_exists(playerid))
 					visible = playerid.visible;
@@ -69,19 +69,19 @@ for (var i = 0; i < ds_list_size(global.afterimage_list); i++)
 					visible = true;
 				break;
 		}
-		if (alarm[1] == 0)
+		if alarm[1] == 0
 		{
 			other.alpha[identifier] = 0;
 			alarm[2] = 3;
 		}
-		if (alarm[2] == 0)
+		if alarm[2] == 0
 		{
 			other.alpha[identifier] = 1;
-			if (identifier == afterimage.mach3effect)
+			if identifier == afterimage.mach3effect
 				other.alpha[identifier] = alpha;
 			alarm[2] = 3;
 		}
-		if (alarm[0] == 0)
+		if alarm[0] == 0
 		{
 			delete b;
 			ds_list_delete(global.afterimage_list, i);

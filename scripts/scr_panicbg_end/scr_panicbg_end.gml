@@ -1,6 +1,6 @@
 function scr_panicbg_end()
 {
-	if (event_type == ev_draw && event_number == 0)
+	if event_type == ev_draw && event_number == 0
 	{
 		surface_reset_target();
 		shader_set(shd_panicbg);

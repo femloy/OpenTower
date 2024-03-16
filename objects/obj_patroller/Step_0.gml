@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -15,7 +15,7 @@ switch (state)
 			coneID = instance_create(x, y, obj_patrolcone);
 			coneID.baddieID = id;
 		}
-		if (alarm[5] != -1)
+		if alarm[5] != -1
 		{
 			sprite_index = spr_patroller_idle;
 			hsp = 0;
@@ -50,18 +50,18 @@ switch (state)
 		break;
 	case states.fall:
 		image_speed = 0.35;
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			state = states.walk;
 			sprite_index = walkspr;
 		}
 		break;
 }
-if (cooldown > 0)
+if cooldown > 0
 	cooldown--;
-if (state == states.walk)
+if state == states.walk
 {
-	if (!patrolfound)
+	if !patrolfound
 	{
 		if (cooldown <= 0 && alarm[5] == -1 && instance_exists(coneID) && coneID.collision)
 		{
@@ -70,22 +70,22 @@ if (state == states.walk)
 			alarm[5] = 60;
 		}
 	}
-	else if (alarm[5] == -1)
+	else if alarm[5] == -1
 		alarm[5] = 60;
 }
 if (state == states.walk && point_in_camera(x, y, view_camera[0]))
 {
 	var p = false;
-	with (obj_player)
+	with obj_player
 	{
-		if (state == states.backbreaker && sprite_index == spr_taunt)
+		if state == states.backbreaker && sprite_index == spr_taunt
 			p = true;
 	}
-	if (!p)
+	if !p
 	{
-		with (obj_swapmodefollow)
+		with obj_swapmodefollow
 		{
-			if (taunttimer > 0)
+			if taunttimer > 0
 				p = true;
 		}
 	}
@@ -96,10 +96,10 @@ if (state == states.walk && point_in_camera(x, y, view_camera[0]))
 		event_perform(ev_alarm, 5);
 	}
 }
-if (state == states.punch)
+if state == states.punch
 {
 	hsp = 0;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.walk;
 		sprite_index = walkspr;
@@ -108,21 +108,21 @@ if (state == states.punch)
 }
 if (state == states.stun || state == states.grabbed || state == states.hit)
 	alarm[5] = -1;
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

@@ -27,10 +27,10 @@ function scr_pizzaball_addslopemomentum(slopeaccel, slopedeccel)
 		else
 			other.slopespeed -= slopedeccel;
 	}
-	if (slopespeed < 0)
+	if slopespeed < 0
 		slopespeed = 0;
-	if (slopespeed > 10)
+	if slopespeed > 10
 		slopespeed = 10;
-	if (movespeed < 1)
+	if movespeed < 1
 		slopespeed = 0;
 }

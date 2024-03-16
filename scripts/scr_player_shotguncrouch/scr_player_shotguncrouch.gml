@@ -5,25 +5,25 @@ function scr_player_shotguncrouch()
 	move = key_left + key_right;
 	hsp = move * movespeed;
 	movespeed = 4;
-	if (move != 0)
+	if move != 0
 		xscale = move;
-	if (sprite_index != spr_shotgungoduck)
+	if sprite_index != spr_shotgungoduck
 	{
-		if (move != 0)
+		if move != 0
 			sprite_index = spr_shotguncrawl;
 		else
 			sprite_index = spr_shotgunduck;
 	}
-	else if (floor(image_index) == (image_number - 1))
+	else if floor(image_index) == image_number - 1
 		sprite_index = spr_shotgunduck;
-	if (!grounded && input_buffer_jump <= 0)
+	if !grounded && input_buffer_jump <= 0
 	{
 		state = states.shotguncrouchjump;
 		movespeed = 0;
 		sprite_index = spr_crouchfall;
 		image_index = 0;
 	}
-	if (can_jump && input_buffer_jump > 0)
+	if can_jump && input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		sprite_index = spr_crouchjump;
@@ -38,7 +38,7 @@ function scr_player_shotguncrouch()
 		sprite_index = spr_shotgunland;
 		image_index = 0;
 	}
-	if (key_slap2)
+	if key_slap2
 	{
 		state = states.shotgunshoot;
 		sprite_index = spr_shotgunshoot;

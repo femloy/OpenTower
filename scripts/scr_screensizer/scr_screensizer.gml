@@ -7,8 +7,8 @@
 
 function screen_apply_size_delayed()
 {
-    with obj_screensizer
-        alarm[2] = 1;
+	with obj_screensizer
+		alarm[2] = 1;
 }
 function screen_apply_size()
 {
@@ -20,44 +20,44 @@ function screen_apply_size()
 			gameframe_restore();
 		
 		var w = get_resolution_width(global.option_resolution, aspect_ratio);
-        var h = get_resolution_height(global.option_resolution, aspect_ratio);
-        trace("Setting Window Size: ", w, ", ", h);
-        window_set_size(w, h);
+		var h = get_resolution_height(global.option_resolution, aspect_ratio);
+		trace("Setting Window Size: ", w, ", ", h);
+		window_set_size(w, h);
 		alarm[0] = 2;
 	}
 }
 function screen_apply_vsync()
 {
 	if room != Loadiingroom
-    {
-	    trace("Applying VSync: ", global.option_vsync);
-	    display_reset(0, global.option_vsync);
+	{
+		trace("Applying VSync: ", global.option_vsync);
+		display_reset(0, global.option_vsync);
 	}
 }
 function screen_option_apply_fullscreen(fullscreen)
 {
-    var opt = global.option_fullscreen;
-    global.option_fullscreen = fullscreen;
-    screen_apply_fullscreen(fullscreen);
-    with instance_create(0, 0, obj_screenconfirm)
-    {
-        savedoption = opt;
-        section = "Option";
-        key = "fullscreen";
-        varname = "option_fullscreen";
-        depth = obj_option.depth - 1;
-    }
+	var opt = global.option_fullscreen;
+	global.option_fullscreen = fullscreen;
+	screen_apply_fullscreen(fullscreen);
+	with instance_create(0, 0, obj_screenconfirm)
+	{
+		savedoption = opt;
+		section = "Option";
+		key = "fullscreen";
+		varname = "option_fullscreen";
+		depth = obj_option.depth - 1;
+	}
 }
 function screen_apply_fullscreen(fullscreen)
 {
-	if (fullscreen == 0)
+	if fullscreen == 0
 	{
 		gameframe_set_fullscreen(0);
 		obj_screensizer.alarm[2] = 1;
 	}
-	else if (fullscreen == 1)
+	else if fullscreen == 1
 		gameframe_set_fullscreen(1);
-	else if (fullscreen == 2)
+	else if fullscreen == 2
 		gameframe_set_fullscreen(2);
 }
 function surface_safe_set_target(surface)
@@ -80,7 +80,7 @@ function reset_gui_target()
 {
 	while (surface_get_target() != -1 && surface_get_target() != application_surface)
 		surface_reset_target();
-	with (obj_screensizer)
+	with obj_screensizer
 	{
 		if (!surface_exists(gui_surf))
 			exit;

@@ -8,7 +8,7 @@ instance_create(x, y, obj_baddiegibs);
 instance_create(x, y, obj_baddiegibs);
 instance_create(x, y, obj_baddiegibs);
 instance_create(x, y, obj_bangeffect);
-with (obj_camera)
+with obj_camera
 {
 	shake_mag = 3;
 	shake_mag_acc = 3 / room_speed;

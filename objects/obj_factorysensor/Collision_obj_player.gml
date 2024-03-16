@@ -1,4 +1,4 @@
-if (!graffiti && other.state == states.backbreaker && global.graffiticutscene)
+if !graffiti && other.state == states.backbreaker && global.graffiticutscene
 {
 	other.state = states.graffiti;
 	other.sprite_index = other.spr_victory;

@@ -1,6 +1,6 @@
 function cutscene_graveyard_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;

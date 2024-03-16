@@ -5,7 +5,7 @@ if (place_meeting(x, y + 1, obj_railparent))
 }
 else if (object_index != obj_haystack || state == states.normal)
 	hsp = Approach(hsp, 0, 0.5);
-if (hsp != 0)
+if hsp != 0
 {
 	with (instance_place(x, y - 2, obj_player))
 		hsp_carry = other.hsp;

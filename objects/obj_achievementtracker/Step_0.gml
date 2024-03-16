@@ -1,11 +1,11 @@
 for (var i = 0; i < array_length(achievements_update); i++)
 {
 	var b = achievements_update[i];
-	with (b)
+	with b
 	{
-		if (!unlocked)
+		if !unlocked
 		{
-			if (frames >= update_rate)
+			if frames >= update_rate
 			{
 				frames = 0;
 				update_func();
@@ -35,10 +35,10 @@ if (!ds_queue_empty(unlock_queue) && !instance_exists(obj_cheftask))
 		achievement_spr = b[0];
 		achievement_index = b[1];
 	}
-	repeat (10)
+	repeat 10
 		instance_create(SCREEN_WIDTH - 100, SCREEN_HEIGHT - 50, obj_confettieffect);
 }
 if (instance_exists(obj_player1))
 	ispeppino = obj_player1.ispeppino;
-if (global.swapmode)
+if global.swapmode
 	ispeppino = false;

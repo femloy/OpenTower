@@ -1,4 +1,4 @@
-if (!has_ended)
+if !has_ended
 {
 	with (instance_create(x, y, obj_explosioneffect))
 	{

@@ -1,9 +1,9 @@
 if (image_alpha == 1 && !place_meeting(x, y, obj_metalblock))
 {
-	if (obj_player1.character == "V")
+	if obj_player1.character == "V"
 		global.playerhealth = clamp(global.playerhealth + 10, 0, 100);
 	global.heattime = 60;
-	with (obj_camera)
+	with obj_camera
 		healthshaketime = 60;
 	fmod_event_one_shot("event:/sfx/misc/collectpizza");
 	instance_destroy();

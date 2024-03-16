@@ -12,7 +12,7 @@ function DeleteObject(_inst) : Command() constructor
 	};
 	static destroy = function()
 	{
-		if (deleted)
+		if deleted
 			instance_destroy(inst);
 	};
 	inst = _inst;

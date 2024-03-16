@@ -1,4 +1,4 @@
-with (obj_collect)
+with obj_collect
 {
 	if (place_meeting(x, y, other))
 	{
@@ -9,14 +9,14 @@ with (obj_collect)
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	var a = image_xscale + image_yscale;
-	repeat (6 * a)
+	repeat 6 * a
 	{
 		var xx = x + (irandom(abs(sprite_width)) * image_xscale);
 		var yy = y + (irandom(abs(sprite_height)) * image_yscale);
 		if (point_in_camera(xx, yy, view_camera[0]))
 			create_debris(xx, yy, spr_icedebris);
 	}
-	repeat (a)
+	repeat a
 	{
 		xx = x + (irandom(abs(sprite_width)) * image_xscale);
 		yy = y + (irandom(abs(sprite_height)) * image_yscale);

@@ -2,7 +2,7 @@ function scr_ghostcollectible(pizzasona = false)
 {
 	var q = noone;
 	var b = id;
-	with (obj_ghostcollectibles)
+	with obj_ghostcollectibles
 	{
 		q = 
 		{

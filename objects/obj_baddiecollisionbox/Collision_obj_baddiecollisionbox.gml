@@ -1,7 +1,7 @@
 if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.object_index != obj_pizzafaceboss && !baddieID.thrown && !other.baddieID.mach3destroy && baddieID.state != states.hit && other.baddieID.thrown && other.baddieID.state != states.hit && baddieID.killbyenemybuffer <= 0 && baddieID.killbyenemy && baddieID != other.baddieID && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable && ((global.attackstyle != 2 && !global.kungfu) || baddieID.hp <= 0) && !global.kungfu)
 {
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
-	if (!baddieID.important)
+	if !baddieID.important
 	{
 		global.style += (5 + global.combo);
 		global.combotime = 60;
@@ -25,7 +25,7 @@ if (instance_exists(baddieID) && instance_exists(other.baddieID) && baddieID.obj
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;

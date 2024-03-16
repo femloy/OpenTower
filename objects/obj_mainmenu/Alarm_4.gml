@@ -1,6 +1,6 @@
-if (timermax > 1)
+if timermax > 1
 	timermax -= 2;
-if (timermax <= 5)
+if timermax <= 5
 	timermax = 5;
 repeat (round(explosionsnum))
 {
@@ -9,13 +9,13 @@ repeat (round(explosionsnum))
 		sprite_index = spr_bombexplosion;
 		var num = irandom_range(6, 10);
 		image_speed = other.explosionsnum / num;
-		if (image_speed < 0.35)
+		if image_speed < 0.35
 			image_speed = 0.35;
-		repeat (3)
+		repeat 3
 			create_debris(x, y, spr_debris);
 	}
 }
-with (obj_camera)
+with obj_camera
 {
 	shake_mag = 5;
 	shake_mag_acc = 30 / room_speed;

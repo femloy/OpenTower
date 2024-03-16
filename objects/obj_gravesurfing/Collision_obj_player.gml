@@ -1,8 +1,8 @@
-if (buffer <= 0 && other.state != states.ghost)
+if buffer <= 0 && other.state != states.ghost
 {
 	buffer = 50;
 	image_alpha = 0;
-	with (other)
+	with other
 	{
 		if (ds_list_find_index(global.saveroom, other.id) == -1)
 		{
@@ -19,15 +19,15 @@ if (buffer <= 0 && other.state != states.ghost)
 		sprite_index = spr_playercorpsestart;
 		image_index = 0;
 		gravesurfingjumpbuffer = 50;
-		with (obj_gravecorpse)
+		with obj_gravecorpse
 		{
-			if (playerid == other.id)
+			if playerid == other.id
 				instance_destroy();
 		}
 		with (instance_create(x, y, obj_gravecorpse))
 			playerid = other.id;
 		state = states.trashroll;
-		repeat (5)
+		repeat 5
 		{
 			with (create_debris(x, y, spr_graveyarddebris2, false))
 				vsp = random_range(-8, -11);

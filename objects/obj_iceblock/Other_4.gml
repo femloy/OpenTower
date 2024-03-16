@@ -1,4 +1,4 @@
-with (obj_collect)
+with obj_collect
 {
 	if (place_meeting(x, y, other))
 	{

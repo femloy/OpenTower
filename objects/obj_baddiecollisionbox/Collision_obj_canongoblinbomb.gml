@@ -1,7 +1,7 @@
 if (instance_exists(baddieID) && other.team == 1 && baddieID.invtime == 0 && baddieID.state != states.grabbed && baddieID.state != states.hit && !baddieID.invincible && baddieID.instantkillable)
 {
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
-	if (!baddieID.important)
+	if !baddieID.important
 	{
 		global.style += (5 + global.combo);
 		global.combotime = 60;
@@ -9,7 +9,7 @@ if (instance_exists(baddieID) && other.team == 1 && baddieID.invtime == 0 && bad
 	}
 	if (!baddieID.elite || baddieID.elitehit <= 0)
 	{
-		if (baddieID.destroyable)
+		if baddieID.destroyable
 		{
 			notification_push(notifs.baddie_hurtboxkill, [room, baddieID.object_index, baddieID, other.object_index]);
 			instance_destroy(baddieID);
@@ -33,7 +33,7 @@ if (instance_exists(baddieID) && other.team == 1 && baddieID.invtime == 0 && bad
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;

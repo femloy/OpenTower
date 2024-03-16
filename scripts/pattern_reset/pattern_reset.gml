@@ -1,3 +1,3 @@
 function pattern_reset() {
-    pattern_enable(false);
+	pattern_enable(false);
 }

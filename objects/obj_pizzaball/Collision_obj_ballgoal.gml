@@ -10,13 +10,13 @@ with (instance_create(0, 0, obj_pizzaball_rank))
 		collect = 400;
 		sprite_index = spr_pizzaball_rank1;
 	}
-	else if (global.golfhit <= gh[1])
+	else if global.golfhit <= gh[1]
 	{
 		s = 2;
 		collect = 250;
 		sprite_index = spr_pizzaball_rank2;
 	}
-	else if (global.golfhit <= gh[2])
+	else if global.golfhit <= gh[2]
 	{
 		s = 1;
 		collect = 100;

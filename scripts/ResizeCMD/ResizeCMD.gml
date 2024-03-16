@@ -2,7 +2,7 @@ function ResizeCMD(_inst, _xscale, _yscale, _oldxscale, _oldyscale) : Command() 
 {
 	static execute = function()
 	{
-		with (inst)
+		with inst
 		{
 			image_xscale = other.xscale;
 			image_yscale = other.yscale;
@@ -10,7 +10,7 @@ function ResizeCMD(_inst, _xscale, _yscale, _oldxscale, _oldyscale) : Command() 
 	};
 	static undo = function()
 	{
-		with (inst)
+		with inst
 		{
 			image_xscale = other.oldxscale;
 			image_yscale = other.oldyscale;

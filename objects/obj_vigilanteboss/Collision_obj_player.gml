@@ -1,6 +1,6 @@
-if (state == states.crouchslide)
+if state == states.crouchslide
 {
-	if (other.flash)
+	if other.flash
 		other.flash = false;
 	scr_hurtplayer(other);
 }

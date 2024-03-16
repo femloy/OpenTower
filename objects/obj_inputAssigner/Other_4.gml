@@ -1,9 +1,9 @@
-if (room == characterselect)
+if room == characterselect
 {
-	if (player_input_device[1] < -1)
+	if player_input_device[1] < -1
 		player_input_device[1] = -2;
 }
-if (room == Realtitlescreen)
+if room == Realtitlescreen
 {
 	player_input_device[0] = -2;
 	player_input_device[1] = -2;

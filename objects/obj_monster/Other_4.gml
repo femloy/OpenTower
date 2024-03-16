@@ -1,4 +1,4 @@
-if (escape)
+if escape
 {
 	instance_deactivate_object(id);
 	with (instance_create(x, y, obj_escapespawn))

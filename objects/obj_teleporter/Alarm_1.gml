@@ -1,12 +1,12 @@
-with (obj_teleporter)
+with obj_teleporter
 {
-	if (trigger == other.trigger && start == 0)
+	if trigger == other.trigger && start == 0
 	{
-		repeat (8)
+		repeat 8
 			create_particle(x + random_range(50, -50), y + random_range(50, -50), particle.teleporteffect, 0);
 	}
 }
-with (player)
+with player
 {
 	fmod_event_one_shot_3d("event:/sfx/misc/teleporterend", x, y);
 	visible = true;
@@ -20,7 +20,7 @@ with (player)
 		sprite_index = spr_peppinoteleporteffect;
 	if (place_meeting(x, y, obj_solid))
 		y--;
-	if (freefallsmash >= 12)
+	if freefallsmash >= 12
 	{
 		with (instance_place(x, y + 4, obj_metalblock))
 			instance_destroy();

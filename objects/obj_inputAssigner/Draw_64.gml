@@ -4,10 +4,10 @@ draw_set_halign(fa_center);
 draw_set_halign(fa_center);
 draw_set_alpha(1);
 draw_set_color(c_white);
-if (!deactivated)
+if !deactivated
 {
 	draw_set_font(lang_get_font("bigfont"));
-	if (press_start)
+	if press_start
 	{
 		var _txt = "PRESS START";
 		draw_text(SCREEN_WIDTH / 2, 298, _txt);

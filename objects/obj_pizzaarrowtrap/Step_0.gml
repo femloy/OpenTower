@@ -1,4 +1,4 @@
-if (!shot)
+if !shot
 {
 	var i = 0;
 	var t = 4;
@@ -13,14 +13,14 @@ if (!shot)
 			break;
 		}
 	}
-	if (shot)
+	if shot
 	{
 		cooldown = 100;
 		with (instance_create(x + (image_xscale * 32), y + 32, obj_pizzaarrow))
 			image_xscale = other.image_xscale;
 	}
 }
-else if (cooldown > 0)
+else if cooldown > 0
 	cooldown--;
 else
 	shot = false;

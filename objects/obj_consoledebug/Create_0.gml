@@ -30,14 +30,14 @@ for (var i = 0; i < array_length(rooms); i++)
 
 create_command("NOCLIP", [], function()
 {
-	with (obj_player1)
+	with obj_player1
 		state = states.debugstate;
 });
 create_command("CHANGE_CHARACTER", [], function()
 {
-	with (obj_player1)
+	with obj_player1
 	{
-		if (character == "P")
+		if character == "P"
 			character = "N";
 		else
 			character = "P";
@@ -47,7 +47,7 @@ create_command("CHANGE_CHARACTER", [], function()
 create_command("ROOM GOTO", [rooms, ["A", "B", "C", "D", "E", "F", "G"]], function(_room, _door)
 {
 	_room = asset_get_index(_room);
-	with (obj_player)
+	with obj_player
 	{
 		targetDoor = _door;
 		lastroom = room;
@@ -70,17 +70,17 @@ create_command("UNLOCK WORLD", [[1, 2, 3, 4, 5]], function(_world)
 });
 create_command("DEBUG OVERLAY", [["TRUE", "FALSE"]], function(_toggle)
 {
-	if (_toggle == "TRUE")
+	if _toggle == "TRUE"
 		show_debug_overlay(true);
 	else
 		show_debug_overlay(false);
 });
 create_command("SWITCH CHAR", [["NOISE", "PEP"]], function(_char)
 {
-	with (obj_player1)
+	with obj_player1
 	{
 		character = "P";
-		if (_char == "NOISE")
+		if _char == "NOISE"
 			ispeppino = false;
 		else
 			ispeppino = true;

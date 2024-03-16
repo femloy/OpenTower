@@ -1,7 +1,7 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_bangeffect);
-	repeat (8)
+	repeat 8
 	{
 		with (create_debris(x + random_range(0, sprite_width), y + random_range(0, sprite_height), spr_deadjohndebris))
 		{
@@ -10,7 +10,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		}
 	}
 	notification_push(notifs.levelblock_break, [obj_deadjohnparent]);
-	repeat (5)
+	repeat 5
 	{
 		with (instance_create(x + random_range(0, 64), y + random_range(0, 64), obj_parryeffect))
 		{

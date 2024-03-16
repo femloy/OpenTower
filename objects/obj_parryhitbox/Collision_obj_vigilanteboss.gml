@@ -1,2 +1,2 @@
-if (other.state == states.crouchslide && !collisioned)
+if other.state == states.crouchslide && !collisioned
 	event_user(0);

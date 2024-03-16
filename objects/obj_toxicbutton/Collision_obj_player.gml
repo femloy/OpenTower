@@ -1,6 +1,6 @@
-if (!active)
+if !active
 {
-	with (obj_toxicspray)
+	with obj_toxicspray
 	{
 		if (trigger == other.trigger && !instance_exists(cloudID))
 		{

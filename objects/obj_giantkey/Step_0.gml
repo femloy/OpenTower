@@ -1,4 +1,4 @@
-if (grounded && bounce == 0)
+if grounded && bounce == 0
 {
 	vsp = -6;
 	alarm[1] = 40;

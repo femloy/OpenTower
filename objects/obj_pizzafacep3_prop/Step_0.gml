@@ -1,14 +1,14 @@
-if (use_collision)
+if use_collision
 {
-	if (!start)
+	if !start
 	{
 		sprite_index = stunspr;
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 		{
-			with (obj_player1)
+			with obj_player1
 			{
 				sprite_index = spr_player_gnomecutscene1;
-				if (!ispeppino)
+				if !ispeppino
 					sprite_index = spr_playerN_bosscutscene1;
 			}
 			alarm[1] = -1;
@@ -16,13 +16,13 @@ if (use_collision)
 			fmod_event_one_shot_3d("event:/sfx/pep/step", x, y);
 			hsp = 0;
 			start = true;
-			if (sprite_index == spr_pepperman_scared)
+			if sprite_index == spr_pepperman_scared
 				fmod_event_one_shot_3d("event:/sfx/voice/peppermanscared", x, y);
-			if (sprite_index == spr_playerV_hurt)
+			if sprite_index == spr_playerV_hurt
 				fmod_event_one_shot_3d("event:/sfx/voice/vigiangry", x, y);
-			if (sprite_index == spr_playerN_hurt)
+			if sprite_index == spr_playerN_hurt
 				fmod_event_one_shot_3d("event:/sfx/voice/noisepositive", x, y);
-			if (sprite_index == spr_fakepeppino_stun)
+			if sprite_index == spr_fakepeppino_stun
 				fmod_event_one_shot_3d("event:/sfx/voice/fakepeppositive", x, y);
 			sprite_index = angryspr;
 		}
@@ -38,8 +38,8 @@ else
 {
 	x += hsp;
 	y += vsp;
-	if (vsp < 20)
+	if vsp < 20
 		vsp += grav;
-	if (y > 400)
+	if y > 400
 		instance_destroy();
 }

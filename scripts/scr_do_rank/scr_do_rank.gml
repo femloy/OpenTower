@@ -1,8 +1,8 @@
 function scr_is_p_rank()
 {
-	if (global.leveltosave != "exit" && global.leveltosave != "secretworld")
+	if global.leveltosave != "exit" && global.leveltosave != "secretworld"
 		return global.lap && global.secretfound >= 3 && global.treasure && !global.combodropped && global.prank_enemykilled;
-	else if (global.leveltosave == "exit")
+	else if global.leveltosave == "exit"
 		return !global.combodropped;
 	else
 		return !global.combodropped && global.prank_enemykilled;
@@ -16,17 +16,17 @@ function scr_do_rank(showtoppins = true, boss = false)
 	var cy = camera_get_view_y(view_camera[0]) + SCREEN_Y;
 	rankpos_x = ex - cx;
 	rankpos_y = ey - cy;
-	if (global.timeattack == 1)
+	if global.timeattack == 1
 		obj_timeattack.stop = true;
-	with (obj_wartimer)
+	with obj_wartimer
 		notification_push(notifs.wartimer_endlevel, [minutes, seconds + addseconds]);
 	targetDoor = "none";
 	obj_camera.alarm[2] = -1;
 	var roomname = room_get_name(room);
 	var namestring = string_letters(roomname);
-	if (!global.tutorial_room)
+	if !global.tutorial_room
 	{
-		if (!boss)
+		if !boss
 			scr_savescore(global.leveltosave);
 		else
 		{
@@ -40,7 +40,7 @@ function scr_do_rank(showtoppins = true, boss = false)
 			var _rank = "d";
 			var maxhats = 6 + global.srank;
 			var currhats = _extrahats + _hats;
-			if (currhats >= maxhats && !global.bossplayerhurt)
+			if currhats >= maxhats && !global.bossplayerhurt
 				_rank = "p";
 			else if (currhats >= (maxhats - 2))
 				_rank = "s";
@@ -57,7 +57,7 @@ function scr_do_rank(showtoppins = true, boss = false)
 			gamesave_async_save();
 		}
 		notification_push(notifs.end_level, [global.leveltosave, global.secretfound, global.level_minutes, global.level_seconds]);
-		with (obj_achievementtracker)
+		with obj_achievementtracker
 			event_perform(3, 0);
 	}
 	else
@@ -71,10 +71,10 @@ function scr_do_rank(showtoppins = true, boss = false)
 			_lap = true;
 		}
 		obj_savesystem.ini_str = ini_close();
-		if (_lap)
+		if _lap
 			create_transformation_tip(lang_get_value("tutorial_lapunlock"));
 	}
-	if (global.combo > 0)
+	if global.combo > 0
 	{
 		global.combotime = 0;
 		global.combo = 0;
@@ -89,7 +89,7 @@ function scr_do_rank(showtoppins = true, boss = false)
 		{
 			do_rank = true;
 			toppinvisible = showtoppins;
-			with (obj_pizzaface)
+			with obj_pizzaface
 			{
 				if (bbox_in_camera(view_camera[0]))
 					notification_push(notifs.close_call, []);
@@ -100,13 +100,13 @@ function scr_do_rank(showtoppins = true, boss = false)
 				targetRoom = tower_entrancehall;
 				targetDoor = "HUB";
 			}
-			else if (global.leveltosave == "secretworld")
+			else if global.leveltosave == "secretworld"
 				toppinvisible = false;
-			else if (room == tower_entrancehall)
+			else if room == tower_entrancehall
 			{
-				with (obj_followcharacter)
+				with obj_followcharacter
 					persistent = false;
-				if (!global.exitrank)
+				if !global.exitrank
 				{
 					do_rank = false;
 					targetRoom = Endingroom;
@@ -128,7 +128,7 @@ function scr_do_rank(showtoppins = true, boss = false)
 	{
 		obj_player2.state = states.door;
 		obj_player2.sprite_index = obj_player2.spr_lookdoor;
-		if (global.coop)
+		if global.coop
 			obj_player2.visible = true;
 	}
 	obj_endlevelfade.alarm[0] = 235;

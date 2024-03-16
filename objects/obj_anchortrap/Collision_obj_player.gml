@@ -1,2 +1,2 @@
-if (state == states.fall)
+if state == states.fall
 	scr_hurtplayer(other);

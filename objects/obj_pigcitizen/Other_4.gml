@@ -1,4 +1,4 @@
-if (male)
+if male
 {
 	tauntspr = spr_pigcitizen_tauntM;
 	walkspr = spr_pigcitizen_walkM;

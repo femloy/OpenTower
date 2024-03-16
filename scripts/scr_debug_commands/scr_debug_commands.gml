@@ -6,7 +6,7 @@ function string_split(input, split)
 	for (var i = 1; i < string_length(input) + 1; i++)
 	{
 		var _char = string_char_at(input, i);
-		if (_char != split)
+		if _char != split
 			_current_str += _char;
 		else
 		{
@@ -19,7 +19,7 @@ function string_split(input, split)
 function function_overload(arg_array, func)
 {
 	var _size = array_length(arg_array);
-	switch (_size)
+	switch _size
 	{
 		case 0:
 			func();
@@ -56,7 +56,7 @@ function DebugCommand(_id, _desc, _format, _func) constructor
 	
 	Invoke = function(args)
 	{
-		if (args != undefined)
+		if args != undefined
 			function_overload(args, func);
 		else
 			func();
@@ -64,9 +64,9 @@ function DebugCommand(_id, _desc, _format, _func) constructor
 }
 function TextList_Add(type, text)
 {
-	with (obj_debugcontroller)
+	with obj_debugcontroller
 	{
-		if (DEBUG)
+		if DEBUG
 			ds_list_add(text_list, [type, text]);
 	}
 }

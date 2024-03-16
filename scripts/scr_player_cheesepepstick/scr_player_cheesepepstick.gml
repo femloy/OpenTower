@@ -2,14 +2,14 @@ function scr_player_cheesepepstick()
 {
 	hsp = 0;
 	vsp = 0;
-	if (!ispeppino)
+	if !ispeppino
 	{
 		vsp = (key_down - key_up) * 4;
-		if (vsp < 0)
+		if vsp < 0
 			sprite_index = spr_playerN_cheesedstickside;
-		else if (vsp > 0)
+		else if vsp > 0
 			sprite_index = spr_playerN_cheesedsticksidedown;
-		if (vsp == 0)
+		if vsp == 0
 			image_index = 0;
 		if (floor(image_index) % 4 == 0 && vsp != 0)
 		{
@@ -23,7 +23,7 @@ function scr_player_cheesepepstick()
 		jumpAnim = false;
 		sprite_index = spr_cheesepepfall;
 	}
-	if (grounded)
+	if grounded
 	{
 		fmod_event_one_shot_3d("event:/sfx/cheese/step", x, y);
 		state = states.cheesepep;
@@ -32,7 +32,7 @@ function scr_player_cheesepepstick()
 		landAnim = true;
 	}
 	move = key_left + key_right;
-	if (input_buffer_jump > 0)
+	if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		fmod_event_one_shot_3d("event:/sfx/cheese/jump", x, y);
@@ -43,13 +43,13 @@ function scr_player_cheesepepstick()
 		sprite_index = spr_cheesepep_walljump;
 		image_index = 0;
 		movespeed = xscale * 3;
-		if (!key_down)
+		if !key_down
 			vsp = -11;
-		if (!ispeppino)
+		if !ispeppino
 		{
 			sprite_index = spr_playerN_cheesedwalljump;
 			movespeed = xscale * 8;
-			if (!key_down)
+			if !key_down
 				vsp = -14;
 		}
 	}
@@ -63,15 +63,15 @@ function scr_player_cheesepepstickside()
 	hurted = true;
 	move = key_down - key_up;
 	moveside = key_left + key_right;
-	if (character == "P" && !ispeppino && move != 0)
+	if character == "P" && !ispeppino && move != 0
 		yscale = -move;
 	hsp = 0;
 	vsp = move * movespeed;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < 6)
+		if movespeed < 6
 			movespeed += 0.5;
-		else if (movespeed == 6)
+		else if movespeed == 6
 			movespeed = 6;
 	}
 	else
@@ -85,7 +85,7 @@ function scr_player_cheesepepstickside()
 		sprite_index = spr_cheesepepjump;
 		input_buffer_jump = 0;
 		x += xscale;
-		if (!key_down)
+		if !key_down
 			vsp = -11;
 		image_index = 0;
 		state = states.cheesepep;
@@ -100,7 +100,7 @@ function scr_player_cheesepepstickside()
 		hsp = move * movespeed;
 		cheesepep_buffer = 0;
 	}
-	if (grounded && moveside == xscale)
+	if grounded && moveside == xscale
 	{
 		cheesepep_buffer = 0;
 		grav = 0.5;
@@ -111,34 +111,34 @@ function scr_player_cheesepepstickside()
 	if (scr_solid(x, y))
 	{
 		var tx = try_solid(xscale, 0, obj_solid, 64);
-		if (tx != -1)
+		if tx != -1
 			x += (tx * xscale);
 		else
 		{
 			tx = try_solid(-xscale, 0, obj_solid, 64);
-			if (tx != -1)
+			if tx != -1
 				x -= (tx * xscale);
 		}
 	}
 	var rvsp = round(vsp);
-	if (rvsp == 0 && vsp != 0)
+	if rvsp == 0 && vsp != 0
 		rvsp = move;
 	var stickside = (xscale > 0) ? bbox_left : bbox_right;
 	var bbox_y = (rvsp > 0) ? bbox_bottom : bbox_top;
 	var colside = collision_line(x, bbox_y + (sign(rvsp) * 2), stickside - (8 * xscale), bbox_y + (sign(rvsp) * 2), obj_solid, false, true);
 	if (rvsp != 0 && colside == noone && scr_solid(x - xscale, y) && !place_meeting(x, y + 1, obj_platform))
 	{
-		if (cheesepep_buffer <= 0)
+		if cheesepep_buffer <= 0
 		{
 			var old_x = x;
 			x -= xscale;
 			var ty = try_solid(0, sign(rvsp), obj_solid, 64);
-			if (ty != -1)
+			if ty != -1
 				y += (ty * sign(rvsp));
 			x = old_x;
 			xscale = -xscale;
 			x += (16 * xscale);
-			if (rvsp > 0)
+			if rvsp > 0
 			{
 				stickdir = -1;
 				state = states.cheesepepstickup;
@@ -175,13 +175,13 @@ function scr_player_cheesepepstickup()
 		var _railinst = instance_place(x, y + stickdir, obj_railparent);
 		hsp = (move * movespeed) + (_railinst.movespeed * _railinst.dir);
 	}
-	if (move != 0)
+	if move != 0
 		xscale = sign(move);
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < 6)
+		if movespeed < 6
 			movespeed += 0.5;
-		else if (movespeed == 6)
+		else if movespeed == 6
 			movespeed = 6;
 	}
 	else
@@ -232,12 +232,12 @@ function scr_player_cheesepepstickup()
 	var colup = collision_line(x + (xscale * 2), y, x + (xscale * 2), _sideup + (8 * stickdir), obj_solid, false, true);
 	if (colup == noone && scr_solid(x, y + stickdir))
 	{
-		if (cheesepep_buffer <= 0)
+		if cheesepep_buffer <= 0
 		{
 			var old_y = y;
 			y += stickdir;
 			var tx = try_solid(xscale, 0, obj_solid, 64);
-			if (tx != -1)
+			if tx != -1
 				x += (tx * xscale);
 			y = old_y;
 			y += (16 * stickdir);

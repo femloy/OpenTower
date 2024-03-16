@@ -1,11 +1,11 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
-if (state == states.walk)
+if state == states.walk
 {
-	if (!chasing)
+	if !chasing
 	{
 		targetplayer = instance_nearest(x, y, obj_player);
 		if ((targetplayer.x > (x - 1900) && targetplayer.x < (x + 1900)) && (y <= (targetplayer.y + 540) && y >= (targetplayer.y - 540)))
@@ -13,7 +13,7 @@ if (state == states.walk)
 			chasing = true;
 			image_index = 0;
 			sprite_index = walkspr;
-			if (x != targetplayer.x)
+			if x != targetplayer.x
 				image_xscale = -sign(x - targetplayer.x);
 			state = states.pizzagoblinthrow;
 			hsp = 0;
@@ -26,23 +26,23 @@ if (state == states.walk)
 		image_index = 0;
 	}
 }
-else if (state == states.chase)
+else if state == states.chase
 {
 	if (abs(x - targetplayer.x) < 78)
 	{
-		if (grounded && vsp > -1)
+		if grounded && vsp > -1
 			hsp = 0;
-		else if (!grounded)
+		else if !grounded
 			hsp = image_xscale * chasespeed;
 	}
 	else
 	{
-		if (x != targetplayer.x && grounded)
+		if x != targetplayer.x && grounded
 			image_xscale = -sign(x - targetplayer.x);
 		hsp = image_xscale * chasespeed;
 	}
 	var inst_front = collision_line(x, y + 25, x + (sign(hsp) * 78), y + 25, obj_solid, false, true);
-	if (bombreset == 0)
+	if bombreset == 0
 	{
 		if ((targetplayer.x > (x - attackthreshold_x) && targetplayer.x < (x + attackthreshold_x)) && (targetplayer.y > (y - attackthreshold_y) && targetplayer.y < (y + attackthreshold_y)) && (inst_front == noone || (inst_front != -4 && x > inst_front.x && targetplayer.x > inst_front.x) || (inst_front != -4 && x < inst_front.x && targetplayer.x < inst_front.x)))
 		{
@@ -57,9 +57,9 @@ else if (state == states.chase)
 	if (((inst_front != -4 || inst_up != -4) || (inst_down == noone && inst_down2 == noone)) && targetplayer.y <= (y + 32) && grounded && state != states.charge)
 		vsp = -11;
 }
-if (state == states.charge)
+if state == states.charge
 {
-	if (attack_count > 0)
+	if attack_count > 0
 		attack_count--;
 	else
 	{
@@ -69,7 +69,7 @@ if (state == states.charge)
 		hsp = 0;
 	}
 }
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -101,22 +101,22 @@ switch (state)
 		scr_enemy_rage();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] == -1)
+if flash == 1 && alarm[2] == -1
 	alarm[2] = 0.15 * room_speed;
 scr_scareenemy();
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

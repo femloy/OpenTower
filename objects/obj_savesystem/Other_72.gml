@@ -2,11 +2,11 @@ var ident = ds_map_find_value(async_load, "id");
 var status = ds_map_find_value(async_load, "status");
 var error = ds_map_find_value(async_load, "error");
 
-switch (state)
+switch state
 {
 	case 1:
 	case 3:
-		if (ident == saveid)
+		if ident == saveid
 		{
 			buffer_delete(savebuff);
 			trace("Save status: ", status, ", error: ", error);
@@ -15,7 +15,7 @@ switch (state)
 		break;
 	
 	case 2:
-		if (ident == loadid)
+		if ident == loadid
 		{
 			var buffstring = buffer_read(loadbuff, 11);
 			ini_open_from_string(buffstring);
@@ -59,7 +59,7 @@ switch (state)
 			global.mansiontreasure = ini_read_real("Treasure", "mansion", false);
 			global.kidspartytreasure = ini_read_real("Treasure", "kidsparty", false);
 			global.wartreasure = ini_read_real("Treasure", "war", false);
-			with (obj_achievementtracker)
+			with obj_achievementtracker
 			{
 				achievements_load(achievements_update);
 				achievements_load(achievements_notify);

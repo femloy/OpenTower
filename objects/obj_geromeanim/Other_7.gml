@@ -1,6 +1,6 @@
-if (sprite_index == spr_gerome_idle1)
+if sprite_index == spr_gerome_idle1
 {
-	with (obj_geromefollow)
+	with obj_geromefollow
 		visible = true;
 	instance_destroy();
 }

@@ -2,7 +2,7 @@ if (scr_transformationcheck() && state != states.bombpepside && state != states.
 {
 	var dir = point_direction(other.x, other.y, x, y);
 	trace(dir);
-	if (!grounded && dir >= 45 && dir < 135)
+	if !grounded && dir >= 45 && dir < 135
 	{
 		state = states.bombpepup;
 		bombup_dir = -1;
@@ -16,9 +16,9 @@ if (scr_transformationcheck() && state != states.bombpepside && state != states.
 		movespeed = 14;
 		sprite_index = spr_hurt;
 	}
-	if (state != states.bombpepside && state != states.bombpepup)
+	if state != states.bombpepside && state != states.bombpepup
 	{
-		if (dir >= 135 && dir < 270)
+		if dir >= 135 && dir < 270
 		{
 			state = states.bombpepside;
 			xscale = -1;

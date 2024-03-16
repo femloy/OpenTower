@@ -2,11 +2,11 @@ function scr_player_ratmountladder()
 {
 	movespeed = 0;
 	hsp = 0;
-	if (key_up)
+	if key_up
 	{
 		sprite_index = spr_lonegustavo_ladder;
 		vsp = -6;
-		if (steppybuffer > 0)
+		if steppybuffer > 0
 			steppybuffer--;
 		else
 		{
@@ -16,7 +16,7 @@ function scr_player_ratmountladder()
 		}
 		image_speed = 0.35;
 	}
-	else if (key_down)
+	else if key_down
 	{
 		sprite_index = spr_lonegustavo_ladderdown;
 		vsp = 10;
@@ -36,13 +36,13 @@ function scr_player_ratmountladder()
 		image_index = 0;
 		vsp = 0;
 	}
-	if (input_buffer_jump > 0)
+	if input_buffer_jump > 0
 	{
 		input_buffer_jump = 0;
 		ladderbuffer = 20;
 		state = states.ratmountjump;
 		sprite_index = spr_player_ratmountgroundpound;
-		if (key_down)
+		if key_down
 			vsp = 5;
 		else
 			vsp = -9;

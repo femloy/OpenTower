@@ -34,7 +34,7 @@ if (optionselected == 1 && (obj_player.key_jump || keyboard_check_pressed(vk_ent
 	global.SAGEknighttaken = false;
 	global.SAGEtoppin = false;
 	global.SAGEtreasure = false;
-	with (obj_SAGE2019achievementmarker)
+	with obj_SAGE2019achievementmarker
 	{
 		snickshotgun = false;
 		dungeonbackup = false;

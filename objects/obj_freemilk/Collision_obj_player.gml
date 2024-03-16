@@ -1,6 +1,6 @@
 if (global.noisejetpack && (other.ispeppino || other.noisepizzapepper) && playerid == noone)
 {
-	with (other)
+	with other
 	{
 		hsp = 0;
 		vsp = 0;

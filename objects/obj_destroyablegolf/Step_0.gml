@@ -1,4 +1,4 @@
-with (obj_pizzaball)
+with obj_pizzaball
 {
 	with (instance_place(x + hsp, y, other))
 		instance_destroy();

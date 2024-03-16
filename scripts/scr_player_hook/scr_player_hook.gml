@@ -1,6 +1,6 @@
 function scr_player_hook()
 {
-	if (key_jump)
+	if key_jump
 	{
 		state = states.jump;
 		sprite_index = spr_jump;

@@ -1,2 +1,2 @@
-if (!active)
+if !active
 	instance_destroy();

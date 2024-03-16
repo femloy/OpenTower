@@ -1,9 +1,9 @@
 var spd = 0.02;
 image_xscale = Approach(image_xscale, 0, spd);
 image_yscale = Approach(image_yscale, 0, spd);
-if (image_xscale <= 0)
+if image_xscale <= 0
 	instance_destroy();
-if (randombuffer > 0)
+if randombuffer > 0
 	randombuffer--;
 else
 {

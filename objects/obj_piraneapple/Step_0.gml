@@ -1,36 +1,36 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.walk:
 		var targetplayer = obj_player1.id;
-		if (hamspotted == 1)
+		if hamspotted == 1
 			targetplayer = obj_ham;
 		if ((targetplayer.x > x && image_xscale < 0) || (targetplayer.x < x && image_xscale > 0))
 		{
 			movespeed = Approach(movespeed, 0, 0.5);
-			if (movespeed <= 0)
+			if movespeed <= 0
 			{
 				movespeed = 0;
-				if (targetplayer.x != x)
+				if targetplayer.x != x
 					image_xscale = sign(targetplayer.x - x);
 				else
 					image_xscale *= -1;
 			}
 		}
-		else if (movespeed < 18)
+		else if movespeed < 18
 			movespeed += 1;
 		hsp = image_xscale * movespeed;
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 			vsp = -5;
 		if (instance_exists(obj_ham))
 		{
 			if (hamspotted == 0 && (obj_ham.x > (x - 400) && obj_ham.x < (x + 400)) && (y <= (obj_ham.y + 20) && y >= (obj_ham.y - 20)))
 				hamspotted = true;
 		}
-		if (flash == 1 && alarm[2] <= 0)
+		if flash == 1 && alarm[2] <= 0
 			alarm[2] = 0.05 * room_speed;
-		if (hitboxcreate == 0)
+		if hitboxcreate == 0
 		{
 			with (instance_create(x, y, obj_forkhitbox))
 			{
@@ -54,7 +54,7 @@ switch (state)
 		}
 		else
 		{
-			if (grounded)
+			if grounded
 			{
 				state = states.walk;
 				sprite_index = spr_piraneappleattack;

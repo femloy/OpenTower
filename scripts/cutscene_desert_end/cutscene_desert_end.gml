@@ -1,6 +1,6 @@
 function cutscene_desert_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.normal;
 		x = backtohubstartx;

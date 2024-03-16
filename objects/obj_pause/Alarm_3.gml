@@ -1,11 +1,11 @@
 pause = false;
 var rm = room;
-if (!hub)
+if !hub
 {
 	obj_player1.targetRoom = Realtitlescreen;
 	obj_player2.targetRoom = Realtitlescreen;
 	room = Realtitlescreen;
-	with (obj_player1)
+	with obj_player1
 	{
 		character = "P";
 		scr_characterspr();
@@ -26,7 +26,7 @@ else
 {
 	global.levelreset = false;
 	scr_playerreset();
-	with (obj_player1)
+	with obj_player1
 		swap_player();
 	global.levelreset = true;
 	obj_player1.targetDoor = "HUB";

@@ -1,6 +1,6 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -30,13 +30,13 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 }
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
 idlespr = spr_canongoblin_walk;
 stunfallspr = spr_canongoblin_stun;
@@ -44,16 +44,16 @@ walkspr = spr_canongoblin_walk;
 stunspr = spr_canongoblin_stun;
 grabbedspr = spr_canongoblin_stun;
 scr_scareenemy();
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
 var targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0 && grounded)
+if x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0 && grounded
 {
 	if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
 	{
@@ -67,7 +67,7 @@ if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0 &&
 		}
 	}
 }
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

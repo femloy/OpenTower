@@ -1,14 +1,14 @@
 function cutscene_superpinball_start()
 {
 	var _finish = false;
-	with (obj_player1)
+	with obj_player1
 	{
-		if (state != states.door && state != states.comingoutdoor)
+		if state != states.door && state != states.comingoutdoor
 			_finish = true;
 	}
-	if (_finish)
+	if _finish
 	{
-		with (obj_player)
+		with obj_player
 		{
 			if (check_player_coop())
 			{
@@ -22,13 +22,13 @@ function cutscene_superpinball_start()
 function cutscene_superpinball_middle()
 {
 	var t = -4;
-	with (obj_superpinballmachine)
+	with obj_superpinballmachine
 	{
 		x -= other.movespeed;
 		t = id;
 	}
 	movespeed += 0.25;
-	with (obj_player)
+	with obj_player
 	{
 		if (check_player_coop())
 		{
@@ -36,12 +36,12 @@ function cutscene_superpinball_middle()
 			y = t.bbox_top - 46;
 		}
 	}
-	if (t.x < 96)
+	if t.x < 96
 		cutscene_end_action();
 }
 function cutscene_superpinball_middle2()
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (vsp >= 0 && check_player_coop())
 		{
@@ -49,12 +49,12 @@ function cutscene_superpinball_middle2()
 			hsp = -10;
 		}
 	}
-	if (obj_player1.x < 0)
+	if obj_player1.x < 0
 		cutscene_end_action();
 }
 function cutscene_superpinball_middle3()
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (check_player_coop())
 		{
@@ -66,12 +66,12 @@ function cutscene_superpinball_middle3()
 }
 function cutscene_superpinball_middle4()
 {
-	if (obj_player1.y > 540)
+	if obj_player1.y > 540
 		cutscene_end_action();
 }
 function cutscene_superpinball_middle5()
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (check_player_coop())
 		{
@@ -83,7 +83,7 @@ function cutscene_superpinball_middle5()
 }
 function cutscene_superpinball_end()
 {
-	with (obj_player)
+	with obj_player
 	{
 		if (check_player_coop())
 			state = states.normal;

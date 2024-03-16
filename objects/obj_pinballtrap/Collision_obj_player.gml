@@ -1,13 +1,13 @@
 var _used = false;
-with (obj_trapghost)
+with obj_trapghost
 {
-	if (state == states.chase && trapid == other.id)
+	if state == states.chase && trapid == other.id
 		_used = true;
 }
-if (_used)
+if _used
 {
 	var _obj = id;
-	with (other)
+	with other
 	{
 		if (scr_transformationcheck() || state == states.tumble)
 		{
@@ -29,7 +29,7 @@ if (_used)
 				if (scr_solid(x, y))
 				{
 					var i = 0;
-					while (i <= _max)
+					while i <= _max
 					{
 						if (scr_solid(x, y))
 						{
@@ -43,7 +43,7 @@ if (_used)
 				if (scr_solid(x, y))
 				{
 					i = 0;
-					while (i <= _max)
+					while i <= _max
 					{
 						if (scr_solid(x, y))
 						{

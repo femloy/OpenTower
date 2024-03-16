@@ -1,4 +1,4 @@
-if (state != states.blockstance)
+if state != states.blockstance
 {
 	obj_player1.brick = false;
 	state = states.blockstance;

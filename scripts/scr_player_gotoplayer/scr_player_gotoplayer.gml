@@ -10,7 +10,7 @@ function scr_player_gotoplayer()
 		hsp = lengthdir_x(16, _dir);
 		vsp = lengthdir_y(16, _dir);
 		var t = 16;
-		repeat (8)
+		repeat 8
 			create_particle(x + irandom_range(-t, t), y + irandom_range(-t, t), particle.cloudeffect, 0);
 		if (distance_to_object(playerid) < 16)
 		{
@@ -22,7 +22,7 @@ function scr_player_gotoplayer()
 	{
 		x = playerid.x;
 		y = playerid.y;
-		if (key_jump2)
+		if key_jump2
 		{
 			xscale = playerid.xscale;
 			state = states.normal;

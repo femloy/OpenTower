@@ -1,10 +1,10 @@
 var _found = false;
-with (obj_frontcanongoblin)
+with obj_frontcanongoblin
 {
-	if (state != states.dead)
+	if state != states.dead
 		_found = true;
 }
-if (!active && !_found)
+if !active && !_found
 {
 	active = true;
 	start = true;
@@ -12,21 +12,21 @@ if (!active && !_found)
 		instance_create(x, y, obj_frontcanongoblin);
 	else
 	{
-		with (obj_frontcanongoblin)
+		with obj_frontcanongoblin
 		{
 			destroyed = false;
 			captain_sprite = spr_captaingoblin;
 			state = states.normal;
 		}
 	}
-	with (obj_frontcanongoblin_trigger)
+	with obj_frontcanongoblin_trigger
 		active = true;
 }
-else if (!start)
+else if !start
 {
-	with (obj_frontcanongoblin)
+	with obj_frontcanongoblin
 	{
-		if (state != states.dead && !destroyed)
+		if state != states.dead && !destroyed
 		{
 			destroyed = false;
 			destroybuffer = 50;

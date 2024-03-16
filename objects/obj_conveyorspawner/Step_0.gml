@@ -1,4 +1,4 @@
-if (delay > 0)
+if delay > 0
 	delay--;
 else
 {
@@ -8,9 +8,9 @@ else
 		pos = 0;
 	with (instance_create(x, y - 32, objectlist[pos]))
 	{
-		repeat (4)
+		repeat 4
 			instance_create(x, y, obj_factorycreateeffect);
-		switch (object_index)
+		switch object_index
 		{
 			case obj_dashpad:
 				image_xscale = other.dir;

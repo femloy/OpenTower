@@ -1,29 +1,29 @@
-if (playerid > -1)
+if playerid > -1
 	exit;
-if (state != states.normal)
+if state != states.normal
 	exit;
-if (other.state == states.hurt)
+if other.state == states.hurt
 	exit;
-if (other.state == states.gotoplayer)
+if other.state == states.gotoplayer
 	exit;
-if (other.state == states.stringfall)
+if other.state == states.stringfall
 	exit;
-if (other.state == states.stringjump)
+if other.state == states.stringjump
 	exit;
-if (other.state == states.stringfling)
+if other.state == states.stringfling
 	exit;
-if (object_index != obj_tubeenter && other.state != states.tube)
+if object_index != obj_tubeenter && other.state != states.tube
 	exit;
 var _offset_x = 32 * image_xscale;
 var _offset_y = 14 * image_yscale;
-with (other)
+with other
 {
-	if (other.object_index == obj_tubeenter)
+	if other.object_index == obj_tubeenter
 	{
 		shot = false;
-		if (state != states.tube)
+		if state != states.tube
 		{
-			repeat (6)
+			repeat 6
 				create_debris(x, y, spr_waterdrop, false);
 		}
 	}
@@ -44,7 +44,7 @@ if (floor(other.x) == (xstart + _offset_x) && floor(other.y) == (ystart + _offse
 	other.y = ystart + _offset_y;
 	image_index = 0;
 	playerid = other.id;
-	if (object_index == obj_tubeenter)
+	if object_index == obj_tubeenter
 		fmod_event_one_shot_3d("event:/sfx/pipe/start", x, y);
 	else
 		fmod_event_one_shot_3d("event:/sfx/pipe/end", x, y);

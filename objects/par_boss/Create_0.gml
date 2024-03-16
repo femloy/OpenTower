@@ -48,7 +48,7 @@ function SUPER_player_destroy(player)
 {
 	depth = player.depth;
 	playerdestroyed = true;
-	with (player)
+	with player
 	{
 		camera_zoom(1, 0.1);
 		var lag = room_speed * 3;
@@ -74,7 +74,7 @@ function SUPER_player_destroy(player)
 		hitvsp = -8;
 		state = states.hit;
 		instance_create(other.x, other.y, obj_parryeffect);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
@@ -87,7 +87,7 @@ function SUPER_boss_destroy(player)
 	depth = player.depth;
 	global.attackstyle = 0;
 	global.savedattackstyle = 0;
-	with (player)
+	with player
 	{
 		camera_zoom(1, 0.1);
 		if (state == states.fistmatch || state == states.superattack || state == states.parry || state == states.backbreaker)
@@ -96,7 +96,7 @@ function SUPER_boss_destroy(player)
 			image_index = 6;
 			state = states.handstandjump;
 		}
-		if (state != states.chainsaw)
+		if state != states.chainsaw
 		{
 			tauntstoredmovespeed = movespeed;
 			tauntstoredsprite = sprite_index;
@@ -129,7 +129,7 @@ function SUPER_boss_destroy(player)
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
@@ -138,23 +138,23 @@ function SUPER_boss_destroy(player)
 }
 function SUPER_boss_hurt(damage, player)
 {
-	if (important)
+	if important
 		hp -= damage;
-	if (player.state != states.playersuperattack)
+	if player.state != states.playersuperattack
 	{
-		with (obj_bosscontroller)
+		with obj_bosscontroller
 			super += 30;
 	}
-	with (player)
+	with player
 	{
 		var atstate = state;
-		if (state == states.handstandjump)
+		if state == states.handstandjump
 		{
 			state = states.finishingblow;
 			sprite_index = choose(spr_finishingblow1, spr_finishingblow2, spr_finishingblow3, spr_finishingblow4, spr_finishingblow5);
 			image_index = 6;
 		}
-		if (state != states.chainsaw)
+		if state != states.chainsaw
 		{
 			tauntstoredmovespeed = movespeed;
 			tauntstoredsprite = sprite_index;
@@ -182,7 +182,7 @@ function SUPER_boss_hurt(damage, player)
 		other.jugglecount++;
 		other.hitvsp = -9;
 		other.movespeed = 7 + (other.jugglecount * 2);
-		if (atstate == states.parry)
+		if atstate == states.parry
 		{
 			other.hitvsp = -14;
 			other.movespeed = 0;
@@ -196,7 +196,7 @@ function SUPER_boss_hurt(damage, player)
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
@@ -205,11 +205,11 @@ function SUPER_boss_hurt(damage, player)
 }
 function SUPER_boss_hurt_noplayer(damage)
 {
-	if (important)
+	if important
 		hp -= damage;
-	if (obj_player.state != states.playersuperattack)
+	if obj_player.state != states.playersuperattack
 	{
-		with (obj_bosscontroller)
+		with obj_bosscontroller
 			super += 30;
 	}
 	var lag = 8;
@@ -232,7 +232,7 @@ function SUPER_boss_hurt_noplayer(damage)
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
@@ -242,9 +242,9 @@ function SUPER_player_hurt(damage, player)
 {
 	if (instance_exists(obj_bosscontroller))
 		obj_bosscontroller.player_hp -= damage;
-	with (obj_bosscontroller)
+	with obj_bosscontroller
 		super += 80;
-	with (player)
+	with player
 	{
 		var lag = 8;
 		if (state == states.hit || state == states.chainsaw)
@@ -268,10 +268,10 @@ function SUPER_player_hurt(damage, player)
 		hitxscale = (x != other.x) ? sign(other.x - x) : -other.image_xscale;
 		sprite_index = spr_hurt;
 		hithsp = 15;
-		if (hitstunned > 0)
+		if hitstunned > 0
 		{
 			hitstunned -= 50;
-			if (hitstunned <= 0)
+			if hitstunned <= 0
 				hitstunned = 1;
 		}
 		else
@@ -283,7 +283,7 @@ function SUPER_player_hurt(damage, player)
 		instance_create(x, y, obj_slapstar);
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;

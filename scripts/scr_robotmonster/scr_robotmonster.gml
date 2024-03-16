@@ -5,7 +5,7 @@ function scr_robot_normal()
 	hsp = image_xscale * movespeed;
 	if (place_meeting(x + hsp, y, obj_solid) || (place_meeting(x + hsp, y, obj_hallway) && !place_meeting(x, y, obj_hallway)))
 		image_xscale *= -1;
-	if (random_buffer <= 0)
+	if random_buffer <= 0
 	{
 		turnbuffer = turnmax;
 		state = states.turn;
@@ -20,7 +20,7 @@ function scr_robot_turn()
 {
 	image_speed = 0.25;
 	hsp = 0;
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
 		state = states.normal;
 		sprite_index = walkspr;
@@ -54,7 +54,7 @@ function scr_robot_attack()
 	if (!instance_exists(throw_inst))
 	{
 		throw_inst = instance_create(x, y, obj_robotmonsterhand);
-		with (throw_inst)
+		with throw_inst
 		{
 			fake = other.fake;
 			targetRoom = other.targetRoom;
@@ -72,7 +72,7 @@ function scr_robot_detect()
 	var _player_colY = playerinst.y > (y - threshold_y) && playerinst.y < (y + threshold_y);
 	if ((global.monsterspeed >= 1 && point_in_camera(x, y, view_camera[0])) || (_col == noone && _player_colX && _player_colY))
 	{
-		if (image_yscale < 0)
+		if image_yscale < 0
 		{
 			y += (47 * image_yscale);
 			image_yscale = 1;

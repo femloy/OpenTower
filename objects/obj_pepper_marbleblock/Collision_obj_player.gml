@@ -1,15 +1,15 @@
-if (fall && hp > 0 && other.state == states.handstandjump)
+if fall && hp > 0 && other.state == states.handstandjump
 {
 	scr_sound_multiple("event:/sfx/misc/breakblock", x, y);
-	with (other)
+	with other
 	{
 		instance_create(x + (xscale * 25), y, obj_bangeffect);
 		if (frac(other.hp) == 0)
 		{
-			repeat (4)
+			repeat 4
 				create_debris(other.x + random_range(0, 64), other.y + random_range(0, 64), spr_marbledebris);
 		}
-		repeat (3)
+		repeat 3
 		{
 			with (instance_create(x + random_range(0, 64), y + random_range(0, 64), obj_parryeffect))
 			{
@@ -19,14 +19,14 @@ if (fall && hp > 0 && other.state == states.handstandjump)
 		}
 		scr_pummel();
 	}
-	with (obj_pepperman)
+	with obj_pepperman
 	{
-		if (phase == 2)
+		if phase == 2
 			other.hp -= 0.5;
 		else
 			other.hp -= 1;
 	}
-	if (hitLag > 0)
+	if hitLag > 0
 	{
 		x = hitX;
 		y = hitY;

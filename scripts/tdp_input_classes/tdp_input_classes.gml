@@ -10,11 +10,11 @@ function tdp_input_key(_name, _actions_array = noone) constructor
 		{
 			var b = actions[i];
 			b.update(_gamepad);
-			if (b.pressed)
+			if b.pressed
 				pressed = true;
-			if (b.held)
+			if b.held
 				held = true;
-			if (b.released)
+			if b.released
 				released = true;
 			actions[i] = b;
 		}
@@ -24,7 +24,7 @@ function tdp_input_key(_name, _actions_array = noone) constructor
 		for (var i = 0; i < array_length(actions); i++)
 		{
 			var b = actions[i];
-			if (b.type == _type && b.value == _value)
+			if b.type == _type && b.value == _value
 			{
 				if (_type != tdp_input.joystick || b.joystick_direction == _joystick_direction)
 					return true;
@@ -43,7 +43,7 @@ function tdp_input_key(_name, _actions_array = noone) constructor
 	released = false;
 	axis_value = 0;
 	
-	if (_actions_array == noone)
+	if _actions_array == noone
 		actions = array_create(0);
 	else
 		actions = _actions_array;
@@ -52,7 +52,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 {
 	static update = function(_gamepad = -1)
 	{
-		switch (type)
+		switch type
 		{
 			case tdp_input.keyboard:
 				if (is_array(value))
@@ -93,11 +93,11 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 				if (instance_exists(obj_inputAssigner))
 				{
 					_pindex = obj_inputAssigner.player_index;
-					if (_gamepad != obj_inputAssigner.player_input_device[_pindex])
+					if _gamepad != obj_inputAssigner.player_input_device[_pindex]
 						_pindex = !_pindex;
 				}
 				last_held = held;
-				if (!custom_deadzone)
+				if !custom_deadzone
 				{
 					var pdz = global.input_controller_deadzone_press;
 					var hdz = global.input_controller_deadzone_horizontal;
@@ -109,7 +109,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 					hdz = variable_global_get(custom_deadzone_horizontal);
 					hdz = variable_global_get(custom_deadzone_vertical);
 				}
-				switch (value)
+				switch value
 				{
 					case gp_axislh:
 					case gp_axisrh:
@@ -121,28 +121,28 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 						break;
 				}
 				axis_value = gamepad_axis_value(_gamepad, value);
-				if (joystick_direction == 0)
+				if joystick_direction == 0
 				{
 					var press_check = axis_value > pdz || axis_value < -pdz;
 					pressed = press_check && !stickpressed[_pindex];
 					held = axis_value > dz || axis_value < -dz;
 					released = axis_value > -dz && axis_value < dz && last_held;
 				}
-				else if (joystick_direction == 1)
+				else if joystick_direction == 1
 				{
 					press_check = axis_value > pdz;
 					pressed = press_check && !stickpressed[_pindex];
 					held = axis_value > dz;
 					released = !held && last_held;
 				}
-				else if (joystick_direction == -1)
+				else if joystick_direction == -1
 				{
 					press_check = axis_value < -pdz;
 					pressed = press_check && !stickpressed[_pindex];
 					held = axis_value < -dz;
 					released = !held && last_held;
 				}
-				if (press_check)
+				if press_check
 					stickpressed[_pindex] = true;
 				else
 					stickpressed[_pindex] = false;
@@ -154,7 +154,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 	value = _value;
 	has_axis_value = false;
 	axis_value = 0;
-	if (type == tdp_input.joystick)
+	if type == tdp_input.joystick
 	{
 		has_axis_value = true;
 		custom_deadzone = false;

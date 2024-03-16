@@ -6,7 +6,7 @@ draw_set_color(c_white);
 var c = (key_select == -1) ? c_white : c_gray;
 tdp_draw_text_color((SCREEN_WIDTH / 2) - 250, 50, lang_get_value("option_back"), c, c, c, c, 1);
 var ks = key_select;
-if (ks < 0)
+if ks < 0
 	ks = 0;
 select_visual = lerp(select_visual, ks, 0.1);
 var xx = (SCREEN_WIDTH / 2) - 60;
@@ -33,7 +33,7 @@ for (var i = 0; i < array_length(input); i++)
 	{
 		var q = icon_array[j];
 		draw_sprite_ext(q.sprite_index, q.image_index, x2, yy, 1, 1, 0, c, 1);
-		if (q.str != "")
+		if q.str != ""
 			tdp_draw_text_color(x2 + 16, yy + 14, q.str, c_black, c_black, c_black, c_black, 1);
 		x2 -= 48;
 	}
@@ -46,7 +46,7 @@ global.tdp_text_try_outline = true;
 scr_draw_text_arr(32, SCREEN_HEIGHT - 240, tip);
 global.tdp_text_try_outline = false;
 tdp_text_commit(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT);
-if (selecting)
+if selecting
 {
 	draw_set_font(lang_get_font("bigfont"));
 	tdp_draw_set_halign(fa_center);

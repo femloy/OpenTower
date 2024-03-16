@@ -1,6 +1,6 @@
 if (instance_exists(other.baddieID) && !other.baddieID.invincible && other.baddieID.destroyable && playerid.state != states.chainsaw && other.baddieID.state != states.hit && !other.baddieID.thrown)
 {
-	with (other)
+	with other
 	{
 		fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
 		fmod_event_one_shot_3d("event:/sfx/mort/mortslap", x, y);
@@ -20,7 +20,7 @@ if (instance_exists(other.baddieID) && !other.baddieID.invincible && other.baddi
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
 		instance_create(x, y, obj_baddiegibs);
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;

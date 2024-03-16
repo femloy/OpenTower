@@ -1,11 +1,11 @@
 function boss_mrstick_decide_attack()
 {
-	if (attack_cooldown <= 0)
+	if attack_cooldown <= 0
 	{
 		targetstunned = 0;
 		attack_cooldown = attack_max[phase - 1];
 		state = attack_pool[irandom(array_length(attack_pool) - 1)];
-		switch (state)
+		switch state
 		{
 			case states.shield:
 				movespeed = 0;
@@ -69,38 +69,38 @@ function boss_mrstick_normal()
 	image_speed = 0.35;
 	var dx = abs(targetplayer.x - x);
 	move = 0;
-	if (dx < 400)
+	if dx < 400
 		move = -sign(targetplayer.x - x);
 	if (place_meeting(x + -(image_xscale * 48), y, obj_solid))
 		move = 0;
 	hsp = move * movespeed;
-	if (x != targetplayer.x)
+	if x != targetplayer.x
 		image_xscale = sign(targetplayer.x - x);
 	var targetspeed = (move == image_xscale) ? (normal_spd - 2) : normal_spd;
-	if (move != 0)
+	if move != 0
 	{
-		if (movespeed < targetspeed)
+		if movespeed < targetspeed
 			movespeed += 0.25;
-		else if (movespeed > targetspeed)
+		else if movespeed > targetspeed
 			movespeed -= 0.5;
-		if (movespeed < 3)
+		if movespeed < 3
 			image_speed = 0.35;
-		else if (movespeed > 3 && movespeed < 6)
+		else if movespeed > 3 && movespeed < 6
 			image_speed = 0.45;
 		else
 			image_speed = 0.6;
 	}
-	else if (movespeed > 0)
+	else if movespeed > 0
 		movespeed -= 0.1;
-	else if (movespeed <= 0)
+	else if movespeed <= 0
 		movespeed = 0;
-	if (hsp != 0)
+	if hsp != 0
 		sprite_index = walkspr;
 	else
 		sprite_index = idlespr;
-	if (attack_cooldown > 0)
+	if attack_cooldown > 0
 		attack_cooldown--;
-	if (dx < 325)
+	if dx < 325
 	{
 		if (x < (room_width / 7) || x > (room_width - (room_width / 7)))
 		{
@@ -108,7 +108,7 @@ function boss_mrstick_normal()
 			boss_mrstick_decide_attack();
 		}
 	}
-	else if (do_mockery_buffer > 0)
+	else if do_mockery_buffer > 0
 		do_mockery_buffer--;
 	else
 	{
@@ -120,7 +120,7 @@ function boss_mrstick_normal()
 }
 function boss_mrstick_shield()
 {
-	if (shield_buffer > 0)
+	if shield_buffer > 0
 		shield_buffer--;
 	else
 		state = states.normal;
@@ -128,10 +128,10 @@ function boss_mrstick_shield()
 function boss_mrstick_helicopterhat()
 {
 	x = Approach(x, target_x, movespeed);
-	switch (helicopterstate)
+	switch helicopterstate
 	{
 		case 0:
-			if (vsp >= 0)
+			if vsp >= 0
 			{
 				vsp = 0;
 				helicopterstate = 1;
@@ -141,7 +141,7 @@ function boss_mrstick_helicopterhat()
 		case 1:
 			vsp = 0;
 			y = Wave(helicoptery - 32, helicoptery + 32, 1, 0);
-			if (movespeed < helicopterspeed)
+			if movespeed < helicopterspeed
 				movespeed += 0.5;
 			if (floor(x) == floor(target_x))
 			{
@@ -152,7 +152,7 @@ function boss_mrstick_helicopterhat()
 		case 2:
 			image_xscale = (x > (room_width / 2)) ? -1 : 1;
 			vsp = 5;
-			if (grounded)
+			if grounded
 				state = states.normal;
 			break;
 	}
@@ -161,16 +161,16 @@ function boss_mrstick_panicjump()
 {
 	image_speed = 0.35;
 	hsp = image_xscale * movespeed;
-	if (sprite_index == spr_mrstick_jump && image_index > (image_number - 1))
+	if (sprite_index == spr_mrstick_jump && image_index > image_number - 1)
 	{
 		image_index = 0;
 		sprite_index = spr_mrstick_fall;
 	}
 	if (x > (target_x - 16) && x < (target_x + 16))
 		state = states.normal;
-	if (grounded)
+	if grounded
 	{
-		if (movespeed < panicjumpspeed)
+		if movespeed < panicjumpspeed
 			movespeed += 0.5;
 		sprite_index = spr_mrstick_run;
 	}
@@ -178,12 +178,12 @@ function boss_mrstick_panicjump()
 function boss_mrstick_jump()
 {
 	hsp = image_xscale * movespeed;
-	if (sprite_index == spr_mrstick_jump && image_index > (image_number - 1))
+	if (sprite_index == spr_mrstick_jump && image_index > image_number - 1)
 	{
 		image_index = 0;
 		sprite_index = spr_mrstick_fall;
 	}
-	if (!warped)
+	if !warped
 	{
 		var sprw = abs(sprite_width);
 		image_xscale = (x > (room_width / 2)) ? 1 : -1;
@@ -194,7 +194,7 @@ function boss_mrstick_jump()
 			x = -sprw;
 			warped = true;
 		}
-		else if (x < -sprw)
+		else if x < -sprw
 		{
 			if (y > (room_height + sprite_height))
 				y = room_height / 4;
@@ -214,13 +214,13 @@ function boss_mrstick_jump()
 		if (scr_solid(x, y + vsp) && !scr_solid(x, y))
 			state = states.normal;
 	}
-	if (vsp < 20)
+	if vsp < 20
 		vsp += grav;
 }
 function boss_mrstick_smokebombstart()
 {
 	hsp = 0;
-	if (image_index > (image_number - 1))
+	if (image_index > image_number - 1)
 	{
 		movespeed = 12;
 		sprite_index = spr_mrstick_run;
@@ -250,7 +250,7 @@ function boss_mrstick_smokebombcrawl()
 function boss_mrstick_springshoes()
 {
 	hsp = image_xscale * movespeed;
-	if (sprite_index == spr_mrstick_jump && image_index > (image_number - 1))
+	if (sprite_index == spr_mrstick_jump && image_index > image_number - 1)
 	{
 		image_index = 0;
 		sprite_index = spr_mrstick_fall;
@@ -258,14 +258,14 @@ function boss_mrstick_springshoes()
 	var tx = room_width / 2;
 	if (movespeed > 0 && x > (tx - 16) && x < (tx + 16))
 		movespeed -= 0.5;
-	if (grounded)
+	if grounded
 	{
 		hsp = 0;
 		movespeed = 0;
 		state = states.stun;
 		stunned = 100;
 		sprite_index = spr_mrstick_hurt;
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 3;
 			shake_mag_acc = 3 / room_speed;
@@ -299,14 +299,14 @@ function boss_mrstick_cardboardend()
 		state = states.normal;
 		instance_destroy(obj_spike);
 	}
-	if (vsp < 20)
+	if vsp < 20
 		vsp += grav;
 }
 function boss_mrstick_mockery()
 {
 	hsp = 0;
 	targetstunned = 0;
-	if (mockery_buffer > 0)
+	if mockery_buffer > 0
 		mockery_buffer--;
 	else
 		state = states.normal;

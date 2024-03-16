@@ -17,7 +17,7 @@ use_livesplit = false;
 for (var i = 0; i < parameter_count(); i++)
 {
 	var p = string_lower(parameter_string(i));
-	switch (p)
+	switch p
 	{
 		case "--livesplit":
 		case "-livesplit":
@@ -26,7 +26,7 @@ for (var i = 0; i < parameter_count(); i++)
 	}
 }
 ls_buffer = -1;
-if (use_livesplit)
+if use_livesplit
 {
 	ls_buffer = buffer_create(2048, buffer_fixed, 1);
 	buffer_fill(ls_buffer, 0, buffer_u8, 0, buffer_get_size(ls_buffer));

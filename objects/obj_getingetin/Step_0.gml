@@ -1,6 +1,6 @@
 if (instance_exists(obj_taxi))
 {
-	if (obj_taxi.sprite_index != spr_taxiidle)
+	if obj_taxi.sprite_index != spr_taxiidle
 		instance_destroy();
 }
 else

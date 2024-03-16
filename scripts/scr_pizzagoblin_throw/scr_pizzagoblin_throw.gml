@@ -5,7 +5,7 @@ function scr_pizzagoblin_throw()
 		hsp = -5;
 	else if (place_meeting(x, y + 1, obj_railh2))
 		hsp = 5;
-	if (floor(image_index) == (image_number - 1))
+	if floor(image_index) == image_number - 1
 	{
 		state = states.walk;
 		sprite_index = walkspr;
@@ -14,7 +14,7 @@ function scr_pizzagoblin_throw()
 	{
 		bombreset = global.reset_timer[object_index];
 		sprite_index = global.throw_sprite[object_index];
-		switch (object_index)
+		switch object_index
 		{
 			case obj_rancher:
 				fmod_event_one_shot_3d("event:/sfx/enemies/rancherpistol", x, y);
@@ -23,7 +23,7 @@ function scr_pizzagoblin_throw()
 				fmod_event_one_shot_3d("event:/sfx/enemies/projectile", x, y);
 				break;
 		}
-		switch (object_index)
+		switch object_index
 		{
 			case obj_pizzagoblin:
 				with (instance_create(x, y, obj_pizzagoblinbomb))
@@ -38,7 +38,7 @@ function scr_pizzagoblin_throw()
 				}
 				break;
 			case obj_canongoblin:
-				repeat (5)
+				repeat 5
 				{
 					with (instance_create(x + (image_xscale * 35), y, obj_firemouthflame))
 					{
@@ -51,7 +51,7 @@ function scr_pizzagoblin_throw()
 					image_xscale = other.image_xscale;
 				break;
 			case obj_noisegoblin:
-				if (sprite_index == spr_archergoblin_shoot)
+				if sprite_index == spr_archergoblin_shoot
 					instance_create(x, y, obj_noisegoblin_arrow);
 				break
 			case obj_cheeserobot:
@@ -65,7 +65,7 @@ function scr_pizzagoblin_throw()
 				}
 				break;
 			case obj_spitcheese:
-				if (spitcheesespr == spr_spitcheese_spit)
+				if spitcheesespr == spr_spitcheese_spit
 				{
 					with (instance_create(x + (image_xscale * 6), y - 6, obj_spitcheesespike))
 					{
@@ -108,7 +108,7 @@ function scr_pizzagoblin_throw()
 			case obj_kentukylenny:
 				with (instance_create(x + (other.image_xscale * 8), y, obj_kentukylenny_projectile))
 				{
-					repeat (3)
+					repeat 3
 						instance_create(x, y, obj_firemouthflame);
 					image_xscale = other.image_xscale;
 				}
@@ -121,7 +121,7 @@ function scr_pizzagoblin_throw()
 				}
 				break;
 			case obj_swedishmonkey:
-				if (elite)
+				if elite
 				{
 					with (instance_create(x, y, obj_evilbanana))
 					{
@@ -141,14 +141,14 @@ function scr_pizzagoblin_throw()
 						vsp = -5;
 					}
 				}
-				with (obj_slipnslide)
+				with obj_slipnslide
 				{
-					if (baddieID == other.id)
+					if baddieID == other.id
 						banana += 1;
 				}
-				with (obj_evilbanana)
+				with obj_evilbanana
 				{
-					if (baddieID == other.id)
+					if baddieID == other.id
 						banana += 1;
 				}
 				break;
@@ -249,8 +249,8 @@ function scr_pizzagoblin_throw()
 				break;
 		}
 	}
-	if (!grounded && hsp < 0)
+	if !grounded && hsp < 0
 		hsp += 0.1;
-	else if (!grounded && hsp > 0)
+	else if !grounded && hsp > 0
 		hsp -= 0.1;
 }

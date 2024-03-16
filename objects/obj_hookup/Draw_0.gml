@@ -1,2 +1,2 @@
-if (appear == -1)
+if appear == -1
 	draw_self();

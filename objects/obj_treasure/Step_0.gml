@@ -1,14 +1,14 @@
-if (player == 1)
+if player == 1
 {
-	if (got && obj_player1.state != states.gottreasure)
+	if got && obj_player1.state != states.gottreasure
 		instance_destroy();
 }
-if (player == 2)
+if player == 2
 {
-	if (got && obj_player2.state != states.gottreasure)
+	if got && obj_player2.state != states.gottreasure
 		instance_destroy();
 }
-if (player == 0)
+if player == 0
 	y = Wave(ystart - 5, ystart + 5, 2, 2);
 if (player == 0 && place_meeting(x, y, obj_player))
 {
@@ -16,9 +16,9 @@ if (player == 0 && place_meeting(x, y, obj_player))
 	for(var i = 0; i < num; i++)
 	{
 		var _player = ds_list_find_value(global.instancelist, i);
-		with (_player)
+		with _player
 		{
-			if (state != states.gotoplayer)
+			if state != states.gotoplayer
 			{
 				treasure_x = x;
 				treasure_y = y;
@@ -28,7 +28,7 @@ if (player == 0 && place_meeting(x, y, obj_player))
 				global.combotime = 60;
 				hsp = 0;
 				vsp = 0;
-				if (!other.got)
+				if !other.got
 				{
 					other.alarm[0] = 150;
 					state = states.gottreasure;

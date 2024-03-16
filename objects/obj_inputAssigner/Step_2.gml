@@ -1,12 +1,12 @@
-if (!global.option_vibration)
+if !global.option_vibration
 	exit;
-with (obj_player)
+with obj_player
 {
 	var _pindex = (object_index == obj_player1) ? 0 : 1;
 	var _dvc = other.player_input_device[_pindex];
-	if (state != other.prevstate[_pindex])
+	if state != other.prevstate[_pindex]
 	{
-		switch (state)
+		switch state
 		{
 			case states.tackle:
 				GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
@@ -31,7 +31,7 @@ with (obj_player)
 				break;
 			case states.bombpep:
 				GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
-				if (sprite_index == spr_bombpepend)
+				if sprite_index == spr_bombpepend
 					GamepadSetVibration(_pindex, 1, 1, 0.9);
 				break;
 			case states.Sjump:
@@ -44,7 +44,7 @@ with (obj_player)
 				GamepadSetVibration(_pindex, 1, 1, 0.9);
 				break;
 			case states.knightpep:
-				if (sprite_index == spr_knightpepthunder)
+				if sprite_index == spr_knightpepthunder
 					GamepadSetVibration(_pindex, 1, 1, 0.9);
 				break;
 			case states.parry:
@@ -57,7 +57,7 @@ with (obj_player)
 				GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
 				break;
 			case states.bump:
-				if (sprite_index != spr_hitwall)
+				if sprite_index != spr_hitwall
 					GamepadSetVibration(_pindex, 0.8, 0.8, 0.6);
 				else
 					GamepadSetVibration(_pindex, 1, 1, 0.85);
@@ -108,7 +108,7 @@ with (obj_player)
 				other.setVibration(_pindex, 0, 0);
 				break;
 		}
-		if (other.prevstate[_pindex] == states.stringfall)
+		if other.prevstate[_pindex] == states.stringfall
 			GamepadSetVibration(_pindex, 0.7, 0.7, 0.8);
 		other.prevstate[_pindex] = state;
 	}
@@ -116,10 +116,10 @@ with (obj_player)
 _dvc = player_input_device[player_index];
 vibration[0][0] *= vibration[0][2];
 vibration[0][1] *= vibration[0][2];
-if (vibration[0][0] < 0)
+if vibration[0][0] < 0
 	vibration[0][0] = 0;
-if (vibration[0][1] < 0)
+if vibration[0][1] < 0
 	vibration[0][1] = 0;
 gamepad_set_vibration(_dvc, vibration[0][0], vibration[0][1]);
-if (player_input_device[!player_index] != _dvc)
+if player_input_device[!player_index] != _dvc
 	gamepad_set_vibration(player_input_device[!player_index], 0, 0);

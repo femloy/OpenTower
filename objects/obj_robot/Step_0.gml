@@ -1,5 +1,5 @@
 destroyable = true;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -29,7 +29,7 @@ switch (state)
 		scr_enemy_grabbed();
 		break;
 	case states.mach1:
-		if (image_index > (image_number - 1))
+		if (image_index > image_number - 1)
 		{
 			hsp = image_xscale * startmachspeed;
 			if (place_meeting(x, y + 1, obj_railparent))
@@ -64,7 +64,7 @@ switch (state)
 		}
 		break;
 	case states.tackle:
-		if (image_index > 8)
+		if image_index > 8
 		{
 			hsp = image_xscale * tacklespeed;
 			if (place_meeting(x, y + 1, obj_railparent))
@@ -75,7 +75,7 @@ switch (state)
 			with (instance_place(x + hsp, y, obj_destructibles))
 				instance_destroy();
 		}
-		if (image_index > (image_number - 1))
+		if (image_index > image_number - 1)
 		{
 			state = states.walk;
 			hsp = 0;
@@ -94,33 +94,33 @@ switch (state)
 		break;
 	case states.slap:
 		hsp = 0;
-		if (image_index > (image_number - 1))
+		if (image_index > image_number - 1)
 		{
 			state = states.walk;
 			sprite_index = walkspr;
 		}
 		break;
 }
-if (elitehit <= 0 && state != states.stun)
+if elitehit <= 0 && state != states.stun
 	instance_destroy();
-if (state == states.stun && stunned > 40 && birdcreated == 0)
+if state == states.stun && stunned > 40 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
 		ID = other.id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (bombreset > 0)
+if bombreset > 0
 	bombreset--;
 targetplayer = instance_nearest(x, y, obj_player);
-if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0)
+if x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0
 {
 	if ((targetplayer.x > (x - 400) && targetplayer.x < (x + 400)) && (y <= (targetplayer.y + 20) && y >= (targetplayer.y - 20)))
 	{
@@ -131,7 +131,7 @@ if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0)
 			image_xscale = -sign(x - targetplayer.x);
 			state = chosenstate;
 			bombreset = 100;
-			switch (state)
+			switch state
 			{
 				case states.mach1:
 					sprite_index = spr_robot_machstart;
@@ -167,7 +167,7 @@ if (x != targetplayer.x && state != states.pizzagoblinthrow && bombreset == 0)
 }
 fmod_event_instance_set_3d_attributes(mach2snd, x + hsp, y + vsp);
 fmod_event_instance_set_3d_attributes(tacklesnd, x + hsp, y + vsp);
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{
@@ -177,37 +177,37 @@ if (boundbox == 0)
 		other.boundbox = true;
 	}
 }
-if (state == states.slap && image_index > 11)
+if state == states.slap && image_index > 11
 {
-	if (snd == 0)
+	if snd == 0
 	{
 		fmod_event_one_shot_3d("event:/sfx/enemies/robotslapsteam", x, y);
 		fmod_event_instance_play("event:/sfx/enemies/minijohnpunch", x, y);
 	}
 	snd = true;
 }
-if (state == states.mach2)
+if state == states.mach2
 {
-	if (snd == 0)
+	if snd == 0
 		fmod_event_instance_play(mach2snd);
 	snd = true;
 }
-if (state == states.tackle && image_index > 8)
+if state == states.tackle && image_index > 8
 {
-	if (snd == 0)
+	if snd == 0
 		fmod_event_instance_play(tacklesnd);
 	snd = true;
 }
-if (state != states.slap && state != states.mach2 && state != states.tackle)
+if state != states.slap && state != states.mach2 && state != states.tackle
 	snd = false;
 if (state == states.mach2 || (state == states.slap && image_index > 11) || (state == states.tackle && image_index > 8))
 {
-	if (!hitboxcreate)
+	if !hitboxcreate
 	{
 		hitboxcreate = true;
 		with (instance_create(x, y, obj_forkhitbox))
 		{
-			if (other.state == states.slap)
+			if other.state == states.slap
 				sprite_index = spr_swordhitbox;
 			else if (other.state == states.mach2 || other.state == states.tackle)
 				sprite_index = spr_bighitbox;

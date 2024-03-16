@@ -1,5 +1,5 @@
 var obj = obj_farmerpeasantoprojectile;
-switch (object_index)
+switch object_index
 {
 	case obj_farmer2follow:
 		obj = obj_farmer2projectile;

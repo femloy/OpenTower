@@ -1,4 +1,4 @@
-if (other.fall)
+if other.fall
 {
 	dead = true;
 	instance_destroy();

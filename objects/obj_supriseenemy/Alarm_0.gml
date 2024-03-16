@@ -1,7 +1,7 @@
 ds_list_add(global.baddieroom, id);
 with (instance_create(x, y, content))
 {
-	if (object_index == obj_pizzagoblinbomb)
+	if object_index == obj_pizzagoblinbomb
 		defused = true;
 	image_speed = 0.35;
 	image_xscale = other.image_xscale;

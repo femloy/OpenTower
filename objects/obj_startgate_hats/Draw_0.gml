@@ -7,7 +7,7 @@ for (var i = 0; i < array_length(hats_arr); i++)
 	var y1 = y + (yy * 32);
 	pal_swap_set(obj_player1.spr_palette, 1);
 	draw_sprite_ext(sprite_index, image_index, x1, y1, 1, 1, 0, c_black, image_alpha);
-	if (i < hats)
+	if i < hats
 	{
 		var y2 = y1 + hats_arr[i][1];
 		pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, global.palettetexture);
@@ -15,7 +15,7 @@ for (var i = 0; i < array_length(hats_arr); i++)
 		draw_sprite_ext(sprite_index, image_index, x1, y2, 1, 1, 0, c_white, image_alpha);
 	}
 	xx++;
-	if (xx >= 2)
+	if xx >= 2
 	{
 		xx = -1;
 		yy++;
@@ -23,7 +23,7 @@ for (var i = 0; i < array_length(hats_arr); i++)
 }
 pattern_reset();
 shader_reset();
-if (state > 0)
+if state > 0
 {
 	draw_set_font(global.smallnumber_fnt);
 	draw_set_halign(fa_center);

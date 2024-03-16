@@ -14,7 +14,7 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 	global.combo += 1;
 	global.enemykilled += 1;
 	global.combotime = 60;
-	repeat (3)
+	repeat 3
 	{
 		with (create_debris(x1, y1, spr_slapstar))
 		{
@@ -30,12 +30,12 @@ if (ds_list_find_index(global.saveroom, id) == -1)
 		notification_push(notifs.rattumble_dead, [room]);
 	else
 		notification_push(notifs.ratblock_dead, [room]);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
 	}
-	with (obj_player1)
+	with obj_player1
 		supercharge += 1;
 	GamepadSetVibration(0, 0.8, 0.8, 0.65);
 	ds_list_add(global.saveroom, id);

@@ -1,7 +1,7 @@
 var p = false;
-with (obj_player)
+with obj_player
 {
-	if (targetDoor == "LAP")
+	if targetDoor == "LAP"
 	{
 		p = true;
 		state = states.actor;
@@ -10,14 +10,14 @@ with (obj_player)
 		roomstartx = x;
 		roomstarty = y;
 		visible = false;
-		with (obj_pizzaface)
+		with obj_pizzaface
 		{
 			x = other.x;
 			y = other.y;
 		}
 	}
 }
-if (!p)
+if !p
 	instance_destroy();
 else
 	active = true;

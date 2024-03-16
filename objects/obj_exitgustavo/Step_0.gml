@@ -1,13 +1,13 @@
 image_speed = 0.35;
 depth = 20;
-switch (state)
+switch state
 {
 	case states.titlescreen:
 		x = camera_get_view_x(view_camera[0]) - 100;
 		y = camera_get_view_y(view_camera[0]) - 100;
 		var dx = 350;
 		var dy = 400;
-		if (room == space_11b)
+		if room == space_11b
 		{
 			dx = 200;
 			dy = 220;
@@ -18,36 +18,36 @@ switch (state)
 			vsp = 20;
 			x = xstart;
 			y = camera_get_view_y(view_camera[0]) - 100;
-			if (sprite_index != spr_noiseyexit_fall && sprite_index != spr_noisette_fall)
+			if sprite_index != spr_noiseyexit_fall && sprite_index != spr_noisette_fall
 			{
 				sprite_index = spr_lonegustavo_groundpound;
-				if (room == space_11b)
+				if room == space_11b
 					sprite_index = spr_gustavo_exitshuttle;
 				else if (string_letters(room_get_name(room)) == "freezer")
 					sprite_index = spr_gustavo_exitsignfreezer;
 				else if (string_letters(room_get_name(room)) == "chateau")
 					sprite_index = spr_gustavorat_fall;
-				if (stick)
+				if stick
 					sprite_index = spr_stick_fall;
 			}
 		}
 		break;
 	case states.fall:
 		y += vsp;
-		if (vsp < 20)
+		if vsp < 20
 			vsp += 0.5;
 		with (instance_place(x, y, obj_baddiecollisionbox))
 		{
 			instance_destroy(baddieID);
 			instance_destroy();
 		}
-		if (y >= ystart)
+		if y >= ystart
 		{
 			y = ystart;
 			instance_destroy(instance_place(x, y, obj_ramp));
 			create_particle(x, y, particle.landcloud);
 			state = states.normal;
-			if (sprite_index == spr_gustavo_exitshuttle)
+			if sprite_index == spr_gustavo_exitshuttle
 			{
 				with (instance_create(x, y, obj_shuttleparts))
 				{
@@ -71,7 +71,7 @@ switch (state)
 				}
 				instance_create(x, y, obj_playerexplosion);
 			}
-			if (sprite_index != spr_noiseyexit_fall && sprite_index != spr_noisette_fall)
+			if sprite_index != spr_noiseyexit_fall && sprite_index != spr_noisette_fall
 			{
 				if (string_letters(room_get_name(room)) == "freezer")
 					sprite_index = spr_gustavo_exitsignfreezer;
@@ -81,10 +81,10 @@ switch (state)
 					sprite_index = spr_gustavorat_exitsign;
 				else
 					sprite_index = spr_gustavo_exitsign;
-				if (stick)
+				if stick
 					sprite_index = spr_stick_exit;
 			}
-			else if (sprite_index == spr_noiseyexit_fall)
+			else if sprite_index == spr_noiseyexit_fall
 				sprite_index = spr_noiseyexit_idle;
 			else
 				sprite_index = spr_noisette_exit;
@@ -92,16 +92,16 @@ switch (state)
 		}
 		break;
 	case states.land:
-		if (floor(image_index) == (image_number - 1))
+		if floor(image_index) == image_number - 1
 		{
 			sprite_index = spr_gustavo_exitsign;
-			if (stick)
+			if stick
 				sprite_index = spr_stick_exit;
 			state = states.normal;
 		}
 		break;
 }
-if (state == states.titlescreen)
+if state == states.titlescreen
 	visible = false;
 else
 	visible = true;

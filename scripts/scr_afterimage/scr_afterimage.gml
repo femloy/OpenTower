@@ -36,7 +36,7 @@ function create_mach3effect(_x, _y, _sprite, _image_index, _afterimage = false)
 		playerid: obj_player1,
 		alpha: 1
 	};
-	if (_afterimage)
+	if _afterimage
 		q.identifier = afterimage.simple;
 	ds_list_add(global.afterimage_list, q);
 	return q;
@@ -92,7 +92,7 @@ function create_heatattack_afterimage(_x, _y, _sprite, _image_index, _xscale)
 function create_firemouth_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
 	var b = create_afterimage(_x, _y, _sprite, _image_index);
-	with (b)
+	with b
 	{
 		fadeout = false;
 		fadeoutstate = -4;
@@ -113,7 +113,7 @@ function create_firemouth_afterimage(_x, _y, _sprite, _image_index, _xscale)
 function create_blue_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
 	var b = create_afterimage(_x, _y, _sprite, _image_index);
-	with (b)
+	with b
 	{
 		fadeout = false;
 		fadeoutstate = -4;
@@ -134,7 +134,7 @@ function create_blue_afterimage(_x, _y, _sprite, _image_index, _xscale)
 function create_noise_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
 	var b = create_afterimage(_x, _y, _sprite, _image_index);
-	with (b)
+	with b
 	{
 		fadeout = false;
 		fadeoutstate = -4;
@@ -155,14 +155,14 @@ function create_noise_afterimage(_x, _y, _sprite, _image_index, _xscale)
 function create_red_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
 	var b = create_blue_afterimage(_x, _y, _sprite, _image_index, _xscale);
-	with (b)
+	with b
 		identifier = afterimage.enemy;
 	return b;
 }
 function create_blur_afterimage(_x, _y, _sprite, _image_index, _xscale)
 {
 	var b = create_afterimage(_x, _y, _sprite, _image_index);
-	with (b)
+	with b
 	{
 		fadeout = false;
 		fadeoutstate = -4;

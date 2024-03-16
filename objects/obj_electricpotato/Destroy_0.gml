@@ -4,7 +4,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
 		sprite_index = other.spr_dead;
 	instance_create(x, y, obj_bangeffect);
 	ds_list_add(global.baddieroom, id);
-	with (obj_player1)
+	with obj_player1
 		supercharge += 1;
 	global.combo += 1;
 	global.enemykilled += 1;
@@ -15,7 +15,7 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
 	global.collect += combototal;
 	global.comboscore += combototal;
 	fmod_event_one_shot_3d("event:/sfx/enemies/kill", x, y);
-	repeat (3)
+	repeat 3
 	{
 		with (create_debris(x, y, spr_slapstar))
 		{
@@ -24,14 +24,14 @@ if (ds_list_find_index(global.baddieroom, id) == -1)
 		}
 	}
 	instance_create(x, y, obj_bangeffect);
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 3;
 		shake_mag_acc = 3 / room_speed;
 	}
-	if (object_index == obj_miniufo)
+	if object_index == obj_miniufo
 		instance_create(x, y, obj_playerexplosion);
 	ds_list_add(global.baddieroom, id);
-	if (escape)
+	if escape
 		ds_list_add(global.escaperoom, id);
 }

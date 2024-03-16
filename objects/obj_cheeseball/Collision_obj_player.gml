@@ -1,8 +1,8 @@
-if (other.state != states.gotoplayer && other.state != states.chainsaw)
+if other.state != states.gotoplayer && other.state != states.chainsaw
 {
 	if (other.state == states.knightpep || other.state == states.knightpepslopes || other.state == states.cheeseball)
 	{
-		repeat (8)
+		repeat 8
 		{
 			with (create_debris(x, y, spr_slimedebris))
 			{
@@ -22,7 +22,7 @@ if (other.state != states.gotoplayer && other.state != states.chainsaw)
 		other.y = y;
 		other.state = states.cheeseball;
 		other.stop_buffer = other.stop_max;
-		repeat (8)
+		repeat 8
 		{
 			with (create_debris(x, y, spr_slimedebris))
 			{

@@ -1,6 +1,6 @@
 if (place_meeting(x, y - 1, obj_player1))
 {
-	with (obj_player1)
+	with obj_player1
 	{
 		if (place_meeting(x, y + 1, obj_ladder) && !place_meeting(other.x + 16, y + 1, obj_solid) && key_down && (state == states.crouch || ((character == "S" || character == "M") && (state == states.normal || state == states.mach1))) && place_meeting(x, y + 1, obj_platform))
 		{
@@ -14,7 +14,7 @@ if (place_meeting(x, y - 1, obj_player1))
 		if (key_down && place_meeting(x, y + 1, obj_ladder) && !place_meeting(other.x + 16, y + 1, obj_solid) && state == states.ratmountcrouch && place_meeting(x, y + 1, obj_platform))
 		{
 			state = states.ratmountladder;
-			if (brick == 1)
+			if brick == 1
 			{
 				with (instance_create(x, y, obj_brickcomeback))
 				{
@@ -35,7 +35,7 @@ if (instance_exists(obj_player2))
 {
 	if (place_meeting(x, y - 2, obj_player2))
 	{
-		with (obj_player2)
+		with obj_player2
 		{
 			if (place_meeting(x, y + 2, obj_ladder) && !place_meeting(other.x + 16, y + 2, obj_solid) && key_down && (state == states.crouch || (character == "S" && (state == states.normal || state == states.mach1))) && place_meeting(x, y + 1, obj_platform))
 			{

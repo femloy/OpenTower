@@ -5,11 +5,11 @@ function scr_player_shotguncrouchjump()
 	move = key_left + key_right;
 	hsp = move * movespeed;
 	movespeed = 4;
-	if (move != 0)
+	if move != 0
 		xscale = move;
-	if (sprite_index == spr_crouchjump && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_crouchjump && floor(image_index) == image_number - 1)
 		sprite_index = spr_crouchfall;
-	if (!key_jump2 && !jumpstop && vsp < 0.5)
+	if !key_jump2 && !jumpstop && vsp < 0.5
 	{
 		vsp /= 2;
 		jumpstop = true;
@@ -19,7 +19,7 @@ function scr_player_shotguncrouchjump()
 		vsp = grav;
 		jumpstop = true;
 	}
-	if (grounded)
+	if grounded
 	{
 		state = states.shotguncrouch;
 		sprite_index = spr_shotgungoduck;

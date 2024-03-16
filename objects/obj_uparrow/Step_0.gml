@@ -1,5 +1,5 @@
 image_speed = 0.35;
-with (playerid)
+with playerid
 {
 	if (!place_meeting(x, y, obj_uparrowhitbox))
 		instance_destroy(other);

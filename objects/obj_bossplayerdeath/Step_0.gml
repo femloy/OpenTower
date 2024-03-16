@@ -1,15 +1,15 @@
 fade = Approach(fade, 1, 0.03);
-if (fade2start)
+if fade2start
 	fade2 = Approach(fade2, 1, 0.06);
-with (obj_player1)
+with obj_player1
 {
 	image_speed = 0.35;
-	if (ispeppino)
+	if ispeppino
 	{
-		switch (other.state)
+		switch other.state
 		{
 			case states.jump:
-				if (sprite_index == spr_player_outofpizza1 && floor(image_index) == (image_number - 1))
+				if (sprite_index == spr_player_outofpizza1 && floor(image_index) == image_number - 1)
 					sprite_index = spr_player_outofpizza2;
 				hsp = deathspeed * -xscale;
 				if (place_meeting(x + sign(hsp), y, obj_solid))
@@ -18,7 +18,7 @@ with (obj_player1)
 					xscale *= -1;
 					instance_create(x + (xscale * 20), y, obj_bangeffect);
 				}
-				if (grounded && vsp > 0)
+				if grounded && vsp > 0
 				{
 					image_index = 0;
 					sprite_index = spr_player_outofpizza3;
@@ -29,7 +29,7 @@ with (obj_player1)
 				break;
 		
 			case states.normal:
-				if (sprite_index == spr_player_outofpizza3 && floor(image_index) == (image_number - 1))
+				if (sprite_index == spr_player_outofpizza3 && floor(image_index) == image_number - 1)
 					sprite_index = spr_player_outofpizza4;
 				hsp = deathspeed * -xscale;
 				deathspeed = Approach(deathspeed, 0, 0.1);
@@ -38,10 +38,10 @@ with (obj_player1)
 	}
 	else
 	{
-		switch (other.state)
+		switch other.state
 		{
 			case states.jump:
-				if (sprite_index == spr_playerN_bossdeath1 && floor(image_index) == (image_number - 1))
+				if (sprite_index == spr_playerN_bossdeath1 && floor(image_index) == image_number - 1)
 					sprite_index = spr_playerN_bossdeath1loop;
 				hsp = deathspeed * -xscale;
 				vsp = targetvsp;
@@ -55,7 +55,7 @@ with (obj_player1)
 				deathspeed = Approach(deathspeed, 0.5, 0.25);
 				if (abs(hsp) <= 5)
 				{
-					if (deathbuffer > 0)
+					if deathbuffer > 0
 						deathbuffer--;
 					else
 					{
@@ -70,9 +70,9 @@ with (obj_player1)
 			
 			case states.fall:
 				vsp += 0.5;
-				if (floor(image_index) == (image_number - 1))
+				if floor(image_index) == image_number - 1
 					image_index = image_number - 1;
-				if (grounded && vsp > 0)
+				if grounded && vsp > 0
 				{
 					hsp = 0;
 					other.state = states.normal;
@@ -82,7 +82,7 @@ with (obj_player1)
 				break;
 			
 			case states.normal:
-				if (floor(image_index) == (image_number - 1))
+				if floor(image_index) == image_number - 1
 					image_index = image_number - 1;
 				break;
 		}

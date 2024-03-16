@@ -4,5 +4,5 @@ with (instance_create(x, y, obj_afterimage))
 	image_xscale = other.image_xscale;
 }
 flash = true;
-if (charge == 1)
+if charge == 1
 	alarm[1] = 10;

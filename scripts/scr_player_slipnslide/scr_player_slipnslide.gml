@@ -22,14 +22,14 @@ function scr_player_slipnslide()
 		sprite_index = spr_playerN_surfing;
 		move = key_left + key_right;
 		hsp = xscale * movespeed;
-		if (move != 0)
+		if move != 0
 		{
-			if (xscale == move)
+			if xscale == move
 				movespeed = Approach(movespeed, 15, 0.4);
 			else
 			{
 				movespeed = Approach(movespeed, 0, 0.2);
-				if (movespeed == 0)
+				if movespeed == 0
 					xscale = move;
 			}
 		}
@@ -39,11 +39,11 @@ function scr_player_slipnslide()
 			exit;
 		if (scr_solid(x + sign(hsp), y) && !place_meeting(x + sign(hsp), y, obj_slope))
 			movespeed = 0;
-		if (grounded && vsp > 0)
+		if grounded && vsp > 0
 		{
 			if (place_meeting(x, y + 1, obj_current))
 			{
-				if (key_jump2)
+				if key_jump2
 					vsp = -10;
 				else
 					vsp = -3;
@@ -57,10 +57,10 @@ function scr_player_slipnslide()
 			else
 			{
 				state = 0;
-				if (key_attack)
+				if key_attack
 				{
 					state = states.mach2;
-					if (movespeed < 6)
+					if movespeed < 6
 						movespeed = 6;
 				}
 				image_index = 0;
@@ -70,7 +70,7 @@ function scr_player_slipnslide()
 	}
 	hsp = xscale * movespeed;
 	
-	if (movespeed <= 0)
+	if movespeed <= 0
 	{
 		state = states.normal;
 		movespeed = 0;
@@ -108,7 +108,7 @@ function scr_player_slipnslide()
 		sprite_index = spr_slipbanan1;
 		image_index = 0;
 		state = states.slipbanan;
-		if (!ispeppino)
+		if !ispeppino
 		{
 			with (instance_create(x, y, obj_floaterdebris))
 				image_index = 0;

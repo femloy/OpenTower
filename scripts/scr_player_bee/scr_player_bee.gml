@@ -6,7 +6,7 @@ function scr_player_bee()
 	hsp = xscale * movespeed;
 	if (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope))
 		xscale *= -1;
-	if (bee_buffer > 0)
+	if bee_buffer > 0
 		bee_buffer--;
 	else
 		state = states.normal;

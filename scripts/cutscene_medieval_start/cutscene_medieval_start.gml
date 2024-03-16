@@ -1,6 +1,6 @@
 function cutscene_medieval_start()
 {
-	with (obj_player)
+	with obj_player
 	{
 		state = states.actor;
 		sprite_index = spr_walkfront;
@@ -24,7 +24,7 @@ function cutscene_medieval_start()
 }
 function cutscene_medieval_start2()
 {
-	with (obj_actor)
+	with obj_actor
 	{
 		sprite_index = spr_idle;
 		visible = true;

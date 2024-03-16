@@ -20,7 +20,7 @@ function scr_read_game(ini)
 function menu_get_game(slot, peppino)
 {
 	var g = global.game[slot];
-	if (!peppino)
+	if !peppino
 		g = global.gameN[slot];
 	
 	var q = 
@@ -38,7 +38,7 @@ function menu_get_game(slot, peppino)
 	q.perstatus_icon = floor(q.percentage / (100 / 7));
 	if (q.perstatus_icon > (sprite_get_number(spr_percentstatemenu) - 1))
 		q.perstatus_icon = sprite_get_number(spr_percentstatemenu) - 1;
-	if (q.percentage >= 101)
+	if q.percentage >= 101
 		q.perstatus_icon = 8;
 	return q;
 }

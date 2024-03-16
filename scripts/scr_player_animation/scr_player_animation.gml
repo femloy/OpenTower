@@ -4,16 +4,16 @@ function scr_player_animation()
 	vsp = 0;
 	if (sprite_index == spr_watchitbub2 || sprite_index == spr_playerN_glovesstart)
 	{
-		if (sprite_index == spr_watchitbub2)
+		if sprite_index == spr_watchitbub2
 		{
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 2;
 				shake_mag_acc = 10 / room_speed;
 			}
 		}
 		global.combotimepause = 5;
-		if (actor_buffer > 0)
+		if actor_buffer > 0
 			actor_buffer--;
 		else
 			state = 0;
@@ -22,17 +22,17 @@ function scr_player_animation()
 	if (instance_exists(obj_pizzahead_whitefade))
 	{
 		image_index = image_number - 1;
-		if (!ispeppino)
+		if !ispeppino
 			image_index = 0;
 	}
-	if (floor(image_index) == (image_number - 1) && !instance_exists(obj_pizzahead_whitefade))
+	if (floor(image_index) == image_number - 1 && !instance_exists(obj_pizzahead_whitefade))
 	{
-		if (room == boss_pizzafacehub)
+		if room == boss_pizzafacehub
 		{
-			switch (sprite_index)
+			switch sprite_index
 			{
 				case spr_slipbanan2:
-					if (buffer > 0)
+					if buffer > 0
 					{
 						buffer--;
 						image_index = image_number - 1;
@@ -52,7 +52,7 @@ function scr_player_animation()
 					facehurt = true;
 					break;
 				case spr_facehurt:
-					if (buffer > 0)
+					if buffer > 0
 						buffer--;
 					else
 					{
@@ -73,7 +73,7 @@ function scr_player_animation()
 		else
 		{
 			state = tauntstoredstate;
-			if (sprite_index == spr_playerN_freezerintro)
+			if sprite_index == spr_playerN_freezerintro
 			{
 				create_transformation_tip(lang_get_value("jetpack2tip"));
 				state = states.normal;

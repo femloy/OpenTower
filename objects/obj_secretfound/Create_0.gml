@@ -1,6 +1,6 @@
 if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 {
-	with (obj_tv)
+	with obj_tv
 	{
 		message = "YOU HAVE FOUND " + string(global.secretfound) + " SECRET OUT OF 6";
 		showtext = true;

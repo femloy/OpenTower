@@ -1,42 +1,42 @@
 draw_set_alpha(1);
 if (is_bossroom() || room == editor_room || instance_exists(obj_tutorialbook))
 	exit;
-if (global.kungfu)
+if global.kungfu
 {
-	if (global.hp == 8)
+	if global.hp == 8
 		draw_sprite(spr_pizzahealthbar, 0, 190, 70);
-	else if (global.hp == 7)
+	else if global.hp == 7
 		draw_sprite(spr_pizzahealthbar, 1, 190, 70);
-	else if (global.hp == 6)
+	else if global.hp == 6
 		draw_sprite(spr_pizzahealthbar, 2, 190, 70);
-	else if (global.hp == 5)
+	else if global.hp == 5
 		draw_sprite(spr_pizzahealthbar, 3, 190, 70);
-	else if (global.hp == 4)
+	else if global.hp == 4
 		draw_sprite(spr_pizzahealthbar, 4, 190, 70);
-	else if (global.hp == 3)
+	else if global.hp == 3
 		draw_sprite(spr_pizzahealthbar, 5, 190, 70);
-	else if (global.hp == 2)
+	else if global.hp == 2
 		draw_sprite(spr_pizzahealthbar, 6, 190, 70);
-	else if (global.hp == 1)
+	else if global.hp == 1
 		draw_sprite(spr_pizzahealthbar, 7, 190, 70);
-	else if (global.hp == 0)
+	else if global.hp == 0
 		draw_sprite(spr_pizzahealthbar, 8, 190, 70);
 }
-if (obj_player.state != states.dead)
+if obj_player.state != states.dead
 {
-	if (obj_player.x < 250 && obj_player.y < 169)
+	if obj_player.x < 250 && obj_player.y < 169
 		hud_posY = Approach(hud_posY, -300, 15);
 	else
 		hud_posY = Approach(hud_posY, 0, 15);
 	var cmb = 0;
-	if (global.combo >= 50)
+	if global.combo >= 50
 		cmb = 2;
-	else if (global.combo >= 25)
+	else if global.combo >= 25
 		cmb = 1;
 	pizzascore_index += (0 + (0.25 * cmb));
 	if (pizzascore_index > (pizzascore_number - 1))
 		pizzascore_index = 0 + frac(pizzascore_index);
-	if (global.stylethreshold <= 0)
+	if global.stylethreshold <= 0
 	{
 		if (floor(pizzascore_index) != 0)
 			pizzascore_index += 0.35;
@@ -54,34 +54,34 @@ if (obj_player.state != states.dead)
 	reset_shader_fix();
 	draw_sprite_ext(spr_pizzascore, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
 	var _score = global.collect;
-	if (global.coop)
+	if global.coop
 		_score += global.collectN;
-	if (_score >= global.crank)
+	if _score >= global.crank
 		draw_sprite_ext(spr_pizzascore_pepper, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	if (_score >= global.brank)
+	if _score >= global.brank
 		draw_sprite_ext(spr_pizzascore_pepperoni, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	if (_score >= global.arank)
+	if _score >= global.arank
 		draw_sprite_ext(spr_pizzascore_olive, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
-	if (_score >= global.srank)
+	if _score >= global.srank
 		draw_sprite_ext(spr_pizzascore_shroom, pizzascore_index, hud_xx, hud_yy, 1, 1, 0, c_white, alpha);
 	var rx = hud_xx + 142;
 	var ry = hud_yy - 22;
 	var rank_ix = 0;
 	if (_score >= global.srank && scr_is_p_rank())
 		rank_ix = 5;
-	else if (_score >= global.srank)
+	else if _score >= global.srank
 		rank_ix = 4;
-	else if (_score >= global.arank)
+	else if _score >= global.arank
 		rank_ix = 3;
-	else if (_score >= global.brank)
+	else if _score >= global.brank
 		rank_ix = 2;
-	else if (_score >= global.crank)
+	else if _score >= global.crank
 		rank_ix = 1;
-	if (previousrank != rank_ix)
+	if previousrank != rank_ix
 	{
 		var _snd = global.snd_rankup;
 		previousrank = rank_ix;
-		if (rank_ix < previousrank)
+		if rank_ix < previousrank
 			_snd = global.snd_rankdown;
 		fmod_event_instance_play(_snd);
 		fmod_event_instance_set_parameter(_snd, "state", rank_ix - 1, true);
@@ -94,7 +94,7 @@ if (obj_player.state != states.dead)
 	var spr_xo = sprite_get_xoffset(spr_ranks_hudfill);
 	var spr_yo = sprite_get_yoffset(spr_ranks_hudfill);
 	var perc = 0;
-	switch (rank_ix)
+	switch rank_ix
 	{
 		case 4:
 			perc = 1;
@@ -141,21 +141,21 @@ if (obj_player.state != states.dead)
 			break;
 	}
 	var cs = 0;
-	with (obj_comboend)
+	with obj_comboend
 		cs += comboscore;
-	with (obj_particlesystem)
+	with obj_particlesystem
 	{
 		for (var i = 0; i < ds_list_size(global.collect_list); i++)
 			cs += ds_list_find_value(global.collect_list, i).value;
 	}
 	var sc = _score - global.comboscore - cs;
-	if (sc < 0)
+	if sc < 0
 		sc = 0;
 	var str = string(sc);
 	var num = string_length(str);
 	var w = string_width(str);
 	var xx = hud_xx - (w / 2);
-	if (lastcollect != sc)
+	if lastcollect != sc
 	{
 		color_array = array_create(num, 0);
 		for (i = 0; i < array_length(color_array); i++)
@@ -177,6 +177,6 @@ if (obj_player.state != states.dead)
 	draw_set_font(lang_get_font("bigfont"));
 	draw_set_halign(fa_center);
 	draw_set_color(c_white);
-	if (obj_player1.character == "V")
+	if obj_player1.character == "V"
 		draw_text(200 + healthshake, 125 + healthshake, global.playerhealth);
 }

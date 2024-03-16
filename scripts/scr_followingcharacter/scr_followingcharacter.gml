@@ -26,13 +26,13 @@ function following_character_init()
 function following_character_delete()
 {
 	var p = ds_list_find_index(global.followerlist, id);
-	if (p != -1)
+	if p != -1
 	{
 		ds_list_delete(global.followerlist, p);
 		var _id = id;
-		with (obj_followcharacter)
+		with obj_followcharacter
 		{
-			if (id != _id)
+			if id != _id
 			{
 				pos = ds_list_find_index(global.followerlist, id);
 				followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : -4;
@@ -42,7 +42,7 @@ function following_character_delete()
 }
 function following_character_calculate()
 {
-	with (obj_followcharacter)
+	with obj_followcharacter
 	{
 		pos = ds_list_find_index(global.followerlist, id);
 		followid = (pos > 0) ? ds_list_find_value(global.followerlist, pos - 1) : -4;
@@ -55,7 +55,7 @@ function following_add_to_front()
 	{
 		ds_list_delete(global.followerlist, ds_list_find_index(global.followerlist, id));
 		i++;
-		if (i > 50)
+		if i > 50
 			break;
 	}
 	ds_list_insert(global.followerlist, 0, id);
@@ -65,9 +65,9 @@ function following_add_to_front()
 }
 function farmer_rearrange()
 {
-	with (obj_farmer1follow)
+	with obj_farmer1follow
 	{
-		if (farmerpos == obj_player1.farmerpos)
+		if farmerpos == obj_player1.farmerpos
 			following_add_to_front();
 	}
 }
@@ -96,8 +96,8 @@ function following_moonwalk_fix()
 {
 	if (!instance_exists(playerid))
 		exit;
-	if (playerid.object_index != obj_player1)
+	if playerid.object_index != obj_player1
 		exit;
-	if (playerid.state == states.machcancel && playerid.hsp != 0)
+	if playerid.state == states.machcancel && playerid.hsp != 0
 		image_xscale = sign(playerid.hsp) * playerid.scale_xs;
 }

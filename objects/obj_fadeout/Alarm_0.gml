@@ -1,8 +1,8 @@
 if (instance_exists(obj_player))
 {
-	if (custom_level == 0)
+	if custom_level == 0
 	{
-		with (obj_player)
+		with obj_player
 		{
 			if (place_meeting(x, y, obj_goldendoor))
 				game_restart();
@@ -11,9 +11,9 @@ if (instance_exists(obj_player))
 		{
 			var r = room;
 			scr_room_goto(obj_player1.targetRoom);
-			if (r == tower_peppinohouse)
+			if r == tower_peppinohouse
 				scr_unlock_swap();
-			with (obj_player)
+			with obj_player
 			{
 				if (state == states.ejected || state == states.policetaxi)
 				{
@@ -22,16 +22,16 @@ if (instance_exists(obj_player))
 				}
 			}
 		}
-		if (global.coop == 1)
+		if global.coop == 1
 		{
 			if (room != obj_player2.targetRoom || roomreset)
 				scr_room_goto(obj_player1.targetRoom);
-			with (obj_player)
+			with obj_player
 			{
-				if (state == states.ejected)
+				if state == states.ejected
 					state = states.normal;
 			}
-			with (obj_player2)
+			with obj_player2
 			{
 				if (instance_exists(obj_coopplayerfollow))
 					state = states.gotoplayer;

@@ -1,12 +1,12 @@
-if (state == states.charge)
+if state == states.charge
 {
-	with (other)
+	with other
 	{
-		if (state != states.boots && state != states.dead && state != states.rideweenie && state != states.gotoplayer)
+		if state != states.boots && state != states.dead && state != states.rideweenie && state != states.gotoplayer
 		{
 			var _pindex = (object_index == obj_player1) ? 0 : 1;
 			GamepadSetVibration(_pindex, 1, 1, 0.85);
-			if (state != states.fireass)
+			if state != states.fireass
 			{
 			}
 			state = states.fireass;

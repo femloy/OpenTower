@@ -3,11 +3,11 @@ function scr_player_meteorpep()
 	mach2 = 0;
 	landAnim = true;
 	vsp = 0;
-	if (sprite_index == spr_meteorpep_impact && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_meteorpep_impact && floor(image_index) == image_number - 1)
 		sprite_index = spr_meteorpep_flying;
-	if (sprite_index == spr_meteorpep_flying)
+	if sprite_index == spr_meteorpep_flying
 	{
-		if (movespeed <= 20)
+		if movespeed <= 20
 			movespeed += 1;
 		hsp = floor(-xscale * movespeed);
 	}
@@ -16,7 +16,7 @@ function scr_player_meteorpep()
 	if (scr_solid(x - 1, y) && xscale == 1 && hsp != 0)
 	{
 		movespeed = 0;
-		with (obj_baddie)
+		with obj_baddie
 		{
 			if (point_in_camera(x, y, view_camera[0]))
 			{
@@ -24,7 +24,7 @@ function scr_player_meteorpep()
 				hsp = 0;
 			}
 		}
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 10;
 			shake_mag_acc = 30 / room_speed;
@@ -40,7 +40,7 @@ function scr_player_meteorpep()
 			vsp = -7;
 			hsp = 0;
 		}
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 10;
 			shake_mag_acc = 30 / room_speed;
@@ -48,7 +48,7 @@ function scr_player_meteorpep()
 		image_index = 0;
 		sprite_index = spr_meteorpep_land;
 	}
-	if (sprite_index == spr_meteorpep_land && floor(image_index) == (image_number - 1))
+	if (sprite_index == spr_meteorpep_land && floor(image_index) == image_number - 1)
 		state = states.normal;
 	image_speed = 0.35;
 }

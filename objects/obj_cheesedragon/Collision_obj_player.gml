@@ -1,4 +1,4 @@
-with (other)
+with other
 {
 	hsp = -6;
 	state = states.bump;

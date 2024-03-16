@@ -1,6 +1,6 @@
 alarm[0] = 5;
 var angle = 0;
-switch (dir)
+switch dir
 {
 	case 0:
 		angle = point_direction(0, 0, -1, 0);
@@ -48,7 +48,7 @@ with (instance_create(x + lengthdir_x(dis, angle), y + lengthdir_y(dis, angle), 
 	}
 }
 dir++;
-if (singleshot)
+if singleshot
 {
 	alarm[0] = -1;
 	alarm[1] = 140;

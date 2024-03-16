@@ -2,10 +2,10 @@ loading = true;
 with (instance_create(x, y, obj_fadeout))
 {
 	restarttimer = true;
-	if (room == tower_finalhallwaytitlecard)
+	if room == tower_finalhallwaytitlecard
 		finalhallway = true;
 }
-if (group_arr != -4)
+if group_arr != -4
 {
 	with (instance_create(x, y, obj_loadingscreen))
 	{

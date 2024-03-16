@@ -1,4 +1,4 @@
-if (falling == 1 && vsp > 0)
+if falling == 1 && vsp > 0
 {
 	hit = true;
 	instance_create(x, y, obj_stompeffect);
@@ -7,7 +7,7 @@ if (falling == 1 && vsp > 0)
 	obj_player.sprite_index = spr_player_stunned;
 	vsp = -5;
 	falling = false;
-	with (obj_camera)
+	with obj_camera
 	{
 		shake_mag = 10;
 		shake_mag_acc = 30 / room_speed;

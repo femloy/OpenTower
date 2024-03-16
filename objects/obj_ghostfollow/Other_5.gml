@@ -1,6 +1,6 @@
-if (object_index == obj_halloweenfollow && state == states.johnghost)
+if object_index == obj_halloweenfollow && state == states.johnghost
 {
-	with (obj_player1)
+	with obj_player1
 	{
 		state = states.normal;
 		landAnim = false;

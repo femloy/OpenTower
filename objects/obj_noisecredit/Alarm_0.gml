@@ -1,5 +1,5 @@
 if (heads_pos >= array_length(heads))
-    exit;
+	exit;
 
 alarm[0] = 10;
 heads[heads_pos].visible = true;

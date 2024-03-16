@@ -94,13 +94,13 @@ function add_achievement_update(_name, _update_rate, _creation_code, _update_fun
 	};
 	q.update_func = method(q, _update_func);
 	
-	if (_creation_code != -4)
+	if _creation_code != -4
 	{
 		q.creation_code = method(q, _creation_code);
 		q.creation_code();
 	}
 	
-	if (_local == false)
+	if _local == false
 	{
 		ini_open_from_string(obj_savesystem.ini_str_options);
 		if (ini_read_real(_savesection, _savename, false) == 1)
@@ -126,12 +126,12 @@ function add_achievement_notify(_name, _creation_code, _func, _local = true, _sa
 		variables: ds_map_create()
 	};
 	q.func = method(q, _func);
-	if (_creation_code != -4)
+	if _creation_code != -4
 	{
 		q.creation_code = method(q, _creation_code);
 		q.creation_code();
 	}
-	if (_local == false)
+	if _local == false
 	{
 		ini_open_from_string(obj_savesystem.ini_str_options);
 		if (ini_read_real(_savesection, _savename, false) == 1)
@@ -149,7 +149,7 @@ function add_achievement_notify(_name, _creation_code, _func, _local = true, _sa
 function notification_push(notif, array)
 {
 	trace("Pushing notification: ", notif, " ", array);
-	with (obj_achievementtracker)
+	with obj_achievementtracker
 		ds_queue_enqueue(notify_queue, [notif, array]);
 }
 function achievement_add_variable(_name, _value, _save = false, _resettable = false)
@@ -183,9 +183,9 @@ function achievement_get_all_variables()
 function achievement_unlock(_name, _display_name, _sprite, _index = 0)
 {
 	var b = achievement_get_struct(_name);
-	with (b)
+	with b
 	{
-		if (!unlocked)
+		if !unlocked
 		{
 			trace("Achievement unlocked! ", _name, " ", _display_name);
 			unlocked = true;
@@ -255,7 +255,7 @@ function palette_unlock(_achievement, _palettename, _paletteselect, _texture = n
 			{
 				achievement_spr = noone;
 				sprite_index = spr_newclothes;
-				if (!peppino)
+				if !peppino
 				{
 					sprite_index = spr_newclothesN;
 					spr_palette = spr_noisepalette;
@@ -273,14 +273,14 @@ function achievement_reset_variables(achievement_array)
 	for (var i = 0; i < array_length(achievement_array); i++)
 	{
 		var b = achievement_array[i];
-		with (b)
+		with b
 		{
 			var size = ds_map_size(variables);
 			var key = ds_map_find_first(variables)
 			for (var j = 0; j < size; j++)
 			{
 				var q = ds_map_find_value(variables, key);
-				if (q.resettable)
+				if q.resettable
 					q.value = q.init_value;
 				key = ds_map_find_next(variables, key);
 			}
@@ -293,14 +293,14 @@ function achievement_save_variables(achievement_array)
 	{
 		var b = achievement_array[i];
 		ini_open_from_string(obj_savesystem.ini_str);
-		with (b)
+		with b
 		{
 			var size = ds_map_size(variables);
 			var key = ds_map_find_first(variables);
 			for (var j = 0; j < size; j++)
 			{
 				var q = ds_map_find_value(variables, key);
-				if (q.save)
+				if q.save
 					ini_write_real("achievements_variables", key, q.value);
 				key = ds_map_find_next(variables, key);
 			}
@@ -314,7 +314,7 @@ function achievement_get_steam_achievements(achievement_array)
 	{
 		var b = achievement_array[i];
 		ini_open_from_string(obj_savesystem.ini_str);
-		with (b)
+		with b
 		{
 			if ini_read_real("achievements", name, false)
 				scr_steam_unlock_achievement(name);
@@ -327,7 +327,7 @@ function achievements_load(achievement_array)
 	for (var i = 0; i < array_length(achievement_array); i++)
 	{
 		var b = achievement_array[i];
-		with (b)
+		with b
 		{
 			unlocked = ini_read_real("achievements", name, false);
 			var size = ds_map_size(variables);
@@ -335,7 +335,7 @@ function achievements_load(achievement_array)
 			for (var j = 0; j < size; j++)
 			{
 				var q = ds_map_find_value(variables, key);
-				if (q.save)
+				if q.save
 					q.value = ini_read_real("achievements_variables", key, q.init_value);
 				key = ds_map_find_next(variables, key);
 			}
@@ -349,19 +349,19 @@ function achievement_get_struct(_name)
 	for (var i = 0; i < array_length(l); i++)
 	{
 		var q = l[i];
-		if (q.name == _name)
+		if q.name == _name
 		{
 			b = q;
 			break;
 		}
 	}
-	if (b == noone)
+	if b == noone
 	{
 		l = obj_achievementtracker.achievements_notify;
 		for (i = 0; i < array_length(l); i++)
 		{
 			q = l[i];
-			if (q.name == _name)
+			if q.name == _name
 			{
 				b = q;
 				break;

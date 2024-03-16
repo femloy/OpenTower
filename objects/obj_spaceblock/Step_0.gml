@@ -1,4 +1,4 @@
-if (global.spaceblockswitch == 1)
+if global.spaceblockswitch == 1
 {
 	x = -abs(sprite_width);
 	y = -abs(sprite_height);
@@ -13,7 +13,7 @@ else if (global.spaceblockswitch == 0 && (x != xstart || sprite_index != spr_spa
 	y = ystart;
 	image_alpha = 1;
 }
-with (blockid)
+with blockid
 {
 	x = other.x;
 	y = other.y;

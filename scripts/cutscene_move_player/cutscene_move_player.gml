@@ -6,14 +6,14 @@ function cutscene_move_player(_player, _xto, _hsp, _threshold)
 	var threshold = _threshold;
 	
 	var finish = false;
-	with (player)
+	with player
 	{
 		sprite_index = spr_move;
 		image_speed = 0.6;
 		if (x < (x_to - threshold))
 		{
 			xscale = 1;
-			if (hsp < max_hsp)
+			if hsp < max_hsp
 				hsp += 0.5;
 			else
 				hsp = max_hsp;
@@ -21,7 +21,7 @@ function cutscene_move_player(_player, _xto, _hsp, _threshold)
 		else if (x > (x_to + threshold))
 		{
 			xscale = -1;
-			if (hsp > -max_hsp)
+			if hsp > -max_hsp
 				hsp -= 0.5;
 			else
 				hsp = -max_hsp;
@@ -34,9 +34,9 @@ function cutscene_move_player(_player, _xto, _hsp, _threshold)
 		if (place_meeting(x + hsp, y, obj_solid))
 			finish = true;
 	}
-	if (finish)
+	if finish
 		cutscene_end_action();
-	with (player)
+	with player
 	{
 		if (move != 0 && (floor(image_index) == 3 || floor(image_index) == 8) && steppy == 0 && character != "V")
 		{

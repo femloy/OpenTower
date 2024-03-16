@@ -1,6 +1,6 @@
 function scr_enemy_grabbed()
 {
-	if (!pepperman_grab)
+	if !pepperman_grab
 	{
 		var _obj_player = asset_get_index(concat("obj_player", grabbedby));
 		image_xscale = -_obj_player.xscale;
@@ -9,7 +9,7 @@ function scr_enemy_grabbed()
 		if (_obj_player.state == states.grabbing || _obj_player.state == states.grab || _obj_player.state == states.throwing || _obj_player.state == states.slam || _obj_player.state == states.tacklecharge)
 		{
 			x = _obj_player.x;
-			if (_obj_player.sprite_index != _obj_player.spr_haulingstart)
+			if _obj_player.sprite_index != _obj_player.spr_haulingstart
 				y = _obj_player.y - 40;
 			else if (floor(_obj_player.image_index) == 0)
 				y = _obj_player.y;
@@ -21,7 +21,7 @@ function scr_enemy_grabbed()
 				y = _obj_player.y - 30;
 			image_xscale = -_obj_player.xscale;
 		}
-		with (_obj_player)
+		with _obj_player
 		{
 			suplexhavetomash = other.hp - 1;
 			move = key_left2 + key_right2;
@@ -38,7 +38,7 @@ function scr_enemy_grabbed()
 		{
 			alarm[3] = 3;
 			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
+			if other.object_index == obj_pizzaball
 				global.golfhit += 1;
 			instance_create(x + (_obj_player.xscale * 30), y, obj_bumpeffect);
 			alarm[1] = 5;
@@ -49,20 +49,20 @@ function scr_enemy_grabbed()
 			state = states.stun;
 			hsp = -image_xscale * 25;
 			grav = 0;
-			if (object_index != obj_swapplayergrabbable)
+			if object_index != obj_swapplayergrabbable
 				global.combotime = 60;
-			if (!important)
+			if !important
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
 			}
 		}
-		if (_obj_player.state == states.finishingblow)
+		if _obj_player.state == states.finishingblow
 		{
 			if (floor(_obj_player.image_index) < 1 && _obj_player.sprite_index == _obj_player.spr_swingdingend)
 			{
@@ -76,11 +76,11 @@ function scr_enemy_grabbed()
 			}
 			check_grabbed_solid(_obj_player);
 		}
-		if (_obj_player.state == states.backkick)
+		if _obj_player.state == states.backkick
 		{
 			alarm[3] = 3;
 			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
+			if other.object_index == obj_pizzaball
 				global.golfhit += 1;
 			hp -= 1;
 			instance_create(x + (-_obj_player.xscale * 50), y, obj_bumpeffect);
@@ -92,24 +92,24 @@ function scr_enemy_grabbed()
 			image_xscale *= -1;
 			hsp = -image_xscale * 20;
 			vsp = -7;
-			if (object_index != obj_swapplayergrabbable)
+			if object_index != obj_swapplayergrabbable
 				global.combotime = 60;
-			if (!important)
+			if !important
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
 			}
 		}
-		if (_obj_player.state == states.shoulder)
+		if _obj_player.state == states.shoulder
 		{
 			alarm[3] = 3;
 			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
+			if other.object_index == obj_pizzaball
 				global.golfhit += 1;
 			hp -= 1;
 			instance_create(x, y + 20, obj_bumpeffect);
@@ -118,26 +118,26 @@ function scr_enemy_grabbed()
 			x = _obj_player.x;
 			y = _obj_player.y;
 			state = states.stun;
-			if (_obj_player.sprite_index == spr_player_shoulder)
+			if _obj_player.sprite_index == spr_player_shoulder
 				vsp = 15;
-			if (_obj_player.sprite_index == spr_player_diagonaldownthrow)
+			if _obj_player.sprite_index == spr_player_diagonaldownthrow
 			{
 				hsp = -image_xscale * 10;
 				vsp = 15;
 			}
-			if (_obj_player.sprite_index == spr_player_diagonalupthrow)
+			if _obj_player.sprite_index == spr_player_diagonalupthrow
 			{
 				hsp = -image_xscale * 10;
 				vsp = -15;
 			}
-			if (object_index != obj_swapplayergrabbable)
+			if object_index != obj_swapplayergrabbable
 				global.combotime = 60;
-			if (!important)
+			if !important
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
@@ -153,7 +153,7 @@ function scr_enemy_grabbed()
 			hitLag = lag;
 			hitX = x;
 			hitY = y;
-			if (object_index != obj_noisey && object_index != obj_tank)
+			if object_index != obj_noisey && object_index != obj_tank
 			{
 				
 			}
@@ -167,10 +167,10 @@ function scr_enemy_grabbed()
 			_obj_player.hitY = _obj_player.y;
 			instance_create(x, y, obj_parryeffect);
 			alarm[3] = 1;
-			if (object_index != obj_swapplayergrabbable)
+			if object_index != obj_swapplayergrabbable
 				global.combotime = 60;
 			global.heattime = 60;
-			if (!important)
+			if !important
 				global.style += (5 + global.combo);
 			GamepadSetVibration(_obj_player.object_index == obj_player1 ? 0 : 1, 0.8, 0.8, 0.65);
 			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
@@ -204,7 +204,7 @@ function scr_enemy_grabbed()
 				}
 				vsp = -6;
 			}
-			if (_obj_player.sprite_index != spr_playerN_piledriver)
+			if _obj_player.sprite_index != spr_playerN_piledriver
 			{
 				check_grabbed_solid(_obj_player);
 				check_grabbed_solid(_obj_player);
@@ -213,10 +213,10 @@ function scr_enemy_grabbed()
 			vsp = hitvsp;
 			linethrown = true;
 		}
-		if (_obj_player.state == states.throwing)
+		if _obj_player.state == states.throwing
 		{
 			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
+			if other.object_index == obj_pizzaball
 				global.golfhit += 1;
 			alarm[1] = 5;
 			thrown = true;
@@ -228,11 +228,11 @@ function scr_enemy_grabbed()
 			check_grabbed_solid(_obj_player);
 			check_grabbed_solid(_obj_player);
 		}
-		if (_obj_player.state == states.uppunch)
+		if _obj_player.state == states.uppunch
 		{
 			alarm[3] = 3;
 			global.hit += 1;
-			if (other.object_index == obj_pizzaball)
+			if other.object_index == obj_pizzaball
 				global.golfhit += 1;
 			hp -= 1;
 			instance_create(x + (-_obj_player.xscale * 15), y - 50, obj_bumpeffect);
@@ -243,30 +243,30 @@ function scr_enemy_grabbed()
 			hsp = -image_xscale * 2;
 			state = states.stun;
 			vsp = -20;
-			if (object_index != obj_swapplayergrabbable)
+			if object_index != obj_swapplayergrabbable
 				global.combotime = 60;
-			if (!important)
+			if !important
 				global.style += (5 + global.combo);
 			instance_create(x, y, obj_slapstar);
 			instance_create(x, y, obj_baddiegibs);
 			flash = true;
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
 			}
 			check_grabbed_solid(_obj_player);
 		}
-		if (_obj_player.state == states.tacklecharge)
+		if _obj_player.state == states.tacklecharge
 		{
 			x = _obj_player.x + (_obj_player.xscale * 15);
 			y = _obj_player.y;
 		}
 		if (_obj_player.state == states.superslam || (_obj_player.state == states.chainsaw && sprite_index == spr_player_piledriver))
 		{
-			if (_obj_player.character == "P" && _obj_player.ispeppino)
+			if _obj_player.character == "P" && _obj_player.ispeppino
 			{
-				if (_obj_player.sprite_index != _obj_player.spr_piledriverland)
+				if _obj_player.sprite_index != _obj_player.spr_piledriverland
 				{
 					if (floor(_obj_player.image_index) == 0)
 					{
@@ -330,7 +330,7 @@ function scr_enemy_grabbed()
 				depth = -7;
 				x = _obj_player.x;
 				y = _obj_player.y - 54;
-				if (_obj_player.sprite_index == spr_playerN_piledriverland)
+				if _obj_player.sprite_index == spr_playerN_piledriverland
 				{
 					x = _obj_player.x;
 					y = _obj_player.y + 4;
@@ -359,14 +359,14 @@ function scr_enemy_grabbed()
 			instance_create(x, y, obj_baddiegibs);
 			instance_create(x, y, obj_baddiegibs);
 			instance_create(x, y, obj_baddiegibs);
-			with (obj_camera)
+			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
 			}
-			with (_obj_player)
+			with _obj_player
 			{
-				if (state != states.chainsaw)
+				if state != states.chainsaw
 				{
 					tauntstoredmovespeed = movespeed;
 					tauntstoredsprite = sprite_index;
@@ -378,7 +378,7 @@ function scr_enemy_grabbed()
 				other.hitvsp = -11;
 			}
 		}
-		if (_obj_player.state == states.grab && _obj_player.sprite_index == _obj_player.spr_swingding)
+		if _obj_player.state == states.grab && _obj_player.sprite_index == _obj_player.spr_swingding
 		{
 			if (floor(_obj_player.image_index) == 0)
 			{
@@ -432,23 +432,23 @@ function scr_enemy_grabbed()
 		if (state != states.grabbed || _obj_player.state != states.grab)
 		{
 			check_grabbed_solid(_obj_player);
-			if (state == states.hit)
+			if state == states.hit
 			{
 				hitX = x;
 				hitY = y;
 			}
 		}
 	}
-	if (pepperman_grab)
+	if pepperman_grab
 	{
 		var _player = (grabbedby == 1) ? obj_player1.id : obj_player2.id;
 		image_xscale = _player.xscale;
-		if (!thrown)
+		if !thrown
 		{
 			x = _player.x;
 			y = _player.y - 60;
 		}
-		if (_player.key_attack && !_player.key_up)
+		if _player.key_attack && !_player.key_up
 		{
 			alarm[1] = 5;
 			thrown = true;
@@ -461,7 +461,7 @@ function scr_enemy_grabbed()
 			_player.image_index = 0;
 			_player.pepperman_grabID = -4;
 		}
-		if (_player.key_attack && _player.key_up)
+		if _player.key_attack && _player.key_up
 		{
 			alarm[1] = 5;
 			thrown = true;
@@ -475,7 +475,7 @@ function scr_enemy_grabbed()
 			_player.image_index = 0;
 			_player.pepperman_grabID = -4;
 		}
-		if (_player.state != states.normal && _player.state != states.jump)
+		if _player.state != states.normal && _player.state != states.jump
 		{
 			_player.pepperman_grabID = -4;
 			state = states.stun;
@@ -487,7 +487,7 @@ function scr_enemy_grabbed()
 }
 function check_grabbed_solid(player)
 {
-	if (instakilled)
+	if instakilled
 		exit;
 	if (instance_exists(player) && player.sprite_index == spr_playerN_piledriver)
 		exit;
@@ -504,7 +504,7 @@ function check_grabbed_solid(player)
 			{
 				x += player.xscale;
 				i++;
-				if (i > _dist)
+				if i > _dist
 					break;
 			}
 			if (scr_solid(x, y))
@@ -514,7 +514,7 @@ function check_grabbed_solid(player)
 				{
 					x -= player.xscale;
 					i++;
-					if (i > _dist)
+					if i > _dist
 						break;
 				}
 			}

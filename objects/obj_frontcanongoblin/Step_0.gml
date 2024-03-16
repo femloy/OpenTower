@@ -1,9 +1,9 @@
-if (state != states.dead)
+if state != states.dead
 {
 	captain_y = SCREEN_HEIGHT;
 	canon_y = SCREEN_HEIGHT;
 }
-switch (state)
+switch state
 {
 	case states.normal:
 		break;
@@ -21,9 +21,9 @@ switch (state)
 		break;
 	
 	case states.dead:
-		if (!destroyed)
+		if !destroyed
 		{
-			if (destroybuffer > 0)
+			if destroybuffer > 0
 				destroybuffer--;
 			else
 				destroyed = true;
@@ -33,7 +33,7 @@ switch (state)
 			var cy = SCREEN_HEIGHT + sprite_get_height(captain_sprite);
 			captain_y = Approach(captain_y, cy, 2);
 			canon_y = Approach(canon_y, cy, 1.8);
-			if (captain_y >= cy)
+			if captain_y >= cy
 				instance_destroy();
 		}
 		break;

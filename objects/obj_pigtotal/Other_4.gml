@@ -4,7 +4,7 @@ if (room == boss_pepperman || room == tower_pizzafacehall || instance_exists(obj
 	visible = false;
 else
 	visible = true;
-if (global.panic)
+if global.panic
 	instance_destroy();
 else
 {
@@ -26,7 +26,7 @@ else
 	{
 		b = _worlds[i];
 		var r = ini_read_real(b, "reduction", 0);
-		if (r > 0 && global.stickreq[i] != r)
+		if r > 0 && global.stickreq[i] != r
 		{
 			ini_write_real(b, "reduction", global.stickreq[i]);
 			r = global.stickreq[i];

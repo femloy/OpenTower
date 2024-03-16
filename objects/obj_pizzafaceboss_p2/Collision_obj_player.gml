@@ -1,4 +1,4 @@
-if (other.state == states.knightpep && other.sprite_index != other.spr_knightpepstart && other.sprite_index != other.spr_knightpepthunder)
+if other.state == states.knightpep && other.sprite_index != other.spr_knightpepstart && other.sprite_index != other.spr_knightpepthunder
 {
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
 	state = states.stun;

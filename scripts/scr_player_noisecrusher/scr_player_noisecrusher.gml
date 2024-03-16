@@ -1,7 +1,7 @@
 function scr_player_noisecrusher()
 {
 	image_speed = 0.35;
-	if (sprite_index == spr_playerN_noisecrusherland)
+	if sprite_index == spr_playerN_noisecrusherland
 	{
 		hsp = 0;
 		vsp = 0;
@@ -10,15 +10,15 @@ function scr_player_noisecrusher()
 			state = 0;
 		exit;
 	}
-	if (vsp > 0)
+	if vsp > 0
 		vsp += 0.5;
 	hsp = movespeed;
 	move = key_left + key_right;
-	if (move != 0)
+	if move != 0
 		movespeed = Approach(movespeed, move * 8, 0.5);
 	else
 		movespeed = Approach(movespeed, 0, 0.5);
-	if (sprite_index != spr_playerN_noisecrusherstart && sprite_index != spr_playerN_noisecrusherland && sprite_index != spr_playerN_noisecrusherfall)
+	if sprite_index != spr_playerN_noisecrusherstart && sprite_index != spr_playerN_noisecrusherland && sprite_index != spr_playerN_noisecrusherfall
 	{
 		sprite_index = spr_playerN_noisecrusherstart;
 		image_index = 0;
@@ -29,7 +29,7 @@ function scr_player_noisecrusher()
 	{
 		image_speed = 0.5;
 		input_buffer_shoot = 0;
-		if (move != 0)
+		if move != 0
 			xscale = move;
 		input_buffer_slap = 0;
 		key_slap = false;
@@ -59,12 +59,12 @@ function scr_player_noisecrusher()
 			sprite_index = spr_ratdust;
 			hspeed = 5;
 		}
-		with (obj_baddie)
+		with obj_baddie
 		{
 			if (shakestun && grounded && point_in_camera(x, y, view_camera[0]) && grounded && vsp > 0 && !invincible && groundpound)
 			{
 				state = states.stun;
-				if (stunned < 60)
+				if stunned < 60
 					stunned = 60;
 				vsp = -11;
 				image_xscale *= -1;
@@ -72,7 +72,7 @@ function scr_player_noisecrusher()
 				momentum = 0;
 			}
 		}
-		with (obj_camera)
+		with obj_camera
 		{
 			shake_mag = 10;
 			shake_mag_acc = 30 / room_speed;

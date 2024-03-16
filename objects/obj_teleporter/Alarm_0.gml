@@ -1,6 +1,6 @@
-with (obj_teleporter)
+with obj_teleporter
 {
-	if (trigger == other.trigger && start == 0)
+	if trigger == other.trigger && start == 0
 	{
 		other.player.x = x;
 		other.player.y = y - 20;

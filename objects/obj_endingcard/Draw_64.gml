@@ -1,6 +1,6 @@
-if (showsprite)
+if showsprite
 	draw_self();
-if (text != -4)
+if text != -4
 {
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);

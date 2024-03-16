@@ -1,12 +1,12 @@
 if (ds_list_find_index(global.saveroom, id) == -1)
 {
 	fmod_event_one_shot_3d("event:/sfx/misc/breakice", x, y);
-	if (bird)
+	if bird
 	{
 		instance_create(x + 32, y + 32, obj_burd);
 		notification_push(notifs.destroy_iceblock, [room]);
 	}
-	repeat (6)
+	repeat 6
 		create_debris(x + 32, y + 32, spr_icedebris);
 	instance_create(x + 32, y + 32, obj_parryeffect);
 	var val = heat_calculate(10);

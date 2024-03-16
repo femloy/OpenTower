@@ -1,6 +1,6 @@
 visible = true;
-with (obj_bosscontroller)
+with obj_bosscontroller
 {
-	if (state == states.arenaintro)
+	if state == states.arenaintro
 		other.visible = false;
 }

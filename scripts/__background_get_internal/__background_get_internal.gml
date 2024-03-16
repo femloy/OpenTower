@@ -10,7 +10,7 @@ function __background_get_internal(prop, bind, backinfo)
 		// Try getting the background info again from the bind index
 		__backinfo = __background_get_element(__bind);
 
-		if (__backinfo[0] == -1)
+		if __backinfo[0] == -1
 			return -1;	// erm
 	}
 

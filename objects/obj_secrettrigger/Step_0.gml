@@ -1,2 +1,2 @@
-if (stepfunc != -4)
+if stepfunc != -4
 	stepfunc();

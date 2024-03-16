@@ -2,11 +2,11 @@ function scr_player_stringjump()
 {
 	hsp = xscale * movespeed;
 	move = key_left + key_right;
-	if (move != 0)
+	if move != 0
 	{
-		if (xscale != move)
+		if xscale != move
 		{
-			if (movespeed > 0)
+			if movespeed > 0
 				movespeed = Approach(movespeed, 0, 0.5);
 			else
 			{
@@ -14,12 +14,12 @@ function scr_player_stringjump()
 				movespeed = 0;
 			}
 		}
-		else if (movespeed < 8)
+		else if movespeed < 8
 			movespeed = Approach(movespeed, 8, 0.25);
 	}
 	if (place_meeting(x + sign(hsp), y, obj_solid))
 		movespeed = 0;
-	if (grounded && vsp > 0)
+	if grounded && vsp > 0
 	{
 		state = states.normal;
 		landAnim = true;

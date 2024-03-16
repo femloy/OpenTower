@@ -8,13 +8,13 @@ locked = false;
 john = false;
 alarm[0] = 1;
 uparrowID = scr_create_uparrowhitbox();
-if (room == tower_5)
+if room == tower_5
 {
-	if (global.panic)
+	if global.panic
 	{
-		with (obj_door)
+		with obj_door
 			instance_create(x + 50, y + 96, obj_rubble);
-		with (obj_bossdoor)
+		with obj_bossdoor
 			instance_create(x + 50, y + 96, obj_rubble);
 	}
 }

@@ -1,9 +1,9 @@
 instance_destroy(instance_place(x, y - 1, obj_baddie));
 if (place_meeting(x, y - 1, obj_player))
 {
-	with (obj_player)
+	with obj_player
 	{
-		if (state != states.golf && state != states.tackle && state != states.gotoplayer && state != states.stringfall && state != states.stringjump && state != states.stringfling)
+		if state != states.golf && state != states.tackle && state != states.gotoplayer && state != states.stringfall && state != states.stringjump && state != states.stringfling
 		{
 			if (place_meeting(x, y + 1, other))
 			{
@@ -11,7 +11,7 @@ if (place_meeting(x, y - 1, obj_player))
 				{
 					if (!instance_exists(obj_surfback) || ispeppino)
 					{
-						if (state != states.barrel && state != states.barreljump && state != states.barrelslide && state != states.barrelclimbwall)
+						if state != states.barrel && state != states.barreljump && state != states.barrelslide && state != states.barrelclimbwall
 						{
 							if (state != states.slipnslide || sprite_index != spr_currentplayer)
 								fmod_event_one_shot_3d("event:/sfx/misc/waterslidesplash", x, y);
@@ -21,7 +21,7 @@ if (place_meeting(x, y - 1, obj_player))
 						else
 						{
 							state = states.barrelslide;
-							if (sprite_index != spr_barrelslipnslide)
+							if sprite_index != spr_barrelslipnslide
 								sprite_index = spr_barrelroll;
 						}
 						xscale = sign(other.image_xscale);
@@ -44,7 +44,7 @@ if (place_meeting(x, y - 1, obj_player))
 					}
 					vsp = -6;
 					image_index = 0;
-					if (state == states.trashjump)
+					if state == states.trashjump
 					{
 						state = states.trashroll;
 						movespeed = abs(movespeed);

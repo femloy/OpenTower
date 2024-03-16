@@ -1,4 +1,4 @@
-if (sprite_index != spr_piraneapple_projectile)
+if sprite_index != spr_piraneapple_projectile
 {
 	with (instance_create(x, y, obj_explosioneffect))
 	{
@@ -12,9 +12,9 @@ if (sprite_index != spr_piraneapple_projectile)
 		fmod_event_one_shot_3d("event:/sfx/misc/explosion", x, y);
 	}
 	notification_push(notifs.bazooka_explode, [room]);
-	with (baddieID)
+	with baddieID
 	{
-		if (bombreset > 20)
+		if bombreset > 20
 			bombreset = 20;
 	}
 	destroy_sounds([snd]);

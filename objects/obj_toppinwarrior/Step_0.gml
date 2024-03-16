@@ -1,11 +1,11 @@
-if (obj_player1.spotlight == 1)
+if obj_player1.spotlight == 1
 	playerid = obj_player1;
 else
 	playerid = obj_player2;
 visible = playerid.visible;
-if (set == 0)
+if set == 0
 {
-	switch (toppinwarrior)
+	switch toppinwarrior
 	{
 		case 1:
 			depth = 10;

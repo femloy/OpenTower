@@ -5,7 +5,7 @@ function __background_set_internal(prop, bind, val, backinfo)
 	var __val = val;
 	var __backinfo = backinfo;
 
-	if (__backinfo[0] == -1)
+	if __backinfo[0] == -1
 	{
 		return -1;	// erm
 	}
@@ -14,7 +14,7 @@ function __background_set_internal(prop, bind, val, backinfo)
 	var __layerid = __backinfo[1];
 	var __isfore = __backinfo[2];
 
-	if (__prop == e__BG.Foreground)
+	if __prop == e__BG.Foreground
 	{
 		// This requires quite a bit of extra logic (we need to modify our layer list)
 		if (round(__val) != round(__isfore))

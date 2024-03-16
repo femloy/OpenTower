@@ -9,16 +9,16 @@ function add_music(_room, _event, _eventsecret, _continuous, _on_room_start = no
 		event: -4,
 		event_secret: -4
 	};
-	with (b)
+	with b
 	{
-		if (_on_room_start != -4)
+		if _on_room_start != -4
 			on_room_start = method(self, _on_room_start);
-		if (_event != -4)
+		if _event != -4
 		{
 			event_name = _event;
 			event = fmod_event_create_instance(_event);
 		}
-		if (_eventsecret != -4)
+		if _eventsecret != -4
 		{
 			event_secret_name = _eventsecret;
 			event_secret = fmod_event_create_instance(_eventsecret);
@@ -29,11 +29,11 @@ function add_music(_room, _event, _eventsecret, _continuous, _on_room_start = no
 }
 function stop_music()
 {
-	with (obj_music)
+	with obj_music
 	{
-		if (music != -4)
+		if music != -4
 		{
-			if (obj_pause.pause)
+			if obj_pause.pause
 			{
 				fmod_event_instance_stop(music.event, true);
 				fmod_event_instance_stop(music.event_secret, true);
@@ -51,7 +51,7 @@ function stop_music()
 function hub_state(_room, _sound, _secretsound)
 {
 	var s = 0;
-	switch (_room)
+	switch _room
 	{
 		case tower_1:
 		case tower_1up:
@@ -94,9 +94,9 @@ function hub_state(_room, _sound, _secretsound)
 }
 function music_get_pos_wrap(_pos, _length)
 {
-	while (_pos > _length)
+	while _pos > _length
 		_pos -= _length;
-	if (_pos < 1)
+	if _pos < 1
 		_pos = 1;
 	return _pos;
 }

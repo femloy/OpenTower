@@ -5,12 +5,12 @@ function scr_player_chainsaw()
 	x = hitX + random_range(-4, 4);
 	y = hitY + random_range(-4, 4);
 	hitLag--;
-	if (key_slap2)
+	if key_slap2
 		input_buffer_slap = 0;
 	image_speed = 0;
-	if (key_slap2)
+	if key_slap2
 		input_attack_buffer = 8;
-	if (hitLag <= 0)
+	if hitLag <= 0
 	{
 		x = hitX;
 		y = hitY;
@@ -18,9 +18,9 @@ function scr_player_chainsaw()
 		sprite_index = tauntstoredsprite;
 		state = tauntstoredstate;
 		vsp = tauntstoredvsp;
-		if (state == states.ghost)
+		if state == states.ghost
 			hsp = tauntstoredhsp;
-		if (global.attackstyle == 0)
+		if global.attackstyle == 0
 		{
 			if ((tauntstoredstate == states.handstandjump && (tauntstoredsprite == spr_player_suplexgrabjumpstart || tauntstoredsprite == spr_player_suplexgrabjump || tauntstoredsprite == spr_player_airattack || tauntstoredsprite == spr_player_airattackstart)) || sprite_index == spr_piledriverland)
 			{
@@ -34,7 +34,7 @@ function scr_player_chainsaw()
 			else if (tauntstoredstate == states.handstandjump || tauntstoredstate == states.finishingblow)
 				state = states.normal;
 		}
-		if (global.attackstyle == 1)
+		if global.attackstyle == 1
 		{
 			if ((tauntstoredstate == states.handstandjump && (tauntstoredsprite == spr_player_suplexgrabjumpstart || tauntstoredsprite == spr_player_suplexgrabjump || tauntstoredsprite == spr_player_airattack || tauntstoredsprite == spr_player_airattackstart)) || sprite_index == spr_piledriverland)
 			{
@@ -52,9 +52,9 @@ function scr_player_chainsaw()
 				image_index = 0;
 			}
 		}
-		if (global.attackstyle == 2)
+		if global.attackstyle == 2
 		{
-			if (tauntstoredstate == states.lungeattack)
+			if tauntstoredstate == states.lungeattack
 				state = states.lungeattack;
 		}
 	}

@@ -4,7 +4,7 @@ function scr_player_ratmounttumble()
 	move = key_left + key_right;
 	sprite_index = spr_player_ratmountwalljump;
 	image_speed = -abs(movespeed) / 15;
-	if (!key_attack)
+	if !key_attack
 		movespeed = Approach(movespeed, 0, 1);
 	if (scr_slope() && hsp != 0)
 		scr_player_addslopemomentum(0.25, 0.25);
@@ -16,12 +16,12 @@ function scr_player_ratmounttumble()
 		vsp = -5;
 		movespeed = 3;
 	}
-	if (!jumpstop && vsp < 0.5 && !key_jump2)
+	if !jumpstop && vsp < 0.5 && !key_jump2
 	{
 		vsp /= 10;
 		jumpstop = true;
 	}
-	if (key_jump && brick && key_up)
+	if key_jump && brick && key_up
 	{
 		state = states.ratmountgroundpound;
 		sprite_index = spr_lonegustavo_jumpstart;
@@ -36,7 +36,7 @@ function scr_player_ratmounttumble()
 			image_index = 0;
 		}
 	}
-	if (input_buffer_jump > 0 && can_jump)
+	if input_buffer_jump > 0 && can_jump
 	{
 		input_buffer_jump = 0;
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);

@@ -1,4 +1,4 @@
-if (gui && visible)
+if gui && visible
 {
 	pal_swap_set(spr_palette, paletteselect, false);
 	var b = image_blend;

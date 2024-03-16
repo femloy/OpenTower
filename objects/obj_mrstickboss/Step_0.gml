@@ -1,10 +1,10 @@
 targetplayer = global.coop ? instance_nearest(x, y, obj_player) : obj_player1;
-if (hp <= 0 && state != states.arenaround)
+if hp <= 0 && state != states.arenaround
 {
-	if (!destroyed && !thrown && !destroyable)
+	if !destroyed && !thrown && !destroyable
 		boss_destroy(lastplayerid);
 }
-switch (state)
+switch state
 {
 	case states.arenaround:
 		grav = 0.5;

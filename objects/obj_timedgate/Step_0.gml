@@ -1,4 +1,4 @@
-if (global.timedgatetimer)
+if global.timedgatetimer
 {
 	activated = false;
 	x = -100;

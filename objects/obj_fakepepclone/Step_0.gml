@@ -1,6 +1,6 @@
 targetplayer = obj_player1.id;
 mask_index = spr_player_mask;
-switch (state)
+switch state
 {
 	case states.transition:
 		scr_fakepepclone_transitioncutscene();
@@ -36,7 +36,7 @@ switch (state)
 		scr_fakepepboss_backbreaker();
 		break;
 }
-if (state == states.Sjump)
+if state == states.Sjump
 {
 	if (!instance_exists(hitboxID))
 	{
@@ -51,10 +51,10 @@ if (state == states.Sjump)
 if ((state == states.grabdash || (state == states.mach2 && attackspeed >= 10) || (state == states.throwing && sprite_index == spr_fakepeppino_flailing) || state == states.freefall) && alarm[0] == -1)
 {
 	alarm[0] = 10;
-	if (state == states.freefall)
+	if state == states.freefall
 		alarm[0] = 5;
 }
-if (state == states.jump)
+if state == states.jump
 	grav = 0.4;
 else
 	grav = 0.5;

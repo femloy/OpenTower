@@ -6,9 +6,9 @@ if (cooldown <= 0 && (escape == 0 || global.panic == true))
 		other.ID = id;
 		image_xscale = other.image_xscale;
 	}
-	if (cooldownrandom == 1)
+	if cooldownrandom == 1
 		cooldownmax = random_range(50, 150);
-	repeat (5)
+	repeat 5
 	{
 		with (instance_create(x + (image_xscale * 35), y, obj_firemouthflame))
 		{
@@ -21,7 +21,7 @@ if (cooldown <= 0 && (escape == 0 || global.panic == true))
 	sprite_index = spr_canonbot_shoot;
 	image_index = 0;
 }
-if (cooldown > 0)
+if cooldown > 0
 	cooldown--;
-if (floor(image_index) == (image_number - 1) && sprite_index == spr_canonbot_shoot)
+if (floor(image_index) == image_number - 1 && sprite_index == spr_canonbot_shoot)
 	sprite_index = spr_canonbot;

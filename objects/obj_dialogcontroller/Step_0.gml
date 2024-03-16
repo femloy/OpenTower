@@ -1,4 +1,4 @@
-if (textbuffer > 0)
+if textbuffer > 0
 	textbuffer--;
 else
 {
@@ -9,7 +9,7 @@ else
 		displaytext = scr_separate_text(displaytext);
 		textbuffer = textspeed;
 	}
-	else if (obj_player.key_jump)
+	else if obj_player.key_jump
 	{
 		if (currentdialog < (array_length(dialog) - 1))
 		{
@@ -22,11 +22,11 @@ else
 			dialogheight = scr_calculate_height(currenttext);
 			dialogsprite = dialog[currentdialog][1];
 			var func = dialog[currentdialog][2];
-			if (func != -4)
+			if func != -4
 			{
 				if (npcID != -4 && instance_exists(npcID))
 				{
-					with (npcID)
+					with npcID
 						method(id, func)();
 				}
 				else

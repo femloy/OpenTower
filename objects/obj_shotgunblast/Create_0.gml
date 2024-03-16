@@ -1,5 +1,5 @@
 bulletID = instance_create(x, y, obj_shotgunbullet);
-with (bulletID)
+with bulletID
 {
 	spd = 0;
 	spdh = 0;

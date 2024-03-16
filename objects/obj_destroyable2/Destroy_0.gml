@@ -1,12 +1,12 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 {
-	repeat (6)
+	repeat 6
 	{
 		with (create_debris(x + 16, y, sprite_index))
 		{
-			if (sprite_index == spr_destroyable2)
+			if sprite_index == spr_destroyable2
 				sprite_index = spr_debris;
 			else
 				sprite_index = spr_halloweendebris;

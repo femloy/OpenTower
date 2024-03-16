@@ -1,7 +1,7 @@
 function scr_player_ejected()
 {
 	sprite_index = spr_deathend;
-	if (vsp < 20)
+	if vsp < 20
 		vsp += grav;
 	x += hsp;
 	y += floor(vsp);
@@ -12,7 +12,7 @@ function scr_player_ejected()
 	alarm[7] = -1;
 	if (y > (room_height + 100) && !instance_exists(obj_fadeout))
 	{
-		with (obj_player1)
+		with obj_player1
 		{
 			landAnim = false;
 			instance_create(x, y, obj_fadeout);
@@ -21,9 +21,9 @@ function scr_player_ejected()
 			global.seconds = 20;
 			obj_camera.ded = false;
 		}
-		if (global.coop == 1)
+		if global.coop == 1
 		{
-			with (obj_player2)
+			with obj_player2
 			{
 				landAnim = false;
 				targetRoom = lastroom;

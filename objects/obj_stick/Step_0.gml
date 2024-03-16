@@ -9,12 +9,12 @@ else
 		fmod_event_instance_play(global.snd_mrstickhat);
 	fmod_event_instance_set_3d_attributes(global.snd_mrstickhat, x, y);
 }
-switch (state)
+switch state
 {
 	case states.fall:
-		if (!noisette)
+		if !noisette
 		{
-			if (sprite_index == spr_stick_helicopter)
+			if sprite_index == spr_stick_helicopter
 			{
 				hsp = 0;
 				vsp = 0;
@@ -25,18 +25,18 @@ switch (state)
 					image_index = 0;
 				}
 			}
-			else if (sprite_index == spr_stick_fall)
+			else if sprite_index == spr_stick_fall
 			{
-				if (grounded && vsp > 0)
+				if grounded && vsp > 0
 				{
 					sprite_index = spr_stick_land;
 					image_index = 0;
 				}
 			}
-			else if (floor(image_index) == (image_number - 1))
+			else if floor(image_index) == image_number - 1
 				state = states.normal;
 		}
-		else if (sprite_index == spr_noisettestick_helicopter)
+		else if sprite_index == spr_noisettestick_helicopter
 		{
 			hsp = 0;
 			vsp = 0;
@@ -53,21 +53,21 @@ switch (state)
 		break;
 	
 	case states.normal:
-		if (arrowID == noone)
+		if arrowID == noone
 			arrowID = scr_create_uparrowhitbox();
-		if (!noisette)
+		if !noisette
 		{
-			if (sprite_index != spr_stick_idleanim1 && sprite_index != spr_stick_idleanim2 && sprite_index != spr_stick_idleanim3)
+			if sprite_index != spr_stick_idleanim1 && sprite_index != spr_stick_idleanim2 && sprite_index != spr_stick_idleanim3
 				sprite_index = spr_stick_idle;
-			else if (floor(image_index) == (image_number - 1))
+			else if floor(image_index) == image_number - 1
 				sprite_index = spr_stick_idle;
-			if (sprite_index == spr_stick_idle)
+			if sprite_index == spr_stick_idle
 			{
 				idle++;
-				if (obj_player1.x != x)
+				if obj_player1.x != x
 					image_xscale = sign(obj_player1.x - x);
 			}
-			if (idle >= 200)
+			if idle >= 200
 			{
 				if (!instance_exists(obj_titlecard))
 					fmod_event_one_shot_3d("event:/sfx/voice/mrstick", x, y);
@@ -78,7 +78,7 @@ switch (state)
 		}
 		else
 		{
-			if (sprite_index == spr_noisettestick_land && floor(image_index) == (image_number - 1))
+			if (sprite_index == spr_noisettestick_land && floor(image_index) == image_number - 1)
 				sprite_index = spr_noisettestick_idle;
 			image_xscale = -1;
 		}
@@ -101,7 +101,7 @@ switch (state)
 			image_index = 0;
 			shot = false;
 			drawing = false;
-			if (noisette)
+			if noisette
 			{
 				sprite_index = spr_noisettestick_takemoney1;
 				buffer = 80;
@@ -109,7 +109,7 @@ switch (state)
 				fmod_event_one_shot_3d("event:/sfx/noisette/voice1", x, y);
 			}
 			gamesave_async_save();
-			with (obj_player)
+			with obj_player
 			{
 				hsp = 0;
 				vsp = 0;
@@ -117,7 +117,7 @@ switch (state)
 				image_speed = 0.35;
 				state = states.actor;
 				xscale = -other.image_xscale;
-				if (other.noisette)
+				if other.noisette
 				{
 					hsp = -4;
 					xscale = 1;
@@ -129,21 +129,21 @@ switch (state)
 	case states.jump:
 		if (shot || noisette)
 		{
-			with (obj_player1)
+			with obj_player1
 				hsp = Approach(hsp, 0, 0.1);
 		}
-		if (sprite_index == spr_noisettestick_takemoney1)
+		if sprite_index == spr_noisettestick_takemoney1
 		{
-			if (obj_player1.hsp == 0)
+			if obj_player1.hsp == 0
 			{
-				with (obj_player1)
+				with obj_player1
 					sprite_index = spr_idle;
-				if (buffer > 0)
+				if buffer > 0
 					buffer--;
 				else
 				{
 					sprite_index = spr_noisettestick_takemoney2;
-					if (obj_player1.ispeppino)
+					if obj_player1.ispeppino
 					{
 						fmod_event_one_shot_3d("event:/sfx/noisette/voice2", x, y);
 						sprite_index = spr_noisettestick_helicopterstart;
@@ -153,13 +153,13 @@ switch (state)
 				}
 			}
 		}
-		else if (sprite_index == spr_noisettestick_takemoney2)
+		else if sprite_index == spr_noisettestick_takemoney2
 		{
 			var tx = obj_player1.x + (obj_player1.xscale * 16);
 			x = lerp(x, tx, 0.07);
 			if (abs(x - tx) <= 15)
 			{
-				if (wet_buffer > 0)
+				if wet_buffer > 0
 					wet_buffer--;
 				else
 				{
@@ -167,46 +167,46 @@ switch (state)
 					repeat (random(2) + 1)
 						create_debris(obj_player1.x + ((tx - obj_player1.x) / 2), y + 10, spr_waterdrop);
 				}
-				if (!shot)
+				if !shot
 				{
 					fmod_event_instance_play(kiss_snd);
 					fmod_event_instance_set_3d_attributes(kiss_snd, x, y);
-					with (obj_player1)
+					with obj_player1
 						sprite_index = spr_bump;
 					shot = true;
 					buffer = 150;
 					instance_create(obj_player1.x + ((tx - obj_player1.x) / 2), y, obj_noisetteheart);
 				}
 			}
-			if (buffer == 10)
+			if buffer == 10
 				fmod_event_instance_set_parameter(kiss_snd, "state", 1, true);
-			if (shot && buffer > 0)
+			if shot && buffer > 0
 				buffer--;
-			else if (shot)
+			else if shot
 			{
 				fmod_event_one_shot_3d("event:/sfx/noisette/voice2", x, y);
 				sprite_index = spr_noisettestick_helicopterstart;
 				image_index = 0;
 				fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
-				with (obj_player1)
+				with obj_player1
 				{
 					hsp = -xscale * 4;
 					sprite_index = spr_bump;
 				}
 			}
 		}
-		else if (sprite_index == spr_noisettestick_helicopterstart)
+		else if sprite_index == spr_noisettestick_helicopterstart
 		{
 			if (floor(image_index) == image_number - 1)
 				sprite_index = spr_noisettestick_helicopter;
 		}
-		else if (sprite_index == spr_stick_takemoney1)
+		else if sprite_index == spr_stick_takemoney1
 		{
 			if (floor(image_index) >= 16 && !shot)
 			{
 				shot = true;
 				fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);
-				with (obj_player1)
+				with obj_player1
 				{
 					hsp = -xscale * 4;
 					sprite_index = spr_bump;
@@ -220,7 +220,7 @@ switch (state)
 				fmod_event_one_shot_3d("event:/sfx/voice/mrsticklaugh", x, y);
 			}
 		}
-		else if (sprite_index == spr_stick_takemoney2)
+		else if sprite_index == spr_stick_takemoney2
 		{
 			hsp = image_xscale * 4;
 			if (abs(x - xstart) >= 200 || (place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope)))
@@ -230,7 +230,7 @@ switch (state)
 				image_index = 0;
 			}
 		}
-		else if (sprite_index == spr_stick_leave)
+		else if sprite_index == spr_stick_leave
 		{
 			vsp = 0;
 			if (floor(image_index) >= 10)
@@ -244,14 +244,14 @@ switch (state)
 			y -= 8;
 			if (y <= (camera_get_view_y(view_camera[0]) - 150) && instance_exists(obj_stick_forsale))
 			{
-				with (obj_stick_forsale)
+				with obj_stick_forsale
 				{
 					first = true;
 					unlocked = true;
 					with (instance_create(x, y, obj_stick_gateprop))
 					{
 						targetRoom = other.targetRoom;
-						if (room != tower_5)
+						if room != tower_5
 						{
 							group_arr = other.group_arr;
 							sprite_index = other.gate_sprite;
@@ -265,7 +265,7 @@ switch (state)
 					}
 					instance_destroy();
 				}
-				with (obj_player1)
+				with obj_player1
 				{
 					state = states.normal;
 					landAnim = false;
@@ -276,6 +276,6 @@ switch (state)
 		}
 		break;
 }
-if (noisette)
+if noisette
 	image_xscale = -1;
 money_y = Wave(-5, 5, 2, 2);

@@ -15,5 +15,5 @@ xs = xscale;
 oktoberfest = false;
 spr_introidle = spr_monstershroom_introidle;
 spr_intro = spr_monstershroom_intro;
-if (room == exit_7)
+if room == exit_7
 	fake = true;

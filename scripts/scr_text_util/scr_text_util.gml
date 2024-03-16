@@ -54,7 +54,7 @@ function create_transformation_tip(str, save_entry = noone)
 		text = str;
 		b = id;
 	}
-	if (save_entry != -4)
+	if save_entry != -4
 		ini_write_real("Tip", save_entry, true);
 	obj_savesystem.ini_str = ini_close();
 	return b;
@@ -71,7 +71,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 	
 	var offset_x = 0;
 	var offset_y = 0;
-	if (info.spriteIndex != -1)
+	if info.spriteIndex != -1
 	{
 		offset_x = sprite_get_xoffset(info.spriteIndex);
 		offset_y = sprite_get_yoffset(info.spriteIndex);
@@ -93,7 +93,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 				var te = texteffect.shake;
 				pos += 3;
 				var n = scr_compile_icon_text(text, pos, true);
-				switch (effect)
+				switch effect
 				{
 					case "{s}":
 						te = texteffect.shake;
@@ -113,7 +113,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 				var t = texttype.icon;
 				
 				var b = textkey.up;
-				switch (button)
+				switch button
 				{
 					case "[D]":
 						b = textkey.down;
@@ -193,7 +193,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 				break;
 			
 			case ord("/"):
-				if (return_array)
+				if return_array
 				{
 					saved_pos = pos;
 					pos = len + 1;
@@ -215,7 +215,7 @@ function scr_compile_icon_text(text, pos = 1, return_array = false)
 				break;
 		}
 	}
-	if (return_array)
+	if return_array
 		return [arr, saved_pos, char_x, char_y];
 	return arr;
 }
@@ -233,7 +233,7 @@ function scr_text_arr_size(array)
 		var t = b[2];
 		var val = b[3];
 		
-		switch (t)
+		switch t
 		{
 			case texttype.icon:
 				if ((cx + 32) > w)
@@ -250,7 +250,7 @@ function scr_text_arr_size(array)
 				break;
 			
 			case texttype.normal:
-				if (cy > h)
+				if cy > h
 					h += newline;
 				else
 				{
@@ -339,16 +339,16 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 						break;
 					
 					case textkey.groundpound:
-						if (!global.gamepad_groundpound && obj_inputAssigner.player_input_device[0] >= 0)
-                            icon = tdp_get_tutorial_icon("player_groundpound");
-                        else
-                            icon = tdp_get_tutorial_icon("player_down");
+						if !global.gamepad_groundpound && obj_inputAssigner.player_input_device[0] >= 0
+							icon = tdp_get_tutorial_icon("player_groundpound");
+						else
+							icon = tdp_get_tutorial_icon("player_down");
 						break;
 					case textkey.superjump:
-						if (!global.gamepad_superjump && obj_inputAssigner.player_input_device[0] >= 0)
-                            icon = tdp_get_tutorial_icon("player_superjump");
-                        else
-                            icon = tdp_get_tutorial_icon("player_up");
+						if !global.gamepad_superjump && obj_inputAssigner.player_input_device[0] >= 0
+							icon = tdp_get_tutorial_icon("player_superjump");
+						else
+							icon = tdp_get_tutorial_icon("player_up");
 						break;
 					
 					case textkey.forwards:
@@ -365,35 +365,35 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 						break;
 					
 					case textkey.menu_left:
-                        icon = tdp_get_tutorial_icon("menu_left")
-                        break
-                    case textkey.menu_right:
-                        icon = tdp_get_tutorial_icon("menu_right")
-                        break
-                    case textkey.menu_up:
-                        icon = tdp_get_tutorial_icon("menu_up")
-                        break
-                    case textkey.menu_down:
-                        icon = tdp_get_tutorial_icon("menu_down")
-                        break
-                    case textkey.menu_select:
-                        icon = tdp_get_tutorial_icon("menu_select")
-                        break
-                    case textkey.menu_quit:
-                        icon = tdp_get_tutorial_icon("menu_quit")
-                        break
-                    case textkey.menu_delete:
-                        icon = tdp_get_tutorial_icon("menu_delete")
-                        break
-                    case textkey.menu_back:
-                        icon = tdp_get_tutorial_icon("menu_back")
-                        break
-                    case textkey.menu_start:
-                        icon = tdp_get_tutorial_icon("menu_start")
-                        break
-                    case textkey.reset_binds:
-                        icon = tdp_get_tutorial_icon("menu_reset_binds")
-                        break
+						icon = tdp_get_tutorial_icon("menu_left")
+						break
+					case textkey.menu_right:
+						icon = tdp_get_tutorial_icon("menu_right")
+						break
+					case textkey.menu_up:
+						icon = tdp_get_tutorial_icon("menu_up")
+						break
+					case textkey.menu_down:
+						icon = tdp_get_tutorial_icon("menu_down")
+						break
+					case textkey.menu_select:
+						icon = tdp_get_tutorial_icon("menu_select")
+						break
+					case textkey.menu_quit:
+						icon = tdp_get_tutorial_icon("menu_quit")
+						break
+					case textkey.menu_delete:
+						icon = tdp_get_tutorial_icon("menu_delete")
+						break
+					case textkey.menu_back:
+						icon = tdp_get_tutorial_icon("menu_back")
+						break
+					case textkey.menu_start:
+						icon = tdp_get_tutorial_icon("menu_start")
+						break
+					case textkey.reset_binds:
+						icon = tdp_get_tutorial_icon("menu_reset_binds")
+						break
 				}
 				
 				if effect != texteffect.normal
@@ -407,7 +407,7 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 						
 						case texteffect.updown:
 							var o = 1;
-							if (option_struct != -4)
+							if option_struct != -4
 								o = option_struct.offset;
 							var d = ((i % 2) == 0) ? -1 : 1;
 							var _dir = floor(Wave(-1, 1, 0.1, 0));
@@ -416,10 +416,10 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 					}
 				}
 				
-				if (icon != -4)
+				if icon != -4
 				{
 					draw_sprite(icon.sprite_index, icon.image_index, cx, cy);
-					if (icon.str != "")
+					if icon.str != ""
 					{
 						var f = draw_get_font();
 						draw_set_halign(fa_center);
@@ -443,7 +443,7 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 			case texttype.normal:
 				if effect == texteffect.normal
 				{
-					if (!global.tdp_text_try_outline)
+					if !global.tdp_text_try_outline
 						draw_text_color(cx, cy, val, color, color, color, color, alpha);
 					else
 						tdp_draw_text_color(cx, cy, val, color, color, color, color, alpha);
@@ -459,7 +459,7 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 								var q = string_char_at(val, j);
 								var s1 = irandom_range(-1, 1);
 								var s2 = irandom_range(-1, 1);
-								if (!global.tdp_text_try_outline)
+								if !global.tdp_text_try_outline
 									draw_text_color(cx + x2 + s1, cy + s2, q, color, color, color, color, alpha);
 								else
 									tdp_draw_text_color(cx + x2 + s1, cy + s2, q, color, color, color, color, alpha);
@@ -473,12 +473,12 @@ function scr_draw_text_arr(x, y, text_arr, color = c_white, alpha = 1, effect = 
 								q = string_char_at(val, j);
 								var s = 0;
 								o = 1;
-								if (option_struct != -4)
+								if option_struct != -4
 									o = option_struct.offset;
 								d = ((j % 2) == 0) ? -1 : 1;
 								_dir = floor(Wave(-1, 1, 0.1, 0));
 								s += (_dir * d * o);
-								if (!global.tdp_text_try_outline)
+								if !global.tdp_text_try_outline
 									draw_text_color(cx + x2, cy + s, q, color, color, color, color, alpha);
 								else
 									tdp_draw_text_color(cx + x2, cy + s, q, color, color, color, color, alpha);

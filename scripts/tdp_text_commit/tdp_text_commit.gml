@@ -1,6 +1,6 @@
 function tdp_text_commit(x, y, w, h, gui = true)
 {
-	if (global.tdp_text_enabled)
+	if global.tdp_text_enabled
 	{
 		draw_set_alpha(1);
 		if (!surface_exists(global.tdp_text_surface))
@@ -12,7 +12,7 @@ function tdp_text_commit(x, y, w, h, gui = true)
 		while (!ds_queue_empty(global.tdp_text_queue))
 		{
 			var action = ds_queue_dequeue(global.tdp_text_queue);
-			switch (action.type)
+			switch action.type
 			{
 				case 0:
 					draw_set_halign(action.value);
@@ -38,7 +38,7 @@ function tdp_text_commit(x, y, w, h, gui = true)
 		var uvs = texture_get_uvs(_tex);
 		shader_set_uniform_f(global.tdp_text_shd_uvs, uvs[0], uvs[1], uvs[2], uvs[3]);
 		draw_surface(global.tdp_text_surface, x, y);
-		if (gui)
+		if gui
 			reset_shader_fix();
 		else
 			shader_reset();

@@ -1,9 +1,9 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 if (state == states.walk && grounded && vsp > 0 && (obj_player1.state == states.freefallland || (obj_player1.state == states.ratmountbounce && obj_player1.sprite_index == spr_playerN_noisecrusherland)) && bbox_in_camera(view_camera[0], 32))
 	scr_pizzaball_go_to_thrown(0, -10);
 arrowindex += 0.35;
-switch (state)
+switch state
 {
 	case states.idle:
 		scr_enemy_idle();
@@ -28,7 +28,7 @@ switch (state)
 		break;
 	case states.stun:
 		scr_enemy_stun();
-		if (stunned > 0)
+		if stunned > 0
 			stunned -= 1;
 		break;
 	case states.pizzagoblinthrow:
@@ -50,14 +50,14 @@ switch (state)
 		scr_enemy_ghostpossess();
 		break;
 }
-if (state != states.golf)
+if state != states.golf
 {
 	shootup = false;
 	arrow = false;
 }
-if (state == states.thrown)
+if state == states.thrown
 {
-	if (blur_effect > 0)
+	if blur_effect > 0
 		blur_effect--;
 	else
 	{
@@ -71,9 +71,9 @@ if ((state == states.walk || state == states.idle) && sit)
 	hsp = 0;
 	sprite_index = spr_pizzaball_idle1;
 }
-if (state != states.walk)
+if state != states.walk
 	sit = false;
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -85,11 +85,11 @@ if (state == states.thrown && !instance_exists(pointerID))
 	pointerID.sprite_index = spr_icon_pizzaball;
 	pointerID.objectID = id;
 }
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (bigcheeseID != -4)
+if bigcheeseID != -4
 {
 	if (!instance_exists(bigcheeseID) || bigcheeseID.state != states.throwing || bigcheeseID.shot)
 	{
@@ -102,16 +102,16 @@ if (bigcheeseID != -4)
 }
 else
 	invincible = false;
-if (hitbuffer > 0)
+if hitbuffer > 0
 {
 	invincible = true;
 	hitbuffer--;
 }
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{
@@ -121,7 +121,7 @@ if (boundbox == 0)
 		other.boundbox = true;
 	}
 }
-if (state == states.thrown)
+if state == states.thrown
 {
 	with (instance_place(x + xscale, y, obj_destructibles))
 		instance_destroy();

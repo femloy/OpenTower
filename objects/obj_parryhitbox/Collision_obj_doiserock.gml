@@ -1,8 +1,8 @@
-with (other)
+with other
 {
-	if (!parried)
+	if !parried
 	{
-		if (dir != 0)
+		if dir != 0
 		{
 			var _dir = dir;
 			_dir = -dir;
@@ -13,7 +13,7 @@ with (other)
 		else
 		{
 			dir = obj_player1.xscale;
-			if (x != obj_player1.x)
+			if x != obj_player1.x
 				dir = sign(obj_player1.x - x);
 			obj_player1.xscale = dir;
 			parried = true;
@@ -21,5 +21,5 @@ with (other)
 		}
 	}
 }
-if (!collisioned)
+if !collisioned
 	event_user(0);

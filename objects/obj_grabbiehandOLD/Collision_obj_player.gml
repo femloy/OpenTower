@@ -1,14 +1,14 @@
-if (other.state == states.gotoplayer)
+if other.state == states.gotoplayer
 	exit;
-if (sprite_index == spr_grabbiehand_fall && player == noone)
+if sprite_index == spr_grabbiehand_fall && player == noone
 {
-	with (other)
+	with other
 	{
-		if (state == states.boxxedpep)
+		if state == states.boxxedpep
 		{
 			var i = 0;
 			var p = id;
-			repeat (4)
+			repeat 4
 			{
 				with (create_debris(x, y, spr_boxxeddebris))
 				{
@@ -31,7 +31,7 @@ if (sprite_index == spr_grabbiehand_fall && player == noone)
 		}
 		if (state == states.cheesepep || state == states.cheesepepstick)
 		{
-			repeat (8)
+			repeat 8
 			{
 				with (create_debris(x, y, spr_slimedebris))
 				{
@@ -57,9 +57,9 @@ if (sprite_index == spr_grabbiehand_fall && player == noone)
 	other.vsp = 0;
 	other.hsp = 0;
 }
-if (sprite_index == spr_grabbiehand_catch)
+if sprite_index == spr_grabbiehand_catch
 {
-	if (player == noone)
+	if player == noone
 		player = other.id;
 	other.vsp = 0;
 	other.hsp = 0;

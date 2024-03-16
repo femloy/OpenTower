@@ -1,3 +1,3 @@
 event_inherited();
-if (!poweredon)
+if !poweredon
 	active = false;

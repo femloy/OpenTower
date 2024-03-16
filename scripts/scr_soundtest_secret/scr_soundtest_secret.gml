@@ -17,8 +17,8 @@ function scr_soundtest_secret()
 	if (ini_read_string("Game", "finalrank", "none") == "none")
 		found = true;
 	ini_close();
-	if (found)
+	if found
 		instance_destroy();
-	if (global.panic)
+	if global.panic
 		instance_destroy();
 }

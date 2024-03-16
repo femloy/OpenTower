@@ -1,8 +1,8 @@
 y = Approach(y, y_to, 2);
 x = xstart;
-if (y == y_to)
+if y == y_to
 {
-	if (room != tower_5)
+	if room != tower_5
 	{
 		with (instance_create(x, y, obj_bossdoor))
 		{
@@ -23,7 +23,7 @@ if (y == y_to)
 	}
 	instance_destroy();
 }
-with (obj_camera)
+with obj_camera
 {
 	shake_mag = 3;
 	shake_mag_acc = 5 / room_speed;

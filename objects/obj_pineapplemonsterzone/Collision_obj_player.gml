@@ -1,4 +1,4 @@
-if (global.panic && !shot)
+if global.panic && !shot
 {
 	with (instance_create(x + (sprite_width / 2), y + (sprite_height / 2), obj_pineapplemonster))
 	{

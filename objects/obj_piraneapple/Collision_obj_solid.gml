@@ -1,2 +1,2 @@
-if (state != states.transition)
+if state != states.transition
 	event_inherited();

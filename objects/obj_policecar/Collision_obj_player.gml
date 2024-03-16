@@ -1,14 +1,14 @@
-if (state == states.policetaxi)
+if state == states.policetaxi
 	exit;
 if (ds_queue_size(followqueue) < LAG_STEPS)
 	exit;
-with (obj_player)
+with obj_player
 {
 	targetRoom = other.targetRoom;
 	lastroom = room;
 	targetDoor = other.targetDoor;
 	visible = false;
-	if (state != states.gotoplayer)
+	if state != states.gotoplayer
 		state = states.policetaxi;
 	cutscene = true;
 	hsp = 0;

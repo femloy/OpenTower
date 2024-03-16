@@ -1,6 +1,6 @@
-if (elitehit <= 0 && destroyable)
+if elitehit <= 0 && destroyable
 	scr_noise_destroy_sounds();
-if (pizzahead && elitehit <= 0 && destroyable)
+if pizzahead && elitehit <= 0 && destroyable
 {
 	with (instance_create(room_width / 4, room_height + 100, obj_fakepepboss))
 	{
@@ -42,12 +42,12 @@ if (pizzahead && elitehit <= 0 && destroyable)
 		fakepep_add_tauntclones(1, 3, -13, -8, 120);
 		fakepep_add_tauntclones(1, 3, -8, -13, 120);
 	}
-	with (obj_bosscontroller)
+	with obj_bosscontroller
 	{
 		boss_hpsprite = spr_bossfight_fakepephp;
 		boss_palette = spr_bossfight_fakepeppalette
 	}
-	if (doise)
+	if doise
 	{
 		with (instance_create(x, y, obj_sausageman_dead))
 		{
@@ -55,7 +55,7 @@ if (pizzahead && elitehit <= 0 && destroyable)
 			spr_palette = other.spr_palette;
 			paletteselect = other.paletteselect;
 			usepalette = other.usepalette;
-			if (!usepalette)
+			if !usepalette
 				paletteselect = 0;
 			image_alpha = other.image_alpha;
 			sprite_index = spr_doise_deadair;
@@ -64,7 +64,7 @@ if (pizzahead && elitehit <= 0 && destroyable)
 		}
 	}
 }
-if (elitehit <= 0 && destroyable)
+if elitehit <= 0 && destroyable
 	instance_destroy(obj_noisey);
 if (!pizzahead || !doise)
 	event_inherited();

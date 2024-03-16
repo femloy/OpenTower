@@ -1,13 +1,13 @@
 var t = id;
-with (other)
+with other
 {
-	if (state != states.gotoplayer && state != states.ghost && state != states.actor)
+	if state != states.gotoplayer && state != states.ghost && state != states.actor
 	{
-		if (boxxed == 0 && isgustavo == 0 && other.buffer == 0 && other.sprite_index == spr_dashpad)
+		if boxxed == 0 && isgustavo == 0 && other.buffer == 0 && other.sprite_index == spr_dashpad
 		{
 			if (state == states.trashjump || state == states.trashjumpprep)
 				create_debris(x, y, spr_player_trashlid);
-			if (state == states.animatronic)
+			if state == states.animatronic
 			{
 				with (instance_create(x, y, obj_peshinodebris))
 					image_index = 0;
@@ -19,21 +19,21 @@ with (other)
 			var changecoord = true;
 			if (place_meeting(x, y, obj_superspring))
 				changecoord = false;
-			if (changecoord)
+			if changecoord
 				y = other.y - 14;
 			vsp = 0;
 			create_particle(x, y, particle.jumpdust, 0);
-			if (character == "P")
+			if character == "P"
 			{
-				if (sprite_index != spr_dashpadmach)
+				if sprite_index != spr_dashpadmach
 				{
 					sprite_index = spr_dashpadmach;
 					image_index = 0;
 				}
 			}
-			else if (character == "N")
+			else if character == "N"
 			{
-				if (sprite_index != spr_crazyrun)
+				if sprite_index != spr_crazyrun
 				{
 					sprite_index = spr_crazyrun;
 					image_index = 0;
@@ -44,7 +44,7 @@ with (other)
 			state = states.mach3;
 			xscale = sign(other.image_xscale);
 			dir = xscale;
-			if (movespeed < 14)
+			if movespeed < 14
 			{
 				movespeed = 14;
 				hsp = xscale * movespeed;
@@ -58,12 +58,12 @@ with (other)
 		}
 		else
 		{
-			if (boxxed && other.buffer == 0 && other.sprite_index != spr_dashpad)
+			if boxxed && other.buffer == 0 && other.sprite_index != spr_dashpad
 			{
 				changecoord = true;
 				if (place_meeting(x, y, obj_superspring))
 					changecoord = false;
-				if (changecoord)
+				if changecoord
 					y = other.y - 14;
 				vsp = 0;
 				create_particle(x, y, particle.jumpdust, 0);
@@ -80,13 +80,13 @@ with (other)
 				state = states.boxxedpep;
 				other.buffer = 30;
 			}
-			if (isgustavo && other.buffer == 0 && gusdashpadbuffer == 0)
+			if isgustavo && other.buffer == 0 && gusdashpadbuffer == 0
 			{
 				fmod_event_one_shot_3d("event:/sfx/misc/dashpad", x, y);
 				changecoord = true;
 				if (place_meeting(x, y, obj_superspring))
 					changecoord = false;
-				if (changecoord)
+				if changecoord
 					y = other.y - 14;
 				vsp = 0;
 				create_particle(x, y, particle.jumpdust, 0);

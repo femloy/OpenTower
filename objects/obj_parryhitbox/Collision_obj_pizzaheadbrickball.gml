@@ -1,5 +1,5 @@
-if (other.state == states.normal)
+if other.state == states.normal
 {
-	if (!collisioned)
+	if !collisioned
 		event_user(0);
 }

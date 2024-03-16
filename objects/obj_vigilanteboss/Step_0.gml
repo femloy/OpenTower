@@ -1,10 +1,10 @@
-if (room == rm_editor)
+if room == rm_editor
 	exit;
 targetplayer = obj_player1.id;
 wastedhits = 9 - elitehit;
-if (pizzahead && elitehit <= 1)
+if pizzahead && elitehit <= 1
 	destroyable = true;
-switch (state)
+switch state
 {
 	case states.arenaintro:
 		scr_vigilante_arenaintro();
@@ -82,19 +82,19 @@ switch (state)
 		scr_enemy_staggered();
 		break;
 	case states.supergrab:
-		if (elitehit <= 0)
+		if elitehit <= 0
 			destroyable = true;
 		break;
 }
 boss_update_pizzaheadKO(spr_bossfight_vigiHP, spr_bossfight_vigipalette);
-if (state != states.flamethrower && flameID != -4)
+if state != states.flamethrower && flameID != -4
 {
 	instance_destroy(obj_flamethrowerhurtbox);
 	flameID = -4;
 }
 if (state == states.revolver || state == states.wait || state == states.dynamite || state == states.throwing || state == states.estampede)
 {
-	if (targetplayer.x != x)
+	if targetplayer.x != x
 		image_xscale = -sign(x - targetplayer.x);
 }
 boss_hurt_gustavo();
@@ -102,9 +102,9 @@ if (!pizzahead && obj_player1.state != states.actor && obj_player1.state != stat
 {
 	if (place_meeting(x, y, obj_player1))
 	{
-		with (obj_player)
+		with obj_player
 		{
-			if (state != states.tackle)
+			if state != states.tackle
 			{
 				var ix = (x > (room_width / 2)) ? 1 : -1;
 				xscale = ix;
@@ -120,7 +120,7 @@ if (!pizzahead && obj_player1.state != states.actor && obj_player1.state != stat
 		}
 	}
 }
-if (prevhp != elitehit)
+if prevhp != elitehit
 {
 	instance_destroy(bossvulnerableID);
 	currentattack = 0;
@@ -141,11 +141,11 @@ if (prevhp != elitehit)
 		alarm[6] = 5;
 		global.playerhit++;
 		boss_do_pizzaheadKO();
-		if (pizzahead && elitehit <= 2 && !pizzaheadshot)
+		if pizzahead && elitehit <= 2 && !pizzaheadshot
 			pizzaheadshot = true;
-		if (!pizzahead && elitehit < 5)
+		if !pizzahead && elitehit < 5
 			instance_create_unique(0, 0, obj_johnecheese_spawner);
-		if (global.playerhit >= 3)
+		if global.playerhit >= 3
 		{
 			global.playerhit = 0;
 			instance_create(obj_player1.x, -15, obj_hppickup);
@@ -155,7 +155,7 @@ if (prevhp != elitehit)
 }
 if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahead)
 {
-	if (phase == 1)
+	if phase == 1
 	{
 		instance_destroy(obj_johnecheese);
 		instance_destroy(obj_johnecheese_spawner);
@@ -176,18 +176,18 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 		layer_set_visible(lay3, true);
 		layer_background_change(bg2, bg_vigiboss_dark)
 		layer_background_change(bg1, bg_vigilantearena_dark)
-		with (obj_drawcontroller)
+		with obj_drawcontroller
 		{
 			use_dark = true;
 			dark_alpha = 1;
 		}
 	}
-	else if (phase == 2 && state != states.duel && state != states.hit && !thrown)
+	else if phase == 2 && state != states.duel && state != states.hit && !thrown
 	{
 		instance_destroy(obj_johnecheese);
 		instance_destroy(obj_johnecheese_spawner);
 		fmod_event_one_shot_3d("event:/sfx/voice/vigiduel", x, y);
-		if (!destroyable)
+		if !destroyable
 		{
 			state = states.duel;
 			hsp = 0;
@@ -220,7 +220,7 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 			instance_destroy(obj_vigilantedynamite);
 			instance_destroy(obj_vigilanteshot);
 			instance_destroy(obj_ladderhorizontal);
-			with (obj_player1)
+			with obj_player1
 			{
 				pistolanim = -4;
 				state = states.duel;
@@ -236,13 +236,13 @@ if (((phase == 1 && elitehit <= 0) || (phase == 2 && elitehit <= 0)) && !pizzahe
 			instance_destroy();
 	}
 }
-if (state == states.stun)
+if state == states.stun
 {
-	if (wastedhits >= 7 && sprite_index == spr_pepperman_shoulderhurt && grounded && vsp > 0 && !thrown && stunned > 10)
+	if wastedhits >= 7 && sprite_index == spr_pepperman_shoulderhurt && grounded && vsp > 0 && !thrown && stunned > 10
 		stunned = 1;
-	if (thrown)
+	if thrown
 		savedthrown = true;
-	if (grounded && vsp > 0 && savedthrown)
+	if grounded && vsp > 0 && savedthrown
 	{
 		stunned = 1;
 		idle_timer = 1;
@@ -251,9 +251,9 @@ if (state == states.stun)
 }
 else
 	savedthrown = false;
-if (state != states.duel)
+if state != states.duel
 	signy = Approach(signy, -sprite_get_height(signspr), 20);
-if (state == states.stun && stunned > 100 && birdcreated == 0)
+if state == states.stun && stunned > 100 && birdcreated == 0
 {
 	birdcreated = true;
 	with (instance_create(x, y, obj_enemybird))
@@ -263,28 +263,28 @@ if (state == states.reloading || (state == states.stun && savedthrown == thrown 
 	invincible = false;
 else
 	invincible = true;
-if (wastedhits == 4 && phase == 1)
+if wastedhits == 4 && phase == 1
 	invincible = true;
-if (state == states.KO)
+if state == states.KO
 	invincible = true;
-if (pizzahead && state == states.stun && !thrown && alarm[5] == -1 && !flash)
+if pizzahead && state == states.stun && !thrown && alarm[5] == -1 && !flash
 	alarm[5] = 0.15 * room_speed;
-if (state == states.crouchslide && alarm[4] < 0)
+if state == states.crouchslide && alarm[4] < 0
 {
 	alarm[4] = 10;
-	if (state == states.freefall)
+	if state == states.freefall
 		alarm[4] = 5;
 }
 mask_index = spr_player_mask;
-if (state != states.stun)
+if state != states.stun
 	birdcreated = false;
-if (flash == 1 && alarm[2] <= 0)
+if flash == 1 && alarm[2] <= 0
 	alarm[2] = 0.15 * room_speed;
-if (state != states.grabbed)
+if state != states.grabbed
 	depth = 0;
-if (state != states.stun)
+if state != states.stun
 	thrown = false;
-if (boundbox == 0)
+if boundbox == 0
 {
 	with (instance_create(x, y, obj_baddiecollisionbox))
 	{

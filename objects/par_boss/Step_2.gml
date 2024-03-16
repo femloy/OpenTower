@@ -1,18 +1,18 @@
-if (inv_timer > 0)
+if inv_timer > 0
 	inv_timer--;
-else if (inv_timer == 0)
+else if inv_timer == 0
 {
 	inv_timer = -1;
 	invincible = false;
 }
-if (grounded && state != states.hit && state != states.stun)
+if grounded && state != states.hit && state != states.stun
 {
-	if (jugglecount > 0)
+	if jugglecount > 0
 		jugglecount--;
 	else
 		jugglecount = 0;
 }
-if (colliding)
+if colliding
 	scr_collide();
 else
 {

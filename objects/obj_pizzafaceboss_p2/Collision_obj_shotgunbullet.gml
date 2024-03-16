@@ -1,4 +1,4 @@
-if (state != states.stun)
+if state != states.stun
 {
 	state = states.stun;
 	stunned = 1000;
@@ -6,7 +6,7 @@ if (state != states.stun)
 	hsp = -image_xscale * 8;
 	vsp = -4;
 	lastattack = pizzaface_p2_attacks.gun;
-	with (obj_player)
+	with obj_player
 		shotgunAnim = false;
 }
 instance_destroy(other);

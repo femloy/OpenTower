@@ -1,4 +1,4 @@
-if (dark)
+if dark
 	draw_rectangle_color(0, 0, SCREEN_WIDTH, SCREEN_HEIGHT, 0, 0, 0, 0, false);
 else
 	scr_draw_pause_image();

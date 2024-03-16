@@ -1,4 +1,4 @@
-with (other)
+with other
 {
 	if (key_up && (state == states.normal || state == states.mach1 || state == states.mach2 || state == states.mach3 || state == states.Sjumpprep) && y == (other.y + 50) && !instance_exists(obj_noisesatellite) && !instance_exists(obj_fadeout) && state != states.door && state != states.comingoutdoor)
 	{
@@ -15,12 +15,12 @@ with (other)
 		obj_player1.mach2 = 0;
 		if (instance_exists(obj_player2))
 		{
-			if (object_index == obj_player2)
+			if object_index == obj_player2
 			{
 				obj_player1.x = obj_player2.x;
 				obj_player1.y = obj_player2.y;
 			}
-			if (object_index == obj_player1)
+			if object_index == obj_player1
 			{
 				obj_player2.x = obj_player1.x;
 				obj_player2.y = obj_player1.y;

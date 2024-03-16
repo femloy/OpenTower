@@ -1,5 +1,5 @@
 scr_getinput();
-if (updown_buffer > 0)
+if updown_buffer > 0
 {
 	updown_buffer--;
 	if (!key_up2 && !key_down2 && !keyboard_check_pressed(vk_up) && !keyboard_check_pressed(vk_down))
@@ -22,11 +22,11 @@ else
 }
 if (key_jump || keyboard_check_pressed(vk_enter))
 {
-	switch (audio_select)
+	switch audio_select
 	{
 		case -1:
 			set_audio_config();
-			with (obj_option)
+			with obj_option
 			{
 				visible = true;
 				key_jump = false;
@@ -39,13 +39,13 @@ if (key_jump || keyboard_check_pressed(vk_enter))
 			break;
 	}
 }
-if (key_buffer > 0)
+if key_buffer > 0
 	key_buffer--;
 else
 {
 	if (-key_left || keyboard_check(vk_left))
 	{
-		switch (audio_select)
+		switch audio_select
 		{
 			case 0:
 				audiosaved_master--;
@@ -61,7 +61,7 @@ else
 	}
 	if (key_right || keyboard_check(vk_right))
 	{
-		switch (audio_select)
+		switch audio_select
 		{
 			case 0:
 				audiosaved_master++;
