@@ -33,7 +33,7 @@ function scr_player_boxxedpepspin()
 	else if ((!key_slap || abs(movespeed) <= 3) && boxxedspinbuffer == 0)
 	{
 		target_vsp = 0;
-		state = 33;
+		state = states.boxxedpep;
 		sprite_index = spr_boxxedpepidle;
 	}
 	if ((sprite_index == spr_playerN_boxxeddashstart || sprite_index == spr_playerN_boxxedhit) && floor(image_index) == image_number - 1)

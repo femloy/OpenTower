@@ -14,9 +14,9 @@ function doisebg_end()
 	if (event_type == ev_draw && event_number == 0 && instance_exists(obj_player1))
 		shader_reset();
 }
-function doisebg_set_layer()
+function doisebg_set_layer(layer_name)
 {
-	var lay = layer_get_id(argument0);
+	var lay = layer_get_id(layer_name);
 	layer_script_begin(lay, doisebg_start);
 	layer_script_end(lay, doisebg_end);
 }

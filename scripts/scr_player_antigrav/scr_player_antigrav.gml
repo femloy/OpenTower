@@ -69,7 +69,7 @@ function scr_player_antigrav()
 			steppybuffer--;
 		else
 		{
-			instance_create(x + random_range(-50, 50), y + random_range(0, 50), 287);
+			instance_create(x + random_range(-50, 50), y + random_range(0, 50), obj_antigravbubbleeffect);
 			steppybuffer = 8;
 		}
 		exit;

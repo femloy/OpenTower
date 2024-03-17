@@ -99,7 +99,7 @@ function scr_player_boxxedpepjump()
 			else
 			{
 				punch_afterimage = 6;
-				with (instance_create(x + random_range(-5, 5), y + random_range(45, 30), 1034))
+				with (instance_create(x + random_range(-5, 5), y + random_range(45, 30), obj_explosioneffect))
 				{
 					depth = 20;
 					sprite_index = spr_heatpuff;
