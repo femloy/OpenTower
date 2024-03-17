@@ -1,0 +1,1 @@
+targetDoor = "A";

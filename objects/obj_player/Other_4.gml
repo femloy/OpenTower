@@ -234,6 +234,14 @@ x = floor(x);
 y = floor(y);
 roomstartx = x;
 roomstarty = y;
+with obj_roomposoverride
+{
+	if targetDoor == other.targetDoor
+	{
+		other.roomstartx = x;
+		other.roomstarty = y;
+	}
+}
 if state == states.chainsaw
 {
 	hitX = x;

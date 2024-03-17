@@ -57,7 +57,7 @@ if state != states.stun
 			playerid = player;
 			movespeed = dir * abs(player.hsp);
 		}
-		ds_list_add(global.saveroom, id);
+		ds_list_add(global.baddieroom, id);
 		instance_destroy(id, false);
 	}
 }

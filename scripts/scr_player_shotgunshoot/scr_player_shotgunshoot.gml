@@ -49,7 +49,7 @@ function scr_player_shotgunshoot()
 			fmod_event_one_shot_3d("event:/sfx/playerN/minigunshot", x, y);
 			if sprite_index != spr_playerN_minigundown
 			{
-				with (instance_create(x + (xscale * 60), y + 27, 657))
+				with (instance_create(x + (xscale * 60), y + 27, obj_shotgunbullet))
 				{
 					alarm[1] = 1;
 					image_xscale = other.xscale;
@@ -63,7 +63,7 @@ function scr_player_shotgunshoot()
 			else
 			{
 				vsp = -4;
-				with (instance_create(x + (xscale * 10), y + 25, 657))
+				with (instance_create(x + (xscale * 10), y + 25, obj_shotgunbullet))
 				{
 					image_xscale = other.xscale;
 					sprite_index = spr_minigunprojectile;
@@ -95,7 +95,7 @@ function scr_player_shotgunshoot()
 				}
 			}
 		}
-		else if !key_down
+		else if !scr_check_groundpound2()
 		{
 			notification_push(notifs.shotgunblast_end, [room]);
 			vsp = -8;

@@ -54,6 +54,14 @@ function swap_player(hurted = false, jumpscare = false)
 		|| (instance_exists(obj_bosscontroller) && !ispeppino)
 			global.pistol = true;
 		
+		if instance_exists(obj_randomsecret)
+		{
+			noisepizzapepper = false;
+			if room == freezer_secret1
+				global.noisejetpack = true;
+			else if !ispeppino && room == freezer_secret3
+				global.noisejetpack = true;
+		}
 		with obj_bosscontroller
 		{
 			if other.ispeppino

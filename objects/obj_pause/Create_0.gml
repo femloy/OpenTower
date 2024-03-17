@@ -74,11 +74,13 @@ var exit_function = function()
 	ds_list_copy(il, instance_list);
 	if global.leveltorestart != -4
 	{
+		if global.leveltorestart != boss_fakepepkey && global.leveltorestart != tower_tutorial1N
+			gamesave_async_save();
+		
 		hub = true;
 		arr = ["hubgroup"];
 		global.stargate = false;
 		global.leveltorestart = -4;
-		gamesave_async_save();
 	}
 	else
 	{
