@@ -1,4 +1,4 @@
-if state == states.normal
+if state == 0
 {
 	x = Approach(x, obj_noiseboss.x, abs(hsp));
 	y = lerp(y, obj_noiseboss.y, 0.08);

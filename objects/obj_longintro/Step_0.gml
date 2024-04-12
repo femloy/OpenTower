@@ -563,8 +563,8 @@ switch scene
 			title.shake_mag = 8;
 			bg = instance_create(0, 0, obj_introprop);
 			bg.sprite_index = spr_intro_white;
-			bg.image_xscale = 15;
-			bg.image_yscale = 8.4375;
+			bg.image_xscale = 960 / 64;
+			bg.image_yscale = 540 / 64;
 			scene++;
 			scenebuffer = 100;
 		}

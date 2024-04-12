@@ -1,4 +1,4 @@
-function scr_switchgustavo(peppino = true, skip_gloves = false)
+function scr_switchgustavo(set_state = true, skip_gloves = false)
 {
 	with obj_player1
 	{
@@ -7,7 +7,7 @@ function scr_switchgustavo(peppino = true, skip_gloves = false)
 			ratmount_movespeed = 8;
 			gustavodash = 0;
 			isgustavo = true;
-			if peppino
+			if set_state
 			{
 				visible = true;
 				state = states.ratmount;
@@ -22,7 +22,7 @@ function scr_switchgustavo(peppino = true, skip_gloves = false)
 		{
 			isgustavo = false;
 			noisecrusher = true;
-			if peppino
+			if set_state
 			{
 				visible = true;
 				jumpAnim = false;
@@ -45,7 +45,7 @@ function scr_switchgustavo(peppino = true, skip_gloves = false)
 	}
 }
 
-function scr_switchpeppino(peppino = true)
+function scr_switchpeppino(set_state = true)
 {
 	with obj_player1
 	{
@@ -57,7 +57,7 @@ function scr_switchpeppino(peppino = true)
 			brick = false;
 			fmod_event_instance_release(snd_voiceok);
 			snd_voiceok = fmod_event_create_instance("event:/sfx/voice/ok");
-			if peppino
+			if set_state
 			{
 				visible = true;
 				state = states.normal;
@@ -69,7 +69,7 @@ function scr_switchpeppino(peppino = true)
 		{
 			isgustavo = false;
 			noisecrusher = false;
-			if peppino
+			if set_state
 			{
 				jumpAnim = false;
 				sprite_index = spr_idle;

@@ -1466,15 +1466,3 @@ if (distance_to_object(obj_spike) < 500)
 		}
 	}
 }
-
-// decomp helper
-if mouse_check_button(mb_left)
-{
-	with all
-	{
-		if point_in_rectangle(mouse_x, mouse_y, bbox_left, bbox_top, bbox_right, bbox_bottom)
-		{
-			trace("I AM A ", object_get_name(object_index), " AND THAT IS ", object_index, "!");
-		}
-	}
-}

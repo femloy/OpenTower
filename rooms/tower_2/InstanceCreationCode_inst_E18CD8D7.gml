@@ -1,1 +1,1 @@
-text = lang_get_value_granny("garbage4")
+text = lang_get_value_granny("garbage4");
