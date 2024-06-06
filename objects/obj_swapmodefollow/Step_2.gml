@@ -256,7 +256,7 @@ if breakdance_pressed >= 10 && usable
 	}
 	if notecreate <= 0
 	{
-		instance_create(x + random_range(-70, 70), y + random_range(-70, obj_ufobullet), obj_notes);
+		instance_create(x + random_range(-70, 70), y + random_range(-70, 70), obj_notes);
 		notecreate = 10;
 	}
 }
