@@ -74,7 +74,7 @@ function scr_player_knightpepslopes()
 			movespeed = 0;
 			vsp = -6;
 			sprite_index = spr_knightpepbump;
-			image_index = floor(image_number) - 1;
+			image_index = floor(image_number - 1);
 			state = states.knightpepbump;
 			fmod_event_one_shot_3d("event:/sfx/pep/groundpound", x, y);
 		}
