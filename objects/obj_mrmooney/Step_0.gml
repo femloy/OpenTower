@@ -18,6 +18,7 @@ if sprite_index == idlespr
 			var _clothes = (!obj_player1.ispeppino || global.swapmode) ? "feminine" : "mooney";
 			for (var j = 0; j < array_length(player_palettes); j++)
 			{
+				var pals = player_palettes[j];
 				for (var i = 0; i < array_length(pals); i++)
 				{
 					if pals[i][0] == _clothes
