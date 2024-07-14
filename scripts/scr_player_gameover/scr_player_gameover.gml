@@ -4,6 +4,7 @@ function scr_player_gameover()
 	cutscene = true;
 	scale_xs = 1;
 	scale_ys = 1;
+	visible = true;
 	if sprite_index == spr_deathstart
 	{
 		vsp = 0;

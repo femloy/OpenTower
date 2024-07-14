@@ -96,14 +96,15 @@ function tv_default_condition()
 }
 function tv_get_palette()
 {
-	if (!instance_exists(obj_player1))
+	if !instance_exists(obj_player1)
 		exit;
 	
-	spr_palette = obj_player1.spr_palette;
-	if obj_player1.isgustavo
+	var _info = obj_player1.ispeppino ? get_pep_palette_info() : get_noise_palette_info();
+	spr_palette = _info.spr_palette;
+	if obj_player1.isgustavo && obj_player1.ispeppino
 		spr_palette = spr_ratmountpalette;
-	paletteselect = obj_player1.paletteselect;
-	patterntexture = global.palettetexture;
+	paletteselect = _info.paletteselect;
+	patterntexture = _info.patterntexture;
 }
 function tv_do_expression(sprite, reset_pal = false, force_pep = false)
 {

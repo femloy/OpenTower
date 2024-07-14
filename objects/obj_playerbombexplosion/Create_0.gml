@@ -138,6 +138,7 @@ ds_map_set(collision_function, obj_baddie, function(obj)
 			obj.hitX = obj.x;
 			obj.hitY = obj.y;
 			obj.mach3destroy = true;
+			obj.override_throw = true;
 			obj.hp -= 1;
 			instance_create(obj.x, obj.y, obj_parryeffect);
 			obj.alarm[3] = 3;

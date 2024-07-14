@@ -329,6 +329,14 @@ switch state
 		break;
 }
 
+if vsp < 20
+	vsp += 0.5;
+y += vsp;
+if y >= ystart && vsp > 0
+{
+	y = ystart;
+	vsp = 0;
+}
 if quitbuffer > 0
 	quitbuffer--;
 if state == states.bombdelete && deletebuffer > 0

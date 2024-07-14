@@ -217,11 +217,6 @@ switch state
 		{
 			if expressionsprite != -4
 			{
-				if reset_palette
-				{
-					reset_palette = false;
-					tv_get_palette();
-				}
 				state = states.tv_expression;
 				sprite_index = expressionsprite;
 			}

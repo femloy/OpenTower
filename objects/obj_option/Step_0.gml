@@ -71,14 +71,14 @@ switch option.type
 		break;
 	
 	case menutype.multiple:
+		option.value += move2;
+		if option.value > array_length(option.values) - 1
+			option.value = 0;
+		if option.value < 0
+			option.value = array_length(option.values) - 1;
 		if move2 != 0
 		{
 			fmod_event_one_shot("event:/sfx/ui/step");
-			option.value += move2;
-			if (option.value > array_length(option.values) - 1)
-				option.value = 0;
-			if option.value < 0
-				option.value = array_length(option.values) - 1;
 			if option.on_changed != -4
 				option.on_changed(option.values[option.value].value);
 		}

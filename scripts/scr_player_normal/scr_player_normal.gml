@@ -393,11 +393,14 @@ function state_player_normal()
 		case "P":
 			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
 			{
-				sprite_index = spr_mach1;
-				image_index = 0;
-				state = states.mach2;
-				if movespeed < 6
-					movespeed = 6;
+				if (!global.pistol || pistolanim == -4)
+				{
+					sprite_index = spr_mach1;
+					image_index = 0;
+					state = states.mach2;
+					if movespeed < 6
+						movespeed = 6;
+				}
 			}
 			if global.kungfu && key_attack && state != states.handstandjump
 			{

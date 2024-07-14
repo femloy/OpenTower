@@ -713,7 +713,7 @@ if !ispeppino
 	else
 		global.pistol = false;
 }
-if (global.pistol && ispeppino && state != states.animation && state != states.grab && state != states.superslam && state != states.actor && state != states.hurt && state != states.bump && !instance_exists(obj_vigilante_duelintro))
+if (global.pistol && ispeppino && state != states.animation && state != states.grab && state != states.superslam && state != states.actor && state != states.hurt && state != states.bump && state != states.machslide && state != states.Sjumpprep && state != states.Sjump && state != states.tumble && !instance_exists(obj_vigilante_duelintro))
 {
 	if ((key_slap && !key_slap2) || pistolchargeshooting)
 		pistolcharge += 0.5;
@@ -765,7 +765,7 @@ if (global.pistol && ispeppino && state != states.animation && state != states.g
 			pistolcharge = 4;
 	}
 }
-else if (state == states.hurt || state == states.bump || instance_exists(obj_vigilante_duelintro))
+else if (state == states.hurt || state == states.bump || state == states.Sjumpprep || state = states.Sjump || instance_exists(obj_vigilante_duelintro))
 {
 	pistolcharge = 0;
 	pistolcharged = false;
@@ -775,11 +775,6 @@ else if (state == states.hurt || state == states.bump || instance_exists(obj_vig
 if pistolanim != -4
 {
 	pistolindex += 0.35;
-	if !machslideAnim && state != states.machslide
-	{
-		sprite_index = pistolanim;
-		image_index = pistolindex;
-	}
 	if (floor(pistolindex) == (sprite_get_number(pistolanim) - 1))
 	{
 		pistolanim = -4;
@@ -1247,6 +1242,8 @@ if ((state == states.ratmountbounce && vsp >= 0) || (state == states.noisecrushe
 else
 	instakillmove = false;
 if ((global.noisejetpack || holycross > 0) && (state == states.actor || state == states.chainsaw || state == states.backbreaker || state == states.gotoplayer || state == states.animation || state == states.arenaintro || state == states.teleport || state == states.Sjumpland))
+	instakillmove = false;
+if (state == states.chainsaw || state == states.backbreaker)
 	instakillmove = false;
 if ((state == states.ratmountbounce || state == states.noisecrusher) && vsp < 0)
 	stunmove = true;

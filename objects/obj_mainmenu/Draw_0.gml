@@ -118,7 +118,13 @@ if noise_unlocked
 
 lang_draw_sprite(spr_deletefile, 0, deletefile_x, deletefile_y);
 var dal = 1;
-if (currentselect != -1 && (global.game[currentselect].started == false || global.gameN[currentselect].started == false))
-	dal = 0.5;
+if (currentselect != -1)
+{
+	var _game = global.game[currentselect];
+	if (shownoise)
+		_game = global.gameN[currentselect];
+	if (!_game.started)
+		dal = 0.5;
+}
 scr_draw_text_arr(deletefile_x - 67, deletefile_y, taunt_key, c_white, dal);
 draw_set_alpha(1);

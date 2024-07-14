@@ -25,7 +25,7 @@ function scr_enemy_hit()
 		var _state = obj_player.state;
 		if _state == states.chainsaw
 			_state = obj_player.tauntstoredstate;
-		if ((object_index == obj_pepperman || object_index == obj_vigilanteboss || object_index == obj_noiseboss || object_index == obj_pf_fakepep || object_index == obj_fakepepboss || object_index == obj_pizzafaceboss || object_index == obj_pizzafaceboss_p3) && pizzahead && override_throw)
+		if ((object_index == obj_pepperman || object_index == obj_vigilanteboss || object_index == obj_noiseboss || object_index == obj_pf_fakepep || object_index == obj_fakepepboss || object_index == obj_pizzafaceboss || object_index == obj_pizzafaceboss_p3) && override_throw)
 		{
 			thrown = true;
 			override_throw = false;

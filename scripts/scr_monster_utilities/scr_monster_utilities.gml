@@ -34,6 +34,8 @@ function scr_monster_deactivate(stopmusic = true)
 		alarm[5] = -1;
 		patrolfound = false;
 	}
+	with obj_baddiespawner
+		instance_destroy(baddieid, false);
 	if instance_exists(obj_ghostcollectibles)
 	{
 		instance_destroy(obj_patroller)

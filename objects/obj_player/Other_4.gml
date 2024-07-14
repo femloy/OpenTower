@@ -3,6 +3,7 @@ if room == timesuproom
 	scale_xs = 1;
 	scale_ys = 1;
 	xscale = 1;
+	visible = true;
 }
 savedhallwaydirection = hallwaydirection;
 savedhallway = hallway;

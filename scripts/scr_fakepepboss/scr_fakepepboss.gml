@@ -643,16 +643,19 @@ function scr_fakepepboss_grabthrow()
 	if (floor(image_index) >= 4 && playerID != -4)
 	{
 		playerID.invtime = 0;
-		scr_hurtplayer(playerID);
 		with playerID
 		{
-			sprite_index = spr_hurt;
-			xscale = -other.image_xscale;
 			if (place_meeting(x, y, obj_solid))
 			{
 				x = other.x;
 				y = other.y;
 			}
+		}
+		scr_hurtplayer(playerID);
+		with playerID
+		{
+			sprite_index = spr_hurt;
+			xscale = -other.image_xscale;
 		}
 		playerID = -4;
 	}

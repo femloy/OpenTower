@@ -17,6 +17,7 @@ grab_key = scr_compile_icon_text("[q]");
 start_key = scr_compile_icon_text("[p]");
 jumpscarecount = 0;
 quitbuffer = 0;
+vsp = 0;
 shownoise = false;
 showswap = false;
 charselect = 0;

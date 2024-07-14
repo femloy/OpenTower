@@ -47,9 +47,12 @@ function scr_player_ratmountladder()
 		else
 			vsp = -9;
 		image_index = 0;
+		jumpAnim = true;
+		image_speed = 0.35;
 	}
 	if (key_down && grounded && !place_meeting(x, y, obj_platform))
 	{
+		image_speed = 0.35;
 		sprite_index = spr_player_ratmountgroundpoundfall;
 		state = states.ratmountjump;
 		image_index = 0;

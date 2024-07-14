@@ -15,29 +15,31 @@ function scr_check_menu_key(key)
 	return (global.key_start != key && global.key_slap != key && global.key_taunt != key);
 }
 
-function scr_check_menu_repeats(argument0, argument1, argument2)
+function scr_check_menu_repeats(input_entry, keycode, gamepad)
 {
+	if (!gamepad && keycode == vk_escape && (input_entry == "menu_back" || input_entry == "menu_start"))
+		return true;
 	var query = [];
 	for (var i = 0; i < array_length(input); i++)
 	{
 		var in = input[i];
-		if (in[0] != "menu_quit" && in[0] != argument0 && string_copy(input[i][0], 0, 4) == "menu")
-			array_push(query, concat(input[i][0], argument2 ? "C" : ""));
+		if (in[0] != "menu_quit" && in[0] != input_entry && string_copy(input[i][0], 0, 4) == "menu")
+			array_push(query, concat(input[i][0], gamepad ? "C" : ""));
 	}
 	for (i = 0; i < array_length(query); i++)
 	{
 		in = tdp_input_get(query[i]);
-		if !argument2
+		if !gamepad
 		{
-			if (in.has_value(0, argument1))
+			if (in.has_value(0, keycode))
 				return false;
 		}
-		else if (is_array(argument1))
+		else if (is_array(keycode))
 		{
-			if (in.has_value(2, argument1[0], argument1[1]))
+			if (in.has_value(2, keycode[0], keycode[1]))
 				return false;
 		}
-		else if (in.has_value(1, argument1))
+		else if (in.has_value(1, keycode))
 			return false;
 	}
 	return true;

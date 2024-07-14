@@ -355,6 +355,7 @@ function scr_boss_playerN_phase1hurt(func = noone)
 		vsp = hitvsp;
 		thrown = true;
 		linethrown = true;
+		override_throw = true;
 		image_speed = 0.35;
 		if func != noone
 			func();

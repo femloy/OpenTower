@@ -106,13 +106,15 @@ function swap_player(hurted = false, jumpscare = false)
 		}
 		with obj_tv
 		{
-			if state == states.normal && !hurted
+			if state != states.transition && !hurted
 			{
+				state = states.normal;
 				if idleanim < 60
 					idleanim = 60;
 				sprite_index = other.ispeppino ? spr_tv_idle : spr_tv_idleN;
 				if sprite_index == spr_tv_idle && other.isgustavo
 					sprite_index = spr_tv_idleG;
+				tv_get_palette();
 			}
 		}
 		return true;

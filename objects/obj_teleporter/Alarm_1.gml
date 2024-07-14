@@ -20,6 +20,8 @@ with player
 		sprite_index = spr_peppinoteleporteffect;
 	if (place_meeting(x, y, obj_solid))
 		y--;
+	if (state == states.grab)
+		state = states.normal;
 	if freefallsmash >= 12
 	{
 		with (instance_place(x, y + 4, obj_metalblock))

@@ -152,7 +152,7 @@ switch state
 		vsp += lengthdir_y(s1, launch_dir);
 		with playerid
 		{
-			sprite_index = spr_player_mrpinch;
+			sprite_index = spr_mrpinch;
 			other.shootbuffer = 10;
 			hsp = other.hsp;
 			vsp = other.vsp;
