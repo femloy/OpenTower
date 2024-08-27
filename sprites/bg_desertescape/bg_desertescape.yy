@@ -71,6 +71,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Desert",
-    "path": "folders/Sprites/Background/Desert.yy",
+    "path": "folders/Sprites/Level Assets/Background/Desert.yy",
   },
 }

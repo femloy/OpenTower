@@ -1980,6 +1980,6 @@
   },
   "parent": {
     "name": "Desert",
-    "path": "folders/Tile Sets/Desert.yy",
+    "path": "folders/Tile Sets/Levels/Desert.yy",
   },
 }

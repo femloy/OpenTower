@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Strongcold",
-    "path": "folders/Sprites/Tilesets/Strongcold.yy",
+    "path": "folders/Sprites/Level Assets/Tilesets/Strongcold.yy",
   },
 }

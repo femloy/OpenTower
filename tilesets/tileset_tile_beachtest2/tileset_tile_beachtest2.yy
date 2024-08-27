@@ -2,8 +2,27 @@
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
   "name": "tileset_tile_beachtest2",
+  "spriteId": {
+    "name": "sprite_tile_beachtest2",
+    "path": "sprites/sprite_tile_beachtest2/sprite_tile_beachtest2.yy",
+  },
+  "tileWidth": 32,
+  "tileHeight": 32,
+  "tilexoff": 0,
+  "tileyoff": 0,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "spriteNoExport": false,
+  "textureGroupId": {
+    "name": "beachgroup",
+    "path": "texturegroups/beachgroup",
+  },
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "out_columns": 7,
+  "tile_count": 48,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_0","closed_edge":false,"tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_0","tiles":[
         6,
         29,
         24,
@@ -51,30 +70,10 @@
         15,
         12,
         16,
-      ],},
+      ],"closed_edge":false,},
   ],
-  "macroPageTiles": {
-    "SerialiseHeight": 0,
-    "SerialiseWidth": 0,
-    "TileSerialiseData": [],
-  },
-  "out_columns": 7,
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "parent": {
-    "name": "Beach",
-    "path": "folders/Tile Sets/Beach.yy",
-  },
-  "spriteId": {
-    "name": "sprite_tile_beachtest2",
-    "path": "sprites/sprite_tile_beachtest2/sprite_tile_beachtest2.yy",
-  },
-  "spriteNoExport": false,
-  "textureGroupId": {
-    "name": "beachgroup",
-    "path": "texturegroups/beachgroup",
-  },
-  "tile_count": 48,
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -128,12 +127,13 @@
     ],
     "SerialiseFrameCount": 1,
   },
-  "tileAnimationFrames": [],
-  "tileAnimationSpeed": 15.0,
-  "tileHeight": 32,
-  "tilehsep": 0,
-  "tilevsep": 0,
-  "tileWidth": 32,
-  "tilexoff": 0,
-  "tileyoff": 0,
+  "macroPageTiles": {
+    "SerialiseWidth": 0,
+    "SerialiseHeight": 0,
+    "TileSerialiseData": [],
+  },
+  "parent": {
+    "name": "Beach",
+    "path": "folders/Tile Sets/Levels/Beach.yy",
+  },
 }

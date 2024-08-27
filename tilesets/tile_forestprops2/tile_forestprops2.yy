@@ -554,6 +554,6 @@
   },
   "parent": {
     "name": "Forest",
-    "path": "folders/Tile Sets/Forest.yy",
+    "path": "folders/Tile Sets/Levels/Forest.yy",
   },
 }

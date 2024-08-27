@@ -74,7 +74,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
+    "name": "Heat Bubbles",
+    "path": "folders/Sprites/Unused/Heat Bubbles.yy",
   },
 }

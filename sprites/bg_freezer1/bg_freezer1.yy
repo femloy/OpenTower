@@ -71,6 +71,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Freezer",
-    "path": "folders/Sprites/Background/Freezer.yy",
+    "path": "folders/Sprites/Level Assets/Background/Freezer.yy",
   },
 }

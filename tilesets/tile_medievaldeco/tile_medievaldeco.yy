@@ -576,6 +576,6 @@
   },
   "parent": {
     "name": "Medieval",
-    "path": "folders/Tile Sets/Medieval.yy",
+    "path": "folders/Tile Sets/Levels/Medieval.yy",
   },
 }

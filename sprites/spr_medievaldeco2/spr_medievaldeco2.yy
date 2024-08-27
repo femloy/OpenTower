@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Medieval",
-    "path": "folders/Sprites/Tilesets/Medieval.yy",
+    "path": "folders/Sprites/Level Assets/Tilesets/Medieval.yy",
   },
 }

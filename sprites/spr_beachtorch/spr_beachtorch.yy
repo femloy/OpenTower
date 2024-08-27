@@ -83,6 +83,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Beach",
-    "path": "folders/Sprites/Background/Beach.yy",
+    "path": "folders/Sprites/Level Assets/Background/Beach.yy",
   },
 }

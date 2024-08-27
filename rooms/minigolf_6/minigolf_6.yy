@@ -284,7 +284,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Minigolf",
-    "path": "folders/Rooms/Levels/Minigolf.yy",
+    "name": "GOLF",
+    "path": "folders/Rooms/Levels/GOLF.yy",
   },
 }

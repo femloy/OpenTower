@@ -72,7 +72,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Unused",
-    "path": "folders/Sprites/Unused.yy",
+    "name": "Pizza slug",
+    "path": "folders/Sprites/Enemies/Pizza slug.yy",
   },
 }

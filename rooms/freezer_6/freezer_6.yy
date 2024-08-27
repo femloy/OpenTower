@@ -331,7 +331,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Freezer",
-    "path": "folders/Rooms/Levels/Freezer.yy",
+    "name": "Freezerator",
+    "path": "folders/Rooms/Levels/Freezerator.yy",
   },
 }

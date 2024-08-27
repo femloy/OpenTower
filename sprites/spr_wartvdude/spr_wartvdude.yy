@@ -73,6 +73,6 @@
   "nineSlice": null,
   "parent": {
     "name": "War",
-    "path": "folders/Sprites/Background/War.yy",
+    "path": "folders/Sprites/Level Assets/Background/War.yy",
   },
 }

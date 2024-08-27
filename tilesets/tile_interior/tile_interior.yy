@@ -996,6 +996,6 @@
   },
   "parent": {
     "name": "Street",
-    "path": "folders/Tile Sets/Street.yy",
+    "path": "folders/Tile Sets/Levels/Street.yy",
   },
 }

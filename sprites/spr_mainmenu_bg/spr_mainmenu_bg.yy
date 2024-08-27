@@ -70,7 +70,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Background",
-    "path": "folders/Sprites/Background.yy",
+    "name": "Main Menu",
+    "path": "folders/Sprites/Main Menu.yy",
   },
 }

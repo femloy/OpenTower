@@ -190,7 +190,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Beach",
-    "path": "folders/Rooms/Unused/Beach.yy",
+    "name": "Pineapple Beach",
+    "path": "folders/Rooms/Unused/Pineapple Beach.yy",
   },
 }

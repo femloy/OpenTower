@@ -68,7 +68,7 @@
   ],
   "nineSlice": null,
   "parent": {
-    "name": "Strongcold Boss",
-    "path": "folders/Sprites/Unused/2019 Events/Strongcold Boss.yy",
+    "name": "Strongcold",
+    "path": "folders/Sprites/Unused/Strongcold.yy",
   },
 }

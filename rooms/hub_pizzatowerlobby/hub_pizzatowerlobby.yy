@@ -123,7 +123,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Open World Hub",
-    "path": "folders/Rooms/Tower/Open World Hub.yy",
+    "name": "September Hub",
+    "path": "folders/Rooms/Tower/September Hub.yy",
   },
 }

@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Factory",
-    "path": "folders/Sprites/Tilesets/Factory.yy",
+    "path": "folders/Sprites/Level Assets/Tilesets/Factory.yy",
   },
 }

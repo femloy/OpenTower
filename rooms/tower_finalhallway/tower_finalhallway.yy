@@ -183,7 +183,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Tower",
-    "path": "folders/Rooms/Tower.yy",
+    "name": "Escape",
+    "path": "folders/Rooms/Tower/Escape.yy",
   },
 }

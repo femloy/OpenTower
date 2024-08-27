@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Space",
-    "path": "folders/Sprites/Tilesets/Space.yy",
+    "path": "folders/Sprites/Level Assets/Tilesets/Space.yy",
   },
 }

@@ -1355,7 +1355,7 @@
     "TileSerialiseData": [],
   },
   "parent": {
-    "name": "Tower and Hub",
-    "path": "folders/Tile Sets/Tower and Hub.yy",
+    "name": "Lobby",
+    "path": "folders/Tile Sets/Lobby.yy",
   },
 }

@@ -363,7 +363,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Forest",
-    "path": "folders/Rooms/Levels/Forest.yy",
+    "name": "Gnome Forest",
+    "path": "folders/Rooms/Levels/Gnome Forest.yy",
   },
 }

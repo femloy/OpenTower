@@ -139,6 +139,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Factory",
-    "path": "folders/Sprites/Background/Factory.yy",
+    "path": "folders/Sprites/Level Assets/Background/Factory.yy",
   },
 }

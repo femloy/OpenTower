@@ -105,7 +105,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Industrial",
-    "path": "folders/Rooms/Levels/Industrial.yy",
+    "name": "Peppibot Factory",
+    "path": "folders/Rooms/Levels/Peppibot Factory.yy",
   },
 }

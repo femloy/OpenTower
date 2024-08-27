@@ -91,6 +91,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Strongcold",
-    "path": "folders/Sprites/Background/Strongcold.yy",
+    "path": "folders/Sprites/Level Assets/Background/Unused/Strongcold.yy",
   },
 }

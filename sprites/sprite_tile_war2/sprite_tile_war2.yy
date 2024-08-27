@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "War",
-    "path": "folders/Sprites/Tilesets/War.yy",
+    "path": "folders/Sprites/Level Assets/Tilesets/War.yy",
   },
 }

@@ -91,6 +91,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Street",
-    "path": "folders/Sprites/Background/Street.yy",
+    "path": "folders/Sprites/Level Assets/Background/Street.yy",
   },
 }

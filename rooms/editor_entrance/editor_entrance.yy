@@ -51,7 +51,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Editor",
-    "path": "folders/Rooms/Unused/Editor.yy",
+    "name": "Level Editor",
+    "path": "folders/Rooms/Unused/Level Editor.yy",
   },
 }

@@ -69,6 +69,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Freezer",
-    "path": "folders/Sprites/Tilesets/Freezer.yy",
+    "path": "folders/Sprites/Level Assets/Tilesets/Freezer.yy",
   },
 }

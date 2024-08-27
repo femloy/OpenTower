@@ -142,7 +142,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Kidsparty",
-    "path": "folders/Rooms/Levels/Kidsparty.yy",
+    "name": "Don't Make A Sound",
+    "path": "folders/Rooms/Levels/Don't Make A Sound.yy",
   },
 }

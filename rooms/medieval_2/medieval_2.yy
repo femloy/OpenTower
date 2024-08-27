@@ -266,7 +266,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Medieval",
-    "path": "folders/Rooms/Levels/Medieval.yy",
+    "name": "Pizzascape",
+    "path": "folders/Rooms/Levels/Pizzascape.yy",
   },
 }

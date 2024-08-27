@@ -162,7 +162,7 @@
     "PhysicsWorldPixToMetres": 0.1,
   },
   "parent": {
-    "name": "Graveyard",
-    "path": "folders/Rooms/Levels/Graveyard.yy",
+    "name": "Wasteyard",
+    "path": "folders/Rooms/Levels/Wasteyard.yy",
   },
 }

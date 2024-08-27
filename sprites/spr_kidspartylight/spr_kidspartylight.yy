@@ -175,6 +175,6 @@
   "nineSlice": null,
   "parent": {
     "name": "Kid's Party",
-    "path": "folders/Sprites/Background/Kid's Party.yy",
+    "path": "folders/Sprites/Level Assets/Background/Kid's Party.yy",
   },
 }
