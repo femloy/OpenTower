@@ -115,7 +115,7 @@ function menu_draw_text(xx, yy, str, color, alpha)
 		str = newstr;
 		tdp_draw_set_font(lang_get_font("smallfont"));
 	}
-	tdp_draw_text_color(xx, yy + _break ? 2 : 0, str, color, color, color, color, alpha);
+	tdp_draw_text_color(xx, yy + (_break ? 2 : 0), str, color, color, color, color, alpha);
 	if sub
 		tdp_draw_set_font(lang_get_font("bigfont"));
 	return _break;

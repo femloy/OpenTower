@@ -155,8 +155,6 @@ function get_options()
 	global.option_unfocus_mute = ini_read_real("Option", "unfocus_mute", 0);
 	global.option_texfilter = ini_read_real("Option", "texfilter", 1);
 	global.option_vsync = ini_read_real("Option", "vsync", 0);
-	global.option_screenshake = ini_read_real("Option", "screenshake", 1);
-	global.lang = global.option_lang;
 	
 	var lang = ini_read_string("Option", "lang", "none");
 	if lang == "none"
@@ -206,6 +204,9 @@ function get_options()
 	else
 		global.option_lang = lang;
 	global.offload_lang = noone;
+	
+	global.option_screenshake = ini_read_real("Option", "screenshake", 1);
+	global.lang = global.option_lang;
 	
 	if true && steam_utils_is_steam_running_on_steam_deck() // "true" os check?
 	{
