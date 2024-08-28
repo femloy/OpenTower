@@ -7,7 +7,7 @@ if room != Mainmenu
 	with obj_keyconfig
 		event_perform(ev_draw, ev_gui);
 }
-if (instance_exists(obj_keyconfig) || instance_exists(obj_screenconfirm))
+if instance_exists(obj_keyconfig) || instance_exists(obj_screenconfirm) || instance_exists(obj_langselect)
 	exit;
 
 tdp_draw_set_font(lang_get_font("bigfont"));
@@ -36,8 +36,8 @@ switch m.anchor
 			c = c_gray;
 			if i == _os
 				c = c_white;
-			var t = lang_get_value(o.name);
-			tdp_draw_text_color(xx, yy + (m.ypad * i), t, c, c, c, c, a);
+			var t = menu_lang_value(o.name);
+			menu_draw_text(xx, yy + (m.ypad * i), t, c, a);
 			if menu == menus.options
 				scr_pauseicon_draw(i, xx + (string_width(t) / 2) + 50, yy + (m.ypad * i) + (string_height(t) / 2));
 		}
@@ -50,9 +50,12 @@ switch m.anchor
 		c = c_white;
 		a = 1;
 		
+		var yy_plus = 0;
 		for (i = 0; i < len; i++)
 		{
 			tdp_draw_set_halign(fa_left);
+			var _newline = false;
+			
 			o = options[i];
 			c = c_gray;
 			if i == _os
@@ -61,14 +64,17 @@ switch m.anchor
 			if o.type == menutype.press && !o.localization
 				var txt = o.name;
 			else
-				var txt = lang_get_value(o.name);
-			tdp_draw_text_color(xx, yy + (m.ypad * i), txt, c, c, c, c, a);
+				var txt = menu_lang_value(o.name);
+			
+			var target_y = yy + (m.ypad * i) + yy_plus;
+			if menu_draw_text(xx, target_y, txt, c, a)
+				_newline = true;
 			
 			tdp_draw_set_halign(fa_right);
 			switch o.type
 			{
 				case menutype.toggle:
-					tdp_draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), o.value ? lang_get_value("option_on") : lang_get_value("option_off"), c, c, c, c, a);
+					menu_draw_text(SCREEN_WIDTH - m.xpad, target_y, o.value ? lang_get_value("option_on") : lang_get_value("option_off"), c, a);
 					break;
 				
 				case menutype.slide:
@@ -76,7 +82,7 @@ switch m.anchor
 					var h = 5;
 					var aw = w * (o.value / 100);
 					var x1 = SCREEN_WIDTH - m.xpad - w;
-					var y1 = yy + (m.ypad * i);
+					var y1 = target_y;
 					var x2 = x1 + aw;
 					var y2 = y1 + h;
 					
@@ -96,10 +102,13 @@ switch m.anchor
 					var select = o.values[o.value];
 					var n = select.name;
 					if select.localization
-						n = lang_get_value(select.name);
-					tdp_draw_text_color(SCREEN_WIDTH - m.xpad, yy + (m.ypad * i), n, c, c, c, c, a);
+						n = menu_lang_value(select.name);
+					if menu_draw_text(SCREEN_WIDTH - m.xpad, target_y, n, c, a)
+						_newline = true;
 					break;
 			}
+			if _newline
+				yy_plus += 16;
 		}
 		break;
 }

@@ -46,7 +46,7 @@ function scr_player_jetpackjump()
 	}
 	with obj_iceblock_breakable
 	{
-		if (place_meeting(x - other.hsp, y, other) || place_meeting(x - other.xscale, y, other) || place_meeting(x, y - other.vsp, other))
+		if place_meeting(x - other.hsp, y, other) || place_meeting(x - other.xscale, y, other) || place_meeting(x, y - other.vsp, other)
 		{
 			instance_destroy();
 			GamepadSetVibration(0, 0.5, 0.5, 0.8);
@@ -59,7 +59,7 @@ function scr_player_jetpackjump()
 	}
 	with obj_iceblock_breakable
 	{
-		if (place_meeting(x, y + 1, other))
+		if place_meeting(x, y + 1, other)
 		{
 			instance_destroy();
 			GamepadSetVibration(0, 0.5, 0.5, 0.8);
@@ -72,7 +72,7 @@ function scr_player_jetpackjump()
 	}
 	with obj_destructibles
 	{
-		if (place_meeting(x - other.hsp, y, other) || place_meeting(x - other.xscale, y, other) || place_meeting(x, y - other.vsp, other))
+		if place_meeting(x - other.hsp, y, other) || place_meeting(x - other.xscale, y, other) || place_meeting(x, y - other.vsp, other) || place_meeting(x, y + 2, other)
 		{
 			instance_destroy();
 			GamepadSetVibration(0, 0.4, 0.4, 0.8);
@@ -83,14 +83,14 @@ function scr_player_jetpackjump()
 			jumpstop = false;
 		}
 	}
-	with (instance_place(x + xscale, y, obj_tntblock))
+	with instance_place(x + xscale, y, obj_tntblock)
 	{
 		instance_destroy();
 		if other.vsp > -11
 			other.vsp = -11;
 		jumpstop = false;
 	}
-	with (instance_place(x, y + 1, obj_tntblock))
+	with instance_place(x, y + 1, obj_tntblock)
 	{
 		instance_destroy();
 		if other.vsp > -11

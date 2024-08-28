@@ -1,9 +1,11 @@
 var ww = window_get_width();
 var wh = window_get_height();
-if (room != Loadiingroom && lang_get_value("use_ttf"))
+
+if room != Loadiingroom && !instance_exists(obj_langload) && lang_get_value("use_ttf")
 	global.tdp_text_enabled = true;
 else
 	global.tdp_text_enabled = false;
+
 var cr = cr_beam;
 if ((device_mouse_x_to_gui(0) != mouse_xprevious || device_mouse_y_to_gui(0) != mouse_yprevious) && gameframe_mouse_in_window())
 {
@@ -13,6 +15,7 @@ if ((device_mouse_x_to_gui(0) != mouse_xprevious || device_mouse_y_to_gui(0) != 
 	mouse_xprevious = device_mouse_x_to_gui(0);
 	mouse_yprevious = device_mouse_y_to_gui(0);
 }
+
 if disappearbuffer > 0
 {
 	captionalpha = Approach(captionalpha, 1, 0.2);
@@ -24,11 +27,12 @@ else
 	if (window_get_cursor() != -1 && window_has_focus() && room != Mainmenu)
 		cr = cr_none;
 }
-if (room != Mainmenu && gameframe_get_fullscreen() > 0)
+
+if room != Mainmenu && gameframe_get_fullscreen() > 0
 	cr = cr_none;
-if (room == Mainmenu && window_get_cursor() == -1)
+if room == Mainmenu && window_get_cursor() == -1
 	cr = cr_default;
-if (instance_exists(obj_inputAssigner) && obj_inputAssigner.player_input_device[0] >= 0)
+if instance_exists(obj_inputAssigner) && obj_inputAssigner.player_input_device[0] >= 0
 	cr = cr_none;
 if room == editor_room
 	cr = cr_none;
@@ -42,6 +46,7 @@ if cr != cr_beam
 		global.gameframe_set_cursor = true;
 }
 global.gameframe_alpha = captionalpha;
+
 if window_has_focus()
 {
 	savedwidth = window_get_width();
@@ -55,6 +60,7 @@ else
 	if global.option_fullscreen > 0
 		alarm[2] = 5;
 }
+
 if startbuffer > 0
 	startbuffer--;
 if window_has_focus() && (dirty || window_width_current != ww || window_height_current != wh || global.option_scale_mode != last_scale_mode || global.option_fullscreen != gameframe_get_fullscreen())

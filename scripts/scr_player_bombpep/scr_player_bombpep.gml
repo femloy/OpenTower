@@ -130,7 +130,11 @@ function scr_player_bombgrab()
 			{
 				state = states.normal;
 				with bombgrabID
+				{
 					state = states.normal;
+					x = other.x;
+					y = other.y;
+				}
 			}
 		}
 	}

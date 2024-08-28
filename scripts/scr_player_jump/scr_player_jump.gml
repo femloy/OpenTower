@@ -318,18 +318,24 @@ function state_player_jump()
 		image_index = 0;
 		sprite_index = spr_breakdanceuppercut;
 		fmod_event_instance_play(snd_uppercut);
+		
 		if ispeppino
 			vsp = -10;
 		else
 			vsp = -21;
+		
 		movespeed = hsp;
+		if key_attack && grounded // high jump going left
+			movespeed = abs(hsp);
+		
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particle.highjumpcloud2, 0);
+		
 		if !ispeppino
 		{
 			repeat 4
 			{
-				with (instance_create(x + irandom_range(-40, 40), y + irandom_range(-40, 40), obj_explosioneffect))
+				with instance_create(x + irandom_range(-40, 40), y + irandom_range(-40, 40), obj_explosioneffect)
 				{
 					sprite_index = spr_shineeffect;
 					image_speed = 0.35;

@@ -1,2 +1,2 @@
 up = SCREEN_HEIGHT + 20;
-image_speed = 0.35;
+sprite_index = spr_itspizzatime;

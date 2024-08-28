@@ -12,7 +12,7 @@ function scr_player_fightball()
 	hsp = (xscale * movespeed) + (railmovespeed * raildir);
 	if movespeed <= 20
 		movespeed += 0.1;
-	if place_meeting(x + sign(hsp), y, obj_solid) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_metalblock)
+	if (place_meeting(x + sign(hsp), y, obj_solid) || scr_solid_slope(x + hsp, y)) && !place_meeting(x + sign(hsp), y, obj_slope) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_metalblock)
 	{
 		instance_create(x + (10 * xscale), y + 10, obj_bumpeffect);
 		fmod_event_one_shot_3d("event:/sfx/pep/bumpwall", x, y);

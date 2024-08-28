@@ -236,7 +236,16 @@ add_option_press(game_menu, 0, "option_back", function()
 	menu_goto(menus.options);
 });
 
-add_option_toggle(game_menu, 1, "option_vibration", function(val)
+if room == Mainmenu
+{
+	add_option_press(game_menu, 1, "option_lang", function()
+	{
+		obj_option.key_jump = false;
+		instance_create_unique(0, 0, obj_langselect);
+	});
+}
+
+add_option_toggle(game_menu, 2, "option_vibration", function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "vibration", val);
@@ -244,7 +253,7 @@ add_option_toggle(game_menu, 1, "option_vibration", function(val)
 	global.option_vibration = val;
 }).value = global.option_vibration;
 
-add_option_toggle(game_menu, 1, "option_screenshake", function(val)
+add_option_toggle(game_menu, 3, "option_screenshake", function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "screenshake", val);
@@ -252,36 +261,7 @@ add_option_toggle(game_menu, 1, "option_screenshake", function(val)
 	global.option_screenshake = val;
 }).value = global.option_screenshake;
 
-var lang = [];
-var key = ds_map_find_first(global.lang_map);
-for (i = 0; i < ds_map_size(global.lang_map); i++)
-{
-	var l = ds_map_find_value(global.lang_map, key);
-	array_push(lang, create_option_value(ds_map_find_value(l, "display_name"), key, false));
-	key = ds_map_find_next(global.lang_map, key);
-}
-
-var lang_option = add_option_multiple(game_menu, 2, "option_lang", lang, function(val)
-{
-	ini_open_from_string(obj_savesystem.ini_str_options);
-	ini_write_string("Option", "lang", val);
-	obj_savesystem.ini_str_options = ini_close();
-	global.option_lang = val;
-	global.lang = global.option_lang;
-});
-
-var r = 0;
-for (i = 0; i < array_length(lang); i++)
-{
-	if lang[i].value == global.option_lang
-	{
-		r = i;
-		break;
-	}
-}
-lang_option.value = r;
-
-add_option_toggle(game_menu, 3, "option_timer", function(val)
+add_option_toggle(game_menu, 4, "option_timer", function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "timer", val);
@@ -289,7 +269,7 @@ add_option_toggle(game_menu, 3, "option_timer", function(val)
 	global.option_timer = val;
 }).value = global.option_timer;
 
-add_option_multiple(game_menu, 4, "option_timer_type", [create_option_value("option_timer_level", 0), create_option_value("option_timer_save", 1), create_option_value("option_timer_levelsave", 2)], function(val)
+add_option_multiple(game_menu, 5, "option_timer_type", [create_option_value("option_timer_level", 0), create_option_value("option_timer_save", 1), create_option_value("option_timer_levelsave", 2)], function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "timer_type", val);
@@ -297,7 +277,7 @@ add_option_multiple(game_menu, 4, "option_timer_type", [create_option_value("opt
 	global.option_timer_type = val;
 }).value = global.option_timer_type;
 
-add_option_toggle(game_menu, 5, "option_timer_speedrun", function(val)
+add_option_toggle(game_menu, 6, "option_timer_speedrun", function(val)
 {
 	ini_open_from_string(obj_savesystem.ini_str_options);
 	ini_write_real("Option", "speedrun_timer", val);

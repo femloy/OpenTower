@@ -49,9 +49,9 @@ function scr_string_width(str)
 	var w = 0;
 	var originalstr = str;
 	var str_arr = array_create(0);
-	while (pos < string_length(originalstr))
+	while pos < string_length(originalstr)
 	{
-		if (string_copy(originalstr, pos, 2) == "\n")
+		if string_copy(originalstr, pos, 2) == "\n"
 		{
 			array_push(str_arr, string_copy(originalstr, 1, pos));
 			string_delete(originalstr, 1, pos);
@@ -62,12 +62,12 @@ function scr_string_width(str)
 		}
 		pos++;
 	}
-	if (array_length(str_arr) == 0)
+	if array_length(str_arr) == 0
 		w = string_width(str);
 	for (var i = 0; i < array_length(str_arr); i++)
 	{
 		var b = str_arr[i];
-		if (string_width(b) > w)
+		if string_width(b) > w
 			w = string_width(b);
 	}
 	return w;
@@ -80,23 +80,36 @@ function scr_separate_text(str, font, width)
 	var separation = lang_get_value("separation_map");
 	separation = string_split(separation, ",");
 	
-	while (scr_string_width(str) > width - string_width("a"))
+	var _start_pos = 0;
+	while scr_string_width(str) > width - string_width("a")
 	{
-		var _pos = string_length(str);
-		var _oldpos = _pos;
-		while (!scr_is_separation(string_char_at(str, _pos), separation))
+		var _pos = _start_pos;
+		var _sep_pos = _pos;
+		
+		for (var len = string_length(str); _pos < len; _pos++)
 		{
-			_pos--;
-			if _pos < 0
-				_pos = _oldpos;
+			if scr_is_separation(string_char_at(str, _pos), separation)
+			{
+				var _prev_sep_pos = _sep_pos;
+				_sep_pos = _pos;
+				
+				if scr_string_width(string_copy(str, _start_pos, _pos - _start_pos)) > width - string_width("a")
+				{
+					_sep_pos = _prev_sep_pos;
+					_start_pos = _sep_pos;
+					_pos = _start_pos;
+					break;
+				}
+			}
 		}
-		if (string_char_at(str, _pos) == " ")
+		
+		if string_char_at(str, _sep_pos) == " "
 		{
-			str = string_delete(str, _pos, 1);
-			str = string_insert("\n", str, _pos);
+			str = string_delete(str, _sep_pos, 1);
+			str = string_insert("\n", str, _sep_pos);
 		}
 		else
-			str = string_insert("\n", str, _pos + 1);
+			str = string_insert("\n", str, _sep_pos + 1);
 	}
 	return str;
 }

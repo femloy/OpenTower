@@ -39,8 +39,6 @@ draw_set_alpha(extrauialpha);
 
 var qx = 0;
 var qy = 0;
-lang_draw_sprite(spr_quitgame, 0, qx, qy);
-scr_draw_text_arr(qx + 50, qy + 100, grab_key);
 
 draw_set_font(lang_get_font("bigfont"));
 draw_set_halign(fa_center);
@@ -96,7 +94,7 @@ for (i = 0; i < array_length(games); i++)
 			var spr = spr_menu_finaljudgement;
 			if i == 1
 				spr = spr_menu_finaljudgementN;
-			draw_sprite_ext(spr, _i, percentstate_x, percentstate_y + 50, 1, 1, 0, c_white, game.alpha);
+			lang_draw_sprite_ext(spr, _i, percentstate_x, percentstate_y + 50, 1, 1, 0, c_white, game.alpha);
 		}
 	}
 }
@@ -118,12 +116,12 @@ if noise_unlocked
 
 lang_draw_sprite(spr_deletefile, 0, deletefile_x, deletefile_y);
 var dal = 1;
-if (currentselect != -1)
+if currentselect != -1
 {
 	var _game = global.game[currentselect];
-	if (shownoise)
+	if shownoise
 		_game = global.gameN[currentselect];
-	if (!_game.started)
+	if !_game.started
 		dal = 0.5;
 }
 scr_draw_text_arr(deletefile_x - 67, deletefile_y, taunt_key, c_white, dal);

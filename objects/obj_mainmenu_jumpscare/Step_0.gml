@@ -1,6 +1,6 @@
 image_xscale += 0.2;
 image_yscale += 0.2;
-if (image_xscale > 5 && !debug) // "&& true"
+if image_xscale > 5 && true // "true" os check?
 	game_end();
 if image_xscale > 8
 {

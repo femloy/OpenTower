@@ -49,16 +49,20 @@ function scr_player_climbwall()
 				trace("climbwall out");
 				instance_create(x, y, obj_jumpdust);
 				vsp = 0;
+				
 				var old_x = x;
 				var old_y = y;
+				
 				var i = 0;
-				while (!scr_solid(x + xscale, y))
+				while !scr_solid(x + xscale, y)
 				{
 					i++;
 					y++;
-					if (scr_solid(x + xscale, y))
+					if scr_solid(x + xscale, y)
 					{
 						y--;
+						if key_slap // popup is intended
+							y -= 11;
 						break;
 					}
 					if i > 40
@@ -68,9 +72,10 @@ function scr_player_climbwall()
 						break;
 					}
 				}
+				
 				if wallspeed < 6
 					wallspeed = 6;
-				if ((wallspeed >= 6 && wallspeed < 12) || skateboarding)
+				if (wallspeed >= 6 && wallspeed < 12) || skateboarding
 				{
 					state = states.mach2;
 					movespeed = wallspeed;
@@ -81,7 +86,7 @@ function scr_player_climbwall()
 					sprite_index = spr_mach4;
 					movespeed = wallspeed;
 				}
-				hsp = xscale;
+				hsp = wallspeed * xscale;
 			}
 			if (wallspeed < 0 && place_meeting(x, y + 12, obj_solid))
 				wallspeed = 0;

@@ -1,4 +1,4 @@
-if (instance_exists(obj_noiseunlocked))
+if instance_exists(obj_noiseunlocked)
 	exit;
 
 draw_set_font(lang_get_font("bigfont"));
@@ -7,8 +7,26 @@ draw_set_valign(fa_middle);
 draw_set_color(c_white);
 draw_set_alpha(1);
 
-if (state == states.titlescreen || (state == states.transition && dark))
+if state == states.titlescreen || (state == states.transition && dark)
 	draw_sprite(spr_menudark, 0, 0, 0);
+
+draw_set_alpha(extrauialpha);
+var qx = 0;
+var qy = 0;
+var cx = camera_get_view_x(view_camera[0]);
+var cy = camera_get_view_y(view_camera[0]);
+lang_draw_sprite(spr_quitgame, 0, qx + cx, qy + cy);
+scr_draw_text_arr(qx + 50 + cx, qy + 100 + cy, grab_key);
+if instance_exists(obj_fadeout)
+{
+	draw_set_alpha(obj_fadeout.fadealpha);
+	draw_set_color(c_black);
+	lang_draw_sprite(spr_quitgame, 0, qx + cx, qy + cy);
+	draw_set_alpha(1);
+	draw_set_color(c_white);
+}
+draw_set_alpha(1);
+
 if state == states.bombdelete
 {
 	draw_set_alpha(0.5);
@@ -17,7 +35,7 @@ if state == states.bombdelete
 	draw_set_font(lang_get_font("bigfont"));
 	draw_set_halign(fa_center);
 	draw_set_valign(fa_middle);
-	var _str = embed_value_string(lang_get_value("menu_delete"), [string(currentselect + 1)]);
+	var _str = embed_value_string(lang_get_value_newline("menu_delete"), [string(currentselect + 1)]);
 	tdp_draw_text_color(SCREEN_WIDTH / 2, (SCREEN_HEIGHT / 2) - 30, _str, c_red, c_red, c_red, c_red, 1);
 	var w = string_width(_str) / 2;
 	var spr = spr_menu_filedelete;

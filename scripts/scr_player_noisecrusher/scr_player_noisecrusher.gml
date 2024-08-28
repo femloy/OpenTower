@@ -12,10 +12,10 @@ function scr_player_noisecrusher()
 	}
 	if vsp > 0
 		vsp += 0.5;
-	hsp = movespeed;
+	hsp = movespeed * xscale;
 	move = key_left + key_right;
 	if move != 0
-		movespeed = Approach(movespeed, move * 8, 0.5);
+		movespeed = Approach(movespeed, move * 8 * xscale, 0.5);
 	else
 		movespeed = Approach(movespeed, 0, 0.5);
 	if sprite_index != spr_playerN_noisecrusherstart && sprite_index != spr_playerN_noisecrusherland && sprite_index != spr_playerN_noisecrusherfall
@@ -86,7 +86,7 @@ function scr_player_noisecrusher()
 function scr_player_do_noisecrusher()
 {
 	input_buffer_jump = 0;
-	movespeed = hsp;
+	movespeed = hsp * xscale;
 	state = states.ratmountbounce;
 	sprite_index = spr_playerN_noisecrusherstart;
 	image_index = 0;

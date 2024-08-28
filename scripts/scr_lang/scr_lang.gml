@@ -4,34 +4,52 @@ function scr_get_languages()
 	global.lang_sprite_map = ds_map_create();
 	global.lang_texture_map = ds_map_create();
 	global.lang_to_load = ds_queue_create();
-	global.lang = "en";
+	global.lang_available = ds_map_create();
+	global.lang_loaded = ds_list_create();
+	global.lang_tex_max = 0;
+	
+	if !variable_global_exists("lang")
+		global.lang = "en";
+	
 	var arr = [];
-	for (var file = file_find_first("lang/*.txt", 0); file != ""; file = file_find_next())
-	{
-		if file != "english.txt"
-			array_push(arr, file);
-	}
+	for (var def = file_find_first("lang/*.def", 0); def != ""; def = file_find_next())
+		array_push(arr, def);
 	file_find_close();
+	
 	for (var i = 0; i < array_length(arr); i++)
-		ds_queue_enqueue(global.lang_to_load, arr[i]);
+    {
+	    var str = scr_lang_get_file_arr("lang/" + arr[i])
+	    global.lang_available[? array_get(str, 0)] = {
+	        name: str[1],
+	        file: str[2]
+	    };
+	}
+	
 	global.credits_arr = scr_lang_get_credits();
 	global.noisecredits_arr = scr_lang_get_noise_credits();
 	global.lang_textures_to_load = ds_list_create();
+	ds_list_add(global.lang_loaded, "en");
 	lang_parse_file("english.txt");
 }
 
-function lang_parse_file(filename)
+function lang_read_file(filename)
 {
 	var fo = file_text_open_read("lang/" + filename);
-	var str = ""
-	while (!file_text_eof(fo))
+	var str = "";
+	while !file_text_eof(fo)
 	{
 		str += file_text_readln(fo);
 		str += "\n";
 	}
 	file_text_close(fo);
+	return str;
+}
+
+function lang_parse_file(filename)
+{
+	var str = lang_read_file(filename);
 	var key = lang_parse(str);
-	if (lang_get_value_raw(key, "custom_graphics"))
+	if lang_get_value_raw(key, "custom_graphics")
 		lang_sprites_parse(key);
 }
 
@@ -64,7 +82,7 @@ function scr_lang_get_noise_credits()
 		for (var _head = arr[i++]; _head != ""; _head = arr[i++])
 		{
 			array_push(_heads, real(_head) - 1);
-			if (i >= array_length(arr))
+			if i >= array_length(arr)
 				break;
 		}
 		i--;
@@ -100,6 +118,11 @@ function lang_get_value(entry)
 function lang_get_value_newline(entry)
 {
 	return string_replace_all(lang_get_value(entry), "\\n", "\n");
+}
+
+function lang_get_value_newline_raw(lang, entry)
+{
+	return string_replace_all(lang_get_value_raw(lang, entry), "\\n", "\n");
 }
 
 function lang_parse(langstring) // langstring being the entire file in a single string

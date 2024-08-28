@@ -2,6 +2,7 @@ image_speed = 0.05;
 mask_index = spr_tutorialgranny_sleep;
 
 show = false;
+compiled = false;
 lang_name = "";
 donepanic = false;
 wave_timer = 0;

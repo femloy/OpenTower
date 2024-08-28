@@ -13,7 +13,7 @@ for (var i = 0; i < array_length(group_arr); i++)
 }
 tex_max = array_length(tex_list);
 
-// external graphics (language mods)
+// external graphics
 ext_tex_pos = 0;
 lang_max = ds_queue_size(global.lang_to_load);
 lang_tex_max = 0;
@@ -23,5 +23,6 @@ for (var file = file_find_first("lang/graphics/", 0); file != ""; file = file_fi
 lang_tex_max -= lang_max;
 lang_tex = lang_tex_max;
 file_find_close();
+lang_init = false;
 
 alarm[0] = 70;

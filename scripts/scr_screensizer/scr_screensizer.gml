@@ -140,6 +140,7 @@ function screen_clear(color = c_black)
 function get_options()
 {
 	ini_open("saveData.ini");
+	
 	global.option_fullscreen = ini_read_real("Option", "fullscreen", 1);
 	global.option_resolution = ini_read_real("Option", "resolution", 1);
 	global.option_master_volume = ini_read_real("Option", "master_volume", 1);
@@ -148,7 +149,6 @@ function get_options()
 	global.option_vibration = ini_read_real("Option", "vibration", 1);
 	global.option_scale_mode = ini_read_real("Option", "scale_mode", 0);
 	global.option_hud = ini_read_real("Option", "hud", 1);
-	global.option_lang = ini_read_string("Option", "lang", "en");
 	global.option_timer = ini_read_real("Option", "timer", 0);
 	global.option_speedrun_timer = ini_read_real("Option", "speedrun_timer", 0);
 	global.option_timer_type = ini_read_real("Option", "timer_type", 0);
@@ -157,12 +157,62 @@ function get_options()
 	global.option_vsync = ini_read_real("Option", "vsync", 0);
 	global.option_screenshake = ini_read_real("Option", "screenshake", 1);
 	global.lang = global.option_lang;
-	if (!debug && steam_utils_is_steam_running_on_steam_deck())
+	
+	var lang = ini_read_string("Option", "lang", "none");
+	if lang == "none"
 	{
-		// "if true" probably not debug
+		lang = "en";
+		var os_lan = os_get_language();
+		switch os_lan
+		{
+			case "zh":
+				var region = os_get_region();
+				if region == "HK" || region == "MO" || region == "TW"
+					lang = "tc";
+				else
+					lang = "sc";
+				break;
+			case "ja":
+				lang = "jp";
+				break;
+			case "fr":
+				lang = "fr";
+				break;
+			case "de":
+				lang = "gr";
+				break;
+			case "it":
+				lang = "it";
+				break;
+			case "pt":
+				lang = "br";
+				break;
+			case "ru":
+				lang = "ru";
+				break;
+			case "es":
+				region = os_get_region();
+				if region == "ES" || region == "ESP"
+					lang = "spa";
+				else
+					lang = "latam";
+				break;
+		}
+		region = os_get_region();
+		if region == "KR" || region == "KOR"
+			lang = "kr";
+		global.option_lang = lang;
+	}
+	else
+		global.option_lang = lang;
+	global.offload_lang = noone;
+	
+	if true && steam_utils_is_steam_running_on_steam_deck() // "true" os check?
+	{
 		global.option_fullscreen = 1;
 		global.option_resolution = 1;
 	}
+	
 	ini_close();
 	screen_apply_fullscreen(global.option_fullscreen);
 	obj_screensizer.start_sound = false;

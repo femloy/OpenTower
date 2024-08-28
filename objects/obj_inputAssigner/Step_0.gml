@@ -36,7 +36,11 @@ if !deactivated
 	else if mode == 1
 	{
 		if !global.swapmode
+		{
 			mode = 0;
+			player_input_device[1] = -1;
+		}
+		
 		swap_ready = false;
 		var _found = false;
 		for (var player = 0; player < 2; player++)
@@ -61,18 +65,25 @@ if !deactivated
 			}
 		}
 	}
-	for (i = 0; i < 2; i++)
+	if (switch_input_buffer <= 0)
 	{
-		if player_input_device[i] >= 0
+		for (i = 0; i < 2; i++)
 		{
-			if (!gamepad_is_connected(player_input_device[i]))
+			if (player_input_device[i] <= -1)
 			{
-				deactivated = true;
-				device_selected[i] = false;
-				player_input_device[i] = -2;
-				device_to_reconnect = i;
-				scr_pause_deactivate_objects(false);
-				break;
+				
+			}
+			else if (player_input_device[i] >= 0)
+			{
+				if (!gamepad_is_connected(player_input_device[i]))
+				{
+					deactivated = true;
+					device_selected[i] = false;
+					player_input_device[i] = -2;
+					device_to_reconnect = i;
+					scr_pause_deactivate_objects(false);
+					break;
+				}
 			}
 		}
 	}

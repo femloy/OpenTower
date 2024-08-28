@@ -2,7 +2,7 @@ if start
 {
 	draw_sprite(titlecard_sprite, titlecard_index, 0, 0);
 	var s = 1;
-	draw_sprite(title_sprite, title_index, 32 + irandom_range(-s, s), irandom_range(-s, s));
+	lang_draw_sprite(title_sprite, title_index, 32 + irandom_range(-s, s), irandom_range(-s, s));
 	for (var i = 0; i < array_length(noisehead); i++)
 	{
 		var head = noisehead[i];

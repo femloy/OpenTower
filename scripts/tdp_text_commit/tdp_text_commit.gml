@@ -1,15 +1,14 @@
 function tdp_text_commit(x, y, w, h, gui = true)
 {
-	if global.tdp_text_enabled
+	if global.tdp_text_enabled && !ds_queue_empty(global.tdp_text_queue)
 	{
 		draw_set_alpha(1);
-		if (!surface_exists(global.tdp_text_surface))
+		if !surface_exists(global.tdp_text_surface)
 			global.tdp_text_surface = surface_create(w, h);
-		else
-			surface_resize(global.tdp_text_surface, w, h);
+		
 		surface_set_target(global.tdp_text_surface);
 		draw_clear_alpha(0, 0);
-		while (!ds_queue_empty(global.tdp_text_queue))
+		while !ds_queue_empty(global.tdp_text_queue)
 		{
 			var action = ds_queue_dequeue(global.tdp_text_queue);
 			switch action.type

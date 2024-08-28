@@ -7,7 +7,7 @@ function scr_hurtplayer(player)
 	var _swap = false;
 	with player
 	{
-		if global.failcutscene
+		if global.failcutscene || instance_exists(obj_endlevelfade)
 		{
 		}
 		else if (state == states.ratmounthurt || state == states.duel || state == states.supergrab || state == states.pizzaface_phase2transition || state == states.parry || instance_exists(obj_vigilante_duelintro) || state == states.taxi || state == states.spaceshuttle || state == states.tube || state == states.debugstate || state == states.golf || state == states.slipbanan)

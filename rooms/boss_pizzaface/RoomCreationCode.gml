@@ -1,7 +1,7 @@
 pal_swap_init_system(shd_pal_swapper);
 global.roommessage = "PIZZA TOWER ISLAND";
 global.leveltorestart = room;
-global.gameframe_caption_text = lang_get_value("caption_boss_pizzaface");
+gameframe_caption_text = lang_get_value("caption_boss_pizzaface");
 global.level_minutes = 0;
 global.level_seconds = 0;
 

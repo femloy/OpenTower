@@ -15,6 +15,10 @@ if global.panic && !instance_exists(obj_ghostcollectibles)
 var s = text_size;
 xx -= (s[0] / 2);
 yy -= s[1];
+
+if string_count("\n", text) > 0
+	xx = 48;
+
 xx = floor(xx);
 yy = floor(yy);
 

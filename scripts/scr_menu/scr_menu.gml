@@ -103,3 +103,32 @@ function add_option_slide(_menu, _optionid, _name, _onmove = noone, _onchanged =
 	array_push(_menu.options, b);
 	return b;
 }
+function menu_draw_text(xx, yy, str, color, alpha)
+{
+	var _break = false;
+	var sub = false;
+	var newstr = string_replace_all(str, "\\n", "\n");
+	if string_length(newstr) != string_length(str)
+	{
+		_break = true;
+		sub = true;
+		str = newstr;
+		tdp_draw_set_font(lang_get_font("smallfont"));
+	}
+	tdp_draw_text_color(xx, yy + _break ? 2 : 0, str, color, color, color, color, alpha);
+	if sub
+		tdp_draw_set_font(lang_get_font("bigfont"));
+	return _break;
+}
+function menu_lang_value(entry)
+{
+	var text = lang_get_value(entry);
+	switch entry
+	{
+		case "option_controller_superjump":
+		case "option_controller_groundpound":
+			text = string_replace_all(text, "%", lang_get_value("joystick_steam")); // joystick_switch?
+			break;
+	}
+	return text;
+}

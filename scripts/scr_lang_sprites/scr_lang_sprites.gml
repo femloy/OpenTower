@@ -1,34 +1,39 @@
-function lang_sprites_parse(language)
+function lang_sprites_parse(lang)
 {
-	var file = file_text_open_read(concat("lang/graphics/", language, ".json"));
-	for (var str = ""; !file_text_eof(file); str += "\n")
-		str += file_text_readln(file);
+	var file = file_text_open_read(concat("lang/graphics/", lang, ".json"));
+	
+	var str = "";
+	while !file_text_eof(file)
+    {
+        str += file_text_readln(file);
+        str += "\n";
+    }
 	file_text_close(file);
 	
 	var json = json_parse(str);
 	trace(json);
-	ds_map_set(global.lang_sprite_map, language, ds_map_create());
+	ds_map_set(global.lang_sprite_map, lang, ds_map_create());
 	
 	var arr = json.sprites;
 	for (var i = 0; i < array_length(arr); i++)
 	{
 		var spr = arr[i];
-		ds_map_set(ds_map_find_value(global.lang_sprite_map, language), asset_get_index(spr.name), spr);
-		for (var j = 0; j < array_length(frame_arr); j++)
+		var asset = asset_get_index(spr.name);
+		if asset <= -1
 		{
-			var frame = frame_arr[j];
-			if (!variable_struct_exists(frame, "width"))
-				frame.width = -1;
-			if (!variable_struct_exists(frame, "height"))
-				frame.height = -1;
-			if (!variable_struct_exists(frame, "x"))
-				frame.x = 0;
-			if (!variable_struct_exists(frame, "y"))
-				frame.y = 0;
-			if (!variable_struct_exists(frame, "offset"))
-				frame.offset = {x: 0, y: 0};
-			if (ds_list_find_index(global.lang_textures_to_load, frame.texture) == -1)
-				ds_list_add(global.lang_textures_to_load, frame.texture);
+			
+		}
+		else
+		{
+			ds_map_set(ds_map_find_value(global.lang_sprite_map, lang), asset, spr);
+			
+			var frame_arr = spr.frames;
+			for (var j = 0; j < array_length(frame_arr); j++)
+			{
+				var frame = frame_arr[j];
+				if ds_list_find_index(global.lang_textures_to_load, frame.texture) == -1
+					ds_list_add(global.lang_textures_to_load, frame.texture);
+			}
 		}
 	}
 }
@@ -38,7 +43,7 @@ function lang_draw_sprite_ext(sprite, subimg, x, y, xscale, yscale, rot, col, al
 	if spr != noone
 	{
 		subimg = floor(subimg);
-		var frame = spr.frames[subimg];
+		var frame = lang_get_frame(spr, subimg);
 		var texture = lang_get_texture(frame.texture);
 		if texture != -4
 		{
@@ -63,18 +68,33 @@ function lang_draw_sprite(sprite, subimg, x, y)
 }
 function lang_get_sprite(sprite)
 {
-	if (lang_get_value("custom_graphics"))
+	if lang_get_value("custom_graphics")
 	{
 		var g = ds_map_find_value(ds_map_find_value(global.lang_sprite_map, global.lang), sprite);
-		if (!is_undefined(g))
+		if !is_undefined(g)
 			return g;
 	}
 	return noone;
 }
+function lang_get_frame(sprite_struct, frame)
+{
+	if sprite_struct == noone || array_length(sprite_struct.frames) == 0
+		return noone;
+	
+	if frame > array_length(sprite_struct.frames) - 1
+		frame -= array_length(sprite_struct.frames) - 1;
+	frame = floor(frame);
+	if frame < 0
+		frame = 0;
+	if frame > array_length(sprite_struct.frames) - 1
+		frame = array_length(sprite_struct.frames) - 1;
+	
+	return sprite_struct.frames[frame];
+}
 function lang_get_texture(texture)
 {
 	var g = ds_map_find_value(global.lang_texture_map, texture);
-	if (!is_undefined(g))
+	if !is_undefined(g)
 		return g;
 	return noone;
 }

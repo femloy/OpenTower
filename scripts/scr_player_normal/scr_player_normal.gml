@@ -369,13 +369,19 @@ function state_player_normal()
 		image_index = 0;
 		sprite_index = spr_breakdanceuppercut;
 		fmod_event_instance_play(snd_uppercut);
+		
 		if ispeppino
 			vsp = -14;
 		else
 			vsp = -20;
+		
 		movespeed = hsp;
+		if key_attack // high jump going left
+			movespeed = abs(hsp);
+		
 		particle_set_scale(particle.highjumpcloud2, xscale, 1);
 		create_particle(x, y, particle.highjumpcloud2, 0);
+		
 		if !ispeppino
 		{
 			repeat 4
@@ -391,14 +397,17 @@ function state_player_normal()
 	switch character
 	{
 		case "P":
-			if (key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu)
+			if key_attack && state != states.handstandjump && !place_meeting(x + xscale, y, obj_solid) && (!place_meeting(x, y + 1, obj_iceblockslope) || !place_meeting(x + (xscale * 5), y, obj_solid)) && !global.kungfu
 			{
-				if (!global.pistol || pistolanim == -4)
+				if !global.pistol || pistolanim == -4
 				{
 					sprite_index = spr_mach1;
 					image_index = 0;
 					state = states.mach2;
-					if movespeed < 6
+					
+					if movespeed < 6 && movespeed >= 0
+						movespeed = 6;
+					if movespeed > -6 && movespeed < 0
 						movespeed = 6;
 				}
 			}
@@ -410,6 +419,7 @@ function state_player_normal()
 				movespeed = 0;
 			}
 			break;
+		
 		case "N":
 			if (pogochargeactive || pizzapepper > 0)
 			{
@@ -429,6 +439,7 @@ function state_player_normal()
 				state = states.pogo;
 			}
 			break;
+		
 		case "V":
 			if (key_attack && !place_meeting(x + xscale, y, obj_solid))
 			{

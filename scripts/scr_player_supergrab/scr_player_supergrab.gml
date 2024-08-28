@@ -1,5 +1,29 @@
 function scr_player_supergrab()
 {
+	if supergrabstate != states.finishingblow
+	{
+		if !instance_exists(baddiegrabbedID) || baddiegrabbedID.object_index == obj_gustavograbbable || baddiegrabbedID.object_index == obj_swapplayergrabbable
+		{
+			baddiegrabbedID = noone;
+			with obj_baddie
+			{
+				if place_meeting(x, y, other) && object_index != obj_gustavograbbable && object_index != obj_swapplayergrabbable && state != states.pizzaheadjump
+				{
+					other.baddiegrabbedID = id;
+					scr_boss_grabbed();
+				}
+			}
+			if !instance_exists(baddiegrabbedID)
+			{
+				state = states.normal;
+				camzoom = 1;
+				camera_set_view_size(view_camera[0], obj_screensizer.actual_width * camzoom, obj_screensizer.actual_height * camzoom);
+				obj_screensizer.camzoom = camzoom;
+			}
+			exit;
+		}
+	}
+	
 	if pizzahead
 	{
 		if supergrabstate != states.finishingblow
@@ -9,10 +33,11 @@ function scr_player_supergrab()
 	}
 	else
 		camzoom = 1;
+	
 	invtime = 30;
 	var midpointX = 0;
 	var midpointY = 0;
-	if (instance_exists(baddiegrabbedID))
+	if instance_exists(baddiegrabbedID)
 	{
 		midpointX = x + ((baddiegrabbedID.x - x) * 1.15);
 		midpointY = y + ((baddiegrabbedID.y - y) * 0.5);
@@ -21,6 +46,7 @@ function scr_player_supergrab()
 	}
 	with obj_pizzaface_thunderdark
 		alarm[1] = 80;
+	
 	if ispeppino
 	{
 		switch supergrabstate

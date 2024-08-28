@@ -1,4 +1,6 @@
 achievement = "entrance1";
+title_override = noone;
+desc_override = noone;
 index = 0;
 text = "";
 secretplus = 3;

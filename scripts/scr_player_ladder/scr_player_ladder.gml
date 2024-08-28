@@ -55,15 +55,18 @@ function scr_player_ladder()
 		if !hooked && vsp < 0
 		{
 			var _y = y;
-			while (!scr_solid(x, y + 1))
+			var i = 0;
+			while !scr_solid(x, y + 1)
 			{
 				y++;
-				if (scr_solid(x, y))
+				if scr_solid(x, y)
 				{
 					y--;
 					break;
 				}
-				if (y > (room_height + 300))
+				
+				i++;
+				if i > 32
 				{
 					y = _y;
 					break;
@@ -72,6 +75,7 @@ function scr_player_ladder()
 		}
 		vsp = 0;
 		hooked = false;
+		ladderbuffer = 5;
 	}
 	if input_buffer_jump > 0
 	{
