@@ -615,7 +615,7 @@ if (!variable_global_exists("saveroom"))
 	global.bigfont = font_add_sprite_ext(spr_font, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ!¡¿?.1234567890:ÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÚÙÛÜÇ+", true, 0);
 	global.smallfont = font_add_sprite_ext(spr_smallerfont, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZ!¡.:?¿1234567890ÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÚÙÛÜÇ+", true, 0);
 	global.tutorialfont = font_add_sprite_ext(spr_tutorialfont, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz!¡,.:0123456789'?¿-áäãàâæéèêëíìîïóöõôúùûüÿŸÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÚÙÛÜÇçœß;«»+", true, 2);
-	global.creditsfont = font_add_sprite_ext(spr_creditsfont, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz.:!¡0123456789?'\"ÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÚÙÛÜáäãàâéèêëíìîïóöõôúùûüÇç_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнльœ«»+", true, 2);
+	global.creditsfont = font_add_sprite_ext(spr_creditsfont, "ABCDEFGHIJKLMNÑOPQRSTUVWXYZabcdefghijklmnñopqrstuvwxyz.:!¡0123456789?'\"ÁÄÃÀÂÉÈÊËÍÌÎÏÓÖÕÔÚÙÛÜáäãàâéèêëíìîïóöõôúùûüÇç_-[]▼()&#风雨廊桥전태양*яиБжидГзвбнльœ«»+ß", true, 2);
 	global.moneyfont = font_add_sprite_ext(spr_stickmoney_font, "0123456789$-", true, 0);
 	
 	global.font_map = ds_map_create();

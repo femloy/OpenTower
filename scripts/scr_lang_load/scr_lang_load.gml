@@ -1,6 +1,11 @@
 function scr_lang_load_init()
 {
 	var lang = ds_map_find_value(global.lang_available, global.option_lang);
+	if is_undefined(lang)
+	{
+		global.option_lang = "en";
+		lang = ds_map_find_value(global.lang_available, global.option_lang);
+	}
 	ds_queue_enqueue(global.lang_to_load, lang.file);
 	ds_list_clear(global.lang_textures_to_load);
 	global.lang_tex_max = 0;

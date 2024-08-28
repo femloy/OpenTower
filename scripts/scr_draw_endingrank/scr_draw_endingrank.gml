@@ -56,6 +56,6 @@ function scr_draw_endingrank()
 			spr = spr_rankN_wow_text;
 			break;
 	}
-	if spr != noone
+	if spr != noone && sprite_index != spr_rank_wow
 		lang_draw_sprite(spr, image_index, x, y);
 }
