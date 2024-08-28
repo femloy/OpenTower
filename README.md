@@ -1,5 +1,5 @@
 # Pizza Tower
-- A full decompilation of Pizza Tower v1.1.0 (Noise Update).
+- A full decompilation of Pizza Tower v1.1.1 (International Update).
 - I am not affiliated with Tour De Pizza in any way.
 
 # Requirements
@@ -29,3 +29,29 @@ This repository doesn't include any of the datafiles (FMOD, langs) or sprites. A
 5. Run the `PizzaTower_GM2.yyp` in the *right version of GameMaker*. Open Extensions > Steamworks and change the "Steam SDK" location to wherever you put your Steamworks SDK. If that doesn't work, try going INTO the Steamworks folder and make that the path instead. 
 
 **If you try building the game with Steamworks, it will just run the unmodded game.** You can always just remove the extension though. Look through all Steam related code, and comment out any use of the `steam_` functions. I think you can also just delete the `steam_api64.dll` file from the build.
+
+# Change Runtime
+
+1. Make sure you got GameMaker LTS 2022. Go to File > Preferences or press CTRL+SHIFT+P.
+
+<img src="github/guide4.png">
+
+2. Scroll to the bottom and open Runtime Feeds > Master.
+
+<img src="github/guide5.png">
+
+3. Select 2022.0.1.30
+
+<img src="github/guide6.png">
+
+The previous runtime version doesn't work with Steamworks, and the next one breaks the sprite font offsets.
+
+# Upgrading GameMaker
+
+If you want to move to a future GameMaker version you'll need to make some changes.
+
+1. Remove Steamworks and all code associated with it, unless you're gonna do some weird Pizza Oven stuff.
+2. New IDE versions tend to re-order and move things around, making stuff run in a different order. This breaks warps, parallax, the camera, menus... Make a controller object that runs object's step events in the correct order.
+3. Whenever text is drawn to the screen, offset it by the font's sprite origin, as horrible as that might sound. You can hook into the `draw_text` functions with some macro shenanigans.
+4. Rename the `string_split` function to something else, it's reserved now. CTRL+SHIFT+F to mass replace.
+5. Probably more. I forgot. If you got this far you can figure out the rest anyway.
