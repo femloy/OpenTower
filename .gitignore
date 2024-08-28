@@ -9,7 +9,7 @@ sprites/*/*.png
 sprites/*/*/*/*.png
 !options/main/template_icon.png
 !github/*
-!datafiles/licenses
+!datafiles/licenses/Gameframe_License.txt
 
 # The manually fixed tilesets
 !sprites/tile_beachprops1/**

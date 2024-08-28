@@ -1,5 +1,5 @@
 /*
-	Script made by loypoll
+	Script made by Loy
 	
 	Don't take this and claim it as your own,
 	and please credit me if you'll use this.
@@ -22,19 +22,21 @@ using System.Drawing;
 using System.Diagnostics;
 
 EnsureDataLoaded();
-if (Data.GeneralInfo.DisplayName.Content.ToLower() != "pizza tower")
+const string ERROR_TEXT = "This script is incompatible with Pizza Tower pre-v1.1.1.\nYou can switch to a different OpenTower branch for older versions.\nAlso, don't use this with mods.";
+
+if (Data.GeneralInfo.FileName.Content != "PizzaTower_GM2")
 {
-    ScriptError("Error 0 - Run this on Pizza Tower's unmodded data.win!");
+    ScriptError($"Error 1\n\n{ERROR_TEXT}");
     return;
 }
 if (!Data.IsVersionAtLeast(2022, 9))
 {
-    ScriptError("Error 1 - Run this on Pizza Tower's unmodded data.win!");
+     ScriptError($"Error 2\n\n{ERROR_TEXT}");
     return;
 }
-if (Data.Sprites.ByName("spr_noiseunlocked_bg") == null)
+if (Data.Sprites.ByName("spr_lang_flags") == null)
 {
-	ScriptError("Error 2 - Run this on Pizza Tower 1.1.0 (The Noise Update)!");
+	 ScriptError($"Error 3\n\n{ERROR_TEXT}");
     return;
 }
 
@@ -5271,21 +5273,31 @@ var includedFiles = new List<string>()
 	"credits.txt",
 	"noisecredits.txt",
 	"fmod.dll",
-	"fmodstudio.dll",
-	"sound/Desktop/Master.bank",
-	"sound/Desktop/Master.strings.bank",
-	"sound/Desktop/music.bank",
-	"sound/Desktop/sfx.bank",
-	"lang/english.txt"
+	"fmodstudio.dll"
+};
+var includedFolders = new List<string>()
+{
+	"lang",
+	"lang\\fonts",
+	"lang\\graphics",
+	"sound\\Desktop",
+	"licenses"
 };
 
 Directory.CreateDirectory($"{rootPath}datafiles");
-Directory.CreateDirectory($"{rootPath}datafiles\\sound\\Desktop");
-Directory.CreateDirectory($"{rootPath}datafiles\\lang");
-Directory.CreateDirectory($"{rootPath}extensions\\fmod_gms");
-
 foreach (var i in includedFiles)
 	File.Copy($"{dataPath}{i}", $"{rootPath}datafiles\\{i}", true);
+
+void includeFolder(string source, string dest)
+{
+	Directory.CreateDirectory(dest);
+	foreach(var file in Directory.GetFiles(source))
+        File.Copy(file, Path.Combine(dest, Path.GetFileName(file)));
+}
+foreach (var i in includedFolders)
+	includeFolder($"{dataPath}{i}", $"{rootPath}datafiles\\{i}");
+
+Directory.CreateDirectory($"{rootPath}extensions\\fmod_gms");
 File.Copy($"{dataPath}fmod-gamemaker.dll", $"{rootPath}extensions\\fmod_gms\\fmod-gamemaker.dll", true);
 
 // Sprites
