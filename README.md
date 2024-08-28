@@ -1,5 +1,5 @@
 # Pizza Tower
-- A full decompilation of Pizza Tower v1.1.1 (International Update).
+- A full decompilation of Pizza Tower v1.1.2 (International Update).
 - I am not affiliated with Tour De Pizza in any way.
 
 # Requirements
