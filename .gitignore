@@ -50,3 +50,4 @@ sprites/*/*/*/*.png
 !sprites/tile_dungeon3/**
 !sprites/spr_ruincheese/**
 !sprites/spr_ruinend/**
+*.resource_order

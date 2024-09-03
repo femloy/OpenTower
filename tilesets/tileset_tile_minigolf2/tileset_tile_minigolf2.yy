@@ -2,27 +2,8 @@
   "resourceType": "GMTileSet",
   "resourceVersion": "1.0",
   "name": "tileset_tile_minigolf2",
-  "spriteId": {
-    "name": "sprite_tile_minigolf2",
-    "path": "sprites/sprite_tile_minigolf2/sprite_tile_minigolf2.yy",
-  },
-  "tileWidth": 32,
-  "tileHeight": 32,
-  "tilexoff": 0,
-  "tileyoff": 0,
-  "tilehsep": 0,
-  "tilevsep": 0,
-  "spriteNoExport": false,
-  "textureGroupId": {
-    "name": "minigolfgroup",
-    "path": "texturegroups/minigolfgroup",
-  },
-  "out_tilehborder": 2,
-  "out_tilevborder": 2,
-  "out_columns": 7,
-  "tile_count": 48,
   "autoTileSets": [
-    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_0","tiles":[
+    {"resourceType":"GMAutoTileSet","resourceVersion":"1.0","name":"autotile_0","closed_edge":false,"tiles":[
         6,
         29,
         24,
@@ -70,10 +51,30 @@
         15,
         12,
         16,
-      ],"closed_edge":false,},
+      ],},
   ],
-  "tileAnimationFrames": [],
-  "tileAnimationSpeed": 15.0,
+  "macroPageTiles": {
+    "SerialiseHeight": 0,
+    "SerialiseWidth": 0,
+    "TileSerialiseData": [],
+  },
+  "out_columns": 7,
+  "out_tilehborder": 2,
+  "out_tilevborder": 2,
+  "parent": {
+    "name": "Golf",
+    "path": "folders/Tile Sets/Levels/Golf.yy",
+  },
+  "spriteId": {
+    "name": "sprite_tile_minigolf2",
+    "path": "sprites/sprite_tile_minigolf2/sprite_tile_minigolf2.yy",
+  },
+  "spriteNoExport": false,
+  "textureGroupId": {
+    "name": "minigolfgroup",
+    "path": "texturegroups/minigolfgroup",
+  },
+  "tile_count": 48,
   "tileAnimation": {
     "FrameData": [
       0,
@@ -127,13 +128,12 @@
     ],
     "SerialiseFrameCount": 1,
   },
-  "macroPageTiles": {
-    "SerialiseWidth": 0,
-    "SerialiseHeight": 0,
-    "TileSerialiseData": [],
-  },
-  "parent": {
-    "name": "Golf",
-    "path": "folders/Tile Sets/Levels/Golf.yy",
-  },
+  "tileAnimationFrames": [],
+  "tileAnimationSpeed": 15.0,
+  "tileHeight": 32,
+  "tilehsep": 0,
+  "tilevsep": 0,
+  "tileWidth": 32,
+  "tilexoff": 0,
+  "tileyoff": 0,
 }

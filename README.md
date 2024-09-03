@@ -4,7 +4,7 @@
 
 # Requirements
 - [Pizza Tower on Steam](https://store.steampowered.com/app/2231450/Pizza_Tower/)
-- [GameMaker LTS 2022](https://gms.yoyogames.com/GameMaker-Installer-2022.0.1.31.exe) w/ Runtime 2022.0.1.30 <br/>
+- [GameMaker 2023.1.1.62](https://gms.yoyogames.com/GameMaker-Installer-2023.1.1.62.exe)<br/>
 - [Steamworks SDK](https://partner.steamgames.com/downloads/steamworks_sdk.zip) <br/>
 This one's optional if you're gonna remove it, which you need to for mods
 
@@ -28,22 +28,6 @@ This repository doesn't include any of the datafiles (FMOD, langs) or sprites. A
 5. Run the `PizzaTower_GM2.yyp` in the *right version of GameMaker*. Open Extensions > Steamworks and change the "Steam SDK" location to wherever you put your Steamworks SDK. If that doesn't work, try going INTO the Steamworks folder and make that the path instead. 
 
 **If you try building the game with Steamworks, it will just run the unmodded game.** You can always just remove the extension though. Look through all Steam related code, and comment out any use of the `steam_` functions. I think you can also just delete the `steam_api64.dll` file from the build.
-
-# Change Runtime
-
-1. Make sure you got GameMaker LTS 2022. Go to File > Preferences or press CTRL+SHIFT+P.
-
-<img src="github/guide4.png">
-
-2. Scroll to the bottom and open Runtime Feeds > Master.
-
-<img src="github/guide5.png">
-
-3. Select 2022.0.1.30
-
-<img src="github/guide6.png">
-
-The previous runtime version doesn't work with Steamworks, and the next one breaks the sprite font offsets.
 
 # Upgrading GameMaker
 
