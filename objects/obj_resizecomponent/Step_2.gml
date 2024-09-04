@@ -47,7 +47,7 @@ if !dragged && obj_editor.instance_state == inst_states.idle
 			other.dragged = true
 			other.oldxscale = other.inst.image_xscale
 			other.oldyscale = other.inst.image_yscale
-			instance_state = (2 << 0)
+			instance_state = inst_states.placing
 		}
 	}
 }
