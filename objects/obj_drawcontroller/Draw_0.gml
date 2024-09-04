@@ -28,7 +28,7 @@ if use_dark
 				{
 					var blend = image_blend;
 					image_blend = b;
-					event_perform(ev_draw, 0);
+					event_perform(ev_draw, ev_draw_normal);
 					image_blend = blend;
 				}
 			}
@@ -116,7 +116,7 @@ for (i = 0; i < array_length(flash_arr); i++)
 	with flash_arr[i]
 	{
 		if visible && flash
-			event_perform(8, 0);
+			event_perform(ev_draw, ev_draw_normal);
 	}
 }
 shader_set(global.Pal_Shader);

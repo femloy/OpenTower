@@ -8,7 +8,7 @@ if (is_holiday(holiday.halloween))
 draw_sprite(spr_mainmenu_bg, i, SCREEN_X, 0);
 
 with obj_menutv2
-	event_perform(8, 0);
+	event_perform(ev_draw, ev_draw_normal);
 with obj_explosioneffect
 	draw_self();
 

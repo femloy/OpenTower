@@ -3,7 +3,7 @@ scr_menu_getinput();
 if (key_jump || key_start)
 {
 	if alarm[1] > 0
-		event_perform(2, 1);
+		event_perform(ev_alarm, 1);
 	instance_destroy();
 }
 if fadein

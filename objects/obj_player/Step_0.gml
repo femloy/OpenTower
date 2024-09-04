@@ -1155,7 +1155,7 @@ if object_index == obj_player1
 			with (instance_create(x, y - 80, obj_combotitle))
 			{
 				title = floor(global.combo / 5);
-				event_perform(3, 0);
+				event_perform(ev_step, ev_step_normal);
 			}
 		}
 	}

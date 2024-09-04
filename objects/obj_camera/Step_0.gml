@@ -67,7 +67,7 @@ if global.combo > 0
 else if comboend
 {
 	comboend = false;
-	event_perform(2, 4);
+	event_perform(ev_alarm, 4);
 }
 if shoving == 1 && image_index >= 3 && bang == 0
 {

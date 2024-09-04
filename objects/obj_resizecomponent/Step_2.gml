@@ -47,7 +47,7 @@ if !dragged && obj_editor.instance_state == inst_states.idle
 			other.dragged = true
 			other.oldxscale = other.inst.image_xscale
 			other.oldyscale = other.inst.image_yscale
-			instance_state = (2 << 0)
+			instance_state = inst_states.placing
 		}
 	}
 }
@@ -87,6 +87,6 @@ else if dragged
 		dragged = false
 		with inst
 			command_add(new ResizeCMD(id, image_xscale, image_yscale, other.oldxscale, other.oldyscale))
-		obj_editor.instance_state = (0 << 0)
+		obj_editor.instance_state = inst_states.idle
 	}
 }

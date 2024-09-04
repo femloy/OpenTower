@@ -108,7 +108,7 @@ function scr_enemy_stun()
 			elitehit = 0;
 		if (elitehit > 0 || !destroyable)
 		{
-			event_perform(1, 0);
+			event_perform(ev_destroy, 0);
 			var b = ds_list_find_index(global.baddieroom, id);
 			if b != -1
 				ds_list_delete(global.baddieroom, b);

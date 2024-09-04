@@ -161,7 +161,7 @@ if verticalhallway
 	var _vinst = -4;
 	with obj_verticalhallway
 	{
-		event_perform(3, 0);
+		event_perform(ev_step, ev_step_normal);
 		if targetDoor == other.targetDoor
 			_vinst = id;
 	}
