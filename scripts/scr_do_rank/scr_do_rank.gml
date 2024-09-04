@@ -58,7 +58,7 @@ function scr_do_rank(showtoppins = true, boss = false)
 		}
 		notification_push(notifs.end_level, [global.leveltosave, global.secretfound, global.level_minutes, global.level_seconds]);
 		with obj_achievementtracker
-			event_perform(3, 0);
+			event_perform(ev_step, ev_step_normal);
 	}
 	else
 	{
