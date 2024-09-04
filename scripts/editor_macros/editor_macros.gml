@@ -1,8 +1,8 @@
 enum editor_states
 {
-	e0,				// TODO
+	empty,				// This state is rarely used and is only used when initalizing the objects.
 	instance_edit,
-	e2,
+	unknownvalue_2,
 	resize_room,
 	saving,
 	loading
@@ -11,7 +11,7 @@ enum inst_states
 {
 	idle,
 	dragging,
-	e2				// TODO
+	placing				// Not 100% sure about this one, theres not much referencing it.
 }
 enum comp_state
 {
