@@ -1,11 +1,11 @@
 editor_states = ds_map_create();
 
-editor_state = editor_states.e0;
+editor_state = editor_states.empty;
 ds_map_set(editor_states, editor_states.instance_edit, function()
 {
 	toggle_menu_layer(0);
 });
-ds_map_set(editor_states, editor_states.e2, function()
+ds_map_set(editor_states, editor_states.unknownvalue_2, function()
 {
 	toggle_menu_layer(1);
 });
