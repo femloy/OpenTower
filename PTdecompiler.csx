@@ -31,12 +31,12 @@ if (Data.GeneralInfo.FileName.Content != "PizzaTower_GM2")
 }
 if (!Data.IsVersionAtLeast(2022, 9))
 {
-     ScriptError($"Error 2\n\n{ERROR_TEXT}");
+    ScriptError($"Error 2\n\n{ERROR_TEXT}");
     return;
 }
 if (Data.Sprites.ByName("spr_lang_flags") == null)
 {
-	 ScriptError($"Error 3\n\n{ERROR_TEXT}");
+	ScriptError($"Error 3\n\n{ERROR_TEXT}");
     return;
 }
 
@@ -5308,6 +5308,9 @@ if (Data.TextureGroupInfo != null)
 	}
 }
 
+// do it
+await DumpSprites();
+
 // Included files
 var includedFiles = new List<string>()
 {
@@ -5341,18 +5344,14 @@ foreach (var i in includedFolders)
 Directory.CreateDirectory($"{rootPath}extensions\\fmod_gms");
 File.Copy($"{dataPath}fmod-gamemaker.dll", $"{rootPath}extensions\\fmod_gms\\fmod-gamemaker.dll", true);
 
-// Sprites
-//SetupProgress("Sprites", 0, Data.Sprites.Count);
-await DumpSprites();
-
 // cleanup
-await StopUpdater();
-worker.Cleanup();
-//HideProgressBar();
+//worker.Cleanup();
+//worker.Dispose();
+// ^ UTMT team, please add Cleanup() as a compatibility function
 
 // done
 if (File.Exists($"{rootPath}PizzaTower_GM2.yyp"))
-	ScriptMessage("Done! You can open the decomp in GameMaker now.");
+	ScriptMessage("Done! You can open the project in GameMaker now.");
 else
-	ScriptMessage("Done! You can copy the exported files over to the decomp now. Replace all files if it asks you to.");
+	ScriptMessage("Done! You can copy the exported files over to the project now. Replace all files if it asks you to.");
 Process.Start("explorer.exe", rootPath); // open the selected folder

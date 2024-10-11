@@ -32,7 +32,7 @@ switch state
 				{
 					crosshair_x = other.x;
 					crosshair_y = other.y;
-					event_perform(2, 0);
+					event_perform(ev_alarm, 0);
 					other.state = states.normal;
 					other.collisioned = false;
 					other.cooldown = 150;
