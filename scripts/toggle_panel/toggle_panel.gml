@@ -25,4 +25,3 @@ function toggle_panel(_id)
 		}
 	}
 }
-

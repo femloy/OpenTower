@@ -1,4 +1,4 @@
-state = editor_states.blank; // unused variable
+state = editor_states.blank;
 hovered = false;
 selected = false;
 parent = -4;
