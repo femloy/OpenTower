@@ -12,7 +12,7 @@ if !finish
 				with obj_transfotip
 				{
 					alarm[1] = -1;
-					event_perform(2, 1);
+					event_perform(ev_alarm, 1);
 				}
 			}
 		}

@@ -1,3 +1,9 @@
+enum layertype
+{
+	background,
+	tile
+}
+
 function room_layer_add(argument0)
 {
 	with obj_itemlist
@@ -26,7 +32,7 @@ function room_layer_add(argument0)
 			if _layer.depth == 0
 				_layer.depth++;
 			if argument0 == 1
-				_layer.layer_type = 1;
+				_layer.layer_type = layertype.tile;
 			array_push(arr, _layer);
 			dirty = true;
 		}
@@ -123,12 +129,12 @@ function room_layer_item_dirty(argument0)
 			var _name = ""
 			switch b.layer_type
 			{
-				case (1 << 0):
+				case layertype.tile:
 					_name = "Tile "
 					if b.depth < 0
 						_name = "Tile FG "
 					break
-				case (0 << 0):
+				case layertype.background:
 					_name = "Background "
 					if b.depth < 0
 						_name = "Foreground "
@@ -220,12 +226,12 @@ function RoomLayer() constructor
 	{
 		switch layer_type
 		{
-			case (0 << 0):
+			case layertype.background:
 				draw_sprite_repeat(sprite_index, image_index, argument0.x, argument0.y, argument0.width, argument0.height);
 				break;
 		}
 	};
-	layer_type = (0 << 0);
+	layer_type = layertype.background;
 	sprite_index = noone;
 	image_index = 0;
 	depth = 1;
