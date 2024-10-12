@@ -1,10 +1,8 @@
 /*
+	Made for pre-v0.6 UTMT
+	because the Underminers team doesn't care about compatibility
+	
 	Script made by Loy
-	
-	Don't take this and claim it as your own,
-	and please credit me if you'll use this.
-	
-	Feel free to improve this mess though.
 */
 
 using System;
@@ -20,7 +18,6 @@ using Newtonsoft.Json;
 using System.Windows.Forms;
 using System.Drawing;
 using System.Diagnostics;
-using ImageMagick; // thank you new UTMT for complicating things
 
 EnsureDataLoaded();
 const string ERROR_TEXT = "This script is incompatible with Pizza Tower pre-v1.1.1.\nYou can switch to a different OpenTower branch for older versions.\nAlso, don't use this with mods.";
@@ -5179,10 +5176,10 @@ void DumpSprite(UndertaleSprite sprite)
 			string layersPath = rootPath + spritePath + "layers/" + compositeGuid + "/";
 			Directory.CreateDirectory(layersPath);
 			
-			// extract image
+			// extract images
 			if (frame.Texture != null)
 			{
-				IMagickImage<byte> image;
+				Bitmap img;
 				try
 				{
 					// bail if it's SWF or SPINE
@@ -5190,15 +5187,15 @@ void DumpSprite(UndertaleSprite sprite)
 						throw new Exception(); // to get out of the try catch
 					
 					// fetch bitmap image
-					image = worker.GetTextureFor(frame.Texture, compositeGuid + ".png", true);
+					img = worker.GetTextureFor(frame.Texture, compositeGuid + ".png", true);
 				}
 				catch
 				{
 					// give up immediately and make an empty image
-					image = new MagickImage(MagickColor.FromRgba(0, 0, 0, 0), exportedSprite.width, exportedSprite.height);
+					img = new Bitmap(exportedSprite.width, exportedSprite.height);
 				}
-				TextureWorker.SaveImageToFile(image, rootPath + spritePath + compositeGuid + ".png");
-				TextureWorker.SaveImageToFile(image, layersPath + layerGuid + ".png");
+				TextureWorker.SaveImageToFile(rootPath + spritePath + compositeGuid + ".png", img, false);
+				TextureWorker.SaveImageToFile(layersPath + layerGuid + ".png", img);
 			}
 			
 			// add to frames
@@ -5249,11 +5246,10 @@ async Task DumpSprites()
 		if (ignore.Contains(i.Name.Content))
 			continue;
 		
-		SetUMTConsoleText($"({count} / {Data.Sprites.Count}) {i.Name.Content}");
+		SetUMTConsoleText($"({count++} / {Data.Sprites.Count}) {i.Name.Content}");
 		await Task.Delay(1);
 		DumpSprite(i);
 		
-		count++;
 		// I tried a progress bar but it just didn't increment at all for some stupid ass reason
 	}
 }
@@ -5347,7 +5343,7 @@ Directory.CreateDirectory($"{rootPath}extensions\\fmod_gms");
 File.Copy($"{dataPath}fmod-gamemaker.dll", $"{rootPath}extensions\\fmod_gms\\fmod-gamemaker.dll", true);
 
 // cleanup
-worker.Dispose(); // UTMT new
+worker.Cleanup();
 
 // done
 if (File.Exists($"{rootPath}PizzaTower_GM2.yyp"))
