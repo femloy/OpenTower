@@ -50,24 +50,20 @@ with (instance_create_depth(32, 0, depth - 1, obj_itemlist))
     item_height = 48;
     
     on_dirty = function()
-    {
-        var list, i;
-        
+    {       
         dirty = false;
         ds_list_clear(items);
-        list = ds_map_find_value(obj_editor.object_map, value);
+        var list = ds_map_find_value(obj_editor.object_map, value);
         
-        for (i = 0; i < ds_list_size(list); i++)
+        for (var i = 0; i < ds_list_size(list); i++)
             ds_list_add(items, ds_list_find_value(list, i));
     };
     
     on_item_click = function(argument0)
-    {
-        var item;
-        
+    {       
         if (argument0 < ds_list_size(items))
         {
-            item = ds_list_find_value(items, argument0);
+            var item = ds_list_find_value(items, argument0);
             
             with (obj_editor)
             {
@@ -80,24 +76,22 @@ with (instance_create_depth(32, 0, depth - 1, obj_itemlist))
     };
     
     on_item_draw = function(argument0, argument1, argument2)
-    {
-        var spritedisplay, display_w, display_h, _sprw, _sprh, _sprx, _spry, ix, iy, ixy;
-        
+    {       
         if (draw_get_font() != 0)
             draw_set_font(fnt_caption);
         
         draw_set_halign(fa_left);
         draw_set_valign(fa_middle);
-        spritedisplay = asset_get_index(argument2.sprite_index);
-        display_w = 32;
-        display_h = 32;
-        _sprw = sprite_get_width(spritedisplay);
-        _sprh = sprite_get_height(spritedisplay);
-        _sprx = sprite_get_xoffset(spritedisplay);
-        _spry = sprite_get_yoffset(spritedisplay);
-        ix = (_sprw > display_w || _sprh > display_h) ? (display_w / _sprw) : 1;
-        iy = (_sprw > display_w || _sprh > display_h) ? (display_h / _sprh) : 1;
-        ixy = min(ix, iy);
+        var spritedisplay = asset_get_index(argument2.sprite_index);
+        var display_w = 32;
+        var display_h = 32;
+        var _sprw = sprite_get_width(spritedisplay);
+        var _sprh = sprite_get_height(spritedisplay);
+        var _sprx = sprite_get_xoffset(spritedisplay);
+        var _spry = sprite_get_yoffset(spritedisplay);
+        var ix = (_sprw > display_w || _sprh > display_h) ? (display_w / _sprw) : 1;
+        var iy = (_sprw > display_w || _sprh > display_h) ? (display_h / _sprh) : 1;
+        var ixy = min(ix, iy);
         
         if (_sprx == 0)
             _sprx = (display_w / 2) - (_sprw / 2);
