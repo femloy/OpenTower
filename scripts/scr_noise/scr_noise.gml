@@ -1264,7 +1264,7 @@ function scr_noise_finale()
 					substate = states.shotgun;
 					fmod_event_one_shot_3d("event:/sfx/pep/groundpound", obj_player1.x, obj_player1.y);
 					fmod_event_one_shot_3d("event:/sfx/voice/noisepositive", x, y);
-					with (create_debris(obj_noisebosscrate.x, obj_noisebosscrate.y, 3738))
+					with (create_debris(obj_noisebosscrate.x, obj_noisebosscrate.y, spr_doiserock))
 					{
 						vsp = -6;
 						grav = 0.4;
