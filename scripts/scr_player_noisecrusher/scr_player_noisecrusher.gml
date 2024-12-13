@@ -7,7 +7,7 @@ function scr_player_noisecrusher()
 		vsp = 0;
 		movespeed = 0;
 		if (floor(image_index) == image_number - 1)
-			state = 0;
+			state = states.normal;
 		exit;
 	}
 	if vsp > 0

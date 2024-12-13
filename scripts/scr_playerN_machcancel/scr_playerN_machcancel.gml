@@ -140,7 +140,7 @@ function scr_playerN_machcancel()
 	}
 	if grounded && !key_attack && vsp >= 0 && sprite_index == spr_playerN_wallbounce
 	{
-		state = 0;
+		state = states.normal;
 		movespeed = abs(hsp);
 	}
 	if (sprite_index == spr_playerN_divebomb || sprite_index == spr_playerN_divebombland || sprite_index == spr_playerN_divebombfall)
