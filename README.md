@@ -38,3 +38,6 @@ If you want to move to a future GameMaker version you'll need to make some chang
 3. Whenever text is drawn to the screen, offset it by the font's sprite origin, as horrible as that might sound. You can hook into the `draw_text` functions with some macro shenanigans.
 4. Rename the `string_split` function to something else, it's reserved now. CTRL+SHIFT+F to mass replace.
 5. Probably more. I forgot. If you got this far you can figure out the rest anyway.
+
+# Empty GameMaker issue
+If you normally use a newer GameMaker version, opening the old one will lead to the IDE getting stuck in a dark gray screen. To fix this, delete the `%programdata%/GameMakerStudio2` folder while the IDE is closed and then reopen it.
