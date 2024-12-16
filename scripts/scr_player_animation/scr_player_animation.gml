@@ -16,7 +16,7 @@ function scr_player_animation()
 		if actor_buffer > 0
 			actor_buffer--;
 		else
-			state = 0;
+			state = states.normal;
 		exit;
 	}
 	if (instance_exists(obj_pizzahead_whitefade))

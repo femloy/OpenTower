@@ -101,28 +101,27 @@ if brown
 		case states.jump:
 			if brownfade < 1
 				break;
-			else
+			
+			var spd = 20;
+			var yy = (SCREEN_HEIGHT - 62);
+			toppin_y[toppin_index] -= spd;
+			toppin_yscale[toppin_index] = 1.2;
+			if toppin_y[toppin_index] <= yy
 			{
-				var spd = 20;
-				var yy = (SCREEN_HEIGHT - 62);
-				toppin_y[toppin_index] -= spd;
-				toppin_yscale[toppin_index] = 1.2;
-				if toppin_y[toppin_index] <= yy
+				if toppin[toppin_index] == 1
 				{
-					if toppin[toppin_index] == 1
-					{
-						createmoney[toppin_index] = 1;
-						if toppinvisible
-							fmod_event_one_shot_3d("event:/sfx/misc/kashing", (room_width / 2), (room_height / 2));
-					}
+					createmoney[toppin_index] = 1;
 					if toppinvisible
-						fmod_event_one_shot_3d("event:/sfx/misc/toppingot", (room_width / 2), (room_height / 2));
-					toppin_y[toppin_index] = yy;
-					toppin_state = states.transition;
-					brown = 1;
+						fmod_event_one_shot_3d("event:/sfx/misc/kashing", (room_width / 2), (room_height / 2));
 				}
-				break;
+				if toppinvisible
+					fmod_event_one_shot_3d("event:/sfx/misc/toppingot", (room_width / 2), (room_height / 2));
+				toppin_y[toppin_index] = yy;
+				toppin_state = states.transition;
+				brown = 1;
 			}
+			break;
+		
 		case states.transition:
 			toppin_yscale[toppin_index] = Approach(toppin_yscale[toppin_index], 1, 0.1);
 			if toppin_yscale[toppin_index] == 1
@@ -139,5 +138,5 @@ if brown
 			break;
 	}
 }
-if (instance_exists(obj_treasureviewer))
+if instance_exists(obj_treasureviewer)
 	visible = false;

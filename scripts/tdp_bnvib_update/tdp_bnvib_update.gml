@@ -1,4 +1,7 @@
 function tdp_bnvib_update()
 {
-	// switch exclusive code
+	if SWITCH
+	{
+		// switch exclusive code
+	}
 }

@@ -84,7 +84,7 @@ function boss_hurt(damage, player)
 	else
 		targetstunned = 150;
 	SUPER_boss_hurt(damage, player);
-	targetxscale = -argument1.xscale;
+	targetxscale = -player.xscale;
 }
 function boss_hurt_noplayer(damage)
 {

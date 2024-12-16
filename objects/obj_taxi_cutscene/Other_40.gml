@@ -12,7 +12,7 @@ if sprite_index == spr_taximove && pickedup
 		obj_player2.targetRoom = other.targetRoom;
 		obj_player.image_index = 0;
 		obj_player.mach2 = 0;
-		if (instance_exists(obj_player2) && global.coop == 1)
+		if (instance_exists(obj_player2) && global.coop == true)
 		{
 			if object_index == obj_player2
 			{

@@ -1,6 +1,6 @@
 if room == rm_editor
 	exit;
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
+if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
 {
 	if room == tower_finalhallway
 		global.leveltosave = "exit";
@@ -119,7 +119,7 @@ if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
 	instance_create(x, y, obj_baddiegibs);
-	if global.coop == 1
+	if global.coop == true
 	{
 		obj_player1.x = x;
 		obj_player2.x = x;

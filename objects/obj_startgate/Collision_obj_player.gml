@@ -21,7 +21,7 @@ with other
 		obj_player2.backtohubstartx = x;
 		obj_player2.backtohubstarty = y;
 		obj_player2.backtohubroom = room;
-		if global.coop == 1
+		if global.coop == true
 		{
 			with obj_player2
 			{

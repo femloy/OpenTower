@@ -1,1 +1,1 @@
-// macros
+exit;

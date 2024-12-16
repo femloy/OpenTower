@@ -1,6 +1,6 @@
 if start == 1
 {
-	if other.visible == 1
+	if other.visible == true
 	{
 		repeat 8
 			create_particle(x + random_range(50, -50), y + random_range(50, -50), particle.teleporteffect, 0);

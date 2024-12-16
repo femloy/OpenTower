@@ -995,7 +995,7 @@ if (!instance_exists(pizzashieldid) && pizzashield == 1)
 		other.pizzashieldid = id;
 	}
 }
-if visible == 0 && state == states.comingoutdoor
+if visible == false && state == states.comingoutdoor
 {
 	coopdelay++;
 	image_index = 0;
@@ -1005,7 +1005,7 @@ if visible == 0 && state == states.comingoutdoor
 		coopdelay = 0;
 	}
 }
-if global.coop == 1
+if global.coop == true
 {
 	if ((state == states.punch || state == states.handstandjump) && !(obj_player2.state == states.punch || obj_player2.state == states.handstandjump))
 		fightballadvantage = true;
@@ -1070,7 +1070,7 @@ if (state == states.dead && y > (room_height * 2) && !instance_exists(obj_backto
 {
 	targetDoor = "HUB";
 	scr_playerreset();
-	if global.coop == 1
+	if global.coop == true
 	{
 		with obj_player2
 		{

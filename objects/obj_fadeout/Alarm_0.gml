@@ -22,7 +22,7 @@ if (instance_exists(obj_player))
 				}
 			}
 		}
-		if global.coop == 1
+		if global.coop == true
 		{
 			if (room != obj_player2.targetRoom || roomreset)
 				scr_room_goto(obj_player1.targetRoom);

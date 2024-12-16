@@ -1,6 +1,6 @@
 with other
 {
-	if ((state == states.ghost || (state == states.chainsaw && tauntstoredstate == states.ghost)) && other.visible == 1)
+	if ((state == states.ghost || (state == states.chainsaw && tauntstoredstate == states.ghost)) && other.visible == true)
 	{
 		if ispeppino
 			ghostdash = true;

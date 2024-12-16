@@ -19,7 +19,7 @@ for (var i = 0; i < array_length(lvl); i++)
 	var name = lvl[i];
 	
 	secrets += ini_read_real("Secret", name, 0);
-	treasure += ini_read_real("Treasure", name, 0);
+	treasure += ini_read_real("Treasure", name, false);
 	
 	for (var j = 0; j < 5; j++)
 		toppins += ini_read_real("Toppin", concat(name, j + 1), false);

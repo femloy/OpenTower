@@ -30,7 +30,7 @@ else if obj_player1.character == "P"
 		healthold = global.hp;
 	}
 }
-if global.coop == 1
+if global.coop == true
 {
 	var p1 = player;
 	var p2 = (obj_player1.spotlight == 1) ? obj_player2: obj_player1;

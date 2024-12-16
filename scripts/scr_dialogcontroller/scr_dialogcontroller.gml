@@ -58,9 +58,9 @@ function scr_string_width(str)
 			pos = 0;
 			if originalstr == ""
 				break;
-			continue;
 		}
-		pos++;
+		else
+			pos++;
 	}
 	if array_length(str_arr) == 0
 		w = string_width(str);
@@ -85,23 +85,28 @@ function scr_separate_text(str, font, width)
 	{
 		var _pos = _start_pos;
 		var _sep_pos = _pos;
-		
-		for (var len = string_length(str); _pos < len; _pos++)
-		{
-			if scr_is_separation(string_char_at(str, _pos), separation)
-			{
-				var _prev_sep_pos = _sep_pos;
-				_sep_pos = _pos;
-				
-				if scr_string_width(string_copy(str, _start_pos, _pos - _start_pos)) > width - string_width("a")
-				{
-					_sep_pos = _prev_sep_pos;
-					_start_pos = _sep_pos;
-					_pos = _start_pos;
-					break;
-				}
-			}
-		}
+		var len = string_length(str);
+        var found = false;
+        
+        while _pos < len
+        {
+            if scr_is_separation(string_char_at(str, _pos), separation)
+            {
+                var _prev_sep_pos = _sep_pos;
+                _sep_pos = _pos;
+                
+                if scr_string_width(string_copy(str, _start_pos, _pos - _start_pos)) > width - string_width("a")
+                {
+                    _sep_pos = _prev_sep_pos;
+                    _start_pos = _sep_pos;
+                    _pos = _start_pos;
+                    found = true;
+                    break;
+                }
+            }
+            
+            _pos++;
+        }
 		
 		if string_char_at(str, _sep_pos) == " "
 		{

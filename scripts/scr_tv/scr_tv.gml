@@ -76,9 +76,9 @@ function tv_push_prompt_once(prompt_array, prompt_entry)
 		if special_prompts == noone
 			return false;
 		var b = ds_map_find_value(special_prompts, prompt_entry);
-		if (is_undefined(b))
+		if is_undefined(b)
 			return false;
-		if b != true
+		if b != 1
 		{
 			tv_push_prompt(prompt_array[0], prompt_array[1], prompt_array[2], prompt_array[3]);
 			ds_map_set(special_prompts, prompt_entry, 1);

@@ -21,7 +21,7 @@ function scr_player_ejected()
 			global.seconds = 20;
 			obj_camera.ded = false;
 		}
-		if global.coop == 1
+		if global.coop == true
 		{
 			with obj_player2
 			{

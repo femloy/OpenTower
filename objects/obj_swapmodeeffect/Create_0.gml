@@ -30,7 +30,7 @@ else
 buffer = 20;
 speedx = abs(playerx - dest_x) / buffer;
 speedy = abs(playery - dest_y) / buffer;
-sprite = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), false, false, 0, 0);
+sprite = sprite_create_from_surface(application_surface, 0, 0, surface_get_width(application_surface), surface_get_height(application_surface), 0, false, 0, 0);
 playersprite = spr_player_airdash2;
 playerindex = 0;
 ispeppino = obj_player1.ispeppino;

@@ -1,2 +1,2 @@
-if state != states.normal
-	instance_destroy()
+if state != 0
+	instance_destroy();

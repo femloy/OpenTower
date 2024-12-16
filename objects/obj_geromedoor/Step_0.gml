@@ -11,7 +11,7 @@ else if uparrow
 	uparrow = false;
 	instance_destroy(uparrowID);
 }
-if (!global.horse && (obj_player1.state == states.normal || obj_player1.state == states.mach1 || obj_player1.state == states.pogo || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.Sjumpprep) && obj_player1.key_up && obj_player1.grounded && (global.gerome == 1 || image_index == 1) && place_meeting(x, y, obj_player1))
+if (!global.horse && (obj_player1.state == states.normal || obj_player1.state == states.mach1 || obj_player1.state == states.pogo || obj_player1.state == states.mach2 || obj_player1.state == states.mach3 || obj_player1.state == states.Sjumpprep) && obj_player1.key_up && obj_player1.grounded && (global.gerome == true || image_index == 1) && place_meeting(x, y, obj_player1))
 {
 	ds_list_add(global.saveroom, id);
 	fmod_event_one_shot_3d("event:/sfx/misc/keyunlock", x, y);
@@ -33,7 +33,7 @@ if (!global.horse && (obj_player1.state == states.normal || obj_player1.state ==
 		}
 		obj_player1.state = states.victory;
 		obj_player1.image_index = 0;
-		if (instance_exists(obj_player2) && global.coop == 1)
+		if (instance_exists(obj_player2) && global.coop == true)
 		{
 			obj_player2.x = obj_player1.x;
 			obj_player2.y = obj_player1.y;
@@ -41,8 +41,12 @@ if (!global.horse && (obj_player1.state == states.normal || obj_player1.state ==
 			obj_player2.image_index = 0;
 		}
 		global.gerome = false;
-		image_index = 1;
 	}
+	else
+	{
+		
+	}
+	image_index = 1;
 }
 if (place_meeting(x, y, obj_player1) && floor(obj_player1.image_index) == (obj_player1.image_number - 1) && (obj_player1.state == states.victory || obj_player1.state == states.door))
 {
@@ -50,7 +54,7 @@ if (place_meeting(x, y, obj_player1) && floor(obj_player1.image_index) == (obj_p
 	{
 		obj_player1.targetDoor = other.targetDoor;
 		obj_player1.targetRoom = other.targetRoom;
-		if (instance_exists(obj_player2) && global.coop == 1)
+		if (instance_exists(obj_player2) && global.coop == true)
 		{
 			obj_player2.targetDoor = other.targetDoor;
 			obj_player2.targetRoom = other.targetRoom;

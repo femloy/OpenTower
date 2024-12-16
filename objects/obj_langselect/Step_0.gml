@@ -1,3 +1,9 @@
+if !instance_exists(obj_option)
+{
+    instance_destroy();
+    exit;
+}
+
 scr_menu_getinput();
 if startbuffer > 0
     startbuffer--;
@@ -27,6 +33,10 @@ if (key_jump || key_back) && startbuffer <= 0
         ini_open_from_string(obj_savesystem.ini_str_options);
         global.offload_lang = global.option_lang;
         global.option_lang = lang[select].ID;
+		
+		if global.option_lang == "en" && room == Mainmenu
+            global.gameframe_caption_text = lang_get_value_raw("en", "caption_mainmenu");
+		
         if global.option_lang != global.offload_lang
         {
             ini_write_string("Option", "lang", global.option_lang);

@@ -7,73 +7,73 @@ switch state
 	case states.walk:
 		if state == states.pizzagoblinthrow
 			break;
+		
+		if substate_buffer > 0
+			substate_buffer--;
 		else
 		{
-			if substate_buffer > 0
-				substate_buffer--;
-			else
+			substate_buffer = substate_max;
+			var old_substate = substate;
+			while substate == old_substate
+				substate = choose(states.walk, states.idle, states.turn);
+			if substate == states.turn && state == states.pizzagoblinthrow
+				substate = states.walk;
+			if substate == states.walk
+				image_xscale = choose(-1, 1);
+			else if substate == states.turn
 			{
-				substate_buffer = substate_max;
-				var old_substate = substate;
-				while substate == old_substate
-					substate = choose(states.walk, states.idle, states.turn);
-				if substate == states.turn && state == states.pizzagoblinthrow
-					substate = states.walk;
-				if substate == states.walk
-					image_xscale = choose(-1, 1);
-				else if substate == states.turn
-				{
-					sprite_index = spr_pizzaslug_turn;
-					image_index = 0;
-					hsp = 0;
-				}
+				sprite_index = spr_pizzaslug_turn;
+				image_index = 0;
+				hsp = 0;
 			}
-			switch substate
-			{
-				case states.walk:
-					image_speed = 0.35;
-					if sprite_index != spr_pizzaslug_walk
-					{
-						image_index = 0;
-						sprite_index = spr_pizzaslug_walk;
-					}
-					if place_meeting(x, y, obj_solid)
-						y--;
-					scr_enemy_walk();
-					break;
-				
-				case states.idle:
-					image_speed = 0.35;
-					hsp = 0;
-					sprite_index = spr_pizzaslug_idle;
-					break;
-				
-				case states.turn:
-					image_speed = 0.35;
-					substate_buffer = 5;
-					if sprite_index != spr_pizzaslug_turn
-					{
-						image_index = 0;
-						sprite_index = spr_pizzaslug_turn;
-					}
-					if (sprite_index == spr_pizzaslug_turn && floor(image_index) == image_number - 1)
-					{
-						image_xscale *= -1;
-						substate_buffer = substate_max;
-						substate = states.idle;
-						sprite_index = spr_pizzaslug_idle;
-					}
-					break;
-				
-				case states.pizzagoblinthrow:
-					state = states.pizzagoblinthrow;
-					substate_buffer = 0;
-					image_index = 0;
-					sprite_index = spr_pizzaslug_cough;
-					break;
-			}
-			break
 		}
+		
+		switch substate
+		{
+			case states.walk:
+				image_speed = 0.35;
+				if sprite_index != spr_pizzaslug_walk
+				{
+					image_index = 0;
+					sprite_index = spr_pizzaslug_walk;
+				}
+				if place_meeting(x, y, obj_solid)
+					y--;
+				scr_enemy_walk();
+				break;
+				
+			case states.idle:
+				image_speed = 0.35;
+				hsp = 0;
+				sprite_index = spr_pizzaslug_idle;
+				break;
+				
+			case states.turn:
+				image_speed = 0.35;
+				substate_buffer = 5;
+				if sprite_index != spr_pizzaslug_turn
+				{
+					image_index = 0;
+					sprite_index = spr_pizzaslug_turn;
+				}
+				if (sprite_index == spr_pizzaslug_turn && floor(image_index) == image_number - 1)
+				{
+					image_xscale *= -1;
+					substate_buffer = substate_max;
+					substate = states.idle;
+					sprite_index = spr_pizzaslug_idle;
+				}
+				break;
+				
+			case states.pizzagoblinthrow:
+				state = states.pizzagoblinthrow;
+				substate_buffer = 0;
+				image_index = 0;
+				sprite_index = spr_pizzaslug_cough;
+				break;
+		}
+		break;
+		
 	case states.idle:
 		scr_enemy_idle();
 		break;

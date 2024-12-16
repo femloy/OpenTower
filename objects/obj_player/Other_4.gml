@@ -59,14 +59,14 @@ if global.levelcomplete
 	global.leveltosave = -4;
 	global.startgate = false;
 }
-if (state == states.comingoutdoor && global.coop == 1 && !place_meeting(x, y, obj_exitgate))
+if (state == states.comingoutdoor && global.coop == true && !place_meeting(x, y, obj_exitgate))
 {
 	if object_index == obj_player1 && obj_player1.spotlight == 0
 		visible = false;
 	if object_index == obj_player2 && obj_player1.spotlight == 1
 		visible = false;
 }
-if global.coop == 1
+if global.coop == true
 {
 	scr_changetoppings();
 	if (!instance_exists(obj_cooppointer))
@@ -82,7 +82,7 @@ if (place_meeting(x, y, obj_boxofpizza) || place_meeting(x, y - 1, obj_boxofpizz
 	hallway = false;
 	state = states.crouch;
 }
-if (object_index != obj_player2 || global.coop == 1)
+if (object_index != obj_player2 || global.coop == true)
 {
 	if (targetDoor == "A" && instance_exists(obj_doorA))
 	{

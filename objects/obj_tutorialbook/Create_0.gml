@@ -27,6 +27,7 @@ bubble_spr = spr_tutorialbubble;
 text_color = 0;
 surfclip = -4;
 surffinal = -4;
+font = -4;
 showgranny = true;
 change_y = true;
 alarm[0] = 1;

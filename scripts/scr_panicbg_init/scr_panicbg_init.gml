@@ -17,3 +17,4 @@ function scr_panicbg_init()
 	layer_script_end(top_id, scr_panicbg_end)
 }
 */
+exit;

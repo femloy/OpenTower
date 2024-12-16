@@ -1,4 +1,4 @@
-if (instance_exists(baddieID) && other.target == baddieID && baddieID.invtime == 0 && baddieID.state != 4 && !baddieID.invincible && baddieID.instantkillable)
+if (instance_exists(baddieID) && other.target == baddieID && baddieID.invtime == 0 && baddieID.state != states.grabbed && !baddieID.invincible && baddieID.instantkillable)
 {
 	baddieID.invtime = 15;
 	fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);

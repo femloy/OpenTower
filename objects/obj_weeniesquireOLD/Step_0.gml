@@ -1,10 +1,10 @@
 if room == rm_editor
 	exit;
-if charge == 1 && grounded == 1
+if charge == 1 && grounded == true
 	hsp = image_xscale * movespeed;
-else if stun == 1 && grounded == 0
+else if stun == 1 && grounded == false
 	hsp = -image_xscale * movespeed;
-else if stun == 1 && grounded == 1
+else if stun == 1 && grounded == true
 	hsp = 0;
 if stun == 0 && chargebuffer > 0
 	chargebuffer--;

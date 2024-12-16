@@ -8,7 +8,7 @@ if playerid.state != states.backbreaker
 }
 else
 	sprite_index = spr_pose;
-if (sprite_index == spr_run && scr_solid(x, y + 1) && visible == 1)
+if (sprite_index == spr_run && scr_solid(x, y + 1) && visible == true)
 	steppy--;
 if steppy == 0
 {

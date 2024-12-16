@@ -13,16 +13,16 @@ function tdp_text_commit(x, y, w, h, gui = true)
 			var action = ds_queue_dequeue(global.tdp_text_queue);
 			switch action.type
 			{
-				case 0:
+				case tdp_text.halign:
 					draw_set_halign(action.value);
 					break;
-				case 1:
+				case tdp_text.valign:
 					draw_set_valign(action.value);
 					break;
-				case 3:
+				case tdp_text.font:
 					draw_set_font(action.value);
 					break;
-				case 2:
+				case tdp_text.text:
 					draw_text_color(action.x - x, action.y - y, action.text, action.c1, action.c2, action.c3, action.c4, action.image_alpha);
 					break;
 			}

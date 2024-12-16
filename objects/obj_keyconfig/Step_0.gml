@@ -53,7 +53,7 @@ if !selecting
 		obj_savesystem.ini_str = ini_close();
 	}
 	key_select = clamp(key_select, -1, array_length(input) - 1);
-	if (((key_jump || key_back) && key_select <= -1) || (key_select > -1 && key_back))
+	if ((key_jump || key_back) && key_select <= -1) || (key_select > -1 && key_back)
 	{
 		var _found = false;
 		for (var i = 0; i < array_length(input); i++)
@@ -63,7 +63,7 @@ if !selecting
 			{
 				if controller
 					_v = concat(_v, "C");
-				if (!is_undefined(tdp_input_get(_v)) && tdp_input_get(_v).actions != -4 && array_length(tdp_input_get(_v).actions) <= 0)
+				if !is_undefined(tdp_input_get(_v)) && tdp_input_get(_v).actions != -4 && array_length(tdp_input_get(_v).actions) <= 0
 					_found = true;
 			}
 		}
@@ -79,9 +79,9 @@ if !selecting
 				tdp_input_ini_write(_v);
 			}
 			obj_savesystem.ini_str_options = ini_close();
-			if (instance_exists(obj_option))
+			if instance_exists(obj_option)
 				obj_option.backbuffer = 2;
-			with (create_transformation_tip(lang_get_value("option_controls_saved")))
+			with create_transformation_tip(lang_get_value("option_controls_saved"))
 			{
 				depth = -700;
 				alarm[1] = 100;
@@ -117,20 +117,20 @@ if !selecting
 }
 else if !controller
 {
-	if (keyboard_check_pressed(vk_anykey))
+	if keyboard_check_pressed(vk_anykey)
 	{
 		if keyboard_key != vk_f1
 		{
-			if (!menu || scr_check_menu_repeats(input[key_select][0], keyboard_key, false))
+			if !menu || scr_check_menu_repeats(input[key_select][0], keyboard_key, false)
 			{
 				startbuffer = 5;
 				addbuffer = 5;
 				var in = tdp_input_get(input[key_select][0]);
-				if (!in.has_value(tdp_input.keyboard, keyboard_key))
-					array_push(in.actions, new tdp_input_action(0, keyboard_key));
+				if !in.has_value(tdp_input.keyboard, keyboard_key)
+					array_push(in.actions, new tdp_input_action(tdp_input.keyboard, keyboard_key));
 				selecting = false;
 			}
-			else if (input[key_select][0] != "menu_select" || !tdp_input_get(input[key_select][0]).is_empty())
+			else if input[key_select][0] != "menu_select" || !tdp_input_get(input[key_select][0]).is_empty()
 			{
 				startbuffer = 5;
 				addbuffer = 5;
@@ -141,34 +141,35 @@ else if !controller
 }
 else
 {
-	if (!debug && keyboard_check_pressed(vk_anykey))
+	if WINDOWS && keyboard_check_pressed(vk_anykey)
 	{
-		// "if true" probably not debug
 		startbuffer = 5;
 		addbuffer = 5;
 		selecting = false;
 		exit;
 	}
-	var val = scr_checkanygamepad(obj_inputAssigner.player_input_device[0]);
+	
+	var val = scr_checkanygamepad(obj_inputAssigner.player_input_device[obj_inputAssigner.player_index]);
 	if val == -4
-		val = scr_check_joysticks(obj_inputAssigner.player_input_device[0]);
+		val = scr_check_joysticks(obj_inputAssigner.player_input_device[obj_inputAssigner.player_index]);
+	
 	if val != -4 && val != gp_select
 	{
-		if (!menu || scr_check_menu_repeats(input[key_select][0], val, true))
+		if !menu || scr_check_menu_repeats(input[key_select][0], val, true)
 		{
 			startbuffer = 5;
 			addbuffer = 5;
 			in = tdp_input_get(concat(input[key_select][0], "C"));
-			if (!is_array(val))
+			if !is_array(val)
 			{
-				if (!in.has_value(tdp_input.gamepad, val))
+				if !in.has_value(tdp_input.gamepad, val)
 					array_push(in.actions, new tdp_input_action(tdp_input.gamepad, val));
 			}
-			else if (!in.has_value(tdp_input.joystick, val[0], val[1]))
+			else if !in.has_value(tdp_input.joystick, val[0], val[1])
 				array_push(in.actions, new tdp_input_action(tdp_input.joystick, val[0], val[1]));
 			selecting = false;
 		}
-		else if (input[key_select][0] != "menu_select" || !tdp_input_get(concat(input[key_select][0], "C")).is_empty())
+		else if input[key_select][0] != "menu_select" || !tdp_input_get(concat(input[key_select][0], "C")).is_empty()
 		{
 			startbuffer = 5;
 			addbuffer = 5;

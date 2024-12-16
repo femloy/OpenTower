@@ -15,10 +15,12 @@ function Approach(a, b, amount)
 	}
 	return a;
 }
+
 function get_milliseconds()
 {
 	return get_timer() / 1000;
 }
+
 function camera_zoom(zoom, speed)
 {
 	with obj_camera
@@ -29,54 +31,65 @@ function camera_zoom(zoom, speed)
 			zoomspd = abs(speed);
 	}
 }
+
 function camera_set_zoom(target_zoom)
 {
 	with obj_camera
 		zoom = target_zoom;
 }
+
 function try_solid(xoffset, yoffset, object, iterations)
 {
 	var old_x = x;
 	var old_y = y;
 	var n = -1;
+	
 	for (var i = 0; i < iterations; i++)
 	{
 		x += xoffset;
 		y += yoffset;
-		if (!scr_solid(x, y))
+		
+		if !scr_solid(x, y)
 		{
 			n = i + 1;
 			break;
 		}
 	}
+	
 	x = old_x;
 	y = old_y;
 	return n;
 }
-function ledge_bump_vertical()
+
+function ledge_bump_vertical(iterations, step)
 {
 	var old_x = x;
 	var old_y = y;
-	y += (argument1 * 4);
+	y += step * 4;
+	
 	var dirs = [-1, 1];
 	for (var i = 0; i < array_length(dirs); i++)
 	{
 		var ledge_dir = dirs[i];
-		var tx = try_solid(ledge_dir, 0, obj_solid, argument0);
+		var tx = try_solid(ledge_dir, 0, obj_solid, iterations);
 		y = old_y;
+		
 		if tx != -1
 		{
 			x -= (tx * ledge_dir);
-			y += argument1;
-			if (scr_solid(x, y))
+			y += step;
+			
+			if scr_solid(x, y)
 			{
 				x = old_x;
 				y = old_y;
 				return true;
 			}
+			
 			return false;
 		}
 	}
+	
 	return true;
 }
 function ledge_bump(iterations, offset = 4)

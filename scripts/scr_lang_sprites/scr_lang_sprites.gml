@@ -81,9 +81,9 @@ function lang_get_frame(sprite_struct, frame)
 	if sprite_struct == noone || array_length(sprite_struct.frames) == 0
 		return noone;
 	
-	if frame > array_length(sprite_struct.frames) - 1
-		frame -= array_length(sprite_struct.frames) - 1;
 	frame = floor(frame);
+	frame %= array_length(sprite_struct.frames);
+	
 	if frame < 0
 		frame = 0;
 	if frame > array_length(sprite_struct.frames) - 1

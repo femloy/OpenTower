@@ -1,4 +1,4 @@
-if (instance_exists(obj_pizzafaceboss_p3intro) || instance_exists(obj_blackoutline) || instance_exists(obj_pizzahead_finalecutsceneN))
+if instance_exists(obj_pizzafaceboss_p3intro) || instance_exists(obj_blackoutline) || instance_exists(obj_pizzahead_finalecutsceneN)
 	exit;
 if image_alpha <= 0
 	exit;
@@ -114,25 +114,25 @@ switch state
 						y += vsp;
 						if vsp < 20
 							vsp += 0.5;
-						if (y > (SCREEN_HEIGHT + sprite_get_height(sprite_index)))
+						
+						if y > SCREEN_HEIGHT + sprite_get_height(sprite_index)
 							ds_list_delete(other.particlelist, i--);
 						else
-						{
-							if palettetexture != -4
-								pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, palettetexture);
-							pal_swap_set(spr_palette, paletteselect, false);
-							draw_sprite(sprite_index, image_index, x, y);
 							continue;
-						}
+						
+						if palettetexture != -4
+							pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, palettetexture);
+						pal_swap_set(spr_palette, paletteselect, false);
+						draw_sprite(sprite_index, image_index, x, y);
 					}
 					else if type == 1
 					{
-						if (image_index > sprite_get_number(sprite_index) - 1)
+						if image_index > sprite_get_number(sprite_index) - 1
 							ds_list_delete(other.particlelist, i--);
 						else
 						{
 							image_index += image_speed;
-							pal_swap_set(spr_palette, paletteselect, 0);
+							pal_swap_set(spr_palette, paletteselect, false);
 							draw_sprite(sprite_index, image_index, x, y);
 						}
 					}

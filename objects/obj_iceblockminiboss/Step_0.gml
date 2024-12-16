@@ -1,4 +1,4 @@
-if visible == 1 && obj_player.state != states.ejected
+if visible == true && obj_player.state != states.ejected
 {
 	if (place_meeting(x, y - 1, obj_player1))
 	{
@@ -31,7 +31,7 @@ if visible == 1 && obj_player.state != states.ejected
 		}
 	}
 }
-if visible == 0 && global.boxhp <= 5
+if visible == false && global.boxhp <= 5
 {
 	x = xstart;
 	y = ystart;

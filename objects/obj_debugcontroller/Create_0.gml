@@ -385,21 +385,21 @@ if DEBUG
 			var c = FindCommand(commands[0]);
 			if c != undefined
 			{
-				TextList_Add(1, text);
+				TextList_Add(debug_text_type.command, text);
 				array_delete(commands, 0, 1);
 				c.Invoke(commands);
 				return true;
 			}
 			else
 			{
-				TextList_Add(0, text);
-				TextList_Add(3, "Invalid command");
+				TextList_Add(debug_text_type.normal, text);
+				TextList_Add(debug_text_type.error, "Invalid command");
 			}
 		}
 		else
 		{
-			TextList_Add(0, text);
-			TextList_Add(3, "No text typed");
+			TextList_Add(debug_text_type.normal, text);
+			TextList_Add(debug_text_type.error, "No text typed");
 		}
 		return false;
 	}

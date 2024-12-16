@@ -1,8 +1,9 @@
-if (instance_number(obj_monstertrackingrooms) > 1)
+if instance_number(obj_monstertrackingrooms) > 1
 {
 	instance_destroy();
 	exit;
 }
+
 global.monsterlives_max = 3;
 global.monsterlives = global.monsterlives_max;
 global.monsterspeed = 0;
@@ -75,16 +76,16 @@ effect_max = 1800;
 player_posX = ds_grid_value_x(room_grid, 0, 0, map_width - 1, map_height - 1, room_get_name(room));
 player_posY = ds_grid_value_y(room_grid, 0, 0, map_width - 1, map_height - 1, room_get_name(room));
 
-function robot_create(argument0, argument1)
+function robot_create(_triggered, _fake)
 {
-	if (!instance_exists(obj_robotmonster))
+	if !instance_exists(obj_robotmonster)
 	{
 		var _inst = instance_create(x, y, obj_robotmonster);
 		var _dir = monster_dir[0];
 		with _inst
 		{
-			fake = argument1;
-			if argument0
+			fake = _fake;
+			if _triggered
 			{
 				var _hinst = -4;
 				with obj_hallwaymonster
@@ -124,7 +125,7 @@ function robot_create(argument0, argument1)
 		}
 	}
 }
-function blob_create(argument0, argument1)
+function blob_create(_triggered, _fake)
 {
 	if (!instance_exists(obj_blobmonster))
 	{
@@ -132,8 +133,8 @@ function blob_create(argument0, argument1)
 		var _dir = monster_dir[1];
 		with _inst
 		{
-			fake = argument1;
-			if argument0
+			fake = _fake;
+			if _triggered
 			{
 				var _hinst = -4;
 				with obj_hallwaymonster
@@ -181,20 +182,20 @@ function blob_create(argument0, argument1)
 		}
 	}
 }
-function puppet_create()
+function puppet_create(_triggered, _fake)
 {
 	instance_create_unique(0, 0, obj_puppetmonster);
 }
-function hillbilly_create(argument0, argument1)
+function hillbilly_create(_triggered, _fake)
 {
-	if (!instance_exists(obj_hillbillymonster))
+	if !instance_exists(obj_hillbillymonster)
 	{
 		var _inst = instance_create(x, y, obj_hillbillymonster);
 		var _dir = monster_dir[3];
 		with _inst
 		{
-			fake = argument1;
-			if argument0
+			fake = _fake;
+			if _triggered
 			{
 				var _hinst = -4;
 				with obj_hallwaymonster
@@ -234,23 +235,23 @@ function hillbilly_create(argument0, argument1)
 		}
 	}
 }
-function grid_meeting(argument0, argument1)
+function grid_meeting(xx, yy)
 {
-	if (argument0 < 0 || argument0 > (map_width - 1) || argument1 < 0 || argument1 > (map_height - 1))
+	if xx < 0 || xx > (map_width - 1) || yy < 0 || yy > (map_height - 1)
 		return false;
-	if (ds_grid_get(room_grid, argument0, argument1) != -4)
+	if ds_grid_get(room_grid, xx, yy) != -4
 		return true;
 	return false;
 }
-function grid_length_x(argument0, argument1, argument2)
+function grid_length_x(xx, yy, len)
 {
-	for (var count = 0; grid_meeting(argument0 + argument2, argument1); argument0 += argument2)
+	for (var count = 0; grid_meeting(xx + len, yy); xx += len)
 		count++;
 	return count;
 }
-function room_place(argument0, argument1)
+function room_place(xx, yy)
 {
-	if (argument0 < 0 || argument0 > (map_width - 1) || argument1 < 0 || argument1 > (map_height - 1))
+	if xx < 0 || xx > (map_width - 1) || yy < 0 || yy > (map_height - 1)
 		return noone;
-	return ds_grid_get(room_grid, argument0, argument1);
+	return ds_grid_get(room_grid, xx, yy);
 }

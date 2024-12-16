@@ -22,27 +22,27 @@ if global.miniboss == 1 && sprite_index != spr_noisebomb_intro
 	else
 		sprite_index = spr_noisebomb_idle;
 	depth = -6;
-	if global.pineapplefollow == 1
+	if global.pineapplefollow == true
 	{
 		ds_queue_enqueue(followQueue, obj_pizzakinpineapple.x + (image_xscale * 4));
 		ds_queue_enqueue(followQueue, obj_pizzakinpineapple.y - 2);
 	}
-	else if global.sausagefollow == 1
+	else if global.sausagefollow == true
 	{
 		ds_queue_enqueue(followQueue, obj_pizzakinsausage.x + (image_xscale * 4));
 		ds_queue_enqueue(followQueue, obj_pizzakinsausage.y - 2);
 	}
-	else if global.tomatofollow == 1
+	else if global.tomatofollow == true
 	{
 		ds_queue_enqueue(followQueue, obj_pizzakintomato.x + (image_xscale * 4));
 		ds_queue_enqueue(followQueue, obj_pizzakintomato.y - 2);
 	}
-	else if global.cheesefollow == 1
+	else if global.cheesefollow == true
 	{
 		ds_queue_enqueue(followQueue, obj_pizzakincheese.x + (image_xscale * 4));
 		ds_queue_enqueue(followQueue, obj_pizzakincheese.y - 2);
 	}
-	else if global.shroomfollow == 1
+	else if global.shroomfollow == true
 	{
 		ds_queue_enqueue(followQueue, obj_pizzakinshroom.x + (image_xscale * 4));
 		ds_queue_enqueue(followQueue, obj_pizzakinshroom.y - 2);

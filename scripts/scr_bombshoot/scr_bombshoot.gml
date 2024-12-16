@@ -20,7 +20,7 @@ function scr_bombshoot(_state)
 		bombthrow = false;
 		jumpstop = true;
 		if (_state == states.mach2 || _state == states.mach3)
-			state = 0;
+			state = states.normal;
 	}
 }
 function scr_bomb_do_boss_phase2(boss_inst)

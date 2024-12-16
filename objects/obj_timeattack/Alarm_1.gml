@@ -1,4 +1,4 @@
-if (global.timeattack == 1 && stop == 0 && !instance_exists(obj_ghostcollectibles))
+if (global.timeattack == true && stop == 0 && !instance_exists(obj_ghostcollectibles))
 {
 	global.taseconds += 1;
 	if (global.collect >= 5 && !instance_exists(obj_ghostcollectibles))

@@ -1,5 +1,5 @@
 alarm[0] = 2;
-if state == states.normal
+if state == 0
 {
 	with create_blur_afterimage(x, y, sprite_index, image_index - 1)
 	{

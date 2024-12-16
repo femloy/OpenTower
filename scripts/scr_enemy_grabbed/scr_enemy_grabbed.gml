@@ -146,13 +146,16 @@ function scr_enemy_grabbed()
 		if (_obj_player.state == states.finishingblow && (floor(_obj_player.image_index) >= 4 || (floor(_obj_player.image_index) < 1 && _obj_player.sprite_index == _obj_player.spr_swingdingend)))
 		{
 			thrown = true;
+			
 			if heavy
 				var lag = 15;
 			else
 				lag = 5;
+			
 			hitLag = lag;
 			hitX = x;
 			hitY = y;
+			
 			if object_index != obj_noisey && object_index != obj_tank
 			{
 				
@@ -161,20 +164,29 @@ function scr_enemy_grabbed()
 			{
 				
 			}
+			
 			_obj_player.movespeed = 0;
 			_obj_player.hitLag = lag;
 			_obj_player.hitX = _obj_player.x;
 			_obj_player.hitY = _obj_player.y;
 			instance_create(x, y, obj_parryeffect);
 			alarm[3] = 1;
+			
 			if object_index != obj_swapplayergrabbable
 				global.combotime = 60;
+			
 			global.heattime = 60;
+			
 			if !important
 				global.style += (5 + global.combo);
+			
 			GamepadSetVibration(_obj_player.object_index == obj_player1 ? 0 : 1, 0.8, 0.8, 0.65);
 			fmod_event_one_shot_3d("event:/sfx/enemies/killingblow", x, y);
 			fmod_event_one_shot_3d("event:/sfx/pep/punch", x, y);
+			
+			if !_obj_player.ispeppino
+                scr_fmod_soundeffect(_obj_player.snd_noisepunch, x, y);
+			
 			state = states.stun;
 			image_xscale = -_obj_player.xscale;
 			instance_create(x, y, obj_slapstar);
@@ -183,11 +195,13 @@ function scr_enemy_grabbed()
 			instance_create(x, y, obj_baddiegibs);
 			instance_create(x, y, obj_baddiegibs);
 			instance_create(x, y, obj_baddiegibs);
+			
 			with obj_camera
 			{
 				shake_mag = 3;
 				shake_mag_acc = 3 / room_speed;
 			}
+			
 			with _obj_player
 			{
 				if sprite_index == spr_uppercutfinishingblow
@@ -204,11 +218,13 @@ function scr_enemy_grabbed()
 				}
 				vsp = -6;
 			}
+			
 			if _obj_player.sprite_index != spr_playerN_piledriver
 			{
 				check_grabbed_solid(_obj_player);
 				check_grabbed_solid(_obj_player);
 			}
+			
 			hsp = hithsp;
 			vsp = hitvsp;
 			linethrown = true;

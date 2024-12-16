@@ -1,4 +1,4 @@
-if playerid.visible == 0
+if playerid.visible == false
 {
 	jumpbuffer = 15;
 	start = true;
@@ -17,7 +17,7 @@ if playerid.visible == 0
 		ratmount_movespeed = 0;
 		cutscene = false;
 	}
-	if global.coop == 1
+	if global.coop == true
 	{
 		with obj_player2
 		{

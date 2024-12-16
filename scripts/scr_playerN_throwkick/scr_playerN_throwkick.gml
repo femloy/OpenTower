@@ -21,7 +21,7 @@ function scr_playerN_throwkick()
 	}
 	image_speed = 0.35;
 	if floor(image_index) == image_number - 1
-		state = 0;
+		state = states.normal;
 	if punch_afterimage > 0
 		punch_afterimage--;
 	else

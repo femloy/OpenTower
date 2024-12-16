@@ -25,7 +25,7 @@ shader_set(global.Pal_Shader);
 pal_swap_set(spr_tv_combofillpalette, (!global.combodropped && global.prank_enemykilled) ? 2 : 1, false);
 draw_sprite(spr_tv_combobubblefill, combofill_index, combofill_x, combofill_y);
 pal_swap_set(spr_tv_combopalette, (obj_player1.ispeppino && !global.swapmode) ? 0 : 1, false);
-lang_draw_sprite(spr_tv_combobubble, -1, _cx, _cy);
+lang_draw_sprite(spr_tv_combobubble, 0, _cx, _cy);
 
 draw_set_font(global.combofont2);
 draw_set_halign(fa_left);

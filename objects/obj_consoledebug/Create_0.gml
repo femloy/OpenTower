@@ -3,7 +3,7 @@ if !debug
 	instance_destroy()
 	exit;
 }
-if (!instance_exists(obj_debugcontroller) && !obj_debugcontroller.DEBUG)
+if !instance_exists(obj_debugcontroller) && !obj_debugcontroller.DEBUG
 {
 	instance_destroy();
 	exit;
@@ -53,7 +53,7 @@ create_command("ROOM GOTO", [rooms, ["A", "B", "C", "D", "E", "F", "G"]], functi
 		lastroom = room;
 		targetRoom = _room;
 	}
-	if (!instance_exists(obj_fadeout))
+	if !instance_exists(obj_fadeout)
 		instance_create(0, 0, obj_fadeout);
 });
 create_command("UNLOCK WORLD", [[1, 2, 3, 4, 5]], function(_world)
@@ -87,5 +87,30 @@ create_command("SWITCH CHAR", [["NOISE", "PEP"]], function(_char)
 		scr_characterspr();
 	}
 });
+create_command("TEST PANIC", [], function(_unused)
+{
+    global.panic = true;
+    global.fill = 4000;
+    
+    with obj_camera
+        alarm[1] = 60;
+    with obj_tv
+        chunkmax = global.fill;
+});
+create_command("TEST PIZZAFACE", [], function(_unused)
+{
+    global.panic = true;
+    global.fill = 100;
+    
+    with obj_camera
+        alarm[1] = 60;
+    with obj_tv
+        chunkmax = global.fill;
+});
+create_command("ROOMCHECK", [], function(_unused)
+{
+    instance_create_unique(0, 0, obj_roomcheck);
+});
+
 selected = 0;
 arg_select = 0;

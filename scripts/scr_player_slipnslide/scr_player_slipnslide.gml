@@ -56,7 +56,7 @@ function scr_player_slipnslide()
 			}
 			else
 			{
-				state = 0;
+				state = states.normal;
 				if key_attack
 				{
 					state = states.mach2;

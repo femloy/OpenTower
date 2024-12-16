@@ -1,4 +1,7 @@
-function tdp_bnvib_load(unknown_1, unknown_2, unknown_3 = true)
+function tdp_bnvib_load(unknown_1, unknown_2, unknown_3 = 1)
 {
-	// switch exclusive code
+	if SWITCH
+	{
+		// switch exclusive code
+	}
 }

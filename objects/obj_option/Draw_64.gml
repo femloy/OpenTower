@@ -25,7 +25,7 @@ var yy = (SCREEN_HEIGHT / 2) - (size / 4);
 
 switch m.anchor
 {
-	case anchor.center:
+	case menu_anchor.center:
 		tdp_draw_set_halign(fa_center);
 		tdp_draw_set_valign(fa_top);
 		var c = c_white;
@@ -38,12 +38,12 @@ switch m.anchor
 				c = c_white;
 			var t = menu_lang_value(o.name);
 			menu_draw_text(xx, yy + (m.ypad * i), t, c, a);
-			if menu == menus.options
+			if menu == menu_pages.options
 				scr_pauseicon_draw(i, xx + (string_width(t) / 2) + 50, yy + (m.ypad * i) + (string_height(t) / 2));
 		}
 		break;
 	
-	case anchor.left:
+	case menu_anchor.left:
 		tdp_draw_set_halign(fa_left);
 		tdp_draw_set_valign(fa_top);
 		xx = m.xpad;
@@ -87,7 +87,7 @@ switch m.anchor
 					var y2 = y1 + h;
 					
 					var spr = spr_slidericon;
-					if menu != menus.audio
+					if menu != menu_pages.audio
 						spr = spr_slidericon2;
 					
 					draw_set_alpha(a);

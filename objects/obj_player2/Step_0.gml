@@ -1,6 +1,6 @@
 if room == rm_editor
 {
-	visible = 0;
+	visible = false;
 	exit;
 }
 visible = false;

@@ -2,6 +2,7 @@ player_input_device[0] = -2;
 player_input_device[1] = -2;
 
 switch_input_buffer = 0;
+switch_operation_mode = switch_get_operation_mode();
 switch_swap_ready_buffer = 0;
 swap_cancelled = false;
 switch_mode = 0;

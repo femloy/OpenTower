@@ -19,7 +19,7 @@ with obj_player
 			obj_player1.targetRoom = other.targetRoom;
 			obj_player2.targetDoor = other.targetDoor;
 			obj_player2.targetRoom = other.targetRoom;
-			if global.coop == 1
+			if global.coop == true
 			{
 				var _box = other.id;
 				with obj_player
@@ -64,7 +64,7 @@ with obj_player
 			obj_player2.targetRoom = other.targetRoom;
 			obj_player1.vsp = 0;
 			obj_player2.vsp = 0;
-			if global.coop == 1
+			if global.coop == true
 			{
 				_box = other.id;
 				with obj_player

@@ -1,6 +1,6 @@
 if room == rm_editor
 	exit;
-if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == 0)
+if (ds_list_find_index(global.saveroom, id) == -1 && global.snickchallenge == false)
 {
 	repeat 6
 	{

@@ -1,4 +1,4 @@
-if state > states.normal
+if state > 0
 	exit;
 
 with other

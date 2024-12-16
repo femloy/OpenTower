@@ -46,6 +46,7 @@ function save_level_update(levelname)
 				};
 				if (!is_undefined(ds_map_find_value(obj_editor.properties_map, ID)))
 				{
+					var list = ds_map_find_value(obj_editor.properties_map, ID);
 					for (var j = 0; j < array_length(list); j++)
 					{
 						var property = list[j];

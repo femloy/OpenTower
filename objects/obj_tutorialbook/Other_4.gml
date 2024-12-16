@@ -13,10 +13,5 @@ if global.panic && r != "towertutorial" && r != "towertutorialN"
 	exit;
 }
 
-if surface_exists(surfclip)
-	surface_free(surfclip);
-if surface_exists(surffinal)
-	surface_free(surffinal);
-
 compiled = false;
 alarm[1] = 1;

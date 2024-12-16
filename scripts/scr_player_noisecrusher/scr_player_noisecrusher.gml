@@ -7,7 +7,7 @@ function scr_player_noisecrusher()
 		vsp = 0;
 		movespeed = 0;
 		if (floor(image_index) == image_number - 1)
-			state = 0;
+			state = states.normal;
 		exit;
 	}
 	if vsp > 0
@@ -92,6 +92,6 @@ function scr_player_do_noisecrusher()
 	image_index = 0;
 	vsp = -16;
 	scr_fmod_soundeffect(snd_noisedoublejump, x, y);
-	particle_set_scale(5, xscale, 1);
-	create_particle(x, y, 5, 0);
+	particle_set_scale(particle.jumpdust, xscale, 1);
+	create_particle(x, y, particle.jumpdust, 0);
 }

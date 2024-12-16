@@ -33,7 +33,7 @@ if global.swapmode
 		if ispeppino
 			swap_player(false);
 	}
-	peppinoID = instance_create((room_width * 0.3) - 50, 402, 257);
+	peppinoID = instance_create((room_width * 0.3) - 50, 402, obj_swapplayerprop);
 	peppinoID.ispeppino = true;
 	peppinoID.sprite_index = spr_player_idle;
 	peppinoID.image_speed = 0.35;

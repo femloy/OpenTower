@@ -68,7 +68,7 @@ function scr_player_mach3()
 			momemtum = true;
 			move = key_right + key_left;
 			move2 = key_right2 + key_left2;
-			if fightball == 1 && global.coop == 1
+			if fightball == 1 && global.coop == true
 			{
 				if object_index == obj_player1
 				{

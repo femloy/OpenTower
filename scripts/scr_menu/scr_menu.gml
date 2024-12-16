@@ -21,7 +21,7 @@ function menu_goto(menu_id)
 	}
 	optionselected = 0;
 }
-function create_menu_fixed(_menuid, _anchor, _xpad, _ypad, _backmenu = menus.options)
+function create_menu_fixed(_menuid, _anchor, _xpad, _ypad, _backmenu = menu_pages.options)
 {
 	return 
 	{

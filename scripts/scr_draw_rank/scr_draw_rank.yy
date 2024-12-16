@@ -6,6 +6,6 @@
   "isDnD": false,
   "parent": {
     "name": "Language",
-    "path": "folders/Scripts/Language.yy",
+    "path": "folders/Scripts/Systems/Language.yy",
   },
 }

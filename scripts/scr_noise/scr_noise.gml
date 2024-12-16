@@ -208,7 +208,7 @@ function scr_noise_arenaintro()
 					spotlightID.expand = true;
 					with obj_player
 					{
-						state = 0;
+						state = states.normal;
 						sprite_index = spr_idle;
 					}
 				}
@@ -302,8 +302,8 @@ function scr_noise_arenaintro()
 				with obj_player
 				{
 					if ispeppino
-						create_particle(x, y, 9);
-					state = 0;
+						create_particle(x, y, particle.genericpoofeffect);
+					state = states.normal;
 					sprite_index = spr_idle;
 				}
 			}

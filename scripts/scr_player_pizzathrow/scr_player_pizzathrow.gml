@@ -5,7 +5,7 @@ function scr_player_pizzathrow()
 	hsp = 0;
 	xscale = -1;
 	jumpstop = false;
-	if global.shroomfollow == 0 && global.cheesefollow == 0 && global.tomatofollow == 0 && global.sausagefollow == 0 && global.pineapplefollow == 0
+	if global.shroomfollow == false && global.cheesefollow == false && global.tomatofollow == false && global.sausagefollow == false && global.pineapplefollow == false
 	{
 		state = states.normal;
 		landAnim = false;

@@ -14,5 +14,5 @@ if obj_player1.hsp != 0
 else
 	sprite_index = spr_mortidle;
 depth = -6;
-if global.mort == 0
+if global.mort == false
 	instance_destroy();

@@ -1,4 +1,4 @@
-if playerid.visible == 0
+if playerid.visible == false
 {
 	global.hp = 8;
 	global.failcutscene = false;
@@ -14,7 +14,7 @@ if playerid.visible == 0
 			sprite_index = spr_player_ratmountidle;
 		}
 	}
-	if global.coop == 1
+	if global.coop == true
 	{
 		with obj_player2
 		{

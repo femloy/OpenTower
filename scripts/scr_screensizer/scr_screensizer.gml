@@ -5,6 +5,10 @@
 #macro CAMERA_WIDTH obj_screensizer.ideal_width
 #macro CAMERA_HEIGHT obj_screensizer.ideal_height
 
+// "if true"
+#macro WINDOWS (os_type == os_windows)
+#macro SWITCH (os_type == os_switch)
+
 function screen_apply_size_delayed()
 {
 	with obj_screensizer
@@ -16,7 +20,7 @@ function screen_apply_size()
 	{
 		if global.option_resolution == 0 && global.option_scale_mode == 1
 			global.option_resolution = 1;
-		if gameframe_get_fullscreen() == false
+		if gameframe_get_fullscreen() == 0
 			gameframe_restore();
 		
 		var w = get_resolution_width(global.option_resolution, aspect_ratio);
@@ -208,7 +212,7 @@ function get_options()
 	global.option_screenshake = ini_read_real("Option", "screenshake", 1);
 	global.lang = global.option_lang;
 	
-	if true && steam_utils_is_steam_running_on_steam_deck() // "true" os check?
+	if WINDOWS && steam_utils_is_steam_running_on_steam_deck()
 	{
 		global.option_fullscreen = 1;
 		global.option_resolution = 1;

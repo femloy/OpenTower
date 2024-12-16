@@ -37,7 +37,7 @@ ds_map_set(collision_function, noone, function(obj)
 ds_map_set(collision_function, obj_baddie, function(obj)
 {
 	if (instance_exists(obj_bossplayerdeath))
-		exit;
+		return false;
 	if (!instance_exists(obj))
 		return false;
 	

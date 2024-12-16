@@ -16,7 +16,7 @@ function scr_do_rank(showtoppins = true, boss = false)
 	var cy = camera_get_view_y(view_camera[0]) + SCREEN_Y;
 	rankpos_x = ex - cx;
 	rankpos_y = ey - cy;
-	if global.timeattack == 1
+	if global.timeattack == true
 		obj_timeattack.stop = true;
 	with obj_wartimer
 		notification_push(notifs.wartimer_endlevel, [minutes, seconds + addseconds]);

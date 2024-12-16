@@ -1,7 +1,9 @@
 if DEBUG
 {
+	/*
 	if keyboard_check_pressed(vk_f8)
 		DoCommand("loadtest");
+	*/
 	if keyboard_check_pressed(vk_f2)
 	{
 		with instance_create(0, 0, obj_cheftask)

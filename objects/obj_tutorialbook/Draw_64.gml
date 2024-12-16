@@ -2,6 +2,9 @@ if !global.option_hud
 	exit;
 if (text_state == states.titlescreen && text_y <= -(text_sprite_height * text_yscale))
 	exit;
+if (font == -4)
+    exit;
+
 reset_blendmode();
 if showgranny
 {

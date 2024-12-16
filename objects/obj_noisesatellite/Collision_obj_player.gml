@@ -52,7 +52,7 @@ if state != states.grabbed
 			image_index = 0;
 			state = states.tackle;
 		}
-		if state == states.mach2 && other.grounded == 1
+		if state == states.mach2 && other.grounded == true
 		{
 			other.hp = 0;
 			instance_create(x, y, obj_bumpeffect);

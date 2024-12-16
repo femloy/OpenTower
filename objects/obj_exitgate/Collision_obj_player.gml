@@ -18,7 +18,7 @@ if image_index == 1 && global.panic == false && room != war_13
 					shake_mag_acc = 30 / room_speed;
 				}
 			}
-			if global.coop == 1
+			if global.coop == true
 			{
 				with obj_player2
 				{
@@ -41,7 +41,7 @@ if drop && dropstate != states.idle
 	exit;
 with obj_player
 {
-	if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.Sjumpprep || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic == true || global.snickchallenge == 1 || room == war_13 || other.random_secret))
+	if (grounded && (x > (other.x - 160) && x < (other.x + 160)) && key_up && (state == states.normal || state == states.Sjumpprep || state == states.mach1 || state == states.mach2 || state == states.mach3) && (global.panic == true || global.snickchallenge == true || room == war_13 || other.random_secret))
 	{
 		global.noisejetpack = false;
 		global.startgate = false;

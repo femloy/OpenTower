@@ -35,7 +35,7 @@ with other
 				obj_player1.policetaxi = true;
 				sprite_index = spr_taxicop;
 			}
-			if global.coop == 1
+			if global.coop == true
 			{
 				obj_player2.sprite_index = obj_player2.spr_idle;
 				fmod_event_one_shot("event:/sfx/misc/taximove");

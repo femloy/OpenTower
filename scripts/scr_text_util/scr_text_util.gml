@@ -263,6 +263,15 @@ function scr_text_arr_size(array)
 	}
 	return [w, h];
 }
+
+function reset_surface_if_resized(surf, width, height)
+{
+    if !surface_exists(surf)
+        exit;
+    if surface_get_width(surf) != width || surface_get_height(surf) != height
+        surface_free(surf);
+}
+
 function scr_draw_granny_texture(x, y, xscale, yscale, tex_x, tex_y, sprite = spr_pizzagrannytexture, bubble_sprite = spr_tutorialbubble)
 {
 	var w = sprite_get_width(bubble_sprite) * xscale;

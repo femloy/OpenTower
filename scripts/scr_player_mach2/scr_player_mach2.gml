@@ -48,7 +48,7 @@ function scr_player_mach2()
 		scr_player_do_noisecrusher();
 	
 	var mortjump = false;
-	if key_jump && global.mort == 1 && sprite_index != spr_mortdoublejump && !grounded && !skateboarding
+	if key_jump && global.mort == true && sprite_index != spr_mortdoublejump && !grounded && !skateboarding
 	{
 		state = states.jump;
 		repeat 6
@@ -106,7 +106,7 @@ function scr_player_mach2()
 		machpunchAnim = false;
 	if grounded
 	{
-		if scr_slope() && hsp != 0 && movespeed > 8
+		if (scr_slope() && hsp != 0) && movespeed > 8
 			scr_player_addslopemomentum(slopeaccel, slopedeccel);
 		if movespeed < maxmovespeed
 		{

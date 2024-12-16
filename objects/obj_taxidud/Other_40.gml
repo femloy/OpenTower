@@ -1,2 +1,2 @@
-if playerid.visible == 1
+if playerid.visible == true
 	instance_destroy();

@@ -1,8 +1,9 @@
-if (instance_number(object_index) > 1)
+if instance_number(object_index) > 1
 {
 	instance_destroy()
 	exit;
 }
+
 levels = [
 	entrance_secret3, 
 	entrance_secret4, 
@@ -63,9 +64,10 @@ levels = [
 	war_secret3
 ];
 
-selected = false
-minutes = 0
-seconds = 0
-start = false
-startstate = states.normal // PLAYER's state
-depth = -999
+selected = false;
+selected_level = noone;
+minutes = 0;
+seconds = 0;
+start = false;
+startstate = states.normal; // PLAYER's state
+depth = -999;

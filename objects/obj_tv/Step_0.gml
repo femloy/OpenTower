@@ -83,12 +83,12 @@ switch state
 		{
 			with obj_player1
 			{
-				if (!isgustavo || !ispeppino)
+				if !isgustavo || !ispeppino
 				{
 					if mach4mode == 1
-						tv_do_expression(spr_tv_exprmach4);
-					else if (state == states.mach3 || sprite_index == spr_mach3boost)
-						tv_do_expression(spr_tv_exprmach3);
+						tv_do_expression(spr_tv_exprmach4, true);
+					else if state == states.mach3 || sprite_index == spr_mach3boost
+						tv_do_expression(spr_tv_exprmach3, true);
 				}
 			}
 		}
@@ -101,10 +101,12 @@ switch state
 					image_index = 0;
 				}
 				break;
+			
 			case spr_tv_open:
 				if floor(image_index) == image_number - 1
 					sprite_index = idlespr;
 				break;
+			
 			case spr_tv_idle:
 			case spr_tv_idleN:
 				if idleanim > 0
@@ -124,6 +126,7 @@ switch state
 					image_index = 0;
 				}
 				break;
+			
 			case spr_tv_idleanim1:
 			case spr_tv_idleanim2:
 			case spr_tv_idleanim1N:
@@ -136,6 +139,7 @@ switch state
 				if idlespr != spr_tv_idle && idlespr != spr_tv_idleN
 					sprite_index = idlespr;
 				break;
+			
 			default:
 				sprite_index = idlespr;
 		}
