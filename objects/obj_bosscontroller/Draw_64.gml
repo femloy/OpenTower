@@ -112,13 +112,15 @@ switch state
 					{
 						x += hsp;
 						y += vsp;
+						
 						if vsp < 20
 							vsp += 0.5;
 						
 						if y > SCREEN_HEIGHT + sprite_get_height(sprite_index)
+						{
 							ds_list_delete(other.particlelist, i--);
-						else
 							continue;
+						}
 						
 						if palettetexture != -4
 							pattern_set(global.Base_Pattern_Color, sprite_index, image_index, 1, 1, palettetexture);
