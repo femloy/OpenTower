@@ -2,6 +2,9 @@
 - A full decompilation of Pizza Tower v1.1.2 (International Update).
 - I am not affiliated with Tour De Pizza in any way.
 
+# Attribution
+OpenTower is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt (modify), but you must give the appropriate credit.
+
 # Requirements
 - [Pizza Tower on Steam](https://store.steampowered.com/app/2231450/Pizza_Tower/)
 - [GameMaker 2023.1.1.62](https://gms.yoyogames.com/GameMaker-Installer-2023.1.1.62.exe)<br/>
