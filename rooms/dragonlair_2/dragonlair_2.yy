@@ -1056,7 +1056,7 @@
   ],
   "parent": {
     "name": "Dragon Lair",
-    "path": "folders/Rooms/Unused/Dragon Lair.yy",
+    "path": "folders/Rooms/Unused/Levels/Dragon Lair.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

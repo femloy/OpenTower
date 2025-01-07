@@ -55,7 +55,7 @@
   ],
   "parent": {
     "name": "Bosses",
-    "path": "folders/Rooms/Unused/Bosses.yy",
+    "path": "folders/Rooms/Unused/Levels/Bosses.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

@@ -1,2 +1,2 @@
-targetRoom = kidsparty_basementsecret;
-targetDoor = "C";
+targettiles = "Tiles_1"
+particlespr = spr_storagecratedebris

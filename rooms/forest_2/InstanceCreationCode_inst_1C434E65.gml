@@ -1,1 +1,1 @@
-targetRoom = forest_1
+targetRoom = forest_3

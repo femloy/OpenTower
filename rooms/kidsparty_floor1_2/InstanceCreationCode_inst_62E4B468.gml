@@ -1,2 +1,1 @@
-monster = false;
-content = obj_bazooka;
+escape = true

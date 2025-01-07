@@ -171,7 +171,7 @@
   ],
   "parent": {
     "name": "Kids Party",
-    "path": "folders/Rooms/Unused/Kids Party.yy",
+    "path": "folders/Rooms/Unused/Levels/Kids Party.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

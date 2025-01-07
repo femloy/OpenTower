@@ -89,7 +89,7 @@
   ],
   "parent": {
     "name": "Factory",
-    "path": "folders/Rooms/Unused/Factory.yy",
+    "path": "folders/Rooms/Unused/Levels/Factory.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

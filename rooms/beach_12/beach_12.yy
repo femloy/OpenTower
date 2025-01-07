@@ -159,7 +159,7 @@
   ],
   "parent": {
     "name": "Pineapple Beach",
-    "path": "folders/Rooms/Unused/Pineapple Beach.yy",
+    "path": "folders/Rooms/Unused/Levels/Pineapple Beach.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

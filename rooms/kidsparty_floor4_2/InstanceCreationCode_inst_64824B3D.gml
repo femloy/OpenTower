@@ -1,1 +1,1 @@
-particlespr = spr_complexdebris;
+targetRoom = kidsparty_floor4_1

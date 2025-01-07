@@ -648,7 +648,7 @@
   ],
   "parent": {
     "name": "Exit",
-    "path": "folders/Rooms/Unused/Exit.yy",
+    "path": "folders/Rooms/Unused/Levels/Exit.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

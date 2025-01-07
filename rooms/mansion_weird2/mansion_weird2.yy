@@ -54,7 +54,7 @@
   ],
   "parent": {
     "name": "Mansion",
-    "path": "folders/Rooms/Unused/Mansion.yy",
+    "path": "folders/Rooms/Unused/Levels/Mansion.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

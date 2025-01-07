@@ -1,1 +1,1 @@
-escape = true
+targetRoom = chateau_6

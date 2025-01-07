@@ -1,1 +1,1 @@
-content = obj_pizzakincheese
+escape = true

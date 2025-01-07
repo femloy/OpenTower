@@ -247,7 +247,7 @@
   ],
   "parent": {
     "name": "Desert",
-    "path": "folders/Rooms/Unused/Desert.yy",
+    "path": "folders/Rooms/Unused/Levels/Desert.yy",
   },
   "parentRoom": null,
   "physicsSettings": {

@@ -246,7 +246,7 @@
   ],
   "parent": {
     "name": "Freezer (floor5)",
-    "path": "folders/Rooms/Unused/Freezer (floor5).yy",
+    "path": "folders/Rooms/Unused/Levels/Freezer (floor5).yy",
   },
   "parentRoom": null,
   "physicsSettings": {

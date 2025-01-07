@@ -468,7 +468,7 @@
   ],
   "parent": {
     "name": "Strongcold",
-    "path": "folders/Rooms/Unused/Strongcold.yy",
+    "path": "folders/Rooms/Unused/Levels/Strongcold.yy",
   },
   "parentRoom": null,
   "physicsSettings": {
