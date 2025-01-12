@@ -3,7 +3,7 @@ depth = -500
 state = states.normal
 var _menu1 = [
 	["New", function() {
-		if (global.current_level != noone)
+		if global.current_level != noone
 			global.current_level.destroy()
 		global.current_level = new_empty_level()
 		with (obj_itemlist)
@@ -15,7 +15,7 @@ var _menu1 = [
 	["Play", function() {}],
 	["Delete", function() {}]
 ];
-with (instance_create_depth(0, 0, (depth - 1), obj_itemlist))
+with instance_create_depth(0, 0, depth - 1, obj_itemlist)
 {
 	parent = other.id
 	image_yscale = other.image_yscale
@@ -34,9 +34,9 @@ with (instance_create_depth(0, 0, (depth - 1), obj_itemlist))
 			func: _menu1[i][1]
 		})
 	}
-	on_item_click = function(argument0)
+	on_item_click = function(item)
 	{
-		if (argument0 < ds_list_size(items))
-			ds_list_find_value(items, argument0).func()
+		if item < ds_list_size(items)
+			ds_list_find_value(items, item).func()
 	}
 }

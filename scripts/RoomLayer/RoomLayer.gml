@@ -4,19 +4,19 @@ enum layertype
 	tile
 }
 
-function room_layer_add(argument0)
+function room_layer_add(_room)
 {
 	with obj_itemlist
 	{
-		if ID == argument0
+		if ID == _room
 		{
 			if global.current_level.current_room == -4
 				exit;
 			var arr = global.current_level.current_room.backgrounds;
-			if argument0 == 1
+			if _room == 1
 				arr = global.current_level.current_room.tiles;
 			var lowest_depth = -100;
-			if (array_length(arr) > 0)
+			if array_length(arr) > 0
 			{
 				for (var i = 0; i < array_length(arr); i++)
 				{
@@ -31,23 +31,23 @@ function room_layer_add(argument0)
 			_layer.depth = lowest_depth + 1;
 			if _layer.depth == 0
 				_layer.depth++;
-			if argument0 == 1
+			if _room == 1
 				_layer.layer_type = layertype.tile;
 			array_push(arr, _layer);
 			dirty = true;
 		}
 	}
 }
-function room_layer_delete(argument0)
+function room_layer_delete(_room)
 {
 	with obj_itemlist
 	{
-		if ID == argument0 && selected_item != -4
+		if ID == _room && selected_item != -4
 		{
 			if global.current_level.current_room == -4
 				exit;
 			var arr = global.current_level.current_room.backgrounds;
-			if argument0 == 1
+			if _room == 1
 				arr = global.current_level.current_room.tiles;
 			for (var i = 0; i < array_length(arr); i++)
 			{
@@ -63,17 +63,17 @@ function room_layer_delete(argument0)
 		}
 	}
 }
-function room_layer_move_up(argument0)
+function room_layer_move_up(_room)
 {
 	with obj_itemlist
 	{
-		if ID == argument0 && selected_item != -4
+		if ID == _room && selected_item != -4
 		{
 			var _room = global.current_level.current_room;
 			if _room == -4
 				exit;
 			var _arr = _room.backgrounds;
-			if argument0 == 1
+			if _room == 1
 				_arr = _room.tiles;
 			for (var i = 0; i < array_length(_arr); i++)
 			{
@@ -89,17 +89,17 @@ function room_layer_move_up(argument0)
 		}
 	}
 }
-function room_layer_move_down(argument0)
+function room_layer_move_down(_room)
 {
 	if global.current_level.current_room == -4
 		exit;
 	with obj_itemlist
 	{
-		if ID == argument0 && selected_item != -4
+		if ID == _room && selected_item != -4
 		{
 			var _room = global.current_level.current_room;
 			var _arr = _room.backgrounds;
-			if argument0 == 1
+			if _room == 1
 				_arr = _room.tiles;
 			for (var i = 0; i < array_length(_arr); i++)
 			{
@@ -115,7 +115,7 @@ function room_layer_move_down(argument0)
 		}
 	}
 }
-function room_layer_item_dirty(argument0)
+function room_layer_item_dirty(_room)
 {
 	if global.current_level.current_room == -4
 		exit;
@@ -123,25 +123,24 @@ function room_layer_item_dirty(argument0)
 	var _arr = array_create(0);
 	with global.current_level.current_room
 	{
-		for (var i = 0; i < array_length(argument0); i++)
+		for (var i = 0; i < array_length(_room); i++)
 		{
-			var b = argument0[i]
-			var _name = ""
+			var b = _room[i];
+			var _name = "";
 			switch b.layer_type
 			{
 				case layertype.tile:
-					_name = "Tile "
+					_name = "Tile ";
 					if b.depth < 0
-						_name = "Tile FG "
-					break
+						_name = "Tile FG ";
+					break;
 				case layertype.background:
-					_name = "Background "
+					_name = "Background ";
 					if b.depth < 0
-						_name = "Foreground "
-					break
+						_name = "Foreground ";
+					break;
 			}
-
-			_name += string(abs(b.depth))
+			_name += string(abs(b.depth));
 			array_push(_arr, 
 			{
 				name: _name,
@@ -149,9 +148,9 @@ function room_layer_item_dirty(argument0)
 			});
 		}
 	}
-	array_sort(_arr, function(argument0, argument1)
+	array_sort(_arr, function(_a, _b)
 	{
-		return argument0.depth - argument1.depth;
+		return _a.depth - _b.depth;
 	});
 	for (i = 0; i < array_length(_arr); i++)
 	{
@@ -162,17 +161,17 @@ function room_layer_item_dirty(argument0)
 }
 function RoomLayer() constructor
 {
-	static move_up = function(argument0 = noone)
+	static move_up = function(coord_room = noone)
 	{
 		var old_depth = depth;
 		depth--;
 		if depth == 0
 			depth--;
-		if argument0 != -4
+		if coord_room != -4
 		{
-			for (var i = 0; i < array_length(argument0); i++)
+			for (var i = 0; i < array_length(coord_room); i++)
 			{
-				var b = argument0[i];
+				var b = coord_room[i];
 				if b != self
 				{
 					if (sign(depth) == sign(old_depth))
@@ -192,17 +191,17 @@ function RoomLayer() constructor
 			}
 		}
 	};
-	static move_down = function(argument0 = noone)
+	static move_down = function(coord_room = noone)
 	{
 		var old_depth = depth;
 		depth++;
 		if depth == 0
 			depth++;
-		if argument0 != -4
+		if coord_room != -4
 		{
-			for (var i = 0; i < array_length(argument0); i++)
+			for (var i = 0; i < array_length(coord_room); i++)
 			{
-				var b = argument0[i];
+				var b = coord_room[i];
 				if b != self
 				{
 					if (sign(depth) == sign(old_depth))
@@ -222,12 +221,12 @@ function RoomLayer() constructor
 			}
 		}
 	};
-	static draw = function(argument0)
+	static draw = function(_room)
 	{
 		switch layer_type
 		{
 			case layertype.background:
-				draw_sprite_repeat(sprite_index, image_index, argument0.x, argument0.y, argument0.width, argument0.height);
+				draw_sprite_repeat(sprite_index, image_index, _room.x, _room.y, _room.width, _room.height);
 				break;
 		}
 	};

@@ -1,8 +1,7 @@
-function load_level_update(argument0)
+function load_level_update(level)
 {
-    var path = working_directory + concat("/levels/", argument0, "/");
-    
-    if (save_step == -1)
+    var path = working_directory + concat("/levels/", level, "/");
+    if save_step == -1
     {
         save_step++;
         load_array = [];
@@ -15,12 +14,12 @@ function load_level_update(argument0)
             file = file_find_next();
         }
         
-        if (array_length(load_array) <= 0)
+        if array_length(load_array) <= 0
             trace("Couldn't find any rooms");
         
         file_find_close();
     }
-    else if (save_step < array_length(load_array))
+    else if save_step < array_length(load_array)
     {
         var buffer = buffer_load(load_array[save_step++]);
         var json_string = buffer_read(buffer, buffer_string);
@@ -66,7 +65,7 @@ function load_level_update(argument0)
                     key = ds_map_find_next(other.object_map, key);
                 }
                 
-                if (!is_undefined(ds_map_find_value(obj_editor.properties_map, ID)))
+                if !is_undefined(ds_map_find_value(obj_editor.properties_map, ID))
                 {
                     var list = ds_map_find_value(obj_editor.properties_map, ID);
                     for (var j = 0; j < array_length(list); j++)
@@ -88,7 +87,7 @@ function load_level_update(argument0)
         editor_state = saved_editor_state;
         change_room(ds_list_find_value(global.current_level.rooms, 0));
         
-        with (obj_itemlist)
+        with obj_itemlist
             dirty = true;
     }
 }

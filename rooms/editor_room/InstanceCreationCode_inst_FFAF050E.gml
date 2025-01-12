@@ -1,5 +1,5 @@
 ID = 8;
-with (instance_create_depth(0, 0, depth - 1, obj_itemlist))
+with instance_create_depth(0, 0, depth - 1, obj_itemlist)
 {
 	parent = other.id;
 	ID = 8;
@@ -14,37 +14,37 @@ with (instance_create_depth(0, 0, depth - 1, obj_itemlist))
 		ds_list_copy(items, obj_editor.backgrounds_list);
 	}
 
-	on_item_click = function(argument0)
+	on_item_click = function(_item)
 	{
-		if (argument0 < ds_list_size(items))
+		if _item < ds_list_size(items)
 		{
 			var _room = global.current_level.current_room
-			if (_room == noone)
+			if _room == noone
 				exit;
 			var _arr = _room.backgrounds
 			for(var i = 0; i < array_length(_arr); i++)
 			{
 				var b = _arr[i]
-				if (b.depth == value.depth)
+				if b.depth == value.depth
 				{
-					b.sprite_index = ds_list_find_value(items, argument0)
+					b.sprite_index = ds_list_find_value(items, _item)
 					break
 				}
 			}
 		}
 	}
 
-	on_item_draw = function(argument0, argument1, argument2, argument3)
+	on_item_draw = function(_x, _y, sprite, faded)
 	{
 		var a = 1
-		if (argument3 > 0)
+		if faded > 0
 			a = 0.5
-		draw_sprite_ext(spr_emptybg, 0, argument0, argument1, (sprite_width / 64), (item_height / 64), 0, c_white, a)
-		var scale = (sprite_width / sprite_get_width(argument2))
+		draw_sprite_ext(spr_emptybg, 0, _x, _y, sprite_width / 64, item_height / 64, 0, c_white, a)
+		var scale = (sprite_width / sprite_get_width(sprite))
 		var sx = 0
-		var bb_top = sprite_get_bbox_top(argument2)
-		var bb_bottom = sprite_get_bbox_bottom(argument2)
+		var bb_top = sprite_get_bbox_top(sprite)
+		var bb_bottom = sprite_get_bbox_bottom(sprite)
 		var sy = (bb_top + ((bb_bottom - bb_top) / 4))
-		draw_sprite_part_ext(argument2, 0, sx, sy, (sprite_width / scale), (item_height / scale), argument0, argument1, scale, scale, c_white, a)
+		draw_sprite_part_ext(sprite, 0, sx, sy, (sprite_width / scale), (item_height / scale), _x, _y, scale, scale, c_white, a)
 	}
 }

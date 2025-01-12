@@ -17,7 +17,7 @@ function scr_player_supergrab()
 			{
 				state = states.normal;
 				camzoom = 1;
-				camera_set_view_size(view_camera[0], obj_screensizer.actual_width * camzoom, obj_screensizer.actual_height * camzoom);
+				camera_set_view_size(view_camera[0], SCREEN_WIDTH * camzoom, SCREEN_HEIGHT * camzoom);
 				obj_screensizer.camzoom = camzoom;
 			}
 			exit;

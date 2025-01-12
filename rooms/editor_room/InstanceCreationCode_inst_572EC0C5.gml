@@ -1,5 +1,5 @@
 ID = 4;
-with (instance_create_depth(0, 0, depth - 1, obj_itemlist))
+with instance_create_depth(0, 0, depth - 1, obj_itemlist)
 {
     parent = other.id;
     image_xscale = other.image_xscale;
@@ -15,26 +15,24 @@ with (instance_create_depth(0, 0, depth - 1, obj_itemlist))
     ds_list_add(items, 
     {
         name: "Level Settings",
-        func: function()
-        {
-        }
+        func: function() { }
     });
     ds_list_add(items, 
     {
         name: "Save Level",
         func: function()
         {
-            with (obj_editor)
+            with obj_editor
             {
-                if (editor_state != editor_states.saving)
+                if editor_state != editor_states.saving
                     save_level();
             }
         }
     });
     dirty = false;
-    on_item_click = function(argument0)
+    on_item_click = function(item)
     {
-        if (argument0 < ds_list_size(items))
-            ds_list_find_value(items, argument0).func();
+        if item < ds_list_size(items)
+            ds_list_find_value(items, item).func();
     };
 }
