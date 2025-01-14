@@ -149,9 +149,9 @@ function room_layer_item_dirty(rm)
 			});
 		}
 	}
-	array_sort(_arr, function(rm, argument1)
+	array_sort(_arr, function(_a, _b)
 	{
-		return rm.depth - argument1.depth;
+		return _a.depth - _b.depth;
 	});
 	for (i = 0; i < array_length(_arr); i++)
 	{
