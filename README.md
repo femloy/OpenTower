@@ -7,11 +7,12 @@ OpenTower is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/
 
 # Requirements
 - [Pizza Tower on Steam](https://store.steampowered.com/app/2231450/Pizza_Tower/)
-- [GameMaker 2023.1.1.62](https://gms.yoyogames.com/GameMaker-Installer-2023.1.1.62.exe)<br/>
-- [Steamworks SDK v1.55](https://partner.steamgames.com/downloads/steamworks_sdk_155.zip) <br/>
-This one's optional if you're gonna remove it, which you need to for mods
+- [GameMaker 2023.1.1.62](https://gms.yoyogames.com/GameMaker-Installer-2023.1.1.62.exe)
+- [Steamworks SDK v1.55](https://partner.steamgames.com/downloads/steamworks_sdk_155.zip)<br>
+(This one's optional if you're gonna remove it, which you need to for mods.)
+- [UndertaleModTool (Bleeding Edge)](https://github.com/UnderminersTeam/UndertaleModTool/releases/tag/bleeding-edge)
 
-This repository doesn't include any of the datafiles (FMOD, langs) or sprites. An [UndertaleModTool](https://github.com/krzys-h/UndertaleModTool/releases) script is included to extract everything needed from the `data.win`, and port the required files to the decomp folder.
+This repository doesn't include any of the datafiles (FMOD, langs) or sprites. An [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool/releases/tag/bleeding-edge) script is included to extract everything needed from the `data.win`, and port the required files to the decomp folder.
 
 # The Script
 
@@ -42,5 +43,9 @@ If you want to move to a future GameMaker version you'll need to make some chang
 4. Rename the `string_split` function to something else, it's reserved now. CTRL+SHIFT+F to mass replace.
 5. Probably more. I forgot. If you got this far you can figure out the rest anyway.
 
-# Empty GameMaker issue
+# Issues
+### Empty GameMaker
 If you normally use a newer GameMaker version, opening the old one will lead to the IDE getting stuck in a dark gray screen. To fix this, delete the `%programdata%/GameMakerStudio2` folder while the IDE is closed and then reopen it.
+
+### ImageMagick error when opening .csx
+You have the wrong UndertaleModTool version. Get [Bleeding Edge](https://github.com/UnderminersTeam/UndertaleModTool/releases/tag/bleeding-edge), not a fork or a release.
