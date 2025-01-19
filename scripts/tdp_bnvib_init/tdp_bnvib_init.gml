@@ -2,6 +2,6 @@ function tdp_bnvib_init()
 {
 	if SWITCH
 	{
-		// switch exclusive code
+		// Read tdp_bnvib_load
 	}
 }
