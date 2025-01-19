@@ -284,7 +284,7 @@ function scr_draw_granny_texture(x, y, xscale, yscale, tex_x, tex_y, sprite = sp
 	
 	// draw dialog box
 	surface_set_target(surfclip);
-	draw_clear_alpha(0, 0);
+	draw_clear_alpha(c_black, 0);
 	draw_rectangle_color(0, 0, w, h, c_white, c_white, c_white, c_white, false);
 	gpu_set_blendmode(bm_subtract);
 	draw_sprite_ext(bubble_sprite, 0, 0, 0, xscale, yscale, 0, c_white, 1);

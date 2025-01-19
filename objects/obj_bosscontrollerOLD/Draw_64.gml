@@ -43,7 +43,7 @@ if _barfillpos > 0
 {
 	surface_resize(bar_surface, _barfillpos, 30);
 	surface_set_target(bar_surface);
-	draw_clear_alpha(0, 0);
+	draw_clear_alpha(c_black, 0);
 	var clip_x = bosstimer_x + 8;
 	var clip_y = bosstimer_y + 8;
 	barfill_x += 0.4;

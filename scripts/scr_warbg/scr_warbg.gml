@@ -1,6 +1,6 @@
 function warbg_start()
 {
-	if event_type == ev_draw && event_number == 0
+	if event_type == ev_draw && event_number == ev_draw_normal
 	{
 		var time = shader_get_uniform(shd_war, "time");
 		var size = shader_get_uniform(shd_war, "size");
@@ -13,12 +13,12 @@ function warbg_start()
 }
 function warbg_end()
 {
-	if event_type == ev_draw && event_number == 0
+	if event_type == ev_draw && event_number == ev_draw_normal
 		shader_reset();
 }
 function pizzahead_bg_start()
 {
-	if event_type == ev_draw && event_number == 0
+	if event_type == ev_draw && event_number == ev_draw_normal
 	{
 		var time = shader_get_uniform(shd_rainbow, "u_time");
 		var _speed = shader_get_uniform(shd_rainbow, "u_speed");
@@ -29,7 +29,7 @@ function pizzahead_bg_start()
 }
 function pizzahead_bg_end()
 {
-	if event_type == ev_draw && event_number == 0
+	if event_type == ev_draw && event_number == ev_draw_normal
 		shader_reset();
 }
 function pizzahead_bg_init()
@@ -51,7 +51,7 @@ function warbg_generic(begin_script, end_script, layer_map = noone)
 				if (layer_get_name(_id) == arr[j])
 					_found = true;
 			}
-			if (layer_map != -4 && is_undefined(ds_map_find_value(layer_map, layer_get_name(_id))))
+			if (layer_map != noone && is_undefined(ds_map_find_value(layer_map, layer_get_name(_id))))
 				_found = false;
 			if !_found
 			{
@@ -71,5 +71,5 @@ function warbg_init()
 }
 function warbg_stop()
 {
-	warbg_generic(-4, warbg_end);
+	warbg_generic(noone, warbg_end);
 }

@@ -76,11 +76,11 @@ with instance_create_depth(32, 0, depth - 1, obj_itemlist)
     
     on_item_draw = function(_x, _y, _item)
     {
-        if draw_get_font() != 0
+        if draw_get_font() != fnt_caption
             draw_set_font(fnt_caption);
-		
         draw_set_halign(fa_left);
         draw_set_valign(fa_middle);
+		
         var spritedisplay = asset_get_index(_item.sprite_index);
         var display_w = 32;
         var display_h = 32;

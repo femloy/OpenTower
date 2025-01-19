@@ -7,7 +7,7 @@ function tdp_text_commit(x, y, w, h, gui = true)
 			global.tdp_text_surface = surface_create(w, h);
 		
 		surface_set_target(global.tdp_text_surface);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		while !ds_queue_empty(global.tdp_text_queue)
 		{
 			var action = ds_queue_dequeue(global.tdp_text_queue);

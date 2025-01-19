@@ -108,7 +108,7 @@ function scr_palette_texture(sprite, subimg, x, y, xscale, yscale, rot = 0, col 
 	}
 	
 	surface_set_target(global.palettesurfaceclip);
-	draw_clear_alpha(0, 0);
+	draw_clear_alpha(c_black, 0);
 	draw_rectangle_color(0, 0, 960, 540, c_white, c_white, c_white, c_white, false);
 	gpu_set_blendmode(bm_subtract);
 	draw_sprite_ext(sprite, subimg, x - cx, y - cy, xscale, yscale, rot, c_white, 1);

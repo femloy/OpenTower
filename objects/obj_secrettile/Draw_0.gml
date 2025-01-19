@@ -8,7 +8,7 @@ if (array_length(tiles) > 0)
 		var h = sprite_height;
 		surf = surface_create(w, h);
 		surface_set_target(surf);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		for (var k = 0; k < array_length(tilemap_sprite); k++)
 		{
 			if tilemap_sprite[k] != -4

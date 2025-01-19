@@ -23,7 +23,7 @@ if (kidsparty_lightning || dark_lightning)
 		var s = surface_create(tsw, tsh);
 		draw_set_color(c_white);
 		surface_set_target(s);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		draw_rectangle_color(0, 0, tsw, tsh, 0, 0, 0, 0, false);
 		var p = get_triangle_points(0, tsh / 2, 0, 300, 24);
 		gpu_set_blendmode(bm_subtract);
@@ -31,7 +31,7 @@ if (kidsparty_lightning || dark_lightning)
 		surface_reset_target();
 		surface_set_target(patrolcone_tex);
 		gpu_set_blendmode(bm_normal);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		draw_sprite(spr_patrol_lightgradient, 0, 0, tsh / 2);
 		gpu_set_blendmode(bm_subtract);
 		draw_surface(s, 0, 0);
@@ -48,7 +48,7 @@ if (kidsparty_lightning || dark_lightning)
 		if (surface_exists(surf))
 		{
 			surface_set_target(surf);
-			draw_clear_alpha(0, 0);
+			draw_clear_alpha(c_black, 0);
 			draw_set_color(c_black);
 			draw_set_alpha(1);
 			draw_rectangle(0, 0, cw, ch, false);
@@ -70,7 +70,7 @@ if (kidsparty_lightning || dark_lightning)
 		if (surface_exists(surf2))
 		{
 			surface_set_target(surf2);
-			draw_clear_alpha(0, 0);
+			draw_clear_alpha(c_black, 0);
 			draw_set_color(c_black);
 			draw_set_alpha(1);
 			draw_rectangle(0, 0, cw, ch, false);
@@ -111,7 +111,7 @@ if (kidsparty_lightning || dark_lightning)
 		if (surface_exists(surf))
 		{
 			surface_set_target(surf);
-			draw_clear_alpha(0, 0);
+			draw_clear_alpha(c_black, 0);
 			draw_set_color(c_black);
 			draw_set_alpha(0.8);
 			draw_rectangle(0, 0, cw, ch, false);

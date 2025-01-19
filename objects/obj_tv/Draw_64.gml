@@ -93,7 +93,7 @@ if bubblespr != -4
 if (!surface_exists(promptsurface))
 	promptsurface = surface_create(290, 102);
 surface_set_target(promptsurface);
-draw_clear_alpha(0, 0);
+draw_clear_alpha(c_black, 0);
 draw_set_font(font1);
 draw_set_halign(fa_left);
 draw_set_valign(fa_middle);
@@ -126,7 +126,7 @@ if global.panic
 	{
 		surface_resize(bar_surface, _barfillpos, 30);
 		surface_set_target(bar_surface);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		var clip_x = timer_x + 3;
 		var clip_y = timer_y + 5;
 		for (i = 0; i < 3; i++)

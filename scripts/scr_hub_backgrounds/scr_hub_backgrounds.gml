@@ -59,7 +59,7 @@ function scr_hub_bg_draw(x, y, sprite, frame, gui = false)
 		{
 			bgmask_surface = surface_create(w, h);
 			surface_set_target(bgmask_surface);
-			draw_clear(0);
+			draw_clear(c_black);
 			gpu_set_blendmode(bm_subtract);
 			draw_sprite(sprite, frame, x1, y1);
 			if !gui
@@ -71,7 +71,7 @@ function scr_hub_bg_draw(x, y, sprite, frame, gui = false)
 		if (!surface_exists(bgclip_surface))
 			bgclip_surface = surface_create(w, h);
 		surface_set_target(bgclip_surface);
-		draw_clear_alpha(0, 0);
+		draw_clear_alpha(c_black, 0);
 		for (var i = 0; i < array_length(bgspritepos); i++)
 		{
 			if !bg_useparallax

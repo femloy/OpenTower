@@ -27,7 +27,7 @@ on_item_double_click = function(item_id)
 };
 on_item_draw = function(_x, _y, _item)
 {
-	if (draw_get_font() != fnt_caption)
+	if draw_get_font() != fnt_caption
 		draw_set_font(fnt_caption);
 	draw_set_halign(fa_left);
 	draw_set_valign(fa_middle);

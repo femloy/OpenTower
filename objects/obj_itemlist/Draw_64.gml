@@ -2,7 +2,7 @@ draw_self();
 if (!surface_exists(surf))
 	surf = surface_create(sprite_width, sprite_height);
 surface_set_target(surf);
-draw_clear(0);
+draw_clear(c_black);
 var _pos = get_list_pos(obj_editorcursor.y);
 if !hovered
 	_pos = -1;
