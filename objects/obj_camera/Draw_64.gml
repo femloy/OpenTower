@@ -22,7 +22,7 @@ if global.kungfu
 	else if global.hp == 0
 		draw_sprite(spr_pizzahealthbar, 8, 190, 70);
 }
-if obj_player.state != states.dead
+if obj_player.state != states.gameover
 {
 	if obj_player.x < 250 && obj_player.y < 169
 		hud_posY = Approach(hud_posY, -300, 15);

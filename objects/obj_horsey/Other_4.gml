@@ -6,7 +6,7 @@ if (ds_list_find_index(global.baddieroom, id) != -1)
 }
 else if (ds_list_find_index(global.saveroom, id) != -1)
 {
-	state = states.dead;
+	state = states.gameover;
 	flag = true;
 }
 if flag

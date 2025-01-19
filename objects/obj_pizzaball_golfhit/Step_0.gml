@@ -6,7 +6,7 @@ if state == states.normal
 {
 	y = Approach(y, SCREEN_HEIGHT, 5);
 	if (!instance_exists(obj_pizzaball))
-		state = states.dead;
+		state = states.gameover;
 }
 else
 {

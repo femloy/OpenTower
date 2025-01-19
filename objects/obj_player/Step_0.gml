@@ -317,7 +317,7 @@ switch state
 	case states.pizzathrow:
 		scr_player_pizzathrow();
 		break;
-	case states.dead:
+	case states.gameover:
 		scr_player_gameover();
 		break;
 	case states.Sjumpland:
@@ -1060,13 +1060,13 @@ if state != states.grabbed && state != states.hurt
 if state != states.freefall && state != states.superslam && (state != states.chainsaw || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam)) && (state != states.backbreaker || (tauntstoredstate != states.freefall && tauntstoredstate != states.superslam))
 && !instance_exists(obj_secretportalstart)
 	freefallsmash = -14;
-if global.playerhealth <= 0 && state != states.dead
+if global.playerhealth <= 0 && state != states.gameover
 {
 	image_index = 0;
 	sprite_index = spr_playerV_dead;
-	state = states.dead;
+	state = states.gameover;
 }
-if (state == states.dead && y > (room_height * 2) && !instance_exists(obj_backtohub_fadeout))
+if (state == states.gameover && y > (room_height * 2) && !instance_exists(obj_backtohub_fadeout))
 {
 	targetDoor = "HUB";
 	scr_playerreset();
@@ -1328,7 +1328,7 @@ if toomuchalarm1 > 0
 }
 if restartbuffer > 0
 	restartbuffer--;
-if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalhallway) && restartbuffer <= 0 && !verticalhallway && state != states.dead && state != states.gotoplayer && !global.levelreset && room != boss_pizzaface && room != tower_outside && room != boss_pizzafacefinale && state != states.dead && !instance_exists(obj_backtohub_fadeout) && state != states.backtohub)
+if ((y > (room_height + 300) || y < -800) && !place_meeting(x, y, obj_verticalhallway) && restartbuffer <= 0 && !verticalhallway && state != states.gameover && state != states.gotoplayer && !global.levelreset && room != boss_pizzaface && room != tower_outside && room != boss_pizzafacefinale && state != states.gameover && !instance_exists(obj_backtohub_fadeout) && state != states.backtohub)
 {
 	if room != Mainmenu && room != tower_outside && room != Realtitlescreen && room != Longintro && room != Endingroom && room != Johnresurrectionroom && room != Creditsroom && room != rank_room
 	{
@@ -1393,7 +1393,7 @@ if character != "M"
 }
 else
 	mask_index = spr_pepperman_mask;
-if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_index == spr_knightpepthunder || state == states.keyget || state == states.chainsaw || state == states.door || state == states.ejected || state == states.victory || state == states.comingoutdoor || state == states.dead || state == states.gotoplayer || state == states.policetaxi || state == states.actor || (collision_flags & colflag.secret) > 0)
+if (state == states.gottreasure || sprite_index == spr_knightpepstart || sprite_index == spr_knightpepthunder || state == states.keyget || state == states.chainsaw || state == states.door || state == states.ejected || state == states.victory || state == states.comingoutdoor || state == states.gameover || state == states.gotoplayer || state == states.policetaxi || state == states.actor || (collision_flags & colflag.secret) > 0)
 	cutscene = true;
 else
 	cutscene = false;
@@ -1414,7 +1414,7 @@ if (movespeed > 12 && abs(hsp) > 12 && state == states.mach3 && state != states.
 	}
 }
 scr_collide_destructibles();
-if state != states.backtohub && state != states.ghostpossess && state != states.gotoplayer && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.boulder && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.dead
+if state != states.backtohub && state != states.ghostpossess && state != states.gotoplayer && state != states.debugstate && state != states.titlescreen && state != states.tube && state != states.grabbed && state != states.door && state != states.Sjump && state != states.ejected && state != states.comingoutdoor && state != states.boulder && state != states.keyget && state != states.victory && state != states.portal && state != states.timesup && state != states.gottreasure && state != states.gameover
 	scr_collide_player();
 if (state == states.tube || state == states.gotoplayer || state == states.debugstate)
 {

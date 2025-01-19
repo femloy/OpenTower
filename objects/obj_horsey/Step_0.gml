@@ -6,7 +6,7 @@ switch state
 		image_speed = 0.35;
 		sprite_index = spr_horsey;
 		break;
-	case states.dead:
+	case states.gameover:
 		image_speed = 0.35;
 		sprite_index = spr_horsey_lose;
 		with obj_objecticontracker

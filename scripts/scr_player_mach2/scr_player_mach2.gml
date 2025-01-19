@@ -284,7 +284,7 @@ function scr_player_mach2()
 	if mortjump
 		sprite_index = spr_player_mortjumpstart;
 	
-	if state != states.machslide && state != states.UNKNOWN_1 && scr_solid(x + xscale, y) && !scr_slope() && (scr_solid_slope(x + sign(hsp), y) || place_meeting(x + sign(hsp), y, obj_solid)) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_climbablewall) && grounded
+	if state != states.machslide && state != states.UNKNOWN_8 && scr_solid(x + xscale, y) && !scr_slope() && (scr_solid_slope(x + sign(hsp), y) || place_meeting(x + sign(hsp), y, obj_solid)) && !place_meeting(x + sign(hsp), y, obj_destructibles) && !place_meeting(x + sign(hsp), y, obj_climbablewall) && grounded
 	{
 		if skateboarding
 			xscale *= -1;

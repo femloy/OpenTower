@@ -18,7 +18,7 @@ enum states
 	hook,
 	ghost,
 	ghostpossess,
-	titlescreen, // also used as the "do nothing" state
+	titlescreen,
 	hookshot,
 	tacklecharge,
 	cheeseball,
@@ -89,7 +89,7 @@ enum states
 	bossdefeat,
 	pizzathrow,
 	bossintro,
-	dead, // originally "gameover"
+	gameover,
 	keyget,
 	tackle,
 	jump,
@@ -151,7 +151,7 @@ enum states
 	golf,
 	float,
 	tube,
-	unused_1, // 151
+	UNKNOWN_1, // 151
 	policetaxi,
 	shoulderbash,
 	pummel,
@@ -199,7 +199,7 @@ enum states
 	ratmounthurt,
 	ratmountgroundpound,
 	ratmountbounce,
-	unused_2, // 199
+	UNKNOWN_2, // 199
 	ratmountballoon,
 	ratmounttumble,
 	ratmountgrind,
@@ -234,7 +234,7 @@ enum states
 	pizzaface_phase2transition,
 	pizzahead_look,
 	pizzahead_fishing,
-	unused_3, // 234
+	UNKNOWN_3, // 234
 	pizzahead_bombrun,
 	pizzahead_npcthrow,
 	pizzahead_portraitthrow,
@@ -253,17 +253,17 @@ enum states
 	tv_whitenoise,
 	tv_expression,
 	playersuperattack,
-	unused_4, // 253
+	UNKNOWN_4, // 253
 	jetpackjump,
-	unused_5, // 255
-	unused_6, // 256
+	UNKNOWN_5, // 255
+	UNKNOWN_6, // 256
 	bee,
 	bee_chase,
 	ratmountpunch,
 	ratmountcrouch,
 	ratmountladder,
 	supergrab,
-	unused_7, // 263
+	UNKNOWN_7, // 263
 	magnet,
 	antigrav,
 	secret,
@@ -300,15 +300,11 @@ enum states
 	teleport,
 	KO,
 	camera_followtarget,
-	
-	// states for stick's level from the leaks. state code was removed.
-	UNKNOWN_1, // 300
-	UNKNOWN_2, // 301
-	UNKNOWN_3, // 302
-	UNKNOWN_4, // 303, used by obj_stickhat
-	UNKNOWN_5, // 304
-	
-	// noise
+	UNKNOWN_8, // 300
+	UNKNOWN_9, // 301
+	UNKNOWN_10, // 302
+	UNKNOWN_11, // 303, used by obj_stickhat
+	UNKNOWN_12, // 304
 	machcancelstart,
 	machcancel
 }
@@ -346,7 +342,7 @@ global.smallnumber_fnt = font_add_sprite_ext(spr_smallnumber, "1234567890-+", tr
 global.pigreduction = 0;
 global.pigtotal = 0;
 global.levelcomplete = false;
-global.levelcompletename = -4;
+global.levelcompletename = noone;
 global.entrancetreasure = false;
 global.medievaltreasure = false;
 global.ruintreasure = false;
@@ -367,65 +363,65 @@ global.chateautreasure = false;
 global.mansiontreasure = false;
 global.kidspartytreasure = false;
 global.wartreasure = false;
-global.entrancecutscene = -4;
-global.medievalcutscene = -4;
-global.ruincutscene = -4;
-global.ruincutscene2 = -4;
-global.ruincutscene3 = -4;
-global.dungeoncutscene = -4;
-global.peppermancutscene1 = -4;
-global.peppermancutscene2 = -4;
-global.chieftaincutscene = -4;
-global.chieftaincutscene2 = -4;
-global.desertcutscene = -4;
-global.graveyardcutscene = -4;
-global.spacecutscene = -4;
-global.vigilantecutscene1 = -4;
-global.vigilantecutscene2 = -4;
-global.vigilantecutscene3 = -4;
-global.farmcutscene = -4;
-global.superpinballcutscene = -4;
-global.pubcutscene = -4;
-global.pinballcutscene = -4;
-global.beercutscene = -4;
-global.exitfeecutscene = -4;
-global.forestcutscene = -4;
-global.bottlecutscene = -4;
-global.papercutscene = -4;
-global.beachboatcutscene = -4;
-global.beachcutscene = -4;
-global.sewercutscene = -4;
-global.burgercutscene = -4;
-global.golfcutscene = -4;
-global.anarchistcutscene1 = -4;
-global.anarchistcutscene2 = -4;
-global.factoryblock = -4;
-global.streetcutscene = -4;
-global.graffiticutscene = -4;
-global.factorygraffiti = -4;
-global.factorycutscene = -4;
-global.hatcutscene1 = -4;
-global.hatcutscene2 = -4;
-global.hatcutscene3 = -4;
-global.jetpackcutscene = -4;
-global.noisecutscene1 = -4;
-global.noisecutscene2 = -4;
-global.freezercutscene = -4;
-global.kidspartycutscene = -4;
-global.gasolinecutscene = -4;
-global.mansioncutscene = -4;
-global.chateaucutscene = -4;
-global.ghostsoldiercutscene = -4;
-global.mrstickcutscene1 = -4;
-global.mrstickcutscene2 = -4;
-global.mrstickcutscene3 = -4;
-global.chateauswap = -4;
-global.warcutscene = -4;
+global.entrancecutscene = noone;
+global.medievalcutscene = noone;
+global.ruincutscene = noone;
+global.ruincutscene2 = noone;
+global.ruincutscene3 = noone;
+global.dungeoncutscene = noone;
+global.peppermancutscene1 = noone;
+global.peppermancutscene2 = noone;
+global.chieftaincutscene = noone;
+global.chieftaincutscene2 = noone;
+global.desertcutscene = noone;
+global.graveyardcutscene = noone;
+global.spacecutscene = noone;
+global.vigilantecutscene1 = noone;
+global.vigilantecutscene2 = noone;
+global.vigilantecutscene3 = noone;
+global.farmcutscene = noone;
+global.superpinballcutscene = noone;
+global.pubcutscene = noone;
+global.pinballcutscene = noone;
+global.beercutscene = noone;
+global.exitfeecutscene = noone;
+global.forestcutscene = noone;
+global.bottlecutscene = noone;
+global.papercutscene = noone;
+global.beachboatcutscene = noone;
+global.beachcutscene = noone;
+global.sewercutscene = noone;
+global.burgercutscene = noone;
+global.golfcutscene = noone;
+global.anarchistcutscene1 = noone;
+global.anarchistcutscene2 = noone;
+global.factoryblock = noone;
+global.streetcutscene = noone;
+global.graffiticutscene = noone;
+global.factorygraffiti = noone;
+global.factorycutscene = noone;
+global.hatcutscene1 = noone;
+global.hatcutscene2 = noone;
+global.hatcutscene3 = noone;
+global.jetpackcutscene = noone;
+global.noisecutscene1 = noone;
+global.noisecutscene2 = noone;
+global.freezercutscene = noone;
+global.kidspartycutscene = noone;
+global.gasolinecutscene = noone;
+global.mansioncutscene = noone;
+global.chateaucutscene = noone;
+global.ghostsoldiercutscene = noone;
+global.mrstickcutscene1 = noone;
+global.mrstickcutscene2 = noone;
+global.mrstickcutscene3 = noone;
+global.chateauswap = noone;
+global.warcutscene = noone;
 pal_swap_init_system(shd_pal_swapper);
-with (obj_player1)
+with obj_player1
 	state = states.normal;
 global.loadeditor = false;
-if (global.longintro)
+if global.longintro
 {
 	global.longintro = false;
 	room_goto(Longintro);

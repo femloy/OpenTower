@@ -32,7 +32,7 @@ function scr_collide_destructibles()
 			}
 		}
 		
-		if (state == states.trashroll || state == states.UNKNOWN_2 || state == states.boxxedpepspin
+		if (state == states.trashroll || state == states.UNKNOWN_9 || state == states.boxxedpepspin
 		|| ratmount_movespeed >= 12 || state == states.ratmountpunch || state == states.ratmounttumble
 		|| state == states.punch || state == states.handstandjump || state == states.ratmountattack
 		|| state == states.lungeattack || state == states.cheeseball || state == states.bombpepside
@@ -153,11 +153,11 @@ function scr_collide_destructibles()
 		ds_list_clear(global.instancelist);
 		
 		
-		if (vsp <= 0.5 && (state == states.jump || state == states.machcancel || state == states.UNKNOWN_1
-		|| state == states.ratmountjump || state == states.UNKNOWN_2 || state == states.mach3 
+		if (vsp <= 0.5 && (state == states.jump || state == states.machcancel || state == states.UNKNOWN_8
+		|| state == states.ratmountjump || state == states.UNKNOWN_9 || state == states.mach3 
 		|| state == states.machcancel || state == states.mach2 || state == states.antigrav || state == states.pogo
 		|| (state == states.bombpepup && bombup_dir == -1) || state == states.punch || state == states.climbwall
-		|| state == states.fireass || state == states.Sjump || state == states.UNKNOWN_3
+		|| state == states.fireass || state == states.Sjump || state == states.UNKNOWN_10
 		|| state == states.cheeseballclimbwall || state == states.mach3 || state == states.machcancel
 		|| (state == states.punch && (sprite_index == spr_breakdanceuppercut || sprite_index == spr_breakdanceuppercutend))))
 		{
@@ -182,7 +182,7 @@ function scr_collide_destructibles()
 					instance_destroy();
 					with other
 					{
-						if state != states.UNKNOWN_3 && state != states.UNKNOWN_2 && state != states.Sjump && state != states.punch && state != states.climbwall
+						if state != states.UNKNOWN_10 && state != states.UNKNOWN_9 && state != states.Sjump && state != states.punch && state != states.climbwall
 							vsp = 0;
 						if state == states.Sjump
 							vsp = -11;

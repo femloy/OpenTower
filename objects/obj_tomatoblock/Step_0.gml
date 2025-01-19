@@ -1,7 +1,7 @@
 var _block = id;
 with obj_player
 {
-	if (state != states.dead && place_meeting(x, y + 1, _block))
+	if (state != states.gameover && place_meeting(x, y + 1, _block))
 	{
 		vsp = -11;
 		_block.image_index = 0;

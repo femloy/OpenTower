@@ -134,7 +134,7 @@ if shake_mag > 0
 detachedby = -1;
 detach = false;
 follow_golf = false;
-if (instance_exists(player) && !lock && player.state != states.timesup && player.state != states.dead)
+if (instance_exists(player) && !lock && player.state != states.timesup && player.state != states.gameover)
 {
 	switch state
 	{

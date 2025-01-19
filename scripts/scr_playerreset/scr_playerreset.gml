@@ -291,7 +291,7 @@ function scr_playerreset(stopmusic = true)
 			var destroy = true;
 			with obj_player
 			{
-				if (state == states.dead || state == states.timesup)
+				if (state == states.gameover || state == states.timesup)
 					destroy = false;
 			}
 			if destroy

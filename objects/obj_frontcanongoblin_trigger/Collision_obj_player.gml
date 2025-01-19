@@ -1,7 +1,7 @@
 var _found = false;
 with obj_frontcanongoblin
 {
-	if state != states.dead
+	if state != states.gameover
 		_found = true;
 }
 if !active && !_found
@@ -26,11 +26,11 @@ else if !start
 {
 	with obj_frontcanongoblin
 	{
-		if state != states.dead && !destroyed
+		if state != states.gameover && !destroyed
 		{
 			destroyed = false;
 			destroybuffer = 50;
-			state = states.dead;
+			state = states.gameover;
 			captain_sprite = spr_captaingoblin_end;
 			canon_sprite = spr_captaingoblin_canon;
 			captain_index = 0;

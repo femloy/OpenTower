@@ -76,7 +76,7 @@ switch state
 				y += vsp;
 				if (!bbox_in_camera(view_camera[0], 50))
 				{
-					substate = states.dead;
+					substate = states.gameover;
 					with obj_player
 					{
 						state = states.normal;
@@ -85,7 +85,7 @@ switch state
 				}
 				break;
 			
-			case states.dead:
+			case states.gameover:
 				y -= 20;
 				if y < -200
 				{

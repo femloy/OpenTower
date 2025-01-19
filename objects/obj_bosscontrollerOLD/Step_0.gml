@@ -6,7 +6,7 @@ if (!instance_exists(bossID) && bossID != -4 && state != states.victory && !fake
 if player_hp <= 0
 {
 	fakedeath = false;
-	if state != states.transition && state != states.dead
+	if state != states.transition && state != states.gameover
 	{
 		if endroundfunc != -4
 			endroundfunc();
@@ -15,9 +15,9 @@ if player_hp <= 0
 		with bossID
 			player_destroy(lastplayerid);
 	}
-	else if bossID.state != states.chainsaw && state != states.dead
+	else if bossID.state != states.chainsaw && state != states.gameover
 	{
-		state = states.dead;
+		state = states.gameover;
 		alarm[1] = room_speed * 4;
 	}
 }
@@ -233,7 +233,7 @@ switch state
 		}
 		break;
 	case states.victory:
-	case states.dead:
+	case states.gameover:
 		fade -= 0.05;
 		fade = clamp(fade, 0, 1);
 		break;

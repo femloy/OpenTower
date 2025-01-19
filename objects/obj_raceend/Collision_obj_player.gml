@@ -5,12 +5,12 @@ if !horseyfinish && start
 		spd = 0;
 		hsp = 0;
 		vsp = 0;
-		if state != states.dead
+		if state != states.gameover
 		{
 			fmod_event_one_shot_3d("event:/sfx/misc/winrace", other.x, other.y);
 			ds_list_add(global.saveroom, id);
 		}
-		state = states.dead;
+		state = states.gameover;
 		with obj_objecticontracker
 		{
 			if objectID == other.id

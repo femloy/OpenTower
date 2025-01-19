@@ -1,4 +1,4 @@
-if state != states.dead
+if state != states.gameover
 {
 	captain_y = SCREEN_HEIGHT;
 	canon_y = SCREEN_HEIGHT;
@@ -20,7 +20,7 @@ switch state
 		}
 		break;
 	
-	case states.dead:
+	case states.gameover:
 		if !destroyed
 		{
 			if destroybuffer > 0
