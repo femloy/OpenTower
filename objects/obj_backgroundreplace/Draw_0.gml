@@ -24,6 +24,6 @@ if backgroundID != -4
 		ix += b[4];
 		if ix > sprite_get_number(b[0]) - 1
 			ix = frac(ix);
-		array_set(array_get(chunks, i), 3, ix);
+		chunks[i][3] = ix;
 	}
 }

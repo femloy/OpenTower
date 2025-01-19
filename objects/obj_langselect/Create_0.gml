@@ -11,7 +11,7 @@ for (var i = 0; i < array_length(pref); i++)
     {
         ID: pref[i],
         image_index: i,
-        name: ds_map_find_value(global.lang_available, array_get(pref, i)).name,
+        name: global.lang_available[? pref[i]].name,
         spr_name: noone
     }
 	q.name = string_replace_all(q.name, "\\n", "\n");

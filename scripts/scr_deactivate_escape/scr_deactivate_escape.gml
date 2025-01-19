@@ -40,7 +40,7 @@ function scr_deactivate_escape()
 		{
 			for (i = 0; i < ds_list_size(baddielist); i++)
 			{
-				b = array_get(ds_list_find_value(baddielist, i), 1);
+				b = ds_list_find_value(baddielist, i)[1];
 				if (instance_exists(b))
 				{
 					b.boundbox = false;

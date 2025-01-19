@@ -17,8 +17,8 @@ if DEBUG
 	var ys = 128 - (16 * ds_list_size(text_list));
 	for (var i = 0; i < ds_list_size(text_list); i++)
 	{
-		var t = array_get(ds_list_find_value(text_list, i), 0);
-		var txt = array_get(ds_list_find_value(text_list, i), 1);
+		var t = text_list[| i][0];
+		var txt = text_list[| i][1];
 		var str = txt;
 		var c = c_white;
 		switch t

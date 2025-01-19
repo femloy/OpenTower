@@ -19,7 +19,7 @@ function scr_get_languages()
 	for (var i = 0; i < array_length(arr); i++)
     {
 	    var str = scr_lang_get_file_arr("lang/" + arr[i])
-	    global.lang_available[? array_get(str, 0)] = {
+	    global.lang_available[? str[0]] = {
 	        name: str[1],
 	        file: str[2]
 	    };
@@ -241,7 +241,7 @@ function lang_get_identifier(keycode, allow_numbers)
 		return keycode == ord("_") || (keycode >= ord("a") && keycode <= ord("z")) || (keycode >= ord("A") && keycode <= ord("Z"));
 }
 
-function lang_exec(token_list) // HAHAHA
+function lang_exec(token_list) // Man.
 {
 	var map = ds_map_create();
 	var len = ds_list_size(token_list);
@@ -252,9 +252,9 @@ function lang_exec(token_list) // HAHAHA
 		var q = ds_list_find_value(token_list, pos++);
 		switch q[0]
 		{
-			case lexer.set: // 0 is enum
-				var ident = array_get(ds_list_find_value(token_list, pos - 2), 2);
-				var val = array_get(ds_list_find_value(token_list, pos++), 2);
+			case lexer.set:
+				var ident = token_list[| pos - 2][2];
+				var val = token_list[| pos++][2];
 				ds_map_set(map, ident, val);
 				break;
 		}
