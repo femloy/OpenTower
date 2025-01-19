@@ -1,4 +1,4 @@
-function get_list_pos(argument0)
+function get_list_pos(cursor_y)
 {
-	return floor(((argument0 - y) - scroll) / item_height);
+	return floor(((cursor_y - y) - scroll) / item_height);
 }

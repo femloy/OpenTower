@@ -1,5 +1,4 @@
-function snap_tile(argument0, argument1) //snap_tile
+function snap_tile(pos, grid)
 {
-	return (floor((argument0 / argument1)) * argument1);
+	return floor(pos / grid) * grid;
 }
-
