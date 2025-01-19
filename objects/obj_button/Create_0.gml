@@ -1,4 +1,4 @@
-state = editor_states.empty;
+state = editorstates.none;
 hovered = false;
 selected = false;
 parent = -4;

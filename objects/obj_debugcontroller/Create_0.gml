@@ -1,12 +1,3 @@
-#macro debug (GM_build_type == "run")
-enum debug_text_type
-{
-	normal,
-	command,
-	traced,
-	error
-}
-
 depth = -500;
 DEBUG = debug;
 if (parameter_count() > 2)

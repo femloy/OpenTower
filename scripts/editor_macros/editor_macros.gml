@@ -1,34 +1,38 @@
-enum editor_states
+enum editorstates
 {
-	empty,				// This state is rarely used and is only used when initalizing the objects.
-	instance_edit,
-	unknownvalue_2,
+	none,
+	normal,
+	UNKNOWN_1, // Toggles layer 1, but is never used.
 	resize_room,
 	saving,
 	loading
 }
-enum inst_states
+enum editor_instance_states
 {
-	idle,
+	normal,
 	dragging,
-	placing				// Not 100% sure about this one, theres not much referencing it.
+	resizing
 }
-enum comp_state
+enum editor_panel_states
 {
 	undocked,
 	docked
 }
-enum comp_dock
+enum editor_direction
 {
-	topleft,		// 0
-	left,			// 1
-	bottomleft,		// 2
-	topright,		// 3
-	right,			// 4
-	bottomright,	// 5
-	top,			// 6
-	bottom,			// 7
+	topleft,
+	left,
+	bottomleft,
+	topright,
+	right,
+	bottomright,
+	top,
+	bottom,
 	
 	enum_length
 }
-exit;
+enum editor_layer_types
+{
+	background,
+	tile
+}

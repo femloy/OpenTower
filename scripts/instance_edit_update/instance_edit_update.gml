@@ -14,7 +14,7 @@ function instance_edit_update()
 	
 	switch instance_state
 	{
-		case inst_states.idle:
+		case editor_instance_states.normal:
 			if key_delete
 			{
 				with (instance_place(xx, yy, obj_editorobject))
@@ -61,7 +61,7 @@ function instance_edit_update()
 							{
 								instance_oldx = other.x
 								instance_oldy = other.y
-								instance_state = inst_states.dragging
+								instance_state = editor_instance_states.dragging
 								instance_xoffset = (other.x - xx)
 								instance_yoffset = (other.y - yy)
 							}
@@ -71,7 +71,7 @@ function instance_edit_update()
 			}
 			break
 		
-		case inst_states.dragging:
+		case editor_instance_states.dragging:
 			with selected_instance
 			{
 				x = (xx + other.instance_xoffset)
@@ -94,7 +94,7 @@ function instance_edit_update()
 					if (x != other.instance_oldx || y != other.instance_oldy)
 						command_add(new MoveObjectCMD(id, x, y, other.instance_oldx, other.instance_oldy))
 				}
-				instance_state = inst_states.idle
+				instance_state = editor_instance_states.normal
 			}
 			break
 	}

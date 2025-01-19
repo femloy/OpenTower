@@ -3,7 +3,7 @@ function toggle_panel(_id)
 	var _closed = false;
 	with obj_panel
 	{
-		if (ID == _id && state == comp_state.docked)
+		if (ID == _id && state == editor_panel_states.docked)
 			_closed = true;
 	}
 	if _closed
@@ -11,9 +11,9 @@ function toggle_panel(_id)
 		with obj_panel
 		{
 			if ID == _id
-				state = comp_state.undocked
+				state = editor_panel_states.undocked
 			else if ID != -4
-				state = comp_state.docked
+				state = editor_panel_states.docked
 		}
 	}
 	else
@@ -21,7 +21,7 @@ function toggle_panel(_id)
 		with obj_panel
 		{
 			if ID != -4
-				state = comp_state.docked
+				state = editor_panel_states.docked
 		}
 	}
 }

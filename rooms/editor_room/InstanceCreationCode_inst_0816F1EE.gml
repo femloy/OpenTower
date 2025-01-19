@@ -68,7 +68,7 @@ with (instance_create_depth(32, 0, depth - 1, obj_itemlist))
             with (obj_editor)
             {
                 selected_object = item;
-                editor_state = editor_states.instance_edit;
+                editor_state = editorstates.normal;
             }
             
             toggle_panel(1);

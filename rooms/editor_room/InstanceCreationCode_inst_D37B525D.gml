@@ -24,7 +24,7 @@ with (instance_create_depth(0, 32, depth - 1, obj_button))
         toggle_panel(7);
         
         with (obj_editor)
-            editor_state = editor_states.resize_room;
+            editor_state = editorstates.resize_room;
         
         with (obj_editorobject)
             selected = false;

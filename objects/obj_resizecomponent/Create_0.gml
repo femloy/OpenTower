@@ -1,4 +1,4 @@
-dock = comp_dock.bottomright
+dock = editor_direction.bottomright
 snap = 32
 lock = 
 {

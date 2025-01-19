@@ -1,4 +1,4 @@
-enum tdp_text
+enum tdp_text_actions
 {
 	halign,
 	valign,
@@ -10,7 +10,7 @@ function tdp_text_action_halign(alignment)
 {
 	var b = 
 	{
-		type: tdp_text.halign,
+		type: tdp_text_actions.halign,
 		value: alignment
 	};
 	ds_queue_enqueue(global.tdp_text_queue, b);
@@ -19,7 +19,7 @@ function tdp_text_action_valign(alignment)
 {
 	var b = 
 	{
-		type: tdp_text.valign,
+		type: tdp_text_actions.valign,
 		value: alignment
 	};
 	ds_queue_enqueue(global.tdp_text_queue, b);
@@ -28,7 +28,7 @@ function tdp_text_action_font(font)
 {
 	var b = 
 	{
-		type: tdp_text.font,
+		type: tdp_text_actions.font,
 		value: font
 	};
 	ds_queue_enqueue(global.tdp_text_queue, b);
@@ -37,7 +37,7 @@ function tdp_text_action_text(x, y, text, c1 = c_white, c2 = c_white, c3 = c_whi
 {
 	var b = 
 	{
-		type: tdp_text.text,
+		type: tdp_text_actions.text,
 		x: x,
 		y: y,
 		text: text,

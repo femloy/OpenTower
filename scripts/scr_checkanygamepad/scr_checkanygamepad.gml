@@ -31,15 +31,15 @@ function scr_check_menu_repeats(input_entry, keycode, gamepad)
 		in = tdp_input_get(query[i]);
 		if !gamepad
 		{
-			if (in.has_value(tdp_input.keyboard, keycode))
+			if (in.has_value(tdp_input_types.keyboard, keycode))
 				return false;
 		}
 		else if (is_array(keycode))
 		{
-			if (in.has_value(tdp_input.joystick, keycode[0], keycode[1]))
+			if (in.has_value(tdp_input_types.joystick, keycode[0], keycode[1]))
 				return false;
 		}
-		else if (in.has_value(tdp_input.gamepad, keycode))
+		else if (in.has_value(tdp_input_types.gamepad, keycode))
 			return false;
 	}
 	return true;

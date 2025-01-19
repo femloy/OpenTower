@@ -1,2 +1,2 @@
 dragged = false
-dock = comp_dock.topleft
+dock = editor_direction.topleft

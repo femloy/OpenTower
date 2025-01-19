@@ -1,4 +1,4 @@
-if (obj_editor.editor_state == editor_states.instance_edit && obj_editor.instance_state == inst_states.idle && ((!instance_exists(hovered_object)) || (hovered_object.object_index != obj_editorobject && object_get_parent(hovered_object.object_index) != obj_component)))
+if (obj_editor.editor_state == editorstates.normal && obj_editor.instance_state == editor_instance_states.normal && ((!instance_exists(hovered_object)) || (hovered_object.object_index != obj_editorobject && object_get_parent(hovered_object.object_index) != obj_component)))
 {
 	var o = obj_editor.selected_object
 	if o != noone

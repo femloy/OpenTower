@@ -271,7 +271,7 @@ function scr_getinput()
 				var b = in.actions[i];
 				with b
 				{
-					if type == tdp_input.joystick
+					if type == tdp_input_types.joystick
 					{
 						switch value
 						{
@@ -310,7 +310,7 @@ function scr_get_move_axis(input_str)
 		var b = in.actions[i];
 		with b
 		{
-			if type == tdp_input.joystick
+			if type == tdp_input_types.joystick
 			{
 				var av = axis_value;
 				if joystick_direction == -1 && av > 0

@@ -2,7 +2,7 @@ event_inherited()
 if (!instance_exists(inst))
 	exit;
 
-if obj_editor.instance_state == inst_states.idle
+if obj_editor.instance_state == editor_instance_states.normal
 {
 	x = (inst.bbox_right + 16)
 	y = inst.bbox_top

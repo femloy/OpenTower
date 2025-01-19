@@ -26,7 +26,7 @@ function tdp_input_key(_name, _actions_array = noone) constructor
 			var b = actions[i];
 			if b.type == _type && b.value == _value
 			{
-				if (_type != tdp_input.joystick || b.joystick_direction == _joystick_direction)
+				if (_type != tdp_input_types.joystick || b.joystick_direction == _joystick_direction)
 					return true;
 			}
 		}
@@ -54,7 +54,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 	{
 		switch type
 		{
-			case tdp_input.keyboard:
+			case tdp_input_types.keyboard:
 				if (is_array(value))
 				{
 					var last_held = held;
@@ -71,7 +71,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 				}
 				break;
 			
-			case tdp_input.gamepad:
+			case tdp_input_types.gamepad:
 				if (is_array(value))
 				{
 					last_held = held;
@@ -88,7 +88,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 				}
 				break;
 			
-			case tdp_input.joystick:
+			case tdp_input_types.joystick:
 				var _pindex = 0;
 				if (instance_exists(obj_inputAssigner))
 				{
@@ -154,7 +154,7 @@ function tdp_input_action(_type, _value, _joystick_direction = 0) constructor
 	value = _value;
 	has_axis_value = false;
 	axis_value = 0;
-	if type == tdp_input.joystick
+	if type == tdp_input_types.joystick
 	{
 		has_axis_value = true;
 		custom_deadzone = false;

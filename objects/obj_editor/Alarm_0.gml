@@ -1,1 +1,1 @@
-editor_set_state(editor_states.instance_edit);
+editor_set_state(editorstates.normal);

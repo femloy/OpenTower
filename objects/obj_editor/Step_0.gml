@@ -1,9 +1,9 @@
-if editor_state == editor_states.saving
+if editor_state == editorstates.saving
 {
 	save_level_update(global.current_level.name);
 	exit;
 }
-if editor_state == editor_states.loading
+if editor_state == editorstates.loading
 {
 	load_level_update(global.current_level.name);
 	exit;
@@ -31,7 +31,7 @@ editor_camera_update();
 
 switch editor_state
 {
-	case editor_states.instance_edit:
+	case editorstates.normal:
 		instance_edit_update();
 		break;
 }

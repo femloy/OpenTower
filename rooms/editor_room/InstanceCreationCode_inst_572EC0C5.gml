@@ -26,7 +26,7 @@ with (instance_create_depth(0, 0, depth - 1, obj_itemlist))
         {
             with (obj_editor)
             {
-                if (editor_state != editor_states.saving)
+                if (editor_state != editorstates.saving)
                     save_level();
             }
         }

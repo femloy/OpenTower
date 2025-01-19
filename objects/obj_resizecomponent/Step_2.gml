@@ -2,39 +2,39 @@ event_inherited()
 if (!instance_exists(inst))
 	exit;
 
-if !dragged && obj_editor.instance_state == inst_states.idle
+if !dragged && obj_editor.instance_state == editor_instance_states.normal
 {
 	switch dock
 	{
-		case comp_dock.topright:
+		case editor_direction.topright:
 			x = (inst.image_xscale > 0 ? inst.bbox_right : inst.bbox_left)
 			y = inst.bbox_top
 			break
-		case comp_dock.right:
+		case editor_direction.right:
 			x = (inst.image_xscale > 0 ? inst.bbox_right : inst.bbox_left)
 			y = (inst.bbox_bottom - ((inst.bbox_bottom - inst.bbox_top) / 2))
 			break
-		case comp_dock.bottomright:
+		case editor_direction.bottomright:
 			x = (inst.image_xscale > 0 ? inst.bbox_right : inst.bbox_left)
 			y = inst.bbox_bottom
 			break
-		case comp_dock.topleft:
+		case editor_direction.topleft:
 			x = (inst.image_xscale > 0 ? inst.bbox_left : inst.bbox_right)
 			y = inst.bbox_top
 			break
-		case comp_dock.left:
+		case editor_direction.left:
 			x = (inst.image_xscale > 0 ? inst.bbox_left : inst.bbox_right)
 			y = (inst.bbox_bottom - ((inst.bbox_bottom - inst.bbox_top) / 2))
 			break
-		case comp_dock.bottomleft:
+		case editor_direction.bottomleft:
 			x = (inst.image_xscale > 0 ? inst.bbox_left : inst.bbox_right)
 			y = inst.bbox_bottom
 			break
-		case comp_dock.top:
+		case editor_direction.top:
 			x = (inst.bbox_left + ((inst.bbox_left - inst.bbox_right) / 2))
 			y = inst.bbox_top
 			break
-		case comp_dock.bottom:
+		case editor_direction.bottom:
 			x = (inst.bbox_left + ((inst.bbox_left - inst.bbox_right) / 2))
 			y = inst.bbox_bottom
 			break
@@ -47,7 +47,7 @@ if !dragged && obj_editor.instance_state == inst_states.idle
 			other.dragged = true
 			other.oldxscale = other.inst.image_xscale
 			other.oldyscale = other.inst.image_yscale
-			instance_state = inst_states.placing
+			instance_state = editor_instance_states.resizing
 		}
 	}
 }
@@ -87,6 +87,6 @@ else if dragged
 		dragged = false
 		with inst
 			command_add(new ResizeCMD(id, image_xscale, image_yscale, other.oldxscale, other.oldyscale))
-		obj_editor.instance_state = inst_states.idle
+		obj_editor.instance_state = editor_instance_states.normal
 	}
 }

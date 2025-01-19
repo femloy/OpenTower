@@ -34,7 +34,7 @@ function load_level_update(argument0)
         {
             var b = _room.backgrounds[i];
             var bg = new RoomLayer();
-            bg.layer_type = layertype.background;
+            bg.layer_type = editor_layer_types.background;
             bg.sprite_index = asset_get_index(b.sprite_index);
             bg.depth = b.depth;
             array_push(new_room.backgrounds, bg);

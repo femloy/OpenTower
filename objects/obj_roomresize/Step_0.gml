@@ -1,4 +1,4 @@
-if obj_editor.editor_state != editor_states.resize_room
+if obj_editor.editor_state != editorstates.resize_room
 {
 	visible = false
 	exit;
@@ -19,35 +19,35 @@ if !dragged
 	{
 		switch dock
 		{
-			case comp_dock.topleft:
+			case editor_direction.topleft:
 				x = _room.x
 				y = _room.y
 				break
-			case comp_dock.top:
+			case editor_direction.top:
 				x = (_room.x + (_room.width / 2))
 				y = _room.y
 				break
-			case comp_dock.topright:
+			case editor_direction.topright:
 				x = (_room.x + _room.width)
 				y = _room.y
 				break
-			case comp_dock.right:
+			case editor_direction.right:
 				x = (_room.x + _room.width)
 				y = (_room.y + (_room.height / 2))
 				break
-			case comp_dock.bottomright:
+			case editor_direction.bottomright:
 				x = (_room.x + _room.width)
 				y = (_room.y + _room.height)
 				break
-			case comp_dock.bottom:
+			case editor_direction.bottom:
 				x = (_room.x + (_room.width / 2))
 				y = (_room.y + _room.height)
 				break
-			case comp_dock.bottomleft:
+			case editor_direction.bottomleft:
 				x = _room.x
 				y = (_room.y + _room.height)
 				break
-			case comp_dock.left:
+			case editor_direction.left:
 				x = _room.x
 				y = (_room.y + (_room.height / 2))
 				break
@@ -79,7 +79,7 @@ else
 	var _y = snap_tile(y, 32)
 	switch dock
 	{
-		case comp_dock.topleft:
+		case editor_direction.topleft:
 			_room.x = _x
 			_room.y = _y
 			_room.width = (startwidth - _x)
@@ -95,7 +95,7 @@ else
 				_room.height = 540
 			}
 			break
-		case comp_dock.top:
+		case editor_direction.top:
 			_room.y = _y
 			_room.height = (startheight - _y)
 			if _room.height < 540
@@ -104,7 +104,7 @@ else
 				_room.height = 540
 			}
 			break
-		case comp_dock.topright:
+		case editor_direction.topright:
 			_room.y = _y
 			_room.width = (_x - _room.x)
 			_room.height = (startheight - _y)
@@ -116,12 +116,12 @@ else
 				_room.height = 540
 			}
 			break
-		case comp_dock.right:
+		case editor_direction.right:
 			_room.width = (_x - _room.x)
 			if _room.width < 960
 				_room.width = 960
 			break
-		case comp_dock.bottomright:
+		case editor_direction.bottomright:
 			_room.width = (_x - _room.x)
 			_room.height = (_y - _room.y)
 			if _room.width < 960
@@ -129,12 +129,12 @@ else
 			if _room.height < 540
 				_room.height = 540
 			break
-		case comp_dock.bottom:
+		case editor_direction.bottom:
 			_room.height = (_y - _room.y)
 			if _room.height < 540
 				_room.height = 540
 			break
-		case comp_dock.bottomleft:
+		case editor_direction.bottomleft:
 			_room.x = _x
 			_room.width = (startwidth - _x)
 			_room.height = (_y - _room.y)
@@ -146,7 +146,7 @@ else
 			if _room.height < 540
 				_room.height = 540
 			break
-		case comp_dock.left:
+		case editor_direction.left:
 			_room.x = _x
 			_room.width = (startwidth - _x)
 			if _room.width < 960

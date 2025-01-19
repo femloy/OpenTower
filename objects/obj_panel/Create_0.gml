@@ -1,3 +1,3 @@
-state = comp_state.docked
-dock = comp_dock.left
+state = editor_panel_states.docked
+dock = editor_direction.left
 ID = -4

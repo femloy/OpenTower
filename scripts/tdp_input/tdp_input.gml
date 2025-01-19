@@ -1,4 +1,4 @@
-enum tdp_input
+enum tdp_input_types
 {
 	keyboard,
 	gamepad,
@@ -90,7 +90,7 @@ function tdp_input_serialize_array(array)
 			str += ",";
 			str += string(value);
 			str += ",";
-			if type == tdp_input.joystick
+			if type == tdp_input_types.joystick
 			{
 				str += string(joystick_direction);
 				str += ",";
@@ -110,7 +110,7 @@ function tdp_input_deserialize(input_key, input_serialized_str)
 			break;
 		var type = real(arr[i]);
 		var value = real(arr[i + 1]);
-		if type == tdp_input.joystick
+		if type == tdp_input_types.joystick
 		{
 			var joystick_direction = real(arr[i + 2]);
 			i++;
@@ -153,7 +153,7 @@ function tdp_get_icon(input)
 {
 	switch input.type
 	{
-		case tdp_input.keyboard:
+		case tdp_input_types.keyboard:
 			switch input.value
 			{
 				case vk_shift:
@@ -226,7 +226,7 @@ function tdp_get_icon(input)
 			}
 			break;
 		
-		case tdp_input.gamepad:
+		case tdp_input_types.gamepad:
 			switch input.value
 			{
 				case gp_face1:
@@ -344,7 +344,7 @@ function tdp_get_icon(input)
 			}
 			break;
 		
-		case tdp_input.joystick:
+		case tdp_input_types.joystick:
 			switch input.value
 			{
 				case gp_axislh:
