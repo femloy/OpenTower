@@ -56,7 +56,7 @@ if fade > 0
 				c = c_white;
 			}
 			tdp_draw_text_color(SCREEN_WIDTH / 2, yy, t, c, c, c, c, fade);
-			var ic = pause_menu_map[| b][0];
+			var ic = pause_menu_map[? b][0];
 			if ic != undefined
 				scr_pauseicon_draw(ic, (SCREEN_WIDTH / 2) + (string_width(t) / 2) + 50, yy);
 			yy += (h + pad);
