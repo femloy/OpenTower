@@ -1,6 +1,13 @@
-# Pizza Tower
-- A full decompilation of Pizza Tower v1.1.2 (International Update).
-- I am not affiliated with Tour De Pizza in any way.
+# Warning
+This is old and discontinued. I have left the Pizza Tower community.<br>
+Chances are if you're looking at this then you are in it.<br>
+<br>
+Trust me when I tell you that the best decision you can do is leave it, and do not support Tour de Pizza anymore.<br>
+Tour de Pizza and their community as a whole support and encourage extreme toxicity. Same goes for Summitsphere BTW.<br>
+If I had to list every horrible thing they've done to me and my friends this page wouldn't be able to load anymore.<br>
+<br>
+The `csx` file included in this repository probably no longer works.<br>
+I won't be maintaining it for obvious reasons.
 
 # Attribution
 OpenTower is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/). You are free to share and adapt (modify), but you must give the appropriate credit.
@@ -8,9 +15,8 @@ OpenTower is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/
 # Requirements
 - [Pizza Tower on Steam](https://store.steampowered.com/app/2231450/Pizza_Tower/)
 - [GameMaker 2023.1.1.62](https://gms.yoyogames.com/GameMaker-Installer-2023.1.1.62.exe)
-- [Steamworks SDK v1.55](https://partner.steamgames.com/downloads/steamworks_sdk_155.zip)<br>
-(This one's optional if you're gonna remove it, which you need to for mods.)
-- [UndertaleModTool (Bleeding Edge)](https://github.com/UnderminersTeam/UndertaleModTool/releases/tag/bleeding-edge)
+- [Steamworks SDK v1.55](https://partner.steamgames.com/downloads/steamworks_sdk_155.zip)
+- A certain old UndertaleModTool version, which I forgot.
 
 This repository doesn't include any of the datafiles (FMOD, langs) or sprites. An [UndertaleModTool](https://github.com/UnderminersTeam/UndertaleModTool/releases/tag/bleeding-edge) script is included to extract everything needed from the `data.win`, and port the required files to the decomp folder.
 
@@ -49,3 +55,6 @@ If you normally use a newer GameMaker version, opening the old one will lead to 
 
 ### ImageMagick error when opening .csx
 You have the wrong UndertaleModTool version. Get [Bleeding Edge](https://github.com/UnderminersTeam/UndertaleModTool/releases/tag/bleeding-edge), not a fork or a release.
+
+### Please update this
+No.
