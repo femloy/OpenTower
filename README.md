@@ -1,6 +1,6 @@
 # Warning
-This game sucks. My buddy agrees -- majority wins.<br>
-Try Undertale or Deltarune instead. They're GameMaker games. Here's a pretty good [UndertaleDecomp](https://github.com/danielah05/UndertaleDecomp).<br>
+This game sucks. My groomer-supporting buddy agrees -- majority wins.<br>
+Try Undertail or Deltacock instead. They're GameMaker games. Here's a pretty good [UndertaleDecomp](https://github.com/danielah05/UndertaleDecomp). Made by Zyle so you know that shit's Good<br>
 I haven't seen a good Deltarune one yet but I'm working on one. Very, very, very slowly.<br>
 <br>
 Anyway, unfortunately, everything on the Internet is permanent, so I kinda have to keep this available.
